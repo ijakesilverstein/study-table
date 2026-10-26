@@ -4,6 +4,8 @@ User priority: improve the actual longer curricula, with substantially more teac
 
 Implemented in V110: 52 coherent teaching units across five course sequences. V111 adds ten prerequisite and bridge units for a total of 62. Thirty-one recently rewritten foundation lessons are integrated into the full courses so the teaching has one source, alongside 31 further units. Each unit has explanatory prose, two worked cases, an appropriate demonstration where useful, and an optional written variation with a worked answer. Reading is not gated behind questions, and visits do not count as mastery.
 
+V112 edits thirteen explanations, combines two overlapping units and adds five applications, reaching 65 units. Current counts: Spanish 15, piano 14, chess 14, calculus 11, physics 11. Each map now groups the sequence into three named chapters. Older IDs for the combined units remain valid through aliases. See CURRICULUM_EDIT_V112.md for the content decisions and comparison.
+
 ## V110 sequences (extended by V111 below)
 
 - Spanish, 12 units: soy/estoy/tengo; useful requests; questions and negation (new); listening repair; directions; plans; present habits (new); ser/estar with descriptions (new); completed past; past background; weekend story; complete café exchange (new).

@@ -38,15 +38,27 @@ for uci in line['moves']:
     move=chess.Move.from_uci(uci);notation.append(board.san(move));board.push(move)
 assert notation==['e4','d5','exd5','Qxd5','Nc3']
 assert chess.D5 in board.attacks(chess.C3)
+first,second=saved['pawn-race']['lines']
+board=chess.Board(first['fen'])
+for uci in first['moves']:board.push_uci(uci)
+assert board.piece_at(chess.A8)==chess.Piece(chess.QUEEN,chess.WHITE)
+assert chess.square_distance(board.king(chess.BLACK),chess.A8)>1
+board=chess.Board(second['fen'])
+for uci in second['moves']:board.push_uci(uci)
+assert board.is_insufficient_material() and len(board.piece_map())==2
+assert [e['note'] for e in saved['three-chord-song']['patterns'][2]['events']]==['C4','E4','G4','C4','F4','A4','B3','D4','G4','C4','E4','G4']
 courses=json.loads((root/'source/full-courses-built.json').read_text())
-assert {s:len(c['units']) for s,c in courses.items()}=={'spanish':14,'piano':14,'chess':14,'calculus':10,'physics':10}
-assert sum(len(c['units']) for c in courses.values())==62
+assert {s:len(c['units']) for s,c in courses.items()}=={'spanish':15,'piano':14,'chess':14,'calculus':11,'physics':11}
+assert sum(len(c['units']) for c in courses.values())==65
 for course in courses.values():
     ids=[u['id'] for u in course['units']];assert len(ids)==len(set(ids))
     for i,unit in enumerate(course['units']):
         assert unit['previous']==(ids[i-1] if i else None)
         assert unit['next']==(ids[i+1] if i+1<len(ids) else None)
-print('FULL_COURSE_DATA_PASS: legal chess lines and stated outcomes, music timing, 62 unique units and their complete sequence.')
+    starts=[ids.index(stage['start']) for stage in course['stages']]
+    assert starts==sorted(set(starts)) and starts[0]==0
+    for alias,target in course['aliases'].items():assert alias not in ids and target in ids
+print('FULL_COURSE_DATA_PASS: legal chess lines and stated outcomes, music timing, 65 unique units and their complete sequence.')
 def archive(path):
     text=path.read_text();data=re.search(r'<script id="full-bundle" type="text/plain">(.*?)</script>',text,re.S)[1]
     return json.loads(gzip.decompress(base64.b64decode(data)))

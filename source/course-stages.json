@@ -1,0 +1,27 @@
+{
+  "spanish": [
+    {"start":"spanish-0","title":"Build your first sentences","goal":"Say who you are, ask for something, and hear the sounds in the words."},
+    {"start":"spanish-5","title":"Keep an exchange moving","goal":"Clarify, ask directions, make a plan and describe ordinary routines."},
+    {"start":"spanish-2","title":"Tell a story and carry a conversation","goal":"Connect past events and background, then adapt a complete exchange."}
+  ],
+  "piano": [
+    {"start":"piano-1","title":"Find notes and keep time","goal":"Use keyboard landmarks, finger routes and staff positions to play a short tune."},
+    {"start":"piano-4","title":"Make harmony with both hands","goal":"Build chords, coordinate the hands and connect C, F and G."},
+    {"start":"three-beats","title":"Shape a complete piece","goal":"Count through groups and rests, shape a phrase and prepare a performance."}
+  ],
+  "chess": [
+    {"start":"chess-0","title":"Read the position and legal replies","goal":"Follow moves, answer checks and count both sides of a capture sequence."},
+    {"start":"chess-5","title":"Develop pieces and calculate tactics","goal":"Give opening moves a purpose, castle legally, and inspect forks and pins."},
+    {"start":"promotion","title":"Convert an ending and study a game","goal":"Inspect promotions, count a pawn race and verify a mating net."}
+  ],
+  "calculus": [
+    {"start":"functions","title":"From a rule to a rate","goal":"Connect functions, the required algebra, interval rates and an instantaneous rate."},
+    {"start":"derivative-rules","title":"Differentiate and use the result","goal":"Account for products and linked changes, then choose an optimal value."},
+    {"start":"calculus-4","title":"Accumulate and integrate","goal":"Connect graph area with antiderivatives, bounds and substitution."}
+  ],
+  "physics": [
+    {"start":"units-and-directions","title":"Describe the motion","goal":"Keep units and signs consistent and read a velocity graph."},
+    {"start":"physics-1","title":"Explain changes in motion","goal":"Use forces, energy and momentum with a stated object or system."},
+    {"start":"physics-3","title":"Electricity, waves and fluids","goal":"Follow circuit paths and relate wave and pressure quantities to a model."}
+  ]
+}

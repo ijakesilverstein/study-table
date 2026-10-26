@@ -1,0 +1,95 @@
+{
+  "spanish-5": {
+    "teaching": [
+      "Ask for the kind of help you need. ¿Puede repetirlo? requests a repeat; más despacio requests slower speech; ¿Qué significa llevar? asks what a word means. Repetition alone cannot explain a word you have never learned.",
+      "After the repair, listen for the decision. ¿Para aquí o para llevar? offers two alternatives, so para llevar answers the question. ¿Para llevar? checks one choice, so sí, para llevar works. The difference is what the worker needs to know."
+    ]
+  },
+  "cafe-project": {
+    "opening": [
+      "At the counter, ask for a coffee, choose takeout and check how to pay. Here is the whole exchange, including a question you need to hear again.",
+      "Follow what each person learns from the reply. At the end, both should know the order, where you will drink it and the payment method."
+    ],
+    "teaching": [
+      "A short answer can carry the missing information. Para llevar supplies a choice; sí, con tarjeta confirms a payment method. Listen to the question before deciding which kind of reply fits.",
+      "Now adapt the exchange: stay instead of taking the coffee away, or ask for water instead. Keep the clarification phrases available. Rehearse once with the written replies, then cover just your side and answer the worker’s lines aloud."
+    ]
+  },
+  "staff": {
+    "teaching": [
+      "Use a landmark, then follow the shape. Once you recognize C4 on its ledger line, a neighboring position gives D4, the next gives E4, and so on. A move from one line to the next passes over a space, so it skips a letter name. This is why the C–E–G pattern looks and sounds wider than C–D–E.",
+      "Pitch and duration are separate features of a written note. Its vertical position tells you the pitch; its notehead, stem and other marks help tell its duration. Read a small group, then play it. On a later pass, cover the note-name labels and find the first pitch from the landmark."
+    ]
+  },
+  "phrasing": {
+    "teaching": [
+      "Compare the two audio versions: the pitches and rhythm stay the same while the second grows a little toward G and eases back to C. On a touch-sensitive piano, try that small change with an easy hand. On fixed-volume keys, shape the phrase through a steady pulse and a full ending.",
+      "Repair a hesitant join in context. If G–E causes a stop, loop E–G–E–D slowly, then return to the whole phrase. Listen for one change at a time: first the join, then the ending, then the small rise in sound."
+    ]
+  },
+  "read-melody": {
+    "teaching": [
+      "Count 1–2–3–4 | 1–2–3—4. The open half note is one press lasting through the final two beats. If rhythm and pitch compete for attention, tap this rhythm on a single key before adding the written pitches.",
+      "For the right hand, try fingers 1–2–3–5 on C–D–E–G, then 3–2–1 on E–D–C. Keep the movement comfortable and use a slower pulse if the return hesitates. The optional held C3 gives the left hand one steady job beneath the same melody."
+    ],
+    "project": {
+      "title": "Prepare one complete performance",
+      "steps": [
+        "Read the first note and speak the eight-beat count before starting.",
+        "Rehearse the least dependable join, then play the complete melody at that successful slow pulse.",
+        "Keep the final C for two beats. Add the low C only when the melody remains steady.",
+        "Leave one specific note for tomorrow, such as hold the ending or prepare the G-to-E return. Tomorrow, try the phrase once before replaying the demonstration."
+      ]
+    }
+  },
+  "chess-1": {
+    "title": "Answer a check and inspect an ordinary threat",
+    "goal": "Distinguish a required escape from check from a choice about an attacked piece.",
+    "teaching": [
+      "A check attacks the king now. A legal reply must remove that attack: capture the checking piece, block a sliding attack, or move the king to safety. Moving Bd2 along a valid bishop diagonal does not help if the e-file stays open. Be3 blocks it; Kf1 leaves it. A knight’s check cannot be blocked along a line because the knight jumps.",
+      "An attacked rook creates a different decision. With Kh1 and Ra1 against Kh8 and Bd4, the bishop attacks the rook, while the king is safe. Ra2 is one way to save material. You can also examine other captures or forcing moves, provided the resulting position keeps your king safe. Start each turn with king safety, inspect the opponent’s threat, then check the reply to your candidate."
+    ]
+  },
+  "calculus-1": {
+    "teaching": [
+      "Pair each position with its time before subtracting. Using one interval for the distance and a different interval for the clock would create a rate for a journey that never occurred.",
+      "An average replaces the whole interval with an imagined steady trip covering the same displacement in the same time. The real rider may speed up or slow down within it. Moving the position origin by 100 metres changes both endpoint readings equally, so their difference—and the rate—stays the same."
+    ]
+  },
+  "calculus-2": {
+    "teaching": [
+      "Each nonzero h gives an interval rate. The derivative asks what those rates approach as the interval closes around the chosen instant. The graph lets you approach from either side; for this smooth curve both sides settle toward six.",
+      "Simplifying to 6+h exposes the pattern, but it does not make the original zero-over-zero fraction valid at h=0. Taking a limit is a separate step. Keep the quantities distinct throughout: the curve’s height is position, while its limiting slope is velocity."
+    ]
+  },
+  "calculus-3": {
+    "teaching": [
+      "The two rates answer different questions. dA/dr gives area gained per extra unit of radius; dr/dt gives radius gained per second. Multiplying connects the links, and the radius units cancel to leave area per second.",
+      "For a comparison, say what stays fixed. At the same radius, tripling dr/dt triples dA/dt. At the same time, a faster-growing radius also makes the circle larger, which changes the geometric factor 2πr. The second example keeps radius fixed so you can isolate the time-rate change."
+    ]
+  },
+  "calculus-4": {
+    "teaching": [
+      "A narrow strip on a velocity–time graph represents velocity multiplied by a short time, giving a small displacement. Adding the strips accounts for changing velocity. A triangle or rectangle lets us find that same area directly when the shape is simple.",
+      "The sign belongs to the motion’s direction. Area below zero subtracts from displacement but still contributes a positive amount to total travel. Split the interval at a change of direction before adding distance."
+    ]
+  },
+  "physics-4": {
+    "teaching": [
+      "The endpoint average works here because constant acceleration makes the velocity–time graph a straight line. Its triangular area equals duration times half the final speed for this fall from rest. With a different pattern of acceleration, the two endpoint velocities alone would not determine the average.",
+      "At the top of an upward throw, the ball has zero velocity for an instant while gravity continues to change that velocity. It then begins moving downward. Zero velocity describes that instant; zero acceleration would describe something quite different."
+    ]
+  },
+  "physics-1": {
+    "teaching": [
+      "Acceleration tells you how velocity changes, rather than where it starts. A rightward acceleration of 4 m/s² adds 4 m/s of rightward velocity each second. You still need an initial velocity to predict a later velocity.",
+      "Newton’s law uses the sum of the forces on the chosen object. With opposite horizontal arrows, keep the signs as you add them. If the sum is zero, velocity remains unchanged: a moving cart can keep moving while the forces balance."
+    ]
+  },
+  "physics-3": {
+    "teaching": [
+      "Voltage describes energy per charge; current describes charge per time. The resistor transfers electrical energy to heat while the same steady charge flow enters and leaves it. Charge is not used up inside the resistor.",
+      "Keep the fixed quantity visible in a comparison. Increasing R at fixed V reduces I=V/R. Reducing V at fixed R also reduces I, for a different reason. The next circuit lesson uses the wiring to decide which components share current and which share voltage."
+    ]
+  }
+}

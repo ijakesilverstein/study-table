@@ -5,11 +5,12 @@ from demos_v109 import build_demos
 ROOT=Path(__file__).resolve().parent
 COURSE_PATHS={'spanish':'v15/spanish-for-someone/complete-practice-v40/index.html','piano':'v15/rockjam-piano-studio/index.html','chess':'v15/chess-from-zero/index.html','calculus':'curricula/calculus.html','physics':'curricula/physics.html'}
 ORDERS={
- 'spanish':['spanish-0','spanish-1','noun-phrases','questions','spanish-5','spanish-6','spanish-7','question-words','habits','descriptions','spanish-2','spanish-3','spanish-4','cafe-project'],
- 'piano':['piano-1','comfortable-hands','piano-0','staff','piano-2','piano-3','piano-4','piano-5','piano-6','three-beats','rests-and-halves','phrasing','read-melody','performance'],
- 'chess':['chess-0','read-moves','chess-4','chess-1','chess-2','count-exchanges','chess-5','castling','chess-3','pins','threats','promotion','queen-net','annotated-game'],
- 'calculus':['functions','algebra-for-rates','calculus-1','calculus-2','derivative-rules','calculus-3','product-rule','calculus-4','definite-integrals','calculus-5'],
- 'physics':['units-and-directions','physics-4','velocity-graphs','physics-1','force-diagrams','physics-2','physics-5','physics-3','waves','pressure']}
+ 'spanish':['spanish-0','spanish-sounds','spanish-1','noun-phrases','questions','spanish-5','spanish-6','spanish-7','question-words','habits','descriptions','spanish-2','spanish-3','spanish-4','cafe-project'],
+ 'piano':['piano-1','comfortable-hands','piano-0','staff','piano-2','piano-3','piano-4','piano-5','piano-6','three-chord-song','three-beats','rests-and-halves','phrasing','read-melody'],
+ 'chess':['chess-0','read-moves','chess-4','chess-1','chess-2','count-exchanges','chess-5','castling','chess-3','pins','promotion','pawn-race','queen-net','annotated-game'],
+ 'calculus':['functions','algebra-for-rates','calculus-1','calculus-2','derivative-rules','product-rule','calculus-3','calculus-5','calculus-4','definite-integrals','integral-substitution'],
+ 'physics':['units-and-directions','physics-4','velocity-graphs','physics-1','force-diagrams','physics-2','physics-5','physics-3','circuit-paths','waves','pressure']}
+ALIASES={'piano':{'performance':'read-melody'},'chess':{'threats':'chess-1'}}
 META={
  'spanish':('Spanish for conversation','Build useful exchanges, understand what the other person asks, and tell a short story about your week.'),
  'piano':('Piano, from the first note','Find the keys, keep a pulse, read a short melody, and make a small performance you can return to.'),
@@ -31,7 +32,8 @@ def build_courses(teacher):
     for entries in quantitative.values():extra+=entries
     for subject in ORDERS:
         extra+=json.loads((ROOT/('curriculum-bridges-'+subject+'.json')).read_text())
-    assert len(extra)==31
+    extra+=json.loads((ROOT/'curriculum-expansion-v112.json').read_text())
+    assert len(extra)==36
     for l in maps['DATA']:
         if l['subject'] not in ORDERS:continue
         id=l['id'];d=maps['V106_DEPTH'][id];t=maps['V107_TEACHING'][id];o=maps['V108_CLARITY'][id];first=dict(maps['V105_EXAMPLES'][id]);first['notice']=first.pop('check')
@@ -40,17 +42,24 @@ def build_courses(teacher):
         assert x['id'] not in units,x['id'];units[x['id']]=x
     # A full first chess unit must introduce all six pieces, not only the four diagram choices.
     units['chess-0']['teaching'] += ["The queen combines the rook’s straight lines and the bishop’s diagonals, with blockers still stopping her. Pawns are different: a white pawn moves toward higher rank numbers, normally one square into an empty square. From its starting rank it may move two if both squares are clear. It captures one square diagonally forward onto an enemy piece, not straight ahead. Black’s pawns move toward lower rank numbers. Neither color moves a pawn backward.","A pawn reaching the farthest rank must promote to a queen, rook, bishop or knight. Two other special moves need their own rules: castling, which gets a worked unit later, and en passant. Here is the en passant case: your white pawn is on e5, and Black moves a pawn from d7 to d5 in one turn. On your very next move, you may move e5–d6 and remove the black pawn from d5, as though it had stopped on d6. You lose that opportunity if you play something else first. Black can make the matching capture from its fourth rank after a white pawn’s two-square advance. As with any move, the capture must leave your own king safe."]
+    for id,changes in json.loads((ROOT/'editorial-v112.json').read_text()).items():
+        assert id in units,id
+        units[id].update(changes)
+    units['chess-1']['second']=units['threats']['first']
     demos=course_demos()
+    stages=json.loads((ROOT/'course-stages.json').read_text())
     courses={}
     for subject,order in ORDERS.items():
-        title,intro=META[subject];course={'subject':subject,'title':title,'intro':intro,'path':COURSE_PATHS[subject],'units':[],'practice':subject if subject in ['calculus','physics'] else './practice-studio.html'}
+        title,intro=META[subject];course={'subject':subject,'title':title,'intro':intro,'path':COURSE_PATHS[subject],'units':[],'stages':stages[subject],'aliases':ALIASES.get(subject,{}),'practice':subject if subject in ['calculus','physics'] else './practice-studio.html'}
+        assert [s['start'] for s in course['stages']]==sorted([s['start'] for s in course['stages']],key=order.index)
+        assert course['stages'][0]['start']==order[0]
         for i,id in enumerate(order):
             unit=dict(units[id]);unit['previous']=order[i-1] if i else None;unit['next']=order[i+1] if i+1<len(order) else None
             assert len(unit['opening'])>=2 and len(unit['teaching'])>=2
             for name in ['first','second']:assert len(unit[name]['steps'])>=3,(id,name)
             unit['demo']=id if id in demos else None;course['units'].append(unit)
         courses[subject]=course
-    assert sum(len(c['units']) for c in courses.values())==62
+    assert sum(len(c['units']) for c in courses.values())==65
     return courses,demos
 
 def course_demos():
@@ -69,6 +78,15 @@ def generate_course_demos():
      'descriptions':[['You','Soy estudiante. Estoy en casa.','I’m a student. I’m at home.'],['You','Estoy aburrido.','I’m bored.'],['Contrast','Soy aburrido.','I’m boring.']],
      'cafe-project':[['You','Hola. Quiero un café, por favor.','Hello. I want a coffee, please.'],['Café worker','¿Para aquí o para llevar?','For here or to go?'],['You','¿Puede repetirlo más despacio, por favor?','Can you repeat it more slowly, please?'],['Café worker','¿Para aquí o para llevar?','For here or to go?'],['You','Para llevar, por favor. ¿Puedo pagar con tarjeta?','To go, please. Can I pay by card?'],['Café worker','Sí, con tarjeta. ¿Algo más?','Yes, by card. Anything else?'],['You','Nada más, gracias.','Nothing else, thank you.']]}
     for id,rows in lines.items():d[id]={'kind':'spanish','lines':rows}
+    d['spanish-sounds']={'kind':'spanish','lines':[
+        ['Vowels','a, e, i, o, u.','The five vowel sounds.'],
+        ['First syllable','casa','House: CA-sa.'],
+        ['Middle syllable','amigo','Friend: a-MI-go.'],
+        ['Final syllable','café','Coffee: ca-FÉ.'],
+        ['Written accent','médico','Doctor: MÉ-di-co.'],
+        ['Silent h','Hola.','Hello.'],
+        ['Present','Hablo español.','I speak Spanish.'],
+        ['Past','Habló español.','He or she spoke Spanish.']]}
     d['noun-phrases']={'kind':'spanish','lines':[
         ['You','Quiero un café pequeño, por favor.','I want a small coffee, please.'],
         ['You, changing the order','Quiero dos cafés pequeños, por favor.','I want two small coffees, please.'],
@@ -109,6 +127,15 @@ def generate_course_demos():
     d['phrasing']['patterns'].insert(1,shaped)
     d['read-melody']['keys']=d['piano-5']['keys']+['F4','F#4','G4']
     d['read-melody']['patterns'].append(pattern('Melody over a held low C',8,[('C3',0,8)]+melody,'one low C held under the complete melody.'))
+    roots=[['C4','E4','G4'],['F4','A4','C5'],['G3','B3','D4'],['C4','E4','G4']]
+    close=[['C4','E4','G4'],['C4','F4','A4'],['B3','D4','G4'],['C4','E4','G4']]
+    def progression(chords):return [(note,i*4,4) for i,chord in enumerate(chords) for note in chord]
+    piano('three-chord-song','Hear C–F–G–C in two arrangements',[
+        pattern('Hear G major alone',4,[(n,0,4) for n in roots[2]],'G3–B3–D4: G major.'),
+        pattern('Root-position shapes',16,progression(roots),'C, F, G, C; four beats on each chord.'),
+        pattern('Nearby chord shapes',16,progression(close),'C–E–G, C–F–A, B–D–G, then C–E–G; the same progression.')])
+    d['three-chord-song']['keys']=['G3','G#3','A3','A#3','B3']+keys
+    for p in d['three-chord-song']['patterns'][1:]:p['meter']=4
     # Chess lines are generated and independently validated by python-chess at build time.
     import sys
     sys.path.insert(0,str(ROOT.parent/'qa/check-tools'))
@@ -131,8 +158,21 @@ def generate_course_demos():
     board('castling',[line('A legal castle','4k3/8/8/8/8/8/8/4K2R w K - 0 1',['e1g1'],['Rights are available and the king’s route is safe.','O-O moves the king to g1 and rook to f1.']),line('The crossing square is attacked','4kr2/8/8/8/8/8/8/4K2R w K - 0 1',[],['Rf8 attacks f1. Castling through f1 is illegal even if g1 is safe.'])])
     board('pins',[line('A king behind the knight','8/6k1/5n2/8/8/2B5/8/6K1 b - - 0 1',[],['Moving the knight off f6 would uncover the bishop’s attack on Kg7.']),line('A queen behind the knight','k2q4/3n4/8/8/8/8/8/3R2K1 b - - 0 1',['d7f6','d1d8'],['The knight shields a queen, not the king.','...Nf6 is legal, but it clears the d-file.','Rxd8+ captures the queen. Legal did not mean wise.'])])
     board('threats',[line('An attacked rook','7k/8/8/8/3b4/8/8/R6K w - - 0 1',['a1a2'],['Bd4 attacks Ra1, but White’s king on h1 is not checked.','Ra2 is one legal way to move the rook out of attack.'])])
+    d['chess-1']['lines'].append(d['threats']['lines'][0])
     board('promotion',[line('Promote with check','8/k7/2K1P3/8/8/8/8/8 w - - 0 1',['e6e7','a7b8','e7e8q'],['White can advance the e-pawn.','e7 approaches the promotion rank.','...Kb8 is one legal reply.','e8=Q+ creates a queen and checks immediately.']),line('Queen promotion stalemates','8/k1P5/2K5/8/8/8/8/8 w - - 0 1',['c7c8q'],['Inspect the black king’s replies before choosing a piece.','c8=Q leaves Black un-checked with no legal move: stalemate.']),line('Rook promotion leaves a reply','8/k1P5/2K5/8/8/8/8/8 w - - 0 1',['c7c8r'],['Use the same position but choose a rook.','c8=R leaves a6 available to Black’s king.'])])
     board('queen-net',[line('Give the actual mate','k7/8/1QK5/8/8/8/8/8 w - - 0 1',['b6b7'],['White to move can put the queen on b7.','Qb7# checks a8 and covers the escapes; Kc6 protects the queen.']),line('The nearby stalemate','k7/8/1QK5/8/8/8/8/8 b - - 0 1',[],['Black to move has no legal move, but Ka8 is not checked: stalemate.'])])
+    race='8/5k2/8/8/P7/8/8/7K w - - 0 1'
+    board('pawn-race',[
+        line('The pawn starts',race,['a4a5','f7e7','a5a6','e7d7','a6a7','d7c7','a7a8q'],['White moves first from a4; Black’s king is on f7.','a5 shrinks the pawn’s square.','...Ke7 is still outside that square.','a6 needs two more pawn moves to promote.','...Kd7 approaches, but cannot reach the pawn.','a7 needs one more advance.','...Kc7 leaves the king two files from a8.','a8=Q survives; Kc7 cannot capture a8.']),
+        line('The king starts',race.replace(' w ',' b '),['f7e6','a4a5','e6d6','a5a6','d6c7','a6a7','c7b7','a7a8q','b7a8'],['Black gets the first turn from the same arrangement.','...Ke6 enters the original pawn square.','a5.','...Kd6.','a6.','...Kc7.','a7.','...Kb7 reaches the promotion square’s neighborhood.','a8=Q+ gives check, but the queen is unprotected.','...Kxa8 removes the queen. Bare kings remain: a draw.'])])
+    d['pawn-race']['intro']='Outlined squares trace the pawn’s counting square. Follow each turn with Show next move, or select the named piece and its destination. Notice how the outline shrinks after a pawn advance.'
+    for example in d['pawn-race']['lines']:
+        for frame in example['frames']:
+            pawn=next((square for square,piece in frame['pieces'].items() if piece=='wP'),None)
+            if not pawn:continue
+            rank=int(pawn[1]);width=8-rank
+            outline=[chess.square_name(chess.square(file,r-1)) for file in range(width+1) for r in range(rank,9) if file in [0,width] or r in [rank,8]]
+            frame['marks']=list(dict.fromkeys(frame.get('marks',[])+outline))
     start=chess.STARTING_FEN
     board('read-moves',[
         line('Two numbered pairs',start,['e2e4','e7e5','g1f3','b8c6'],['Read 1 e4 e5 2 Nf3 Nc6 one turn at a time.','1 e4: the e2 pawn reaches e4.','...e5: Black’s e7 pawn reaches e5.','2 Nf3: N means knight; this one starts on g1.','...Nc6: Black’s b8 knight reaches c6. Two pairs contain four turns.']),

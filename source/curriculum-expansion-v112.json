@@ -1,0 +1,392 @@
+[
+  {
+    "id": "spanish-sounds",
+    "subject": "spanish",
+    "title": "Give each vowel a clear sound and find the stressed syllable",
+    "goal": "Hear the five vowel sounds and locate the strongest syllable in a few familiar words.",
+    "opening": [
+      "Say casa slowly: ca-sa. Both a sounds stay clear. Spanish vowels usually keep a steadier sound than English vowels, including in a syllable that does not carry the main stress.",
+      "Begin with five vowel cues: a, e, i, o, u. Rough English reminders are ah, eh, ee, oh, oo. Use the audio to hear the sounds together; the English spellings are only reminders."
+    ],
+    "heading": "Hear the syllables before trying to speak faster",
+    "teaching": [
+      "Try amigo as a-mi-go. The middle syllable is strongest: a-MI-go. Keep the first a audible instead of turning it into an English uh. In café, the final syllable is strongest: ca-FÉ. Stress makes one syllable more prominent; it does not require shouting it or stretching every other syllable out of shape.",
+      "For many words without a written accent, the usual pattern is useful: a word ending in a vowel, n or s has its stress on the next-to-last syllable; other consonant endings usually put it on the last. Casa and amigo follow the first pattern. Hablar follows the second. A written accent identifies the stressed vowel when the spelling needs it, as in café and médico. Accents also have other jobs, so this is a starting guide to stress rather than a complete spelling system.",
+      "The h in hola and hablar is silent. Listen to hola as o-la; do not add an English h sound at the beginning. Then compare hablo, I speak, with habló, he or she spoke. In HA-blo the first syllable is strongest; in ha-BLÓ it is the last. That small audible change carries meaning. Copy one short phrase at a comfortable speed, then say it again without the audio."
+    ],
+    "terms": [
+      [
+        "Syllable",
+        "A spoken beat within a word, such as the two parts of ca-sa."
+      ],
+      [
+        "Word stress",
+        "The prominence of one syllable within a word."
+      ],
+      [
+        "Written accent",
+        "The mark over a vowel in words such as café and médico."
+      ]
+    ],
+    "first": {
+      "title": "Read three familiar words aloud",
+      "problem": "Find the strongest syllable in casa, amigo and café.",
+      "steps": [
+        [
+          "Divide the first word",
+          "CA-sa.",
+          "Casa ends in a vowel and follows the usual next-to-last-syllable pattern."
+        ],
+        [
+          "Keep all three vowels clear",
+          "a-MI-go.",
+          "The stress is in the middle. The first vowel still sounds like a."
+        ],
+        [
+          "Follow the written accent",
+          "ca-FÉ.",
+          "The accent marks the final stressed syllable. Listen once, then repeat the whole word."
+        ]
+      ],
+      "notice": "A short, clear word is a better starting point than a fast sentence whose sounds you cannot yet separate."
+    },
+    "second": {
+      "title": "Let the stress change the message",
+      "problem": "Compare Hablo español with Habló español.",
+      "steps": [
+        [
+          "Hear the first version",
+          "HA-blo español: I speak Spanish.",
+          "The h is silent and the first syllable of hablo carries the stress."
+        ],
+        [
+          "Hear the second version",
+          "ha-BLÓ español: he or she spoke Spanish.",
+          "The written accent points to the stronger final syllable."
+        ],
+        [
+          "Repeat the contrast slowly",
+          "Hablo. Habló.",
+          "Keep the vowel sounds clear while moving the stress. The past-tense lessons will return to the grammar."
+        ]
+      ],
+      "notice": "You can begin hearing a meaningful contrast before learning a whole conjugation table."
+    },
+    "exercise": [
+      "Where is the stress in médico? What happens to the h in hola?",
+      "Médico is MÉ-di-co: the written accent identifies the stressed first syllable. Hola begins with a vowel sound because its h is silent."
+    ]
+  },
+  {
+    "id": "three-chord-song",
+    "subject": "piano",
+    "title": "Bring C and F home through a G chord",
+    "goal": "Play C–F–G–C and use different note orders to reduce the distance between chords.",
+    "opening": [
+      "You can already change from C major to F major. Add G major and you have three chords that support many simple songs in C. G major contains G, B and D.",
+      "First hear C–F–G–C with four beats on each chord. The last C can sound like a return home. Listen to that arrival before worrying about the names used to analyze it."
+    ],
+    "heading": "A chord keeps its identity when you rearrange its notes",
+    "teaching": [
+      "A basic G-major shape is G3–B3–D4. All three notes begin together in our block-chord example. Compare it with C4–E4–G4 and F4–A4–C5: moving each whole shape to its root-position location makes a large trip across the keyboard. It is useful to know those shapes, but you do not have to use that arrangement every time.",
+      "Keep C as C4–E4–G4. Put F major in the order C4–F4–A4, and put G major in the order B3–D4–G4. You still have the same three letter names in each chord, in different registers and orders. These rearrangements are called inversions. The lowest note is now C in the F chord and B in the G chord. Between C and F, C4 can stay in place. Between G and the final C, G4 can stay in place.",
+      "Try each shape alone before connecting them. At first, leave a pause long enough to find the next notes. Then count four steady beats per chord at a comfortable tempo. Listen separately for clean chord arrivals and for the final return to C. The chord sequence is a short musical result; it does not need a faster tempo or a busier left hand to count as progress."
+    ],
+    "terms": [
+      [
+        "G major",
+        "The chord containing G, B and D."
+      ],
+      [
+        "Inversion",
+        "A chord arrangement with a chord tone other than the root as its lowest note."
+      ],
+      [
+        "Common tone",
+        "A note shared by two successive chords, which can sometimes stay in place."
+      ]
+    ],
+    "first": {
+      "title": "Hear all four chord arrivals",
+      "problem": "Play C–F–G–C, giving each chord four beats.",
+      "steps": [
+        [
+          "Name the notes",
+          "C: C–E–G; F: F–A–C; G: G–B–D.",
+          "Each chord has three distinct letter names."
+        ],
+        [
+          "Give each chord its time",
+          "C for 1–2–3–4, then F, G and C for the same count.",
+          "The whole progression takes sixteen beats."
+        ],
+        [
+          "Listen to the ending",
+          "G → C.",
+          "Hear how the last C relates to the opening C. Keep its full four-beat length."
+        ]
+      ],
+      "notice": "A chord change happens at a place in the count. Prepare the next shape before that arrival."
+    },
+    "second": {
+      "title": "Keep the progression in a smaller area",
+      "problem": "Use C4–E4–G4, C4–F4–A4, B3–D4–G4, then C4–E4–G4.",
+      "steps": [
+        [
+          "Keep the shared C",
+          "C4 stays while E4–G4 move to F4–A4.",
+          "The second shape is still F major because its letters are C, F and A."
+        ],
+        [
+          "Find the nearby G shape",
+          "B3–D4–G4.",
+          "Its B is just below middle C. Sound the notes separately once if the shape is unfamiliar."
+        ],
+        [
+          "Return to C",
+          "Keep G4 and move B3–D4 to C4–E4.",
+          "These nearby movements connect the same chord sequence with less traveling."
+        ]
+      ],
+      "notice": "Compare the sound and the hand movement. Rearranging notes should make a musical task easier to carry out."
+    },
+    "exercise": [
+      "Why is C4–F4–A4 an F-major chord even though C is the lowest note?",
+      "It contains F, A and C, the three notes of F major. Putting C lowest changes the inversion, while preserving those chord tones."
+    ]
+  },
+  {
+    "id": "pawn-race",
+    "subject": "chess",
+    "title": "Count whether the king can catch a pawn",
+    "goal": "Follow a pawn race one turn at a time and account for whose move it is.",
+    "opening": [
+      "A lone pawn may promote before an enemy king arrives—or become a target that the king can catch. Count the turns, including the move after promotion. A new queen can still be captured if its square is unprotected.",
+      "Our first position has White Kh1 and Pa4, Black Kf7, with White to move. The pawn needs four advances to reach a8. The black king must reach the pawn or its promotion square in time."
+    ],
+    "heading": "Recount the race after each turn",
+    "teaching": [
+      "The square-of-the-pawn rule is a useful shortcut in this simple kind of ending. Starting at a4, draw a square from a4 to a8 and across to e4 and e8. If the enemy king can get into the relevant square in time, it can normally catch an unassisted pawn. After White plays a5, the square shrinks to a5–a8–d8–d5. From f7, Black cannot enter that smaller square in one move. Its nearest approach on the e-file still leaves it outside.",
+      "Follow a concrete chase: a5, ...Ke7, a6, ...Kd7, a7, ...Kc7, a8=Q. The king on c7 is too far away to take the queen on a8. This illustrates why the pawn can outrun that king. Move order matters: if Black starts from the same original position, ...Ke6 puts its king inside the original square before White advances. The second line shows the king arriving in time.",
+      "Use the shortcut only after checking its assumptions. An initial two-square pawn move changes the timing; other pieces, captures, blockers and a supporting king can change the result. In these examples the pawn is already on a4 and has no nearby help. The board lets us count ordinary one-square pawn advances and king moves without those extra factors."
+    ],
+    "terms": [
+      [
+        "Passed pawn",
+        "A pawn with no enemy pawn on its file or adjacent files that can stop its advance by a pawn move or capture."
+      ],
+      [
+        "Promotion square",
+        "The last-rank square where the pawn must become another piece."
+      ],
+      [
+        "Square of the pawn",
+        "A counting aid for whether a king can catch a simple advancing pawn."
+      ]
+    ],
+    "first": {
+      "title": "The pawn moves first",
+      "problem": "White Kh1, Pa4; Black Kf7. White to move. Follow a5 Ke7 a6 Kd7 a7 Kc7 a8=Q.",
+      "steps": [
+        [
+          "Advance before the chase",
+          "a5.",
+          "The pawn now needs only three more moves to promote."
+        ],
+        [
+          "Follow the nearest-file approach",
+          "...Ke7, a6, ...Kd7, a7, ...Kc7.",
+          "Track each new king square rather than letting it take two turns at once."
+        ],
+        [
+          "Inspect promotion and the reply",
+          "a8=Q.",
+          "The black king on c7 is two files away from a8 and cannot capture the new queen next turn."
+        ]
+      ],
+      "notice": "Arriving on the last rank is only useful if you also inspect what the opponent can do next."
+    },
+    "second": {
+      "title": "The king gets the first turn",
+      "problem": "Use the same pieces, but give Black the move. Follow ...Ke6, a5 Kd6, a6 Kc7, a7 Kb7, a8=Q+ Kxa8.",
+      "steps": [
+        [
+          "Spend the extra king turn",
+          "...Ke6 enters the square before a5.",
+          "Black has one more approach move than in the first example."
+        ],
+        [
+          "Keep both sides moving",
+          "a5 Kd6, a6 Kc7, a7 Kb7.",
+          "The king reaches b7 before the pawn reaches a8."
+        ],
+        [
+          "Check the new queen’s safety",
+          "a8=Q+ Kxa8.",
+          "The promotion gives check, but the unprotected queen can be captured. The remaining bare kings draw."
+        ]
+      ],
+      "notice": "Promotion with check does not protect the promoted piece from a legal king capture."
+    },
+    "exercise": [
+      "What changed between these two pawn races, and why did the promotion check fail to save the pawn in the second?",
+      "Only the side to move changed initially. Black’s extra king turn let it reach b7 in time. The queen on a8 was unprotected, so Kxa8 legally removed the check and the queen."
+    ]
+  },
+  {
+    "id": "integral-substitution",
+    "subject": "calculus",
+    "title": "Undo a chain rule inside an integral",
+    "goal": "Choose a substitution, carry its scale factor, and change bounds for a definite integral.",
+    "opening": [
+      "The chain rule differentiates a function of another function. Integration sometimes lets us follow that process backward. In ∫2x(x²+1)³ dx, the expression x²+1 is inside a cube, and its derivative 2x is already beside it.",
+      "Call the inside expression u. This gives you a shorter integral, provided you also account for how u changes with x. Replacing the letters alone is not enough."
+    ],
+    "heading": "Carry the change of variable through the whole calculation",
+    "teaching": [
+      "Set u=x²+1. Then du/dx=2x, so du=2x dx is the substitution shorthand used here. The original integral becomes ∫u³ du. An antiderivative is u⁴/4. Put x back to obtain (x²+1)⁴/4+C. Differentiate the result: the 4 cancels, the inside power becomes a cube, and the chain rule supplies 2x. That check recovers exactly what we began with. C is any constant; its derivative is zero.",
+      "Sometimes the needed derivative is missing a constant factor. For ∫(3x+1)² dx, let u=3x+1. Since du=3 dx, we need dx=du/3. The integral is therefore one third of ∫u² du, giving u³/9+C. Omitting the one third would make the derivative three times too large. This is the same scale factor you had to remember when differentiating a composite function.",
+      "For a definite integral, change the bounds along with the variable. If x runs from 0 to 2, u=3x+1 runs from 1 to 7. You can finish entirely in u using those new bounds. Alternatively, return to an antiderivative in x and use the old x bounds. Either route works; mixing u expressions with x bounds does not."
+    ],
+    "terms": [
+      [
+        "Substitution",
+        "Introducing a new variable to simplify a function and its corresponding change."
+      ],
+      [
+        "u",
+        "The new variable chosen for an inside expression."
+      ],
+      [
+        "du=2x dx",
+        "The change-of-variable shorthand corresponding to du/dx=2x in the first example."
+      ]
+    ],
+    "first": {
+      "title": "Recognize the inside derivative",
+      "problem": "Find ∫2x(x²+1)³ dx.",
+      "steps": [
+        [
+          "Choose the inside expression",
+          "u=x²+1; du=2x dx.",
+          "The whole 2x dx part is accounted for by du."
+        ],
+        [
+          "Integrate the simpler power",
+          "∫u³ du=u⁴/4+C.",
+          "Increase the exponent by one and divide by that new exponent."
+        ],
+        [
+          "Return and check",
+          "(x²+1)⁴/4+C.",
+          "Its derivative is 2x(x²+1)³, so the substitution preserved the original integrand."
+        ]
+      ],
+      "notice": "The derivative check tests the factor as well as the power."
+    },
+    "second": {
+      "title": "Change both scale and bounds",
+      "problem": "Calculate ∫ from 0 to 2 of (3x+1)² dx.",
+      "steps": [
+        [
+          "Find the replacement for dx",
+          "u=3x+1, so dx=du/3.",
+          "The factor one third must remain in the integral."
+        ],
+        [
+          "Change the endpoints",
+          "x=0 → u=1; x=2 → u=7.",
+          "Both limits now belong to the variable being integrated."
+        ],
+        [
+          "Integrate and evaluate",
+          "(1/3)∫₁⁷u² du=[u³/9]₁⁷=(343−1)/9=38.",
+          "The result is the signed accumulation over the original x interval."
+        ]
+      ],
+      "notice": "The larger endpoint is seven only in the u variable; it is not a new x endpoint."
+    },
+    "exercise": [
+      "Find ∫2(2x+5)³ dx and check by differentiating.",
+      "Let u=2x+5, so du=2 dx. The result is (2x+5)⁴/4+C. Its derivative is 2(2x+5)³."
+    ]
+  },
+  {
+    "id": "circuit-paths",
+    "subject": "physics",
+    "title": "Follow current through one path or two",
+    "goal": "Calculate currents and voltage drops in simple series and parallel resistor circuits.",
+    "opening": [
+      "Two resistors can sit in one continuous path, or each can have its own path across a battery. The connections matter as much as the resistance labels. Trace the wires before choosing an equation.",
+      "We will use an ideal 6 V battery, a 2 Ω resistor and a 4 Ω resistor. The wires have negligible resistance, and the resistors follow V=IR."
+    ],
+    "heading": "Use the connections to decide what stays equal",
+    "teaching": [
+      "In series there is one path through both resistors. In steady operation, the same current passes through each: charge does not pile up between them. The two voltage drops add to the battery’s 6 V. Because each drop is IR, the total is I×2+I×4=I×6. The equivalent resistance is 6 Ω and the current is 1 A. The drops are 2 V and 4 V. The second resistor has a larger voltage drop, rather than receiving a smaller current.",
+      "In parallel, each resistor connects between the same two battery terminals. Each therefore has 6 V across it. The 2 Ω branch carries 6/2=3 A; the 4 Ω branch carries 6/4=1.5 A. The current leaving the battery is their sum, 4.5 A, and the branches rejoin with that same total. It would be wrong to add the branch currents and then say that 4.5 A passes through each resistor.",
+      "An equivalent resistance describes what the whole network draws from the battery. For this parallel pair, R=6/4.5=4/3 Ω, smaller than either individual resistance. Adding a second path has increased the available current at the same voltage. Keep the comparison tied to the stated ideal source; the calculation concerns these connections and component values."
+    ],
+    "terms": [
+      [
+        "Series",
+        "Components placed in one path, with the same steady current through them."
+      ],
+      [
+        "Parallel",
+        "Branches connected across the same two points, with the same voltage across each branch."
+      ],
+      [
+        "Equivalent resistance",
+        "The single resistance that would draw the same total current at the stated voltage."
+      ]
+    ],
+    "first": {
+      "title": "One path through two resistors",
+      "problem": "Connect 2 Ω and 4 Ω in series across 6 V. Find current and both voltage drops.",
+      "steps": [
+        [
+          "Combine the series resistance",
+          "R=2+4=6 Ω.",
+          "There is one current path through both resistors."
+        ],
+        [
+          "Find the current",
+          "I=6/6=1 A.",
+          "This current passes through each resistor."
+        ],
+        [
+          "Find and check the drops",
+          "V₂Ω=1×2=2 V; V₄Ω=1×4=4 V. Total=6 V.",
+          "The drops account for the full battery voltage."
+        ]
+      ],
+      "notice": "Current is shared in the sense of being the same all along this one path; it is not divided into separate branches."
+    },
+    "second": {
+      "title": "Two paths across the same battery",
+      "problem": "Connect the same resistors in parallel across 6 V. Find branch currents, battery current and equivalent resistance.",
+      "steps": [
+        [
+          "Keep the branch voltage",
+          "Each resistor has 6 V across it.",
+          "Both branches join the same two terminals."
+        ],
+        [
+          "Calculate and add the currents",
+          "I₂Ω=3 A; I₄Ω=1.5 A; total=4.5 A.",
+          "Current splits at the junction and rejoins afterward."
+        ],
+        [
+          "Check the network as a whole",
+          "R equivalent=6/4.5=4/3 Ω≈1.33 Ω.",
+          "The parallel network draws more current than either branch alone at 6 V."
+        ]
+      ],
+      "notice": "Same voltage across branches and same current through a series path are different consequences of the wiring."
+    },
+    "exercise": [
+      "Two 4 Ω resistors are placed in parallel across 6 V. Find each branch current and the total.",
+      "Each branch carries 6/4=1.5 A. The battery supplies 3 A total, giving an equivalent resistance of 6/3=2 Ω."
+    ]
+  }
+]
