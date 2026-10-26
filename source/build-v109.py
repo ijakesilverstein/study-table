@@ -72,7 +72,7 @@ html=html.replace('Study Table V108 — Taught Lessons','Study Table V109 — Le
 html=html.replace('study-table-v108.html','study-table-v109.html').replace('Study_Table_V108.html','Study_Table_V109.html')
 # Append after the historical layers so this palette has a single clear point of ownership.
 end=html.rindex('</body>')
-html=html[:end]+'\n<style id="v109-theme">'+(root/'theme-v109.css').read_text()+'\nhtml #v97Study .v105-board .dark{background:#99a9c0}html #v97Study .v105-board .light{background:#f1ece1}</style>\n'+html[end:]
+html=html[:end]+'\n<style id="v109-theme">'+(root/'theme-v109.css').read_text()+'</style>\n'+html[end:]
 (root/'Study_Table_V109.html').write_text(html)
 (root/'teacher-v109.js').write_text(teacher)
 (root/'demos-v109.json').write_text(json.dumps(demos,ensure_ascii=False,indent=2))
