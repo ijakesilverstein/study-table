@@ -22,10 +22,10 @@ function v109Piano(host,d){
   const beat=60/Number($('v109Tempo').value);try{v109Audio=v109Audio||new Context();await v109Audio.resume();if(generation!==v109Generation||!host.isConnected)return;const base=v109Audio.currentTime+.04,counts=new Map();
    const mark=(note,change)=>{counts.set(note,(counts.get(note)||0)+change);host.querySelectorAll('[data-v109-note]').forEach(e=>e.classList.toggle('playing',(counts.get(e.dataset.v109Note)||0)>0))};
    for(const event of pattern.events){const match=/^([A-G])(#?)(\d)$/.exec(event.note),semitones={C:0,D:2,E:4,F:5,G:7,A:9,B:11},midi=12*(Number(match[3])+1)+semitones[match[1]]+(match[2]?1:0),osc=v109Audio.createOscillator(),gain=v109Audio.createGain(),start=base+event.at*beat,duration=event.beats*beat;
-    osc.frequency.value=440*2**((midi-69)/12);gain.gain.setValueAtTime(.0001,start);gain.gain.exponentialRampToValueAtTime(.055,start+.015);gain.gain.exponentialRampToValueAtTime(.0001,start+duration*.94);osc.connect(gain);gain.connect(v109Audio.destination);v109Oscillators.add(osc);osc.onended=()=>{v109Oscillators.delete(osc);osc.disconnect();gain.disconnect()};osc.start(start);osc.stop(start+duration*.97);
+    const peak=Number.isFinite(event.level)?Math.max(.015,Math.min(.12,event.level)):.055;osc.frequency.value=440*2**((midi-69)/12);gain.gain.setValueAtTime(.0001,start);gain.gain.exponentialRampToValueAtTime(peak,start+.015);gain.gain.exponentialRampToValueAtTime(.0001,start+duration*.94);osc.connect(gain);gain.connect(v109Audio.destination);v109Oscillators.add(osc);osc.onended=()=>{v109Oscillators.delete(osc);osc.disconnect();gain.disconnect()};osc.start(start);osc.stop(start+duration*.97);
     v109Timer(()=>{if(generation===v109Generation)mark(event.note,1)},40+event.at*beat*1000);v109Timer(()=>{if(generation===v109Generation)mark(event.note,-1)},40+(event.at+event.beats)*beat*1000);
    }
-   for(let i=0;i<pattern.beats;i++)v109Timer(()=>{if(generation===v109Generation)status.textContent=pattern.label+' · beat '+(i+1)+' of '+pattern.beats},40+i*beat*1000);
+   for(let i=0;i<pattern.beats;i++)v109Timer(()=>{if(generation===v109Generation)status.textContent=pattern.label+(pattern.meter?' · count '+(i%pattern.meter+1)+' · group '+(Math.floor(i/pattern.meter)+1):' · beat '+(i+1)+' of '+pattern.beats)},40+i*beat*1000);
    v109Timer(()=>{if(generation===v109Generation){v109StopMedia();status.textContent='Finished: '+pattern.description}},60+pattern.beats*beat*1000);
   }catch{v109StopMedia();status.textContent='The sound could not play. The written notes and count are below.'}
  };

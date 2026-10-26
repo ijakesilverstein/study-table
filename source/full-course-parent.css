@@ -1,0 +1,10 @@
+body.full-course-reading:not(.v35-active)>header,body.full-course-reading:not(.v35-active)>.quickbar,body.full-course-reading:not(.v35-active) .container>.sidebar,body.full-course-reading:not(.v35-active) #helpBtn,body.full-course-reading:not(.v35-active) #bookmark,body.full-course-reading:not(.v35-active) #status,body.full-course-reading:not(.v35-active) #v101ToolsButton{display:none!important}
+body.full-course-reading:not(.v35-active) .container{display:block;width:100%;max-width:none;margin:0;padding:0}
+body.full-course-reading:not(.v35-active) .viewer{border:0;border-radius:0;overflow:hidden;background:var(--study-paper)}
+body.full-course-reading:not(.v35-active) .viewerbar{padding:8px 16px;background:var(--study-surface);color:var(--study-ink);border-bottom:1px solid var(--study-line);gap:8px}
+body.full-course-reading:not(.v35-active) .viewerbar>strong{color:var(--study-ink)!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+body.full-course-reading:not(.v35-active) .viewerbar button{background:var(--study-surface)!important;color:var(--study-ink)!important;border-color:#84848e!important}
+body.full-course-reading:not(.v35-active) #frame{display:block;width:100%;height:calc(100dvh - 65px);min-height:500px;border:0;background:var(--study-paper)}
+body.full-course-reading:not(.v35-active) #screen:has(#fullCourseReturn) #frame{height:calc(100dvh - 125px)}
+body.full-course-reading:not(.v35-active) #v25UniversalReveal{display:none!important}
+@media(max-width:800px){body.full-course-reading:not(.v35-active) .viewerbar>strong,body.full-course-reading:not(.v35-active) #forward{display:none!important}body.full-course-reading:not(.v35-active) .viewerbar{flex-wrap:nowrap;padding:8px}body.full-course-reading:not(.v35-active) .viewerbar button{font-size:13px;min-height:42px}}

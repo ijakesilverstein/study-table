@@ -1,0 +1,399 @@
+[
+  {
+    "id": "staff",
+    "title": "Connect a note on the staff to a key",
+    "goal": "Find C4, E4 and G4 on a treble staff and play the matching keys.",
+    "opening": [
+      "The five staff lines are a way of arranging pitch on a page. Higher on the staff means higher in pitch. Notes can sit on a line or in a space; both positions count.",
+      "On the treble staff, the bottom line is E4. Middle C, C4, sits below the staff on a short extra line called a ledger line. D4 fits between that ledger line and the bottom staff line. We will connect those positions to the keys you already know."
+    ],
+    "heading": "Count neighboring positions, not just the lines",
+    "teaching": [
+      "Start at C4 on its ledger line. Move upward one position at a time: D4 is the space just above, E4 the bottom staff line, F4 the next space, and G4 the next line. The letter names advance one step for every line or space. Skipping all the spaces would skip half the information on the page.",
+      "A notehead’s position gives its pitch. Its appearance and stem also help show duration. For now, the filled noteheads with stems in our example are quarter notes, and our count gives each one a beat. We will keep the rhythm simple while learning where to look. A treble clef fixes the staff’s pitch reference; on a bass staff the same vertical positions name different notes, so do not carry these names to a different clef blindly.",
+      "Read a small group, then look at the keyboard and play it. At first it is reasonable to use the note names written below the staff. Later, cover those labels and identify the first note from a landmark. Reading becomes easier when you recognize the shape between notes instead of counting from middle C for every single pitch."
+    ],
+    "terms": [
+      [
+        "Staff",
+        "Five lines and the spaces between them used for music notation."
+      ],
+      [
+        "Ledger line",
+        "A short extra line for a note beyond the five-line staff."
+      ],
+      [
+        "Treble clef",
+        "The clef used for these pitch positions."
+      ]
+    ],
+    "first": {
+      "title": "Read C, E and G",
+      "problem": "Find C4, E4 and G4 in the notation and play them in order.",
+      "steps": [
+        [
+          "Find C4",
+          "The notehead sits on the short ledger line below the staff.",
+          "Use the keyboard’s black-key pair to locate the matching C."
+        ],
+        [
+          "Find E4",
+          "The notehead sits on the bottom staff line.",
+          "C to E passes over D, a skip in letter names."
+        ],
+        [
+          "Find G4",
+          "The notehead sits on the second staff line from the bottom.",
+          "From E, pass the F space to reach G."
+        ],
+        [
+          "Play the group",
+          "C4–E4–G4.",
+          "Check that the sound rises twice. The notation and keyboard should tell the same story."
+        ]
+      ],
+      "notice": "A line-to-next-line move passes over a space and skips one letter name."
+    },
+    "second": {
+      "title": "Fill in the spaces",
+      "problem": "Read C4–D4–E4 instead of C4–E4–G4.",
+      "steps": [
+        [
+          "Keep the first landmark",
+          "C4 remains on its ledger line.",
+          "The starting pitch has not changed."
+        ],
+        [
+          "Use the intervening space",
+          "D4 sits between the C ledger line and the E line.",
+          "A space is a real pitch position."
+        ],
+        [
+          "Reach the bottom line",
+          "E4 completes the three adjacent letter names.",
+          "This pattern moves by steps, unlike the skips in the first example."
+        ]
+      ],
+      "notice": "The sound should rise in smaller steps when the notation uses neighboring positions."
+    },
+    "exercise": [
+      "Explain why counting only the five staff lines can give the wrong note.",
+      "Notes also occupy spaces. From E4 on the bottom line, the next position is F4 in a space; the next line is G4. Ignoring spaces would confuse steps with skips."
+    ]
+  },
+  {
+    "id": "three-beats",
+    "title": "Keep a three-beat group without speeding up",
+    "goal": "Distinguish three-beat and four-beat groupings while preserving a steady pulse.",
+    "opening": [
+      "Tap an even pulse and count 1–2–3, 1–2–3. The first beat begins a new group. Now count 1–2–3–4, 1–2–3–4 at the same pulse speed. You changed the grouping, not the duration of each beat.",
+      "In the simple examples here, 3/4 groups three quarter-note beats in a measure and 4/4 groups four. The top number counts these beats; the bottom 4 identifies the quarter note as the beat unit."
+    ],
+    "heading": "Let the count continue through the measure line",
+    "teaching": [
+      "Play C on beat 1 of each three-beat group and hold it through 2 and 3. There is one attack per measure, not three. Release and begin the next C on the next 1. You can tap all six beats with the other hand while making only two sounds. This is a useful way to separate the steady pulse from the beginnings of notes.",
+      "Now play C, D, E as one note per beat: C on 1, D on 2, E on 3. Return to C on the next 1 without adding a pause at the measure line. A printed bar line organizes the music; it does not itself tell you to stop. Keep the first beat recognizable, but avoid striking it harshly. Grouping should be audible without turning every 1 into a bang.",
+      "At 60 quarter-note beats per minute, a three-beat measure lasts three seconds. At 120 it lasts one and a half. The same 3/4 grouping can therefore be slow or fast. Meter and tempo answer different questions."
+    ],
+    "terms": [
+      [
+        "Measure or bar",
+        "A written group of beats in this example."
+      ],
+      [
+        "3/4",
+        "Three quarter-note beats per measure here."
+      ],
+      [
+        "Meter",
+        "The organization of beats into recurring groups."
+      ]
+    ],
+    "first": {
+      "title": "Two measures with one note in each",
+      "problem": "At 60 beats per minute, hold C for each complete three-beat measure. Play two measures.",
+      "steps": [
+        [
+          "Count before playing",
+          "1–2–3, 1–2–3.",
+          "Keep equal gaps between successive numbers."
+        ],
+        [
+          "Place the attacks",
+          "Press C on each 1; hold through 2 and 3.",
+          "You have two attacks occupying six beats."
+        ],
+        [
+          "Find the duration",
+          "Six beats at one second per beat = six seconds.",
+          "Each note lasts three seconds at this tempo."
+        ]
+      ],
+      "notice": "A measure boundary organizes the count but does not add an extra beat."
+    },
+    "second": {
+      "title": "Put a note on every beat",
+      "problem": "Play C–D–E twice in 3/4 without a gap between groups.",
+      "steps": [
+        [
+          "Match notes to the count",
+          "C=1, D=2, E=3.",
+          "There are three attacks in this measure."
+        ],
+        [
+          "Continue the pulse",
+          "C–D–E | C–D–E.",
+          "The return to C arrives on the next 1 at the same spacing."
+        ],
+        [
+          "Compare with the held version",
+          "Both examples occupy six beats.",
+          "The number of attacks changed, but the underlying pulse did not."
+        ]
+      ],
+      "notice": "Keep your tapping hand steady across the transition from 3 to the next 1."
+    },
+    "exercise": [
+      "At 120 beats per minute, how long do two complete 3/4 measures last in this exercise?",
+      "There are six quarter-note beats, each lasting half a second. The total is three seconds. Do not count the measure lines as additional beats."
+    ]
+  },
+  {
+    "id": "phrasing",
+    "title": "Make a phrase sound like one thought",
+    "goal": "Shape a short phrase and practice its join without using speed as the main goal.",
+    "opening": [
+      "Play four notes in order and they can still sound like four unrelated events. A phrase gives them a beginning, a direction and an ending. You can hear that with a very small melody: C–D–E–G, then E–D–C.",
+      "First keep every note accurate and the pulse even. Then let the rise grow slightly and the ending settle. A phrase does not require a dramatic volume change or a pause after every few notes."
+    ],
+    "heading": "Add expression after the movement is dependable",
+    "teaching": [
+      "On a touch-sensitive acoustic or digital piano, how you send a key down affects loudness. Start with a comfortable, moderate sound. Let the rising C–D–E–G lead toward G, then ease the return E–D–C. Compare the two audio versions in the worked example: the pitches and rhythm stay the same, while the second gives the rise a little more weight. Some keyboards have fixed-volume keys; on one of those, focus on the steady pulse and full ending rather than pressing harder.",
+      "If the G-to-E return makes you hesitate, reduce the task to E–G | E–D. Keep one pulse across the join. Once that fragment is comfortable, place it back into the phrase. This is different from restarting from C after every mistake: restarting mostly rehearses the beginning while the difficult transition gets fewer successful repetitions.",
+      "Listen to a short recording of your own playing if you can. Ask one concrete question at a time: are the notes right, does the count stay steady, does the ending sound settled? Avoid changing tempo, fingering and loudness all at once. One focused adjustment gives you something you can hear on the next attempt."
+    ],
+    "terms": [
+      [
+        "Phrase",
+        "A short musical thought heard as a connected group."
+      ],
+      [
+        "Dynamics",
+        "Differences and changes in loudness."
+      ],
+      [
+        "Join",
+        "The transition between two parts of a phrase."
+      ]
+    ],
+    "first": {
+      "title": "A rise and a return",
+      "problem": "Shape C–D–E–G | E–D–C with a steady count and a two-beat final C.",
+      "steps": [
+        [
+          "Learn the notes evenly",
+          "C D E G | E D C—.",
+          "Use the same pulse before adding changes of loudness."
+        ],
+        [
+          "Hear the direction",
+          "Let the rising group lead toward G.",
+          "A slight increase is enough; do not force the hand."
+        ],
+        [
+          "Settle the ending",
+          "Ease the return and hold the last C for two beats.",
+          "The beat continues while the ending note lasts."
+        ],
+        [
+          "Listen back",
+          "Check the pulse separately from the phrase shape.",
+          "A convincing ending should not depend on rushing the middle."
+        ]
+      ],
+      "notice": "Expression grows from a secure small movement; it does not replace accurate notes and rhythm."
+    },
+    "second": {
+      "title": "Repair one hesitant transition",
+      "problem": "The first four notes are easy, but returning from G to E causes a stop.",
+      "steps": [
+        [
+          "Name the troublesome join",
+          "G | E.",
+          "That is the movement to rehearse."
+        ],
+        [
+          "Give it neighbors",
+          "Play E–G | E–D slowly.",
+          "The neighboring notes help the join remain part of a musical group."
+        ],
+        [
+          "Return to the full phrase",
+          "C–D–E–G | E–D–C.",
+          "Keep the successful slower pulse before gradually increasing speed."
+        ]
+      ],
+      "notice": "A short practice loop should solve a specific problem, then go back into context."
+    },
+    "exercise": [
+      "Choose one audible thing to check in a recording of this phrase and name how you would practice it.",
+      "For example: if the G-to-E return hesitates, isolate E–G–E–D at a slower steady pulse, then replay the whole phrase. If the count is steady but the ending is clipped, practice holding the final C through its full two beats."
+    ]
+  },
+  {
+    "id": "read-melody",
+    "title": "Read a complete two-measure melody",
+    "goal": "Combine staff positions, note order and durations in a short readable piece.",
+    "opening": [
+      "Here is a small melody built from the notes you know: C4–D4–E4–G4 | E4–D4–C4. The first six notes each last one beat. The last C lasts two, making eight beats altogether.",
+      "Before playing, find the first note on the staff and look at the shape. It rises by steps, skips to G, then returns toward C. That gives you a route to follow instead of seven unrelated names."
+    ],
+    "heading": "Preview the rhythm before the fingers start",
+    "teaching": [
+      "Count the first measure as 1,2,3,4 and the second as 1,2,3—4. The half-note ending occupies beats 3 and 4 of the second measure. Its open notehead with a stem distinguishes it from the filled quarter notes in this notation. It does not ask you to press twice. Tap the rhythm on one key before combining it with the pitches if keeping both jobs together feels hard.",
+      "Next play the first four notes slowly. Choose a comfortable fingering that lets you reach G without twisting; for this small right-hand pattern, one option is thumb on C, index on D, middle on E and little finger on G. Return through E and D to C with the hand staying in the same area. A suggested fingering is a practical aid, not a claim that one hand size or movement suits everyone.",
+      "Once the right hand is comfortable, you can hear an optional low C underneath the eight-beat melody. Do not add it merely because the button exists. Compare right hand alone and both parts, then decide whether the extra coordination is useful today. Reading the melody accurately is already a complete task."
+    ],
+    "terms": [
+      [
+        "Quarter note",
+        "A one-beat note in this 4/4 example."
+      ],
+      [
+        "Half note",
+        "A two-beat note in this example, shown with an open notehead and stem."
+      ]
+    ],
+    "first": {
+      "title": "Read and count the complete phrase",
+      "problem": "Play C4 D4 E4 G4 | E4 D4 C4, holding the last C for two beats.",
+      "steps": [
+        [
+          "Preview the pitches",
+          "C–D–E–G rises, then E–D–C returns.",
+          "Find the skips and steps before playing."
+        ],
+        [
+          "Preview the durations",
+          "1 2 3 4 | 1 2 3—4.",
+          "The last C fills the final two beats."
+        ],
+        [
+          "Join the jobs slowly",
+          "Play the pitches with that count.",
+          "Keep the written example visible; this is reading, not a memory test."
+        ],
+        [
+          "Finish on time",
+          "Release after the full last beat.",
+          "A held ending has a duration even though no new attack occurs on the final count."
+        ]
+      ],
+      "notice": "Look ahead a little without abandoning the note you are currently playing."
+    },
+    "second": {
+      "title": "Add a quiet sustained bass",
+      "problem": "Hold C3 under the same eight-beat right-hand phrase.",
+      "steps": [
+        [
+          "Keep the melody unchanged",
+          "The right-hand notes and durations stay the same.",
+          "Do not make the new bass part a reason to alter the melody’s rhythm."
+        ],
+        [
+          "Give the left hand one job",
+          "Start C3 with the first right-hand C4 and hold for eight beats.",
+          "Keep that key down while the right hand moves. The sound may fade naturally; you do not need to press again on each beat."
+        ],
+        [
+          "Listen for independence",
+          "The low note stays while the higher notes move.",
+          "Return to separate hands if either part becomes tense or uncertain."
+        ]
+      ],
+      "notice": "One steady bass note is enough to begin hearing a melody over another part."
+    },
+    "exercise": [
+      "How many attacks and beats are in the right-hand melody? Why are those totals different?",
+      "There are seven attacks over eight beats. Six notes last one beat each, and the final C lasts two beats. A new attack is not required on every beat."
+    ]
+  },
+  {
+    "id": "performance",
+    "title": "Prepare a short piece you can play again tomorrow",
+    "goal": "Build a repeatable practice session around a musical result, rather than a score in the app.",
+    "opening": [
+      "Choose the two-measure melody from the preceding unit as a small performance project. The aim is to start calmly, keep the pulse, recover if necessary, and give the ending its full length.",
+      "You do not need to add every feature at once. Right hand alone is a valid first version. A held bass or C-to-F chord exercise can be a separate second task rather than something piled onto the melody before it is ready."
+    ],
+    "heading": "Make each repetition answer a useful question",
+    "teaching": [
+      "First preview the notes and count away from the keys. Next rehearse the one join that is least dependable. Then play the whole phrase at a tempo where that join can succeed. A good slow version is information: it tells you the notes and movement are available. If you cannot yet place the notes slowly, increasing tempo will mostly conceal where the uncertainty begins.",
+      "After a complete attempt, choose one change. Perhaps the ending was cut short, the fourth note arrived late, or the left hand copied the right. Practice that small event, then return to a complete performance. Do not restart every attempt at maximum speed and hope the difficult part improves through exposure alone.",
+      "Leave a note for tomorrow in musical terms: keep the last C for two beats, or prepare both hands before beat 1. On the next day, attempt the phrase before replaying the demonstration. If you forget a note, look it up and continue. The point is to discover what remains available after a gap, not to turn one imperfect start into a verdict about your musical ability."
+    ],
+    "terms": [
+      [
+        "Practice tempo",
+        "A speed chosen so that the movement can be learned accurately."
+      ],
+      [
+        "Recovery",
+        "Continuing or restarting deliberately after a mistake, instead of rushing in panic."
+      ]
+    ],
+    "first": {
+      "title": "A short practice session with an audible goal",
+      "problem": "Prepare the melody for a calm complete performance.",
+      "steps": [
+        [
+          "Preview",
+          "Read the pitches and tap 1 2 3 4 | 1 2 3—4.",
+          "Know where the held ending falls before starting."
+        ],
+        [
+          "Repair one join",
+          "For example, rehearse E–G | E–D.",
+          "Choose the part that actually hesitated in your attempt."
+        ],
+        [
+          "Play the complete phrase",
+          "Use the successful slow pulse and keep going to the ending.",
+          "A complete attempt tests whether the repaired fragment fits its surroundings."
+        ],
+        [
+          "Choose one next adjustment",
+          "Write a specific note for the next session.",
+          "A useful note names a sound or movement, not simply be better."
+        ]
+      ],
+      "notice": "Short focused work can be substantial when you know what each attempt is checking."
+    },
+    "second": {
+      "title": "The first attempt tomorrow is rusty",
+      "problem": "You remember the beginning but hesitate at the second measure.",
+      "steps": [
+        [
+          "Locate the uncertainty",
+          "The return E–D–C is missing.",
+          "Do not label the entire piece forgotten when one part is uncertain."
+        ],
+        [
+          "Use the score",
+          "Read and play that return slowly.",
+          "Looking up a missing part is part of practice."
+        ],
+        [
+          "Reconnect it",
+          "Replay from the G before the join, then try the complete phrase.",
+          "A successful isolated ending still needs to reconnect to what precedes it."
+        ]
+      ],
+      "notice": "Tomorrow’s first attempt helps you choose which part to practice next."
+    },
+    "exercise": [
+      "Write one specific practice note after your own attempt, then describe the next complete attempt you would make.",
+      "One useful note is hold the final C for two beats without a new press on 4. Rehearse that ending with the count, then play the whole two-measure phrase at the same pulse and listen for the full ending."
+    ]
+  }
+]

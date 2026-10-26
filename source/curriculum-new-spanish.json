@@ -1,0 +1,307 @@
+[
+  {
+    "id": "questions",
+    "title": "Ask a question and say no clearly",
+    "goal": "Turn a familiar request into a question and place no before the verb.",
+    "opening": [
+      "Puedo pagar means I can pay. ¿Puedo pagar? uses the same words to ask Can I pay? In writing the question marks tell you how to read it. In speech the voice and the situation help the listener hear the question.",
+      "You do not need to put an English word do into every Spanish question. ¿Quieres agua? asks Do you want water? Quieres already carries the familiar you-form of want."
+    ],
+    "heading": "Change the job of the sentence without rebuilding everything",
+    "teaching": [
+      "Listen to Puedo pagar con tarjeta and ¿Puedo pagar con tarjeta? The first states that you can pay by card; the second asks whether you may or can do it in this setting. For a basic no, put no immediately before the personal verb: No puedo pagar con tarjeta. Keep pagar unchanged after puedo. Changing the question into a negative statement does not require conjugating that second verb.",
+      "When you ask another person, choose how you are addressing them. To a friend: ¿Puedes ayudarme? To one person addressed politely with usted: ¿Puede ayudarme? Both ask Can you help me? The difference is the relationship expressed by puedes versus puede. In this lesson, use puede with a stranger and puedes with a friend as a workable starting choice; actual social usage varies by place and relationship.",
+      "A reply can be short without being vague. If someone asks ¿Puedes venir mañana? and you cannot, No puedo mañana answers the availability question. If the question offered two alternatives, such as ¿Hoy o mañana?, choose one of them instead of saying sí. Listen for what kind of answer is being requested."
+    ],
+    "terms": [
+      [
+        "No + verb",
+        "The basic position of no in the negative statements here."
+      ],
+      [
+        "Tú / usted",
+        "Familiar and polite singular ways of addressing someone."
+      ]
+    ],
+    "first": {
+      "title": "Ask about paying, then explain a limit",
+      "problem": "Ask whether you can pay by card, then say that you cannot pay in cash.",
+      "steps": [
+        [
+          "Ask the first question",
+          "¿Puedo pagar con tarjeta?",
+          "Keep puedo pagar together; con tarjeta supplies by card."
+        ],
+        [
+          "Build the negative",
+          "No puedo pagar en efectivo.",
+          "No goes before puedo. En efectivo means in cash."
+        ],
+        [
+          "Hear the difference",
+          "Question: ¿Puedo…? Statement: No puedo…",
+          "The words doing the work are small, but they change the exchange."
+        ]
+      ],
+      "notice": "You reused the same verb pattern rather than translating an English auxiliary such as do."
+    },
+    "second": {
+      "title": "Ask a friend or a stranger for help",
+      "problem": "Compare a request to a friend with a polite request to one stranger.",
+      "steps": [
+        [
+          "Ask the friend",
+          "¿Puedes ayudarme?",
+          "Puedes addresses the familiar tú."
+        ],
+        [
+          "Ask politely",
+          "¿Puede ayudarme, por favor?",
+          "Puede is the usted form in this request."
+        ],
+        [
+          "Keep the rest",
+          "Ayudarme stays the same in both.",
+          "The personal form changed; the action you are asking for did not."
+        ]
+      ],
+      "notice": "Politeness is not only voice volume. The form of address also matters."
+    },
+    "exercise": [
+      "Ask a friend if they can come tomorrow, then write a clear negative reply.",
+      "¿Puedes venir mañana? — No puedo mañana. Venir stays in its infinitive after puedes or puedo. The reply negates availability for tomorrow without inventing another date."
+    ]
+  },
+  {
+    "id": "habits",
+    "title": "Talk about an ordinary day",
+    "goal": "Build present-tense sentences about a routine and ask a friend about theirs.",
+    "opening": [
+      "You want to say I work in the morning and study at night. Start with the two actions: trabajar, to work, and estudiar, to study. For I, these regular -ar verbs become trabajo and estudio.",
+      "Trabajo por la mañana. Estudio por la noche. The time phrases place the activities in your routine. They are useful sentences before you know every person in the verb table."
+    ],
+    "heading": "Keep the person change separate from the rest of the sentence",
+    "teaching": [
+      "To build estudio from estudiar, remove -ar and add -o. For the familiar you-form, add -as instead: estudias. ¿Estudias por la noche? asks a friend whether they study at night. Only the personal verb form changed; por la noche still means at night. Spanish often omits yo or tú because those endings identify the person, though the separate pronoun can add emphasis or contrast.",
+      "Regular -er and -ir verbs also use -o in the I-form: comer becomes como, and vivir becomes vivo. That shared I-ending is useful, but do not infer that every other ending is identical. For tú, these give comes and vives. Nor does the pattern cover every common verb: tener gives tengo, which we already learned in tengo hambre. Familiar irregular phrases and a regular pattern can be learned side by side.",
+      "Por la mañana means in the morning. Mañana without that phrase can mean tomorrow. Trabajo por la mañana describes when in the day you work; mañana trabajo says that you work tomorrow. Read the little surrounding words before choosing the meaning."
+    ],
+    "terms": [
+      [
+        "Infinitive",
+        "The basic activity form, such as estudiar."
+      ],
+      [
+        "Regular verb",
+        "A verb following the pattern being taught for these forms."
+      ],
+      [
+        "Por la mañana",
+        "In the morning, distinct from mañana meaning tomorrow."
+      ]
+    ],
+    "first": {
+      "title": "Describe two parts of your day",
+      "problem": "Say I work in the morning and study at night.",
+      "steps": [
+        [
+          "Choose the I-forms",
+          "Trabajar → trabajo; estudiar → estudio.",
+          "Both follow the regular -ar pattern here."
+        ],
+        [
+          "Add the time phrases",
+          "Trabajo por la mañana. Estudio por la noche.",
+          "Each sentence has one clear action and time."
+        ],
+        [
+          "Join if comfortable",
+          "Trabajo por la mañana y estudio por la noche.",
+          "Y means and. Joining is optional; two clear sentences are already enough."
+        ]
+      ],
+      "notice": "Learn the useful sentence before trying to recite every form of both verbs."
+    },
+    "second": {
+      "title": "Ask about someone else’s routine",
+      "problem": "Ask a friend whether they eat at home and say that you live nearby.",
+      "steps": [
+        [
+          "Ask using tú",
+          "¿Comes en casa?",
+          "Comer becomes comes for the familiar you in this question."
+        ],
+        [
+          "Give your own information",
+          "Vivo cerca.",
+          "Vivir becomes vivo for I; cerca means nearby."
+        ],
+        [
+          "Separate the endings",
+          "Comes asks about you; vivo describes me.",
+          "Do not copy one person’s ending onto every verb in the exchange."
+        ]
+      ],
+      "notice": "Notice who each sentence is about before choosing its form."
+    },
+    "exercise": [
+      "Say I study at home, then ask a friend whether they study at home.",
+      "Estudio en casa. ¿Estudias en casa? The location stays the same; estudio changes to estudias because the person changes."
+    ]
+  },
+  {
+    "id": "descriptions",
+    "title": "Describe a person without a permanent-versus-temporary shortcut",
+    "goal": "Use a few common ser and estar descriptions and recognize when the meaning changes.",
+    "opening": [
+      "Soy estudiante identifies me as a student. Estoy cansado describes how I feel. If you describe yourself with the feminine adjective, say estoy cansada.",
+      "It is tempting to call soy permanent and estoy temporary. That shortcut fails: being a student can change, but the identification still uses soy. Learn the job and meaning of the whole expression."
+    ],
+    "heading": "The same adjective can tell a different story",
+    "teaching": [
+      "Compare soy aburrido with estoy aburrido. Soy aburrido normally describes me as boring: other people may find me uninteresting. Estoy aburrido says I am bored: that is how I feel. The verb choice is doing more than reporting how long the condition lasts. With feminine forms, the same contrast is soy aburrida versus estoy aburrida.",
+      "Location supplies another dependable starting pattern for people and many objects: estoy en casa, I am at home; el libro está en la mesa, the book is on the table. That is not a complete rule covering every possible location sentence. For instance, an event’s location is commonly expressed with ser: la reunión es en la oficina, the meeting is in the office. Keep examples connected to their meanings rather than stretching one sentence pattern beyond the cases you know.",
+      "You can often begin safely with a small set: soy estudiante for identity, estoy en casa for location, estoy cansado or cansada for how you feel. Rehearse those aloud, then add a new description only when you know what it means in that construction."
+    ],
+    "terms": [
+      [
+        "Soy aburrido/a",
+        "I am boring, a description of the speaker."
+      ],
+      [
+        "Estoy aburrido/a",
+        "I am bored, a description of how the speaker feels."
+      ]
+    ],
+    "first": {
+      "title": "Bored and boring are different messages",
+      "problem": "You have nothing interesting to do. Tell a friend you are bored.",
+      "steps": [
+        [
+          "Choose the intended meaning",
+          "I feel bored, not I am a boring person.",
+          "Start with what you want the other person to understand."
+        ],
+        [
+          "Use the expression",
+          "Estoy aburrido / estoy aburrida.",
+          "Choose the adjective form that fits how you refer to yourself."
+        ],
+        [
+          "Compare the other version",
+          "Soy aburrido/a usually means I am boring.",
+          "Swapping the verb can change the meaning, not merely its duration."
+        ]
+      ],
+      "notice": "A familiar English I am does not decide the Spanish verb for you."
+    },
+    "second": {
+      "title": "Locate a person, then an event",
+      "problem": "Say I am at the office and the meeting is at the office.",
+      "steps": [
+        [
+          "Locate yourself",
+          "Estoy en la oficina.",
+          "Estar is used for your location."
+        ],
+        [
+          "Locate the event",
+          "La reunión es en la oficina.",
+          "Ser is commonly used for where an event takes place."
+        ],
+        [
+          "Keep the examples distinct",
+          "Person’s location and event location are not the same construction.",
+          "This is one reason not to turn a beginner shortcut into a universal rule."
+        ]
+      ],
+      "notice": "Learn the exception as a concrete phrase rather than abandoning all the useful patterns."
+    },
+    "exercise": [
+      "Explain why soy estudiante does not prove a permanent-versus-temporary rule.",
+      "It identifies the speaker as a student even though that status may later change. The use of ser here is about identification, not a claim that the fact lasts forever."
+    ]
+  },
+  {
+    "id": "cafe-project",
+    "title": "Carry a café conversation from greeting to agreement",
+    "goal": "Combine requests, clarification, a choice and confirmation in one complete exchange.",
+    "opening": [
+      "A conversation is not a row of perfect translations. The other person can ask something unexpected, and you may need to repair it. Here you will order a coffee, clarify the question, choose takeout, and check payment.",
+      "Read the complete exchange once before studying individual lines. You should be able to say what both people agreed—not merely recognize a few Spanish words."
+    ],
+    "heading": "Give each reply the information the other person needs",
+    "teaching": [
+      "The worker’s ¿Para aquí o para llevar? asks for a choice. Your Para llevar, por favor supplies that choice. Later, ¿Con tarjeta? checks the payment method; Sí, con tarjeta now makes sense because it is a yes-or-no confirmation. The word sí did not become more grammatical between the two questions. The kind of information being requested changed.",
+      "When you miss the first question, ¿Puede repetirlo más despacio, por favor? is part of the conversation, not a failure outside it. After the repeat, choose the option or ask about its meaning. Do not keep repeating a phrase you do not understand while assuming another repetition must solve it. If payment by card is unavailable, you can say No puedo pagar en efectivo if that is true, then decide whether to change the order.",
+      "Rehearse the worker’s lines and your replies separately. On a second pass, hide only your replies and pause after each question to say what you would actually mean. Keep the written version available. Then change one thing: stay instead of taking the order away, or ask for water instead of coffee. Can you make the change while still answering the worker’s question?"
+    ],
+    "terms": [
+      [
+        "¿Algo más?",
+        "Anything else?"
+      ],
+      [
+        "Nada más, gracias",
+        "Nothing else, thank you."
+      ],
+      [
+        "La cuenta",
+        "The bill or check, depending on the setting."
+      ]
+    ],
+    "first": {
+      "title": "Order and confirm",
+      "problem": "Order a coffee to go, ask about paying by card, and say you want nothing else.",
+      "steps": [
+        [
+          "Make the request",
+          "Hola. Quiero un café, por favor.",
+          "A greeting and a short clear request are enough to begin."
+        ],
+        [
+          "Repair and choose",
+          "¿Puede repetirlo más despacio, por favor? — Para llevar, por favor.",
+          "Ask for the repeat before choosing the takeout option."
+        ],
+        [
+          "Check payment",
+          "¿Puedo pagar con tarjeta? — Sí, con tarjeta.",
+          "You ask about the method and hear it confirmed."
+        ],
+        [
+          "Close the order",
+          "¿Algo más? — Nada más, gracias.",
+          "The worker now knows that the order is complete."
+        ]
+      ],
+      "notice": "The outcome is a clear order and payment plan, not an uninterrupted speech."
+    },
+    "second": {
+      "title": "Change the information instead of copying the script",
+      "problem": "This time you will stay, and you want water rather than coffee.",
+      "steps": [
+        [
+          "Change the request",
+          "Quiero agua, por favor.",
+          "Keep the request pattern and replace what you want."
+        ],
+        [
+          "Change the choice",
+          "Para aquí, por favor.",
+          "Do not repeat para llevar merely because it appeared in the first script."
+        ],
+        [
+          "Keep the repair tools",
+          "¿Puede repetirlo? / ¿Qué significa…?",
+          "The clarification phrases work even when the order changes."
+        ]
+      ],
+      "notice": "A useful script gives you parts to adapt; it should not make you agree to the wrong thing."
+    },
+    "exercise": [
+      "Write your own short exchange: a request, a missed question, a clarification, and a clear choice.",
+      "One version: Quiero un café, por favor. — ¿Para aquí o para llevar? — ¿Puede repetirlo más despacio? — ¿Para aquí o para llevar? — Para aquí, por favor. Other natural wording can work if it preserves the intended information."
+    ]
+  }
+]

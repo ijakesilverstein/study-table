@@ -2,7 +2,7 @@
 
 An offline-capable learning app, published at https://study-table-v102.vercel.app.
 
-The V109 taught layer has 38 lessons across 11 subjects. Piano, Spanish and chess have expanded sequences with demonstrations; questions are optional. The original longer courses and readers remain available through **Full curriculums**. The short sequences are introductory teaching, not complete professional training.
+V110 rebuilds five full-course entries into 52 teaching units: Spanish 12, piano 12, chess 12, calculus 8 and physics 8. Each unit contains explanatory teaching and two complete worked cases; variations are optional. Main subject controls open these courses by default. **Full curriculums** shows the longer sequences, the preserved original practice material, and explicit **Quick worked lessons** links. The 38 short lessons remain available across 11 subjects. These are introductory foundations, not complete professional training.
 
 ## Edit and build
 
@@ -13,7 +13,7 @@ python3 scripts/build.py
 python3 -m http.server 8769 --directory public
 ```
 
-Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v109.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
+Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v110.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
 
 - `source/teacher-prose-v109.json`: rewritten explanations in existing lessons.
 - `source/draft-foundation-lessons.json` and `source/lessons-v109.json`: the 12 new lessons. The historical `draft-` filename is retained for build compatibility; these records are now published.
@@ -22,6 +22,11 @@ Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v109.htm
 - `source/demos-v109.js`: accessible playback and board controls.
 - `source/theme-v109.css`: the current palette.
 - `source/theme-state.js`: the shared light/dark preference; both theme controls and legacy saved preferences must stay synchronized.
+- `source/full_courses.py`: course order, reuse of existing teaching, and full-course HTML assembly.
+- `source/curriculum-new-*.json`: the 21 additional full-course units.
+- `source/course-reader.js` and `.css`: course maps, written units, notation, optional worked variations, and reading position.
+- `source/full-course-demos.json`: committed demonstration data, independently checked against its generator and chess rules in tests. Production builds need no chess dependency.
+- `source/full-course-parent.js` and `.css`: archive integration, practice returns, focused course layout, and main-screen full-course resume.
 - `source/Study_Table_V108.html`: the preserved baseline, including the original compressed course archive and earlier lesson engine. New changes build on it; do not edit compiled V109 HTML directly.
 
 Keep lesson IDs stable because existing browser progress refers to them. Reading position is separate from assessment records. Same-day retries must not become independent recall successes. Do not label visits or self-checks as expertise.
@@ -36,7 +41,7 @@ npm test
 python3 scripts/build.py --check
 ```
 
-The test runner starts its own local server. `CHROME_BINARY` can select an installed Chromium binary. Browser checks cover taught lessons, optional practice, saved work, curriculum access, media scheduling/cancellation and mobile layout. `python-chess` independently verifies every new worked line. Subject accuracy still needs independent review; automated checks do not prove learning gains.
+The test runner starts its own local server. `CHROME_BINARY` can select an installed Chromium binary. Browser checks cover taught lessons, all 52 full-course units, optional practice, saved work, curriculum access, media scheduling/cancellation and mobile layout. `python-chess` verifies the worked chess lines and stated mate/stalemate outcomes. Subject accuracy still needs independent review; automated checks do not prove learning gains.
 
 The contrast regression seeds conflicting legacy/current theme preferences, clicks both actual theme controls, reloads, and checks visible text contrast with axe-core across the taught lessons and main dialogs.
 

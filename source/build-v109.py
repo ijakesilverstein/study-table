@@ -1,6 +1,7 @@
 from pathlib import Path
 import json,re
 from demos_v109 import build_demos
+from full_courses import build_courses,render_course,COURSE_PATHS
 
 root=Path(__file__).resolve().parent
 html=(root/'Study_Table_V108.html').read_text()
@@ -56,6 +57,18 @@ for l in lessons:
 examples['calculus-2']['steps'][2][2]='Multiply (3+h) by (3+h): 9+3h+3h+h². Subtract the starting 9 to leave 6h+h². For nonzero h, divide each term by h to get 6+h.'
 examples['physics-4']['steps'][2][2]='The three seconds contain 5 m, then 15 m, then 25 m of fall. Their sum is 45 m. Using the final 30 m/s for all three seconds would count speed the object did not yet have.'
 for name,data in [('DATA',lessons),('V102_TASKS',tasks),('V105_EXAMPLES',examples),('V106_DEPTH',depth),('V107_TEACHING',teaching),('V108_CLARITY',clarity)]:put(name,data)
+courses,course_demos=build_courses(teacher)
+catalogue,_,_=get('V108_CURRICULA')
+for entry in catalogue:
+    subject=entry['subject']
+    if subject not in courses:continue
+    count=len(courses[subject]['units'])
+    entry['description']=str(count)+' teaching units with full explanations, two worked cases per unit, and optional practice.'
+    if subject in ['spanish','piano','chess']:
+        entry['routes'][0]['label']='Open the '+str(count)+'-unit '+subject+' course'
+        entry['routes'].insert(1,{'label':'Open the original practice studio','path':COURSE_PATHS[subject].rsplit('/',1)[0]+'/practice-studio.html'})
+    else:entry['routes'].insert(0,{'label':'Open the '+str(count)+'-unit '+subject+' course','path':COURSE_PATHS[subject]})
+put('V108_CURRICULA',catalogue)
 demos=build_demos();assert set(demos)=={x['id'] for x in new}
 extension=(root/'demos-v109.js').read_text().replace('__DEMOS__',json.dumps(demos,ensure_ascii=False,separators=(',',':')))+'\n'+(root/'expansion-v109.js').read_text()
 teacher=once(teacher,'const V108_CURRICULA=',extension+'\nconst V108_CURRICULA=')
@@ -67,19 +80,49 @@ teacher=once(teacher,"intro.innerHTML='<h2>Start with this</h2>'+", "intro.inner
 teacher=once(teacher,"reasoning.querySelector('h2').textContent='Why we did it that way';", "reasoning.querySelector('h2').textContent=d.reasoningTitle||'Why we did it that way';reasoning.querySelector('.v107-decision h3')?.remove();")
 teacher=once(teacher,"first.querySelector('.v105-label').textContent='Watch me work through it';", "first.querySelector('.v105-label').textContent='Worked example';")
 teacher=once(teacher,'v108MountCurricula();\n const hero=', 'v108MountCurricula();v109MountFocus();\n const hero=')
-teacher=once(teacher,"escape(x.description)+'</p><div>'+", "escape(x.description)+'</p>'+(['piano','spanish','chess'].includes(x.subject)?'<button type=\"button\" class=\"v109-taught-path\" data-teaching-path=\"'+x.subject+'\">Start the '+DATA.filter(l=>l.subject===x.subject).length+'-lesson taught sequence</button>':'')+'<div>'+" )
+teacher=once(teacher,"escape(route.label)+'</button>').join('')+'</div></article>'", "escape(route.label)+'</button>').join('')+(['piano','spanish','chess'].includes(x.subject)?'<button type=\"button\" class=\"v109-taught-path\" data-teaching-path=\"'+x.subject+'\">Quick worked lessons ('+DATA.filter(l=>l.subject===x.subject).length+')</button>':'')+'</div></article>'")
 teacher=once(teacher,'STUDY TABLE · FIRST STEPS','STUDY TABLE · LESSONS')
+teacher=once(teacher,"function v108Continue(){const p=v108Place();", "function v108Continue(){if(window.studyTableFullCourses?.readingPlace()){window.studyTableFullCourses.resume();return}const legacy=v108Place();if(legacy&&legacy.mode!=='quick'&&window.studyTableFullCourses?.courses.some(c=>c.subject===legacy.subject)){window.studyTableFullCourses.open(legacy.subject,legacy.id);return}const p=v108Place();")
+teacher=once(teacher,"function v108Remember(lesson){try{", "function v108Remember(lesson){window.studyTableFullCourses?.clearResume();try{")
+teacher=once(teacher,"JSON.stringify({id:lesson.id,subject:lesson.subject})", "JSON.stringify({id:lesson.id,subject:lesson.subject,mode:'quick'})")
+teacher=once(teacher,"const p=v108Place(),lesson=p&&DATA.find(l=>l.id===p.id);", "const p=v108Place(),lesson=p&&DATA.find(l=>l.id===p.id),full=window.studyTableFullCourses?.readingPlace()||(p&&p.mode!=='quick'&&window.studyTableFullCourses?.courses.find(c=>c.subject===p.subject));")
+teacher=once(teacher,"set($('v90Continue'),lesson?'Continue: '+lesson.title:'Start a lesson');", "set($('v90Continue'),full?'Continue: '+full.title:lesson?'Continue: '+lesson.title:'Start a lesson');")
+teacher=once(teacher,"set($('v90Saved'),lesson?'Saved your place in '+NAME[lesson.subject]+'.':'Choose any subject. You can read the whole lesson without answering a question.');", "set($('v90Saved'),full?'Saved your full-course reading place.':lesson?'Saved your place in '+NAME[lesson.subject]+'.':'Choose any subject. You can read the whole lesson without answering a question.');")
+teacher=once(teacher,"b.onclick=()=>{d.close();open(b.dataset.teachSubject)}", "b.onclick=()=>{d.close();v110OpenSubject(b.dataset.teachSubject)}")
+teacher=once(teacher,"<span>Start with: '+escape(DATA.find(x=>x.subject===s).title)", "<span>'+escape(v110SubjectBlurb(s))")
+teacher=once(teacher,"event.stopImmediatePropagation();open(sub);return", "event.stopImmediatePropagation();v110OpenSubject(sub);return")
 html=html[:match.start(2)]+teacher+html[match.end(2):]
+html=once(html,"function subjectOpen(s){if(window.studyTableV97", "function subjectOpen(s){if(window.studyTableFullCourses?.courses.some(c=>c.subject===s)){window.studyTableFullCourses.open(s);return}if(window.studyTableV97")
+import gzip,base64
+archive=re.search(r'(<script id="full-bundle" type="text/plain">)(.*?)(</script>)',html,re.S)
+bundle=json.loads(gzip.decompress(base64.b64decode(archive[2])))
+full_meta={}
+for subject,course in courses.items():
+    path=COURSE_PATHS[subject];practice_path=None
+    if subject in ['piano','spanish','chess']:
+        practice_path=path.rsplit('/',1)[0]+'/practice-studio.html'
+        assert practice_path not in bundle
+        bundle[practice_path]=dict(bundle[path])
+    bundle[path]={'t':render_course(course,course_demos)}
+    full_meta[subject]={'subject':subject,'title':course['title'],'path':path,'units':len(course['units']),'unitIds':[u['id'] for u in course['units']],'practicePath':practice_path}
+for entry in catalogue:
+    for route in entry['routes']:
+        if 'path' in route:assert route['path'].split('?')[0] in bundle,route['path']
+encoded=base64.b64encode(gzip.compress(json.dumps(bundle,ensure_ascii=False,separators=(',',':')).encode(),mtime=0)).decode()
+html=html[:archive.start(2)]+encoded+html[archive.end(2):]
 html=once(html,"function apply(){\n  const portal=document.getElementById('v35Portal');if(!portal)return;", "function apply(){\n  if(window.studyTableTheme){window.studyTableTheme.sync();return}\n  const portal=document.getElementById('v35Portal');if(!portal)return;")
 html=once(html,"btn.onclick=()=>{night=!night;try{localStorage.setItem(KEY,night?'1':'0')}catch{};apply()};", "btn.onclick=()=>{if(window.studyTableTheme){window.studyTableTheme.set(window.studyTableTheme.get()==='dark'?'light':'dark');return}night=!night;try{localStorage.setItem(KEY,night?'1':'0')}catch{};apply()};")
 html=once(html,"function setTheme(v){\n document.documentElement.dataset.studyTheme=v;", "function setTheme(v){\n if(window.studyTableTheme){window.studyTableTheme.set(v);return}\n document.documentElement.dataset.studyTheme=v;")
-html=html.replace('Study Table V108 — Taught Lessons','Study Table V109 — Learn at Your Pace')
-html=html.replace('study-table-v108.html','study-table-v109.html').replace('Study_Table_V108.html','Study_Table_V109.html')
+html=html.replace('Study Table V108 — Taught Lessons','Study Table V110 — Full Courses')
+html=html.replace('study-table-v108.html','study-table-v110.html').replace('Study_Table_V108.html','Study_Table_V110.html')
 # Append after the historical layers so this palette has a single clear point of ownership.
 end=html.rindex('</body>')
-html=html[:end]+'\n<style id="v109-theme">'+(root/'theme-v109.css').read_text()+'</style>\n'+html[end:]
-(root/'Study_Table_V109.html').write_text(html)
+parent=(root/'full-course-parent.js').read_text().replace('__FULL_COURSES__',json.dumps(full_meta,separators=(',',':')))
+html=html[:end]+'\n<style id="v109-theme">'+(root/'theme-v109.css').read_text()+'\n'+(root/'full-course-parent.css').read_text()+'</style><script>'+parent+'</script>\n'+html[end:]
+(root/'Study_Table_V110.html').write_text(html)
 (root/'teacher-v109.js').write_text(teacher)
 (root/'demos-v109.json').write_text(json.dumps(demos,ensure_ascii=False,indent=2))
 (root/'lessons-built-v109.json').write_text(json.dumps(lessons,ensure_ascii=False,indent=2))
-print('V109 built:',len(html.encode()),'bytes; 38 lessons; Spanish 8, piano 7, chess 6; 76 worked cases;',len(prose),'existing explanations rewritten; 12 new demonstrations.')
+(root/'full-courses-built.json').write_text(json.dumps(courses,ensure_ascii=False,indent=2))
+(root/'course-map-built.json').write_text(json.dumps(catalogue,ensure_ascii=False,indent=2))
+print('V110 built:',len(html.encode()),'bytes; 38 short lessons plus 52 full-course units in five courses; original practice studios preserved.')

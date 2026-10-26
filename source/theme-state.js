@@ -7,7 +7,7 @@
   const dark=document.documentElement.dataset.studyTheme==='dark';
   const portal=document.getElementById('v35Portal');
   if(portal&&portal.classList.contains('v52-night')!==dark)portal.classList.toggle('v52-night',dark);
-  for(const button of document.querySelectorAll('.v52-mode')){
+  for(const button of document.querySelectorAll('.v52-mode,[data-study-theme-toggle]')){
    const text=dark?'Light mode':'Dark mode';if(button.textContent!==text)button.textContent=text;
    if(button.getAttribute('aria-pressed')!==String(dark))button.setAttribute('aria-pressed',String(dark));
   }

@@ -1,5 +1,5 @@
 const {chromium}=require('playwright'),assert=require('assert/strict'),fs=require('fs');
-const courses=JSON.parse(fs.readFileSync(require('path').join(__dirname,'fixtures/curricula-v108.json'),'utf8'));
+const courses=JSON.parse(fs.readFileSync(require('path').join(__dirname,'../source/course-map-built.json'),'utf8'));
 (async()=>{const b=await chromium.launch(require('./browser-options.cjs')),p=await b.newPage({viewport:{width:1280,height:950}}),errors=[];p.on('pageerror',e=>errors.push(e.message));try{
  await p.goto((process.env.STUDY_TEST_URL||'http://127.0.0.1:8771/index.html'));await p.waitForFunction(()=>window.studyTableCurricula&&READY);
  assert(await p.locator('#v108CoursesHome').isVisible());assert(await p.locator('#v108CoursesTop').isVisible());await p.locator('#v108CoursesHome').click();assert.equal(await p.locator('[data-curriculum]').count(),11);console.log('FULL_CURRICULUM_ACCESS_VISIBLE_ON_HOME_AND_TOP_NAV_PASS');
