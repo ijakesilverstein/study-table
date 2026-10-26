@@ -47,6 +47,23 @@ board=chess.Board(second['fen'])
 for uci in second['moves']:board.push_uci(uci)
 assert board.is_insufficient_material() and len(board.piece_map())==2
 assert [e['note'] for e in saved['three-chord-song']['patterns'][2]['events']]==['C4','E4','G4','C4','F4','A4','B3','D4','G4','C4','E4','G4']
+for index in [3,4]:
+    line=saved['promotion']['lines'][index];board=chess.Board(line['fen'])
+    board.push_uci(line['moves'][0]);capture=chess.Move.from_uci('e5d6')
+    assert board.is_pseudo_legal(capture)
+    if index==3:
+        assert capture in board.legal_moves;board.push(capture)
+        assert board.piece_at(chess.D6)==chess.Piece(chess.PAWN,chess.WHITE)
+        assert board.piece_at(chess.D5) is None
+    else:assert capture not in board.legal_moves and board.is_pinned(chess.WHITE,chess.E5)
+for color,fen,source,clear,blocked in [
+    (chess.WHITE,'7k/8/8/8/8/2n1n3/3P4/7K w - - 0 1',chess.D2,{'c3','d3','e3','d4'},{'c3','e3'}),
+    (chess.BLACK,'7k/3p4/2N1N3/8/8/8/8/7K b - - 0 1',chess.D7,{'c6','d6','e6','d5'},{'c6','e6'})]:
+    board=chess.Board(fen);assert board.is_valid()
+    assert {chess.square_name(m.to_square) for m in board.legal_moves if m.from_square==source}==clear
+    board.set_piece_at(chess.D3 if color else chess.D6,chess.Piece(chess.ROOK,not color))
+    assert {chess.square_name(m.to_square) for m in board.legal_moves if m.from_square==source}==blocked
+board=chess.Board.empty();board.set_piece_at(chess.D4,chess.Piece(chess.QUEEN,chess.WHITE));assert len(board.attacks(chess.D4))==27
 courses=json.loads((root/'source/full-courses-built.json').read_text())
 assert {s:len(c['units']) for s,c in courses.items()}=={'spanish':15,'piano':14,'chess':14,'calculus':11,'physics':11}
 assert sum(len(c['units']) for c in courses.values())==65

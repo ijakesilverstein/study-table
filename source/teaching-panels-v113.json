@@ -1,0 +1,14 @@
+{
+  "intervals": [
+    {"label":"C to D","keys":["C4","C#4","D4"],"pattern":0,"meaning":"Two moves to adjacent keys: two semitones. C and D are neighboring letter names."},
+    {"label":"E to F","keys":["E4","F4"],"pattern":2,"meaning":"One move to the next key: one semitone. These are also neighboring letter names."},
+    {"label":"C to E","keys":["C4","C#4","D4","D#4","E4"],"pattern":1,"meaning":"Four semitone moves span the letter names C–D–E: a third."},
+    {"label":"D to F","keys":["D4","D#4","E4","F4"],"pattern":3,"meaning":"Three semitone moves span the letter names D–E–F: also a third, with a smaller pitch gap."}
+  ],
+  "pastViews": [
+    {"label":"Report the whole meal","sentence":"Ayer comí con Ana.","translation":"Yesterday I ate with Ana.","parts":[["Ayer","places the story yesterday"],["comí","presents the meal as a whole event"],["con Ana","tells us who was there"]],"meaning":"You report a completed meal. This wording does not tell us whether the meal was short or long.","picture":"whole"},
+    {"label":"Describe eating in progress","sentence":"Comía cuando Ana llamó.","translation":"I was eating when Ana called.","parts":[["Comía","places us inside the eating"],["cuando","connects the background and event"],["Ana llamó","reports the call within that background"]],"meaning":"The eating is underway when the call arrives. The sentence does not say whether you stopped eating or answered.","picture":"inside"},
+    {"label":"Make the ongoing action explicit","sentence":"Estaba comiendo cuando Ana llamó.","translation":"I was eating when Ana called.","parts":[["Estaba comiendo","makes the ongoing eating explicit"],["cuando","means when"],["Ana llamó","supplies the event within that scene"]],"meaning":"This is another natural expression for the scene. Estaba comiendo and comía both fit this example.","picture":"inside"},
+    {"label":"Use a different activity","sentence":"Cocinaba cuando sonó el teléfono.","translation":"I was cooking when the phone rang.","parts":[["Cocinaba","describes cooking in progress"],["cuando","joins the two views"],["sonó el teléfono","reports the phone ringing"]],"meaning":"The same background-and-event relationship works with cooking. The viewpoint, rather than the length of the activity, guides the forms.","picture":"inside"}
+  ]
+}

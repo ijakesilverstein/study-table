@@ -2,7 +2,7 @@
 
 An offline-capable learning app, published at https://study-table-v102.vercel.app.
 
-V112 refines the five written courses into 65 teaching units: Spanish 15, piano 14, chess 14, calculus 11 and physics 11. Thirteen explanations were tightened, two overlapping units were combined, and five further units teach pronunciation, chord progressions, pawn races, integral substitution and circuit connections. Three named chapters organize each course. Each unit contains explanatory teaching and two complete worked cases; variations are optional. Main subject controls open these courses by default. **Full curriculums** shows the longer sequences, preserved original practice material, and **Quick worked lessons** links. The 38 short lessons remain available across 11 subjects. These are introductory foundations, not complete professional training.
+V113 deepens the existing 65-unit courses: Spanish 15, piano 14, chess 14, calculus 11 and physics 11. New demonstrations explain sentence construction, semitone gaps, the product rule’s changing areas, energy stores, signed collisions and pawn movement. Three named chapters organize each course. Each unit contains explanatory teaching and two complete worked cases; variations are optional. Main subject controls open these courses by default. **Full curriculums** shows the longer sequences, preserved original practice material, and **Quick worked lessons** links. The 38 short lessons remain available across 11 subjects. These are introductory foundations, not complete professional training.
 
 ## Edit and build
 
@@ -13,7 +13,7 @@ python3 scripts/build.py
 python3 -m http.server 8769 --directory public
 ```
 
-Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v112.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
+Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v113.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
 
 - `source/teacher-prose-v109.json`: rewritten explanations in existing lessons.
 - `source/draft-foundation-lessons.json` and `source/lessons-v109.json`: the 12 new lessons. The historical `draft-` filename is retained for build compatibility; these records are now published.
@@ -27,6 +27,8 @@ Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v112.htm
 - `source/curriculum-bridges-*.json`: ten prerequisite and bridge units added in V111.
 - `source/curriculum-expansion-v112.json`: five further applications.
 - `source/editorial-v112.json`: thirteen edited explanations and the combined piano performance project.
+- `source/teaching-v113.json`: seven explanation/goal revisions, including the first chess lesson’s ordinary pawn case.
+- `source/teaching-panels-v113.json` and `source/teaching-panels.js`: interval choices and area, energy and collision demonstrations; sentence-view data also feeds the Spanish renderer.
 - `source/course-stages.json`: the three chapter boundaries and purposes in each course.
 - `source/course-reader.js` and `.css`: course maps, written units, notation, optional worked variations, and reading position.
 - `source/course-figures.js`: adjustable interval, motion, force and circuit diagrams, with written calculations and accessible descriptions.
@@ -46,7 +48,7 @@ npm test
 python3 scripts/build.py --check
 ```
 
-The test runner starts its own local server. `CHROME_BINARY` can select an installed Chromium binary. Browser checks cover taught lessons, all 65 full-course units, merged bookmarks, chapter maps, diagram calculations and drawn circuit connections, optional practice, saved work, media scheduling/cancellation and mobile layout. `python-chess` verifies the worked chess lines and stated outcomes. See docs/CURRICULUM_EDIT_V112.md for the editorial comparison. Subject accuracy still needs independent review; automated checks do not prove learning gains.
+The test runner starts its own local server. `CHROME_BINARY` can select an installed Chromium binary. Browser checks cover taught lessons, all 65 full-course units, merged bookmarks, chapter maps, diagram calculations and drawn circuit connections, optional practice, saved work, media scheduling/cancellation and mobile layout. `python-chess` verifies the worked chess lines, pawn blockers and stated outcomes. See docs/CURRICULUM_EDIT_V112.md for the earlier editorial comparison and docs/TEACHING_V113.md for the richer demonstrations. Subject accuracy still needs independent review; automated checks do not prove learning gains.
 
 The contrast regression seeds conflicting legacy/current theme preferences, clicks both actual theme controls, reloads, and checks visible text contrast with axe-core across the taught lessons and main dialogs.
 

@@ -40,12 +40,15 @@ def build_courses(teacher):
         units[id]={'id':id,'title':l['title'],'goal':maps['V102_TASKS'][id][0],'opening':o['opening'],'heading':o.get('reasoningTitle',t['title']),'teaching':t['explanation']+[t['decision']],'terms':d['terms'],'first':first,'second':d['second'],'exercise':maps['V102_TASKS'][id][1:],'mistake':t['mistake']}
     for x in extra:
         assert x['id'] not in units,x['id'];units[x['id']]=x
-    # A full first chess unit must introduce all six pieces, not only the four diagram choices.
-    units['chess-0']['teaching'] += ["The queen combines the rook’s straight lines and the bishop’s diagonals, with blockers still stopping her. Pawns are different: a white pawn moves toward higher rank numbers, normally one square into an empty square. From its starting rank it may move two if both squares are clear. It captures one square diagonally forward onto an enemy piece, not straight ahead. Black’s pawns move toward lower rank numbers. Neither color moves a pawn backward.","A pawn reaching the farthest rank must promote to a queen, rook, bishop or knight. Two other special moves need their own rules: castling, which gets a worked unit later, and en passant. Here is the en passant case: your white pawn is on e5, and Black moves a pawn from d7 to d5 in one turn. On your very next move, you may move e5–d6 and remove the black pawn from d5, as though it had stopped on d6. You lose that opportunity if you play something else first. Black can make the matching capture from its fourth rank after a white pawn’s two-square advance. As with any move, the capture must leave your own king safe."]
     for id,changes in json.loads((ROOT/'editorial-v112.json').read_text()).items():
         assert id in units,id
         units[id].update(changes)
+    for id,changes in json.loads((ROOT/'teaching-v113.json').read_text()).items():
+        assert id in units,id
+        units[id].update(changes)
+    units['chess-0']['first']['steps'][2][2]='A bishop occupying e3 can interrupt this rook line, as the worked check lesson will show.'
     units['chess-1']['second']=units['threats']['first']
+    units['promotion']['supplement']={'title':'En passant: a one-turn opportunity','paragraphs':['If Black advances a pawn from d7 to d5 beside White’s pawn on e5, White may immediately play e5–d6 and remove the pawn from d5. The diagonal destination is empty in this special capture. If White chooses a different move first, the opportunity is gone. Black has the matching rule from its fourth rank after a neighboring white pawn advances two squares.','The capture still has to keep your king safe. In the second board example, moving the e5 pawn away would uncover a rook’s attack on White’s king. En passant is therefore illegal there, even though the pawn arrangement matches the special rule.'],'examples':[{'label':'Show the legal capture','line':3},{'label':'Show why the pinned pawn cannot capture','line':4}]}
     demos=course_demos()
     stages=json.loads((ROOT/'course-stages.json').read_text())
     courses={}
@@ -87,6 +90,10 @@ def generate_course_demos():
         ['Silent h','Hola.','Hello.'],
         ['Present','Hablo español.','I speak Spanish.'],
         ['Past','Habló español.','He or she spoke Spanish.']]}
+    d['spanish-sounds'].update({'title':'Hear the vowels and word stress','intro':'Hear one word at a time, then compare hablo and habló. The English stress cues are written underneath.','playLabel':'Hear all the lines'})
+    panel_data=json.loads((ROOT/'teaching-panels-v113.json').read_text())
+    d['spanish-3']={'kind':'spanish','title':'Build a past sentence','intro':'Choose a view, read how the sentence is built, then hear it. The sketch shows the viewpoint rather than a measured duration.','playLabel':'Hear all four versions','views':panel_data['pastViews'],'lines':[[view['label'],view['sentence'],view['translation']] for view in panel_data['pastViews']]}
+    d['chess-0']['complete']=True
     d['noun-phrases']={'kind':'spanish','lines':[
         ['You','Quiero un café pequeño, por favor.','I want a small coffee, please.'],
         ['You, changing the order','Quiero dos cafés pequeños, por favor.','I want two small coffees, please.'],
@@ -116,6 +123,7 @@ def generate_course_demos():
     tune=['E4','D4','C4','D4','E4','E4','E4']
     piano('piano-2','Hear the phrase and its held ending',[pattern('The whole phrase',8,[(n,i,2 if i==6 else 1) for i,n in enumerate(tune)],'seven attacks over eight beats; final E held for two.'),pattern('First four notes',4,[(n,i,1) for i,n in enumerate(tune[:4])],'E–D–C–D.')])
     piano('piano-3','Compare a step and a skip',[pattern('C–D–C',3,[('C4',0,1),('D4',1,1),('C4',2,1)],'a step up and back.'),pattern('C–E–C',3,[('C4',0,1),('E4',1,1),('C4',2,1)],'a wider rise and return.')])
+    d['piano-3']['patterns'] += [pattern('E–F–E',3,[('E4',0,1),('F4',1,1),('E4',2,1)],'a one-semitone rise and return.'),pattern('D–F–D',3,[('D4',0,1),('F4',1,1),('D4',2,1)],'a three-semitone rise and return.')]
     piano('staff','Hear the notes on the staff',[pattern('C–E–G',3,[('C4',0,1),('E4',1,1),('G4',2,1)],'C4 on its ledger line, E4 on the bottom line, G4 on the next line.'),pattern('C–D–E',3,[('C4',0,1),('D4',1,1),('E4',2,1)],'C4–D4–E4 uses neighboring positions.')],[['C4',1],['E4',1],['G4',1]])
     piano('three-beats','Hear two groups of three',[pattern('Two held Cs',6,[('C4',0,3),('C4',3,3)],'two attacks over six beats.'),pattern('C–D–E twice',6,[('C4',0,1),('D4',1,1),('E4',2,1),('C4',3,1),('D4',4,1),('E4',5,1)],'two three-beat groups without an added pause.')])
     for p in d['three-beats']['patterns']:p['meter']=3
@@ -161,6 +169,9 @@ def generate_course_demos():
     d['chess-1']['lines'].append(d['threats']['lines'][0])
     board('promotion',[line('Promote with check','8/k7/2K1P3/8/8/8/8/8 w - - 0 1',['e6e7','a7b8','e7e8q'],['White can advance the e-pawn.','e7 approaches the promotion rank.','...Kb8 is one legal reply.','e8=Q+ creates a queen and checks immediately.']),line('Queen promotion stalemates','8/k1P5/2K5/8/8/8/8/8 w - - 0 1',['c7c8q'],['Inspect the black king’s replies before choosing a piece.','c8=Q leaves Black un-checked with no legal move: stalemate.']),line('Rook promotion leaves a reply','8/k1P5/2K5/8/8/8/8/8 w - - 0 1',['c7c8r'],['Use the same position but choose a rook.','c8=R leaves a6 available to Black’s king.'])])
     board('queen-net',[line('Give the actual mate','k7/8/1QK5/8/8/8/8/8 w - - 0 1',['b6b7'],['White to move can put the queen on b7.','Qb7# checks a8 and covers the escapes; Kc6 protects the queen.']),line('The nearby stalemate','k7/8/1QK5/8/8/8/8/8 b - - 0 1',[],['Black to move has no legal move, but Ka8 is not checked: stalemate.'])])
+    d['promotion']['lines'] += [
+        line('The immediate en passant capture','4k3/3p4/8/4P3/8/8/8/4K3 b - - 0 1',['d7d5','e5d6'],['Black to move; White’s pawn is on e5.','...d5 has just advanced two squares beside the white pawn.','exd6 en passant moves to d6 and removes the black pawn from d5.']),
+        line('King safety still applies','k3r3/3p4/8/4P3/8/8/8/4K3 b - - 0 1',['d7d5'],['White’s e5 pawn is blocking Re8’s line to Ke1.','After ...d5, exd6 would uncover the rook’s check. That en passant capture is illegal.'])]
     race='8/5k2/8/8/P7/8/8/7K w - - 0 1'
     board('pawn-race',[
         line('The pawn starts',race,['a4a5','f7e7','a5a6','e7d7','a6a7','d7c7','a7a8q'],['White moves first from a4; Black’s king is on f7.','a5 shrinks the pawn’s square.','...Ke7 is still outside that square.','a6 needs two more pawn moves to promote.','...Kd7 approaches, but cannot reach the pawn.','a7 needs one more advance.','...Kc7 leaves the king two files from a8.','a8=Q survives; Kc7 cannot capture a8.']),
@@ -189,4 +200,4 @@ def render_course(course,demos):
     demo_source=(ROOT/'demos-v109.js').read_text().replace('__DEMOS__',json.dumps(selected,ensure_ascii=False,separators=(',',':')))
     helpers="const $=id=>document.getElementById(id);const escape=s=>String(s??'').replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));"
     import html
-    return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+html.escape(course['title'])+' — Full course</title><style>'+(ROOT/'theme-v109.css').read_text()+'\n'+(ROOT/'course-reader.css').read_text()+'</style><script>'+(ROOT/'theme-state.js').read_text()+'</script></head><body><header class="course-top"><strong id="courseSubject"></strong><div><button id="courseAll" type="button">All curriculums</button><button id="courseTheme" type="button" data-study-theme-toggle>Dark mode</button></div></header><div class="reader-layout"><aside class="contents"><details id="courseContents" open><summary>Course contents</summary><ol id="courseContentsList"></ol></details></aside><main id="courseArticle" class="reader-article" tabindex="-1"></main></div><script id="full-course-data" type="application/json">'+data+'</script><script>(()=>{\'use strict\';'+helpers+'\n'+demo_source+'\n'+(ROOT/'course-figures.js').read_text()+'\n'+(ROOT/'course-reader.js').read_text()+'\n})();</script></body></html>'
+    return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+html.escape(course['title'])+' — Full course</title><style>'+(ROOT/'theme-v109.css').read_text()+'\n'+(ROOT/'course-reader.css').read_text()+'</style><script>'+(ROOT/'theme-state.js').read_text()+'</script></head><body><header class="course-top"><strong id="courseSubject"></strong><div><button id="courseAll" type="button">All curriculums</button><button id="courseTheme" type="button" data-study-theme-toggle>Dark mode</button></div></header><div class="reader-layout"><aside class="contents"><details id="courseContents" open><summary>Course contents</summary><ol id="courseContentsList"></ol></details></aside><main id="courseArticle" class="reader-article" tabindex="-1"></main></div><script id="full-course-data" type="application/json">'+data+'</script><script>(()=>{\'use strict\';'+helpers+'\n'+demo_source+'\n'+(ROOT/'course-figures.js').read_text()+'\n'+(ROOT/'teaching-panels.js').read_text().replace('__PANEL_DATA__',(ROOT/'teaching-panels-v113.json').read_text())+'\n'+(ROOT/'course-reader.js').read_text()+'\n})();</script></body></html>'

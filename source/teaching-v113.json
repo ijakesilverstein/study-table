@@ -1,0 +1,83 @@
+{
+  "chess-0": {
+    "goal": "Trace all six piece types and distinguish a pawn’s forward move from its diagonal capture.",
+    "opening": [
+      "A square name gives its column first and row second. D4 is on the d-file and fourth rank. With White at the bottom, files run a to h from left to right.",
+      "Choose a piece in the diagram and trace where it can go. The sliding pieces follow lines, the knight jumps, and the pawn has separate rules for moving and capturing."
+    ],
+    "teaching": [
+      "A rook follows files or ranks; a bishop follows diagonals and stays on the same square color. A queen combines those two shapes. All three stop at blockers. A knight instead changes two files and one rank, or two ranks and one file, jumping over intervening pieces.",
+      "A king moves one square in any direction. In a complete game, its destination must be safe from enemy attack. The movement shape is only the first test: a friendly piece cannot occupy the destination, and no move may leave your king in check.",
+      "White’s pawns move toward higher ranks and Black’s toward lower ranks. A pawn normally moves one square forward into an empty square. From its starting rank it may move two if both squares are clear. It captures one square diagonally forward onto an enemy piece. The diagram’s blocker button shows why a pawn cannot jump or take a piece straight ahead.",
+      "Pawns do not move backward. Promotion and en passant add special rules later in the pawn chapter; castling gets its own worked lesson. First get comfortable separating the ordinary forward move from the diagonal capture."
+    ],
+    "second": {
+      "title": "A pawn moves one way and captures another",
+      "problem": "White has a pawn on d2. Enemy knights occupy c3 and e3. Compare a clear front with an enemy rook blocking d3.",
+      "steps": [
+        [
+          "Leave the front clear",
+          "d3 and d4 are available forward moves.",
+          "The pawn is still on its starting rank. The two-square move needs both squares to be empty."
+        ],
+        [
+          "Inspect the diagonal targets",
+          "dxc3 or dxe3 captures an enemy knight.",
+          "The captures go diagonally forward, not along the pawn’s ordinary forward path."
+        ],
+        [
+          "Add the blocker on d3",
+          "Neither d3 nor d4 is now available as a forward move.",
+          "The pawn cannot capture that rook straight ahead and cannot jump over it. The diagonal knight captures remain available in this diagram."
+        ]
+      ],
+      "notice": "A pawn’s move and its capture use different shapes. The same distinction applies in the opposite direction for Black."
+    }
+  },
+  "piano-3": {
+    "teaching": [
+      "Count letter names and key-to-key gaps separately. C–D–E spans three letter names, so C to E is a third. But C→C♯→D→D♯→E contains four semitone moves. The first key is your starting point, numbered zero in the diagram; each move to the very next key adds one.",
+      "C to D spans two semitones because a black key lies between them. E to F spans one because no key lies between them. Both are neighboring letter names. Likewise, C to E spans four semitones while D to F spans three. The interval explorer lets you see and hear each comparison.",
+      "This distinction prepares the chord lesson. Letter names tell you which notes form a third or fifth; semitone counts tell you its size. The same visible skip over a white key can therefore produce different interval qualities."
+    ],
+    "goal": "Compare letter-name steps and skips with their semitone gaps."
+  },
+  "piano-4": {
+    "teaching": [
+      "Root, third and fifth count letter names from C: C is first, E is third and G is fifth. They do not mean three or five semitones. Your preceding interval lesson gives another way to inspect the chord: C to E spans four semitones and E to G spans three. That 4-then-3 arrangement makes this root-position triad major.",
+      "Try right-hand fingers 1, 3 and 5 on C, E and G with an easy hand. Sounding the notes separately lets you check each pitch; sounding them together lets you hear their combined harmony. Keep all three pitches fixed while comparing the arpeggio and block chord.",
+      "Now rearrange the same notes as E–G–C. C remains the root even though E is lowest. An inversion changes the arrangement, while an arpeggio changes when the notes begin. Those are two separate decisions you can hear in the demonstration."
+    ]
+  },
+  "spanish-3": {
+    "title": "Tell a past event or place us inside it",
+    "heading": "Choose the viewpoint before choosing the ending",
+    "teaching": [
+      "Comía puts the listener inside the meal, without reporting its start or finish. Ana llamó supplies the event within that background. Estaba comiendo cuando Ana llamó makes the ongoing eating especially explicit and also fits this scene.",
+      "Compare Ayer comí con Ana: the meal is now presented as a whole event. The activity did not have to be short. A long meal can use comí, just as a short scene can be described from inside with comía. The viewpoint explorer keeps the activity familiar while changing the story you are telling.",
+      "Cuando connects the two events, but does not say you stopped eating or answered the phone. Keep that distinction between what the grammar presents and what you merely imagine happening next."
+    ],
+    "goal": "Present a past activity as a whole event or as background to another event."
+  },
+  "product-rule": {
+    "teaching": [
+      "A changing length adds a strip along the old width; a changing width adds a strip along the old length. Their corner is an additional small piece. For a short time h, the first two contributions approach W×L′h and L×W′h. Dividing by h gives the two rate contributions W×L′ and L×W′.",
+      "The diagram uses exact changes over each chosen interval. At h=0.1 s, the new dimensions are 3.1 m and 4.41 m. The added area is 1.671 m², giving an interval average of 16.71 m²/s. Smaller intervals approach the instantaneous rate of 16 m²/s. A finite interval average and the rate at its starting instant are related, but need not be equal.",
+      "The product rule writes the limiting result as (uv)′=u′v+uv′. Each changing factor gets its own term, paired with the other factor’s current value. Multiplying only the two derivatives would omit the long strips and give the wrong units here: m²/s² instead of m²/s."
+    ]
+  },
+  "physics-2": {
+    "teaching": [
+      "Compare energy stores at the top and bottom. In the frictionless model, the decrease in gravitational energy becomes an equal increase in kinetic energy. The vertical drop determines mgh, so the hill’s route does not enter this calculation. Mass cancels because it multiplies both the available gravitational energy and the kinetic energy needed for a given speed.",
+      "The energy bars make the accounting visible. With a stated thermal transfer, some of the original energy is now thermal and the rest is kinetic. Add those two final amounts to recover the initial gravitational amount. Total energy is accounted for even though mechanical energy has decreased.",
+      "Compare masses first with no loss: both reach 10 m/s. Then choose a stated 36 J thermal transfer. That is a specified amount in each comparison, so its fraction of the initial energy differs with mass. The controls explore those stated amounts; they do not assume that every physical hill produces the same friction loss."
+    ]
+  },
+  "physics-5": {
+    "teaching": [
+      "Momentum is signed mass times velocity. A simple average of the two starting velocities gives the sticking result only when the masses are equal. In general, add each cart’s momentum first, then divide by the joined mass. A stationary cart contributes no initial momentum but still contributes to that joined mass.",
+      "The carts’ collision forces are internal to the chosen two-cart system. They transfer momentum between the carts. With negligible external impulse, those transfers leave the combined momentum unchanged. Select a before or after view to inspect that same total in different arrangements.",
+      "Kinetic energy follows a different accounting. In a sticking collision, some becomes thermal energy, sound or deformation. The explorer shows both the conserved momentum and the kinetic-energy decrease. Equal and opposite momenta can cancel even when both carts initially carry kinetic energy."
+    ]
+  }
+}

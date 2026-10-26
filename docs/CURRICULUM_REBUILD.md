@@ -6,6 +6,8 @@ Implemented in V110: 52 coherent teaching units across five course sequences. V1
 
 V112 edits thirteen explanations, combines two overlapping units and adds five applications, reaching 65 units. Current counts: Spanish 15, piano 14, chess 14, calculus 11, physics 11. Each map now groups the sequence into three named chapters. Older IDs for the combined units remain valid through aliases. See CURRICULUM_EDIT_V112.md for the content decisions and comparison.
 
+V113 keeps those sequences and counts while deepening the demonstrations in existing lessons. See TEACHING_V113.md for sentence construction, interval comparisons, changing areas, energy/momentum accounting and the revised pawn-rule sequence.
+
 ## V110 sequences (extended by V111 below)
 
 - Spanish, 12 units: soy/estoy/tengo; useful requests; questions and negation (new); listening repair; directions; plans; present habits (new); ser/estar with descriptions (new); completed past; past background; weekend story; complete café exchange (new).
