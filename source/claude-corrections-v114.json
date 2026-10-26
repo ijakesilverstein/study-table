@@ -1,0 +1,139 @@
+{
+  "spanish-0": {
+    "recall": {
+      "ask": "Use profesor/profesora for teacher and oficina for office. Say: I am a teacher. I am in the office. I have a question.",
+      "answer": "Soy profesor (or profesora). Estoy en la oficina. Tengo una pregunta. Each sentence uses the verb that matches its job: identification, location or having."
+    }
+  },
+  "spanish-sounds": {
+    "mistake": {
+      "check": "In café and médico, use the written accent to locate the stressed syllable. Amigo follows the usual next-to-last-syllable pattern without a written accent."
+    },
+    "recall": {
+      "ask": "Say that you are a student, that you are at home, and that you have a question. Use una duda for the question."
+    }
+  },
+  "spanish-1": {
+    "takeaway": "Quiero comer and puedo pagar pair a personal verb form with an infinitive. Tengo hambre uses a noun to express hunger.",
+    "recall": {
+      "answer": "GRA-cias, es-pa-ÑOL and es-tu-DIAN-te. Español has no written stress accent: its final l gives the usual last-syllable pattern. The ñ is a separate letter, not a stress mark.",
+      "ask": "Where does the stress fall in these divided words: gra-cias, es-pa-ñol and es-tu-dian-te?"
+    }
+  },
+  "noun-phrases": {
+    "mistake": {
+      "diagnosis": "The quantity is two, but the noun and its description were left singular. In this phrase both need plural forms."
+    }
+  },
+  "spanish-6": {
+    "takeaway": "¿Dónde está la farmacia? asks for the pharmacy. Recognize recto, derecha and izquierda, then check the route and landmark."
+  },
+  "spanish-7": {
+    "recall": {
+      "ask": "Ask where the pharmacy is, then explain a la derecha in a directions reply.",
+      "answer": "¿Dónde está la farmacia? A la derecha means to the right. Gire a la derecha asks you to turn right; a location described as a la derecha may simply be on your right."
+    }
+  },
+  "question-words": {
+    "takeaway": "Dónde asks where, cuándo asks when, and a qué hora asks for a clock time. Match the question to the information you need."
+  },
+  "habits": {
+    "mistake": {
+      "check": "Trabajo can be the personal verb in this simple statement. In quiero trabajar, quiero carries the person and trabajar stays in the infinitive. A longer sentence can contain more than one personal verb."
+    }
+  },
+  "descriptions": {
+    "mistake": {
+      "diagnosis": "With aburrido or aburrida, the verb choice changes this message: estar describes feeling bored; ser describes being boring."
+    }
+  },
+  "spanish-4": {
+    "takeaway": "This short story combines a background state, a completed event and a plan: estaba, fui, voy a. Other stories can use a different set of time frames."
+  },
+  "cafe-project": {
+    "mistake": {
+      "check": "In this café question, para aquí or para llevar supplies the requested choice. Sí alone does not select one; if neither option fits, explain what you need."
+    }
+  },
+  "comfortable-hands": {
+    "mistake": {
+      "check": "Point to finger 4 on each hand: it is the ring finger. Then use the note name, separately, to decide which key it should play."
+    }
+  },
+  "piano-3": {
+    "recall": {
+      "ask": "Recall the first seven notes of the earlier first-tune lesson, then name a join to practice slowly.",
+      "answer": "E–D–C–D–E–E–E. Try the turn C–D–E and the arrival into the repeated Es at an even pulse. Choose the join that actually hesitates in your playing."
+    }
+  },
+  "piano-4": {
+    "takeaway": "C–E–G is C major. In root position its gaps are four then three semitones; root, third and fifth count letter names."
+  },
+  "three-chord-song": {
+    "recall": {
+      "answer": "The return is a different movement toward C, E and G. Notice which note you actually miss, rehearse that join slowly, then return to the complete change."
+    }
+  },
+  "read-melody": {
+    "mistake": {
+      "check": "For this melody, add six one-beat notes and one two-beat note: eight beats over seven attacks. In other rhythms, shorter notes can also change the relationship between attacks and beats."
+    }
+  },
+  "read-moves": {
+    "takeaway": "In ordinary English move notation, K, Q, R, B and N name pieces; a pawn move begins with a file letter. One move number covers both sides’ turns. Castling uses O-O or O-O-O.",
+    "mistake": {
+      "check": "Compare exd5 with Qxd5: the first starts with a pawn’s file, while the second names the queen. Castling is a separate notation case, O-O or O-O-O."
+    }
+  },
+  "pins": {
+    "takeaway": "An absolute pin forbids a move that uncovers your own king. Moving along the pin line or capturing the attacker can sometimes remain legal. A relative pin concerns another valuable target.",
+    "mistake": {
+      "repair": "The f6 knight cannot jump away because that would expose its king. The d7 knight may move off the file in this example, at the cost of its queen.",
+      "check": "Inspect the resulting position. Would the move uncover an attack on your king? A pinned sliding piece may be able to move along the line or capture the attacker while keeping its king safe."
+    }
+  },
+  "promotion": {
+    "recall": {
+      "answer": "A pin does not settle every move’s legality. A move that uncovers an attack on your king is illegal; a move along the pin line may remain legal. A pin toward a queen does not by itself prohibit moving the piece."
+    }
+  },
+  "pawn-race": {
+    "mistake": {
+      "attempt": "The pawn reaches a8 with check, so there is no need to count Black’s next move.",
+      "diagnosis": "The count stopped at promotion. A check can be answered by capturing the checking piece when that capture is legal. Whose turn comes first also changes whether the king arrives in time.",
+      "check": "Count the opponent’s reply to promotion before calling the new piece safe. In the second line, Kxa8 removes both the check and the queen."
+    }
+  },
+  "functions": {
+    "takeaway": "A function assigns one output to each allowed input. A single position reading gives location; a velocity describes how position changes."
+  },
+  "derivative-rules": {
+    "mistake": {
+      "check": "The two position rules differ by a fixed 5 m, so both derivatives must be 6t+2. The position offset contributes zero; the constant velocity term 2 still comes from differentiating 2t."
+    }
+  },
+  "product-rule": {
+    "mistake": {
+      "diagnosis": "Multiplying the two side rates gives units of m²/s², not an area rate. Each long strip depends on one side’s change and the other side’s current size."
+    }
+  },
+  "calculus-5": {
+    "takeaway": "Write the quantity and its allowed domain using the constraint. Compare available stationary points and boundaries, then justify which gives the maximum."
+  },
+  "physics-2": {
+    "takeaway": "Under this energy model, the lost mgh becomes kinetic energy plus the stated thermal transfer. Account for both final amounts before finding speed."
+  },
+  "physics-5": {
+    "takeaway": "With negligible external impulse, the total signed momentum of the two-cart system is conserved. The sticking velocity is momentum divided by joined mass."
+  },
+  "waves": {
+    "takeaway": "For the fixed-speed wave model here, v=fλ. Increasing frequency then shortens wavelength. State which medium conditions are held fixed.",
+    "mistake": {
+      "diagnosis": "In this model the medium conditions and wave speed remain fixed. Raising frequency therefore shortens wavelength instead of changing that stated speed.",
+      "check": "Calculate fλ in both cases: 2×6=12 m/s and 4×3=12 m/s. Both agree with the speed specified for the same medium."
+    }
+  },
+  "piano-1": {
+    "takeaway": "C is the white key just left of a two-black-key group. The three-black-key group gives two more landmarks: F immediately to its left and B immediately to its right. The pattern repeats in different octaves."
+  }
+}

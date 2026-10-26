@@ -2,7 +2,7 @@
 
 An offline-capable learning app, published at https://study-table-v102.vercel.app.
 
-V113 deepens the existing 65-unit courses: Spanish 15, piano 14, chess 14, calculus 11 and physics 11. New demonstrations explain sentence construction, semitone gaps, the product rule’s changing areas, energy stores, signed collisions and pawn movement. Three named chapters organize each course. Each unit contains explanatory teaching and two complete worked cases; variations are optional. Main subject controls open these courses by default. **Full curriculums** shows the longer sequences, preserved original practice material, and **Quick worked lessons** links. The 38 short lessons remain available across 11 subjects. These are introductory foundations, not complete professional training.
+V114 merges Claude's content expansion into the existing 65-unit courses: Spanish 15, piano 14, chess 14, calculus 11 and physics 11. Every unit now has a takeaway, complete misconception reasoning and two optional practice items. All 16 imported figures remain available alongside the newer V113 demonstrations. Three named chapters organize each course. Each unit contains explanatory teaching and two complete worked cases. **Full curriculums** shows the longer sequences, preserved original practice material, and **Quick worked lessons** links. The 38 short lessons remain available across 11 subjects. These are introductory foundations, not complete professional training.
 
 ## Edit and build
 
@@ -13,7 +13,7 @@ python3 scripts/build.py
 python3 -m http.server 8769 --directory public
 ```
 
-Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v113.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
+Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v114.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
 
 - `source/teacher-prose-v109.json`: rewritten explanations in existing lessons.
 - `source/draft-foundation-lessons.json` and `source/lessons-v109.json`: the 12 new lessons. The historical `draft-` filename is retained for build compatibility; these records are now published.
@@ -29,6 +29,10 @@ Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v113.htm
 - `source/editorial-v112.json`: thirteen edited explanations and the combined piano performance project.
 - `source/teaching-v113.json`: seven explanation/goal revisions, including the first chess lesson’s ordinary pawn case.
 - `source/teaching-panels-v113.json` and `source/teaching-panels.js`: interval choices and area, energy and collision demonstrations; sentence-view data also feeds the Spanish renderer.
+- `source/claude-additions-v114.json`: all imported takeaways/reviews and 34 new misconception blocks, extracted without modification.
+- `source/claude-corrections-v114.json`: targeted refinements applied separately from the original additions.
+- `source/claude-figures-v114.js` and `source/claude-additions-v114.css`: all 16 reviewed imported figures and the optional practice UI.
+- `source/imports/`: unchanged original uploads and provenance; these files are not executed by the build.
 - `source/course-stages.json`: the three chapter boundaries and purposes in each course.
 - `source/course-reader.js` and `.css`: course maps, written units, notation, optional worked variations, and reading position.
 - `source/course-figures.js`: adjustable interval, motion, force and circuit diagrams, with written calculations and accessible descriptions.
@@ -52,10 +56,14 @@ The test runner starts its own local server. `CHROME_BINARY` can select an insta
 
 The contrast regression seeds conflicting legacy/current theme preferences, clicks both actual theme controls, reloads, and checks visible text contrast with axe-core across the taught lessons and main dialogs.
 
+V114 also verifies the unchanged original uploads, every extracted Claude addition, all prior V113 lesson fields, all 16 imported explorations, the corrected numerical states and the optional two-answer interface. The complete accounting is in docs/CLAUDE_MERGE_V114.md.
+
 ## Vercel and GitHub
+
+The user's latest preference is to deliver future versions as HTML files and leave Vercel unchanged. V113 is the last deployed release. V114 is a local merged release; do not deploy it or later versions unless the user explicitly requests deployment again.
 
 This is a separate project from LaunchWell Labs. The intended GitHub repository is private `ijakesilverstein/study-table`. Remote creation and Vercel Git integration must be confirmed before describing GitHub as connected.
 
-The existing Vercel project is `study-table-v102`, in the `jakesilverstein` scope. `vercel.json` builds the app and serves `public/`; versioned HTML links download as files. Once the GitHub integration is connected, pushes to the production branch can deploy this project. Credentials and the local `.vercel` project link stay outside Git history.
+The existing Vercel project is `study-table-v102`, in the `jakesilverstein` scope. `vercel.json` builds the app and serves `public/`; the previously deployed versioned HTML links download as files. Keep automatic deployment disconnected while the user prefers file delivery. Credentials and the local `.vercel` project link stay outside Git history.
 
 Progress is stored on the learner’s device. GitHub and Vercel deployment do not synchronize that progress between devices. Original course content is preserved in the baseline; its inclusion here does not grant permission to redistribute it publicly.

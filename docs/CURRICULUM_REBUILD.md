@@ -8,6 +8,8 @@ V112 edits thirteen explanations, combines two overlapping units and adds five a
 
 V113 keeps those sequences and counts while deepening the demonstrations in existing lessons. See TEACHING_V113.md for sentence construction, interval comparisons, changing areas, energy/momentum accounting and the revised pawn-rule sequence.
 
+V114 imports Claude's 65 takeaways, 65 review prompts, 34 new misconception blocks and 16 figures into those same courses. Every prior V113 unit field is retained. The raw uploads, extracted additions, recorded corrections and preservation checks are documented in CLAUDE_MERGE_V114.md.
+
 ## V110 sequences (extended by V111 below)
 
 - Spanish, 12 units: soy/estoy/tengo; useful requests; questions and negation (new); listening repair; directions; plans; present habits (new); ser/estar with descriptions (new); completed past; past background; weekend story; complete café exchange (new).

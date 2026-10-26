@@ -49,6 +49,16 @@ def build_courses(teacher):
     units['chess-0']['first']['steps'][2][2]='A bishop occupying e3 can interrupt this rook line, as the worked check lesson will show.'
     units['chess-1']['second']=units['threats']['first']
     units['promotion']['supplement']={'title':'En passant: a one-turn opportunity','paragraphs':['If Black advances a pawn from d7 to d5 beside White’s pawn on e5, White may immediately play e5–d6 and remove the pawn from d5. The diagonal destination is empty in this special capture. If White chooses a different move first, the opportunity is gone. Black has the matching rule from its fourth rank after a neighboring white pawn advances two squares.','The capture still has to keep your king safe. In the second board example, moving the e5 pawn away would uncover a rook’s attack on White’s king. En passant is therefore illegal there, even though the pawn arrangement matches the special rule.'],'examples':[{'label':'Show the legal capture','line':3},{'label':'Show why the pinned pawn cannot capture','line':4}]}
+    additions=json.loads((ROOT/'claude-additions-v114.json').read_text())
+    for id,fields in additions.items():
+        assert id in units,id
+        for key,value in fields.items():
+            assert key not in units[id],(id,key,'would overwrite current teaching')
+            units[id][key]=value
+    for id,fields in json.loads((ROOT/'claude-corrections-v114.json').read_text()).items():
+        for key,value in fields.items():
+            if isinstance(value,dict):units[id][key].update(value)
+            else:units[id][key]=value
     demos=course_demos()
     stages=json.loads((ROOT/'course-stages.json').read_text())
     courses={}
@@ -59,6 +69,9 @@ def build_courses(teacher):
         for i,id in enumerate(order):
             unit=dict(units[id]);unit['previous']=order[i-1] if i else None;unit['next']=order[i+1] if i+1<len(order) else None
             assert len(unit['opening'])>=2 and len(unit['teaching'])>=2
+            assert unit['takeaway'] and all(unit['mistake'].get(k) for k in ['attempt','diagnosis','repair','check'])
+            assert unit['recall']['ask'] and unit['recall']['answer']
+            if unit['recall']['from']:assert order.index(unit['recall']['from'])<i,(id,'review must refer to earlier teaching')
             for name in ['first','second']:assert len(unit[name]['steps'])>=3,(id,name)
             unit['demo']=id if id in demos else None;course['units'].append(unit)
         courses[subject]=course
@@ -200,4 +213,4 @@ def render_course(course,demos):
     demo_source=(ROOT/'demos-v109.js').read_text().replace('__DEMOS__',json.dumps(selected,ensure_ascii=False,separators=(',',':')))
     helpers="const $=id=>document.getElementById(id);const escape=s=>String(s??'').replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));"
     import html
-    return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+html.escape(course['title'])+' — Full course</title><style>'+(ROOT/'theme-v109.css').read_text()+'\n'+(ROOT/'course-reader.css').read_text()+'</style><script>'+(ROOT/'theme-state.js').read_text()+'</script></head><body><header class="course-top"><strong id="courseSubject"></strong><div><button id="courseAll" type="button">All curriculums</button><button id="courseTheme" type="button" data-study-theme-toggle>Dark mode</button></div></header><div class="reader-layout"><aside class="contents"><details id="courseContents" open><summary>Course contents</summary><ol id="courseContentsList"></ol></details></aside><main id="courseArticle" class="reader-article" tabindex="-1"></main></div><script id="full-course-data" type="application/json">'+data+'</script><script>(()=>{\'use strict\';'+helpers+'\n'+demo_source+'\n'+(ROOT/'course-figures.js').read_text()+'\n'+(ROOT/'teaching-panels.js').read_text().replace('__PANEL_DATA__',(ROOT/'teaching-panels-v113.json').read_text())+'\n'+(ROOT/'course-reader.js').read_text()+'\n})();</script></body></html>'
+    return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+html.escape(course['title'])+' — Full course</title><style>'+(ROOT/'theme-v109.css').read_text()+'\n'+(ROOT/'course-reader.css').read_text()+'\n'+(ROOT/'claude-additions-v114.css').read_text()+'</style><script>'+(ROOT/'theme-state.js').read_text()+'</script></head><body><header class="course-top"><strong id="courseSubject"></strong><div><button id="courseAll" type="button">All curriculums</button><button id="courseTheme" type="button" data-study-theme-toggle>Dark mode</button></div></header><div class="reader-layout"><aside class="contents"><details id="courseContents" open><summary>Course contents</summary><ol id="courseContentsList"></ol></details></aside><main id="courseArticle" class="reader-article" tabindex="-1"></main></div><script id="full-course-data" type="application/json">'+data+'</script><script>(()=>{\'use strict\';'+helpers+'\n'+demo_source+'\n'+(ROOT/'course-figures.js').read_text()+'\n'+(ROOT/'teaching-panels.js').read_text().replace('__PANEL_DATA__',(ROOT/'teaching-panels-v113.json').read_text())+'\n'+(ROOT/'claude-figures-v114.js').read_text()+'\n'+(ROOT/'course-reader.js').read_text()+'\n})();</script></body></html>'

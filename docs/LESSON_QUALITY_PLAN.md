@@ -101,3 +101,7 @@ Five further units add Spanish pronunciation, a C–F–G–C piano progression 
 ## V113 — make the explanations visible
 
 Keep the 65 units and 130 worked cases. Seven lesson records receive clearer explanations or goals. Add a Spanish past-viewpoint selector with sentence construction, semitone-gap comparisons with matching audio, an exact growing-rectangle demonstration for the product rule, energy-store bars and signed before/after collision views. The first chess diagram covers all six pieces and shows why a pawn cannot jump a forward blocker. Detailed en passant moves into an optional promotion supplement, with a legal line and a pinned-pawn counterexample. Existing reading places, aliases and original practice remain available. Scope and verification are described in TEACHING_V113.md.
+
+## V114 — preserve and integrate Claude's additions
+
+Import all 65 takeaways, 65 review prompts, 34 new misconception blocks and 16 figures from the user's upload without replacing the newer V113 lesson data. Every unit now displays the authored misconception check sentence. Practice remains optional, with one disclosure and a separate answer toggle for each item. Original uploads are preserved unchanged. Targeted content and figure corrections, retention of all prior V113 teaching, and complete preservation checks are documented in CLAUDE_MERGE_V114.md.

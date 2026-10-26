@@ -1,0 +1,78 @@
+Understood — shifting focus to the curriculum content itself. Let me find where the course data lives.
+
+Found the content model. Let me extract the actual curriculum data for all five courses.
+
+The content is solid but uneven. Let me audit completeness across every unit of every course.
+
+Now I understand the real gaps. Let me study the demo API so new content fits the existing idiom.
+
+The demo plumbing exists but is empty for calculus/physics. Let me check one more thing — whether authored content is being dropped by the renderer.
+
+Confirmed: every `mistake` block has an authored `check` line that the renderer silently drops. Let me set up a build pipeline and verify a byte-exact round trip first.
+
+Round-trip is clean. Let me set up tracking and confirm the renderer is shared across all five course pages.
+
+Starting with the renderer (tasks 1 and 4). Let me check the existing stylesheet vocabulary so new markup matches.
+
+Now let me write the renderer patch.
+
+Renderer patched cleanly. Let me verify the new `check` line and reveal buttons actually work.
+
+Renderer work is verified. Now the content.
+
+I have the full picture of calculus now. Let me author its content pack.
+
+Calculus content is in. Now physics — let me read its units.
+
+Now the physics pack.
+
+Now the three skill courses. Let me read Spanish.
+
+Now the Spanish pack.
+
+Now piano and chess.
+
+Now chess — the last course.
+
+All five content packs are in. Let me verify every unit across all courses in the browser.
+
+All 65 units verified. Now the visuals — let me check a helper detail first.
+
+Both anchors are unique. Now let me build the figure module.
+
+Now let me wire it in with CSS and the call-site patch.
+
+All 65 units are complete. Now let me verify the figures actually render and respond to their controls.
+
+All calculus figures work. Now physics.
+
+All 16 figures work. Let me check they actually look right.
+
+Two layout problems in the fence figure — a clipped rotated label and a cramped garden. Let me fix.
+
+Figure fixed. Let me mark progress and run a full final verification.
+
+All checks pass. Let me confirm the edit scope is exactly what I intended, then deliver.
+
+Exactly five files changed, all 213 bundle entries intact, outer shell untouched. Delivering.
+
+I went after the curriculums themselves rather than the app shell. `/home/user/Study_Table_V113.html`
+
+**What I found first.** The five real curriculums (Spanish 15 units, Piano 14, Chess 14, Calculus 11, Physics 11) live as JSON inside the gzipped bundle. Auditing all 65 units turned up three concrete gaps:
+
+- **34 of 65 units had no "mistake to inspect" block** — the misconception section, arguably the most valuable thing in the course, missing from over half of it.
+- **Calculus and physics had visuals in only 3 of 11 units each.** Spanish/piano/chess have a demo in every single unit. The two most diagram-dependent subjects had 16 units of pure prose.
+- **Every `mistake` block carried an authored `check` sentence the renderer silently dropped.** 31 units' worth of written teaching that never reached a learner.
+
+**What I changed.**
+
+1. **Fixed the dropped `check` line** — free content, already written, now rendered as "Check it yourself."
+2. **Authored the 34 missing misconception blocks** — each with the wrong attempt, why it's wrong, the repair, and a self-check. They target the real errors: applying the km/h factor backwards, adding resistances in parallel, `dos café pequeño`, naming a chord after its lowest note, promoting into stalemate, counting only the first half of a chess exchange.
+3. **Built 16 explorable figures** for the calculus/physics units that had none — the product-rule rectangle with its two strips and vanishing corner, the secant line on a position–time curve, the fence-area trade-off, a wave whose crests crowd as frequency rises while the speed label stays put. They use the page's existing demo plumbing and theme tokens, so they work in dark mode and at phone width.
+4. **Rebuilt the practice section.** It was one question buried in two nested collapsed `<details>` with no feedback. Now it's one level of opt-in gating, a per-question reveal button, and a second **"Looking back"** question in every unit that recalls a named earlier unit — spacing built into the course instead of bolted on. Plus a **"What to remember"** takeaway on all 65 units.
+
+**Verified in a real browser, not by inspection:** all 65 units walked individually — every one now has a takeaway, a check line, two practice items and a visual; all 16 new figures confirmed to render *and* respond to their controls; zero console errors; no horizontal overflow at 390px. Diffing the bundle confirms only the five curriculum files changed — all 213 entries intact, the 8,900-line shell byte-identical.
+
+Two notes. I worked only on the five full curriculums; the other six subjects in the picker ("Med school", "Economics", "Business"…) still have just single quick lessons, not courses — that's the obvious next gap if you want it. And I checked the maths and rules in everything I wrote (the stalemate on `c8=Q`, `Qxf7#`, the 4.5 A parallel current, the castling rule that the rook may cross an attacked square but the king may not), but a second read on the Spanish gendered forms wouldn't hurt.
+
+Early in the session, before your "make the curriculums way better", I'd also noted that the app keeps 149 focusable elements live behind its `aria-modal` overlay — a real keyboard-accessibility bug in the shell. I left it alone once you redirected me; say the word if you want it fixed.

@@ -1,0 +1,726 @@
+{
+  "spanish-0": {
+    "takeaway": "Spanish splits the English “I am”: soy identifies you, estoy says where you are or how you feel, and tengo says what you have.",
+    "recall": {
+      "from": null,
+      "ask": "Say: I'm a teacher. I'm in the office. I have a question.",
+      "answer": "Soy profesor (profesora). Estoy en la oficina. Tengo una pregunta. Each sentence takes the verb that matches its job—identify, locate, possess."
+    }
+  },
+  "spanish-sounds": {
+    "takeaway": "Spanish vowels keep a clear, steady sound even in syllables that carry no stress, and a written accent marks the syllable that does.",
+    "recall": {
+      "from": "spanish-0",
+      "ask": "Say that you are a student, that you are at home, and that you have a doubt.",
+      "answer": "Soy estudiante. Estoy en casa. Tengo una duda."
+    },
+    "mistake": {
+      "attempt": "amigo is said uh-MEE-go, and café is said CA-fe.",
+      "diagnosis": "Two separate slips. The first a in amigo was flattened into an English “uh”; Spanish keeps it as a clear ah even unstressed. And café wears a written accent on the final e, which is precisely the mark that tells you where the stress belongs.",
+      "repair": "a-MI-go, with all three vowels clear. ca-FÉ, with the weight at the end.",
+      "check": "A written accent nearly always points at the stressed syllable. If you are stressing a syllable other than the one wearing the accent, the accent is telling you so."
+    }
+  },
+  "spanish-1": {
+    "takeaway": "Quiero, tengo and puedo already say that you are the one doing it, so a verb that follows stays in its plain dictionary form: quiero comer, puedo pagar.",
+    "recall": {
+      "from": "spanish-sounds",
+      "ask": "Where does the stress fall in gracias, español and estudiante?",
+      "answer": "GRA-cias, es-pa-ÑOL—the written accent marks it—and es-tu-DIAN-te. Keep every vowel clear, including the ones that carry no stress."
+    }
+  },
+  "noun-phrases": {
+    "takeaway": "An article, a noun and its description travel as one group, and the whole group changes together: un café pequeño, dos cafés pequeños, una mesa pequeña.",
+    "recall": {
+      "from": "spanish-1",
+      "ask": "Ask for water, then say you can pay by card.",
+      "answer": "Quiero agua. Puedo pagar con tarjeta. Neither sentence needs yo, because the verb ending already says who."
+    },
+    "mistake": {
+      "attempt": "“Two small coffees” → dos café pequeño.",
+      "diagnosis": "Only the counting word was made plural. In Spanish the noun and its description both carry the plural, so the ending has to show up on each of them rather than on the number alone.",
+      "repair": "dos cafés pequeños. The noun takes -s and the adjective matches it.",
+      "check": "Say the group aloud as one unit. If dos is plural but nothing after it sounds plural, the group has not finished agreeing. The same test catches gender: una mesa pequeña, not una mesa pequeño."
+    }
+  },
+  "questions": {
+    "takeaway": "The same words can state or ask—the question marks and your voice do the work. For a negative, put no directly in front of the conjugated verb.",
+    "recall": {
+      "from": "noun-phrases",
+      "ask": "Ask for two large coffees, then ask for a small table.",
+      "answer": "Dos cafés grandes, por favor. Una mesa pequeña, por favor. Grandes takes the plural; pequeña matches mesa."
+    },
+    "mistake": {
+      "attempt": "“I cannot pay in cash” → Puedo no pagar en efectivo.",
+      "diagnosis": "The no was placed after the verb, copying the English order “I can not”. In Spanish no goes immediately before the conjugated verb. As written, the sentence drifts toward “I am able to not pay”, which is a different claim.",
+      "repair": "No puedo pagar en efectivo.",
+      "check": "Find the verb carrying the person ending—puedo—and check that no sits directly in front of it. The question form follows the same rule: ¿No puedes pagar?"
+    }
+  },
+  "spanish-5": {
+    "takeaway": "Ask for the kind of help you actually need: ¿Puede repetirlo? for a repeat, más despacio for slower, ¿Qué significa…? for a word you have never met.",
+    "recall": {
+      "from": "questions",
+      "ask": "Ask whether you can pay by card, then say that you cannot pay in cash.",
+      "answer": "¿Puedo pagar con tarjeta? No puedo pagar en efectivo. The no goes straight in front of puedo."
+    }
+  },
+  "spanish-6": {
+    "takeaway": "¿Dónde está…? is enough to ask for any place. Then you only need three words from the reply: recto, derecha, izquierda.",
+    "recall": {
+      "from": "spanish-5",
+      "ask": "You did not catch the question. Ask for it more slowly, then say you want your coffee to take away.",
+      "answer": "¿Puede repetirlo más despacio, por favor? Para llevar, por favor."
+    }
+  },
+  "spanish-7": {
+    "takeaway": "Turn down the day without turning down the invitation: Me gustaría, pero no puedo el sábado—then offer a day that works.",
+    "recall": {
+      "from": "spanish-6",
+      "ask": "Ask where the pharmacy is, and say what you would do if the answer were a la derecha.",
+      "answer": "¿Dónde está la farmacia? A la derecha tells you to turn right."
+    }
+  },
+  "question-words": {
+    "takeaway": "The question word names the piece you are missing: dónde for a place, cuándo for a day, a qué hora for a time on the clock.",
+    "recall": {
+      "from": "spanish-7",
+      "ask": "A friend proposes Saturday. Say you would like to but cannot, and suggest Sunday at eleven.",
+      "answer": "Me gustaría, pero no puedo el sábado. ¿El domingo a las once?"
+    },
+    "mistake": {
+      "attempt": "To ask what time you are meeting: ¿Qué hora es?",
+      "diagnosis": "¿Qué hora es? asks what time it is right now. It questions the clock rather than the plan, so the reply—Son las dos—tells you the current time and leaves the meeting unscheduled.",
+      "repair": "¿A qué hora nos vemos? asks what time we are meeting. That small a is what turns a clock reading into an appointment.",
+      "check": "Test which answer would come back. If Son las dos would answer you, you asked about now. If A las dos would answer you, you asked about the plan."
+    }
+  },
+  "habits": {
+    "takeaway": "Regular -ar verbs take -o for yo and -as for tú. Only the ending moves; everything else in the sentence stays where it was.",
+    "recall": {
+      "from": "question-words",
+      "ask": "Ask what time you will meet, then answer “at three in the afternoon”.",
+      "answer": "¿A qué hora nos vemos? A las tres de la tarde. The a marks the appointment rather than the present moment."
+    },
+    "mistake": {
+      "attempt": "“I work in the morning” → Yo trabajar por la mañana.",
+      "diagnosis": "Trabajar is the infinitive, the dictionary form. It names the activity without saying who does it, so it cannot be the main verb of a sentence about what you do.",
+      "repair": "Trabajo por la mañana. Drop the -ar and add -o. The yo is optional, because that -o already says who.",
+      "check": "Compare it with quiero trabajar, where the infinitive is correct because quiero is already carrying the person. One verb per sentence has to hold the person ending—and a verb standing alone must be the one that does."
+    }
+  },
+  "descriptions": {
+    "takeaway": "Ser and estar are not permanent versus temporary. They carry a difference in meaning: soy aburrido says what you are like, estoy aburrido says how you feel.",
+    "recall": {
+      "from": "habits",
+      "ask": "Say that you study at home, then ask a friend whether they study at home.",
+      "answer": "Estudio en casa. ¿Estudias en casa? Only the ending moved, from -o to -as."
+    },
+    "mistake": {
+      "attempt": "Estar is the temporary one, so “I am bored” and “I am boring” are both estoy aburrido—context sorts out which is meant.",
+      "diagnosis": "The verb is carrying that difference, not the context. Using estar for both throws away the very distinction the two verbs exist to make, and leaves the listener to guess.",
+      "repair": "Estoy aburrido means I am bored. Soy aburrido means I am boring.",
+      "check": "Try the permanent-versus-temporary rule on soy estudiante. Being a student is temporary, and the verb is still ser. The rule fails there, which is why these pairs are worth meeting one at a time."
+    }
+  },
+  "spanish-2": {
+    "takeaway": "The preterite reports a finished event: ayer fui al mercado y compré pan. The past is carried by the verb form, not by the word ayer.",
+    "recall": {
+      "from": "descriptions",
+      "ask": "Tell a friend you are bored, then say that you are a student.",
+      "answer": "Estoy aburrido (aburrida). Soy estudiante. Two different verbs, because the sentences are doing two different jobs."
+    }
+  },
+  "spanish-3": {
+    "takeaway": "The imperfect sets a scene that was already underway; the preterite reports the event that lands in it: comía cuando Ana llamó.",
+    "recall": {
+      "from": "spanish-2",
+      "ask": "Say “Yesterday I ate bread and went to the park.”",
+      "answer": "Ayer comí pan y fui al parque. Both verbs are preterite, because both events are finished."
+    }
+  },
+  "spanish-4": {
+    "takeaway": "A three-sentence story needs three time frames: the background state, the completed event, and the plan—estaba, fui, voy a.",
+    "recall": {
+      "from": "spanish-3",
+      "ask": "Translate “I was cooking when the phone rang.”",
+      "answer": "Cocinaba cuando sonó el teléfono, or Estaba cocinando cuando sonó el teléfono. The cooking is the scene; the ring is the event that interrupts it."
+    }
+  },
+  "cafe-project": {
+    "takeaway": "A real exchange is the earlier units running together: make the request, ask about what you missed, choose between the options you were offered, then confirm.",
+    "recall": {
+      "from": "spanish-4",
+      "ask": "Say that you were tired on Saturday, that you went to the park, and that tomorrow you are going to rest.",
+      "answer": "El sábado estaba cansado (cansada). Después fui al parque. Mañana voy a descansar."
+    },
+    "mistake": {
+      "attempt": "The worker asks ¿Para aquí o para llevar? and you answer Sí.",
+      "diagnosis": "That is an either/or question, not a yes/no question. Sí selects neither option, so the worker still does not know whether to reach for a cup or a bag.",
+      "repair": "Name one of the two: Para llevar, por favor. If you did not catch the question at all, ¿Puede repetirlo más despacio, por favor? buys you another hearing.",
+      "check": "Listen for o sitting between two options. When you hear it, your reply has to name one of them—sí and no can only answer a question that offers a single possibility."
+    }
+  },
+  "piano-1": {
+    "takeaway": "The black keys repeat in groups of two and three. C is the white key immediately left of any two-key group, which gives you a landmark anywhere on the keyboard.",
+    "recall": {
+      "from": null,
+      "ask": "Find a group of three black keys. Name the white key immediately to its left, and the white key immediately to the right of the whole group.",
+      "answer": "F sits just left of a three-key group and B sits just right of it. The two-key group gives you C; the three-key group gives you F."
+    }
+  },
+  "comfortable-hands": {
+    "takeaway": "Finger numbers run 1 to 5 from thumb to little finger and name fingers. Note names like C4 name pitches. The same finger plays different notes depending on where the hand sits.",
+    "recall": {
+      "from": "piano-1",
+      "ask": "You find a pair of black keys somewhere on the keyboard. Name the white key just left of the pair and the next two white keys to the right of it.",
+      "answer": "C, then D and E. D sits between the two black keys, and E is just to the right of the pair."
+    },
+    "mistake": {
+      "attempt": "The music says finger 4, so I should play the fourth white key up from C, which is F.",
+      "diagnosis": "A fingering number names a finger, not a note. Finger 4 is the ring finger, and it can land on whichever key the music needs. Note names are what do the other job.",
+      "repair": "Finger 4 means the ring finger. Which key it presses depends entirely on where your hand is placed.",
+      "check": "Both hands number 1 to 5 from thumb to little finger. If the numbers named notes, left-hand 1 and right-hand 1 would have to be the same key—and with your hands in playing position they point in opposite directions."
+    }
+  },
+  "piano-0": {
+    "takeaway": "The pulse keeps running underneath a held note. A two-beat note is one attack occupying two beats, not two attacks.",
+    "recall": {
+      "from": "comfortable-hands",
+      "ask": "What is the difference between C4 and finger 4?",
+      "answer": "C4 is a pitch—middle C. Finger 4 is the ring finger on either hand, and it plays whichever key the current hand position puts beneath it."
+    }
+  },
+  "staff": {
+    "takeaway": "Lines and spaces are both note positions. Moving from one line to the next line skips a letter, because a space between them holds one.",
+    "recall": {
+      "from": "piano-0",
+      "ask": "At 60 beats per minute, how long do two two-beat notes last, and how many attacks do they involve?",
+      "answer": "Each beat lasts a second, so four beats last four seconds. There are two attacks, one at the start of each held note."
+    },
+    "mistake": {
+      "attempt": "The treble lines from the bottom are E, G, B, D, F. So the note just above the bottom line E4 is G4.",
+      "diagnosis": "Only the lines were counted. The space between two lines is a note position in its own right, so the step above the bottom line lands in the first space, not on the next line.",
+      "repair": "Going upward the positions alternate: line E4, space F4, line G4, space A4, line B4. The note just above E4 is F4.",
+      "check": "Say the musical alphabet aloud as you climb—E, F, G, A, B—and give every letter its own position on the page. If a letter ends up with nowhere to sit, you have been counting lines only."
+    }
+  },
+  "piano-2": {
+    "takeaway": "Pitch and pulse are separate jobs. Keep the count even through the turn at the bottom of the phrase instead of hurrying back up.",
+    "recall": {
+      "from": "staff",
+      "ask": "Why can counting only the five staff lines give you the wrong note?",
+      "answer": "Because the four spaces are note positions too. F sits in a space between the E and G lines, so counting line to line skips a letter every time."
+    }
+  },
+  "piano-3": {
+    "takeaway": "A step moves to the neighbouring letter; a skip passes over one. Letters and keys are counted differently—C to E is a third by letter names but four semitones by keys.",
+    "recall": {
+      "from": "piano-2",
+      "ask": "Write the first seven notes of this unit's tune, then say where players usually rush.",
+      "answer": "E–D–C–D–E–E–E. The hurry usually arrives at C, the bottom of the turn, and again on the join into the three repeated Es."
+    }
+  },
+  "piano-4": {
+    "takeaway": "C–E–G is C major: start on the root and skip a white key twice. Root, third and fifth count letter names, not semitones.",
+    "recall": {
+      "from": "piano-3",
+      "ask": "Classify E→F and E→G as a step or a skip, and give the rule you used.",
+      "answer": "E→F is a step, because the letters are neighbours. E→G is a skip, because it passes over F. The rule counts letter names, which is why E→F is a step even though the keys are very close together."
+    }
+  },
+  "piano-5": {
+    "takeaway": "Two hands can hold two different jobs—one sustaining, one moving. Learn each part alone, then join them slowly at the beat where they interact.",
+    "recall": {
+      "from": "piano-4",
+      "ask": "Why can E–G–C still be a C-major chord when E is the lowest note?",
+      "answer": "Because it holds the same three notes: C, E and G. A chord is named for its root, not for whichever of its notes happens to sit lowest."
+    }
+  },
+  "piano-6": {
+    "takeaway": "Practise a chord change in both directions. C to F being comfortable does not make F to C comfortable, because the return has its own target to find.",
+    "recall": {
+      "from": "piano-5",
+      "ask": "In the four-beat example, how many attacks does each hand make, and what happens on beat 2?",
+      "answer": "The left hand makes one attack and holds C3 across all four beats; the right hand makes four, one per beat. On beat 2 the right hand moves to D4 while the left hand simply keeps sounding."
+    }
+  },
+  "three-chord-song": {
+    "takeaway": "C, F and G together support a great many songs in C. Rearranging a chord's notes keeps its identity while shortening the journey between shapes.",
+    "recall": {
+      "from": "piano-6",
+      "ask": "Why rehearse F back to C separately when C to F is already comfortable?",
+      "answer": "Because they are different motions with different targets. Coming home to C, the finger that most often misses is the one reaching for E."
+    },
+    "mistake": {
+      "attempt": "C4–F4–A4 has a C at the bottom, so it must be a C chord.",
+      "diagnosis": "A chord is named after its root, not after whichever note is lowest. These three letters are F, A and C—the F-major triad, rotated so that C sits underneath.",
+      "repair": "Stack them as F–A–C and the root is obvious. Played as C4–F4–A4 it is still F major, and that rotation is exactly what keeps the hand from leaping across the keyboard.",
+      "check": "Write the three letters and look for the triad's pattern of skips. F–A–C skips G and B, so it is a stack of thirds. C–F–A does not fit that pattern, which tells you the notes have been rotated rather than that the chord has changed."
+    }
+  },
+  "three-beats": {
+    "takeaway": "Changing the grouping from four beats to three does not change how long a beat lasts. The count runs straight through the measure line.",
+    "recall": {
+      "from": "three-chord-song",
+      "ask": "Why is C4–F4–A4 an F-major chord even though C is the lowest note?",
+      "answer": "Its letters are F, A and C—the F-major triad, rotated so C lies at the bottom. The root names the chord, and the rotation keeps the hand near the shape it just left."
+    },
+    "mistake": {
+      "attempt": "At 60 beats per minute, two complete 3/4 measures last two seconds, because there are two measures.",
+      "diagnosis": "The measures were counted instead of the beats. A 3/4 measure holds three beats, and the tempo is what sets the length of a beat—at 60 beats per minute, one second each.",
+      "repair": "Two measures hold six beats, so they last six seconds. At 120 beats per minute the same six beats last three seconds.",
+      "check": "Tap the pulse while you count. Duration has to come from the beats and the tempo together; the number of measures only tells you how those beats are grouped."
+    }
+  },
+  "rests-and-halves": {
+    "takeaway": "A rest is a measured length of silence, not a pause in the clock. Dividing a beat in two changes what fits inside the pulse, never the pulse itself.",
+    "recall": {
+      "from": "three-beats",
+      "ask": "At 120 beats per minute, how long do two complete 3/4 measures last?",
+      "answer": "Six beats altogether. At 120 beats per minute each beat is half a second, so the two measures last three seconds."
+    },
+    "mistake": {
+      "attempt": "There is a rest on beat 2, so I will wait until my hand is ready and then play beat 3.",
+      "diagnosis": "The rest was treated as permission to pause rather than as a beat with a measured length. Silence occupies time exactly as a note does, and the pulse keeps running through it.",
+      "repair": "Count 1–2–3–4 without a break. Play C on 1, stay silent for the whole of beat 2, then play D on 3. At 60 beats per minute that silence lasts exactly one second.",
+      "check": "Tap the pulse with your other hand while you play. If the taps stay even through the rest, you are counting it. If they stall, you are waiting instead."
+    }
+  },
+  "phrasing": {
+    "takeaway": "A phrase has a beginning, a direction and an ending. Make the movement dependable first and add the shape second—speed is a separate project.",
+    "recall": {
+      "from": "rests-and-halves",
+      "ask": "At 60 beats per minute, how long is a half-beat note and how long is a one-beat rest? What changes at 120?",
+      "answer": "Half a second and one second. At 120 they become a quarter of a second and half a second. The written rhythm has not changed; the tempo scales every duration together."
+    },
+    "mistake": {
+      "attempt": "The phrase will start sounding musical once I can play it fast enough.",
+      "diagnosis": "Speed and shape are independent. A phrase sounds like one thought because it has a direction and a clear ending, and both of those are audible at any tempo. Playing a shapeless phrase faster produces a faster shapeless phrase.",
+      "repair": "Choose a tempo slow enough that the join from G back to E is reliable, then add the small growth toward G and the easing back to C. Raise the tempo afterwards, keeping that shape.",
+      "check": "Record one slow pass and listen for a single thing: does the final C sound like an ending? If it does at a slow tempo, speed is a separate project. If it does not, speed will not supply it."
+    }
+  },
+  "read-melody": {
+    "takeaway": "Reading asks three questions at once: where the note sits, which letter that is, and how long it lasts. Preview the rhythm before the fingers start.",
+    "recall": {
+      "from": "phrasing",
+      "ask": "Name one audible thing you would check in a recording of C–D–E–G | E–D–C, and say how you would practise it.",
+      "answer": "For instance, whether the final C sounds like an ending rather than merely the last note played. Practise the join from G back to E slowly, then let that last C ease and take its full two beats."
+    },
+    "mistake": {
+      "attempt": "The melody has seven notes, so it lasts seven beats.",
+      "diagnosis": "That counts attacks rather than durations. Six of the notes last one beat each, but the final C is held for two, so the two totals cannot match.",
+      "repair": "Seven attacks, eight beats: 6×1 + 1×2 = 8, which fills two measures of four.",
+      "check": "Add the durations rather than the noteheads. Any time a piece contains a note longer than one beat, the attack count and the beat count have to disagree."
+    }
+  },
+  "chess-0": {
+    "takeaway": "A square name gives the file letter first and the rank number second. Each piece has its own geometry, so “can it get there?” is always a question about that particular piece's route.",
+    "recall": {
+      "from": null,
+      "ask": "On an otherwise empty board a bishop stands on f1. List the squares it can reach, and say what they all have in common.",
+      "answer": "Along one diagonal: e2, d3, c4, b5, a6. Along the other: g2, h3. Every one of them is the same colour as f1—a bishop can never change square colour."
+    }
+  },
+  "read-moves": {
+    "takeaway": "A capital letter names a piece; a lowercase letter names a file, which means the move belongs to a pawn. One move number covers a White turn and a Black turn.",
+    "recall": {
+      "from": "chess-0",
+      "ask": "Why can a bishop on c1 reach e3 in one move but not e2?",
+      "answer": "From c1 to e3 the file and the rank each change by two, so both squares sit on one diagonal through d2. From c1 to e2 the file changes by two but the rank by only one, which is not a diagonal."
+    },
+    "mistake": {
+      "attempt": "In 2 exd5 the e must stand for a piece, so something called an “e” captured on d5.",
+      "diagnosis": "Pawn moves carry no piece letter at all. The lowercase e names the file the capturing pawn started on, which is how the notation tells you which pawn made the capture.",
+      "repair": "exd5 is the pawn from the e-file capturing on d5. Compare Qxd5, where the capital Q names the queen.",
+      "check": "Look only at the first character. A capital letter is a piece—K, Q, R, B or N. A lowercase letter is a file, so a pawn is moving."
+    }
+  },
+  "chess-4": {
+    "takeaway": "A capture is only free when nothing can recapture. The same capture can win a piece or lose one, depending on where the defending king is standing.",
+    "recall": {
+      "from": "read-moves",
+      "ask": "In the line 1 e4 d5 2 exd5 Qxd5, which piece made each capture, and how can you tell?",
+      "answer": "exd5 is the e-file pawn, because a lowercase letter names a file rather than a piece. Qxd5 is the queen, named by the capital Q. Both x marks mean a capture and both moves finish on d5."
+    }
+  },
+  "chess-1": {
+    "takeaway": "Check has to be answered immediately—by capturing the checking piece, blocking a sliding attack, or moving the king. An ordinary attack on a piece is a decision, not an obligation.",
+    "recall": {
+      "from": "chess-4",
+      "ask": "White has Kg1 and Bc4; Black has a knight on f7. Why does the black king's square decide whether Bxf7 is safe?",
+      "answer": "With the king on a8 it is nowhere near f7, so nothing recaptures and White simply wins a knight. With the king on g8 it stands right next to f7, so Bxf7+ is met by Kxf7 and White has given a bishop for a knight."
+    }
+  },
+  "chess-2": {
+    "takeaway": "Checkmate means no legal reply exists by any piece—not merely that the king has no square. Test the other pieces before declaring it.",
+    "recall": {
+      "from": "chess-1",
+      "ask": "Your rook can capture a pawn, but a bishop can then capture your rook. What should you work out before playing it?",
+      "answer": "The whole sequence rather than the first move. You would win a pawn worth about 1 and lose a rook worth about 5. Looking at the recapture first is what makes this a decision instead of a blunder."
+    }
+  },
+  "count-exchanges": {
+    "takeaway": "Run a capture sequence to the end and keep a small ledger. Winning the first piece is not the same as winning material.",
+    "recall": {
+      "from": "chess-2",
+      "ask": "A king is attacked and has no safe square, but one of its own pieces can legally capture the attacker. Is it checkmate?",
+      "answer": "No. Checkmate requires that no legal reply exists at all, and capturing the checking piece is a legal reply. The game continues."
+    },
+    "mistake": {
+      "attempt": "Bxd5 wins a knight, so White is a knight ahead.",
+      "diagnosis": "Only the first half of the sequence was counted. After …exd5 the bishop has come off the board too, so each side has lost a piece of roughly the same value.",
+      "repair": "Count both turns: White gains a knight worth about 3 and loses a bishop worth about 3. The exchange is roughly level, not a knight won.",
+      "check": "Compare the rook version of the same position. Rxd5 exd5 gives up a rook worth about 5 for a knight worth about 3, which loses material. Only running the sequence to the end separates the two cases."
+    }
+  },
+  "chess-5": {
+    "takeaway": "Opening moves have jobs: open lines for your own pieces and contest the centre. Watch what the opponent actually played rather than following a memorised sequence.",
+    "recall": {
+      "from": "count-exchanges",
+      "ask": "A bishop captures a rook and is then recaptured by a pawn. Roughly what is the material change for the side that began the exchange?",
+      "answer": "It gains a rook worth about 5 and loses a bishop worth about 3, so it comes out around two points ahead. That is the favourable direction—unlike giving a rook for a knight."
+    }
+  },
+  "castling": {
+    "takeaway": "Castling has conditions covering the king's whole route: it may not start, cross or finish on an attacked square, and neither the king nor that rook may have moved earlier.",
+    "recall": {
+      "from": "chess-5",
+      "ask": "How does 1 e4 help White's light-squared bishop, and why does 1…d5 deserve a fresh look?",
+      "answer": "Moving the e-pawn off e2 opens the f1–a6 diagonal, so the bishop on f1 can finally come out. And 1…d5 contests the centre immediately instead of mirroring with …e5, so the position is no longer the one a memorised plan assumes."
+    },
+    "mistake": {
+      "attempt": "A black rook on f8 attacks f1, but my king is heading for g1, not f1, and g1 is safe—so I can still castle kingside.",
+      "diagnosis": "The king's path matters, not only its destination. Castling carries the king across f1, and a king may not cross a square that is under attack.",
+      "repair": "With a black rook on f8 and the f-file otherwise clear, White cannot castle kingside. The restriction covers all three squares: e1 if the king is in check, f1 because it is crossed, and g1 because it is the destination.",
+      "check": "Notice which piece the rule is about. The rook may travel across an attacked square—castling queenside, it crosses b1 quite legally—but the king may not."
+    }
+  },
+  "chess-3": {
+    "takeaway": "A fork attacks two things at once. It wins material when the forced answer to the check leaves the second target undefended.",
+    "recall": {
+      "from": "castling",
+      "ask": "A king moved off e1 earlier in the game and has since walked back to it. Its route is clear and every square on it is safe. May it castle?",
+      "answer": "No. Castling rights are lost permanently the moment the king moves, and returning to e1 does not restore them. The same holds for a rook that has moved."
+    }
+  },
+  "pins": {
+    "takeaway": "If the king stands behind the pinned piece, moving it is against the rules. If anything else stands behind it, the move is legal and the question becomes whether it is worth the material.",
+    "recall": {
+      "from": "chess-3",
+      "ask": "After Nf7+ in the fork position, why is Rd7 not a legal reply while Kg8 is?",
+      "answer": "Rd7 leaves the king on h8 still in check from the knight on f7, and no move may leave your own king in check. Kg8 steps the king off the attacked square, so it does answer the check—but it abandons the rook on d8."
+    },
+    "mistake": {
+      "attempt": "The knight on f6 is pinned by the bishop on c3, and the knight on d7 is pinned by the rook on d1. Neither knight is allowed to move.",
+      "diagnosis": "Only one of those is a rule. With the black king on g7 behind the f6 knight, moving it would expose the king, and that is illegal. Behind the d7 knight stands a queen, not the king—so moving it is permitted; it simply costs the queen.",
+      "repair": "Call the first an absolute pin: the move is forbidden. Call the second a relative pin: the move is legal but expensive, and occasionally worth playing anyway.",
+      "check": "Ask what sits at the far end of the line. If it is the king, the move is illegal. If it is anything else, the move is legal and you are making a judgement about value, not about legality."
+    }
+  },
+  "promotion": {
+    "takeaway": "A promoting pawn may become a queen, rook, bishop or knight. Inspect the position the promotion creates, because the strongest piece is not always the best choice.",
+    "recall": {
+      "from": "pins",
+      "ask": "Why is “it is pinned” an incomplete reason for calling a move illegal?",
+      "answer": "Because it does not say what is standing behind the piece. With the king behind it, moving is against the rules. With a queen or a rook behind it, the move is perfectly legal and merely costs material."
+    },
+    "mistake": {
+      "attempt": "A queen is the strongest piece, so promoting to a queen is always right.",
+      "diagnosis": "Value is not the only thing that matters—the resulting position is. With White Kc6 and a pawn on c7 against Black Ka7, promoting c8=Q leaves the black king with no legal move while it is not in check. That is stalemate, and the win has become a draw.",
+      "repair": "Promote to a rook: c8=R leaves the king the square a6 and keeps the game moving toward mate. Knight promotion is the other case worth knowing, when the knight's jump delivers a check a queen could not.",
+      "check": "Before anything else, count the opponent's legal replies to your promotion. If the count is zero and they are not in check, you have promoted into a stalemate."
+    }
+  },
+  "pawn-race": {
+    "takeaway": "Count the race one turn at a time, including whose move it is—and count one move past promotion, because a brand-new queen can still be captured.",
+    "recall": {
+      "from": "promotion",
+      "ask": "Why is comparing the value of the promoted pieces not enough to choose between c8=Q and c8=R?",
+      "answer": "Because the position decides it. In this ending c8=Q leaves Black with no legal move and no check—stalemate, and only a draw—while the apparently weaker c8=R leaves the king a square and keeps the win alive."
+    },
+    "mistake": {
+      "attempt": "The black king is four files from the a-pawn and the pawn needs four moves to promote, so the king can never catch it.",
+      "diagnosis": "The count ignored whose turn it is, and it stopped at promotion rather than one move later. Given the move, the black king gains a tempo, arrives in time, and takes the new queen on a8.",
+      "repair": "Run both versions. White to move: a5 Ke7 a6 Kd7 a7 Kc7 a8=Q and the queen survives. Black to move: …Ke6, a5 Kd6, a6 Kc7, a7 Kb7, a8=Q+ Kxa8—promoting with check does not rescue it, because the checking square is exactly the one the king has reached.",
+      "check": "Always count one move beyond promotion. A race is only won when the new queen is still on the board after the opponent has replied."
+    }
+  },
+  "queen-net": {
+    "takeaway": "Checkmate needs two things at once: the king is attacked, and it has no legal reply. Attacked with no reply is mate; not attacked with no reply is stalemate.",
+    "recall": {
+      "from": "pawn-race",
+      "ask": "In the second race White promotes with check—a8=Q+—and still loses the pawn. Why does the check not save it?",
+      "answer": "Because the black king is already standing next to a8, so the move that answers the check is Kxa8, capturing the new queen. A check only helps when the opponent cannot answer it by taking the checking piece."
+    },
+    "mistake": {
+      "attempt": "With White Kc6 and Qb6 against Ka8, the black king has nowhere to go, so this is already checkmate.",
+      "diagnosis": "Checkmate also requires the king to be in check, and the queen on b6 does not attack a8—the two squares share no rank, file or diagonal. With Black to move and no legal move available, this is stalemate and the game is drawn.",
+      "repair": "With White to move, Qb7 is mate: the queen attacks a8 from the adjacent square b7, covers the escape squares a7 and b8, and is defended by the white king on c6 so it cannot be taken.",
+      "check": "Run the two tests separately every time. Is the king attacked right now? Does it have a legal move? Mate needs yes then no. No then no is stalemate, and the defender keeps half a point."
+    }
+  },
+  "annotated-game": {
+    "takeaway": "Developing a piece does not excuse leaving a threat unanswered. Look at which squares the opponent's pieces attack together before choosing your move.",
+    "recall": {
+      "from": "queen-net",
+      "ask": "After Qb7+ in the mating position, why can Black not simply capture the queen?",
+      "answer": "Because the white king on c6 defends b7. Kxb7 would walk the black king onto a square the enemy king attacks, and that is never legal."
+    },
+    "mistake": {
+      "attempt": "3…Nf6 is a good move: it develops a piece and attacks the white queen on h5, so White has to move the queen.",
+      "diagnosis": "Attacking a piece only forces a reply when the opponent has nothing better. Here White ignores the attack entirely and plays Qxf7 mate. Developing the knight did nothing about f7, which the bishop on c4 and the queen on h5 were already hitting together.",
+      "repair": "Deal with f7 first. 3…g6 attacks the queen and blocks its diagonal to f7 at the same time; after Qf3 the knight can come to f6 safely.",
+      "check": "Before choosing a developing move, list the squares the opponent's pieces attack jointly. Here c4 and h5 both bear on f7, and f7 is defended only by the king—that is the square that needs an answer."
+    }
+  },
+  "functions": {
+    "takeaway": "A function rule turns one input into one output. The height of a position–time graph is a position, never a speed: a rate needs two readings compared.",
+    "recall": {
+      "from": null,
+      "ask": "Build a table of s(t)=t²+2 for t=0, 1 and 2. What does the +2 change about the graph, and what does it leave alone?",
+      "answer": "The positions are 2, 3 and 6 metres. Every reading is 2 m higher, so the whole graph shifts up. The gaps between consecutive positions are still 1 m and 3 m, exactly as for t², so the steepness—and any rate read from it—is unchanged."
+    },
+    "mistake": {
+      "attempt": "s(t)=t², so at t=3 the value is 9 and the cyclist is moving at 9 m/s.",
+      "diagnosis": "One evaluation of the rule returns one position. Nine is the mark the cyclist has reached at 3 seconds. A rate is a comparison, so it cannot come from a single reading.",
+      "repair": "Say it as “at 3 s the cyclist is at the 9 m mark”. For a velocity, compare two times: between t=2 and t=3 the position runs 4 m to 9 m, giving an average of 5 m/s.",
+      "check": "Check the units. The rule returns metres, and metres name a place. A velocity would have to come out in metres per second."
+    }
+  },
+  "algebra-for-rates": {
+    "takeaway": "Expand the new output, subtract the whole old output, and only then cancel a factor shared by every remaining term. The h you divide by has to be non-zero.",
+    "recall": {
+      "from": "functions",
+      "ask": "For f(x)=x², write f(x+h) and expand it. Why is f(x+h) not the same as f(x)+h?",
+      "answer": "f(x+h)=(x+h)²=x²+2xh+h². The rule squares whatever it is handed, so handing it x+h squares the whole sum. f(x)+h would square x first and add h afterwards, which is a different instruction and a different number."
+    },
+    "mistake": {
+      "attempt": "For f(x)=2x+5, [f(x+h)−f(x)]/h = (2x+2h+5−2x+5)/h = (2h+10)/h = 2+10/h.",
+      "diagnosis": "The bracket around the old value was dropped halfway. The minus sign reached 2x but not the 5, so a constant that should have cancelled survived and then got divided by h.",
+      "repair": "Subtract the whole old value: (2x+2h+5)−(2x+5)=2h. Divide by the non-zero h to get 2.",
+      "check": "A straight line has the same slope everywhere, so the answer must contain neither x nor h. An answer like 2+10/h fails that test, and it also blows up as h shrinks—the opposite of settling down."
+    }
+  },
+  "calculus-1": {
+    "takeaway": "An average rate is change in output divided by change in input, and both changes must come from the same two observations.",
+    "recall": {
+      "from": "algebra-for-rates",
+      "ask": "Simplify [(5+h)²−25]/h for h≠0.",
+      "answer": "(25+10h+h²−25)/h = h(10+h)/h = 10+h. The 25s cancel in the subtraction, before anything is divided."
+    }
+  },
+  "calculus-2": {
+    "takeaway": "A derivative is the number the average rates settle toward as the interval closes around one instant. At a single moment, position and velocity are different quantities with different units.",
+    "recall": {
+      "from": "calculus-1",
+      "ask": "A runner is at 15 m at t=3 s and at 35 m at t=7 s. Find the average velocity, then say why it does not tell you the speed at t=5 s.",
+      "answer": "(35−15)/(7−3) = 20/4 = 5 m/s. That single number stands in for the whole four seconds. The runner could have been quick early and slow late and still have covered 20 m, so the instant at t=5 s is not pinned down by it."
+    }
+  },
+  "derivative-rules": {
+    "takeaway": "Differentiate one term at a time: tⁿ becomes ntⁿ⁻¹, a multiplying constant is carried along, and an added constant contributes nothing.",
+    "recall": {
+      "from": "calculus-2",
+      "ask": "For s(t)=t², use the shrinking-interval idea to say what s′(2) should be, then check it with the power rule.",
+      "answer": "The interval averages near t=2 settle toward 4, and the power rule gives s′(t)=2t, so s′(2)=4 m/s. The rule packages that limit; it does not replace what the limit means."
+    },
+    "mistake": {
+      "attempt": "For s(t)=3t²+2t+5 metres, s′(t)=6t+2+5.",
+      "diagnosis": "The constant 5 was carried into the velocity. Five metres of head start is fixed: it does not grow or shrink as t changes, so it contributes no rate at all.",
+      "repair": "s′(t)=6t+2, which is 14 m/s at t=2 s.",
+      "check": "Compare s(t)=3t²+2t+5 with s(t)=3t²+2t. At every instant the two positions differ by exactly 5 m, so the two objects keep perfect pace and must share one velocity. Only a derivative with no constant term can do that."
+    }
+  },
+  "product-rule": {
+    "takeaway": "The rate of a product is L′W+LW′. Each factor's rate is multiplied by the other factor's full size, never by the other factor's rate.",
+    "recall": {
+      "from": "derivative-rules",
+      "ask": "Differentiate s(t)=4t³−6t+9 and give s′(1).",
+      "answer": "s′(t)=12t²−6, so s′(1)=6. The constant 9 adds nothing to the rate."
+    },
+    "mistake": {
+      "attempt": "L=t+1 and W=t², so dA/dt = L′ × W′ = 1 × 2t = 2t.",
+      "diagnosis": "Multiplying the two rates answers no question about area. New area arrives as strips, and each strip is one edge's rate multiplied by the other edge's whole length—not by how fast that other edge happens to be moving.",
+      "repair": "dA/dt = L′W + LW′ = 1×t² + (t+1)×2t = 3t²+2t, which is 16 m²/s at t=2 s. The incorrect version gives 4.",
+      "check": "This product can be expanded first: A=(t+1)t²=t³+t², and differentiating term by term gives 3t²+2t. Whenever a product can be multiplied out, the two routes have to agree."
+    }
+  },
+  "calculus-3": {
+    "takeaway": "The chain rule multiplies two rates that answer different questions: output per unit of the middle quantity, times middle quantity per unit of input. The middle units cancel.",
+    "recall": {
+      "from": "product-rule",
+      "ask": "Differentiate y=x²(x+3) with the product rule, then check by expanding first.",
+      "answer": "Product rule: 2x(x+3)+x²×1 = 2x²+6x+x² = 3x²+6x. Expanding first gives y=x³+3x² and y′=3x²+6x. The two agree."
+    }
+  },
+  "calculus-5": {
+    "takeaway": "To optimise, use the constraint to write the quantity in one variable, set its derivative to zero, and then give a reason why that point is a maximum rather than a minimum.",
+    "recall": {
+      "from": "calculus-3",
+      "ask": "Differentiate y=(2x+1)³ and evaluate it at x=1.",
+      "answer": "The outside power gives 3(2x+1)² and the inside rate gives 2, so y′=6(2x+1)². At x=1 that is 6×9=54."
+    }
+  },
+  "calculus-4": {
+    "takeaway": "Area under a velocity–time graph counts displacement. Area below the axis subtracts from displacement but still adds to distance.",
+    "recall": {
+      "from": "calculus-5",
+      "ask": "For f(x)=−x²+6x, where is the maximum, what is its value, and how do you know it is not a minimum?",
+      "answer": "f′(x)=−2x+6, which is zero at x=3, and f(3)=9. The x² coefficient is negative, so the curve opens downward and the turning point is the highest value rather than the lowest."
+    }
+  },
+  "definite-integrals": {
+    "takeaway": "A definite integral is F(b)−F(a). Subtracting the two endpoint values is exactly what makes the +C irrelevant.",
+    "recall": {
+      "from": "calculus-4",
+      "ask": "Velocity is +4 m/s for 3 s and then −4 m/s for 3 s. Find the displacement and the distance.",
+      "answer": "Displacement = 12−12 = 0 m; distance = 12+12 = 24 m. The second block of area sits below the axis, so it cancels in displacement while still counting toward distance."
+    },
+    "mistake": {
+      "attempt": "∫₁³2t dt = t² = 3² = 9 metres.",
+      "diagnosis": "Only the upper bound was used. An antiderivative read at one point is not an accumulation; the integral asks how much was gathered between the two bounds, so both endpoint values are needed.",
+      "repair": "F(3)−F(1) = 9−1 = 8 metres.",
+      "check": "Read the same quantity off the graph. Between t=1 and t=3 the line v=2t runs from 2 to 6 over a width of 2, so the trapezoid has area (2+6)/2×2 = 8. Area and antiderivative must give the same number."
+    }
+  },
+  "integral-substitution": {
+    "takeaway": "Choose u so its derivative is already sitting in the integral, convert dx as well as the expression, and change the bounds too if the integral is definite.",
+    "recall": {
+      "from": "definite-integrals",
+      "ask": "Calculate ∫₁⁴ 2t dt, then say why using t²+100 as the antiderivative would not change the answer.",
+      "answer": "With F(t)=t² the value is 16−1 = 15. With F(t)=t²+100 it is 116−101 = 15: the constant appears in both endpoint values and cancels in the subtraction."
+    },
+    "mistake": {
+      "attempt": "∫2(2x+5)³ dx = 2(2x+5)⁴/4 = (2x+5)⁴/2 + C.",
+      "diagnosis": "The power was raised as if the inside were just x. With u=2x+5 the substitution also gives du=2 dx, so dx=du/2, and that factor of one half was never carried through. The answer comes out twice too large.",
+      "repair": "∫2(2x+5)³ dx = ∫2u³·(du/2) = ∫u³ du = u⁴/4 = (2x+5)⁴/4 + C.",
+      "check": "Differentiate what you wrote. (2x+5)⁴/4 gives ¼×4(2x+5)³×2 = 2(2x+5)³, the original integrand. The incorrect version differentiates to 4(2x+5)³, which is twice too big—the same factor of two, showing up again."
+    }
+  },
+  "units-and-directions": {
+    "takeaway": "A number is unfinished without its unit, and a velocity is unfinished without a sign. Convert by cancelling the unit you are replacing, and say which direction you are calling positive before you start.",
+    "recall": {
+      "from": null,
+      "ask": "A cyclist travels west at 18 km/h. Taking east as positive, give the velocity in m/s and give the speed.",
+      "answer": "18/3.6 = 5 m/s of motion, directed west, so the velocity is −5 m/s and the speed is 5 m/s. Speed drops the sign; velocity keeps it."
+    },
+    "mistake": {
+      "attempt": "72 km/h = 72 × 3.6 = 259.2 m/s.",
+      "diagnosis": "The conversion factor was applied the wrong way round. Going from km/h to m/s replaces kilometres with metres (×1,000) and hours with seconds (÷3,600). The seconds win, so the number has to get smaller, not larger.",
+      "repair": "72 km/h is 72,000 metres in 3,600 seconds: 72,000/3,600 = 20 m/s. Dividing by 3.6 is the shortcut; multiplying by 3.6 goes the other way, from m/s back to km/h.",
+      "check": "Compare with something familiar. A brisk walk is about 5 km/h, which is a little under 1.4 m/s. The answer 259 m/s is roughly 930 km/h—an airliner, not a car."
+    }
+  },
+  "physics-4": {
+    "takeaway": "Position, velocity and acceleration answer three different questions and carry three different units. Falling from rest, speed grows as gt while distance grows as ½gt².",
+    "recall": {
+      "from": "units-and-directions",
+      "ask": "A car's velocity goes from +12 m/s to +3 m/s over 3 seconds, with east positive. Find the average acceleration, and say whether the car is speeding up.",
+      "answer": "(3−12)/3 = −3 m/s². The acceleration points west while the car is still travelling east, so it is slowing down. A negative acceleration does not by itself mean the car is moving backwards."
+    }
+  },
+  "velocity-graphs": {
+    "takeaway": "On a velocity–time graph the height is velocity, the slope is acceleration and the signed area is displacement. Decide which of the three the question needs before calculating anything.",
+    "recall": {
+      "from": "physics-4",
+      "ask": "An object is dropped from rest with g=10 m/s². How fast is it moving after 2 s, and how far has it fallen?",
+      "answer": "Speed = gt = 20 m/s. Distance = ½gt² = ½ × 10 × 4 = 20 m. The two come out as 20 here by coincidence: one is a speed in m/s, the other a distance in m."
+    },
+    "mistake": {
+      "attempt": "Between t=0 and t=2 s the cart reaches 4 m/s, so it covers 4 × 2 = 8 m.",
+      "diagnosis": "That multiplies the final velocity by the whole duration, as though the cart had been travelling at 4 m/s from the very start. It was slower at every instant before t=2 s.",
+      "repair": "Use the area under the line. The region is a triangle, so the displacement is ½ × 2 s × 4 m/s = 4 m.",
+      "check": "Because the rise is a straight line, the average velocity over those two seconds is halfway between 0 and 4, namely 2 m/s, and 2 × 2 = 4 m. Rectangle thinking is only safe where the graph is flat."
+    }
+  },
+  "physics-1": {
+    "takeaway": "Acceleration comes from the net force, not from the largest force. Add the forces by direction first, then divide by mass: a = F_net/m.",
+    "recall": {
+      "from": "velocity-graphs",
+      "ask": "A velocity–time graph holds steady at +5 m/s for 4 seconds. Give the acceleration, the displacement and the distance.",
+      "answer": "A flat line has zero slope, so the acceleration is 0. The area is a rectangle: 5 × 4 = 20 m of displacement. The sign never changes, so the distance is 20 m as well."
+    }
+  },
+  "force-diagrams": {
+    "takeaway": "Choose one object, draw only the forces acting on that object, and add them direction by direction. Zero acceleration means the arrows in each direction cancel.",
+    "recall": {
+      "from": "physics-1",
+      "ask": "A 5 kg cart has 30 N acting right and 10 N acting left. Find its acceleration.",
+      "answer": "The net force is 30 − 10 = 20 N to the right, so a = 20/5 = 4 m/s² to the right."
+    },
+    "mistake": {
+      "attempt": "The book resting on the table has three forces on it: its 20 N weight downward, the table's 20 N push upward, and the book's own 20 N push down on the table.",
+      "diagnosis": "The third arrow is a force the book exerts on the table, so it belongs in the table's diagram, not the book's. A free-body diagram holds only the forces that act on the chosen object.",
+      "repair": "The book's diagram has exactly two forces: 20 N down from gravity and 20 N up from the table. They sum to zero, matching its zero vertical acceleration.",
+      "check": "For every arrow, ask “what is pushing or pulling the book?” If the answer names the book itself as the pusher, that arrow belongs in a different diagram."
+    }
+  },
+  "physics-2": {
+    "takeaway": "Energy accounting compares a starting state with an ending state, so the details in between can be skipped. The mgh that is lost becomes ½mv², less whatever friction carried away.",
+    "recall": {
+      "from": "force-diagrams",
+      "ask": "A 3 kg box sits still on a table while a hand presses down on it with 10 N. Use g=10 m/s². Find the table's upward force.",
+      "answer": "Its weight is 3 × 10 = 30 N down, and the hand adds 10 N down, so 40 N acts downward. The box does not accelerate, so the table must push up with 40 N."
+    }
+  },
+  "physics-5": {
+    "takeaway": "Momentum is mass times signed velocity, and it is the total across both objects that is conserved. Averaging the two velocities is only correct when the masses happen to be equal.",
+    "recall": {
+      "from": "physics-2",
+      "ask": "A sled starts from rest and drops 20 m on a frictionless slope, with g=10 m/s². Find its final speed.",
+      "answer": "½v² = gh, so v² = 2 × 10 × 20 = 400 and v = 20 m/s. The mass cancels out, which is why the answer does not depend on how heavy the sled is."
+    }
+  },
+  "physics-3": {
+    "takeaway": "Ohm's law ties three quantities together as I = V/R. Say which quantity you are holding fixed before predicting what a change does.",
+    "recall": {
+      "from": "physics-5",
+      "ask": "A 3 kg cart moving right at 4 m/s sticks to a 1 kg cart at rest. External impulse is negligible. Find their common velocity.",
+      "answer": "Momentum before is 3 × 4 + 1 × 0 = 12 kg·m/s. Afterwards 4 kg share it, so the velocity is 12/4 = 3 m/s to the right."
+    }
+  },
+  "circuit-paths": {
+    "takeaway": "In series the current is shared and the voltage drops add; in parallel the voltage is shared and the branch currents add. Trace the wires before choosing a formula.",
+    "recall": {
+      "from": "physics-3",
+      "ask": "An ideal 9 V source drives a 3 Ω resistor. What current flows, and what happens if the resistor is swapped for a 9 Ω one at the same voltage?",
+      "answer": "9/3 = 3 A, and then 9/9 = 1 A. Tripling the resistance at fixed voltage divides the current by three."
+    },
+    "mistake": {
+      "attempt": "A 2 Ω and a 4 Ω resistor in parallel across 6 V give 6 Ω, so the battery supplies 6/6 = 1 A.",
+      "diagnosis": "Resistances add only when the current has a single path through both. Wiring them in parallel opens a second route, which makes the pair easier for current than either resistor alone—so the equivalent resistance must come out below 2 Ω, not above it.",
+      "repair": "Take the branches separately: 6/2 = 3 A and 6/4 = 1.5 A, giving 4.5 A from the battery. The equivalent resistance is 6/4.5 ≈ 1.33 Ω.",
+      "check": "Compare with the series version of the same two resistors: 6 Ω and 1 A. Adding a second path should let more current flow, and 4.5 A against 1 A confirms it does."
+    }
+  },
+  "waves": {
+    "takeaway": "v = fλ. The medium fixes the speed, so raising the frequency shortens the wavelength instead of making the wave travel faster.",
+    "recall": {
+      "from": "circuit-paths",
+      "ask": "Two 6 Ω resistors sit in series across 12 V. Find the current and each voltage drop.",
+      "answer": "The total resistance is 12 Ω, so the current is 1 A. Each resistor drops 1 × 6 = 6 V, and the two drops add back to the battery's 12 V."
+    },
+    "mistake": {
+      "attempt": "Doubling the frequency from 2 Hz to 4 Hz doubles the wave speed from 12 m/s to 24 m/s.",
+      "diagnosis": "Wave speed is set by the medium—the rope's tension and thickness, or the air for sound—not by how quickly the source is shaken. With v fixed, raising f has to shorten λ instead.",
+      "repair": "At 12 m/s the wavelength is 12/2 = 6 m at 2 Hz and 12/4 = 3 m at 4 Hz. The speed stays 12 m/s throughout.",
+      "check": "Think about music. If frequency set the speed, the high notes of a chord would reach you before the low ones and anything played across a room would arrive scrambled. It does not happen."
+    }
+  },
+  "pressure": {
+    "takeaway": "Pressure is force per unit area, so the same force spread differently produces different pressures. P = F/A, and multiplying back by the area has to return the force.",
+    "recall": {
+      "from": "waves",
+      "ask": "Sound travels at about 340 m/s. Find the wavelength of a 680 Hz note and of a 170 Hz note.",
+      "answer": "340/680 = 0.5 m and 340/170 = 2 m. The lower note has the longer wavelength, and both travel at the same speed."
+    },
+    "mistake": {
+      "attempt": "Resting the same 100 N load on 0.01 m² instead of 0.02 m² doubles the pressure to 10,000 Pa, so the load now pushes down with 200 N.",
+      "diagnosis": "Only the sharing changed. The load still weighs 100 N; concentrating it on half the area doubles the force carried by each square metre, not the total force pressing down.",
+      "repair": "The force is 100 N in both arrangements. The pressures are 100/0.02 = 5,000 Pa and 100/0.01 = 10,000 Pa.",
+      "check": "Multiply back: 10,000 Pa × 0.01 m² = 100 N. Pressure times the area it acts over must return the force you started with."
+    }
+  }
+}
