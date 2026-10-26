@@ -1,0 +1,1774 @@
+{
+  "chess": [
+    {
+      "kind": "chess",
+      "lines": [
+        {
+          "title": "The forcing fork",
+          "fen": "r3k3/pp3ppp/8/3N4/8/8/PP3PPP/R3K3 w Qq - 0 1",
+          "moves": [
+            "d5c7",
+            "e8d7",
+            "c7a8"
+          ],
+          "frames": [
+            {
+              "pieces": {
+                "e8": "bK",
+                "a8": "bR",
+                "h7": "bP",
+                "g7": "bP",
+                "f7": "bP",
+                "b7": "bP",
+                "a7": "bP",
+                "d5": "wN",
+                "h2": "wP",
+                "g2": "wP",
+                "f2": "wP",
+                "b2": "wP",
+                "a2": "wP",
+                "e1": "wK",
+                "a1": "wR"
+              },
+              "turn": "White",
+              "caption": "From d5, look at c7: a knight there would attack both e8 and a8.",
+              "fen": "r3k3/pp3ppp/8/3N4/8/8/PP3PPP/R3K3 w Qq - 0 1"
+            },
+            {
+              "pieces": {
+                "e8": "bK",
+                "a8": "bR",
+                "h7": "bP",
+                "g7": "bP",
+                "f7": "bP",
+                "c7": "wN",
+                "b7": "bP",
+                "a7": "bP",
+                "h2": "wP",
+                "g2": "wP",
+                "f2": "wP",
+                "b2": "wP",
+                "a2": "wP",
+                "e1": "wK",
+                "a1": "wR"
+              },
+              "turn": "Black",
+              "caption": "Nc7+ checks the king on e8 and attacks Ra8. Black must answer the check.",
+              "fen": "r3k3/ppN2ppp/8/8/8/8/PP3PPP/R3K3 b Qq - 1 1",
+              "from": "d5",
+              "to": "c7",
+              "marks": [
+                "d5",
+                "c7"
+              ],
+              "san": "Nc7+"
+            },
+            {
+              "pieces": {
+                "a8": "bR",
+                "h7": "bP",
+                "g7": "bP",
+                "f7": "bP",
+                "d7": "bK",
+                "c7": "wN",
+                "b7": "bP",
+                "a7": "bP",
+                "h2": "wP",
+                "g2": "wP",
+                "f2": "wP",
+                "b2": "wP",
+                "a2": "wP",
+                "e1": "wK",
+                "a1": "wR"
+              },
+              "turn": "White",
+              "caption": "Kd7 is the reply we show. Moving the rook alone would not answer the knight check.",
+              "fen": "r7/ppNk1ppp/8/8/8/8/PP3PPP/R3K3 w Q - 2 2",
+              "from": "e8",
+              "to": "d7",
+              "marks": [
+                "e8",
+                "d7"
+              ],
+              "san": "Kd7"
+            },
+            {
+              "pieces": {
+                "a8": "wN",
+                "h7": "bP",
+                "g7": "bP",
+                "f7": "bP",
+                "d7": "bK",
+                "b7": "bP",
+                "a7": "bP",
+                "h2": "wP",
+                "g2": "wP",
+                "f2": "wP",
+                "b2": "wP",
+                "a2": "wP",
+                "e1": "wK",
+                "a1": "wR"
+              },
+              "turn": "Black",
+              "caption": "Nxa8 captures the rook. This line wins that rook; later play is outside this short comparison.",
+              "fen": "N7/pp1k1ppp/8/8/8/8/PP3PPP/R3K3 b Q - 0 2",
+              "from": "c7",
+              "to": "a8",
+              "marks": [
+                "c7",
+                "a8"
+              ],
+              "san": "Nxa8"
+            }
+          ]
+        },
+        {
+          "title": "A quiet knight move",
+          "fen": "r3k3/pp3ppp/8/3N4/8/8/PP3PPP/R3K3 w Qq - 0 1",
+          "moves": [
+            "d5e3",
+            "a8c8"
+          ],
+          "frames": [
+            {
+              "pieces": {
+                "e8": "bK",
+                "a8": "bR",
+                "h7": "bP",
+                "g7": "bP",
+                "f7": "bP",
+                "b7": "bP",
+                "a7": "bP",
+                "d5": "wN",
+                "h2": "wP",
+                "g2": "wP",
+                "f2": "wP",
+                "b2": "wP",
+                "a2": "wP",
+                "e1": "wK",
+                "a1": "wR"
+              },
+              "turn": "White",
+              "caption": "Compare from exactly the same starting position.",
+              "fen": "r3k3/pp3ppp/8/3N4/8/8/PP3PPP/R3K3 w Qq - 0 1"
+            },
+            {
+              "pieces": {
+                "e8": "bK",
+                "a8": "bR",
+                "h7": "bP",
+                "g7": "bP",
+                "f7": "bP",
+                "b7": "bP",
+                "a7": "bP",
+                "e3": "wN",
+                "h2": "wP",
+                "g2": "wP",
+                "f2": "wP",
+                "b2": "wP",
+                "a2": "wP",
+                "e1": "wK",
+                "a1": "wR"
+              },
+              "turn": "Black",
+              "caption": "Ne3 is legal, but it does not check the king or create the c7 fork.",
+              "fen": "r3k3/pp3ppp/8/8/8/4N3/PP3PPP/R3K3 b Qq - 1 1",
+              "from": "d5",
+              "to": "e3",
+              "marks": [
+                "d5",
+                "e3"
+              ],
+              "san": "Ne3"
+            },
+            {
+              "pieces": {
+                "e8": "bK",
+                "c8": "bR",
+                "h7": "bP",
+                "g7": "bP",
+                "f7": "bP",
+                "b7": "bP",
+                "a7": "bP",
+                "e3": "wN",
+                "h2": "wP",
+                "g2": "wP",
+                "f2": "wP",
+                "b2": "wP",
+                "a2": "wP",
+                "e1": "wK",
+                "a1": "wR"
+              },
+              "turn": "White",
+              "caption": "Rc8 is a legal rook move now: Black had time because its king was not in check.",
+              "fen": "2r1k3/pp3ppp/8/8/8/4N3/PP3PPP/R3K3 w Q - 2 2",
+              "from": "a8",
+              "to": "c8",
+              "marks": [
+                "a8",
+                "c8"
+              ],
+              "san": "Rc8"
+            }
+          ]
+        }
+      ],
+      "stepTargets": [
+        {
+          "line": 0,
+          "position": 1
+        },
+        {
+          "line": 0,
+          "position": 3
+        },
+        {
+          "line": 1,
+          "position": 2
+        }
+      ]
+    },
+    {
+      "kind": "chess",
+      "lines": [
+        {
+          "title": "Capture, then include the reply",
+          "fen": "6k1/8/4p3/3n4/8/8/8/3R2K1 w - - 0 1",
+          "moves": [
+            "d1d5",
+            "e6d5"
+          ],
+          "frames": [
+            {
+              "pieces": {
+                "g8": "bK",
+                "e6": "bP",
+                "d5": "bN",
+                "g1": "wK",
+                "d1": "wR"
+              },
+              "turn": "White",
+              "caption": "The e6 pawn defends the knight on d5. Follow both captures.",
+              "fen": "6k1/8/4p3/3n4/8/8/8/3R2K1 w - - 0 1"
+            },
+            {
+              "pieces": {
+                "g8": "bK",
+                "e6": "bP",
+                "d5": "wR",
+                "g1": "wK"
+              },
+              "turn": "Black",
+              "caption": "Rxd5 takes a knight, roughly +3 for White. The rook is now on d5.",
+              "fen": "6k1/8/4p3/3R4/8/8/8/6K1 b - - 0 1",
+              "from": "d1",
+              "to": "d5",
+              "marks": [
+                "d1",
+                "d5"
+              ],
+              "san": "Rxd5"
+            },
+            {
+              "pieces": {
+                "g8": "bK",
+                "d5": "bP",
+                "g1": "wK"
+              },
+              "turn": "White",
+              "caption": "...exd5 takes that rook, roughly −5 for White. The exchange changed White’s material balance by about −2.",
+              "fen": "6k1/8/8/3p4/8/8/8/6K1 w - - 0 2",
+              "from": "e6",
+              "to": "d5",
+              "marks": [
+                "e6",
+                "d5"
+              ],
+              "san": "exd5"
+            }
+          ]
+        },
+        {
+          "title": "Decline this exchange",
+          "fen": "6k1/8/4p3/3n4/8/8/8/3R2K1 w - - 0 1",
+          "moves": [
+            "d1d3"
+          ],
+          "frames": [
+            {
+              "pieces": {
+                "g8": "bK",
+                "e6": "bP",
+                "d5": "bN",
+                "g1": "wK",
+                "d1": "wR"
+              },
+              "turn": "White",
+              "caption": "Reset. There is no requirement to capture a defended knight.",
+              "fen": "6k1/8/4p3/3n4/8/8/8/3R2K1 w - - 0 1"
+            },
+            {
+              "pieces": {
+                "g8": "bK",
+                "e6": "bP",
+                "d5": "bN",
+                "d3": "wR",
+                "g1": "wK"
+              },
+              "turn": "Black",
+              "caption": "Rd3 retains the rook and avoids the shown rook-for-knight exchange. This is a comparison of that exchange, not a full best-move search.",
+              "fen": "6k1/8/4p3/3n4/8/3R4/8/6K1 b - - 1 1",
+              "from": "d1",
+              "to": "d3",
+              "marks": [
+                "d1",
+                "d3"
+              ],
+              "san": "Rd3"
+            }
+          ]
+        }
+      ],
+      "stepTargets": [
+        {
+          "line": 0,
+          "position": 1
+        },
+        {
+          "line": 0,
+          "position": 2
+        },
+        {
+          "line": 1,
+          "position": 1
+        }
+      ]
+    },
+    {
+      "kind": "chess",
+      "lines": [
+        {
+          "title": "Remove the pinning rook",
+          "fen": "4r1k1/8/8/8/8/8/4R3/4K3 w - - 0 1",
+          "moves": [
+            "e2e8",
+            "g8f7"
+          ],
+          "frames": [
+            {
+              "pieces": {
+                "g8": "bK",
+                "e8": "bR",
+                "e2": "wR",
+                "e1": "wK"
+              },
+              "turn": "White",
+              "caption": "Re2 blocks the black rook’s e-file attack on Ke1. It is absolutely pinned.",
+              "fen": "4r1k1/8/8/8/8/8/4R3/4K3 w - - 0 1"
+            },
+            {
+              "pieces": {
+                "g8": "bK",
+                "e8": "wR",
+                "e1": "wK"
+              },
+              "turn": "Black",
+              "caption": "Rxe8+ is legal: the rook stays on the file and captures the attacker. It now checks the black king along the eighth rank.",
+              "fen": "4R1k1/8/8/8/8/8/8/4K3 b - - 0 1",
+              "from": "e2",
+              "to": "e8",
+              "marks": [
+                "e2",
+                "e8"
+              ],
+              "san": "Rxe8+"
+            },
+            {
+              "pieces": {
+                "e8": "wR",
+                "f7": "bK",
+                "e1": "wK"
+              },
+              "turn": "White",
+              "caption": "Kf7 is a legal reply to that check. The black rook that created the pin is gone.",
+              "fen": "4R3/5k2/8/8/8/8/8/4K3 w - - 1 2",
+              "from": "g8",
+              "to": "f7",
+              "marks": [
+                "g8",
+                "f7"
+              ],
+              "san": "Kf7"
+            }
+          ]
+        },
+        {
+          "title": "Stay on the pin line",
+          "fen": "4r1k1/8/8/8/8/8/4R3/4K3 w - - 0 1",
+          "moves": [
+            "e2e3"
+          ],
+          "frames": [
+            {
+              "pieces": {
+                "g8": "bK",
+                "e8": "bR",
+                "e2": "wR",
+                "e1": "wK"
+              },
+              "turn": "White",
+              "caption": "Use the same position to inspect an on-line move.",
+              "fen": "4r1k1/8/8/8/8/8/4R3/4K3 w - - 0 1"
+            },
+            {
+              "pieces": {
+                "g8": "bK",
+                "e8": "bR",
+                "e3": "wR",
+                "e1": "wK"
+              },
+              "turn": "Black",
+              "caption": "Re3 is legal: the white rook still stands between Re8 and Ke1. It remains pinned, and Black could capture it; legal is not a claim of best play.",
+              "fen": "4r1k1/8/8/8/8/4R3/8/4K3 b - - 1 1",
+              "from": "e2",
+              "to": "e3",
+              "marks": [
+                "e2",
+                "e3"
+              ],
+              "san": "Re3"
+            }
+          ]
+        }
+      ],
+      "stepTargets": [
+        {
+          "line": 0,
+          "position": 0
+        },
+        {
+          "line": 0,
+          "position": 1
+        },
+        {
+          "line": 1,
+          "position": 1
+        }
+      ]
+    },
+    {
+      "kind": "chess",
+      "lines": [
+        {
+          "title": "Qb7 is checkmate",
+          "fen": "k7/2Q5/2K5/8/8/8/8/8 w - - 0 1",
+          "moves": [
+            "c7b7"
+          ],
+          "frames": [
+            {
+              "pieces": {
+                "a8": "bK",
+                "c7": "wQ",
+                "c6": "wK"
+              },
+              "turn": "White",
+              "caption": "Black has only its king on a8. Compare giving check with merely removing legal moves.",
+              "fen": "k7/2Q5/2K5/8/8/8/8/8 w - - 0 1"
+            },
+            {
+              "pieces": {
+                "a8": "bK",
+                "b7": "wQ",
+                "c6": "wK"
+              },
+              "turn": "Black",
+              "caption": "Qb7# attacks a8. The queen covers a7 and b8, and Kc6 protects b7. Black has no legal reply.",
+              "fen": "k7/1Q6/2K5/8/8/8/8/8 b - - 1 1",
+              "from": "c7",
+              "to": "b7",
+              "marks": [
+                "c7",
+                "b7"
+              ],
+              "san": "Qb7#"
+            }
+          ]
+        },
+        {
+          "title": "Qb6 is stalemate",
+          "fen": "k7/2Q5/2K5/8/8/8/8/8 w - - 0 1",
+          "moves": [
+            "c7b6"
+          ],
+          "frames": [
+            {
+              "pieces": {
+                "a8": "bK",
+                "c7": "wQ",
+                "c6": "wK"
+              },
+              "turn": "White",
+              "caption": "Reset to compare the neighboring queen square.",
+              "fen": "k7/2Q5/2K5/8/8/8/8/8 w - - 0 1"
+            },
+            {
+              "pieces": {
+                "a8": "bK",
+                "c6": "wK",
+                "b6": "wQ"
+              },
+              "turn": "Black",
+              "caption": "Qb6 does not attack a8. Black has no legal moves and is not in check: stalemate, so this line is a draw.",
+              "fen": "k7/8/1QK5/8/8/8/8/8 b - - 1 1",
+              "from": "c7",
+              "to": "b6",
+              "marks": [
+                "c7",
+                "b6"
+              ],
+              "san": "Qb6"
+            }
+          ]
+        }
+      ],
+      "stepTargets": [
+        {
+          "line": 0,
+          "position": 1
+        },
+        {
+          "line": 1,
+          "position": 1
+        },
+        {
+          "line": 0,
+          "position": 1
+        }
+      ]
+    }
+  ],
+  "piano": [
+    {
+      "kind": "piano",
+      "title": "Hear the early F, then the counted model",
+      "intro": "Four quiet preparation clicks come first. The pulse continues while the model plays; count four beats in each bar.",
+      "keys": [
+        "C3",
+        "C#3",
+        "D3",
+        "D#3",
+        "E3",
+        "F3",
+        "F#3",
+        "G3",
+        "G#3",
+        "A3",
+        "A#3",
+        "B3",
+        "C4",
+        "C#4",
+        "D4",
+        "D#4",
+        "E4",
+        "F4",
+        "F#4",
+        "G4"
+      ],
+      "tempos": [
+        40,
+        50,
+        60,
+        70,
+        80
+      ],
+      "defaultTempo": 50,
+      "countIn": 4,
+      "metronome": true,
+      "defaultPattern": 1,
+      "count": "Ready. Choose the example you want to hear.",
+      "patterns": [
+        {
+          "label": "Deliberate error: F enters early",
+          "events": [
+            {
+              "note": "C3",
+              "at": 0,
+              "beats": 4,
+              "hand": "left"
+            },
+            {
+              "note": "F3",
+              "at": 4,
+              "beats": 4,
+              "hand": "left"
+            },
+            {
+              "note": "E4",
+              "at": 0,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "D4",
+              "at": 1,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "C4",
+              "at": 2,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "F4",
+              "at": 3,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "F4",
+              "at": 4,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "E4",
+              "at": 5,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "D4",
+              "at": 6,
+              "beats": 1,
+              "hand": "right"
+            }
+          ],
+          "description": "The first right-hand F entered on beat 4 of bar 2, a beat before the bass changed. The final beat had no right-hand note.",
+          "intent": "error",
+          "beats": 8,
+          "meter": 4
+        },
+        {
+          "label": "Model: hold C through beat 4",
+          "events": [
+            {
+              "note": "C3",
+              "at": 0,
+              "beats": 4,
+              "hand": "left"
+            },
+            {
+              "note": "F3",
+              "at": 4,
+              "beats": 4,
+              "hand": "left"
+            },
+            {
+              "note": "E4",
+              "at": 0,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "D4",
+              "at": 1,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "C4",
+              "at": 2,
+              "beats": 2,
+              "hand": "right"
+            },
+            {
+              "note": "F4",
+              "at": 4,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "F4",
+              "at": 5,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "E4",
+              "at": 6,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "D4",
+              "at": 7,
+              "beats": 1,
+              "hand": "right"
+            }
+          ],
+          "description": "The held C filled beats 3 and 4. Both hands arrived on F at the next 1.",
+          "intent": "model",
+          "beats": 8,
+          "meter": 4
+        }
+      ],
+      "stepTargets": [
+        {
+          "pattern": 0,
+          "label": "Deliberate error: F enters early"
+        },
+        {
+          "pattern": 1,
+          "label": "Model: hold C through beat 4"
+        },
+        {
+          "pattern": 1,
+          "label": "Model: hold C through beat 4"
+        }
+      ]
+    },
+    {
+      "kind": "piano",
+      "title": "Give each hand its own turn",
+      "intro": "Four quiet preparation clicks come first. The pulse continues while the model plays; count four beats in each bar.",
+      "keys": [
+        "C3",
+        "C#3",
+        "D3",
+        "D#3",
+        "E3",
+        "F3",
+        "F#3",
+        "G3",
+        "G#3",
+        "A3",
+        "A#3",
+        "B3",
+        "C4",
+        "C#4",
+        "D4",
+        "D#4",
+        "E4",
+        "F4",
+        "F#4",
+        "G4"
+      ],
+      "tempos": [
+        40,
+        50,
+        60,
+        70,
+        80
+      ],
+      "defaultTempo": 50,
+      "countIn": 4,
+      "metronome": true,
+      "defaultPattern": 0,
+      "count": "Ready. Choose the example you want to hear.",
+      "patterns": [
+        {
+          "label": "Right hand alone",
+          "events": [
+            {
+              "note": "E4",
+              "at": 0,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "D4",
+              "at": 1,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "C4",
+              "at": 2,
+              "beats": 2,
+              "hand": "right"
+            },
+            {
+              "note": "F4",
+              "at": 4,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "F4",
+              "at": 5,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "E4",
+              "at": 6,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "D4",
+              "at": 7,
+              "beats": 1,
+              "hand": "right"
+            }
+          ],
+          "description": "E–D–C (hold), then F–F–E–D. The bar line follows the full two-beat C.",
+          "intent": "model",
+          "beats": 8,
+          "meter": 4
+        },
+        {
+          "label": "Left hand alone",
+          "events": [
+            {
+              "note": "C3",
+              "at": 0,
+              "beats": 4,
+              "hand": "left"
+            },
+            {
+              "note": "F3",
+              "at": 4,
+              "beats": 4,
+              "hand": "left"
+            }
+          ],
+          "description": "C3 for four beats, then F3 for four beats.",
+          "intent": "model",
+          "beats": 8,
+          "meter": 4
+        },
+        {
+          "label": "Only the arrival pairs",
+          "events": [
+            {
+              "note": "C3",
+              "at": 0,
+              "beats": 4,
+              "hand": "left"
+            },
+            {
+              "note": "F3",
+              "at": 4,
+              "beats": 4,
+              "hand": "left"
+            },
+            {
+              "note": "E4",
+              "at": 0,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "F4",
+              "at": 4,
+              "beats": 1,
+              "hand": "right"
+            }
+          ],
+          "description": "The right hand played one quarter note at each bar’s start, then rested. The left held each bass for four beats.",
+          "intent": "reduction",
+          "beats": 8,
+          "meter": 4
+        }
+      ],
+      "stepTargets": [
+        {
+          "pattern": 0,
+          "label": "Right hand alone"
+        },
+        {
+          "pattern": 1,
+          "label": "Left hand alone"
+        },
+        {
+          "pattern": 2,
+          "label": "Only the arrival pairs"
+        }
+      ]
+    },
+    {
+      "kind": "piano",
+      "title": "Restore one layer at a time",
+      "intro": "Four quiet preparation clicks come first. The pulse continues while the model plays; count four beats in each bar.",
+      "keys": [
+        "C3",
+        "C#3",
+        "D3",
+        "D#3",
+        "E3",
+        "F3",
+        "F#3",
+        "G3",
+        "G#3",
+        "A3",
+        "A#3",
+        "B3",
+        "C4",
+        "C#4",
+        "D4",
+        "D#4",
+        "E4",
+        "F4",
+        "F#4",
+        "G4"
+      ],
+      "tempos": [
+        40,
+        50,
+        60,
+        70,
+        80
+      ],
+      "defaultTempo": 50,
+      "countIn": 4,
+      "metronome": true,
+      "defaultPattern": 0,
+      "count": "Ready. Choose the example you want to hear.",
+      "patterns": [
+        {
+          "label": "Skeleton: two arrival pairs",
+          "events": [
+            {
+              "note": "C3",
+              "at": 0,
+              "beats": 4,
+              "hand": "left"
+            },
+            {
+              "note": "F3",
+              "at": 4,
+              "beats": 4,
+              "hand": "left"
+            },
+            {
+              "note": "E4",
+              "at": 0,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "F4",
+              "at": 4,
+              "beats": 1,
+              "hand": "right"
+            }
+          ],
+          "description": "Only the first right-hand note in each bar sounded; the remaining right-hand beats were rests.",
+          "intent": "reduction",
+          "beats": 8,
+          "meter": 4
+        },
+        {
+          "label": "Restore E–D–C in the first bar",
+          "events": [
+            {
+              "note": "C3",
+              "at": 0,
+              "beats": 4,
+              "hand": "left"
+            },
+            {
+              "note": "F3",
+              "at": 4,
+              "beats": 4,
+              "hand": "left"
+            },
+            {
+              "note": "E4",
+              "at": 0,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "D4",
+              "at": 1,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "C4",
+              "at": 2,
+              "beats": 2,
+              "hand": "right"
+            },
+            {
+              "note": "F4",
+              "at": 4,
+              "beats": 1,
+              "hand": "right"
+            }
+          ],
+          "description": "The first bar had its full melody; the second still had only the first F.",
+          "intent": "reduction",
+          "beats": 8,
+          "meter": 4
+        },
+        {
+          "label": "Restore the complete passage",
+          "events": [
+            {
+              "note": "C3",
+              "at": 0,
+              "beats": 4,
+              "hand": "left"
+            },
+            {
+              "note": "F3",
+              "at": 4,
+              "beats": 4,
+              "hand": "left"
+            },
+            {
+              "note": "E4",
+              "at": 0,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "D4",
+              "at": 1,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "C4",
+              "at": 2,
+              "beats": 2,
+              "hand": "right"
+            },
+            {
+              "note": "F4",
+              "at": 4,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "F4",
+              "at": 5,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "E4",
+              "at": 6,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "D4",
+              "at": 7,
+              "beats": 1,
+              "hand": "right"
+            }
+          ],
+          "description": "Both hands played the printed two-bar passage.",
+          "intent": "model",
+          "beats": 8,
+          "meter": 4
+        }
+      ],
+      "stepTargets": [
+        {
+          "pattern": 0,
+          "label": "Skeleton: two arrival pairs"
+        },
+        {
+          "pattern": 0,
+          "label": "Skeleton: two arrival pairs"
+        },
+        {
+          "pattern": 1,
+          "label": "Restore E–D–C in the first bar"
+        }
+      ]
+    },
+    {
+      "kind": "piano",
+      "title": "Choose a tempo, then hear it in context",
+      "intro": "Four quiet preparation clicks come first. The pulse continues while the model plays; count four beats in each bar.",
+      "keys": [
+        "C3",
+        "C#3",
+        "D3",
+        "D#3",
+        "E3",
+        "F3",
+        "F#3",
+        "G3",
+        "G#3",
+        "A3",
+        "A#3",
+        "B3",
+        "C4",
+        "C#4",
+        "D4",
+        "D#4",
+        "E4",
+        "F4",
+        "F#4",
+        "G4"
+      ],
+      "tempos": [
+        40,
+        50,
+        60,
+        70,
+        80
+      ],
+      "defaultTempo": 50,
+      "countIn": 4,
+      "metronome": true,
+      "defaultPattern": 0,
+      "count": "Ready. Choose the example you want to hear.",
+      "patterns": [
+        {
+          "label": "Complete bars 2–3",
+          "events": [
+            {
+              "note": "C3",
+              "at": 0,
+              "beats": 4,
+              "hand": "left"
+            },
+            {
+              "note": "F3",
+              "at": 4,
+              "beats": 4,
+              "hand": "left"
+            },
+            {
+              "note": "E4",
+              "at": 0,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "D4",
+              "at": 1,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "C4",
+              "at": 2,
+              "beats": 2,
+              "hand": "right"
+            },
+            {
+              "note": "F4",
+              "at": 4,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "F4",
+              "at": 5,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "E4",
+              "at": 6,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "D4",
+              "at": 7,
+              "beats": 1,
+              "hand": "right"
+            }
+          ],
+          "description": "The repaired join used the full count and both hands.",
+          "intent": "model",
+          "beats": 8,
+          "meter": 4
+        },
+        {
+          "label": "Context: bars 1–4",
+          "events": [
+            {
+              "note": "C3",
+              "at": 0,
+              "beats": 4,
+              "hand": "left"
+            },
+            {
+              "note": "C4",
+              "at": 0,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "D4",
+              "at": 1,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "E4",
+              "at": 2,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "G4",
+              "at": 3,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "C3",
+              "at": 4,
+              "beats": 4,
+              "hand": "left"
+            },
+            {
+              "note": "E4",
+              "at": 4,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "D4",
+              "at": 5,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "C4",
+              "at": 6,
+              "beats": 2,
+              "hand": "right"
+            },
+            {
+              "note": "F3",
+              "at": 8,
+              "beats": 4,
+              "hand": "left"
+            },
+            {
+              "note": "F4",
+              "at": 8,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "F4",
+              "at": 9,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "E4",
+              "at": 10,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "D4",
+              "at": 11,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "C3",
+              "at": 12,
+              "beats": 4,
+              "hand": "left"
+            },
+            {
+              "note": "C4",
+              "at": 12,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "E4",
+              "at": 13,
+              "beats": 1,
+              "hand": "right"
+            },
+            {
+              "note": "G4",
+              "at": 14,
+              "beats": 2,
+              "hand": "right"
+            }
+          ],
+          "description": "The join between bars 2 and 3 was approached from the opening.",
+          "intent": "model",
+          "beats": 16,
+          "meter": 4
+        }
+      ],
+      "stepTargets": [
+        {
+          "pattern": 0,
+          "label": "Complete bars 2–3"
+        },
+        {
+          "pattern": 0,
+          "label": "Complete bars 2–3"
+        },
+        {
+          "pattern": 1,
+          "label": "Context: bars 1–4"
+        }
+      ]
+    }
+  ],
+  "spanish": [
+    {
+      "cases": [
+        {
+          "label": "Say what I want",
+          "lines": [
+            [
+              "Friend",
+              "¿Qué quieres tomar?",
+              "What would you like to have?"
+            ],
+            [
+              "You",
+              "Quiero tomar un café.",
+              "I want to have a coffee."
+            ]
+          ],
+          "focus": 1,
+          "parts": [
+            [
+              "Quiero",
+              "I want: the first verb identifies the speaker as I."
+            ],
+            [
+              "tomar",
+              "The base-form action: to have or drink."
+            ],
+            [
+              "un café",
+              "The thing you want to have: a coffee."
+            ]
+          ],
+          "why": "Quiero carries the person. Tomar remains in its base form after it."
+        },
+        {
+          "label": "Invite one friend",
+          "lines": [
+            [
+              "You",
+              "¿Quieres tomar un café?",
+              "Do you want to have a coffee?"
+            ],
+            [
+              "Friend",
+              "Sí, me gustaría.",
+              "Yes, I’d like to."
+            ]
+          ],
+          "focus": 0,
+          "parts": [
+            [
+              "¿Quieres",
+              "You want: addressed to one friend, with the sentence framed as a question."
+            ],
+            [
+              "tomar",
+              "The same base-form action."
+            ],
+            [
+              "un café?",
+              "The invitation is to have a coffee."
+            ]
+          ],
+          "why": "Changing quiero to quieres changes the person. You can leave the pronoun tú unsaid."
+        },
+        {
+          "label": "Speak for us",
+          "lines": [
+            [
+              "Friend",
+              "¿Qué quieren tomar?",
+              "What would you like to have? (to the group)"
+            ],
+            [
+              "You",
+              "Queremos tomar un café.",
+              "We want to have a coffee."
+            ]
+          ],
+          "focus": 1,
+          "parts": [
+            [
+              "Queremos",
+              "We want: this reply speaks for a group including the speaker."
+            ],
+            [
+              "tomar",
+              "The base action still does not change."
+            ],
+            [
+              "un café",
+              "A coffee; each person can be expressing the same order."
+            ]
+          ],
+          "why": "Queremos supplies we. The worker’s plural question uses quieren; our reply uses queremos because we speak about ourselves."
+        }
+      ],
+      "stepTargets": [
+        {
+          "case": 0
+        },
+        {
+          "case": 1
+        },
+        {
+          "case": 2
+        }
+      ]
+    },
+    {
+      "cases": [
+        {
+          "label": "I cannot on Saturday",
+          "lines": [
+            [
+              "Friend",
+              "¿Puedes tomar un café el sábado?",
+              "Can you have a coffee on Saturday?"
+            ],
+            [
+              "You",
+              "El sábado no puedo, pero el domingo sí.",
+              "I can’t on Saturday, but I can on Sunday."
+            ]
+          ],
+          "focus": 1,
+          "parts": [
+            [
+              "El sábado",
+              "The day being discussed: on Saturday."
+            ],
+            [
+              "no puedo",
+              "I cannot. No comes before puedo."
+            ],
+            [
+              "pero",
+              "But: introduce the contrasting option."
+            ],
+            [
+              "el domingo sí",
+              "On Sunday, yes; puedo is understood from the earlier clause."
+            ]
+          ],
+          "why": "The refusal concerns Saturday. The second clause keeps the invitation possible on Sunday."
+        },
+        {
+          "label": "We cannot on Saturday",
+          "lines": [
+            [
+              "Friend",
+              "¿El sábado?",
+              "Saturday?"
+            ],
+            [
+              "You",
+              "El sábado no podemos, pero el domingo sí.",
+              "We can’t on Saturday, but we can on Sunday."
+            ]
+          ],
+          "focus": 1,
+          "parts": [
+            [
+              "El sábado",
+              "The Saturday option."
+            ],
+            [
+              "no podemos",
+              "We cannot: speak for the group, including yourself."
+            ],
+            [
+              "pero el domingo sí",
+              "But Sunday works for us; podemos is understood."
+            ]
+          ],
+          "why": "Only the person form changed from puedo to podemos. The day contrast is the same."
+        },
+        {
+          "label": "Ask the friend about Sunday",
+          "lines": [
+            [
+              "You",
+              "¿Puedes el domingo?",
+              "Can you on Sunday?"
+            ],
+            [
+              "Friend",
+              "Sí, el domingo puedo.",
+              "Yes, I can on Sunday."
+            ]
+          ],
+          "focus": 0,
+          "parts": [
+            [
+              "¿Puedes",
+              "Can you: one informal friend."
+            ],
+            [
+              "el domingo?",
+              "The proposed alternative day."
+            ]
+          ],
+          "why": "The activity can be omitted because both people already know they are arranging coffee."
+        }
+      ],
+      "stepTargets": [
+        {
+          "case": 0
+        },
+        {
+          "case": 1
+        },
+        {
+          "case": 2
+        }
+      ]
+    },
+    {
+      "cases": [
+        {
+          "label": "Missing place",
+          "lines": [
+            [
+              "You",
+              "¿Dónde nos vemos?",
+              "Where shall we meet?"
+            ],
+            [
+              "Friend",
+              "En el café junto al parque.",
+              "At the café next to the park."
+            ]
+          ],
+          "focus": 0,
+          "parts": [
+            [
+              "¿Dónde",
+              "Where: ask for a location."
+            ],
+            [
+              "nos vemos?",
+              "We meet / we’ll see each other, in this planning context."
+            ]
+          ],
+          "why": "The reply gives a place and a nearby landmark, answering dónde."
+        },
+        {
+          "label": "Missing day",
+          "lines": [
+            [
+              "You",
+              "¿Cuándo nos vemos?",
+              "When shall we meet?"
+            ],
+            [
+              "Friend",
+              "El domingo.",
+              "On Sunday."
+            ]
+          ],
+          "focus": 0,
+          "parts": [
+            [
+              "¿Cuándo",
+              "When: ask about the occasion or time."
+            ],
+            [
+              "nos vemos?",
+              "The same meeting phrase."
+            ]
+          ],
+          "why": "Sunday supplies the day in this model. A real answer could be more specific if that is the detail being discussed."
+        },
+        {
+          "label": "Missing clock time",
+          "lines": [
+            [
+              "You",
+              "¿A qué hora nos vemos?",
+              "At what time shall we meet?"
+            ],
+            [
+              "Friend",
+              "A las once.",
+              "At eleven."
+            ]
+          ],
+          "focus": 0,
+          "parts": [
+            [
+              "¿A qué hora",
+              "At what time: specifically ask for the clock time."
+            ],
+            [
+              "nos vemos?",
+              "The meeting being arranged."
+            ]
+          ],
+          "why": "A las once answers the clock-time question. It does not supply a location."
+        }
+      ],
+      "stepTargets": [
+        {
+          "case": 0
+        },
+        {
+          "case": 1
+        },
+        {
+          "case": 2
+        }
+      ]
+    },
+    {
+      "cases": [
+        {
+          "label": "My plan for tomorrow",
+          "lines": [
+            [
+              "Friend",
+              "¿Qué vas a hacer mañana?",
+              "What are you going to do tomorrow?"
+            ],
+            [
+              "You",
+              "Mañana voy a estudiar.",
+              "Tomorrow I’m going to study."
+            ]
+          ],
+          "focus": 1,
+          "parts": [
+            [
+              "Mañana",
+              "Tomorrow: when the plan will happen."
+            ],
+            [
+              "voy a",
+              "I am going to: the planning chunk for I."
+            ],
+            [
+              "estudiar",
+              "To study: the base-form activity."
+            ]
+          ],
+          "why": "The question’s hacer means to do. In the reply, voy changes for the speaker; estudiar remains in its base form."
+        },
+        {
+          "label": "Our Sunday plan",
+          "lines": [
+            [
+              "Friend",
+              "¿El domingo?",
+              "Sunday?"
+            ],
+            [
+              "You",
+              "El domingo vamos a tomar un café.",
+              "On Sunday we’re going to have a coffee."
+            ]
+          ],
+          "focus": 1,
+          "parts": [
+            [
+              "El domingo",
+              "On Sunday."
+            ],
+            [
+              "vamos a",
+              "We are going to: the planning chunk for our group."
+            ],
+            [
+              "tomar un café",
+              "The activity: to have a coffee."
+            ]
+          ],
+          "why": "Vamos a changes the people involved. The familiar activity chunk stays intact."
+        },
+        {
+          "label": "Ask whether a friend is coming",
+          "lines": [
+            [
+              "You",
+              "¿Vas a venir?",
+              "Are you going to come?"
+            ],
+            [
+              "Friend",
+              "Todavía no sé. Te confirmo mañana.",
+              "I don’t know yet. I’ll confirm tomorrow."
+            ]
+          ],
+          "focus": 0,
+          "parts": [
+            [
+              "¿Vas a",
+              "Are you going to: the planning question to one friend."
+            ],
+            [
+              "venir?",
+              "To come: the base-form activity."
+            ]
+          ],
+          "why": "The friend is not ready to commit, so the reply says that directly and offers a later confirmation."
+        },
+        {
+          "label": "Keep a plan open",
+          "lines": [
+            [
+              "Friend",
+              "¿Vas a venir?",
+              "Are you going to come?"
+            ],
+            [
+              "You",
+              "Todavía no sé. Te confirmo mañana.",
+              "I don’t know yet. I’ll confirm tomorrow."
+            ]
+          ],
+          "focus": 1,
+          "parts": [
+            [
+              "Todavía no sé.",
+              "I do not know yet: a complete uncertainty reply."
+            ],
+            [
+              "Te confirmo",
+              "I will confirm with you: a useful conversational chunk."
+            ],
+            [
+              "mañana.",
+              "Tomorrow: when you will confirm, not necessarily when the visit happens."
+            ]
+          ],
+          "why": "The reply gives a next step without pretending the plan is settled."
+        }
+      ],
+      "stepTargets": [
+        {
+          "case": 0
+        },
+        {
+          "case": 1
+        },
+        {
+          "case": 3
+        }
+      ]
+    }
+  ]
+}

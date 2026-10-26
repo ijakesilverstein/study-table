@@ -2,7 +2,9 @@
 
 An offline-capable learning app. Current downloads and online access are published separately at https://study-table-downloads.vercel.app. The earlier app project is not modified by this delivery workflow.
 
-V116 connects sixty worked steps directly to their demonstrations and adds an optional maths help desk: seven explanations and fourteen worked examples covering fractions, equations, square roots, quadratics, graph reading, signs/units, and rates/accumulation. All V115 course and project records remain unchanged.
+V117 adds three teacher workshops with twelve chapters: repairing a piano join with audible error/correct/reduced models, building Spanish replies with thirteen authored exchanges and phrase roles, and comparing four chess decisions through eight independently legal continuations. All earlier course and project records remain unchanged. Workshops have their own saved chapter and no quiz gates.
+
+V116 connected sixty worked steps directly to their demonstrations and adds an optional maths help desk: seven explanations and fourteen worked examples covering fractions, equations, square roots, quadratics, graph reading, signs/units, and rates/accumulation. All V115 course and project records remain unchanged.
 
 V115 added five complete, four-part teaching projects: an original two-hand piano piece; a full Spanish afternoon with adaptable plans and orders; Morphy’s complete Opera Game; a changing-rate tank with overflow; and a hill–collision–spring energy account. Project parts save their own reading place and appear on the course maps. There are no project quiz gates. See [the project notes](docs/COURSE_PROJECTS_V115.md).
 
@@ -17,7 +19,7 @@ python3 scripts/build.py
 python3 -m http.server 8769 --directory public
 ```
 
-Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v116.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
+Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v117.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
 
 - `source/teacher-prose-v109.json`: rewritten explanations in existing lessons.
 - `source/draft-foundation-lessons.json` and `source/lessons-v109.json`: the 12 new lessons. The historical `draft-` filename is retained for build compatibility; these records are now published.
@@ -36,6 +38,9 @@ Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v116.htm
 - `source/claude-additions-v114.json`: all imported takeaways/reviews and 34 new misconception blocks, extracted without modification.
 - `source/claude-corrections-v114.json`: targeted refinements applied separately from the original additions.
 - `source/claude-figures-v114.js` and `source/claude-additions-v114.css`: all 16 reviewed imported figures and the optional practice UI.
+- `source/teacher-workshops-v117.json`: twelve authored teaching chapters and prerequisite notes for piano, Spanish and chess.
+- `source/workshop-demos-v117.json`: ten piano models, thirteen Spanish exchanges and eight legal chess lines; regenerate with qa/generate-workshop-demos.py.
+- `source/teacher-workshops-v117.js` and `.css`: workshop navigation, sentence-part explanations, beat grids, model playback and saved chapters.
 - `source/math-desk-v116.json`: seven authored maths explanations, with two complete worked examples each.
 - `source/project-walkthrough-v116.json`: sixty exact demonstration targets tied to existing worked steps.
 - `source/clarity-v116.js` and `.css`: inline demonstration placement, contextual maths help, focus return and responsive modal.

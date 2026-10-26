@@ -6,7 +6,7 @@ assert len(math)==7 and all(len(t['examples'])==2 for t in math.values())
 encoded=re.search(r'<script id="full-bundle" type="text/plain">(.*?)</script>',(r/'public/study-table-v115.html').read_text(),re.S)[1];old=json.loads(gzip.decompress(base64.b64decode(encoded)))
 for subject,course in courses.items():
  previous=json.loads(re.search(r'<script id="full-course-data" type="application/json">(.*?)</script>',old[course['path']]['t'],re.S)[1])
- assert previous==course,(subject,'prior teaching changed')
+ assert previous=={k:v for k,v in course.items() if k!='workshop'},(subject,'prior teaching changed')
  assert len(links[subject])==4
  for part_index,part in enumerate(links[subject]):
   assert len(part)==3

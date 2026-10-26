@@ -1,0 +1,401 @@
+{
+  "piano": {
+    "id": "workshop",
+    "title": "How to practise an awkward passage",
+    "intro": "We’ll take the join between bars 2 and 3 of the eight-bar piece and make it manageable. I’ll let you hear the mistake, reduce the hand movements, and put the notes back. You can follow everything without entering a score or answering a quiz.",
+    "parts": [
+      {
+        "title": "Hear exactly where the count slips",
+        "goal": "Keep the long C through beat 4 before entering the next bar.",
+        "opening": [
+          "Here is a very ordinary problem: you can play each bar alone, but the F at the start of bar 3 arrives too soon. Playing the whole piece again is a lot of work for one small join. First I want to hear what is happening at that join.",
+          "The right hand in bar 2 plays E, D, then C. That C starts on beat 3 and lasts two beats. Your next finger may already be ready over F, but readiness is not the signal to play it. The count tells you when to move."
+        ],
+        "steps": [
+          {
+            "title": "Listen to the early entrance",
+            "line": "Rushed version: E on 1, D on 2, C on 3, F on 4.",
+            "why": "The model deliberately plays F one beat early, while the bass keeps its four-beat bar. Hear how the hands no longer agree about where the next bar starts. The final beat is also left empty because the melody has run ahead."
+          },
+          {
+            "title": "Hear the same notes with their proper space",
+            "line": "Counted version: E (1), D (2), C (3–4), then F on the next 1.",
+            "why": "Nothing needs to happen in the right hand on beat 4. Keep the thumb holding C and say “four.” The first F then arrives with the new left-hand F bass. The model gives four preparation clicks before either version."
+          },
+          {
+            "title": "Practise the missing beat rather than the whole tune",
+            "line": "Say: “E, D, C, hold | F.”",
+            "why": "At your piano, play only this much. Let the count stay even while the thumb holds. If you want to prepare finger 4 over F during beat 4, move it quietly into position without pressing the key. Preparing and sounding a note are separate actions."
+          }
+        ],
+        "ending": "Compare the two recordings once more, then use the counted version as your model. The aim is to hear the difference clearly enough that you can notice it in your own playing; this app does not listen to or grade your performance.",
+        "links": [
+          "piano-2",
+          "rests-and-halves",
+          "read-melody"
+        ]
+      },
+      {
+        "title": "Learn the join with each hand",
+        "goal": "Know the two hand movements before combining them.",
+        "opening": [
+          "Now I’ll take coordination out of the problem for a moment. The right hand changes from a held C to F. The left hand changes its bass from C3 to F3. The hands share the same bar line but use different fingers.",
+          "Use the right thumb on C4 and finger 4 on F4. In the left hand, use finger 5 on C3 and finger 2 on F3 if that placement is comfortable. Keep the shoulders and wrists easy; a difficult join is not improved by gripping the keys harder."
+        ],
+        "steps": [
+          {
+            "title": "Let the right hand know its route",
+            "line": "Right: E4–D4–C4 (hold) | F4–F4–E4–D4.\nFingers: 3–2–1 (hold) | 4–4–3–2.",
+            "why": "The first F in bar 3 and the next F are separate quarter notes. Lift and play the same key again for the second one. You do not need to slide the hand into a new position; C through G already lies under the five fingers."
+          },
+          {
+            "title": "Give the left hand a simpler job",
+            "line": "Left: C3 for 1–2–3–4 | F3 for 1–2–3–4.",
+            "why": "There are only two bass attacks in the whole passage. Hear the bass by itself and count aloud. Your left hand can be very quiet while it learns where F3 is. Open the optional keyboard if you want to see the sounding keys, including the held bass, or hear a single note."
+          },
+          {
+            "title": "Prepare the shared starting pair",
+            "line": "Next bar’s first notes: left F3 + right F4.",
+            "why": "Find that pair without playing the passage first. Then go back to left C3 plus right E4, the first pair of bar 2. Moving between these two starting pairs slowly teaches where each hand is going, before you add the inside notes."
+          }
+        ],
+        "ending": "When each hand can find its own notes without a search, combine them. If one hand still gets lost alone, give it another short turn; playing both together would add a second problem before the first is understood.",
+        "links": [
+          "comfortable-hands",
+          "piano-5",
+          "read-melody"
+        ]
+      },
+      {
+        "title": "Reduce both hands to a skeleton",
+        "goal": "Coordinate the bar-line changes with fewer right-hand notes.",
+        "opening": [
+          "I’ll make the passage easier while keeping the coordination we actually need. The left hand still holds each bass for four beats. The right hand plays only the first note of each bar, then rests.",
+          "This is a temporary practice version. It is not the printed melody. We remove notes so the hands can learn the shared arrival at the next bar line; afterwards we will put the melody back."
+        ],
+        "steps": [
+          {
+            "title": "Start the two notes together",
+            "line": "Bar 2, beat 1: left C3 and right E4.",
+            "why": "Release the right E after one beat, but keep the left C held. Count the remaining beats out loud. If the left hand releases whenever the right releases, practise that one difference before continuing."
+          },
+          {
+            "title": "Keep the empty beats",
+            "line": "Beats 2, 3 and 4: right hand silent; left C still sounding.",
+            "why": "A rest still takes time. The practice recording leaves this space on purpose. Resist filling it with extra attacks or hurrying to the next bar. The beat grid under the player shows both sound and silence."
+          },
+          {
+            "title": "Arrive at the next pair on the next 1",
+            "line": "Bar 3, beat 1: left F3 and right F4.",
+            "why": "Move calmly to the two F notes at the bar line. Play that right-hand F for one beat, then let it rest while the bass continues. You have now coordinated the difficult change with only two attacks per hand."
+          }
+        ],
+        "ending": "Once that reduced version feels predictable, add E–D–C in the first bar while keeping only the first F in the next. Finally restore the second F, E and D. Add a small amount of work at a time.",
+        "links": [
+          "piano-5",
+          "piano-6",
+          "rests-and-halves"
+        ]
+      },
+      {
+        "title": "Restore the melody and choose a useful tempo",
+        "goal": "Use a small, repeatable practice routine instead of restarting the whole piece.",
+        "opening": [
+          "I’ll return the complete two-bar passage now. The notes have not become easier by magic; you have separated the timing, the two hand movements and the shared arrival. Those are the parts that were competing for your attention.",
+          "Start at 40 or 50 beats per minute if needed. A practice tempo is useful when you can keep the count and notice what each hand does. Choosing a fast number before the join is understood just gives you less time to hear it."
+        ],
+        "steps": [
+          {
+            "title": "Play the complete two bars",
+            "line": "C3 + E4 begins bar 2. F3 + F4 begins bar 3.",
+            "why": "Let the bass stay underneath the moving melody. If the first F is early again, return briefly to the held-C example. If the pitch is wrong but the beat is steady, practise the hand movement. Different mistakes need different repairs."
+          },
+          {
+            "title": "Check a few calm repetitions",
+            "line": "Play once, pause, name what happened, then repeat.",
+            "why": "If you can make the join comfortably several times, try a small tempo increase. If that breaks the count, return to the previous tempo. These are practice choices, not an app score; the model cannot hear whether your fingers matched it."
+          },
+          {
+            "title": "Put a little context around the join",
+            "line": "Hear bars 1–4, then return to the two-bar passage if needed.",
+            "why": "Context checks whether the repaired join survives when you approach it from the opening. Finish with a comfortable version, not with a rushed attempt you have to fight through. Tomorrow, try the join once before listening to the model and see what you remember."
+          }
+        ],
+        "ending": "You can use the same method elsewhere: identify the exact failure, reduce the passage while keeping the hard coordination, restore notes in small groups, then test it in context. A short passage you understand is a useful result.",
+        "links": [
+          "phrasing",
+          "read-melody",
+          "piano-6"
+        ]
+      }
+    ],
+    "summary": "Fix an early note, separate the hands, build a practice version and bring the phrase back together.",
+    "needs": "Useful after you can find middle C and count four steady beats. The course project contains the complete eight-bar score; you can open it from the footer."
+  },
+  "spanish": {
+    "id": "workshop",
+    "title": "Build a reply you can actually use",
+    "intro": "The models below show how a useful sentence is put together. Choose a situation, hear its short exchange, then click a phrase to see what job it does. We’ll change the speaker, a negative, a question word and a future plan without asking you to guess unfamiliar grammar.",
+    "parts": [
+      {
+        "title": "Change who wants something",
+        "goal": "Connect quiero, quieres and queremos to the person speaking.",
+        "opening": [
+          "Quiero means “I want.” Quieres addresses one person informally: “you want.” Queremos means “we want.” The ending already carries that information, so a Spanish speaker often leaves yo, tú or nosotros unsaid.",
+          "I’ll keep the activity the same: tomar un café, “to have a coffee.” That lets you hear the verb change without learning a new activity at the same time. The three models are a reply about me, a question to a friend and a plan for us."
+        ],
+        "steps": [
+          {
+            "title": "Start with the useful activity",
+            "line": "tomar un café = to have a coffee",
+            "why": "Tomar is in its base form, called an infinitive. After quiero, quieres or queremos, keep tomar in that form. You do not need a second person ending on it."
+          },
+          {
+            "title": "Attach the person to the first verb",
+            "line": "Quiero tomar un café.\n¿Quieres tomar un café?\nQueremos tomar un café.",
+            "why": "Only the first verb changes here. In the friend model, rising question intonation and the question marks make the invitation clear. In ordinary conversation you can ask the friend without adding tú."
+          },
+          {
+            "title": "Hear the sentence as two jobs",
+            "line": "Quiero | tomar un café.\nI want | to have a coffee.",
+            "why": "The first chunk says whose wish it is. The second says what the wish concerns. Click the chunks below for their roles, then hear the complete reply. Your spoken sentence should flow across the chunks once they feel familiar."
+          }
+        ],
+        "ending": "You now have a small pattern you can reuse with a known activity, such as comer (“to eat”) or estudiar (“to study”). Keep the base activity verb intact after the first verb.",
+        "links": [
+          "spanish-1",
+          "habits",
+          "questions"
+        ]
+      },
+      {
+        "title": "Say no to the day, not to the whole plan",
+        "goal": "Place no before the relevant verb and keep the alternative clear.",
+        "opening": [
+          "Your friend suggests Saturday, but you are free on Sunday. I’ll say “El sábado no puedo, pero el domingo sí.” That means “I can’t on Saturday, but I can on Sunday.” The last sí saves us from repeating puedo.",
+          "Before the models: puedo = I can; puedes = you can, informally; podemos = we can; pero = but; el sábado = on Saturday; el domingo = on Sunday. The affirmative sí has a written accent. We are not using si (“if”) here."
+        ],
+        "steps": [
+          {
+            "title": "Place the negative with the verb",
+            "line": "No puedo el sábado.\nI can’t on Saturday.",
+            "why": "No normally comes directly before the conjugated verb in this pattern. Starting with El sábado is also natural when that is the detail being discussed: El sábado no puedo."
+          },
+          {
+            "title": "Carry the person ending into the new version",
+            "line": "No puedo… / No podemos…",
+            "why": "If you speak for yourself, use puedo. If you are speaking for your group, use podemos. The rest of the plan can stay the same. Listen to both models and notice how little of the sentence needs rebuilding."
+          },
+          {
+            "title": "Offer or confirm the alternative",
+            "line": "…pero el domingo sí.\n¿Puedes el domingo?",
+            "why": "In this conversation the activity is already shared, so a short question about Sunday is enough. If it is not clear what you mean, use ¿Puedes tomar un café el domingo? to say the activity too. Shortening a sentence works when the missing information is understood."
+          }
+        ],
+        "ending": "A useful exchange can be made of short turns. You do not have to compress the invitation, refusal, reason, new day and time into one long sentence.",
+        "links": [
+          "spanish-6",
+          "questions",
+          "spanish-5"
+        ]
+      },
+      {
+        "title": "Ask for the detail you are missing",
+        "goal": "Choose a location, day or time question from the information you need.",
+        "opening": [
+          "We have agreed to meet, but one detail is missing. I’ll ask about that detail rather than say a vague “What?” and hope the other person fills in the right part.",
+          "Dónde asks where. Cuándo asks when. A qué hora asks at what time. Nos vemos is the meeting phrase we already used in the afternoon project. The models add the familiar answers en el café (at the café), el domingo (on Sunday) and a las once (at eleven)."
+        ],
+        "steps": [
+          {
+            "title": "Ask where when you need a place",
+            "line": "¿Dónde nos vemos?\nEn el café junto al parque.",
+            "why": "The question needs a location. A day or an hour would not answer that information gap. Junto al parque means next to the park; keep the phrase as one useful location chunk."
+          },
+          {
+            "title": "Ask when for the occasion or day",
+            "line": "¿Cuándo nos vemos?\nEl domingo.",
+            "why": "Cuándo is broad enough for a day or another suitable time answer. In this model we are choosing a day. The real conversation can narrow the question with a follow-up if the answer is too broad."
+          },
+          {
+            "title": "Ask the narrower clock question",
+            "line": "¿A qué hora nos vemos?\nA las once.",
+            "why": "The phrase a qué hora asks specifically for the clock time. The answer uses a las with eleven. Click a question chunk in the models and connect it to the kind of answer it invites."
+          }
+        ],
+        "ending": "If you hear a reply but miss the key detail, repeat it as a short confirmation question: ¿El domingo? or ¿A las once? That repairs one part without restarting the whole conversation.",
+        "links": [
+          "question-words",
+          "questions",
+          "cafe-project"
+        ]
+      },
+      {
+        "title": "Make a future plan from a familiar pattern",
+        "goal": "Use voy a, vas a or vamos a with a base-form action verb.",
+        "opening": [
+          "Mañana voy a estudiar means “Tomorrow I’m going to study.” The planning chunk is voy a, and estudiar names the activity. New words for this part are estudiar (to study), trabajar (to work) and venir (to come).",
+          "I’ll show an individual plan, a group plan and a question to a friend. Spanish has other ways to discuss the future, but you can already do useful work with this one pattern."
+        ],
+        "steps": [
+          {
+            "title": "Keep the action in its base form",
+            "line": "Voy a | estudiar | mañana.\nI’m going to | study | tomorrow.",
+            "why": "Voy carries the first-person information. Estudiar remains the base form after a. Avoid changing it to estudio in this pattern; the first verb already handles the person."
+          },
+          {
+            "title": "Change the planning chunk when the people change",
+            "line": "Vamos a tomar un café el domingo.\n¿Vas a venir?",
+            "why": "Vamos a is the version for we. Vas a is the version for one informal you. The activity after a stays in its base form: tomar or venir. In the group model, el domingo supplies the day."
+          },
+          {
+            "title": "Answer uncertainty without inventing a promise",
+            "line": "Todavía no sé. Te confirmo mañana.\nI don’t know yet. I’ll confirm tomorrow.",
+            "why": "Todavía no sé is a complete useful reply when the plan is unsettled. Te confirmo mañana uses the present form in a natural future arrangement: I’ll confirm with you tomorrow. Learn it as a conversational chunk before trying to generalize every possible use."
+          }
+        ],
+        "ending": "To adapt a model, change one thing you already know: the person, the day or the activity. Read the whole resulting sentence aloud and check that it still expresses the plan you mean.",
+        "links": [
+          "spanish-4",
+          "spanish-6",
+          "habits"
+        ]
+      }
+    ],
+    "summary": "Change the speaker, make a negative, ask for a missing detail and describe a future plan.",
+    "needs": "Useful after the first conversation units. Every model is translated, and new verb forms are explained before you use them."
+  },
+  "chess": {
+    "id": "workshop",
+    "title": "Watch a teacher compare the moves",
+    "intro": "Four composed positions, with the moves and replies shown. I’ll compare a forcing move with a quiet one, count a recapture, inspect an absolute pin and distinguish mate from stalemate. The point is to follow the reason for a choice, not memorize an answer letter.",
+    "parts": [
+      {
+        "title": "Look for a forcing fork before a quiet move",
+        "goal": "See why a check can give a second attack time to work.",
+        "opening": [
+          "White has a knight on d5. Black’s king is on e8 and a rook is on a8. Before choosing an ordinary knight retreat, I’ll inspect knight moves that check the king. One of them also attacks the rook.",
+          "We will compare two legal continuations. They illustrate this tactical opportunity; we are not doing a complete engine analysis of every possible move in the position."
+        ],
+        "steps": [
+          {
+            "title": "Name both targets before moving",
+            "line": "Nd5–c7 attacks the king on e8 and the rook on a8.",
+            "why": "A knight on c7 attacks both squares in its L-shape. Nc7 is therefore a fork with check. The check matters because Black must make its king safe before dealing with the attacked rook."
+          },
+          {
+            "title": "Follow a complete reply",
+            "line": "Nc7+ Kd7 Nxa8",
+            "why": "After the shown king move, the knight captures the rook on a8. Black could choose another legal king response, but a rook move alone cannot answer the check. On the board, inspect the knight’s two target squares before advancing the line."
+          },
+          {
+            "title": "Compare with a move that gives Black time",
+            "line": "Ne3 Rc8",
+            "why": "Ne3 is legal, but it does not create the same immediate fork. In our alternative line the rook can move from a8 to c8 while the king remains safe. That comparison is why I inspect the forcing move first, rather than treating every legal development move as equally urgent."
+          }
+        ],
+        "ending": "Keep the concrete reason: Nc7 creates two attacks and one is check. A fork is useful because of the pieces and replies in the position; “always check” would be a poor replacement for that analysis.",
+        "links": [
+          "chess-5",
+          "chess-1",
+          "read-moves"
+        ]
+      },
+      {
+        "title": "Count what comes off after the recapture",
+        "goal": "Judge the whole short exchange, not only the first captured piece.",
+        "opening": [
+          "White’s rook on d1 can capture a knight on d5. The route is clear. But the black pawn on e6 protects d5, so I’ll include ...exd5 before deciding whether the knight is a gift.",
+          "For this comparison use the familiar rough values: rook 5, knight 3, pawn 1. They are a material guide, not a complete measure of a chess position. Here they expose a simple mistake in the capture count."
+        ],
+        "steps": [
+          {
+            "title": "Make the first capture visible",
+            "line": "Rxd5 removes a black knight: about +3 to White.",
+            "why": "At this point White’s rook occupies d5. Do not stop the calculation just because an enemy piece disappeared."
+          },
+          {
+            "title": "Give the opponent their reply",
+            "line": "…exd5 removes White’s rook: about −5 to White.",
+            "why": "The pawn moves diagonally from e6 to d5 and takes the rook. Combining the two captures gives +3 − 5 = −2. That is a loss of roughly two points for White in this exchange."
+          },
+          {
+            "title": "Notice that declining a capture is allowed",
+            "line": "Rd3 keeps the rook instead of making this exchange.",
+            "why": "The alternative board line simply moves the rook without taking the defended knight. It is not a claim that Rd3 is the best move in the position. It shows that you need not pay a rook for a knight when no further gain has been demonstrated."
+          }
+        ],
+        "ending": "A sacrifice can be good if something else justifies it. In this diagram the demonstrated recapture is the important fact: the knight is defended, and the first capture alone gives an incomplete account.",
+        "links": [
+          "count-exchanges",
+          "chess-1",
+          "chess-4"
+        ]
+      },
+      {
+        "title": "A pinned rook can still move on its line",
+        "goal": "Distinguish an absolute pin from a blanket ban on movement.",
+        "opening": [
+          "White’s king is on e1, its rook on e2, and Black’s rook on e8. The white rook stands between the attacker and its king. It is absolutely pinned along the e-file.",
+          "Moving sideways off that file would expose the king to the black rook and would be illegal in this position. But that does not mean every rook move is forbidden. I’ll show two legal moves that keep the king safe."
+        ],
+        "steps": [
+          {
+            "title": "Trace the line before naming the rule",
+            "line": "Black Re8 → White Re2 → White Ke1.",
+            "why": "The white rook is the blocker. There are no other pieces between the rook on e8 and the king on e1. That is why a move off the line would uncover check."
+          },
+          {
+            "title": "Capture the piece creating the pin",
+            "line": "Rxe8+ removes Black’s rook.",
+            "why": "The path e3–e4–e5–e6–e7 is clear, so the white rook can capture on e8. Once that attacker is gone, it no longer threatens the king down the file. The rook also gives check along the eighth rank to the black king on g8."
+          },
+          {
+            "title": "Compare a move that stays between them",
+            "line": "Re3 is also legal.",
+            "why": "The rook remains on the e-file between attacker and king, so it still blocks the attack. It remains pinned there and Black has further choices, including capturing it. Legal movement is not the same as a promise that a move is strategically good."
+          }
+        ],
+        "ending": "Always check the actual king-safety result. A knight pinned along a file normally cannot stay on that file with a knight move, while a rook can sometimes move along it or remove the attacker.",
+        "links": [
+          "pins",
+          "chess-4",
+          "chess-1"
+        ]
+      },
+      {
+        "title": "Make sure the finishing move actually checks",
+        "goal": "See a one-square difference between checkmate and stalemate.",
+        "opening": [
+          "Black’s king is on a8. White has a king on c6 and queen on c7. Both Qb7 and Qb6 are legal queen moves, and both take away the king’s escape squares. Only one gives check.",
+          "I’ll show both results. When you are far ahead in a simple ending, counting every escape square is not enough; you must also ask whether the king is currently attacked."
+        ],
+        "steps": [
+          {
+            "title": "Play the checking finish",
+            "line": "Qb7# attacks a8 diagonally.",
+            "why": "The queen on b7 checks the king. It covers a7 and b8, and White’s king on c6 protects b7, so Black’s king cannot capture the queen. There is no square between queen and king where a blocker could be inserted."
+          },
+          {
+            "title": "Compare the tempting non-check",
+            "line": "Qb6 does not attack the king on a8.",
+            "why": "The queen covers a7, b7 and b8; White’s king also covers b7. Black has no legal move, but its king is not in check. With no other black pieces to move, that is stalemate, a draw."
+          },
+          {
+            "title": "Use the definition as the final check",
+            "line": "No legal moves + in check = checkmate.\nNo legal moves + not in check = stalemate.",
+            "why": "Reset and replay each single move. Look first at the attack on a8, then at the possible destinations a7, b7 and b8. The board’s written commentary names the result, so you can inspect it rather than guess."
+          }
+        ],
+        "ending": "In your own ending, pause before moving the queen close to the enemy king. Identify the check and the legal replies. If your move removes every legal reply while giving no check, it may turn a win into a draw.",
+        "links": [
+          "queen-net",
+          "chess-3",
+          "chess-2"
+        ]
+      }
+    ],
+    "summary": "Compare a fork, a defended capture, a pinned rook and a mating finish on legal boards.",
+    "needs": "Use after you know piece movement, captures and check. Every move and reply in these composed examples is supplied."
+  }
+}

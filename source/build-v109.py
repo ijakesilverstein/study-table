@@ -104,7 +104,7 @@ for subject,course in courses.items():
         assert practice_path not in bundle
         bundle[practice_path]=dict(bundle[path])
     bundle[path]={'t':render_course(course,course_demos)}
-    full_meta[subject]={'subject':subject,'title':course['title'],'path':path,'projectId':course['project']['id'],'units':len(course['units']),'unitIds':[u['id'] for u in course['units']],'aliases':course['aliases'],'practicePath':practice_path}
+    full_meta[subject]={'subject':subject,'title':course['title'],'path':path,'workshopId':course.get('workshop',{}).get('id'),'projectId':course['project']['id'],'units':len(course['units']),'unitIds':[u['id'] for u in course['units']],'aliases':course['aliases'],'practicePath':practice_path}
 for entry in catalogue:
     for route in entry['routes']:
         if 'path' in route:assert route['path'].split('?')[0] in bundle,route['path']
@@ -113,16 +113,16 @@ html=html[:archive.start(2)]+encoded+html[archive.end(2):]
 html=once(html,"function apply(){\n  const portal=document.getElementById('v35Portal');if(!portal)return;", "function apply(){\n  if(window.studyTableTheme){window.studyTableTheme.sync();return}\n  const portal=document.getElementById('v35Portal');if(!portal)return;")
 html=once(html,"btn.onclick=()=>{night=!night;try{localStorage.setItem(KEY,night?'1':'0')}catch{};apply()};", "btn.onclick=()=>{if(window.studyTableTheme){window.studyTableTheme.set(window.studyTableTheme.get()==='dark'?'light':'dark');return}night=!night;try{localStorage.setItem(KEY,night?'1':'0')}catch{};apply()};")
 html=once(html,"function setTheme(v){\n document.documentElement.dataset.studyTheme=v;", "function setTheme(v){\n if(window.studyTableTheme){window.studyTableTheme.set(v);return}\n document.documentElement.dataset.studyTheme=v;")
-html=html.replace('Study Table V108 — Taught Lessons','Study Table V116 — Full Courses')
-html=html.replace('study-table-v108.html','study-table-v116.html').replace('Study_Table_V108.html','Study_Table_V116.html')
+html=html.replace('Study Table V108 — Taught Lessons','Study Table V117 — Full Courses')
+html=html.replace('study-table-v108.html','study-table-v117.html').replace('Study_Table_V108.html','Study_Table_V117.html')
 # Append after the historical layers so this palette has a single clear point of ownership.
 end=html.rindex('</body>')
 parent=(root/'full-course-parent.js').read_text().replace('__FULL_COURSES__',json.dumps(full_meta,separators=(',',':')))
 html=html[:end]+'\n<style id="v109-theme">'+(root/'theme-v109.css').read_text()+'\n'+(root/'full-course-parent.css').read_text()+'</style><script>'+parent+'</script>\n'+html[end:]
-(root/'Study_Table_V116.html').write_text(html)
+(root/'Study_Table_V117.html').write_text(html)
 (root/'teacher-v109.js').write_text(teacher)
 (root/'demos-v109.json').write_text(json.dumps(demos,ensure_ascii=False,indent=2))
 (root/'lessons-built-v109.json').write_text(json.dumps(lessons,ensure_ascii=False,indent=2))
 (root/'full-courses-built.json').write_text(json.dumps(courses,ensure_ascii=False,indent=2))
 (root/'course-map-built.json').write_text(json.dumps(catalogue,ensure_ascii=False,indent=2))
-print('V116 built:',len(html.encode()),'bytes; 38 short lessons plus 65 full-course units in five courses; original practice studios preserved.')
+print('V117 built:',len(html.encode()),'bytes; 38 short lessons plus 65 full-course units in five courses; original practice studios preserved.')

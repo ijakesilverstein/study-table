@@ -62,6 +62,7 @@ def build_courses(teacher):
     demos=course_demos()
     stages=json.loads((ROOT/'course-stages.json').read_text())
     projects=json.loads((ROOT/'course-projects-v115.json').read_text())
+    workshops=json.loads((ROOT/'teacher-workshops-v117.json').read_text())
     courses={}
     for subject,order in ORDERS.items():
         title,intro=META[subject];course={'subject':subject,'title':title,'intro':intro,'path':COURSE_PATHS[subject],'units':[],'stages':stages[subject],'aliases':ALIASES.get(subject,{}),'practice':subject if subject in ['calculus','physics'] else './practice-studio.html'}
@@ -79,6 +80,10 @@ def build_courses(teacher):
         assert len(course['project']['parts'])==4
         for part in course['project']['parts']:
             assert all(id in order for id in part['links']),(subject,part['links'])
+        if subject in workshops:
+            course['workshop']=workshops[subject]
+            assert len(course['workshop']['parts'])==4
+            assert all(id in order for p in course['workshop']['parts'] for id in p['links'])
         courses[subject]=course
     assert sum(len(c['units']) for c in courses.values())==65
     return courses,demos
@@ -219,7 +224,8 @@ def render_course(course,demos):
     project_data=json.loads((ROOT/'project-demos-v115.json').read_text())
     project_source=(ROOT/'course-projects-v115.js').read_text().replace('__PROJECT_DEMOS__',json.dumps(project_data.get(course['subject'],{}),ensure_ascii=False,separators=(',',':')))
     clarity_source=(ROOT/'clarity-v116.js').read_text().replace('__MATH_DESK__',(ROOT/'math-desk-v116.json').read_text()).replace('__WALKTHROUGH_MAP__',(ROOT/'project-walkthrough-v116.json').read_text())
+    workshop_source=(ROOT/'teacher-workshops-v117.js').read_text().replace('__WORKSHOP_DEMOS__',json.dumps(json.loads((ROOT/'workshop-demos-v117.json').read_text()).get(course['subject'],[]),ensure_ascii=False,separators=(',',':')))
     math_button='<button id="courseMath" type="button">Maths help</button>' if course['subject'] in ['calculus','physics'] else ''
     helpers="const $=id=>document.getElementById(id);const escape=s=>String(s??'').replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));"
     import html
-    return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+html.escape(course['title'])+' — Full course</title><style>'+(ROOT/'theme-v109.css').read_text()+'\n'+(ROOT/'course-reader.css').read_text()+'\n'+(ROOT/'claude-additions-v114.css').read_text()+'\n'+(ROOT/'course-projects-v115.css').read_text()+'\n'+(ROOT/'clarity-v116.css').read_text()+'</style><script>'+(ROOT/'theme-state.js').read_text()+'</script></head><body><header class="course-top"><strong id="courseSubject"></strong><div><button id="courseAll" type="button">All curriculums</button>'+math_button+'<button id="courseTheme" type="button" data-study-theme-toggle>Dark mode</button></div></header><div class="reader-layout"><aside class="contents"><details id="courseContents" open><summary>Course contents</summary><ol id="courseContentsList"></ol></details></aside><main id="courseArticle" class="reader-article" tabindex="-1"></main></div><script id="full-course-data" type="application/json">'+data+'</script><script>(()=>{\'use strict\';'+helpers+'\n'+demo_source+'\n'+(ROOT/'course-figures.js').read_text()+'\n'+(ROOT/'teaching-panels.js').read_text().replace('__PANEL_DATA__',(ROOT/'teaching-panels-v113.json').read_text())+'\n'+(ROOT/'claude-figures-v114.js').read_text()+'\n'+project_source+'\n'+clarity_source+'\n'+(ROOT/'course-reader.js').read_text()+'\n})();</script></body></html>'
+    return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+html.escape(course['title'])+' — Full course</title><style>'+(ROOT/'theme-v109.css').read_text()+'\n'+(ROOT/'course-reader.css').read_text()+'\n'+(ROOT/'claude-additions-v114.css').read_text()+'\n'+(ROOT/'course-projects-v115.css').read_text()+'\n'+(ROOT/'clarity-v116.css').read_text()+'\n'+(ROOT/'teacher-workshops-v117.css').read_text()+'</style><script>'+(ROOT/'theme-state.js').read_text()+'</script></head><body><header class="course-top"><strong id="courseSubject"></strong><div><button id="courseAll" type="button">All curriculums</button>'+math_button+'<button id="courseTheme" type="button" data-study-theme-toggle>Dark mode</button></div></header><div class="reader-layout"><aside class="contents"><details id="courseContents" open><summary>Course contents</summary><ol id="courseContentsList"></ol></details></aside><main id="courseArticle" class="reader-article" tabindex="-1"></main></div><script id="full-course-data" type="application/json">'+data+'</script><script>(()=>{\'use strict\';'+helpers+'\n'+demo_source+'\n'+(ROOT/'course-figures.js').read_text()+'\n'+(ROOT/'teaching-panels.js').read_text().replace('__PANEL_DATA__',(ROOT/'teaching-panels-v113.json').read_text())+'\n'+(ROOT/'claude-figures-v114.js').read_text()+'\n'+project_source+'\n'+clarity_source+'\n'+workshop_source+'\n'+(ROOT/'course-reader.js').read_text()+'\n})();</script></body></html>'
