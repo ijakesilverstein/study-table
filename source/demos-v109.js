@@ -25,7 +25,7 @@ function v109Piano(host,d){
     const peak=Number.isFinite(event.level)?Math.max(.015,Math.min(.12,event.level)):.055;osc.frequency.value=440*2**((midi-69)/12);gain.gain.setValueAtTime(.0001,start);gain.gain.exponentialRampToValueAtTime(peak,start+.015);gain.gain.exponentialRampToValueAtTime(.0001,start+duration*.94);osc.connect(gain);gain.connect(v109Audio.destination);v109Oscillators.add(osc);osc.onended=()=>{v109Oscillators.delete(osc);osc.disconnect();gain.disconnect()};osc.start(start);osc.stop(start+duration*.97);
     v109Timer(()=>{if(generation===v109Generation)mark(event.note,1)},40+event.at*beat*1000);v109Timer(()=>{if(generation===v109Generation)mark(event.note,-1)},40+(event.at+event.beats)*beat*1000);
    }
-   for(let i=0;i<pattern.beats;i++)v109Timer(()=>{if(generation===v109Generation)status.textContent=pattern.label+(pattern.meter?' · count '+(i%pattern.meter+1)+' · group '+(Math.floor(i/pattern.meter)+1):' · beat '+(i+1)+' of '+pattern.beats)},40+i*beat*1000);
+   const divisions=pattern.subdivide===2?2:1;for(let i=0;i<pattern.beats*divisions;i++)v109Timer(()=>{if(generation===v109Generation)status.textContent=pattern.label+(divisions===2?' · count '+(Math.floor(i/2)+1)+(i%2?' and':''):pattern.meter?' · count '+(i%pattern.meter+1)+' · group '+(Math.floor(i/pattern.meter)+1):' · beat '+(i+1)+' of '+pattern.beats)},40+i*beat/divisions*1000);
    v109Timer(()=>{if(generation===v109Generation){v109StopMedia();status.textContent='Finished: '+pattern.description}},60+pattern.beats*beat*1000);
   }catch{v109StopMedia();status.textContent='The sound could not play. The written notes and count are below.'}
  };

@@ -2,9 +2,9 @@
 
 User priority: improve the actual longer curricula, with substantially more teaching, natural explanations and worked demonstrations. Keep the earlier piano/Spanish/chess priorities; also improve calculus and physics foundations. This is work on the full-course entry pages, not another set of short launchers.
 
-Implemented: 52 coherent teaching units across five course sequences. Thirty-one recently rewritten foundation lessons are integrated into the full courses so the teaching has one source, alongside 21 further units. Each unit has explanatory prose, two worked cases, an appropriate demonstration where useful, and an optional written variation with a worked answer. Reading is not gated behind questions, and visits do not count as mastery.
+Implemented in V110: 52 coherent teaching units across five course sequences. V111 adds ten prerequisite and bridge units for a total of 62. Thirty-one recently rewritten foundation lessons are integrated into the full courses so the teaching has one source, alongside 31 further units. Each unit has explanatory prose, two worked cases, an appropriate demonstration where useful, and an optional written variation with a worked answer. Reading is not gated behind questions, and visits do not count as mastery.
 
-## Sequences
+## V110 sequences (extended by V111 below)
 
 - Spanish, 12 units: soy/estoy/tengo; useful requests; questions and negation (new); listening repair; directions; plans; present habits (new); ser/estar with descriptions (new); completed past; past background; weekend story; complete café exchange (new).
 - Piano, 12 units: keyboard; beat and duration; staff reading (new); first tune; steps/skips; C-major chord; two hands; C/F changes; three-beat groups (new); phrasing and dynamics (new); read a short melody (new); prepare a short performance (new).
@@ -13,6 +13,10 @@ Implemented: 52 coherent teaching units across five course sequences. Thirty-one
 - Physics, 8 units: motion quantities; net force; force diagrams (new); energy; collisions; circuits; waves (new); pressure (new).
 
 ## Course integration
+
+V111 inserts the missing steps into the order rather than appending an unrelated extra module. Spanish noun phrases follow requests; question words and clock times follow plans. Piano hand setup follows key landmarks; rests and equal subdivisions follow basic beat grouping. Chess notation precedes capture/check examples; exchange accounting follows legal replies. Calculus algebra comes before rates and the product rule follows the chain rule. Physics units precede motion, and velocity graphs precede forces. Current counts: Spanish/piano/chess 14 each, calculus/physics 10 each.
+
+Adjustable full-course diagrams accompany instantaneous velocity, velocity graphs and force diagrams. They explain each selected case in text and do not create assessment scores. They must remain readable with keyboard controls, narrow screens and either theme.
 
 Replace the embedded full-course entry HTML at the existing Spanish V40, piano studio and chess course paths with a teaching-first course reader. Preserve each original application at a sibling practice-studio.html path with an obvious return link. Their data, assets, games, and saved progress remain available. Add calculus and physics course-reader paths under curricula/ and expose these as the primary foundation entries in the Full curriculums map; preserve original foundation/continuation routes as additional options.
 

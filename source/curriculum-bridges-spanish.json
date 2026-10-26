@@ -1,0 +1,76 @@
+[
+  {
+    "id": "noun-phrases",
+    "title": "Ask for one thing, then more than one",
+    "goal": "Build a small noun phrase with an article, a noun and a matching description.",
+    "opening": [
+      "You know how to begin a request with quiero. Now put something useful after it: quiero un café pequeño, I want a small coffee. The three words un café pequeño belong together. They tell the listener how many, what thing, and what kind.",
+      "Spanish nouns have grammatical gender. Learn a noun with its article: el café, la mesa. The article is part of the useful information about the word; a table is not female, and a coffee is not male."
+    ],
+    "heading": "Change the whole small group when the meaning changes",
+    "teaching": [
+      "Un café pequeño asks for a small coffee. Una mesa pequeña asks for a small table. Pequeño changes to pequeña to agree with mesa, and un changes to una. The description usually comes after the noun in these examples. Read the whole group aloud instead of memorizing three unrelated rules: una mesa pequeña. To say the small table, replace una with la: la mesa pequeña. You are now referring to a particular table rather than asking for any small table.",
+      "For two small coffees, say dos cafés pequeños. Dos supplies the number, cafés is plural, and pequeños becomes plural too. For two small tables, say dos mesas pequeñas. You do not add unos in front of dos here. Compare the endings carefully: café becomes cafés, while mesa becomes mesas. A word ending in a consonant often takes -es, as in hotel → hoteles. There are spelling details to learn over time, so keep these first examples as your dependable models.",
+      "Not every adjective changes its ending for gender. Un café grande and una mesa grande both use grande. In the plural, it becomes grandes. Nor does a noun’s last letter settle its gender every time: el día ends in -a. Learning el día from the start saves you from having to unlearn la día later. Begin with a handful of complete groups you can actually use."
+    ],
+    "terms": [["Un / una", "A or an, agreeing with the noun in these examples."], ["El / la", "The, used here for a specific singular thing."], ["Agreement", "Matching forms within a noun phrase, such as mesas pequeñas."]],
+    "first": {
+      "title": "Order a small coffee",
+      "problem": "Ask for a small coffee, then change the order to two small coffees.",
+      "steps": [
+        ["Name one item", "Un café.", "Learn café with el, so un is the form for a coffee."],
+        ["Describe it", "Quiero un café pequeño, por favor.", "Pequeño follows café and agrees with it."],
+        ["Change the quantity", "Quiero dos cafés pequeños, por favor.", "Dos replaces un. Both the noun and its description are now plural."]
+      ],
+      "notice": "Keep the request pattern. Change just the words that belong to the order."
+    },
+    "second": {
+      "title": "Ask about a table",
+      "problem": "Ask whether there is a small table, then refer to the table by the window.",
+      "steps": [
+        ["Learn the new noun", "La mesa: the table.", "Mesa uses feminine forms in this example."],
+        ["Ask for any suitable table", "¿Hay una mesa pequeña?", "Hay means there is or there are. The question asks whether a small table is available."],
+        ["Identify a particular one", "La mesa junto a la ventana.", "The table by the window is now a specific table. Junto a means next to, and la ventana means the window."]
+      ],
+      "notice": "You can change un to una and pequeño to pequeña while keeping the same basic shape."
+    },
+    "exercise": ["Ask for two large coffees, then say a small table.", "Quiero dos cafés grandes, por favor. Una mesa pequeña. Grande becomes grandes in the plural; pequeña agrees with the singular feminine mesa."]
+  },
+  {
+    "id": "question-words",
+    "title": "Ask which information you actually need",
+    "goal": "Use dónde, cuándo and a qué hora, then understand a simple answer about place or time.",
+    "opening": [
+      "¿Vienes mañana? asks whether you are coming tomorrow. A yes or no may be enough. But if the time is missing, ask ¿A qué hora vienes?, What time are you coming? The question word tells the other person what information to supply.",
+      "Keep three questions separate: ¿Dónde? asks where, ¿Cuándo? asks when, and ¿A qué hora? asks at what time. You do not have to rebuild every sentence to ask for a different missing detail."
+    ],
+    "heading": "Match the answer to the missing detail",
+    "teaching": [
+      "A friend says Nos vemos mañana, See you tomorrow. You already have the day. Ask ¿A qué hora?, not ¿Cuándo? if you specifically need a clock time. A las dos answers at two o’clock. To ask the current time, use ¿Qué hora es? The reply is Son las dos. Notice the difference: son las dos tells the time now; a las dos places an event at that time.",
+      "One o’clock has a singular form: es la una, it is one; a la una, at one. With two and higher hours, use the plural las: a las tres, a las cuatro. For a half hour, add y media: a las dos y media, at half past two. If morning and afternoon could be confused, add de la mañana or de la tarde. A las dos de la tarde specifies two in the afternoon.",
+      "Now ask where you will meet: ¿Dónde nos vemos? A reply might be En el café, At the café. Put the pieces back together at the end: Mañana, a las dos, en el café. A short confirmation like that is useful because it catches a mistaken day, hour or place before the conversation ends. If you miss the number, ask ¿A las dos o a las tres? rather than guessing."
+    ],
+    "terms": [["¿Dónde?", "Where?"], ["¿Cuándo?", "When?"], ["¿A qué hora?", "At what time?"], ["Y media", "Half past, in these clock expressions."]],
+    "first": {
+      "title": "Finish making the plan",
+      "problem": "Your friend has proposed tomorrow. Find out the hour and place, then confirm both.",
+      "steps": [
+        ["Ask for the hour", "¿A qué hora? — A las dos de la tarde.", "The day is settled; the missing information is the time."],
+        ["Ask for the place", "¿Dónde nos vemos? — En el café.", "Dónde asks for a location."],
+        ["Put the agreement together", "Mañana, a las dos de la tarde, en el café.", "Now both people can check the same complete plan."]
+      ],
+      "notice": "A conversation gets easier when each question has one clear job."
+    },
+    "second": {
+      "title": "One now, half past one later",
+      "problem": "It is one o’clock now. The meeting is at half past one. Say both without confusing the current time and the appointment.",
+      "steps": [
+        ["State the current time", "Es la una.", "One o’clock uses la una in the singular."],
+        ["Give the meeting time", "La reunión es a la una y media.", "A la places the meeting at that time; y media adds the half hour."],
+        ["Compare a later time", "A las dos y media.", "For two, las is plural. The half-hour part stays y media."]
+      ],
+      "notice": "Listen for a before the hour: it often tells you when something will happen."
+    },
+    "exercise": ["Ask what time you will meet, then answer at three in the afternoon.", "¿A qué hora nos vemos? — A las tres de la tarde. You are asking for an event’s time, rather than asking what time it is now."]
+  }
+]

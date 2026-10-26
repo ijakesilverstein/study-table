@@ -7,4 +7,5 @@ body.full-course-reading:not(.v35-active) .viewerbar button{background:var(--stu
 body.full-course-reading:not(.v35-active) #frame{display:block;width:100%;height:calc(100dvh - 65px);min-height:500px;border:0;background:var(--study-paper)}
 body.full-course-reading:not(.v35-active) #screen:has(#fullCourseReturn) #frame{height:calc(100dvh - 125px)}
 body.full-course-reading:not(.v35-active) #v25UniversalReveal{display:none!important}
+body.full-course-reading:not(.v35-active):not(:has(#fullCourseReturn)) #v68-rhythm-host{display:none!important}
 @media(max-width:800px){body.full-course-reading:not(.v35-active) .viewerbar>strong,body.full-course-reading:not(.v35-active) #forward{display:none!important}body.full-course-reading:not(.v35-active) .viewerbar{flex-wrap:nowrap;padding:8px}body.full-course-reading:not(.v35-active) .viewerbar button{font-size:13px;min-height:42px}}

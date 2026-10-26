@@ -5,11 +5,11 @@ from demos_v109 import build_demos
 ROOT=Path(__file__).resolve().parent
 COURSE_PATHS={'spanish':'v15/spanish-for-someone/complete-practice-v40/index.html','piano':'v15/rockjam-piano-studio/index.html','chess':'v15/chess-from-zero/index.html','calculus':'curricula/calculus.html','physics':'curricula/physics.html'}
 ORDERS={
- 'spanish':['spanish-0','spanish-1','questions','spanish-5','spanish-6','spanish-7','habits','descriptions','spanish-2','spanish-3','spanish-4','cafe-project'],
- 'piano':['piano-1','piano-0','staff','piano-2','piano-3','piano-4','piano-5','piano-6','three-beats','phrasing','read-melody','performance'],
- 'chess':['chess-0','chess-4','chess-1','chess-2','chess-5','castling','chess-3','pins','threats','promotion','queen-net','annotated-game'],
- 'calculus':['functions','calculus-1','calculus-2','derivative-rules','calculus-3','calculus-4','definite-integrals','calculus-5'],
- 'physics':['physics-4','physics-1','force-diagrams','physics-2','physics-5','physics-3','waves','pressure']}
+ 'spanish':['spanish-0','spanish-1','noun-phrases','questions','spanish-5','spanish-6','spanish-7','question-words','habits','descriptions','spanish-2','spanish-3','spanish-4','cafe-project'],
+ 'piano':['piano-1','comfortable-hands','piano-0','staff','piano-2','piano-3','piano-4','piano-5','piano-6','three-beats','rests-and-halves','phrasing','read-melody','performance'],
+ 'chess':['chess-0','read-moves','chess-4','chess-1','chess-2','count-exchanges','chess-5','castling','chess-3','pins','threats','promotion','queen-net','annotated-game'],
+ 'calculus':['functions','algebra-for-rates','calculus-1','calculus-2','derivative-rules','calculus-3','product-rule','calculus-4','definite-integrals','calculus-5'],
+ 'physics':['units-and-directions','physics-4','velocity-graphs','physics-1','force-diagrams','physics-2','physics-5','physics-3','waves','pressure']}
 META={
  'spanish':('Spanish for conversation','Build useful exchanges, understand what the other person asks, and tell a short story about your week.'),
  'piano':('Piano, from the first note','Find the keys, keep a pulse, read a short melody, and make a small performance you can return to.'),
@@ -29,7 +29,9 @@ def build_courses(teacher):
         extra+=json.loads((ROOT/file).read_text())
     quantitative=json.loads((ROOT/'curriculum-new-quantitative.json').read_text())
     for entries in quantitative.values():extra+=entries
-    assert len(extra)==21
+    for subject in ORDERS:
+        extra+=json.loads((ROOT/('curriculum-bridges-'+subject+'.json')).read_text())
+    assert len(extra)==31
     for l in maps['DATA']:
         if l['subject'] not in ORDERS:continue
         id=l['id'];d=maps['V106_DEPTH'][id];t=maps['V107_TEACHING'][id];o=maps['V108_CLARITY'][id];first=dict(maps['V105_EXAMPLES'][id]);first['notice']=first.pop('check')
@@ -48,7 +50,7 @@ def build_courses(teacher):
             for name in ['first','second']:assert len(unit[name]['steps'])>=3,(id,name)
             unit['demo']=id if id in demos else None;course['units'].append(unit)
         courses[subject]=course
-    assert sum(len(c['units']) for c in courses.values())==52
+    assert sum(len(c['units']) for c in courses.values())==62
     return courses,demos
 
 def course_demos():
@@ -67,11 +69,31 @@ def generate_course_demos():
      'descriptions':[['You','Soy estudiante. Estoy en casa.','I’m a student. I’m at home.'],['You','Estoy aburrido.','I’m bored.'],['Contrast','Soy aburrido.','I’m boring.']],
      'cafe-project':[['You','Hola. Quiero un café, por favor.','Hello. I want a coffee, please.'],['Café worker','¿Para aquí o para llevar?','For here or to go?'],['You','¿Puede repetirlo más despacio, por favor?','Can you repeat it more slowly, please?'],['Café worker','¿Para aquí o para llevar?','For here or to go?'],['You','Para llevar, por favor. ¿Puedo pagar con tarjeta?','To go, please. Can I pay by card?'],['Café worker','Sí, con tarjeta. ¿Algo más?','Yes, by card. Anything else?'],['You','Nada más, gracias.','Nothing else, thank you.']]}
     for id,rows in lines.items():d[id]={'kind':'spanish','lines':rows}
+    d['noun-phrases']={'kind':'spanish','lines':[
+        ['You','Quiero un café pequeño, por favor.','I want a small coffee, please.'],
+        ['You, changing the order','Quiero dos cafés pequeños, por favor.','I want two small coffees, please.'],
+        ['You','¿Hay una mesa pequeña?','Is there a small table?'],
+        ['Café worker','Sí, junto a la ventana.','Yes, next to the window.']]}
+    d['question-words']={'kind':'spanish','lines':[
+        ['Friend','Nos vemos mañana.','See you tomorrow.'],
+        ['You','¿A qué hora?','At what time?'],
+        ['Friend','A las dos de la tarde.','At two in the afternoon.'],
+        ['You','¿Dónde nos vemos?','Where shall we meet?'],
+        ['Friend','En el café.','At the café.'],
+        ['You','Mañana, a las dos de la tarde, en el café.','Tomorrow, at two in the afternoon, at the café.']]}
     keys=d['piano-4']['keys']
     def pattern(label,beats,events,description):return {'label':label,'beats':beats,'events':[{'note':note,'at':at,'beats':length} for note,at,length in events],'description':description}
     def piano(id,title,patterns,notation=None):
         d[id]={'kind':'piano','title':title,'intro':'Hear the complete example, then use the separate pattern buttons to examine it.','keys':keys,'count':'Keep the count steady and follow the highlighted notes.','patterns':patterns}
         if notation:d[id]['notation']=notation
+    piano('comfortable-hands','Hear the same route in each hand',[
+        pattern('Right: 1–2–3–2–1',5,[(n,i,1) for i,n in enumerate(['C4','D4','E4','D4','C4'])],'C4–D4–E4–D4–C4; right-hand fingers 1–2–3–2–1.'),
+        pattern('Left: 5–4–3–4–5',5,[(n,i,1) for i,n in enumerate(['C3','D3','E3','D3','C3'])],'C3–D3–E3–D3–C3; left-hand fingers 5–4–3–4–5.')])
+    d['comfortable-hands']['keys']=d['piano-5']['keys']
+    piano('rests-and-halves','Hear the space inside the count',[
+        pattern('C · rest · D · E',4,[('C4',0,1),('D4',2,1),('E4',3,1)],'C on 1, silence on 2, D on 3, E on 4.'),
+        pattern('C–D on 1-and; E on 2',4,[('C4',0,.5),('D4',.5,.5),('E4',1,1),('C4',3,1)],'C on 1, D on the and, E on 2, silence on 3, C on 4.')])
+    d['rests-and-halves']['patterns'][1]['subdivide']=2
     piano('piano-1','Hear C, D and E',[pattern('C–D–E',3,[('C4',0,1),('D4',1,1),('E4',2,1)],'C4–D4–E4.'),pattern('Compare two Cs',2,[('C4',0,1),('C5',1,1)],'C4 and the C one octave higher.')])
     tune=['E4','D4','C4','D4','E4','E4','E4']
     piano('piano-2','Hear the phrase and its held ending',[pattern('The whole phrase',8,[(n,i,2 if i==6 else 1) for i,n in enumerate(tune)],'seven attacks over eight beats; final E held for two.'),pattern('First four notes',4,[(n,i,1) for i,n in enumerate(tune[:4])],'E–D–C–D.')])
@@ -112,6 +134,12 @@ def generate_course_demos():
     board('promotion',[line('Promote with check','8/k7/2K1P3/8/8/8/8/8 w - - 0 1',['e6e7','a7b8','e7e8q'],['White can advance the e-pawn.','e7 approaches the promotion rank.','...Kb8 is one legal reply.','e8=Q+ creates a queen and checks immediately.']),line('Queen promotion stalemates','8/k1P5/2K5/8/8/8/8/8 w - - 0 1',['c7c8q'],['Inspect the black king’s replies before choosing a piece.','c8=Q leaves Black un-checked with no legal move: stalemate.']),line('Rook promotion leaves a reply','8/k1P5/2K5/8/8/8/8/8 w - - 0 1',['c7c8r'],['Use the same position but choose a rook.','c8=R leaves a6 available to Black’s king.'])])
     board('queen-net',[line('Give the actual mate','k7/8/1QK5/8/8/8/8/8 w - - 0 1',['b6b7'],['White to move can put the queen on b7.','Qb7# checks a8 and covers the escapes; Kc6 protects the queen.']),line('The nearby stalemate','k7/8/1QK5/8/8/8/8/8 b - - 0 1',[],['Black to move has no legal move, but Ka8 is not checked: stalemate.'])])
     start=chess.STARTING_FEN
+    board('read-moves',[
+        line('Two numbered pairs',start,['e2e4','e7e5','g1f3','b8c6'],['Read 1 e4 e5 2 Nf3 Nc6 one turn at a time.','1 e4: the e2 pawn reaches e4.','...e5: Black’s e7 pawn reaches e5.','2 Nf3: N means knight; this one starts on g1.','...Nc6: Black’s b8 knight reaches c6. Two pairs contain four turns.']),
+        line('Capture symbols and a new attack',start,['e2e4','d7d5','e4d5','d8d5','b1c3'],['Read 1 e4 d5 2 exd5 Qxd5 3 Nc3.','1 e4.','...d5 puts a pawn diagonally ahead of e4.','2 exd5: the e-file pawn captures on d5.','...Qxd5: the queen captures the pawn on d5.','3 Nc3 develops the knight with an attack on Qd5.'])])
+    board('count-exchanges',[
+        line('Bishop for knight','6k1/8/4p3/3n4/2B5/8/8/6K1 w - - 0 1',['c4d5','e6d5'],['The knight is defended by the pawn on e6.','Bxd5 takes a knight worth roughly 3.','...exd5 takes the bishop worth roughly 3. The exchange changes material by about zero.']),
+        line('Rook for knight','6k1/8/4p3/3n4/8/8/8/3R2K1 w - - 0 1',['d1d5','e6d5'],['The rook has a clear route to d5, but inspect the reply.','Rxd5 takes a knight worth roughly 3.','...exd5 takes a rook worth roughly 5. White lost about 2 in this exchange.'])])
     board('annotated-game',[line('The missed mating threat',start,['e2e4','e7e5','f1c4','b8c6','d1h5','g8f6','h5f7'],['Watch both sides of the game.','e4 opens the bishop.','...e5 occupies the center.','Bc4 points toward f7.','...Nc6 develops.','Qh5 adds a second attack on f7.','...Nf6 attacks the queen but leaves the mating reply available.','Qxf7# is mate; the bishop protects the queen.']),line('A defensive response',start,['e2e4','e7e5','f1c4','b8c6','d1h5','g7g6','h5f3','g8f6'],['Start again.','e4.','...e5.','Bc4.','...Nc6.','Qh5 creates the threat.','...g6 interrupts the diagonal and attacks the queen.','Qf3 retreats along the diagonal.','...Nf6 develops and blocks the queen’s f-file line.'])])
     return d
 
@@ -121,4 +149,4 @@ def render_course(course,demos):
     demo_source=(ROOT/'demos-v109.js').read_text().replace('__DEMOS__',json.dumps(selected,ensure_ascii=False,separators=(',',':')))
     helpers="const $=id=>document.getElementById(id);const escape=s=>String(s??'').replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));"
     import html
-    return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+html.escape(course['title'])+' — Full course</title><style>'+(ROOT/'theme-v109.css').read_text()+'\n'+(ROOT/'course-reader.css').read_text()+'</style><script>'+(ROOT/'theme-state.js').read_text()+'</script></head><body><header class="course-top"><strong id="courseSubject"></strong><div><button id="courseAll" type="button">All curriculums</button><button id="courseTheme" type="button" data-study-theme-toggle>Dark mode</button></div></header><div class="reader-layout"><aside class="contents"><details id="courseContents" open><summary>Course contents</summary><ol id="courseContentsList"></ol></details></aside><main id="courseArticle" class="reader-article" tabindex="-1"></main></div><script id="full-course-data" type="application/json">'+data+'</script><script>(()=>{\'use strict\';'+helpers+'\n'+demo_source+'\n'+(ROOT/'course-reader.js').read_text()+'\n})();</script></body></html>'
+    return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+html.escape(course['title'])+' — Full course</title><style>'+(ROOT/'theme-v109.css').read_text()+'\n'+(ROOT/'course-reader.css').read_text()+'</style><script>'+(ROOT/'theme-state.js').read_text()+'</script></head><body><header class="course-top"><strong id="courseSubject"></strong><div><button id="courseAll" type="button">All curriculums</button><button id="courseTheme" type="button" data-study-theme-toggle>Dark mode</button></div></header><div class="reader-layout"><aside class="contents"><details id="courseContents" open><summary>Course contents</summary><ol id="courseContentsList"></ol></details></aside><main id="courseArticle" class="reader-article" tabindex="-1"></main></div><script id="full-course-data" type="application/json">'+data+'</script><script>(()=>{\'use strict\';'+helpers+'\n'+demo_source+'\n'+(ROOT/'course-figures.js').read_text()+'\n'+(ROOT/'course-reader.js').read_text()+'\n})();</script></body></html>'

@@ -1,0 +1,77 @@
+[
+  {
+    "id": "units-and-directions",
+    "title": "Give a number its units and direction",
+    "goal": "Convert a speed between km/h and m/s and use a stated positive direction.",
+    "opening": [
+      "A reading of 20 is unfinished information. Twenty metres describes a length; twenty metres per second describes a speed. Keeping the unit beside the number tells you what kind of question it can answer.",
+      "Physics often uses metres, kilograms and seconds together. You can keep a familiar speed such as 72 kilometres per hour in mind, then convert it to metres per second before combining it with seconds in an equation."
+    ],
+    "heading": "Let the unit conversion cancel what you are replacing",
+    "teaching": [
+      "One kilometre is 1,000 metres, and one hour is 3,600 seconds. So 72 km/h is 72×1,000 metres in 3,600 seconds: 72,000/3,600=20 m/s. The size of the motion did not change when the number changed from 72 to 20. We changed the units used to report it. A metre-per-second value converts back to kilometres per hour by multiplying by 3.6.",
+      "A velocity also needs direction. On a straight road, choose east as positive. Then +20 m/s is eastward motion and −20 m/s is westward motion at the same speed. A minus sign does not mean a small speed or a mistake. It identifies direction relative to your chosen axis. Distance traveled is nonnegative; displacement can be negative because it measures a change in position along that axis.",
+      "Acceleration has units m/s²: change in metres per second, each second. If velocity changes from +2 to +8 m/s in 3 seconds, the acceleration is (+8−2)/3=+2 m/s². If velocity changes from −8 to −2 m/s in the same time, the acceleration is also +2 m/s², even though the object is slowing down. Its westward velocity is becoming less negative. To decide whether speed grows, compare velocity and acceleration directions rather than treating every positive acceleration as speeding up."
+    ],
+    "terms": [["Speed", "How fast an object moves, without a direction."], ["Velocity", "A rate of position change with direction; a sign gives direction on our one-dimensional axis."], ["m/s²", "Metres per second of velocity change per second."]],
+    "first": {
+      "title": "Convert before using a travel time",
+      "problem": "A car moves east at a constant 72 km/h for 5 seconds. Find its displacement in metres, taking east as positive.",
+      "steps": [
+        ["Replace kilometres and hours", "72 km/h = 72×1,000/3,600 = 20 m/s.", "Write both conversion factors so the seconds in the next step will match."],
+        ["Attach the direction", "v=+20 m/s.", "The chosen positive direction is east."],
+        ["Multiply by the interval", "Δx=vt=(+20)×5=+100 m.", "At constant velocity, metres per second times seconds gives metres."]
+      ],
+      "notice": "Multiplying 72 directly by 5 would mix hours with seconds. Convert to a consistent set first."
+    },
+    "second": {
+      "title": "A positive acceleration while slowing down",
+      "problem": "Take east as positive. A vehicle’s velocity changes from −8 to −2 m/s over 3 seconds. Find its average acceleration and describe its speed.",
+      "steps": [
+        ["Subtract with the signs intact", "Δv=(−2)−(−8)=+6 m/s.", "Subtracting a negative adds its magnitude here."],
+        ["Divide by elapsed time", "a=+6/3=+2 m/s².", "The acceleration points east."],
+        ["Describe the motion", "Speed falls from 8 to 2 m/s while motion remains westward.", "The eastward acceleration opposes the westward velocity."]
+      ],
+      "notice": "The sign reports direction. Speeding up or slowing down depends on its relationship to the velocity."
+    },
+    "exercise": ["Convert 36 km/h to m/s, then give the velocity if the motion is westward and east is positive.", "36/3.6=10 m/s. The velocity is −10 m/s under the chosen convention. The speed is 10 m/s."]
+  },
+  {
+    "id": "velocity-graphs",
+    "title": "Read a journey from a velocity graph",
+    "goal": "Use the height, slope and signed area of a velocity–time graph for three different questions.",
+    "opening": [
+      "A velocity graph can tell you how an object moves without drawing the road. Time runs horizontally. The graph’s height gives velocity, its slope gives acceleration, and the area between the graph and time axis gives displacement.",
+      "Our cart speeds up from 0 to 4 m/s in two seconds, stays at 4 m/s for two seconds, then slows to rest over two seconds. Follow those three parts separately before calculating the whole journey."
+    ],
+    "heading": "Ask which feature of the graph the question needs",
+    "teaching": [
+      "From t=0 to t=2, the velocity graph is a rising straight line. Its slope is (4−0)/(2−0)=2 m/s². The displacement is the triangular area beneath it: ½×2 s×4 m/s=4 m. The graph is getting higher because velocity is increasing; the area counts the travel accumulated while that change happens. The final height, 4 m/s, is not the distance covered.",
+      "From t=2 to t=4, the graph is horizontal at 4 m/s. Its slope is zero, so acceleration is zero, but the cart is moving. The rectangular area is 2×4=8 m. From t=4 to t=6, the graph slopes down to zero. Acceleration is −2 m/s², and the triangular area is another 4 m. All velocities in this journey are nonnegative, so distance and displacement both total 4+8+4=16 m.",
+      "A graph below the time axis gives negative displacement, rather than no movement. Suppose velocity falls in a straight line from +2 m/s at t=0 to −2 m/s at t=4. It crosses zero at t=2. The area above the axis is +2 m and the area below is −2 m. Displacement is zero, but the object traveled 4 m in total. Split the graph where velocity changes sign before adding the travel lengths."
+    ],
+    "terms": [["Graph height", "Velocity at a chosen time on this velocity–time graph."], ["Graph slope", "Change in velocity divided by time change: acceleration."], ["Signed area", "Area above the time axis adds displacement; area below subtracts it."]],
+    "first": {
+      "title": "Three parts of one six-second trip",
+      "problem": "A cart rises uniformly from 0 to 4 m/s over 0–2 s, holds 4 m/s over 2–4 s, then falls uniformly to rest over 4–6 s. Find its displacement.",
+      "steps": [
+        ["Count the first triangle", "½×2×4=4 m.", "The cart is slower than 4 m/s for most of this first interval."],
+        ["Count the rectangle", "2×4=8 m.", "Constant velocity covers the largest distance of the three equal-duration parts."],
+        ["Count the last triangle and add", "4+8+4=16 m.", "The last part has the same average velocity as the first, in the reverse order."],
+        ["Check an overall average", "16/6≈2.67 m/s.", "An overall average below the maximum 4 m/s is consistent with this journey."]
+      ],
+      "notice": "Each area has units (m/s)×s=m. A slope would instead have units m/s²."
+    },
+    "second": {
+      "title": "Travel out and back",
+      "problem": "Velocity falls uniformly from +2 to −2 m/s over 4 seconds. Find displacement and total distance.",
+      "steps": [
+        ["Locate the direction change", "v=0 at t=2 s.", "The first two seconds are positive-direction travel; the last two are negative-direction travel."],
+        ["Add signed areas", "+½×2×2 − ½×2×2=0 m.", "The equal contributions cancel for displacement."],
+        ["Add travel lengths", "2+2=4 m.", "Distance counts both parts positively, even though the final position equals the initial position."]
+      ],
+      "notice": "Returning to the start does not erase the distance traveled."
+    },
+    "exercise": ["On a velocity–time graph, a horizontal segment stays at −3 m/s for 2 seconds. Find acceleration, displacement and distance for that segment.", "Acceleration is zero because velocity is unchanged. Displacement is (−3)×2=−6 m. Distance is 6 m. A horizontal velocity graph means constant motion, unless its height is zero."]
+  }
+]

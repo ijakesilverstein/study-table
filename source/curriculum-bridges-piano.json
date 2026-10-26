@@ -1,0 +1,161 @@
+[
+  {
+    "id": "comfortable-hands",
+    "title": "Set up your hands before adding more notes",
+    "goal": "Find a comfortable playing position and use finger numbers to follow a small pattern.",
+    "opening": [
+      "Before a new tune, give yourself a position you can return to. Sit facing the keyboard with your feet supported and enough room for your elbows to move. Bring your hands to the keys without holding your shoulders up.",
+      "Let your right thumb rest over C4, then let your other fingers lie over D4, E4, F4 and G4. Your hand does not have to stretch wide or squeeze into a rigid claw. The fingers can be gently curved, with the wrist free to adjust."
+    ],
+    "heading": "A finger number gives a route through the notes",
+    "teaching": [
+      "Piano fingering numbers are the same on each hand: thumb 1, index 2, middle 3, ring 4, little finger 5. These numbers name fingers, not pitches. Right-hand 1 can play C today and a different note tomorrow. A label such as C4 names a pitch and register; the 4 in C4 is not a request to use your ring finger. Keep those two numbering systems separate.",
+      "Play C4 with 1, D4 with 2 and E4 with 3. Release each key as you move to the next. At first, leave a little space between notes so you can notice the release. Then try connecting them more smoothly. You do not need to press a key farther after it has reached the bottom. Check whether the fingers that are waiting can remain easy instead of lifting high and becoming stiff.",
+      "For the left hand, place 5 on C3, 4 on D3 and 3 on E3. The pitch still rises from C to E as you move rightward, while the finger numbers decrease from 5 to 3. That can feel surprising after the right hand. Learn each small route separately. Two comfortable three-note patterns are more useful here than a fast run with both hands copying one another by accident."
+    ],
+    "terms": [
+      [
+        "Finger 1",
+        "The thumb, on either hand."
+      ],
+      [
+        "Finger 5",
+        "The little finger, on either hand."
+      ],
+      [
+        "Fingering",
+        "A choice of fingers for a sequence of notes."
+      ]
+    ],
+    "first": {
+      "title": "A three-note route for the right hand",
+      "problem": "Play C4–D4–E4–D4–C4 with a hand position you can find again.",
+      "steps": [
+        [
+          "Find the starting note",
+          "C4, using the nearby pair of black keys.",
+          "Place the thumb there and let the next fingers rest over D and E."
+        ],
+        [
+          "Follow the route",
+          "Fingers 1–2–3–2–1.",
+          "The notes rise and return while the hand stays in the same small area."
+        ],
+        [
+          "Check the release",
+          "Let the previous key come up as you move on.",
+          "Listen for the intended notes and notice whether your shoulder or waiting fingers have tightened."
+        ],
+        [
+          "Return to the starting position",
+          "Take the hand away, then find C4 again.",
+          "Use the keyboard landmark rather than trying to remember a distance from the edge of the instrument."
+        ]
+      ],
+      "notice": "Begin slowly enough to notice how you arrive at a key and how you let it go."
+    },
+    "second": {
+      "title": "Give the left hand its own route",
+      "problem": "Play C3–D3–E3–D3–C3 with the left hand.",
+      "steps": [
+        [
+          "Set the left hand down",
+          "Little finger 5 over C3; 4 over D3; 3 over E3.",
+          "The thumb is on the right side of this hand as it faces the keyboard."
+        ],
+        [
+          "Play the rising pitches",
+          "Fingers 5–4–3, then 4–5 to return.",
+          "Rising pitch does not require rising finger numbers."
+        ],
+        [
+          "Compare the two hands separately",
+          "Right: 1–2–3–2–1. Left: 5–4–3–4–5.",
+          "Both examples have the same letter-name shape, in different registers."
+        ]
+      ],
+      "notice": "A fingering is there to make the movement dependable. It is not a test of how still you can hold the rest of your body."
+    },
+    "exercise": [
+      "What is the difference between C4 and finger 4? Play a slow three-note route with either hand.",
+      "C4 names a particular pitch, middle C. Finger 4 means the ring finger on either hand. For the right-hand C4–D4–E4 route here, the suggested fingers are 1–2–3."
+    ]
+  },
+  {
+    "id": "rests-and-halves",
+    "title": "Keep counting when the sound stops",
+    "goal": "Place a one-beat rest and two equal half-beat notes inside a steady four-beat count.",
+    "opening": [
+      "A rest gives silence a place in the rhythm. It does not pause the clock. Count 1–2–3–4 evenly, play C on 1, stay silent on 2, then play D on 3 and E on 4.",
+      "Now divide each beat into two equal parts: 1-and, 2-and, 3-and, 4-and. The numbers arrive at the same speed as before. The ands give you a place for a note halfway between them."
+    ],
+    "heading": "Keep the pulse while changing what fits inside it",
+    "teaching": [
+      "At 60 quarter-note beats per minute, one beat lasts one second. A one-beat rest therefore lasts one second, and a half-beat note lasts half a second. At 120, those durations become half a second and a quarter of a second. The rhythm’s proportions stay the same when the tempo changes. Two half-beat notes fill one beat; they do not make the whole piece twice as fast.",
+      "Count 1-and 2-and 3-and 4-and. Put C on 1, D on the and after 1, and E on 2. Hold E across the and after 2, stay silent for all of beat 3, and play C on 4. There are four attacks in that pattern, spread over four beats. E begins on a number and lasts a full beat. The silence on 3 is as deliberate as any of the notes.",
+      "On paper, the half-beat notes in this quarter-note pulse are eighth notes. They have a flag when written separately and often a beam when grouped. We are using a spoken count here so you can hear the division before adding another reading task. Tap the numbers with one hand while speaking all the numbers and ands. Then play the notes with the other hand. If the rest makes the next note late, keep speaking through the silence instead of waiting for a sound to restart the count."
+    ],
+    "terms": [
+      [
+        "Rest",
+        "A specified duration of silence while the pulse continues."
+      ],
+      [
+        "Subdivision",
+        "Dividing a beat into smaller equal parts."
+      ],
+      [
+        "Eighth note",
+        "A half-beat note when a quarter note receives one beat."
+      ]
+    ],
+    "first": {
+      "title": "Leave beat 2 silent",
+      "problem": "Play C on 1, rest on 2, D on 3 and E on 4 at 60 beats per minute.",
+      "steps": [
+        [
+          "Set the clock",
+          "Count 1–2–3–4 at one number per second.",
+          "Make the gaps between numbers equal."
+        ],
+        [
+          "Place sound and silence",
+          "1: C; 2: rest; 3: D; 4: E.",
+          "Release C for beat 2. Holding it through 2 would make a longer note, rather than a rest."
+        ],
+        [
+          "Keep the full measure",
+          "Four beats, three note attacks.",
+          "D begins two seconds after the initial C, because the silent beat still takes time."
+        ]
+      ],
+      "notice": "Hear the gap without shrinking it. Silence has a duration."
+    },
+    "second": {
+      "title": "Two notes inside the first beat",
+      "problem": "Play C on 1, D on the and after 1, E on 2, rest on 3 and C on 4.",
+      "steps": [
+        [
+          "Speak the subdivisions",
+          "1-and 2-and 3-and 4-and.",
+          "Keep the numbers at the original pulse speed."
+        ],
+        [
+          "Place the first three attacks",
+          "C on 1, D on the and after 1, E on 2.",
+          "The first two notes share beat 1 equally. E begins on the next number."
+        ],
+        [
+          "Leave space, then finish",
+          "E lasts one beat; beat 3 is silent; C fills beat 4.",
+          "The last C begins three beats after the start. The whole pattern still occupies four beats."
+        ]
+      ],
+      "notice": "Counting smaller divisions helps you place a note without rushing the larger pulse."
+    },
+    "exercise": [
+      "At 60 beats per minute, how long are a half-beat note and a one-beat rest? What changes at 120?",
+      "At 60, they last 0.5 seconds and 1 second. At 120, they last 0.25 seconds and 0.5 seconds. The half-beat note remains half as long as the one-beat rest."
+    ]
+  }
+]

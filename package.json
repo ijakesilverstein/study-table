@@ -1,6 +1,6 @@
 {
   "name": "study-table",
-  "version": "110.0.0",
+  "version": "111.0.0",
   "private": true,
   "scripts": {
     "build": "python3 scripts/build.py",

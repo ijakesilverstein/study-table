@@ -1,0 +1,156 @@
+[
+  {
+    "id": "algebra-for-rates",
+    "title": "Unpack the fraction before taking a limit",
+    "goal": "Expand a small change, subtract the starting value and cancel only a common factor.",
+    "opening": [
+      "The fraction [f(x+h)−f(x)]/h looks dense because it contains three jobs at once. First find the new output. Next subtract the old output. Finally divide that change by the input change h.",
+      "Here h names a change in the input; it is not another version of x. If x=3 and h=0.1, the new input x+h is 3.1. The same letter h appears in the denominator because we want output change per unit of input change."
+    ],
+    "heading": "Keep the brackets until the subtraction is finished",
+    "teaching": [
+      "Take f(x)=2x+5. The new value is f(x+h)=2(x+h)+5=2x+2h+5. Subtract the whole old value, 2x+5: (2x+2h+5)−(2x+5). The 2x terms cancel, and so do the constant 5s. What remains is 2h. Divide by h, provided h is not zero, and get 2. This straight-line rule changes its output by two for every one-unit input change, whatever nonzero interval you choose.",
+      "For f(x)=x², multiply the brackets: (x+h)(x+h)=x²+xh+xh+h²=x²+2xh+h². The two cross-products are why (x+h)² is not x²+h². Subtract x² and you have 2xh+h². Both remaining terms contain h, so factor it: h(2x+h). Now divide by h to obtain 2x+h for nonzero h. This is cancellation of a factor shared by the entire numerator and denominator.",
+      "Compare (6+h)/h. You cannot erase h from just one part of that sum. Dividing each term correctly gives 6/h+1, not 6+1. Test with h=2: (6+2)/2=4, while 6+1=7. A small numerical check can expose an illegal cancellation before it contaminates a longer derivative calculation. In the next rate lessons, keep the brackets and the nonzero condition visible until the simplification is done."
+    ],
+    "terms": [
+      [
+        "f(x+h)",
+        "The output at an input h away from x."
+      ],
+      [
+        "Factor",
+        "A quantity multiplying a whole expression, as h multiplies 2x+h."
+      ],
+      [
+        "Difference quotient",
+        "Output change divided by input change: [f(x+h)−f(x)]/h."
+      ]
+    ],
+    "first": {
+      "title": "A straight-line rule",
+      "problem": "Simplify [f(x+h)−f(x)]/h for f(x)=2x+5 and h≠0.",
+      "steps": [
+        [
+          "Find the new output",
+          "f(x+h)=2x+2h+5.",
+          "Substitute x+h for the whole input, including the multiplication by 2."
+        ],
+        [
+          "Subtract the old output",
+          "(2x+2h+5)−(2x+5)=2h.",
+          "The minus sign applies to both terms inside the second pair of brackets."
+        ],
+        [
+          "Divide the change",
+          "2h/h=2, for h≠0.",
+          "The rate is two output units per input unit on every nonzero interval."
+        ]
+      ],
+      "notice": "A constant added to both readings disappears when you subtract them."
+    },
+    "second": {
+      "title": "A square needs its cross-products",
+      "problem": "Simplify [(3+h)²−9]/h for h≠0, then use h=0.1.",
+      "steps": [
+        [
+          "Multiply the brackets",
+          "(3+h)²=9+3h+3h+h²=9+6h+h².",
+          "Each term in the first bracket multiplies each term in the second."
+        ],
+        [
+          "Subtract and factor",
+          "9+6h+h²−9=h(6+h).",
+          "The constant 9 cancels. The entire remaining numerator has a factor h."
+        ],
+        [
+          "Divide, then substitute",
+          "h(6+h)/h=6+h; at h=0.1 this is 6.1.",
+          "The simplification used h≠0. We have not defined the original fraction at h=0."
+        ]
+      ],
+      "notice": "This algebra prepares the rate calculation. The next question will be what these nonzero-interval rates approach."
+    },
+    "exercise": [
+      "Expand (2+h)², then simplify [(2+h)²−4]/h for h≠0.",
+      "The square is 4+4h+h². Subtract 4 to leave h(4+h), then divide by nonzero h to get 4+h. The two cross-products contribute 2h each."
+    ]
+  },
+  {
+    "id": "product-rule",
+    "title": "Find the rate when both factors change",
+    "goal": "Differentiate a product by accounting for the change in each factor.",
+    "opening": [
+      "A rectangle can gain area because it gets longer, wider, or both. If its length and width both change, multiplying their rates together does not give the area’s rate. Each expanding edge adds a different strip of area.",
+      "Let its length be L=t+1 metres and width W=t² metres, with time t in seconds. At t=2, the rectangle is 3 by 4 metres. Its length grows at 1 m/s and its width at 4 m/s. We want the area added each second at that moment."
+    ],
+    "heading": "Add the contribution from each changing factor",
+    "teaching": [
+      "Imagine a short extra time h. The length adds approximately L′h, creating a strip with area W×L′h. The width adds approximately W′h, creating a second strip with area L×W′h. A small corner lies between them. Its area shrinks with h², so after dividing the total change by h it tends to zero as h tends to zero. The two strip contributions remain: A′=L′W+LW′.",
+      "For our rectangle at t=2, length change contributes 1×4=4 square metres per second. Width change contributes 3×4=12 square metres per second. Add them to obtain 16 m²/s. The old dimensions matter because each new strip extends along an existing side. Multiplying only the two rates, 1×4, omits that geometry and gives units m²/s², which are wrong for an area rate.",
+      "The same rule works for any differentiable product: (uv)′=u′v+uv′. Differentiate one factor while leaving the other unchanged, then add the other contribution. Here A=(t+1)t². The result is t²+(t+1)2t=3t²+2t. You can check by expanding first: A=t³+t², whose derivative is also 3t²+2t. At t=2 that is 16. Expanding first is a good option when it is short; the product rule remains useful when expansion is awkward."
+    ],
+    "terms": [
+      [
+        "Product",
+        "Two quantities multiplied together, such as length times width."
+      ],
+      [
+        "Product rule",
+        "(uv)′=u′v+uv′, when both factors are differentiable."
+      ],
+      [
+        "Area rate",
+        "Change in area per unit time, such as m²/s."
+      ]
+    ],
+    "first": {
+      "title": "A rectangle grows in two directions",
+      "problem": "L=t+1 m and W=t² m. Find dA/dt at t=2 s.",
+      "steps": [
+        [
+          "Find dimensions and their rates",
+          "L=3 m, W=4 m; L′=1 m/s, W′=4 m/s.",
+          "Evaluate both the original functions and their derivatives at the chosen time."
+        ],
+        [
+          "Count the two contributions",
+          "L′W=4 m²/s; LW′=12 m²/s.",
+          "Each term describes the strip added by one changing side."
+        ],
+        [
+          "Add the rates",
+          "A′=4+12=16 m²/s.",
+          "The rectangle gains area in both directions at once."
+        ]
+      ],
+      "notice": "Keep the unchanged factor in each term. The product of the two derivatives answers a different dimensional question."
+    },
+    "second": {
+      "title": "Check the rule by expansion",
+      "problem": "Differentiate y=(x+2)(x²+1) in two ways.",
+      "steps": [
+        [
+          "Use the product rule",
+          "y′=1×(x²+1)+(x+2)×2x.",
+          "Each factor gets one turn being differentiated."
+        ],
+        [
+          "Collect the terms",
+          "y′=x²+1+2x²+4x=3x²+4x+1.",
+          "Keep both contributions before simplifying."
+        ],
+        [
+          "Expand the original as a check",
+          "y=x³+2x²+x+2, so y′=3x²+4x+1.",
+          "The independent algebraic route reaches the same derivative."
+        ]
+      ],
+      "notice": "A second route can check the result without merely repeating the same steps."
+    },
+    "exercise": [
+      "Differentiate y=x²(x+3), and check by expanding first.",
+      "The product rule gives 2x(x+3)+x²=3x²+6x. Expanding first gives y=x³+3x², whose derivative is the same."
+    ]
+  }
+]

@@ -1,0 +1,78 @@
+[
+  {
+    "id": "read-moves",
+    "title": "Read a move without translating a code in your head",
+    "goal": "Follow a short move list and recognize piece letters, captures, checks and move numbers.",
+    "opening": [
+      "A move list is a compact way of telling you what happened on the board. In 1 e4 e5, the 1 is the move number. White plays e4 first, then Black plays e5. It is one numbered pair containing two turns.",
+      "E4 is a destination square: file e, rank 4. A pawn move has no piece letter at the front. From the starting position, e4 means White’s e-pawn goes to e4. In the next pair, 2 Nf3 Nc6, N means knight."
+    ],
+    "heading": "Find the piece, then trace its route",
+    "teaching": [
+      "The English piece letters are K for king, Q for queen, R for rook, B for bishop and N for knight. N keeps the knight distinct from the king. In Nf3, look for a knight that can legally reach f3; in the starting line here, that is the one on g1. The notation usually omits the starting square. If two pieces of the same kind can legally reach the destination, extra information identifies the one moving, as in Nbd2 for the knight from the b-file.",
+      "An x marks a capture. After 1 e4 d5, White can play 2 exd5. Read that as the pawn from the e-file captures on d5. Black can reply Qxd5: the queen captures on d5. The pawn capture gives its starting file because the pawn does not have an initial piece letter. Ordinary move notation does not name the captured piece; you find that on the board.",
+      "A plus sign means check, as in Bb5+. A hash sign means checkmate, as in Qxf7#. Those marks report what the move does in its actual position; a bishop on b5 is not always checking. O-O is kingside castling, and O-O-O is queenside castling. When a line begins 3... rather than 3, the dots tell you Black is making the move. Follow one turn at a time and check the board after it. You do not need to memorize an entire line before moving a piece."
+    ],
+    "terms": [["Nf3", "A knight moves to f3, if that is legal in the position."], ["exd5", "A pawn from the e-file captures on d5."], ["+ / #", "Check / checkmate."], ["3...", "Black’s turn in move pair 3."]],
+    "first": {
+      "title": "Read the first two move pairs",
+      "problem": "From the starting position, follow 1 e4 e5 2 Nf3 Nc6.",
+      "steps": [
+        ["White begins", "1 e4: e2–e4.", "The pawn may advance two squares from its start because e3 and e4 are empty."],
+        ["Black answers", "...e5: e7–e5.", "The unlettered move is another pawn move."],
+        ["White develops a knight", "2 Nf3: g1–f3.", "The N identifies the moving kind of piece; f3 gives its destination."],
+        ["Black develops a knight", "...Nc6: b8–c6.", "Four turns have now been played in two numbered pairs."]
+      ],
+      "notice": "The number does not tell you how many individual pieces have moved. Each complete numbered pair has a White turn and a Black turn."
+    },
+    "second": {
+      "title": "Read two captures and a reply",
+      "problem": "From the starting position, follow 1 e4 d5 2 exd5 Qxd5 3 Nc3.",
+      "steps": [
+        ["Set up the contact", "1 e4 d5.", "Black’s pawn arrives on d5, diagonally ahead of White’s e4 pawn."],
+        ["Read the pawn capture", "2 exd5.", "The e4 pawn moves to d5 and removes the black pawn there."],
+        ["Read the queen capture", "...Qxd5.", "The queen from d8 reaches d5 along a now-clear file and captures the white pawn."],
+        ["Find the new attack", "3 Nc3.", "The knight from b1 develops to c3 and attacks the queen on d5."]
+      ],
+      "notice": "Make the captures on the board as you read them. The position changes which later moves are available."
+    },
+    "exercise": ["In the second example, why does exd5 start with a lowercase e while Qxd5 starts with Q?", "The e identifies the pawn’s starting file; pawn moves have no piece letter. Q identifies a queen. Both x marks mean capture, and both moves end on d5."]
+  },
+  {
+    "id": "count-exchanges",
+    "title": "Count what comes off the board on both turns",
+    "goal": "Compare the material gained and lost in a short capture-and-recapture sequence.",
+    "opening": [
+      "Capturing a knight does not always mean you have won a knight. If the opponent can take your bishop back, both pieces have disappeared. Count the whole exchange before celebrating the first capture.",
+      "For a starting comparison, use pawn 1, knight 3, bishop 3, rook 5 and queen 9. These are rough relative values, not points printed into the rules. A king has no trade value because it cannot legally be captured."
+    ],
+    "heading": "Keep a small ledger of gains and losses",
+    "teaching": [
+      "In our first position, White has Kg1 and Bc4; Black has Kg8, Nd5 and Pe6. The bishop can capture the knight with Bxd5, but the pawn on e6 can answer ...exd5. White gained a knight worth about 3 and lost a bishop worth about 3. The immediate material change is roughly zero. Before the exchange, Black also had an extra pawn; after it, that pawn still exists. Trading the minor pieces did not erase the original pawn difference.",
+      "Now replace White’s bishop with a rook on d1. The d-file is clear up to the black knight on d5. Rxd5 is legal, and ...exd5 is a legal recapture. White gained a knight, about 3, but lost a rook, about 5. The exchange cost White about 2 in this rough accounting. Looking only at the knight that was taken hides the larger piece being given away.",
+      "Material is a first filter, not the final decision. A sacrifice may be worthwhile for a forced mate, and a supposedly valuable piece may be trapped. Start by checking legality and forcing replies, then count the pieces after the concrete sequence you found. Do not invent a recapture that the opponent cannot legally make. Later tactical lessons will show why checks and pins can change which replies are available."
+    ],
+    "terms": [["Exchange", "A sequence in which both sides give up material, used here for a capture and recapture."], ["Material balance", "A comparison of the pieces and pawns remaining."], ["Recapture", "A capture in reply that takes the piece involved in the preceding capture."]],
+    "first": {
+      "title": "A knight taken, a bishop lost",
+      "problem": "White: Kg1, Bc4. Black: Kg8, Nd5, Pe6. White to move. Count Bxd5 exd5.",
+      "steps": [
+        ["Make White’s capture", "Bxd5 removes the knight.", "White has gained about 3 in the rough value scale."],
+        ["Make Black’s recapture", "...exd5 removes the bishop.", "The e6 pawn moves diagonally to d5. White has lost about 3."],
+        ["Compare the change", "3 gained − 3 lost ≈ 0.", "This exchange does not by itself win material. Black’s pawn remains on d5."]
+      ],
+      "notice": "Count the material change separately from the balance that existed before the move."
+    },
+    "second": {
+      "title": "The same target costs a larger piece",
+      "problem": "White: Kg1, Rd1. Black: Kg8, Nd5, Pe6. Count Rxd5 exd5.",
+      "steps": [
+        ["Check the rook’s path", "d2, d3 and d4 are empty, so Rxd5 is available.", "A promising value comparison would not excuse jumping a blocker."],
+        ["Include the reply", "...exd5 captures the rook.", "The pawn can take on d5 just as in the bishop example."],
+        ["Count the exchange", "3 gained − 5 lost ≈ −2 for White.", "Without another concrete benefit, this is a costly way to take the knight."]
+      ],
+      "notice": "The captured target stayed the same. Changing the piece you risked changed the result."
+    },
+    "exercise": ["A bishop takes a rook and is then legally recaptured by a pawn. What is the rough material change for the side that began the exchange?", "About +2: a rook worth 5 was gained and a bishop worth 3 was lost. This counts the exchange itself; check the position for threats and existing material differences as well."]
+  }
+]

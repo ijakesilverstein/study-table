@@ -25,15 +25,28 @@ for id,index,expected in [('promotion',1,'stalemate'),('promotion',2,'play'),('q
 assert [e['level'] for e in saved['phrasing']['patterns'][1]['events']]==[.045,.052,.06,.075,.06,.05,.04]
 assert sum(b for n,b in saved['read-melody']['notation'])==8
 assert saved['read-melody']['notation']==[['C4',1],['D4',1],['E4',1],['G4',1],['E4',1],['D4',1],['C4',2]]
+values={chess.PAWN:1,chess.KNIGHT:3,chess.BISHOP:3,chess.ROOK:5,chess.QUEEN:9}
+def balance(board):
+    return sum(values.get(p.piece_type,0)*(1 if p.color else -1) for p in board.piece_map().values())
+for line,change in zip(saved['count-exchanges']['lines'],[0,-2]):
+    board=chess.Board(line['fen']);before=balance(board)
+    for uci in line['moves']:board.push_uci(uci)
+    assert balance(board)-before==change
+line=saved['read-moves']['lines'][1];board=chess.Board(line['fen'])
+notation=[]
+for uci in line['moves']:
+    move=chess.Move.from_uci(uci);notation.append(board.san(move));board.push(move)
+assert notation==['e4','d5','exd5','Qxd5','Nc3']
+assert chess.D5 in board.attacks(chess.C3)
 courses=json.loads((root/'source/full-courses-built.json').read_text())
-assert {s:len(c['units']) for s,c in courses.items()}=={'spanish':12,'piano':12,'chess':12,'calculus':8,'physics':8}
-assert sum(len(c['units']) for c in courses.values())==52
+assert {s:len(c['units']) for s,c in courses.items()}=={'spanish':14,'piano':14,'chess':14,'calculus':10,'physics':10}
+assert sum(len(c['units']) for c in courses.values())==62
 for course in courses.values():
     ids=[u['id'] for u in course['units']];assert len(ids)==len(set(ids))
     for i,unit in enumerate(course['units']):
         assert unit['previous']==(ids[i-1] if i else None)
         assert unit['next']==(ids[i+1] if i+1<len(ids) else None)
-print('FULL_COURSE_DATA_PASS: legal chess lines and stated outcomes, music timing, 52 unique units and their complete sequence.')
+print('FULL_COURSE_DATA_PASS: legal chess lines and stated outcomes, music timing, 62 unique units and their complete sequence.')
 def archive(path):
     text=path.read_text();data=re.search(r'<script id="full-bundle" type="text/plain">(.*?)</script>',text,re.S)[1]
     return json.loads(gzip.decompress(base64.b64decode(data)))
