@@ -1,0 +1,1 @@
+const fs=require('fs');const executablePath=process.env.CHROME_BINARY||(fs.existsSync('/usr/bin/chromium')?'/usr/bin/chromium':undefined);module.exports={headless:true,...(executablePath?{executablePath}:{}),args:['--no-sandbox']};

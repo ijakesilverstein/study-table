@@ -1,0 +1,99 @@
+{
+  "headers": [
+    {
+      "source": "/study-table-v109.html",
+      "headers": [
+        {
+          "key": "Content-Disposition",
+          "value": "attachment; filename=Study_Table_V109.html"
+        },
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/study-table-v108.html",
+      "headers": [
+        {
+          "key": "Content-Disposition",
+          "value": "attachment; filename=Study_Table_V108.html"
+        },
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/study-table-v107.html",
+      "headers": [
+        {
+          "key": "Content-Disposition",
+          "value": "attachment; filename=Study_Table_V107.html"
+        },
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/study-table-v103.html",
+      "headers": [
+        {
+          "key": "Content-Disposition",
+          "value": "attachment; filename=Study_Table_V103.html"
+        },
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/study-table-v104.html",
+      "headers": [
+        {
+          "key": "Content-Disposition",
+          "value": "attachment; filename=Study_Table_V104.html"
+        },
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/study-table-v105.html",
+      "headers": [
+        {
+          "key": "Content-Disposition",
+          "value": "attachment; filename=Study_Table_V105.html"
+        },
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/study-table-v106.html",
+      "headers": [
+        {
+          "key": "Content-Disposition",
+          "value": "attachment; filename=Study_Table_V106.html"
+        },
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        }
+      ]
+    }
+  ],
+  "framework": null,
+  "buildCommand": "python3 scripts/build.py",
+  "installCommand": "",
+  "outputDirectory": "public"
+}
