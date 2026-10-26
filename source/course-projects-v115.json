@@ -1,0 +1,715 @@
+{
+  "piano": {
+    "id": "project",
+    "title": "Play an eight-bar piece with both hands",
+    "intro": "A small piece you can actually finish. I’ll teach the melody, add a bass part, then show how to make the last phrase sound like an ending. The score, slow playback and two-bar loops stay beside the explanation.",
+    "needs": "Use this after you can find middle C and count four steady beats. If reading the bass staff is new, part 2 teaches the notes we need.",
+    "parts": [
+      {
+        "title": "First, let the right hand sing",
+        "goal": "Play bars 1–2 without cutting the long note short.",
+        "opening": [
+          "Put your right thumb on middle C, C4. Let fingers 2, 3, 4 and 5 rest over D4, E4, F4 and G4. For this piece the hand stays in that position. You don’t need a stretch or a thumb crossing.",
+          "I’m going to play the opening slowly. Listen for the last C: it begins on beat 3 of the second bar and continues through beat 4. The silence between attacks does not mean the count has stopped."
+        ],
+        "steps": [
+          {
+            "title": "Find the first four notes",
+            "work": "Bar 1: C4 — D4 — E4 — G4\nFingers: 1 — 2 — 3 — 5\nCount: 1 — 2 — 3 — 4",
+            "explanation": "Each filled note with a stem is a quarter note here: one beat. The melody climbs, then skips F to reach G. Move the fifth finger to play G; don’t slide the whole hand away from its five keys."
+          },
+          {
+            "title": "Come home without rushing",
+            "work": "Bar 2: E4 on 1; D4 on 2; C4 on 3–4\nFingers: 3 — 2 — 1 (hold)",
+            "explanation": "The open note with a stem is a half note, worth two beats. I say “one, two, three, four” while playing only three attacks. Keep the thumb down through “four,” then release at the next bar line."
+          },
+          {
+            "title": "Make the join easy",
+            "work": "Loop bars 1–2. Start at 50 or 60 beats per minute.",
+            "explanation": "First choose Right hand in the player. Count four preparation beats, then enter with the first C. If you keep hesitating between the bars, practise only G–E–D–C before putting the whole opening back together. That join is the job; repeating the part that already works won’t fix it."
+          }
+        ],
+        "ending": "Notice the shape: up to G, then back to C. A tune is easier to remember when you can hear where it is going. The player is a model of notes and timing; it cannot hear or judge your fingers.",
+        "links": [
+          "comfortable-hands",
+          "piano-2",
+          "rests-and-halves"
+        ],
+        "bars": [
+          0,
+          2
+        ],
+        "hand": "right"
+      },
+      {
+        "title": "Add a bass note, not a second tune",
+        "goal": "Read C3, F3 and G3 in the bass staff and hold each for a whole bar.",
+        "opening": [
+          "Leave the right hand alone for a moment. The left hand will play one note per bar. That gives us something solid underneath the tune without making both hands busy at once.",
+          "C3 is the C one octave below middle C. Place left finger 5 on C3, finger 2 on F3, and the thumb on G3. The keys D3 and E3 sit between them. Let the hand spread comfortably; if that reach is uncomfortable, find each note separately before trying to hold a position."
+        ],
+        "steps": [
+          {
+            "title": "Read the three landmarks",
+            "work": "Bass staff, bottom to top: G2, B2, D3, F3, A3\nC3: space between B2 and D3\nF3: second line from the top\nG3: space above F3",
+            "explanation": "The bass clef’s two dots surround the F3 line. Use that F as a landmark. C3 sits three letter steps below it: F–E–D–C. The score labels are available while these positions are new."
+          },
+          {
+            "title": "Give each bass note its full time",
+            "work": "Bars 1–8: C3 | C3 | F3 | C3 | G3 | F3 | G3 | C3\nEvery note lasts 1–2–3–4.",
+            "explanation": "The open oval without a stem is a whole note. In this 4/4 piece it fills a bar. Release and play again at the next bar, even when the pitch repeats. In the model the very small gap separates the two attacks; at your piano aim for a calm, connected change."
+          },
+          {
+            "title": "Listen to the route",
+            "work": "Choose Left hand. Hear all eight bars before adding the melody.",
+            "explanation": "The bass starts at C, visits F and G, and returns to C. Those roots suggest C, F and G harmony, though we are playing single notes rather than full chords. Listen to bar 7 on G: the final C in bar 8 feels like an arrival."
+          }
+        ],
+        "ending": "Try singing the right-hand opening while the left hand holds C3 for four beats at a time. You can learn to coordinate the jobs before asking both hands to move.",
+        "links": [
+          "staff",
+          "piano-4",
+          "three-chord-song"
+        ],
+        "bars": [
+          0,
+          8
+        ],
+        "hand": "left"
+      },
+      {
+        "title": "Put the hands together at their meeting points",
+        "goal": "Coordinate the start of each bar while the bass continues underneath.",
+        "opening": [
+          "Both hands do not need a separate instruction on every beat. In the first bar they start together; after that, only the right hand changes notes. Think “together, right, right, right.”",
+          "I’ll reduce the piece before playing it. We’ll join two bars first, then look at the one place in bars 3–4 where the bass changes. Choose Both hands and loop a pair of bars so you can hear the coordination."
+        ],
+        "steps": [
+          {
+            "title": "Line up the first bar",
+            "work": "Beat 1: left C3 + right C4\nBeat 2: right D4; left C3 still held\nBeat 3: right E4; left still held\nBeat 4: right G4; left still held",
+            "explanation": "Hold the bass with a relaxed fifth finger. Don’t strike it again because the right hand moved. The score places simultaneous notes above one another so you can see the shared start."
+          },
+          {
+            "title": "Read the next bar as one plan",
+            "work": "Bar 2: left C3 begins again on 1.\nRight hand: E4 (1), D4 (2), C4 (3–4).",
+            "explanation": "At the bar line, both hands make a new attack. Then the left holds while the right comes down. If you lose the pulse, stop, name that next pair of notes, and restart with the count-in. Speed comes after the join stops being a surprise."
+          },
+          {
+            "title": "Make the first bass change",
+            "work": "Bar 3: left F3; right F4–F4–E4–D4.\nBar 4: left C3; right C4–E4–G4 (hold 3–4).",
+            "explanation": "In bar 3 the first two right-hand notes are both F, but they are two separate quarter notes. The left F is one whole note. The hands share a pitch letter and use different rhythms. Practise that contrast on its own if your left hand wants to bounce along with the right."
+          }
+        ],
+        "ending": "A useful short practice is three clean joins between bars 2 and 3, then one relaxed run of bars 1–4. If the join is still awkward, slow down or practise only the bass change. There is no need to repeat the whole piece every time.",
+        "links": [
+          "piano-5",
+          "piano-6",
+          "three-chord-song"
+        ],
+        "bars": [
+          0,
+          4
+        ],
+        "hand": "both"
+      },
+      {
+        "title": "Turn eight bars into a performance",
+        "goal": "Keep the pulse, shape two phrases and give the last C its full ending.",
+        "opening": [
+          "Now look at the second half. Bar 5 starts on the high G and walks down to C. Bar 6 begins one step lower, on F, and walks down too. You have learned the keys already; what changes is the order.",
+          "The synthesized player keeps an even tempo and a plain tone. Use it to check notes and coordination. At the piano you can make more of a phrase: let the sound travel toward its high point, then settle, without punching each note equally."
+        ],
+        "steps": [
+          {
+            "title": "Read bars 5 and 6 as descending lines",
+            "work": "Bar 5: G4–E4–D4–C4 over G3.\nBar 6: F4–E4–D4–C4 over F3.",
+            "explanation": "Bar 5 skips F on the way down; bar 6 includes it at the start. Name that difference before playing. Loop 5–6, first right hand and then both hands. Keep the left bass quieter than the melody if your instrument responds to touch."
+          },
+          {
+            "title": "Give the ending somewhere to go",
+            "work": "Bar 7: D4–G4–F4–D4 over G3.\nBar 8: E4 (1), D4 (2), C4 (3–4) over C3.",
+            "explanation": "The G bass in bar 7 leaves us waiting. The C bass and final C melody resolve that feeling. Hold the final right-hand C through beat 4 and let the left finish too. Release both together after the count; don’t snatch the sound away on beat 3."
+          },
+          {
+            "title": "Choose a practice tempo you can keep",
+            "work": "Count in four beats. Play all eight bars. Leave a breath after the last note.",
+            "explanation": "Start with Both hands at 50 or 60. If a bar breaks down, write its number and work on that pair afterwards. For a second pass, hide the note labels and use the staff landmarks. For a third, put the labels back if that lets you listen to the phrase instead of fighting the page."
+          }
+        ],
+        "ending": "This is an original practice piece, not a test of concert playing. A worthwhile finish is a steady, comfortable version you can repeat tomorrow. Then change one thing: make the second phrase a little softer, or play the bass alone and sing the melody.",
+        "links": [
+          "phrasing",
+          "read-melody",
+          "piano-0"
+        ],
+        "bars": [
+          0,
+          8
+        ],
+        "hand": "both"
+      }
+    ]
+  },
+  "spanish": {
+    "id": "project",
+    "title": "Make plans, meet a friend and order a coffee",
+    "intro": "Follow one afternoon from yesterday’s news to paying at a café. I’ll explain why each reply fits, let you hear the exchange, and then help you change the plan without rebuilding every sentence.",
+    "needs": "Useful after the conversation course. Every new phrase is translated here; you can start by listening and reading together.",
+    "parts": [
+      {
+        "title": "Give your friend one piece of yesterday",
+        "goal": "Understand the question, then answer with a small complete event.",
+        "opening": [
+          "A friend asks, “¿Qué hiciste ayer?” You don’t have to produce a story about your entire day. I’ll answer with two connected things: I went to the market and bought bread.",
+          "Here is the vocabulary before you hear it: ayer = yesterday; el mercado = the market; pan = bread; y = and. The question’s hiciste means “you did” in this past-event form. Our answer uses fui (“I went”) and compré (“I bought”)."
+        ],
+        "steps": [
+          {
+            "title": "Hear what the question leaves open",
+            "work": "¿Qué hiciste ayer?\nWhat did you do yesterday?",
+            "explanation": "Qué asks what; ayer places it yesterday. The friend is inviting an event, rather than asking where you are now. I can answer directly without repeating ayer, but saying it gives me a moment to settle into the sentence."
+          },
+          {
+            "title": "Build an answer in two pieces",
+            "work": "Ayer fui al mercado | y compré pan.\nYesterday I went to the market | and bought bread.",
+            "explanation": "Fui al mercado already makes a useful reply. Add y compré pan when you are ready. Al is a + el: going “to the market” uses al mercado. In compré, the written accent puts the stress on the last syllable: com-PRÉ."
+          },
+          {
+            "title": "Keep the event view simple",
+            "work": "Ayer fui al mercado. Ayer compré pan.",
+            "explanation": "These are completed events as we are presenting them. We don’t need the imperfect just because the day contained other activity. If we later set a scene—“I was buying bread when…”—we can choose a different form. For this exchange the short event account does the job."
+          }
+        ],
+        "ending": "Hear both lines, then pause and say only “Fui al mercado.” Add the second clause after the first feels familiar. You are learning a reply you could use, not reciting a list of verb endings.",
+        "links": [
+          "spanish-3",
+          "spanish-2"
+        ],
+        "dialogue": [
+          0,
+          2
+        ]
+      },
+      {
+        "title": "Change the day without losing the invitation",
+        "goal": "Decline Saturday, offer Sunday and confirm a time.",
+        "opening": [
+          "Now your friend suggests coffee. “¿Quieres tomar un café el sábado?” means “Do you want to have a coffee on Saturday?” Here tomar un café is to have a coffee, and el sábado means on Saturday.",
+          "I do want to go, but Saturday won’t work. I’ll make that clear in three short pieces: “Me gustaría” (I’d like to), “pero no puedo” (but I can’t), and a new day. You can speak each piece with a small pause."
+        ],
+        "steps": [
+          {
+            "title": "Keep yes-to-the-idea and no-to-the-day together",
+            "work": "Me gustaría, pero no puedo el sábado. ¿El domingo?\nI’d like to, but I can’t on Saturday. Sunday?",
+            "explanation": "Me gustaría is a polite way to express the wish. Pero connects the problem, and ¿El domingo? offers the replacement. You don’t need to give a personal reason unless you want to. The question can be short because both people know we are discussing a meeting day."
+          },
+          {
+            "title": "Listen for the detail your friend adds",
+            "work": "El domingo sí. ¿A las once?\nSunday works. At eleven?",
+            "explanation": "Your friend accepts the new day and asks about a time. A las once means at eleven. It is not yet a full location plan, so my next reply confirms the time and asks where."
+          },
+          {
+            "title": "Say the agreement out loud",
+            "work": "Sí, a las once. ¿Dónde nos vemos?\nYes, at eleven. Where shall we meet?",
+            "explanation": "Dónde asks where. Nos vemos is a useful chunk for meeting each other; learn it here as “we meet / we’ll see each other.” In this planning context the present form naturally refers to the arranged future meeting."
+          }
+        ],
+        "ending": "Notice how little grammar you have to invent under pressure. The exchange grows one decision at a time: coffee, day, time, place. If you miss one decision, ask about that detail instead of starting over.",
+        "links": [
+          "questions",
+          "spanish-6",
+          "question-words"
+        ],
+        "dialogue": [
+          2,
+          6
+        ]
+      },
+      {
+        "title": "Repair the part you didn’t catch",
+        "goal": "Ask for a slower repeat and check the meeting place.",
+        "opening": [
+          "Your friend answers, “En el café junto al parque”: at the café next to the park. En gives the location, junto a means next to, and a + el becomes al again. This time al belongs to junto al parque, not to fui al mercado.",
+          "Imagine parque is the word you missed. There is no prize for guessing. I’ll ask for the whole phrase again, slowly, then acknowledge it. These repair lines are part of speaking Spanish, not an interruption of it."
+        ],
+        "steps": [
+          {
+            "title": "Recognize the location chunk",
+            "work": "En el café | junto al parque.\nAt the café | next to the park.",
+            "explanation": "The first part names the place; the second helps identify it. If the town has several cafés, the park detail matters. You could confirm just that detail with “¿Junto al parque?” rather than pretending you heard it."
+          },
+          {
+            "title": "Ask the friend to repeat",
+            "work": "¿Puedes repetirlo más despacio?\nCan you repeat it more slowly?",
+            "explanation": "Puedes addresses one person informally, as we have been doing with the friend. Repetirlo means repeat it; más despacio asks for a slower pace. Read the whole chunk, then hear it slowly. You do not need to translate each word while speaking."
+          },
+          {
+            "title": "Close the repair",
+            "work": "Friend: En el café junto al parque.\nYou: Perfecto, gracias.",
+            "explanation": "Now the information is shared. Perfecto, gracias acknowledges the repeat. If you still don’t know the place, ask another question; a memorized acknowledgement should never force you to act as though you understood."
+          }
+        ],
+        "ending": "At the counter we will hear a more formal form. “¿Puede repetirlo…?” is a useful polite version for a worker or a person you address with usted. Both forms ask the same practical favor; the relationship changes the verb form.",
+        "links": [
+          "spanish-5",
+          "question-words",
+          "descriptions"
+        ],
+        "dialogue": [
+          6,
+          10
+        ]
+      },
+      {
+        "title": "Order, answer the follow-up and pay",
+        "goal": "Follow the worker’s questions and adapt the order to your own afternoon.",
+        "opening": [
+          "At the café, the worker asks “¿Qué quiere tomar?”—what would you like to have? Quiere is the usted form here. My own order still begins quiero, “I want”: the customer and the worker are speaking about different people.",
+          "Here are the new choices before we use them: pequeño = small; para aquí = for here; para llevar = to go; pagar = to pay; con tarjeta = by card; en efectivo = in cash; ¿Algo más? = anything else?; Nada más = nothing else."
+        ],
+        "steps": [
+          {
+            "title": "Place a small order",
+            "work": "Quiero un café pequeño, por favor.\nI’d like a small coffee, please.",
+            "explanation": "Un café is the thing I am ordering. Pequeño describes it and comes after café in this phrase. Por favor makes the request polite. We are learning one ordinary way to order; regional habits and café menus vary."
+          },
+          {
+            "title": "Answer the actual follow-up",
+            "work": "Worker: ¿Para aquí o para llevar?\nYou: Para aquí. ¿Puedo pagar con tarjeta?",
+            "explanation": "The worker is asking where the drink will be consumed, not asking you to order again. Para aquí answers that choice. Then puedo pagar asks “can I pay,” and con tarjeta supplies the method. Keep the two jobs separate in your mind."
+          },
+          {
+            "title": "Finish without adding an accidental order",
+            "work": "Worker: Sí. ¿Algo más?\nYou: Nada más, gracias.",
+            "explanation": "Nothing else closes the order. If you do want something else, say it. We have followed the reason for every turn: invitation, arrangement, repair, order, follow-up and payment. Listen to the complete conversation once, then change the choices below."
+          }
+        ],
+        "ending": "In the adapted version, every line is already written and translated. Read it before hiding English. The voice comes from your device; if Spanish audio is unavailable, the complete script remains usable. Speech playback cannot tell whether your own pronunciation was correct.",
+        "links": [
+          "cafe-project",
+          "spanish-7",
+          "spanish-6"
+        ],
+        "dialogue": [
+          10,
+          16
+        ],
+        "adapt": true
+      }
+    ]
+  },
+  "chess": {
+    "id": "project",
+    "title": "Follow a whole game from development to mate",
+    "intro": "Paul Morphy’s 1858 Opera Game, explained one decision at a time. You can move through all 17 moves, jump to the turning points, and inspect the final mating net. The commentary explains this game’s ideas; it does not ask you to guess grandmaster moves.",
+    "needs": "Know piece movement, check, captures and castling. The board gives the next move and a plain-language explanation; no move is hidden behind a quiz.",
+    "parts": [
+      {
+        "title": "Bring pieces out with a reason",
+        "goal": "Follow the first five moves and see why White’s queen is already active.",
+        "opening": [
+          "White is Paul Morphy. Black is conventionally recorded as the Duke of Brunswick and Count Isouard playing together. We’ll use the historical game score and our own explanations. Start with the normal initial position.",
+          "I’m watching three things: which pieces can join the center, which moves open lines, and whether a move gains something concrete. “Develop quickly” is useful advice only when you can point to what a developed piece does."
+        ],
+        "steps": [
+          {
+            "title": "Open the center while developing",
+            "work": "1 e4 e5 2 Nf3 d6 3 d4 Bg4",
+            "explanation": "The e-pawns open bishop diagonals. Nf3 attacks e5; ...d6 supports that pawn. White’s d4 challenges the center. Black’s bishop then comes from c8 to g4, where it pins the f3 knight toward the queen on d1. Moving the knight could expose the queen; it is a relative pin, not automatically an illegal move."
+          },
+          {
+            "title": "Follow the actual captures",
+            "work": "4 dxe5 Bxf3 5 Qxf3 dxe5",
+            "explanation": "White’s d-pawn takes the pawn on e5. Black exchanges the g4 bishop for the f3 knight; White’s queen recaptures on f3. Black’s d-pawn then takes that white pawn on e5. The center has changed, and White has a queen that can work with the remaining bishop."
+          },
+          {
+            "title": "Count the work each side still has to do",
+            "work": "After 5...dxe5: White can develop Bc4. Black’s kingside bishop is still on f8.",
+            "explanation": "An early queen move can waste time if the opponent attacks it while developing. Here Qxf3 was a recapture and will help aim at the king’s side. We still have to inspect the following moves; one famous game does not prove that an early queen excursion is always good."
+          }
+        ],
+        "ending": "Use the board’s next-move button and follow each capture until you can name what changed. The disappearing pawns and bishop matter more than memorizing the string of notation.",
+        "links": [
+          "read-moves",
+          "chess-4",
+          "count-exchanges"
+        ],
+        "position": 0
+      },
+      {
+        "title": "Build pressure, then notice what a pin permits",
+        "goal": "Read the queen–bishop arrangement and Black’s queenside pawn pushes.",
+        "opening": [
+          "White now develops with threats. That gives Black less freedom to finish development. Follow the squares rather than taking “attack f7” on trust: a friendly piece can block a line too.",
+          "We’ll stop just before the first sacrifice. White has both bishops active and a knight developed; Black still has pieces at home. That helps explain the attack, but the concrete captures must still work."
+        ],
+        "steps": [
+          {
+            "title": "Put queen and bishop on related lines",
+            "work": "6 Bc4 Nf6 7 Qb3 Qe7",
+            "explanation": "The bishop on c4 attacks f7. The queen on b3 attacks b7 and sits behind its own bishop on the b3–c4 diagonal. It does not currently attack f7 through that bishop. If the bishop captures on f7, the queen can support it along the newly opened line. ...Qe7 adds a defender to f7, but occupies a square the f8 bishop would use to develop."
+          },
+          {
+            "title": "Use a pin to make a threat awkward",
+            "work": "8 Nc3 c6 9 Bg5",
+            "explanation": "White’s remaining knight comes out. Black’s ...c6 controls d5 and supports a possible ...b5. Bg5 lines the bishop up with the knight on f6 and the queen on e7. The knight is pinned to a queen, not to a king; a knight move can be legal but costly."
+          },
+          {
+            "title": "Pause at the pawn attack",
+            "work": "9...b5 attacks the bishop on c4.",
+            "explanation": "A bishop can retreat from an attacking pawn. Morphy chooses 10 Nxb5 instead, removing the b5 pawn with the knight from c3. Before calling that brilliant, follow Black’s capture and White’s reply in the next part. A sacrifice needs a continuation, not a slogan about activity."
+          }
+        ],
+        "ending": "At each stop ask what a line actually contains. That habit catches the tempting mistake of claiming that the queen on b3 already attacks through its own bishop.",
+        "links": [
+          "pins",
+          "chess-1",
+          "chess-2"
+        ],
+        "position": 10
+      },
+      {
+        "title": "Bring the rooks into a forcing sequence",
+        "goal": "Follow checks, castling and captures down the open d-file.",
+        "opening": [
+          "A forcing move narrows the opponent’s replies. A check must be answered; a capture may create an urgent material problem. It does not follow that every forcing move is good. We’ll account for each piece that comes off.",
+          "White castles on the queenside in this game. Notice that this is also a rook move: the rook from a1 lands on d1, directly behind the action. The king goes to c1. The squares and safety conditions have already been checked in this legal game score."
+        ],
+        "steps": [
+          {
+            "title": "Trace the sacrifice and the check",
+            "work": "10 Nxb5 cxb5 11 Bxb5+ Nbd7",
+            "explanation": "White’s knight takes the b5 pawn; Black’s c6 pawn takes that knight. White’s bishop from c4 then takes the pawn on b5 with check. The black knight from b8 goes to d7 to block the diagonal b5–c6–d7–e8. The “b” in Nbd7 tells us which knight moved; the f6 knight could also geometrically reach d7."
+          },
+          {
+            "title": "Use castling to place the first rook",
+            "work": "12 O-O-O Rd8 13 Rxd7 Rxd7",
+            "explanation": "White castles, placing the a1 rook on d1. Black’s a8 rook goes to d8. The white rook then captures the blocking knight on d7; Black’s rook recaptures there. White has given up a rook and removed a defender, while the remaining rook is ready to enter."
+          },
+          {
+            "title": "Bring the remaining rook to the file",
+            "work": "14 Rd1 Qe6 15 Bxd7+ Nxd7",
+            "explanation": "The h1 rook travels to d1 along the cleared first rank. Black’s queen moves off e7. White’s bishop from b5 captures the rook on d7 with check; the f6 knight recaptures on d7. Now the last white rook and queen can exploit the back rank. Every step is visible on the board; replay the captures if the piece count becomes hard to follow."
+          }
+        ],
+        "ending": "This passage connects development to tactics: the rooks could join because paths were clear, and the checks kept the black king in the center. It is a concrete sequence from this game, not permission to sacrifice pieces whenever the opponent develops slowly.",
+        "links": [
+          "castling",
+          "count-exchanges",
+          "chess-3"
+        ],
+        "position": 18
+      },
+      {
+        "title": "Watch the queen sacrifice open the final square",
+        "goal": "Verify the mating net after 17 Rd8, including the defending bishop.",
+        "opening": [
+          "Here is the ending without a guessing pause. White plays 16 Qb8+, Black replies ...Nxb8, and White plays 17 Rd8#. The queen sacrifice draws the knight from d7 to b8, clearing the d-file for the rook.",
+          "A mate claim needs more than a check symbol. We must look for a capture of the checking piece, a block, or a safe king move. The board reaches the exact final position so you can inspect those possibilities."
+        ],
+        "steps": [
+          {
+            "title": "Remove the blocker with a forcing offer",
+            "work": "16 Qb8+ Nxb8",
+            "explanation": "The white queen moves from b3 to b8 along the clear b-file, giving check along the eighth rank. In the recorded reply the knight on d7 captures it. That knight has now left the d-file. We are following the game’s actual reply; this page is not an engine analysis of every alternative defense."
+          },
+          {
+            "title": "Use the cleared file",
+            "work": "17 Rd8#",
+            "explanation": "The rook travels from d1 to d8 and checks the king on e8 along the rank. No square lies between d8 and e8, so the check cannot be blocked. Black cannot capture the rook with the king because the bishop on g5 protects d8 along g5–f6–e7–d8."
+          },
+          {
+            "title": "Check the king’s remaining neighborhood",
+            "work": "d7 is covered by the rook. e7 is covered by the g5 bishop. f8 is occupied by Black’s bishop.",
+            "explanation": "The remaining neighboring squares are occupied by Black’s pieces or attacked as well. With no legal capture, block or king escape, the position is checkmate. Use Previous move to put the knight back on d7, then replay the queen offer and rook move. You can see precisely why clearing that file mattered."
+          }
+        ],
+        "ending": "Take one useful habit from the game: name the defender or blocker before trying to remove it. Here the final path depends on the d7 knight leaving, and the rook’s safety depends on the bishop on g5. Both pieces belong in the explanation.",
+        "links": [
+          "queen-net",
+          "chess-3",
+          "annotated-game"
+        ],
+        "position": 30
+      }
+    ]
+  },
+  "calculus": {
+    "id": "project",
+    "title": "Follow the water: rate, volume and a tank’s limit",
+    "intro": "One problem from start to finish: turn a changing flow rate into a volume, check the derivative, and decide when the formula runs into the physical tank. Then compare a tank that starts draining.",
+    "needs": "Uses functions, derivative rules, definite integrals and a quadratic equation. Each algebra step and unit is shown.",
+    "parts": [
+      {
+        "title": "Decide what the formula measures",
+        "goal": "Separate a flow rate from the amount of water already in the tank.",
+        "opening": [
+          "A pump starts filling a tank at time t = 0. The tank already contains 3 litres. During the next four minutes the incoming flow rate is r(t) = 2t + 1 litres per minute. The tank holds 20 litres; any excess runs out through an overflow.",
+          "I’ll keep two quantities on the page: r is a rate, in L/min; V is a volume, in L. Putting t = 2 into the rate gives 5 L/min. It does not say the tank contains 5 L. This distinction is the main work of the first step."
+        ],
+        "steps": [
+          {
+            "title": "Give every symbol a job",
+            "work": "0 ≤ t ≤ 4 min\nr(t) = 2t + 1 L/min\nV(0) = 3 L\nCapacity C = 20 L",
+            "explanation": "We measure t numerically in minutes. The coefficient 2 in the rate has units L/min² and the constant 1 has units L/min. The initial 3 L belongs to volume, not to the rate. We will first calculate the water available, then enforce the capacity."
+          },
+          {
+            "title": "Estimate before integrating",
+            "work": "At t = 0, r = 1 L/min.\nAt t = 4, r = 9 L/min.",
+            "explanation": "The rate rises in a straight line. Its average over these four minutes is (1 + 9)/2 = 5 L/min. So the pump adds 5 × 4 = 20 L. Add the initial 3 L and we would have 23 L if the tank were large enough."
+          },
+          {
+            "title": "Spot the physical question",
+            "work": "23 L is greater than the 20 L capacity.",
+            "explanation": "The arithmetic has already warned us that an unrestricted volume formula will eventually fail as a description of water inside this tank. It can still describe initial water plus all incoming water. We need to account for the 3 L that cannot remain inside."
+          }
+        ],
+        "ending": "Move the time control in the model. The rising line is the incoming rate, while the volume curve includes the initial 3 L. At the start you can have nonzero volume and a different nonzero rate; they are different measurements.",
+        "links": [
+          "functions",
+          "definite-integrals"
+        ],
+        "model": "tank"
+      },
+      {
+        "title": "Accumulate the rate and put the initial water back",
+        "goal": "Derive V(t) = 3 + t² + t before overflow.",
+        "opening": [
+          "The rate graph lets us find volume added by area. A strip with height in L/min and width in min has area in litres. We can use either the straight-line geometry or an integral; they must agree.",
+          "I’ll call the unrestricted amount W(t). That keeps it separate from V(t), the water actually inside a tank that can overflow. Before the tank fills, W and V are equal."
+        ],
+        "steps": [
+          {
+            "title": "Integrate from the actual start",
+            "work": "W(t) = 3 + ∫₀ᵗ (2u + 1) du\n= 3 + [u² + u]₀ᵗ\n= 3 + t² + t",
+            "explanation": "The temporary letter u keeps the integration variable separate from the upper limit t. An antiderivative of 2u is u²; an antiderivative of 1 is u. At the lower endpoint, 0² + 0 = 0. The integral adds water; the leading 3 supplies the water already present."
+          },
+          {
+            "title": "Calculate a time before the tank is full",
+            "work": "At t = 2: added = 2² + 2 = 6 L.\nW(2) = 3 + 6 = 9 L.",
+            "explanation": "The rate at that moment is 5 L/min, but the accumulated addition is 6 L. The average rate over the first two minutes was 3 L/min, so 3 × 2 = 6 L is a second check."
+          },
+          {
+            "title": "Differentiate to check the model",
+            "work": "W′(t) = 2t + 1 = r(t)\nW(0) = 3",
+            "explanation": "The derivative recovers the incoming flow, and the value at zero recovers the initial volume. Both checks matter. Adding any constant would leave the derivative unchanged, but only adding 3 satisfies this starting condition."
+          }
+        ],
+        "ending": "If you choose a 24 L tank in the model, W remains below capacity throughout the four-minute interval. Then W is also the actual tank volume. The same algebra can describe two different situations depending on the physical boundary.",
+        "links": [
+          "calculus-4",
+          "definite-integrals",
+          "derivative-rules"
+        ],
+        "model": "tank"
+      },
+      {
+        "title": "Find the instant the tank fills",
+        "goal": "Solve the capacity equation and distinguish incoming flow from volume change.",
+        "opening": [
+          "For the 20 L tank, the next question is when overflow begins. I use the unrestricted formula only up to that instant, set it equal to capacity, and solve for t.",
+          "Afterwards the pump keeps running. The water level does not keep rising: the incoming water leaves by the overflow. That changes the balance equation for the water inside."
+        ],
+        "steps": [
+          {
+            "title": "Set the volume equal to capacity",
+            "work": "3 + t² + t = 20\nt² + t − 17 = 0\nt = (−1 ± √69)/2",
+            "explanation": "The quadratic formula uses a = 1, b = 1, c = −17. The discriminant is 1² − 4(1)(−17) = 69. The negative root is outside our time interval. The positive root is about 3.653 minutes."
+          },
+          {
+            "title": "Describe the tank on both sides of that time",
+            "work": "Before filling: V(t) = 3 + t² + t.\nAfter filling: V(t) = 20.\nAt t = 4: 23 − 20 = 3 L has overflowed.",
+            "explanation": "For this continuously positive inflow, we can write V(t) = min(3 + t² + t, 20). The overflow amount is max(0, 3 + t² + t − 20). These two volumes add up to the unrestricted amount at every time."
+          },
+          {
+            "title": "Check the rate balance after filling",
+            "work": "At t = 4: incoming = 9 L/min; overflow = 9 L/min.\nV′ = incoming − overflow = 0 L/min.",
+            "explanation": "The actual volume graph is flat after the tank is full. Right at the filling instant our ideal model has a corner: the left-hand rate is positive and the right-hand rate is zero. There is no single ordinary derivative there. Real overflow may begin more gradually than this simple model assumes."
+          }
+        ],
+        "ending": "Change capacity from 20 L to 24 L. At four minutes the second tank holds 23 L and is still filling at 9 L/min. A rate belongs to a quantity under stated conditions; copying the incoming rate onto a capped volume misses those conditions.",
+        "links": [
+          "algebra-for-rates",
+          "calculus-3",
+          "calculus-5"
+        ],
+        "model": "tank"
+      },
+      {
+        "title": "Compare a tank that fills, then drains",
+        "goal": "Use the sign of a net rate to find a maximum and check total change.",
+        "opening": [
+          "Now choose “fills then drains.” This is a new setup: the tank starts with 10 L and its net flow is r(t) = 6 − 2t L/min over the same four minutes. “Net” already means incoming minus outgoing. Once r becomes negative, more water leaves than enters.",
+          "I’ll integrate this rate and inspect the sign instead of assuming that more time always means more water. The 20 L capacity will turn out not to matter in this interval."
+        ],
+        "steps": [
+          {
+            "title": "Accumulate the signed rate",
+            "work": "V(t) = 10 + ∫₀ᵗ (6 − 2u) du\n= 10 + 6t − t²",
+            "explanation": "A negative part of the rate subtracts volume. At t = 4, V = 10 + 24 − 16 = 18 L. The net change is 8 L, not the total amount that ever flowed in. The average net rate is 8/4 = 2 L/min."
+          },
+          {
+            "title": "Locate and classify the turning point",
+            "work": "V′(t) = 6 − 2t = 0 ⇒ t = 3 min.\nV(3) = 10 + 18 − 9 = 19 L.",
+            "explanation": "Before three minutes the derivative is positive, so volume rises. After three it is negative, so volume falls. Comparing V(0) = 10, V(3) = 19 and V(4) = 18 confirms that 19 L is the maximum on this closed interval. It never reaches the 20 L capacity."
+          },
+          {
+            "title": "Reconcile the two areas",
+            "work": "From 0 to 3: add ½ × 3 × 6 = 9 L.\nFrom 3 to 4: lose ½ × 1 × 2 = 1 L.\nNet change = 9 − 1 = 8 L.",
+            "explanation": "The rate graph crosses zero at the maximum volume. The final rate is −2 L/min even though the overall change since the start is +8 L. A current trend and a total change can have different signs."
+          }
+        ],
+        "ending": "If you want a variation, work out this second tank at t = 2 before moving the slider: V = 10 + 12 − 4 = 18 L and r = 2 L/min. The answer is here so you can compare your reasoning without entering a quiz.",
+        "links": [
+          "calculus-1",
+          "calculus-5",
+          "definite-integrals"
+        ],
+        "model": "tank",
+        "preset": "drain"
+      }
+    ]
+  },
+  "physics": {
+    "id": "project",
+    "title": "Down a hill, into a cart, against a spring",
+    "intro": "Follow one physical event through three stages. I’ll choose a law for each stage, calculate the motion and show exactly where the energy goes. The same story uses energy, momentum, force and units together.",
+    "needs": "Uses the energy, collision and force lessons. Model assumptions: frictionless track, negligible wheel-rotation energy, a brief sticking collision, an ideal spring and g = 10 m/s².",
+    "parts": [
+      {
+        "title": "Use the hill to find the first speed",
+        "goal": "Turn gravitational energy into kinetic energy before the collision.",
+        "opening": [
+          "A 2 kg cart starts from rest 0.45 m above a level track. It moves down a frictionless hill and hits a stationary 1 kg cart. They stick together, then compress a spring of stiffness 48 N/m fixed to a wall.",
+          "I won’t use one formula for the whole trip. First I’ll stop the story just before the collision. At this point the second cart and spring have not yet affected the first cart’s motion. Take gravitational potential energy to be zero at track level."
+        ],
+        "steps": [
+          {
+            "title": "Calculate the available energy",
+            "work": "Egravity = mgh = 2 × 10 × 0.45 = 9 J",
+            "explanation": "The units are kg × m/s² × m = kg·m²/s², which we call joules. With no friction and starting from rest, this 9 J becomes kinetic energy at the bottom."
+          },
+          {
+            "title": "Solve for speed, rather than guessing a formula",
+            "work": "½mv² = 9\n½ × 2 × v² = 9\nv² = 9 ⇒ v = 3 m/s",
+            "explanation": "The positive value is the speed. If rightwards is positive on our track, the velocity is +3 m/s. The mass cancels from mgh = ½mv² for this ideal hill, giving v = √(2gh), but I keep the numbers in view first so the energy account is clear."
+          },
+          {
+            "title": "Write the state at the stage boundary",
+            "work": "Moving cart: 2 kg at +3 m/s.\nOther cart: 1 kg at 0 m/s.\nTotal kinetic energy: 9 J.",
+            "explanation": "These become the inputs to the collision calculation. Do not hand the spring the original 9 J yet; the sticking collision can transfer some of that energy into deformation, sound and thermal energy."
+          }
+        ],
+        "ending": "The model shows snapshots, not a measured animation. You can select the 0.80 m hill later to see which quantities change. We keep g = 10 to make the arithmetic readable; near Earth’s surface 9.8 is often used instead.",
+        "links": [
+          "physics-2",
+          "physics-4",
+          "units-and-directions"
+        ],
+        "model": "journey",
+        "phase": "hill"
+      },
+      {
+        "title": "Use momentum for the sticking collision",
+        "goal": "Find the shared speed and account for the reduced kinetic energy.",
+        "opening": [
+          "During the brief collision, take the two carts as our system. The track’s external horizontal impulse is negligible over that short time, and the spring has not yet been reached. Horizontal momentum is conserved for that stage.",
+          "Because the carts stick, they leave with the same velocity. This gives one unknown. Kinetic energy is not conserved in a sticking collision, so setting its before and after values equal would describe a different event."
+        ],
+        "steps": [
+          {
+            "title": "Add the signed momenta before impact",
+            "work": "pinitial = (2 kg)(+3 m/s) + (1 kg)(0)\n= +6 kg·m/s",
+            "explanation": "Momentum includes direction. We have chosen rightwards as positive. The stationary cart adds mass to the final moving object but contributes zero initial momentum."
+          },
+          {
+            "title": "Solve for the shared velocity",
+            "work": "(2 + 1)v = 6\n3v = 6 ⇒ v = +2 m/s",
+            "explanation": "Both carts now move right at 2 m/s. The total mass is 3 kg, so the same total momentum is carried with a lower speed. The collision forces between the carts are internal to the two-cart system."
+          },
+          {
+            "title": "Check where the kinetic energy went",
+            "work": "KEafter = ½ × 3 × 2² = 6 J.\nOther energy = 9 − 6 = 3 J.",
+            "explanation": "The 3 J has not vanished. In this model it is assigned to deformation, thermal energy and sound from the collision. We track it together as “other” because this problem does not tell us how to split it further. Momentum can be conserved while kinetic energy decreases."
+          }
+        ],
+        "ending": "A common wrong turn is to carry v = 3 m/s forward for the combined carts. That would give 9 kg·m/s, more momentum than the system started with. Checking the stage boundary exposes the mistake immediately.",
+        "links": [
+          "physics-5",
+          "force-diagrams",
+          "physics-1"
+        ],
+        "model": "journey",
+        "phase": "collision"
+      },
+      {
+        "title": "Use the spring’s work to find the stopping distance",
+        "goal": "Turn the remaining kinetic energy into elastic energy.",
+        "opening": [
+          "The joined carts now reach the spring with 6 J of kinetic energy. The track is still frictionless. As compression x grows, the spring force grows too: F = kx. This is why we cannot use the final force for the entire stopping distance.",
+          "I’ll calculate the spring’s stored energy from the area under its force–compression graph. The line rises from zero to kx, making a triangle. Its area is ½ × x × kx = ½kx²."
+        ],
+        "steps": [
+          {
+            "title": "Set up the new energy account",
+            "work": "At spring contact: KE = 6 J, elastic energy = 0.\nAt maximum compression: KE = 0, elastic energy = 6 J.",
+            "explanation": "At the furthest compression the carts are momentarily at rest. They would rebound afterwards in this ideal model; “at rest now” does not mean they remain there permanently."
+          },
+          {
+            "title": "Solve the compression equation",
+            "work": "½ × 48 × x² = 6\n24x² = 6\nx² = 0.25 ⇒ x = 0.50 m",
+            "explanation": "The compression is a nonnegative distance. We use 6 J, the kinetic energy after the collision. Using the original 9 J would count the collision’s 3 J a second time."
+          },
+          {
+            "title": "Calculate the force at that instant",
+            "work": "Fmax = kx = 48 × 0.50 = 24 N\nAverage force during compression = 12 N",
+            "explanation": "The spring force points left, opposing the carts’ rightward compression. Its magnitude rises linearly from 0 to 24 N. The average magnitude is 12 N, and 12 N × 0.50 m = 6 J checks the stored energy. The force is largest when the speed is momentarily zero."
+          }
+        ],
+        "ending": "The carts’ momentum falls from +6 kg·m/s to zero while the spring compresses. That is allowed: the wall-mounted spring exerts an external horizontal force on the carts. We did not assume their momentum stayed constant during this later stage.",
+        "links": [
+          "physics-2",
+          "physics-1",
+          "velocity-graphs"
+        ],
+        "model": "journey",
+        "phase": "spring"
+      },
+      {
+        "title": "Close the account, then change the hill",
+        "goal": "Track the whole 9 J and compare a second height without changing the method.",
+        "opening": [
+          "Here is the complete baseline account: 9 J before the collision becomes 6 J of spring energy plus 3 J in other forms. At maximum compression the carts have no kinetic energy. Every joule in the starting model has a destination.",
+          "Now change the height to 0.80 m. I’ll redo the calculation using the same sequence of laws. A different input should change the numbers, not make us invent a new method."
+        ],
+        "steps": [
+          {
+            "title": "Recalculate the approach and collision",
+            "work": "Initial energy = 2 × 10 × 0.80 = 16 J.\nApproach speed = √(2 × 10 × 0.80) = 4 m/s.\nShared speed = (2 × 4 + 1 × 0)/3 = 8/3 m/s.",
+            "explanation": "Use momentum for the collision again. The shared speed is 2⅔ m/s. Keep the fraction until the end so rounding does not quietly change the energy balance."
+          },
+          {
+            "title": "Carry the correct energy to the spring",
+            "work": "KEafter = ½ × 3 × (8/3)² = 32/3 J.\nOther energy = 16 − 32/3 = 16/3 J.\n24x² = 32/3 ⇒ x² = 4/9 ⇒ x = 2/3 m.",
+            "explanation": "The spring stores 10⅔ J; 5⅓ J is in other forms after the collision. The new compression is about 0.667 m, and the maximum spring force is 48 × 2/3 = 32 N. These values add back to the initial 16 J."
+          },
+          {
+            "title": "State when each conservation law applied",
+            "work": "Hill: mechanical energy conserved.\nBrief collision: cart-system momentum conserved; kinetic energy reduced.\nSpring: kinetic + elastic energy conserved.",
+            "explanation": "The assumptions choose the law. Energy for the complete system is accounted for throughout, but mechanical energy of the carts alone is not constant through the collision. Horizontal momentum of the carts is conserved during the collision approximation, then changes under the spring’s external force."
+          }
+        ],
+        "ending": "If you explain this problem to someone else, pause at each stage boundary and name the system. That does more work than memorizing three formulas. The model’s table lets you compare both heights and see the complete energy account at every stage.",
+        "links": [
+          "physics-2",
+          "physics-5",
+          "force-diagrams"
+        ],
+        "model": "journey",
+        "phase": "account",
+        "height": 0.8
+      }
+    ]
+  }
+}

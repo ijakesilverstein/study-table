@@ -105,3 +105,10 @@ Keep the 65 units and 130 worked cases. Seven lesson records receive clearer exp
 ## V114 — preserve and integrate Claude's additions
 
 Import all 65 takeaways, 65 review prompts, 34 new misconception blocks and 16 figures from the user's upload without replacing the newer V113 lesson data. Every unit now displays the authored misconception check sentence. Practice remains optional, with one disclosure and a separate answer toggle for each item. Original uploads are preserved unchanged. Targeted content and figure corrections, retention of all prior V113 teaching, and complete preservation checks are documented in CLAUDE_MERGE_V114.md.
+
+
+## V115 — teach complete performances and problems
+
+Add five connected projects, each with four teaching parts. Preserve all 65 existing units, 130 formal cases, Claude additions and original studios. Piano teaches an original eight-bar melody and bass with notation, a count-in, hand isolation and loops. Spanish follows 16 conversational turns and lets the learner adapt already-taught choices. Chess replays every move of the 1858 Opera Game with original annotations. Calculus connects a flow rate, integral, initial condition, capacity and turning point. Physics follows the same carts through a hill, a sticking collision and a spring, choosing and checking each conservation law.
+
+These projects explain the complete solution before an optional variation. Course maps and the final units link to them; per-course and main Continue restore the chosen project part. Reading a project never changes assessment records. Content preservation, legal game moves, music durations, model accounts, media cancellation, mobile layout and both themes are verified in the project checks. See COURSE_PROJECTS_V115.md.

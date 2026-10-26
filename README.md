@@ -2,7 +2,9 @@
 
 An offline-capable learning app, published at https://study-table-v102.vercel.app.
 
-V114 merges Claude's content expansion into the existing 65-unit courses: Spanish 15, piano 14, chess 14, calculus 11 and physics 11. Every unit now has a takeaway, complete misconception reasoning and two optional practice items. All 16 imported figures remain available alongside the newer V113 demonstrations. Three named chapters organize each course. Each unit contains explanatory teaching and two complete worked cases. **Full curriculums** shows the longer sequences, preserved original practice material, and **Quick worked lessons** links. The 38 short lessons remain available across 11 subjects. These are introductory foundations, not complete professional training.
+V115 adds five complete, four-part teaching projects: an original two-hand piano piece; a full Spanish afternoon with adaptable plans and orders; Morphy’s complete Opera Game; a changing-rate tank with overflow; and a hill–collision–spring energy account. Project parts save their own reading place and appear on the course maps. There are no project quiz gates. See [the project notes](docs/COURSE_PROJECTS_V115.md).
+
+V114 merged Claude's content expansion into the existing 65-unit courses: Spanish 15, piano 14, chess 14, calculus 11 and physics 11. Every unit now has a takeaway, complete misconception reasoning and two optional practice items. All 16 imported figures remain available alongside the newer V113 demonstrations. Three named chapters organize each course. Each unit contains explanatory teaching and two complete worked cases. **Full curriculums** shows the longer sequences, preserved original practice material, and **Quick worked lessons** links. The 38 short lessons remain available across 11 subjects. These are introductory foundations, not complete professional training.
 
 ## Edit and build
 
@@ -13,7 +15,7 @@ python3 scripts/build.py
 python3 -m http.server 8769 --directory public
 ```
 
-Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v114.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
+Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v115.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
 
 - `source/teacher-prose-v109.json`: rewritten explanations in existing lessons.
 - `source/draft-foundation-lessons.json` and `source/lessons-v109.json`: the 12 new lessons. The historical `draft-` filename is retained for build compatibility; these records are now published.
@@ -32,6 +34,9 @@ Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v114.htm
 - `source/claude-additions-v114.json`: all imported takeaways/reviews and 34 new misconception blocks, extracted without modification.
 - `source/claude-corrections-v114.json`: targeted refinements applied separately from the original additions.
 - `source/claude-figures-v114.js` and `source/claude-additions-v114.css`: all 16 reviewed imported figures and the optional practice UI.
+- `source/course-projects-v115.json`: all 20 authored project parts, with complete worked teaching and links to prerequisite units.
+- `source/course-projects-v115.js` and `.css`: project navigation, annotated board, two-hand score/playback, translated conversation and physical/mathematical models.
+- `source/project-demos-v115.json`: original eight-bar music, 16 conversation turns and all 34 chess positions. Regenerate with `qa/generate-project-demos.py` during development; no chess dependency is needed for production.
 - `source/imports/`: unchanged original uploads and provenance; these files are not executed by the build.
 - `source/course-stages.json`: the three chapter boundaries and purposes in each course.
 - `source/course-reader.js` and `.css`: course maps, written units, notation, optional worked variations, and reading position.
@@ -60,7 +65,7 @@ V114 also verifies the unchanged original uploads, every extracted Claude additi
 
 ## Vercel and GitHub
 
-The user's latest preference is to deliver future versions as HTML files and leave Vercel unchanged. V113 is the last deployed release. V114 is a local merged release; do not deploy it or later versions unless the user explicitly requests deployment again.
+The user's latest preference is to deliver future versions as HTML files and leave Vercel unchanged. V113 is the last deployed release. V114 and V115 are local HTML releases; do not deploy it or later versions unless the user explicitly requests deployment again.
 
 This is a separate project from LaunchWell Labs. The intended GitHub repository is private `ijakesilverstein/study-table`. Remote creation and Vercel Git integration must be confirmed before describing GitHub as connected.
 
