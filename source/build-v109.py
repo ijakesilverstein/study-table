@@ -4,6 +4,8 @@ from demos_v109 import build_demos
 
 root=Path(__file__).resolve().parent
 html=(root/'Study_Table_V108.html').read_text()
+head_end=html.index('</head>')
+html=html[:head_end]+'<script id="study-theme-state">'+(root/'theme-state.js').read_text()+'</script>'+html[head_end:]
 match=re.search(r'(<script id="v97-teacher-script">)(.*?)(</script>)',html,re.S)
 teacher=match[2]
 def once(text,old,new):
@@ -68,6 +70,9 @@ teacher=once(teacher,'v108MountCurricula();\n const hero=', 'v108MountCurricula(
 teacher=once(teacher,"escape(x.description)+'</p><div>'+", "escape(x.description)+'</p>'+(['piano','spanish','chess'].includes(x.subject)?'<button type=\"button\" class=\"v109-taught-path\" data-teaching-path=\"'+x.subject+'\">Start the '+DATA.filter(l=>l.subject===x.subject).length+'-lesson taught sequence</button>':'')+'<div>'+" )
 teacher=once(teacher,'STUDY TABLE · FIRST STEPS','STUDY TABLE · LESSONS')
 html=html[:match.start(2)]+teacher+html[match.end(2):]
+html=once(html,"function apply(){\n  const portal=document.getElementById('v35Portal');if(!portal)return;", "function apply(){\n  if(window.studyTableTheme){window.studyTableTheme.sync();return}\n  const portal=document.getElementById('v35Portal');if(!portal)return;")
+html=once(html,"btn.onclick=()=>{night=!night;try{localStorage.setItem(KEY,night?'1':'0')}catch{};apply()};", "btn.onclick=()=>{if(window.studyTableTheme){window.studyTableTheme.set(window.studyTableTheme.get()==='dark'?'light':'dark');return}night=!night;try{localStorage.setItem(KEY,night?'1':'0')}catch{};apply()};")
+html=once(html,"function setTheme(v){\n document.documentElement.dataset.studyTheme=v;", "function setTheme(v){\n if(window.studyTableTheme){window.studyTableTheme.set(v);return}\n document.documentElement.dataset.studyTheme=v;")
 html=html.replace('Study Table V108 — Taught Lessons','Study Table V109 — Learn at Your Pace')
 html=html.replace('study-table-v108.html','study-table-v109.html').replace('Study_Table_V108.html','Study_Table_V109.html')
 # Append after the historical layers so this palette has a single clear point of ownership.

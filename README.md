@@ -21,6 +21,7 @@ Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v109.htm
 - `source/demos_v109.py`: dialogue lines, piano events and chess frames.
 - `source/demos-v109.js`: accessible playback and board controls.
 - `source/theme-v109.css`: the current palette.
+- `source/theme-state.js`: the shared light/dark preference; both theme controls and legacy saved preferences must stay synchronized.
 - `source/Study_Table_V108.html`: the preserved baseline, including the original compressed course archive and earlier lesson engine. New changes build on it; do not edit compiled V109 HTML directly.
 
 Keep lesson IDs stable because existing browser progress refers to them. Reading position is separate from assessment records. Same-day retries must not become independent recall successes. Do not label visits or self-checks as expertise.
@@ -36,6 +37,8 @@ python3 scripts/build.py --check
 ```
 
 The test runner starts its own local server. `CHROME_BINARY` can select an installed Chromium binary. Browser checks cover taught lessons, optional practice, saved work, curriculum access, media scheduling/cancellation and mobile layout. `python-chess` independently verifies every new worked line. Subject accuracy still needs independent review; automated checks do not prove learning gains.
+
+The contrast regression seeds conflicting legacy/current theme preferences, clicks both actual theme controls, reloads, and checks visible text contrast with axe-core across the taught lessons and main dialogs.
 
 ## Vercel and GitHub
 

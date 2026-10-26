@@ -56,3 +56,4 @@ html body #v97Study .v109-keys button:not(.v109-black),html body #v97Study .v105
 html body #v97Study .v109-keys button.v109-black,html body #v97Study .v97-keyboard button.v97-black{background:#222228!important;color:#ffffff!important}
 html body #v97Study .v109-keys button.playing:not(.v109-black),html body #v97Study .v105-demo-keys .playing{background:#e0d5fa!important;color:#222228!important;box-shadow:inset 0 -4px #8867c6}
 html body #v97Study .v109-keys button.v109-black.playing{background:#7657bf!important}
+html #v101ToolsButton{z-index:24000;background:var(--study-accent)!important;color:var(--study-accent-text)!important;border-color:var(--study-accent)!important;box-shadow:none}

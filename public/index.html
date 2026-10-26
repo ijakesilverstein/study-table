@@ -1207,7 +1207,39 @@ html[data-study-theme="dark"] #v103skillMastery{background:#16231b;color:#e6f1e7
 #v108CoursesHome{padding:14px 19px;border:1px solid #235d48;background:#f6f9f1;color:#1c4b36;border-radius:10px;font:650 16px/1.5 system-ui;min-height:52px;margin:12px 0 0 10px;cursor:pointer}#v108CoursesTop,#v108CoursesArchive{font-weight:700}#v108Curricula{box-sizing:border-box;width:min(980px,96vw);max-height:90vh;padding:28px;border:1px solid #b7cbb0;border-radius:16px;background:#f8f6ef;color:#20382d;overflow:auto}#v108Curricula::backdrop{background:#163c2dbb}#v108Curricula header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:20px}#v108Curricula h2{font:400 32px/1.3 Georgia,serif;margin:0}#v108Curricula p{font:16px/1.8 system-ui}#v108Curricula label{display:block;font-weight:600;margin-bottom:8px}#v108Curricula select{min-height:44px;border:1px solid #819a7a;border-radius:8px;padding:9px;background:#fffdf5;color:#20382d;font:15px system-ui;max-width:100%}#v108CurriculumCards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}#v108CurriculumCards article{padding:20px;background:#fffdf5;border:1px solid #cad8c2;border-radius:12px}#v108CurriculumCards h3{font:600 24px/1.3 Georgia,serif;margin:0}#v108Curricula button{min-height:44px;border:1px solid #698e6b;border-radius:8px;padding:10px 14px;background:#e7efdf;color:#204b36;font:600 14px/1.5 system-ui;cursor:pointer}#v108CurriculumCards article>div{display:flex;gap:10px;flex-wrap:wrap}#v108Curricula button:focus-visible{outline:3px solid #b47b32;outline-offset:3px}html[data-study-theme=dark] #v108Curricula,html[data-study-theme=dark] #v108CurriculumCards article{background:#233b2c;color:#edf3e6}@media(max-width:650px){#v108CoursesHome{display:block;width:100%;margin:12px 0 0;box-sizing:border-box}#v108Curricula{padding:20px 16px}#v108CurriculumCards{grid-template-columns:1fr}#v108CurriculumCards article>div>button{width:100%}#v108Curricula h2{font-size:27px}.v36-head-actions{flex-wrap:wrap}}
 html[data-study-theme=dark] .v108-start{color:#e7f3e8}
 @media(max-width:650px){#v97Study .v108-start{padding:4px 22px 12px}.v108-start p{font-size:17px}#v97Study .v108-more{padding:15px 18px;margin:15px 12px}#v97Study .v108-taught .v105-worked,#v97Study .v108-taught .v107-teaching{margin:22px 12px}#v97Study .v108-taught #v105Practice{margin:25px 12px}#v97Study .v108-more .v105-worked,#v97Study .v108-more .v107-teaching{margin:15px 0;padding:16px}}
-</style></head><body class="loading"><header><div class="brand">Study Table<small>YOUR STUDY TABLE</small></div><div class="head-meta" id="headline">Opening your courses…</div></header>
+</style><script id="study-theme-state">// One theme preference owns both the old reading control and the current tools control.
+(function(){
+ 'use strict';
+ const KEY='studytable:v100:theme',LEGACY='studytable_v52_night';
+ const valid=value=>value==='light'||value==='dark';
+ function sync(){
+  const dark=document.documentElement.dataset.studyTheme==='dark';
+  const portal=document.getElementById('v35Portal');
+  if(portal&&portal.classList.contains('v52-night')!==dark)portal.classList.toggle('v52-night',dark);
+  for(const button of document.querySelectorAll('.v52-mode')){
+   const text=dark?'Light mode':'Dark mode';if(button.textContent!==text)button.textContent=text;
+   if(button.getAttribute('aria-pressed')!==String(dark))button.setAttribute('aria-pressed',String(dark));
+  }
+  const themeButton=document.getElementById('v100Theme'),text=dark?'Light mode':'Dark mode';
+  if(themeButton){if(themeButton.textContent!==text)themeButton.textContent=text;themeButton.setAttribute('aria-label','Switch to '+(dark?'light':'dark')+' mode')}
+  for(const proxy of document.querySelectorAll('[data-tool="v100Theme"]'))if(proxy.textContent!==text)proxy.textContent=text;
+  if(document.documentElement.style.colorScheme!==(dark?'dark':'light'))document.documentElement.style.colorScheme=dark?'dark':'light';
+ }
+ function set(value){
+  const theme=value==='dark'?'dark':'light';
+  if(document.documentElement.dataset.studyTheme!==theme)document.documentElement.dataset.studyTheme=theme;
+  try{localStorage.setItem(KEY,theme);localStorage.setItem(LEGACY,theme==='dark'?'1':'0')}catch{}
+  sync();
+ }
+ let initial=null;
+ try{const saved=localStorage.getItem(KEY),old=localStorage.getItem(LEGACY);if(valid(saved))initial=saved;else if(old==='1'||old==='0')initial=old==='1'?'dark':'light'}catch{}
+ if(!initial)initial=window.matchMedia?.('(prefers-color-scheme: dark)').matches?'dark':'light';
+ window.studyTableTheme={set,sync,get:()=>document.documentElement.dataset.studyTheme};
+ set(initial);
+ new MutationObserver(records=>{if(records.some(r=>r.type==='attributes'))set(document.documentElement.dataset.studyTheme);else sync()}).observe(document.documentElement,{attributes:true,attributeFilter:['data-study-theme'],childList:true,subtree:true});
+ window.addEventListener('storage',event=>{if(event.key===KEY&&valid(event.newValue))set(event.newValue);else if(event.key===LEGACY&&(event.newValue==='1'||event.newValue==='0'))set(event.newValue==='1'?'dark':'light')});
+})();
+</script></head><body class="loading"><header><div class="brand">Study Table<small>YOUR STUDY TABLE</small></div><div class="head-meta" id="headline">Opening your courses…</div></header>
 <div class="quickbar" role="toolbar" aria-label="Learning tools"><span class="label">Pick something interesting. We’ll start there.</span><select id="v21MobileSubject" aria-label="Choose subject"><option value="spanish">Spanish</option><option value="chess">Chess</option><option value="piano">Piano</option><option value="life">Life Curriculum</option><option value="medicine">Med School</option><option value="business">Business School</option><option value="books">Books</option></select><button class="button primary" id="v21PathBtn" type="button">Start a lesson</button><button class="button" id="v21CoachOpen" type="button">Ask your teacher</button><button class="button primary" id="resumeBtn" type="button">Pick up where you left off</button><button class="button" id="surpriseBtn" type="button">Surprise me</button><button class="button" id="notebookBtn" type="button">My notebook</button><button class="button" id="archiveBtn" type="button">Browse all courses</button></div>
 <main class="container"><aside class="sidebar"><div class="sidebar-search"><label for="smartsearch">Find something to learn</label><input id="smartsearch" type="search" autocomplete="off" placeholder="Try ‘subjunctive’, ‘profit’, ‘castling’…"><label class="visually-hidden" for="searchScope">Search subject</label><select id="searchScope"><option value="all">Search the archived subjects</option><option value="spanish">Spanish</option><option value="chess">Chess</option><option value="piano">Piano</option><option value="life">Life curriculum</option><option value="medicine">Med school</option><option value="business">Business</option><option value="books">Books</option></select><div class="search-results" id="searchresults" hidden></div></div><p class="eyebrow">What would you like to learn?</p><nav id="subjects" class="subject-list" aria-label="Subjects"></nav><details class="course-routes" id="courseNav" open><summary>Course sections and practice rooms</summary><div id="subnav" class="subnav"></div></details><button class="path-launch" id="v21SidebarBtn" type="button"><span>Start with the basics<small id="v21Intro">One idea, one example, then you try.</small></span><span aria-hidden="true">→</span></button><p class="path-note">The full courses are here whenever you want to go further.</p><details id="allPages"><summary>Browse every original page</summary><div class="searchrow"><input id="search" type="search" placeholder="Find a lesson or chapter" aria-label="Search the full archive"></div><div id="results" class="results"></div></details></aside><section class="viewer"><div class="viewerbar"><strong id="pageTitle">Start learning</strong><button type="button" class="smallbtn" id="home">Overview</button><button type="button" class="smallbtn" id="back" disabled>← Back</button><button type="button" class="smallbtn" id="forward" disabled>Forward →</button><button type="button" class="smallbtn" id="bookmark" disabled>☆ Save place</button><button type="button" class="smallbtn help-launch" id="helpBtn" disabled>Help me understand</button></div><div id="screen"><div class="intro"><h1>What do you feel like learning?</h1><p>This edition preserves the original interactive Spanish, chess, piano, medical, business, life, and reading rooms—instead of turning them into miniature summaries. Select a subject to explore its actual course.</p><p class="muted" id="loading">Opening your courses…</p></div></div><div class="status" id="status" role="status">Preparing archive</div></section></main><span class="visually-hidden" id="live" aria-live="polite"></span>
 <aside id="coach" class="coach" role="dialog" aria-modal="false" aria-label="Learning coach" hidden><div class="coach-head"><div><div class="eyebrow" style="color:#d2ebd8">PERSONAL LEARNING GUIDE</div><h2>What are you working on?</h2><p id="coachContext">Choose a topic or ask a question.</p></div><button type="button" class="icon-close" id="coachBtnClose" aria-label="Close coaching panel">×</button></div><div class="coach-inner"><p class="small-muted" style="margin:0 0 9px">Ask what’s confusing you. You can always come back to the examples.</p><div id="v21ChatLog" class="chat-log" role="log" aria-label="Conversation with study coach" aria-live="polite"></div><div class="chat-actionline" id="v21ChatPrompts"><button type="button" data-prompt="Start from zero">Start from zero</button><button type="button" data-prompt="Give me an example">Show an example</button><button type="button" data-prompt="Break it into steps">One step at a time</button><button type="button" data-prompt="Quiz me">Quiz me</button><button type="button" id="v21CoachClear">Clear chat</button></div><div class="coach-prompt"><label class="visually-hidden" for="coachQuestion">What confuses you?</label><input id="coachQuestion" type="text" autocomplete="off" placeholder="What's confusing?" maxlength="350"><button type="button" id="askCoach">Ask</button></div><p class="selected-preview" id="selectedSnippet" hidden></p><div class="coach-quick"><button id="coachFromZero" type="button">Start from zero</button><button id="coachPick" type="button">Pick a concept</button></div><div id="coachOutput" aria-live="polite"><p>Tell me the specific thing you're stuck on.</p></div><p class="small-muted">Help covers the lessons here. For a question it can’t answer, try asking it a different way.</p></div></aside>
@@ -3744,6 +3776,7 @@ const v51OldInit=v35Init;v35Init=function(){v51OldInit();const x=document.queryS
  const KEY='studytable_v52_night';
  let night=false;try{const saved=localStorage.getItem(KEY);night=saved===null?!!window.matchMedia?.('(prefers-color-scheme: dark)').matches:saved==='1'}catch{}
  function apply(){
+  if(window.studyTableTheme){window.studyTableTheme.sync();return}
   const portal=document.getElementById('v35Portal');if(!portal)return;
   portal.classList.toggle('v52-night',night);
   const btn=portal.querySelector('.v52-mode');
@@ -3754,7 +3787,7 @@ const v51OldInit=v35Init;v35Init=function(){v51OldInit();const x=document.queryS
   if(!head){apply();return;}
   if(!head.querySelector('.v52-mode')){
    const btn=document.createElement('button');btn.type='button';btn.className='v52-mode';
-   btn.onclick=()=>{night=!night;try{localStorage.setItem(KEY,night?'1':'0')}catch{};apply()};
+   btn.onclick=()=>{if(window.studyTableTheme){window.studyTableTheme.set(window.studyTableTheme.get()==='dark'?'light':'dark');return}night=!night;try{localStorage.setItem(KEY,night?'1':'0')}catch{};apply()};
    head.prepend(btn);
   }
   apply();
@@ -8636,6 +8669,7 @@ function grade(c,grade,independent){
  index++;render();
 }
 function setTheme(v){
+ if(window.studyTableTheme){window.studyTableTheme.set(v);return}
  document.documentElement.dataset.studyTheme=v;
  try{localStorage.setItem(THEME,v)}catch{}
  const b=el('v100Theme');if(b){b.textContent=v==='dark'?'Light mode':'Dark mode';b.setAttribute('aria-label','Switch to '+(v==='dark'?'light':'dark')+' mode')}
@@ -8848,5 +8882,6 @@ html body #v97Study .v109-keys button:not(.v109-black),html body #v97Study .v105
 html body #v97Study .v109-keys button.v109-black,html body #v97Study .v97-keyboard button.v97-black{background:#222228!important;color:#ffffff!important}
 html body #v97Study .v109-keys button.playing:not(.v109-black),html body #v97Study .v105-demo-keys .playing{background:#e0d5fa!important;color:#222228!important;box-shadow:inset 0 -4px #8867c6}
 html body #v97Study .v109-keys button.v109-black.playing{background:#7657bf!important}
+html #v101ToolsButton{z-index:24000;background:var(--study-accent)!important;color:var(--study-accent-text)!important;border-color:var(--study-accent)!important;box-shadow:none}
 </style>
 </body></html>

@@ -1,0 +1,18 @@
+const {chromium}=require('playwright'),assert=require('assert/strict'),fs=require('fs'),path=require('path');
+const lessons=JSON.parse(fs.readFileSync(path.join(__dirname,'../source/lessons-built-v109.json'),'utf8'));
+(async()=>{const browser=await chromium.launch(require('./browser-options.cjs')),page=await browser.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));let scans=0;try{
+ await page.addInitScript(()=>{if(!sessionStorage.getItem('contrast-seeded')){localStorage.setItem('studytable:v100:theme','light');localStorage.setItem('studytable_v52_night','1');sessionStorage.setItem('contrast-seeded','1')}});
+ await page.goto(process.env.STUDY_TEST_URL||'http://127.0.0.1:8774');await page.waitForFunction(()=>window.studyTableV109&&window.studyTableTheme&&READY);
+ const synchronized=async expected=>{assert.deepEqual(await page.evaluate(()=>({root:document.documentElement.dataset.studyTheme,night:document.getElementById('v35Portal').classList.contains('v52-night'),saved:localStorage.getItem('studytable:v100:theme'),legacy:localStorage.getItem('studytable_v52_night')})),{root:expected,night:expected==='dark',saved:expected,legacy:expected==='dark'?'1':'0'})};
+ await synchronized('light');
+ const inject=()=>page.addScriptTag({path:require.resolve('axe-core/axe.min.js')});await inject();
+ const audit=async(name,selector)=>{const r=await page.evaluate(async selector=>axe.run({include:[selector]},{runOnly:{type:'rule',values:['color-contrast']}}),selector);const bad=r.violations.flatMap(v=>v.nodes.map(n=>({target:n.target,summary:n.failureSummary})));assert.deepEqual(bad,[],name+' has contrast failures: '+JSON.stringify(bad));scans++};
+ await audit('saved light with legacy night preference','#v35Portal');console.log('CONFLICTING_SAVED_PREFERENCES_MIGRATE_TO_READABLE_LIGHT_MODE_PASS');
+ for(const l of lessons){await page.evaluate(l=>{studyTableV97.open(l.subject,l.id);document.querySelectorAll('#v97Study details').forEach(d=>d.open=true)},l);await audit(l.id+' light teaching, notes and optional controls','#v97Study')}
+ await page.locator('#v97Close').click();await page.locator('#v90Subjects').click();await audit('subject chooser','#v105Lessons');await page.locator('#v105LessonsClose').click();await page.locator('#v108CoursesHome').click();await audit('full curriculums','#v108Curricula');await page.locator('#v108CurriculaClose').click();await page.locator('#v90MyLearning').click();await audit('learning dashboard','#v90Dashboard');await page.keyboard.press('Escape');console.log('ALL_38_LIGHT_LESSONS_CHOOSER_CURRICULA_AND_DASHBOARD_TEXT_CONTRAST_PASS');
+ await page.locator('.v52-mode').click();await synchronized('dark');await audit('toolbar dark home','#v35Portal');
+ await page.locator('#v101ToolsButton').click();await page.locator('[data-tool="v100Theme"]').click();await synchronized('light');await audit('tools restores light home','#v35Portal');
+ await page.reload();await page.waitForFunction(()=>window.studyTableTheme&&READY);await synchronized('light');await inject();await audit('light after reload','#v35Portal');console.log('BOTH_REAL_THEME_CONTROLS_AND_RELOAD_STAY_SYNCHRONIZED_PASS');
+ await page.evaluate(()=>v35Open('spanish',0));await synchronized('light');await audit('original guided Spanish light','#v35Portal');await page.evaluate(()=>v35Open('home'));await synchronized('light');await page.setViewportSize({width:390,height:844});await audit('mobile light home','#v35Portal');await page.screenshot({path:path.join(__dirname,'contrast-light-mobile.png')});
+ assert.deepEqual(errors,[]);console.log('CONTRAST_PASS',scans,'color-contrast scans; no browser errors.');
+ }finally{await browser.close()}})().catch(e=>{console.error(e);process.exit(1)});
