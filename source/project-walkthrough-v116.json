@@ -1,0 +1,412 @@
+{
+  "piano": [
+    [
+      {
+        "label": "Hear the first bar",
+        "hand": "right",
+        "bars": [
+          0,
+          1
+        ],
+        "loop": false
+      },
+      {
+        "label": "Hear the held C in bar 2",
+        "hand": "right",
+        "bars": [
+          1,
+          2
+        ],
+        "loop": false
+      },
+      {
+        "label": "Loop the opening two bars",
+        "hand": "right",
+        "bars": [
+          0,
+          2
+        ],
+        "loop": true
+      }
+    ],
+    [
+      {
+        "label": "Hear the complete bass part",
+        "hand": "left",
+        "bars": [
+          0,
+          8
+        ],
+        "loop": false
+      },
+      {
+        "label": "Hear one whole-note bass",
+        "hand": "left",
+        "bars": [
+          0,
+          1
+        ],
+        "loop": false
+      },
+      {
+        "label": "Hear the bass route again",
+        "hand": "left",
+        "bars": [
+          0,
+          8
+        ],
+        "loop": false
+      }
+    ],
+    [
+      {
+        "label": "Hear the hands meet in bar 1",
+        "hand": "both",
+        "bars": [
+          0,
+          1
+        ],
+        "loop": false
+      },
+      {
+        "label": "Hear bar 2 with the held bass",
+        "hand": "both",
+        "bars": [
+          1,
+          2
+        ],
+        "loop": false
+      },
+      {
+        "label": "Hear the change in bars 3–4",
+        "hand": "both",
+        "bars": [
+          2,
+          4
+        ],
+        "loop": false
+      }
+    ],
+    [
+      {
+        "label": "Hear the descending lines",
+        "hand": "right",
+        "bars": [
+          4,
+          6
+        ],
+        "loop": false
+      },
+      {
+        "label": "Hear the ending with both hands",
+        "hand": "both",
+        "bars": [
+          6,
+          8
+        ],
+        "loop": false
+      },
+      {
+        "label": "Hear all eight bars",
+        "hand": "both",
+        "bars": [
+          0,
+          8
+        ],
+        "loop": false
+      }
+    ]
+  ],
+  "spanish": [
+    [
+      {
+        "label": "Hear the friend’s question",
+        "turn": 0
+      },
+      {
+        "label": "Hear the two-part reply",
+        "turn": 1
+      },
+      {
+        "label": "Hear the completed events again",
+        "turn": 1
+      }
+    ],
+    [
+      {
+        "label": "Hear the changed-day reply",
+        "turn": 3
+      },
+      {
+        "label": "Hear the friend add a time",
+        "turn": 4
+      },
+      {
+        "label": "Hear the agreement and question",
+        "turn": 5
+      }
+    ],
+    [
+      {
+        "label": "Hear the location chunk",
+        "turn": 6
+      },
+      {
+        "label": "Hear the request to repeat",
+        "turn": 7
+      },
+      {
+        "label": "Hear the acknowledgement",
+        "turn": 9
+      }
+    ],
+    [
+      {
+        "label": "Hear the worked café order",
+        "turn": 11
+      },
+      {
+        "label": "Hear the answer and payment question",
+        "turn": 13
+      },
+      {
+        "label": "Hear the closing reply",
+        "turn": 15
+      }
+    ]
+  ],
+  "chess": [
+    [
+      {
+        "label": "Show the pin after 3...Bg4",
+        "position": 6
+      },
+      {
+        "label": "Show the position after the captures",
+        "position": 10
+      },
+      {
+        "label": "Inspect development after move 5",
+        "position": 10
+      }
+    ],
+    [
+      {
+        "label": "Show the queen–bishop arrangement",
+        "position": 14
+      },
+      {
+        "label": "Show the relative pin on f6",
+        "position": 17
+      },
+      {
+        "label": "Show the attack on the bishop",
+        "position": 18
+      }
+    ],
+    [
+      {
+        "label": "Show the check and its blocker",
+        "position": 22
+      },
+      {
+        "label": "Show the first rook exchange",
+        "position": 26
+      },
+      {
+        "label": "Show the d7 knight before the finish",
+        "position": 30
+      }
+    ],
+    [
+      {
+        "label": "Show the knight drawn to b8",
+        "position": 32
+      },
+      {
+        "label": "Show 17 Rd8 checkmate",
+        "position": 33
+      },
+      {
+        "label": "Inspect the final mating net",
+        "position": 33
+      }
+    ]
+  ],
+  "calculus": [
+    [
+      {
+        "label": "Show the starting amount and rate",
+        "preset": "fill",
+        "time": 0,
+        "capacity": 20,
+        "help": "signs"
+      },
+      {
+        "label": "Show the unrestricted four-minute amount",
+        "preset": "fill",
+        "time": 4,
+        "capacity": 24,
+        "help": "graphs"
+      },
+      {
+        "label": "Show what the 20 L limit changes",
+        "preset": "fill",
+        "time": 4,
+        "capacity": 20,
+        "help": "equations"
+      }
+    ],
+    [
+      {
+        "label": "Show the initial-condition check",
+        "preset": "fill",
+        "time": 0,
+        "capacity": 24,
+        "help": "powers"
+      },
+      {
+        "label": "Show the two-minute calculation",
+        "preset": "fill",
+        "time": 2,
+        "capacity": 24,
+        "help": "fractions"
+      },
+      {
+        "label": "Compare amount and rate at two minutes",
+        "preset": "fill",
+        "time": 2,
+        "capacity": 24,
+        "help": "powers"
+      }
+    ],
+    [
+      {
+        "label": "Show the exact filling instant",
+        "preset": "fill",
+        "time": "full",
+        "capacity": 20,
+        "help": "quadratic"
+      },
+      {
+        "label": "Show water inside and overflow",
+        "preset": "fill",
+        "time": 4,
+        "capacity": 20,
+        "help": "equations"
+      },
+      {
+        "label": "Show the rate balance after filling",
+        "preset": "fill",
+        "time": 4,
+        "capacity": 20,
+        "help": "graphs"
+      }
+    ],
+    [
+      {
+        "label": "Show the final net change",
+        "preset": "drain",
+        "time": 4,
+        "capacity": 20,
+        "help": "powers"
+      },
+      {
+        "label": "Show the nineteen-litre maximum",
+        "preset": "drain",
+        "time": 3,
+        "capacity": 20,
+        "help": "equations"
+      },
+      {
+        "label": "Show the negative final rate",
+        "preset": "drain",
+        "time": 4,
+        "capacity": 20,
+        "help": "graphs"
+      }
+    ]
+  ],
+  "physics": [
+    [
+      {
+        "label": "Show the nine-joule approach",
+        "phase": "hill",
+        "height": 0.45,
+        "help": "signs"
+      },
+      {
+        "label": "Show the three-metre-per-second approach",
+        "phase": "hill",
+        "height": 0.45,
+        "help": "squares"
+      },
+      {
+        "label": "Inspect the state before impact",
+        "phase": "hill",
+        "height": 0.45,
+        "help": "signs"
+      }
+    ],
+    [
+      {
+        "label": "Show the incoming momentum state",
+        "phase": "hill",
+        "height": 0.45,
+        "help": "signs"
+      },
+      {
+        "label": "Show the joined carts",
+        "phase": "collision",
+        "height": 0.45,
+        "help": "equations"
+      },
+      {
+        "label": "Show the kinetic-energy reduction",
+        "phase": "collision",
+        "height": 0.45,
+        "help": "squares"
+      }
+    ],
+    [
+      {
+        "label": "Show the energy reaching the spring",
+        "phase": "collision",
+        "height": 0.45,
+        "help": "graphs"
+      },
+      {
+        "label": "Show the half-metre compression",
+        "phase": "spring",
+        "height": 0.45,
+        "help": "squares"
+      },
+      {
+        "label": "Show the force at maximum compression",
+        "phase": "spring",
+        "height": 0.45,
+        "help": "equations"
+      }
+    ],
+    [
+      {
+        "label": "Show the higher-hill approach",
+        "phase": "hill",
+        "height": 0.8,
+        "help": "squares"
+      },
+      {
+        "label": "Show the exact-fraction energy account",
+        "phase": "spring",
+        "height": 0.8,
+        "help": "fractions"
+      },
+      {
+        "label": "Show the final complete account",
+        "phase": "account",
+        "height": 0.8,
+        "help": "signs"
+      }
+    ]
+  ]
+}

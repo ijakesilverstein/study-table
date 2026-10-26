@@ -1,8 +1,10 @@
 # Study Table
 
-An offline-capable learning app, published at https://study-table-v102.vercel.app.
+An offline-capable learning app. Current downloads and online access are published separately at https://study-table-downloads.vercel.app. The earlier app project is not modified by this delivery workflow.
 
-V115 adds five complete, four-part teaching projects: an original two-hand piano piece; a full Spanish afternoon with adaptable plans and orders; Morphy’s complete Opera Game; a changing-rate tank with overflow; and a hill–collision–spring energy account. Project parts save their own reading place and appear on the course maps. There are no project quiz gates. See [the project notes](docs/COURSE_PROJECTS_V115.md).
+V116 connects sixty worked steps directly to their demonstrations and adds an optional maths help desk: seven explanations and fourteen worked examples covering fractions, equations, square roots, quadratics, graph reading, signs/units, and rates/accumulation. All V115 course and project records remain unchanged.
+
+V115 added five complete, four-part teaching projects: an original two-hand piano piece; a full Spanish afternoon with adaptable plans and orders; Morphy’s complete Opera Game; a changing-rate tank with overflow; and a hill–collision–spring energy account. Project parts save their own reading place and appear on the course maps. There are no project quiz gates. See [the project notes](docs/COURSE_PROJECTS_V115.md).
 
 V114 merged Claude's content expansion into the existing 65-unit courses: Spanish 15, piano 14, chess 14, calculus 11 and physics 11. Every unit now has a takeaway, complete misconception reasoning and two optional practice items. All 16 imported figures remain available alongside the newer V113 demonstrations. Three named chapters organize each course. Each unit contains explanatory teaching and two complete worked cases. **Full curriculums** shows the longer sequences, preserved original practice material, and **Quick worked lessons** links. The 38 short lessons remain available across 11 subjects. These are introductory foundations, not complete professional training.
 
@@ -15,7 +17,7 @@ python3 scripts/build.py
 python3 -m http.server 8769 --directory public
 ```
 
-Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v115.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
+Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v116.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
 
 - `source/teacher-prose-v109.json`: rewritten explanations in existing lessons.
 - `source/draft-foundation-lessons.json` and `source/lessons-v109.json`: the 12 new lessons. The historical `draft-` filename is retained for build compatibility; these records are now published.
@@ -34,6 +36,10 @@ Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v115.htm
 - `source/claude-additions-v114.json`: all imported takeaways/reviews and 34 new misconception blocks, extracted without modification.
 - `source/claude-corrections-v114.json`: targeted refinements applied separately from the original additions.
 - `source/claude-figures-v114.js` and `source/claude-additions-v114.css`: all 16 reviewed imported figures and the optional practice UI.
+- `source/math-desk-v116.json`: seven authored maths explanations, with two complete worked examples each.
+- `source/project-walkthrough-v116.json`: sixty exact demonstration targets tied to existing worked steps.
+- `source/clarity-v116.js` and `.css`: inline demonstration placement, contextual maths help, focus return and responsive modal.
+- `scripts/package-downloads.py`: prepares a separate online app and versioned HTML/ZIP downloads, retaining earlier editions and setting attachment headers; does not deploy.
 - `source/course-projects-v115.json`: all 20 authored project parts, with complete worked teaching and links to prerequisite units.
 - `source/course-projects-v115.js` and `.css`: project navigation, annotated board, two-hand score/playback, translated conversation and physical/mathematical models.
 - `source/project-demos-v115.json`: original eight-bar music, 16 conversation turns and all 34 chess positions. Regenerate with `qa/generate-project-demos.py` during development; no chess dependency is needed for production.
@@ -59,16 +65,18 @@ python3 scripts/build.py --check
 
 The test runner starts its own local server. `CHROME_BINARY` can select an installed Chromium binary. Browser checks cover taught lessons, all 65 full-course units, merged bookmarks, chapter maps, diagram calculations and drawn circuit connections, optional practice, saved work, media scheduling/cancellation and mobile layout. `python-chess` verifies the worked chess lines, pawn blockers and stated outcomes. See docs/CURRICULUM_EDIT_V112.md for the earlier editorial comparison and docs/TEACHING_V113.md for the richer demonstrations. Subject accuracy still needs independent review; automated checks do not prove learning gains.
 
+Local delivery checks also exercise `/app/`, actual browser HTML/ZIP downloads, the app’s download button, source hashes and earlier-edition preservation. Public Vercel requests are blocked by this workspace’s network policy; deployment readiness/settings and uploaded hashes are verified through its API.
+
 The contrast regression seeds conflicting legacy/current theme preferences, clicks both actual theme controls, reloads, and checks visible text contrast with axe-core across the taught lessons and main dialogs.
 
 V114 also verifies the unchanged original uploads, every extracted Claude addition, all prior V113 lesson fields, all 16 imported explorations, the corrected numerical states and the optional two-answer interface. The complete accounting is in docs/CLAUDE_MERGE_V114.md.
 
 ## Vercel and GitHub
 
-The user's latest preference is to deliver future versions as HTML files and leave Vercel unchanged. V113 is the last deployed release. V114 and V115 are local HTML releases; do not deploy it or later versions unless the user explicitly requests deployment again.
+After the workspace download link failed, the user explicitly authorized Vercel publication. Use the separate study-table-downloads project for the online app and actual HTML/ZIP downloads. The earlier study-table-v102 project is not changed. Keep previous versioned downloads available. The new project has public access so the downloads do not require a Vercel login.
 
 This is a separate project from LaunchWell Labs. The intended GitHub repository is private `ijakesilverstein/study-table`. Remote creation and Vercel Git integration must be confirmed before describing GitHub as connected.
 
-The existing Vercel project is `study-table-v102`, in the `jakesilverstein` scope. `vercel.json` builds the app and serves `public/`; the previously deployed versioned HTML links download as files. Keep automatic deployment disconnected while the user prefers file delivery. Credentials and the local `.vercel` project link stay outside Git history.
+The canonical `.vercel` link is historical (`study-table-v102`); that project was unavailable through the current connection. Publish through the separate `study-table-downloads` staging project in the `jakesilverstein` scope. `vercel.json` builds the app and serves `public/`; the previously deployed versioned HTML links download as files. The download project is packaged separately; its online app and latest downloadable HTML are identical. Do not enable automatic Git deployments without a separate request. Credentials and the local `.vercel` project link stay outside Git history.
 
 Progress is stored on the learner’s device. GitHub and Vercel deployment do not synchronize that progress between devices. Original course content is preserved in the baseline; its inclusion here does not grant permission to redistribute it publicly.

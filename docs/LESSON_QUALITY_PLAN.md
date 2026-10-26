@@ -112,3 +112,10 @@ Import all 65 takeaways, 65 review prompts, 34 new misconception blocks and 16 f
 Add five connected projects, each with four teaching parts. Preserve all 65 existing units, 130 formal cases, Claude additions and original studios. Piano teaches an original eight-bar melody and bass with notation, a count-in, hand isolation and loops. Spanish follows 16 conversational turns and lets the learner adapt already-taught choices. Chess replays every move of the 1858 Opera Game with original annotations. Calculus connects a flow rate, integral, initial condition, capacity and turning point. Physics follows the same carts through a hill, a sticking collision and a spring, choosing and checking each conservation law.
 
 These projects explain the complete solution before an optional variation. Course maps and the final units link to them; per-course and main Continue restore the chosen project part. Reading a project never changes assessment records. Content preservation, legal game moves, music durations, model accounts, media cancellation, mobile layout and both themes are verified in the project checks. See COURSE_PROJECTS_V115.md.
+
+
+## V116 — connect the reasoning to the demonstration
+
+Preserve every V115 course/unit/project record. Link all sixty worked project steps to an exact board position, piano passage/hand, spoken reply or physical/mathematical model state. Move the existing demonstration beside the chosen explanation and offer a return-to-top control, keeping a single set of media controls. Add optional contextual maths help with seven explanations and fourteen worked cases; the original lessons gain help links without changing their authored records. The tank can show its exact filling corner instead of rounding to a nearby slider tick.
+
+The learner can open the app online or download HTML/ZIP editions from the separate, explicitly authorized Vercel download project. Earlier downloads remain. Test data preservation, all sixty targets, modal focus/Escape, mathematics, audio state, mobile layout and both themes. Keep reading and assessment records separate.

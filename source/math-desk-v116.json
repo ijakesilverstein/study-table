@@ -1,0 +1,381 @@
+{
+  "fractions": {
+    "title": "Make sense of the fraction",
+    "opening": [
+      "A fraction is a division, even when the top contains several terms. Read the whole top (the numerator) as one quantity and the whole bottom (the denominator) as another. In a rate, the bottom often tells you the time interval you are dividing by.",
+      "I’ll do a numerical division first, then the algebraic one that appears in the derivative lesson. The same principle applies: divide the entire numerator."
+    ],
+    "examples": [
+      {
+        "title": "A small time interval can give a large rate",
+        "setup": "An object moves 6 metres in 0.2 seconds. Find its average speed.",
+        "steps": [
+          {
+            "title": "Write what is being shared",
+            "line": "6 m ÷ 0.2 s",
+            "why": "We are finding metres for each one second. Since 0.2 seconds is only one fifth of a second, a one-second interval contains five intervals of this length."
+          },
+          {
+            "title": "Clear the decimal without changing the ratio",
+            "line": "6/0.2 = (6 × 10)/(0.2 × 10) = 60/2 = 30",
+            "why": "Multiplying top and bottom by the same nonzero number leaves the fraction unchanged. Multiplying only the bottom would change the question."
+          },
+          {
+            "title": "Put the unit back",
+            "line": "Average speed = 30 m/s",
+            "why": "Check backwards: 30 m/s × 0.2 s = 6 m. The seconds cancel and the distance returns. A smaller divisor can produce a larger answer; division does not always make a number smaller."
+          }
+        ],
+        "answer": "The average speed is 30 m/s. We have made no claim that the speed was constant inside the interval."
+      },
+      {
+        "title": "Simplify the fraction used in a derivative",
+        "setup": "Simplify (6h + h²)/h for h ≠ 0.",
+        "steps": [
+          {
+            "title": "Keep both terms over the denominator",
+            "line": "(6h + h²)/h = 6h/h + h²/h",
+            "why": "Both terms are divided by h. Do not cancel a symbol from only one term and leave the other untouched."
+          },
+          {
+            "title": "Divide out a common factor",
+            "line": "6h/h = 6; h²/h = h",
+            "why": "Equivalently, factor the entire top: h(6 + h)/h. A common nonzero factor multiplying the entire top and bottom can be divided out."
+          },
+          {
+            "title": "Keep the condition",
+            "line": "(6h + h²)/h = 6 + h, provided h ≠ 0",
+            "why": "The original expression is undefined at h = 0. In a derivative calculation we simplify at nonzero h, then ask what happens as h approaches zero. We do not repair division by zero by pretending it was allowed."
+          }
+        ],
+        "answer": "At h = 0.1 the value is 6.1; at h = −0.1 it is 5.9. Both approach 6 as h approaches zero."
+      }
+    ],
+    "remember": "Cancel common factors, not pieces joined by addition. Keep any conditions that made the division valid."
+  },
+  "equations": {
+    "title": "Keep the equation balanced",
+    "opening": [
+      "An equation says two amounts are equal. I can change its appearance if I do the same allowed operation to both sides. The goal is to leave the unknown by itself without changing which values make the statement true.",
+      "Instead of saying “move the 3 across,” I’ll name the operation. That makes the sign and the division easier to check."
+    ],
+    "examples": [
+      {
+        "title": "Find the speed after a sticking collision",
+        "setup": "The total mass is 3 kg and the horizontal momentum is +8 kg·m/s. Solve 3v = 8 using those units.",
+        "steps": [
+          {
+            "title": "Identify the multiplication",
+            "line": "(3 kg) × v = +8 kg·m/s",
+            "why": "The 3 multiplies v. To undo multiplication by 3 kg, divide both sides by 3 kg."
+          },
+          {
+            "title": "Apply the same division",
+            "line": "(3 kg)v/(3 kg) = (8 kg·m/s)/(3 kg)",
+            "why": "On the left, the mass factor becomes one. On the right, kilograms cancel, leaving a velocity unit."
+          },
+          {
+            "title": "Leave an exact answer, then check it",
+            "line": "v = 8/3 m/s ≈ 2.667 m/s",
+            "why": "Use the fraction in later energy calculations so rounding does not accumulate. Checking with the fraction gives (3 kg)(8/3 m/s) = 8 kg·m/s exactly."
+          }
+        ],
+        "answer": "The shared velocity is +8/3 m/s. The positive sign means motion in the direction we chose as positive."
+      },
+      {
+        "title": "Undo addition before multiplication",
+        "setup": "Solve 10 − 2t = 4.",
+        "steps": [
+          {
+            "title": "Remove the added 10",
+            "line": "10 − 2t − 10 = 4 − 10",
+            "why": "Subtract 10 from both sides. The left becomes −2t; the right becomes −6."
+          },
+          {
+            "title": "Undo multiplication by −2",
+            "line": "−2t = −6 ⇒ (−2t)/(−2) = (−6)/(−2)",
+            "why": "The multiplier includes its minus sign. Dividing only by +2 would leave −t, not t."
+          },
+          {
+            "title": "Substitute into the original statement",
+            "line": "t = 3; 10 − 2(3) = 10 − 6 = 4",
+            "why": "Checking the original equation catches mistakes that can hide in a chain of algebra. If t is time in a model valid only for 0–4 minutes, 3 is also within the allowed interval."
+          }
+        ],
+        "answer": "t = 3 satisfies the equation and the stated time interval."
+      }
+    ],
+    "remember": "Name the operation on both sides. Check your answer in the original equation, with units and the model’s allowed values."
+  },
+  "squares": {
+    "title": "Squares, square roots and exact fractions",
+    "opening": [
+      "Squaring means multiplying a number by itself. A square root reverses that operation for a nonnegative number. These look like small symbols, but missing either one can change a physics answer substantially.",
+      "I’ll keep fractions exact for the calculation, then round the final measured quantity. I’ll also separate a mathematical solution from a physical choice of sign."
+    ],
+    "examples": [
+      {
+        "title": "Square the whole velocity",
+        "setup": "Three kilograms move at 8/3 m/s. Find kinetic energy using KE = ½mv².",
+        "steps": [
+          {
+            "title": "Write the square as multiplication",
+            "line": "(8/3)² = (8/3)(8/3) = 64/9",
+            "why": "The denominator is squared too. The result is not 64/3, and it is not 16/3. Squaring a velocity also squares its unit: m²/s²."
+          },
+          {
+            "title": "Multiply the remaining factors",
+            "line": "KE = (1/2) × 3 × (64/9) = 192/18 = 32/3 J",
+            "why": "One way to simplify is 3/9 = 1/3 first, then (1/2)(64/3) = 32/3. Both routes give the same fraction."
+          },
+          {
+            "title": "Round after the energy calculation",
+            "line": "32/3 J ≈ 10.667 J",
+            "why": "The unit kg·m²/s² is a joule. If you first round the speed to 2.67, the final result changes slightly. Keeping 8/3 avoids that rounding error."
+          }
+        ],
+        "answer": "The kinetic energy is exactly 32/3 J in this ideal model."
+      },
+      {
+        "title": "Take the square root after isolating x²",
+        "setup": "A spring calculation gives 24x² = 32/3, with x measured in metres. Find the compression.",
+        "steps": [
+          {
+            "title": "Divide to isolate the square",
+            "line": "x² = (32/3)/24 = 32/72 = 4/9",
+            "why": "The 24 multiplies the entire x². Dividing both sides by it leaves a square, not yet x."
+          },
+          {
+            "title": "Find both algebraic solutions",
+            "line": "x = ±√(4/9) = ±2/3",
+            "why": "Both +2/3 and −2/3 square to 4/9. The symbol √(4/9) alone means the nonnegative root; solving x² = 4/9 requires considering both signs."
+          },
+          {
+            "title": "Use the meaning of the variable",
+            "line": "Compression magnitude x = 2/3 m ≈ 0.667 m",
+            "why": "Here x was defined as a nonnegative amount of compression, so we choose +2/3. If x were a signed displacement coordinate, we would inspect the physical direction before choosing a sign."
+          }
+        ],
+        "answer": "A 2/3 m compression gives 24(2/3)² = 24(4/9) = 32/3 J."
+      }
+    ],
+    "remember": "Square the whole fraction. Isolate the square before taking a root. Choose a sign from what the variable means."
+  },
+  "quadratic": {
+    "title": "Solve the quadratic without skipping the middle",
+    "opening": [
+      "The tank reaches capacity when 3 + t² + t = 20. This has a squared unknown, so dividing by t would not isolate it. I’ll turn the left side into a single square, then take square roots.",
+      "This method is called completing the square. It also explains where the quadratic formula comes from, but you do not need to memorize that formula to follow this particular calculation."
+    ],
+    "examples": [
+      {
+        "title": "Find when the tank first holds 20 L",
+        "setup": "Solve 3 + t² + t = 20 for time t ≥ 0.",
+        "steps": [
+          {
+            "title": "Leave the variable terms together",
+            "line": "t² + t = 17",
+            "why": "Subtract 3 from both sides. To make a square, use (t + a)² = t² + 2at + a². We want 2a = 1, so a = 1/2."
+          },
+          {
+            "title": "Add the missing quarter to both sides",
+            "line": "t² + t + 1/4 = 17 + 1/4\n(t + 1/2)² = 69/4",
+            "why": "Adding only to the left would change the equation. On the right, 17 = 68/4, so the sum is 69/4."
+          },
+          {
+            "title": "Take roots, then subtract the half",
+            "line": "t + 1/2 = ±√69/2\nt = (−1 ± √69)/2",
+            "why": "The plus choice gives about 3.653 minutes; the minus choice gives about −4.653 minutes. Our pump model starts at t = 0, so only the positive time answers this question."
+          }
+        ],
+        "answer": "The tank fills at (−1 + √69)/2 minutes. Substituting that root into 3 + t² + t returns 20 L."
+      },
+      {
+        "title": "When factoring is quicker",
+        "setup": "Solve x² − 5x + 6 = 0.",
+        "steps": [
+          {
+            "title": "Find the two numbers",
+            "line": "(−2) + (−3) = −5; (−2)(−3) = 6",
+            "why": "Here the coefficient of x² is 1. We need two numbers with sum −5 and product +6 to expand (x − 2)(x − 3)."
+          },
+          {
+            "title": "Check the multiplication",
+            "line": "(x − 2)(x − 3) = x² − 3x − 2x + 6 = x² − 5x + 6",
+            "why": "Write all four products so the signs remain visible. The two middle terms combine to −5x."
+          },
+          {
+            "title": "Use the zero product",
+            "line": "(x − 2)(x − 3) = 0 ⇒ x = 2 or x = 3",
+            "why": "A product of real numbers is zero only when at least one factor is zero. This argument needs the right side to be zero; it would not justify setting each factor to zero if the product equaled 10."
+          }
+        ],
+        "answer": "Both 2 and 3 satisfy the original equation. A physical problem might allow both, one or neither depending on its domain."
+      }
+    ],
+    "remember": "Some quadratics factor neatly; others do not. Keep both roots until the problem’s meaning rules one out."
+  },
+  "graphs": {
+    "title": "Read the axes before reading the shape",
+    "opening": [
+      "A rising line does not always mean an object is speeding up. First ask what the vertical axis measures. The slope of a position graph measures velocity; the area under a velocity graph measures displacement.",
+      "I’ll use the same three seconds in two different graphs. The units will tell us which calculation makes sense."
+    ],
+    "examples": [
+      {
+        "title": "Use rise over run on a position graph",
+        "setup": "Position is s(t) = t² metres. Find the average velocity from t = 1 s to t = 3 s.",
+        "steps": [
+          {
+            "title": "Read the endpoints as coordinate pairs",
+            "line": "Start: (1 s, 1 m). Finish: (3 s, 9 m).",
+            "why": "The horizontal change is 3 − 1 = 2 s. The vertical change is 9 − 1 = 8 m. Pair each position with the time at which it occurs."
+          },
+          {
+            "title": "Divide the two changes",
+            "line": "Average velocity = (9 − 1)/(3 − 1) = 8/2 = 4 m/s",
+            "why": "This is the slope of the straight line joining the endpoints, called a secant. It summarizes the interval, even though the curve itself bends."
+          },
+          {
+            "title": "Separate the interval rate from an instant",
+            "line": "Instantaneous velocity here is s′(t) = 2t, so at 3 s it is 6 m/s.",
+            "why": "The interval average is 4 m/s and the final instantaneous value is 6 m/s. Both are correct answers to different questions. The steeper curve near the finish agrees with the larger final velocity."
+          }
+        ],
+        "answer": "Position-graph slope has units metres per second."
+      },
+      {
+        "title": "Use area on a velocity graph",
+        "setup": "Velocity is v(t) = 2t m/s. Find displacement from t = 1 s to t = 3 s.",
+        "steps": [
+          {
+            "title": "Read the heights and the width",
+            "line": "v(1) = 2 m/s; v(3) = 6 m/s; width = 2 s",
+            "why": "The straight velocity line forms a trapezoid above the time axis over this interval."
+          },
+          {
+            "title": "Find the area",
+            "line": "Displacement = [(2 + 6)/2] × 2 = 8 m",
+            "why": "The average height is 4 m/s and the width is 2 s. Multiplying gives 8 m. A thin strip follows the same unit rule: velocity times a short time gives a small displacement."
+          },
+          {
+            "title": "Check against the position formula",
+            "line": "s(3) − s(1) = 9 − 1 = 8 m",
+            "why": "The result agrees with the first graph’s change in position. In this positive-velocity interval, displacement and distance traveled have the same value; that would need more care if velocity changed sign."
+          }
+        ],
+        "answer": "Velocity-graph area has units metres. Its slope would instead have acceleration units, m/s²."
+      }
+    ],
+    "remember": "Slope divides vertical change by horizontal change. Area multiplies vertical and horizontal units. Name the axes first.",
+    "figure": "graphs"
+  },
+  "signs": {
+    "title": "Keep the signs and units attached",
+    "opening": [
+      "A minus sign can describe a direction, not a mistake. Choose a positive direction once, then give every velocity its sign before adding momenta or calculating a change.",
+      "Units are part of the calculation too. They can tell you that you found an acceleration when the question asked for a velocity, even if the numerical arithmetic looks tidy."
+    ],
+    "examples": [
+      {
+        "title": "Add momenta from opposite directions",
+        "setup": "A 2 kg cart moves right at 3 m/s. A 1 kg cart moves left at 3 m/s. They stick. Choose right as positive.",
+        "steps": [
+          {
+            "title": "Write the velocities with signs",
+            "line": "v₁ = +3 m/s; v₂ = −3 m/s",
+            "why": "The speeds are equal, but the velocities are opposite. The first cart also has twice the mass, so we should expect a remaining rightward momentum."
+          },
+          {
+            "title": "Add the signed momenta",
+            "line": "p = 2(+3) + 1(−3) = +6 − 3 = +3 kg·m/s",
+            "why": "Adding the speeds would lose the direction information. The total mass after sticking is 3 kg, so the shared velocity is +3/3 = +1 m/s."
+          },
+          {
+            "title": "Check the direction and the energy",
+            "line": "Before: KE = ½(2)(3²) + ½(1)(−3)² = 13.5 J.\nAfter: KE = ½(3)(1²) = 1.5 J.",
+            "why": "Squaring a negative velocity gives a positive number. Kinetic energy has no left/right sign. The reduction is 12 J in this sticking model, while total momentum remains +3 kg·m/s during the brief collision."
+          }
+        ],
+        "answer": "The joined carts move right at 1 m/s. Opposite momenta can partially cancel; positive kinetic energies do not cancel that way."
+      },
+      {
+        "title": "Read the two “per seconds” in acceleration",
+        "setup": "Velocity changes from +2 m/s to +8 m/s in 3 s. Find average acceleration.",
+        "steps": [
+          {
+            "title": "Subtract in the same order",
+            "line": "Δv = final − initial = 8 − 2 = 6 m/s",
+            "why": "Use the chosen positive direction throughout. The change is positive because the velocity became more positive."
+          },
+          {
+            "title": "Divide by elapsed time",
+            "line": "Average acceleration = (6 m/s)/(3 s) = 2 m/s²",
+            "why": "One second comes from the velocity unit and another from dividing by the elapsed time. The answer is a change of 2 m/s for each second, on average over this interval."
+          },
+          {
+            "title": "Check the dimensions of a prediction",
+            "line": "(2 m/s²)(3 s) = 6 m/s",
+            "why": "Multiplying acceleration by time returns the velocity change when the stated acceleration is constant. Over an arbitrary varying acceleration, the interval average still reproduces the total change over that interval."
+          }
+        ],
+        "answer": "Acceleration has units m/s²; it is not a distance and not a velocity."
+      }
+    ],
+    "remember": "Choose a direction, keep the signs, and carry units through the same operations as the numbers."
+  },
+  "powers": {
+    "title": "Differentiate and accumulate, one term at a time",
+    "opening": [
+      "A position or volume formula describes an amount. Its derivative describes the rate at which that amount changes. An integral of a rate adds up the changes; an initial condition tells you where the amount started.",
+      "I’ll show the small power rules used in the course, then check the result by going back the other way. These examples use simple terms such as t², t and a constant."
+    ],
+    "examples": [
+      {
+        "title": "Differentiate a polynomial without losing the constant rate",
+        "setup": "Find the derivative of s(t) = 3t² + 2t + 5.",
+        "steps": [
+          {
+            "title": "Handle the squared term",
+            "line": "d(3t²)/dt = 3 × 2t = 6t",
+            "why": "For these powers, bring the exponent down as a multiplier and reduce the exponent by one. The coefficient 3 remains a multiplier."
+          },
+          {
+            "title": "Handle the linear and constant terms",
+            "line": "d(2t)/dt = 2; d(5)/dt = 0",
+            "why": "The 2t term adds 2 units of position for each extra unit of time, so its rate is a constant 2. The fixed position offset 5 adds no change as time passes."
+          },
+          {
+            "title": "Put the term rates together",
+            "line": "s′(t) = 6t + 2",
+            "why": "A derivative can contain a constant. What disappears is a constant amount in the original function, not every constant-looking number in the result."
+          }
+        ],
+        "answer": "At t = 2, the instantaneous rate is 6(2) + 2 = 14. The position there is 21; amount and rate remain different quantities."
+      },
+      {
+        "title": "Accumulate a flow and restore the initial volume",
+        "setup": "The rate is r(t) = 2t + 1 L/min; the tank starts at 3 L. Find its unrestricted volume at t = 2 min.",
+        "steps": [
+          {
+            "title": "Find a function with the needed derivative",
+            "line": "d(t² + t)/dt = 2t + 1",
+            "why": "We reverse the two polynomial rules: integrating 2t gives t², and integrating 1 gives t. An added constant would not affect the derivative."
+          },
+          {
+            "title": "Evaluate the accumulation between endpoints",
+            "line": "∫₀² (2u + 1) du = [u² + u]₀² = (4 + 2) − 0 = 6 L",
+            "why": "The integral gives water added during the interval. The temporary variable u keeps the integration step separate from its upper limit."
+          },
+          {
+            "title": "Add the starting amount",
+            "line": "Volume = 3 + 6 = 9 L",
+            "why": "A derivative alone cannot tell whether the tank began empty or with 3 L. The starting condition supplies the missing constant. Capacity and overflow must then be checked separately if the tank is small enough to fill."
+          }
+        ],
+        "answer": "The unrestricted formula is W(t) = 3 + t² + t. It satisfies both W(0) = 3 and W′(t) = 2t + 1."
+      }
+    ],
+    "remember": "Check an accumulated formula in two ways: differentiate it to recover the rate, then test its value at the starting time."
+  }
+}
