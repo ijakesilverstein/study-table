@@ -126,3 +126,12 @@ The learner can open the app online or download HTML/ZIP editions from the separ
 Preserve all earlier course/project records and add three four-chapter teacher workshops. Piano repairs a specific early entrance through an audible error, a full-count model, separate hands, a reduced skeleton and restored context. Spanish teaches person changes, negatives, information questions and future plans through thirteen authored models with phrase explanations. Chess compares a forcing fork, a defended capture, legal movement on a pin line and mate versus stalemate through eight legal continuations. Thirty-six new step links put each model beside its reasoning. Workshops save their own chapter without writing assessment successes.
 
 The shared piano player gains optional count-ins and a quiet pulse for these practice models; older lessons retain their original tempo choices and schedules. Validate all chess moves/results, note timing and holds, voice cancellation/fallback, saved workshop places, mobile layout and both themes. Publish the tested update through the approved separate download site, retaining earlier editions.
+
+
+## V118 — explain the calculation while showing it
+
+Deepen twelve existing cases in six quantitative units: average velocity, instantaneous velocity, definite integrals, net force, force diagrams and series/parallel circuits. Preserve every V117 unit, project and workshop field. Add thirty-nine authored explanations to the existing steps rather than another quiz or another course branch. Each step moves one shared diagram for its case beside the reasoning. All solution text remains visible.
+
+Separate compact phone drawings preserve the complete graph or circuit and readable labels. Optional comparisons demonstrate origin invariance and nonzero intervals from either side of a derivative. The h=0 view shows a tangent limit and never evaluates a zero-denominator quotient. Earlier explorers remain available in an optional section.
+
+Check the arithmetic independently, reconstruct both desktop and phone circuit connections from their drawn wires, inspect phone screenshots, and verify both themes, keyboard focus, saved reading places and unchanged assessment records. This improves the teaching content; it is not evidence of accelerated expertise or a learner-study result.

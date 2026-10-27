@@ -1,0 +1,125 @@
+{
+  "calculus-1": {
+    "first": {
+      "kind": "average", "values": {"t1":2,"t2":7,"s1":10,"s2":40},
+      "intro": "I’ll put both observations on the graph first. Each dot carries a time and a position; keeping those pairs together prevents a very common wrong answer.",
+      "steps": [
+        {"button":"Mark the position change", "note":"I start at the first dot’s height, 10 m, and count up to the second dot’s height, 40 m. That vertical gap is 30 m. The height of the second dot by itself includes the 10 m already on the first position reading. Those 10 m are not part of the change we are measuring.", "caption":"The vertical side of the triangle measures 40 − 10 = 30 m of displacement."},
+        {"button":"Mark the time interval", "note":"Now I read across, from 2 s to 7 s. The clock did not start at zero for this observation. Five seconds belong with the 30-metre change; using seven seconds would mix a different time interval into the calculation.", "caption":"The horizontal side measures 7 − 2 = 5 s. Both sides use the same two dots."},
+        {"button":"Put the two changes together", "note":"Thirty metres spread evenly across five seconds would give six metres in each second. That imagined steady trip has the same overall change as the cyclist. It is enough to calculate an average, even though we were not told what happened between the two observations.", "caption":"Average velocity = 30 m / 5 s = 6 m/s. The joining line represents that average."},
+        {"button":"Read the slope triangle", "note":"The steepness comes from the vertical change divided by the horizontal change. Try adding 100 m to both position readings below. The dots get new labels, but their separation stays 30 m. A new place to call zero cannot change the cyclist’s velocity.", "caption":"Rise/run = 30/5 = 6 m/s. The straight joining line does not assert constant motion between the observations."}
+      ]
+    },
+    "second": {
+      "kind":"roundtrip", "values":{"out":20,"back":20,"duration":10,"illustratedTurn":5},
+      "intro":"Here is one possible version of the walk: five seconds going out and five coming back. The problem gives only the total time, so this timing is an illustration. The final answers do not depend on where in those ten seconds the turn happens.",
+      "steps":[
+        {"button":"Compare the start and finish", "note":"I put a finger on the starting dot, then on the finishing dot. They have the same height. The walker certainly moved, but the final position minus the initial position is zero. A position change can cancel when the direction reverses.", "caption":"The first and last positions are both 0 m: displacement = 0 − 0 = 0 m."},
+        {"button":"Show the whole-interval average", "note":"The straight line from start to finish is horizontal. Its slope is zero divided by ten, so the average velocity is zero. The actual route rises and falls above that line; a zero average does not erase the trip.", "caption":"The dashed joining line is flat: average velocity = 0 m / 10 s = 0 m/s."},
+        {"button":"Count both legs of the walk", "note":"For distance, I count the length of each leg without a minus sign: twenty metres out plus twenty back. Then I divide forty by ten. Average speed uses the whole forty-metre journey, while average velocity uses the zero-metre displacement.", "caption":"Distance = 20 + 20 = 40 m. Average speed = 40/10 = 4 m/s."}
+      ]
+    }
+  },
+  "calculus-2": {
+    "first": {
+      "kind":"derivative", "values":{"time":3,"coefficient":1},
+      "intro":"I know where the object is at three seconds: 9 m. To find its velocity, I need a second reading nearby. Watch the two readings become closer while their slope settles toward six.",
+      "steps":[
+        {"button":"Compare 3 s with 4 s", "note":"The extra second begins at position 9 m and ends at 16 m. That gives seven metres in one second. The answer 7 m/s belongs to the interval from three to four; it is not yet the velocity at its starting instant.", "caption":"With h = 1 s, the nearby reading is (4 s, 16 m). Average velocity = (16 − 9)/1 = 7 m/s.", "h":1},
+        {"button":"Shorten the gap to 0.1 s", "note":"I square 3.1 to get 9.61, then subtract the original 9 before dividing. Only 0.61 m was added during this tenth of a second. Dividing by 0.1 scales that short change to a per-second rate; it gives 6.1 m/s.", "caption":"With h = 0.1 s, displacement is 0.61 m: 0.61/0.1 = 6.1 m/s.", "h":0.1},
+        {"button":"Follow the nonzero h calculation", "note":"Writing h lets me do every small interval at once. Expanding gives 9 + 6h + h². After the two 9s cancel, both remaining terms contain h. For h ≠ 0, dividing each by h leaves 6 + h. The shorter expression has exposed the pattern; we have not made division by zero legal.", "caption":"For h ≠ 0: [(3+h)² − 9]/h = (6h + h²)/h = 6 + h. At h = 0.01, the rate is 6.01 m/s.", "h":0.01},
+        {"button":"Show the limiting tangent", "note":"Approaching from the right gives 6.1, 6.01, and so on. Approaching from the left gives 5.9, 5.99, and so on. Both sides approach 6. That shared limit is the instantaneous velocity. The dashed tangent has this slope and still passes through the position (3, 9).", "caption":"The limit is 6 m/s. At h = 0 there is no two-point quotient; the dashed line displays the limiting slope.", "h":0}
+      ]
+    },
+    "second": {
+      "kind":"two-curves", "values":{"time":3,"curveCoefficient":1,"lineSlope":3},
+      "intro":"Two objects can pass the same road marker together and still be moving at different velocities. On this graph, I read the height to locate each object and the slope to compare their motion.",
+      "steps":[
+        {"button":"Find their shared position", "note":"Substituting 3 into each position rule gives 9. The two plotted paths meet at (3, 9), so the objects are side by side at that instant. This tells me a location, not what either object will do a moment later.", "caption":"At t = 3 s, both position graphs have height 9 m."},
+        {"button":"Compare the two slopes", "note":"For the curved path t², the derivative 2t changes as time passes. For the straight path 3t, every one-second step adds three metres, so its slope is always 3. I differentiate the rules before putting in the time.", "caption":"The curve has velocity rule 2t; the straight line has constant velocity 3 m/s."},
+        {"button":"Show the two tangents at 3 s", "note":"At three seconds, the curved graph has slope 6 and the straight graph has slope 3. Over a very short time after they meet, the first object gains about twice as much position as the second. Equal graph heights did not make the slopes equal.", "caption":"At the meeting: first velocity = 6 m/s; second velocity = 3 m/s. The two dashed tangent directions differ."}
+      ]
+    }
+  },
+  "definite-integrals": {
+    "first": {
+      "kind":"positive-area", "values":{"slope":2,"intercept":0,"a":1,"b":3},
+      "intro":"The vertical axis is velocity now, not position. A little strip has height in metres per second and width in seconds; multiplying them gives metres of displacement. We need all the strips between one and three seconds.",
+      "steps":[
+        {"button":"Connect the rate to its antiderivative", "note":"I look for a function whose derivative is 2t. Squaring t works, because the derivative of t² is 2t. The symbol F is just a name for this accumulation function. I can check my choice by differentiating it before I use it.", "caption":"F(t) = t² has derivative 2t. The shaded velocity–time area will give a change in position."},
+        {"button":"Mark both bounds", "note":"At the upper bound, F gives 9; at the lower bound, it gives 1. Neither number alone is our answer. We are interested only in the accumulation between these two times, so the amount before the lower bound must come off.", "caption":"The interval runs from 1 s to 3 s. Evaluate F(3) = 9 and F(1) = 1."},
+        {"button":"Check the eight metres geometrically", "note":"Subtracting gives eight metres. I can check without calculus: the shaded shape is a two-second-wide trapezoid with heights 2 and 6 m/s. Its average height is 4 m/s, and 4 × 2 is 8 m. The height at the end, 6 m/s, is a velocity; the area, 8 m, is a displacement.", "caption":"F(3) − F(1) = 9 − 1 = 8 m. Trapezoid check: [(2 + 6)/2] × 2 = 8 m."}
+      ]
+    },
+    "second": {
+      "kind":"signed-area", "values":{"slope":2,"intercept":-2,"a":0,"b":2},
+      "intro":"This object first moves in the negative direction, reaches zero velocity at the turn, then moves in the positive direction. The two triangular areas will cancel for displacement. For distance, I’ll keep both lengths.",
+      "steps":[
+        {"button":"Read the signed areas", "note":"An antiderivative is t² − 2t. It gives zero at both endpoints, so the net change is zero. The graph explains the cancellation: the triangle below the time axis counts negatively and the triangle above it counts positively.", "caption":"Signed areas: −1 m before the turn, +1 m afterward. Net displacement = −1 + 1 = 0 m."},
+        {"button":"Locate where direction changes", "note":"I solve 2t − 2 = 0 to find the crossing at one second. Before that crossing, velocity is negative; after it, velocity is positive. Splitting here keeps each stretch of travel from cancelling the other when I calculate distance.", "caption":"At t = 1 s, velocity is zero. The graph changes sign there, so that is the turn."},
+        {"button":"Keep both lengths for distance", "note":"Each triangle has base 1 s and height 2 m/s, giving a magnitude of one metre. The two lengths add to two metres. Taking the absolute value only after adding the signed areas would give |0|, which would throw away the travel we are trying to count.", "caption":"Distance = |−1| + |+1| = 2 m. Displacement remains 0 m."}
+      ]
+    }
+  },
+  "physics-1": {
+    "first": {
+      "kind":"cart", "values":{"mass":4,"right":22,"left":6},
+      "intro":"I’m drawing horizontal forces on the cart. The push and friction both belong in the calculation. Its vertical forces balance in this level-track model; they do not get added into the horizontal total.",
+      "steps":[
+        {"button":"Set the sign convention", "note":"I write a plus sign toward the right before using any numbers. A rightward force is then positive and a leftward force is negative. Choosing left as positive would also work, but every force and the final interpretation would have to follow that choice.", "caption":"Right is positive. The 22 N push is +22 N; the 6 N friction force is −6 N."},
+        {"button":"Add the two force arrows", "note":"Twenty-two newtons act one way and six act the other. The opposing six cancels six of the push, leaving sixteen rightward. I keep the two real force arrows on the cart; the separate net arrow is their calculated sum, not a third interaction to add again.", "caption":"Horizontal net force = +22 − 6 = +16 N. The net arrow summarizes the two forces."},
+        {"button":"Divide the net force by mass", "note":"Newton’s law says Fnet = ma. Dividing both sides by the 4 kg mass gives a = 16/4. A newton is a kg·m/s², so the kilograms cancel and leave m/s². The result is an acceleration of 4 m/s² toward the right.", "caption":"a = (16 kg·m/s²)/(4 kg) = +4 m/s², meaning rightward acceleration."},
+        {"button":"Separate acceleration from velocity", "note":"This means the velocity gains 4 m/s toward the right during each second of these constant forces. If the cart were initially moving left at −6 m/s, it would be at −2 m/s after one second: still moving left, but slowing. The force direction alone does not tell us its current motion.", "caption":"Acceleration is +4 m/s². Current velocity was not supplied; a left-moving cart could be slowing down."}
+      ]
+    },
+    "second": {
+      "kind":"balanced-cart", "values":{"right":10,"left":10,"velocity":2},
+      "intro":"This time the cart is already moving right at 2 m/s, and the horizontal arrows are equal. I’ll keep the motion information separate from the force diagram so that a velocity arrow cannot sneak into the force sum.",
+      "steps":[
+        {"button":"Show the cancelling forces", "note":"The rightward ten and leftward ten cancel exactly. There are still two nonzero forces on the cart. Their sum is zero; that is different from saying no one is pushing or pulling it.", "caption":"+10 N − 10 N = 0 N. Two forces cancel in the horizontal sum."},
+        {"button":"Calculate zero acceleration", "note":"For any positive cart mass, zero divided by that mass gives zero acceleration. I do not need a mass value to settle this case. Newton’s law tells me that velocity does not change; it has not told me to set velocity itself to zero.", "caption":"a = 0/m = 0 m/s². This is a statement about change in velocity."},
+        {"button":"Keep the supplied starting velocity", "note":"The problem supplied 2 m/s to the right. Adding zero change leaves that same velocity. Under this model, after three seconds the cart would be six metres farther right. If friction remained but the push stopped, this balance would end and the conclusion would change.", "caption":"Velocity remains +2 m/s while the forces stay balanced. Zero acceleration allows steady motion."}
+      ]
+    }
+  },
+  "force-diagrams": {
+    "first": {
+      "kind":"book", "values":{"mass":2,"g":10,"push":0},
+      "intro":"I’m choosing the book as the object. Each arrow must answer “what pushes or pulls this book?” Earth supplies its weight; the table supplies an upward contact force. The diagram contains forces on the book only.",
+      "steps":[
+        {"button":"Draw Earth’s pull on the book", "note":"Mass is 2 kg; weight is a force. Multiplying by 10 m/s² gives 20 N downward. I label the arrow “Earth on book” so I remember which interaction it represents. The number 2 kg is not itself a force to add.", "caption":"Earth on book: weight = mg = 2 × 10 = 20 N downward."},
+        {"button":"Write the book’s vertical force sum", "note":"I choose up as positive. The table’s unknown upward force is N and the weight is −20 N. Because the book has zero vertical acceleration, Newton’s law gives N − 20 = 2 × 0. The zero comes from the motion condition, not from either force being absent.", "caption":"For the book: N − 20 = ma = 0. Up is positive."},
+        {"button":"Find the table’s contact force", "note":"Adding twenty to both sides gives N = 20 N. The equal arrows balance on this particular object. They are not a Newton’s third-law pair: the matching partner of the table’s push on the book is the book’s push on the table, which belongs in a different object’s diagram.", "caption":"Table on book: N = 20 N upward. Its balance with weight follows from zero acceleration."}
+      ]
+    },
+    "second": {
+      "kind":"pressed-book", "values":{"mass":2,"g":10,"push":6},
+      "intro":"Now a hand presses down with 6 N while the book stays still. Earth’s pull has not changed. The extra interaction means the table must supply a different upward force.",
+      "steps":[
+        {"button":"Add the hand’s downward arrow", "note":"The new arrow is hand on book, 6 N down. I keep the original weight arrow too: the hand did not replace gravity. The downward forces total twenty-six newtons, even though they come from different objects.", "caption":"Downward forces on the book: 20 N from Earth plus 6 N from the hand."},
+        {"button":"Balance all three forces", "note":"With up positive, both downward arrows receive minus signs. The equation is N − 20 − 6 = 0. I use the zero vertical acceleration again; I do not reuse the old value of N after changing the forces.", "caption":"N − 20 − 6 = 0 because the book remains at rest."},
+        {"button":"Compare support force with weight", "note":"Add twenty-six to each side to get N = 26 N. Weight stays 20 N. This is why “normal force equals weight” is not a rule to memorize for every surface: the force sum decides the support force when other pushes or accelerations are present.", "caption":"The table supplies 26 N upward. Weight is still 20 N; the extra 6 N balances the hand."}
+      ]
+    }
+  },
+  "circuit-paths": {
+    "first": {
+      "kind":"series", "values":{"voltage":6,"r1":2,"r2":4},
+      "intro":"Start at the battery’s positive terminal and trace the wire. There is no junction where the path splits: current must pass through both resistors. These are ideal wires, an ideal 6 V source, and steady currents through ohmic resistors.",
+      "steps":[
+        {"button":"Trace the single series path", "note":"Call the common current I. The first resistor’s drop is 2I volts and the second’s is 4I volts. Around the loop those drops use the battery’s six volts, so 2I + 4I = 6. Combining the terms gives 6I = 6; the pair acts like a 6 Ω resistor.", "caption":"One path means the same current I through both resistors. Equivalent resistance = 2 + 4 = 6 Ω."},
+        {"button":"Follow the same current through both", "note":"Dividing the source voltage by the equivalent resistance gives one ampere. That means one coulomb of charge passes a point each second. The second resistor does not receive a smaller current; in steady operation, charge is not piling up between the two resistors.", "caption":"I = 6 V / 6 Ω = 1 A everywhere along this series path."},
+        {"button":"Account for the two voltage drops", "note":"I multiply the same one ampere by each resistance. The first drop is two volts and the second is four; their sum matches the six-volt source. Voltage is energy transferred per unit charge, so the two resistors share the energy transfer while the current stays the same.", "caption":"Drops: 1 × 2 = 2 V and 1 × 4 = 4 V. Check: 2 + 4 = 6 V."}
+      ]
+    },
+    "second": {
+      "kind":"parallel", "values":{"voltage":6,"r1":2,"r2":4},
+      "intro":"The same components are connected differently. Both resistors now join the same upper and lower wires. Each branch therefore spans the full battery voltage, and the current has two routes.",
+      "steps":[
+        {"button":"Trace the two shared terminals", "note":"I follow either resistor’s top wire back to the positive terminal and its bottom wire back to the negative terminal. Both connect across the same six volts. Dividing the voltage between them would describe the series circuit, not these two branches.", "caption":"Each branch connects across the same terminals, so each resistor has 6 V across it."},
+        {"button":"Calculate the branch currents", "note":"Use I = V/R separately: six divided by two gives 3 A, and six divided by four gives 1.5 A. At the junction, the incoming current must supply both branches, so the battery provides 4.5 A. That total is not the current through either individual resistor.", "caption":"Branch currents: 3 A and 1.5 A. Battery current = 3 + 1.5 = 4.5 A."},
+        {"button":"Check what the battery sees", "note":"A single resistor drawing 4.5 A from six volts would have resistance 6/4.5 = 4/3 Ω. This is less than either branch resistance. That makes sense: adding another route at the same voltage increases the current the ideal source supplies.", "caption":"Equivalent resistance = 6/4.5 = 4/3 Ω ≈ 1.33 Ω, below both 2 Ω and 4 Ω."}
+      ]
+    }
+  }
+}
