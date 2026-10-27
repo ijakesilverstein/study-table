@@ -5,6 +5,7 @@ math=json.loads((r/'source/math-desk-v116.json').read_text());links=json.loads((
 assert len(math)==7 and all(len(t['examples'])==2 for t in math.values())
 encoded=re.search(r'<script id="full-bundle" type="text/plain">(.*?)</script>',(r/'public/study-table-v115.html').read_text(),re.S)[1];old=json.loads(gzip.decompress(base64.b64decode(encoded)))
 for subject,course in courses.items():
+ if subject in ['medicine','business']:continue
  previous=json.loads(re.search(r'<script id="full-course-data" type="application/json">(.*?)</script>',old[course['path']]['t'],re.S)[1])
  assert previous=={k:v for k,v in course.items() if k!='workshop'},(subject,'prior teaching changed')
  assert len(links[subject])==4

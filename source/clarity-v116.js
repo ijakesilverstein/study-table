@@ -19,7 +19,7 @@ function v116RenderMath(topic){
  function dialogScrollTop(){const d=$('mathDesk');if(d)d.scrollTop=0}
 }
 function v116WireMath(){document.querySelectorAll('[data-math-help]').forEach(b=>b.onclick=()=>v116OpenMath(b.dataset.mathHelp,b))}
-function v116StepTools(partIndex,stepIndex){const target=V116_STEPS[COURSE.subject][partIndex][stepIndex];return '<div class="step-actions"><button type="button" data-follow-step="'+stepIndex+'" aria-controls="projectDemo" aria-expanded="false">'+escape(target.label)+'</button>'+(target.help?v116MathButton(target.help):'')+'</div><div class="step-demo-slot" data-step-slot="'+stepIndex+'"></div>'}
+function v116StepTools(partIndex,stepIndex){const target=V116_STEPS[COURSE.subject]?.[partIndex]?.[stepIndex];if(!target)return '';return '<div class="step-actions"><button type="button" data-follow-step="'+stepIndex+'" aria-controls="projectDemo" aria-expanded="false">'+escape(target.label)+'</button>'+(target.help?v116MathButton(target.help):'')+'</div><div class="step-demo-slot" data-step-slot="'+stepIndex+'"></div>'}
 function v116WireSteps(partIndex){
  const host=$('projectDemo'),home=$('projectDemoHome');
  const set=(id,value,event='change')=>{const el=$(id);if(!el)return;el.value=String(value);el.dispatchEvent(new Event(event,{bubbles:true}))};

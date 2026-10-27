@@ -98,7 +98,7 @@ archive=re.search(r'(<script id="full-bundle" type="text/plain">)(.*?)(</script>
 bundle=json.loads(gzip.decompress(base64.b64decode(archive[2])))
 full_meta={}
 for subject,course in courses.items():
-    path=COURSE_PATHS[subject];practice_path=None
+    path=COURSE_PATHS[subject];practice_path=course.get('practicePath')
     if subject in ['piano','spanish','chess']:
         practice_path=path.rsplit('/',1)[0]+'/practice-studio.html'
         assert practice_path not in bundle
@@ -115,16 +115,16 @@ html=once(html,"btn.onclick=()=>{night=!night;try{localStorage.setItem(KEY,night
 html=once(html,"function setTheme(v){\n document.documentElement.dataset.studyTheme=v;", "function setTheme(v){\n if(window.studyTableTheme){window.studyTableTheme.set(v);return}\n document.documentElement.dataset.studyTheme=v;")
 # A local skip link focuses the reader without going through archive navigation.
 html=once(html,"if(!a)return;let target=localURL(a.getAttribute('href'));","if(!a||a.classList.contains('skip-to-lesson'))return;let target=localURL(a.getAttribute('href'));")
-html=html.replace('Study Table V108 — Taught Lessons','Study Table V119 — Full Courses')
-html=html.replace('study-table-v108.html','study-table-v119.html').replace('Study_Table_V108.html','Study_Table_V119.html')
+html=html.replace('Study Table V108 — Taught Lessons','Study Table V121 — Full Courses')
+html=html.replace('study-table-v108.html','study-table-v121.html').replace('Study_Table_V108.html','Study_Table_V121.html')
 # Append after the historical layers so this palette has a single clear point of ownership.
 end=html.rindex('</body>')
 parent=(root/'full-course-parent.js').read_text().replace('__FULL_COURSES__',json.dumps(full_meta,separators=(',',':')))
 html=html[:end]+'\n<style id="v109-theme">'+(root/'theme-v109.css').read_text()+'\n'+(root/'full-course-parent.css').read_text()+'</style><script>'+parent+'</script><script id="modal-access-v119">'+(root/'modal-access-v119.js').read_text()+'</script>\n'+html[end:]
-(root/'Study_Table_V119.html').write_text(html)
+(root/'Study_Table_V121.html').write_text(html)
 (root/'teacher-v109.js').write_text(teacher)
 (root/'demos-v109.json').write_text(json.dumps(demos,ensure_ascii=False,indent=2))
 (root/'lessons-built-v109.json').write_text(json.dumps(lessons,ensure_ascii=False,indent=2))
 (root/'full-courses-built.json').write_text(json.dumps(courses,ensure_ascii=False,indent=2))
 (root/'course-map-built.json').write_text(json.dumps(catalogue,ensure_ascii=False,indent=2))
-print('V119 built:',len(html.encode()),'bytes; 38 short lessons plus 65 full-course units in five courses; original practice studios preserved.')
+print('V121 built:',len(html.encode()),'bytes; 38 short lessons plus 87 full-course units in seven courses; original practice studios preserved.')

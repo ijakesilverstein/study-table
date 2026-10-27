@@ -10,6 +10,7 @@ ORDERS={
  'chess':['chess-0','read-moves','chess-4','chess-1','chess-2','count-exchanges','chess-5','castling','chess-3','pins','promotion','pawn-race','queen-net','annotated-game'],
  'calculus':['functions','algebra-for-rates','calculus-1','calculus-2','derivative-rules','product-rule','calculus-3','calculus-5','calculus-4','definite-integrals','integral-substitution'],
  'physics':['units-and-directions','physics-4','velocity-graphs','physics-1','force-diagrams','physics-2','physics-5','physics-3','circuit-paths','waves','pressure']}
+COURSE_PATHS.update({'medicine':'curricula/medicine.html','business':'curricula/business.html'})
 ALIASES={'piano':{'performance':'read-melody'},'chess':{'threats':'chess-1'}}
 META={
  'spanish':('Spanish for conversation','Build useful exchanges, understand what the other person asks, and tell a short story about your week.'),
@@ -86,6 +87,16 @@ def build_courses(teacher):
             assert all(id in order for p in course['workshop']['parts'] for id in p['links'])
         courses[subject]=course
     assert sum(len(c['units']) for c in courses.values())==65
+    additions=json.loads((ROOT/'claude-additions-v121.json').read_text())
+    for subject,w in additions['workshops'].items():courses[subject]['workshop']=w
+    for subject,c in additions['courses'].items():
+        for u in c['units']:u['demo']=None
+        courses[subject]=c
+    for change in json.loads((ROOT/'claude-corrections-v121.json').read_text()):
+        target=courses
+        for k in change['path'][:-1]:target=target[k]
+        assert target[change['path'][-1]]==change['original']
+        target[change['path'][-1]]=change['replacement']
     return courses,demos
 
 def course_demos():
@@ -219,7 +230,7 @@ def generate_course_demos():
 
 def render_course(course,demos):
     data=json.dumps(course,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')
-    selected={unit['demo']:demos[unit['demo']] for unit in course['units'] if unit['demo']}
+    selected={unit['demo']:demos[unit['demo']] for unit in course['units'] if unit.get('demo')}
     demo_source=(ROOT/'demos-v109.js').read_text().replace('__DEMOS__',json.dumps(selected,ensure_ascii=False,separators=(',',':')))
     project_data=json.loads((ROOT/'project-demos-v115.json').read_text())
     project_source=(ROOT/'course-projects-v115.js').read_text().replace('__PROJECT_DEMOS__',json.dumps(project_data.get(course['subject'],{}),ensure_ascii=False,separators=(',',':')))
@@ -229,4 +240,4 @@ def render_course(course,demos):
     math_button='<button id="courseMath" type="button">Maths help</button>' if course['subject'] in ['calculus','physics'] else ''
     helpers="const $=id=>document.getElementById(id);const escape=s=>String(s??'').replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));"
     import html
-    return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+html.escape(course['title'])+' — Full course</title><style>'+(ROOT/'theme-v109.css').read_text()+'\n'+(ROOT/'course-reader.css').read_text()+'\n'+(ROOT/'claude-additions-v114.css').read_text()+'\n'+(ROOT/'course-projects-v115.css').read_text()+'\n'+(ROOT/'clarity-v116.css').read_text()+'\n'+(ROOT/'teacher-workshops-v117.css').read_text()+'\n'+(ROOT/'slow-teaching-v118.css').read_text()+'</style><script>'+(ROOT/'theme-state.js').read_text()+'</script></head><body><a class="skip-to-lesson" href="#courseArticle">Skip to the lesson</a><header class="course-top"><strong id="courseSubject"></strong><div><button id="courseAll" type="button">All curriculums</button>'+math_button+'<button id="courseTheme" type="button" data-study-theme-toggle>Dark mode</button></div></header><div class="reader-layout"><aside class="contents"><details id="courseContents" open><summary>Course contents</summary><ol id="courseContentsList"></ol></details></aside><main id="courseArticle" class="reader-article" tabindex="-1"></main></div><script id="full-course-data" type="application/json">'+data+'</script><script>(()=>{\'use strict\';'+helpers+'\n'+demo_source+'\n'+(ROOT/'course-figures.js').read_text()+'\n'+(ROOT/'teaching-panels.js').read_text().replace('__PANEL_DATA__',(ROOT/'teaching-panels-v113.json').read_text())+'\n'+(ROOT/'claude-figures-v114.js').read_text()+'\n'+project_source+'\n'+clarity_source+'\n'+workshop_source+'\n'+slow_source+'\n'+(ROOT/'course-reader.js').read_text()+'\n})();</script></body></html>'
+    return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+html.escape(course['title'])+' — Full course</title><style>'+(ROOT/'theme-v109.css').read_text()+'\n'+(ROOT/'course-reader.css').read_text()+'\n'+(ROOT/'claude-additions-v114.css').read_text()+'\n'+(ROOT/'course-projects-v115.css').read_text()+'\n'+(ROOT/'clarity-v116.css').read_text()+'\n'+(ROOT/'teacher-workshops-v117.css').read_text()+'\n'+(ROOT/'slow-teaching-v118.css').read_text()+'\n'+(ROOT/'claude-progress-v121.css').read_text()+'</style><script>'+(ROOT/'theme-state.js').read_text()+'</script></head><body><a class="skip-to-lesson" href="#courseArticle">Skip to the lesson</a><header class="course-top"><strong id="courseSubject"></strong><div><button id="courseAll" type="button">All curriculums</button>'+math_button+'<button id="courseTheme" type="button" data-study-theme-toggle>Dark mode</button></div></header><div class="reader-layout"><aside class="contents"><details id="courseContents" open><summary>Course contents</summary><ol id="courseContentsList"></ol></details></aside><main id="courseArticle" class="reader-article" tabindex="-1"></main></div><script id="full-course-data" type="application/json">'+data+'</script><script>(()=>{\'use strict\';'+helpers+'\n'+demo_source+'\n'+(ROOT/'course-figures.js').read_text()+'\n'+(ROOT/'teaching-panels.js').read_text().replace('__PANEL_DATA__',(ROOT/'teaching-panels-v113.json').read_text())+'\n'+(ROOT/'claude-figures-v114.js').read_text()+'\n'+project_source+'\n'+clarity_source+'\n'+workshop_source+'\n'+slow_source+'\n'+(ROOT/'claude-progress-v121.js').read_text()+'\n'+(ROOT/'course-reader.js').read_text()+'\n})();</script></body></html>'

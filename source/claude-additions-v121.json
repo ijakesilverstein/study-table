@@ -1,0 +1,3079 @@
+{
+  "workshops": {
+    "calculus": {
+      "id": "calculus-workshop",
+      "title": "Watch a teacher choose the method",
+      "summary": "Four comparisons: average against instantaneous, product rule against expanding, naming the inside, and area against antiderivative.",
+      "intro": "Four worked comparisons where more than one route is available. In each one I pick a method, say why, then run the alternative and check that the two agree. The point is the choosing, not the answer.",
+      "needs": "Use after the derivative units. Every calculation is carried out in full, and each chapter ends by saying when the other route would have been easier.",
+      "parts": [
+        {
+          "title": "Average rate or instantaneous rate?",
+          "goal": "Tell apart the two questions, and see why they sometimes give the same number.",
+          "opening": [
+            "Position follows s(t) = t² metres. Someone asks for “the velocity” between t = 1 and t = 3. That phrasing hides two different questions, and they need different tools.",
+            "I will answer both, then show why they happen to agree here — and construct a case where they do not, so the agreement is not mistaken for a rule."
+          ],
+          "steps": [
+            {
+              "title": "Separate the two questions",
+              "line": "Average over 1 ≤ t ≤ 3, or the velocity at one instant?",
+              "why": "An average needs two observations and an interval. An instantaneous velocity needs a derivative at a single point. Deciding which is being asked is the whole first step."
+            },
+            {
+              "title": "Compute the average",
+              "line": "(s(3) − s(1))/(3 − 1) = (9 − 1)/2 = 4 m/s",
+              "why": "Change in output over change in input, using the same two observations for both. This is one number standing in for the whole interval."
+            },
+            {
+              "title": "Compute the instant",
+              "line": "s′(t) = 2t, so s′(2) = 4 m/s",
+              "why": "The derivative is what the interval averages settle toward as the interval closes around t = 2. Same number as the average — which deserves an explanation rather than a shrug."
+            },
+            {
+              "title": "Explain the agreement, then break it",
+              "line": "For s = t² the average over [a,b] is a+b, and s′((a+b)/2) = a+b. For s = t³ over [1,3]: average 13, but s′(2) = 12.",
+              "why": "For a quadratic the average over an interval always equals the derivative at the midpoint. That is a property of quadratics, not a general law, and the cubic shows it failing."
+            }
+          ],
+          "ending": "The two questions coincide for quadratics at the midpoint and diverge otherwise. Decide which one was asked before reaching for a method.",
+          "links": [
+            "calculus-1",
+            "calculus-2",
+            "derivative-rules"
+          ]
+        },
+        {
+          "title": "Product rule, or expand first?",
+          "goal": "Run both routes on the same expression and find where only one of them is available.",
+          "opening": [
+            "For y = x²(x + 3) there are two honest routes: multiply the brackets out and differentiate term by term, or apply the product rule directly.",
+            "Both are correct. I will run them side by side, then find the case where the easier one is simply not on offer."
+          ],
+          "steps": [
+            {
+              "title": "Expand first, because it needs no new rule",
+              "line": "y = x²(x+3) = x³ + 3x² → y′ = 3x² + 6x",
+              "why": "When a product multiplies out in one line, this is usually the fastest and least error-prone route. The power rule alone does the work."
+            },
+            {
+              "title": "Now the product rule",
+              "line": "y′ = 2x(x+3) + x²(1) = 2x² + 6x + x² = 3x² + 6x",
+              "why": "Each factor's rate is multiplied by the other factor's full size. Getting the same answer is the check that the rule was applied correctly."
+            },
+            {
+              "title": "Find where expanding stops working",
+              "line": "y = x²·f(x) → y′ = 2x·f(x) + x²·f′(x)",
+              "why": "With an unspecified second factor there is nothing to multiply out, so the product rule is the only route. This is the case the rule exists for."
+            },
+            {
+              "title": "State the choice",
+              "line": "Expand when the product is short and multiplies out; use the rule otherwise.",
+              "why": "Neither is more correct. The rule is more general, expanding is often quicker, and running both is a free check when the expression allows it."
+            }
+          ],
+          "ending": "Two routes, one answer. Expanding is a shortcut that exists only sometimes; the product rule always works and doubles as the verification.",
+          "links": [
+            "product-rule",
+            "derivative-rules"
+          ]
+        },
+        {
+          "title": "Name the inside before differentiating",
+          "goal": "Apply the chain rule to a composite and catch the most common dropped factor.",
+          "opening": [
+            "For y = (3x + 2)² the tempting answer is 2(3x + 2). It is wrong, and the reason is a factor that is easy to lose because it never appears on the page.",
+            "I will name the inside explicitly, differentiate each layer, then check the result by expanding — which is exactly the check that exposes the missing factor."
+          ],
+          "steps": [
+            {
+              "title": "Give the inside a name",
+              "line": "Let u = 3x + 2, so y = u²",
+              "why": "Writing the substitution down turns one composite expression into two simple ones, each with its own obvious derivative."
+            },
+            {
+              "title": "Differentiate each layer separately",
+              "line": "dy/du = 2u, and du/dx = 3",
+              "why": "Two rates answering different questions: output per unit of the inside, and inside per unit of x."
+            },
+            {
+              "title": "Multiply the two rates",
+              "line": "dy/dx = 2u × 3 = 6(3x + 2) = 18x + 12",
+              "why": "The chain rule multiplies them because the units of the middle quantity cancel. The factor of 3 is precisely what the tempting answer omitted."
+            },
+            {
+              "title": "Check by expanding",
+              "line": "(3x+2)² = 9x² + 12x + 4 → 18x + 12 ✓",
+              "why": "The expansion agrees with the chain rule and disagrees with 2(3x+2) = 6x + 4. Whenever the composite can be expanded, this check settles the matter in one line."
+            }
+          ],
+          "ending": "The inside's rate is a factor, not an optional extra. Expanding is the cheapest way to catch it when the expression allows expansion.",
+          "links": [
+            "calculus-3",
+            "derivative-rules"
+          ]
+        },
+        {
+          "title": "Area or antiderivative?",
+          "goal": "Get the same displacement two ways, then find where only one route survives.",
+          "opening": [
+            "Velocity is v(t) = 2t m/s and we want the displacement from t = 1 to t = 3 seconds. The region under the line is a trapezoid, so geometry is available — and so is an antiderivative.",
+            "I will do both, use one to check the other, and then change the velocity rule so that geometry runs out."
+          ],
+          "steps": [
+            {
+              "title": "Read it off the graph",
+              "line": "v(1) = 2, v(3) = 6, width 2 → (2 + 6)/2 × 2 = 8 m",
+              "why": "A trapezoid's area is the average of the parallel sides times the width. For a straight-line velocity this is exact, not an approximation."
+            },
+            {
+              "title": "Now use an antiderivative",
+              "line": "∫₁³ 2t dt = [t²]₁³ = 9 − 1 = 8 m",
+              "why": "Both endpoint values are needed. Evaluating only at the top would give 9, which is an accumulation from nowhere rather than between the bounds."
+            },
+            {
+              "title": "Show the constant cannot matter",
+              "line": "With F(t) = t² + 100: 109 − 101 = 8 m",
+              "why": "The constant appears in both endpoint values and cancels in the subtraction. That is exactly why a definite integral needs no +C."
+            },
+            {
+              "title": "Change the rule so geometry fails",
+              "line": "v(t) = 3t² from 0 to 2: no simple area formula, but [t³]₀² = 8 − 0 = 8 m",
+              "why": "The region under a curve has no elementary area formula. The antiderivative route is unaffected, which is what makes it the general method."
+            }
+          ],
+          "ending": "Geometry and antiderivatives must agree wherever both apply. Geometry runs out as soon as the velocity graph stops being straight; the antiderivative does not.",
+          "links": [
+            "calculus-4",
+            "definite-integrals",
+            "integral-substitution"
+          ]
+        }
+      ]
+    },
+    "physics": {
+      "id": "physics-workshop",
+      "title": "Watch a teacher pick the law",
+      "summary": "Four decisions: force or energy, which quantity a collision conserves, reading one graph three ways, and tracing a circuit before calculating.",
+      "intro": "Four problems where the hard part is choosing which law to apply. In each one I state the choice and the reason, work it through, then run the alternative to confirm that the physics agrees with itself.",
+      "needs": "Use after the force, energy, collision and circuit units. g = 10 m/s² and friction is ignored unless stated.",
+      "parts": [
+        {
+          "title": "Force or energy?",
+          "goal": "Choose between kinematics and an energy account, then confirm they agree.",
+          "opening": [
+            "A 2 kg cart starts from rest on a frictionless track. A steady 10 N force pushes it through 3 metres. How fast is it moving at the end?",
+            "The question gives a force and a distance and asks for a speed. Both routes will work here; I will run each and then say which question would have made the choice matter."
+          ],
+          "steps": [
+            {
+              "title": "Notice what the question supplies",
+              "line": "Force 10 N, distance 3 m, mass 2 kg, starts from rest. No time is given or asked for.",
+              "why": "Force times distance is work, which is an energy quantity. When time appears nowhere in the question, the energy route usually goes straight to the answer."
+            },
+            {
+              "title": "Energy route",
+              "line": "W = Fd = 10 × 3 = 30 J\n½(2)v² = 30 → v² = 30 → v = 5.48 m/s",
+              "why": "All the work done goes into kinetic energy because the track is frictionless and level. One equation, no intermediate quantities."
+            },
+            {
+              "title": "Force route, for comparison",
+              "line": "a = F/m = 10/2 = 5 m/s²\nv² = 2ad = 2 × 5 × 3 = 30 → v = 5.48 m/s",
+              "why": "The same answer by a different road. Agreement between two independent methods is the strongest check available in a physics problem."
+            },
+            {
+              "title": "Say when the choice matters",
+              "line": "“How long did it take?” → t = v/a = 5.48/5 = 1.10 s",
+              "why": "The energy route never mentions time, so it cannot answer that. Choose the method by which quantities the question names and which it asks for."
+            }
+          ],
+          "ending": "Energy skips time and goes straight from force and distance to speed. Kinematics keeps time available. Both agree at 5.48 m/s.",
+          "links": [
+            "physics-1",
+            "physics-2",
+            "velocity-graphs"
+          ]
+        },
+        {
+          "title": "Which quantity does a collision conserve?",
+          "goal": "Use momentum for a sticking collision, and see what conserving the wrong quantity produces.",
+          "opening": [
+            "A 2 kg cart moving right at 3 m/s strikes a stationary 1 kg cart and they stick together. External impulse during the brief contact is negligible.",
+            "Momentum and kinetic energy are both tempting. Only one is conserved here, and running the other one deliberately shows why it cannot be."
+          ],
+          "steps": [
+            {
+              "title": "Choose the conserved quantity",
+              "line": "Momentum is conserved. Kinetic energy is not.",
+              "why": "A sticking collision deforms the carts and makes sound, both of which remove kinetic energy. Nothing removes momentum from the pair, because the external horizontal impulse is negligible."
+            },
+            {
+              "title": "Apply momentum",
+              "line": "p = 2(3) + 1(0) = 6 kg·m/s\nv = 6/3 = 2 m/s",
+              "why": "Add mass times signed velocity for each object before impact; afterwards the combined 3 kg shares one velocity."
+            },
+            {
+              "title": "Account for the energy",
+              "line": "Before: ½(2)(3²) = 9 J\nAfter: ½(3)(2²) = 6 J\nMissing: 3 J",
+              "why": "The 3 J went into deformation and sound. Noticing where it went is what distinguishes a conserved quantity from one that merely changes form."
+            },
+            {
+              "title": "Try conserving the wrong one",
+              "line": "½(3)v² = 9 → v = 2.45 m/s\nThat carries 3 × 2.45 = 7.35 kg·m/s",
+              "why": "Momentum would have appeared out of nowhere, rising from 6 to 7.35 with no external push. The contradiction is the proof that kinetic energy is the wrong thing to conserve here."
+            }
+          ],
+          "ending": "Momentum gives 2 m/s and accounts for the missing 3 J. Conserving kinetic energy instead would manufacture momentum from nothing.",
+          "links": [
+            "physics-5",
+            "physics-2"
+          ]
+        },
+        {
+          "title": "One graph, three questions",
+          "goal": "Take height, slope and area from the same velocity–time graph without confusing them.",
+          "opening": [
+            "A cart rises uniformly from 0 to 4 m/s over 0–2 s, holds 4 m/s from 2–4 s, then falls uniformly to rest over 4–6 s.",
+            "Three different questions can be answered from this one picture, and each uses a different feature of it. I will take them in turn and then name the trap."
+          ],
+          "steps": [
+            {
+              "title": "Decide which feature each question needs",
+              "line": "Velocity → height. Acceleration → slope. Displacement → area.",
+              "why": "Choosing the feature before calculating is what prevents reading a height where a slope was wanted. Most errors on these graphs are feature errors, not arithmetic ones."
+            },
+            {
+              "title": "Acceleration from the slopes",
+              "line": "(4−0)/2 = 2 m/s², then 0, then (0−4)/2 = −2 m/s²",
+              "why": "A flat segment has zero slope and therefore zero acceleration, even though the cart is moving fastest there. Height and slope are independent."
+            },
+            {
+              "title": "Displacement from the areas",
+              "line": "½(2)(4) + (4)(2) + ½(2)(4) = 4 + 8 + 4 = 16 m",
+              "why": "Triangle, rectangle, triangle. Every segment is above the axis, so all three contributions are positive and the distance equals the displacement."
+            },
+            {
+              "title": "Name the trap",
+              "line": "The falling line from 4–6 s still means forward motion.",
+              "why": "The graph is not a picture of the path. While the height stays positive the cart keeps moving forward; the fall only means it is doing so more slowly."
+            }
+          ],
+          "ending": "Height 0–4 m/s, slopes +2, 0 and −2 m/s², total displacement 16 m — three answers from one picture, each using a different feature.",
+          "links": [
+            "velocity-graphs",
+            "physics-4"
+          ]
+        },
+        {
+          "title": "Trace the circuit before calculating",
+          "goal": "Work the same two resistors in series and in parallel, and sanity-check the direction of the answer.",
+          "opening": [
+            "An ideal 6 V source drives a 2 Ω and a 4 Ω resistor. The resistance labels alone do not determine the answer — the wiring does.",
+            "I will do both arrangements and finish with a check that catches the single most common error in this topic."
+          ],
+          "steps": [
+            {
+              "title": "Trace the path first",
+              "line": "One continuous loop → series. Two separate branches across the source → parallel.",
+              "why": "In series the same current passes through both; in parallel each resistor sees the full source voltage. Which quantity is shared is decided by the wiring, not the labels."
+            },
+            {
+              "title": "Series",
+              "line": "R = 2 + 4 = 6 Ω; I = 6/6 = 1 A\nDrops: 1×2 = 2 V and 1×4 = 4 V, adding to 6 V",
+              "why": "One path, one current. The drops must add back to the source voltage, which is the check that the series calculation is right."
+            },
+            {
+              "title": "Parallel",
+              "line": "6/2 = 3 A and 6/4 = 1.5 A → 4.5 A total\nR_eq = 6/4.5 ≈ 1.33 Ω",
+              "why": "Each branch independently sees 6 V, so compute the branch currents and add them. The equivalent resistance follows from the total current, not from adding the resistances."
+            },
+            {
+              "title": "Check the direction of the result",
+              "line": "1.33 Ω < 2 Ω ✓ and 4.5 A > 1 A ✓",
+              "why": "Opening a second path must make the pair easier for current than either resistor alone. Any parallel answer above the smallest individual resistance is wrong, and this check catches it immediately."
+            }
+          ],
+          "ending": "Series: 6 Ω and 1 A. Parallel: 1.33 Ω and 4.5 A. Trace the wiring first, then check that adding a path lowered the resistance.",
+          "links": [
+            "circuit-paths",
+            "physics-3"
+          ]
+        }
+      ]
+    }
+  },
+  "courses": {
+    "medicine": {
+      "subject": "medicine",
+      "title": "How the body keeps itself in range",
+      "intro": "Eleven units on the mechanisms behind physiology and clinical reasoning: feedback, transport, pressure and flow, gas exchange, filtering, defence, drug levels and what a test result is actually telling you.",
+      "path": "curricula/medicine.html",
+      "practice": "15 guided medical cases",
+      "aliases": {},
+      "stages": [
+        {
+          "title": "The body as a regulated system",
+          "start": "homeostasis",
+          "goal": "Set points, gradients, and why a single reading is not a story."
+        },
+        {
+          "title": "Moving things around the body",
+          "start": "two-circuits",
+          "goal": "Pressure, flow, gas exchange and the kidney's filter-then-reclaim design."
+        },
+        {
+          "title": "Defence, drugs and evidence",
+          "start": "glucose-insulin",
+          "goal": "Control loops that fail, immunity, drug levels and reading a test result."
+        }
+      ],
+      "units": [
+        {
+          "id": "homeostasis",
+          "title": "Staying in range is active work",
+          "goal": "Describe a negative feedback loop as sensor, comparator and effector, and say what the set point is.",
+          "opening": [
+            "Core body temperature sits near 37 °C. It does not stay there because nothing disturbs it — a cold room, a fever, a hard run and a heavy meal all push on it continuously. It stays there because something measures it and pushes back.",
+            "That pushing back has a shape worth learning once, because the same shape turns up in blood glucose, blood pressure, salt, water and pH. A sensor reads the value, a comparator holds a target, and an effector acts in the direction that reduces the gap."
+          ],
+          "heading": "Why the loop has to act in the opposite direction",
+          "teaching": [
+            "Call the measured value the output and the target the set point. Negative feedback means the response has the opposite sign to the error: too hot triggers cooling, too cold triggers heating. If the response had the same sign as the error, every small disturbance would grow instead of shrink.",
+            "Control does not mean the value never moves. It means deviations are detected and corrected, so the value oscillates in a narrow band around the set point rather than drifting away. The narrowness of that band is what we are describing when we call something tightly regulated."
+          ],
+          "terms": [
+            [
+              "Set point",
+              "The target value a control loop defends."
+            ],
+            [
+              "Negative feedback",
+              "A response in the opposite direction to the error, which shrinks the gap."
+            ],
+            [
+              "Effector",
+              "The structure that carries out the correcting action — a sweat gland, a muscle, a hormone-secreting cell."
+            ]
+          ],
+          "first": {
+            "title": "Cooling down after the temperature rises",
+            "problem": "Core temperature rises from 37.0 °C to 37.5 °C during exercise. Trace the loop that brings it back.",
+            "steps": [
+              [
+                "Name the measured value",
+                "Output = core temperature = 37.5 °C",
+                "Receptors in the hypothalamus and in the skin report temperature. The hypothalamus is where the reading is compared with a target."
+              ],
+              [
+                "Find the error",
+                "Error = 37.5 − 37.0 = +0.5 °C",
+                "The sign matters more than the size here. A positive error means the body is above its target."
+              ],
+              [
+                "Choose the direction of response",
+                "Error positive → act to lower temperature",
+                "Sweating and widening of skin vessels both move heat out. Both are responses with the opposite sign to the error."
+              ],
+              [
+                "Check the loop closes",
+                "Heat loss rises → temperature falls → error shrinks → response eases",
+                "As the error approaches zero the correcting action is dialled back. That self-limiting property is what makes the loop settle rather than overshoot indefinitely."
+              ]
+            ],
+            "notice": "Nothing in the loop needs to know why the temperature rose. The same machinery handles exercise, a hot room, and a heavy meal."
+          },
+          "second": {
+            "title": "The same loop running the other way",
+            "problem": "Core temperature falls to 36.5 °C in a cold room. What changes, and what stays the same?",
+            "steps": [
+              [
+                "Find the error",
+                "Error = 36.5 − 37.0 = −0.5 °C",
+                "The error is now negative. The sensor and comparator are unchanged."
+              ],
+              [
+                "Choose the direction",
+                "Error negative → act to raise temperature",
+                "Shivering generates heat; skin vessels narrow to keep it in. Different effectors, same rule."
+              ],
+              [
+                "Compare the two cases",
+                "Sweating and shivering are two outputs of one controller",
+                "The loop is not two separate systems. It is one comparator that can drive responses in either direction."
+              ]
+            ],
+            "notice": "A controller that can only push one way cannot hold a value in a band — it can only stop it going one direction."
+          },
+          "exercise": [
+            "Blood glucose rises after a meal and returns to its usual range over the next two hours. Name the error, the direction of the response, and one effector.",
+            "The error is positive: glucose is above its set point. The response must lower it, so insulin is released and tissues take glucose out of the blood. Insulin-secreting beta cells are the effector. The shape is identical to the temperature loop."
+          ],
+          "mistake": {
+            "attempt": "A fever means the body's temperature control has broken down.",
+            "diagnosis": "During a fever the loop is working normally — it is defending a higher set point. The giveaway is the direction of the response: a person whose fever is rising feels cold and shivers, which is the body actively generating heat to reach the new target.",
+            "repair": "Describe fever as a regulated change in the set point rather than a loss of regulation. The controller is intact; the target has moved.",
+            "check": "Watch which way the effectors are pushing. A broken controller would not produce purposeful heat generation; it would simply let temperature drift with the room."
+          },
+          "takeaway": "A regulated value is held by a loop: sensor, comparator with a set point, and an effector acting in the opposite direction to the error. Regulation means deviations get corrected, not that the value never moves.",
+          "recall": {
+            "from": null,
+            "ask": "If a loop responded in the same direction as the error instead of the opposite one, what would happen to a small disturbance?",
+            "answer": "It would grow. A small rise would trigger a response that raised the value further, which would enlarge the error and trigger more of the same. That is positive feedback, which drives a value away from its starting point rather than holding it."
+          },
+          "previous": null,
+          "next": "cells-and-transport"
+        },
+        {
+          "id": "cells-and-transport",
+          "title": "Why anything crosses a membrane at all",
+          "goal": "Predict the direction of diffusion and osmosis from gradients, and say when a pump is required.",
+          "opening": [
+            "A cell membrane is not a wall. It is a barrier that lets some things through easily, some things through slowly, and some things only with help and an energy supply.",
+            "Almost all of the movement you need to account for comes from one idea: substances spread from where they are concentrated to where they are not, until the difference is gone. Anything moving the other way needs a reason, and that reason costs energy."
+          ],
+          "heading": "Name the substance before you name the direction",
+          "teaching": [
+            "Diffusion moves a substance down its own gradient. Oxygen crosses from alveolar gas into blood because the partial pressure of oxygen is higher in the gas; carbon dioxide crosses the other way for the same reason, in its own gradient.",
+            "Osmosis is the special case of water. Water moves down the water gradient, which is toward the side with more dissolved solute, because that is the side where water itself is more dilute. Active transport moves a substance against its gradient and must be paid for with ATP, which is why the sodium–potassium pump is one of the body's largest standing energy costs."
+          ],
+          "terms": [
+            [
+              "Gradient",
+              "A difference in concentration or pressure between two places."
+            ],
+            [
+              "Osmosis",
+              "Movement of water across a membrane toward the higher solute concentration."
+            ],
+            [
+              "Active transport",
+              "Movement against a gradient, powered by ATP."
+            ]
+          ],
+          "first": {
+            "title": "Oxygen entering the blood",
+            "problem": "Alveolar oxygen is about 100 mmHg; oxygen in the blood arriving at the alveolus is about 40 mmHg. Which way does oxygen move, and what stops it?",
+            "steps": [
+              [
+                "Compare the partial pressures",
+                "100 mmHg in gas vs 40 mmHg in blood",
+                "Partial pressure is the gradient that matters for a gas, not the total number of molecules."
+              ],
+              [
+                "Give the direction",
+                "Gas → blood, because 100 > 40",
+                "Oxygen moves down its own gradient. No pump is involved, and none is needed."
+              ],
+              [
+                "Say what ends the movement",
+                "Movement slows as the two pressures converge",
+                "Blood leaving a healthy alveolus is close to 100 mmHg. The gradient has mostly been used up."
+              ],
+              [
+                "Check the other gas separately",
+                "CO₂: about 45 mmHg in blood, 40 mmHg in gas → blood to gas",
+                "Each gas follows its own gradient. They cross in opposite directions across the same membrane at the same time."
+              ]
+            ],
+            "notice": "A membrane does not decide direction. The gradient does, and each substance has its own."
+          },
+          "second": {
+            "title": "A red cell placed in pure water",
+            "problem": "A red blood cell is put into pure water. Which way does water move, and what happens to the cell?",
+            "steps": [
+              [
+                "Identify the solute difference",
+                "Inside: dissolved salts and proteins. Outside: none.",
+                "The inside has more solute, so the inside has proportionally less water."
+              ],
+              [
+                "Give the water direction",
+                "Water moves inward, toward the higher solute",
+                "This is the same rule as diffusion, applied to water as the substance that is moving."
+              ],
+              [
+                "Say what follows",
+                "The cell swells and may burst",
+                "Nothing is pumping the water in. The gradient alone is enough."
+              ]
+            ],
+            "notice": "In 0.9 % saline there is no net water movement, because the solute concentrations are close to matched. That is why it is the default fluid for giving into a vein."
+          },
+          "exercise": [
+            "Sodium is far more concentrated outside a cell than inside, yet cells keep pushing sodium out. What does that tell you about the process, and what does it cost?",
+            "Moving sodium out is moving it against its gradient, so it cannot be diffusion. It is active transport, carried out by the sodium–potassium pump and paid for with ATP. Maintaining that gradient is one of the largest ongoing energy costs in the body."
+          ],
+          "mistake": {
+            "attempt": "Osmosis is strange because water moves from low concentration to high concentration — the opposite of diffusion.",
+            "diagnosis": "Two different concentrations have been mixed up in one sentence. Water moves down the gradient of *water*, from where water is more concentrated to where it is less. That is exactly the same direction as any other diffusion; it only looks reversed when you track the solute instead of the water.",
+            "repair": "Say which substance is moving. Water moves toward the higher *solute* concentration precisely because that is where water itself is more dilute.",
+            "check": "Put 0.9 % saline on one side of a membrane and pure water on the other. Water moves toward the saline. Describe that as water moving down the water gradient and it obeys the ordinary rule with no exception needed."
+          },
+          "takeaway": "Name the substance, then find its gradient. Diffusion runs down a gradient for free; movement against a gradient is active transport and costs ATP. Osmosis is just diffusion with water as the substance you are tracking.",
+          "recall": {
+            "from": "homeostasis",
+            "ask": "Blood sodium concentration is held in a narrow band. Name the error, the direction of the correction, and one effector.",
+            "answer": "If sodium concentration rises above the set point the error is positive, so the correction must lower it — by retaining water and by triggering thirst. Antidiuretic hormone acting on the kidney is one effector. Same loop shape as temperature."
+          },
+          "previous": "homeostasis",
+          "next": "vital-signs"
+        },
+        {
+          "id": "vital-signs",
+          "title": "Read a measurement as a story, not a score",
+          "goal": "Interpret a vital sign using the person's baseline, the trend and the context rather than a population range alone.",
+          "opening": [
+            "A heart rate of 110 is a number. On its own it does not say whether anything is wrong, because the same number arises in a frightened person, a person who just climbed stairs, a person with a fever, and a person losing blood.",
+            "What turns a number into information is three further things: what this person's own value usually is, which way it is moving, and what else is true at the same moment. This unit is about that reasoning, not about diagnosing anyone."
+          ],
+          "heading": "A reference range describes a population, not a person",
+          "teaching": [
+            "Published ranges such as 60–100 beats per minute are built to contain most healthy people. They are a starting assumption, not a verdict. A trained endurance athlete commonly sits in the 40s or 50s while entirely well, and a person whose usual rate is 85 may be unwell at 100 even though 100 is inside the range.",
+            "Readings also move together, because they are outputs of linked systems. A rising heart rate with a falling blood pressure tells a different story from a rising heart rate with a normal blood pressure, because the first pattern suggests the body is working to compensate for something. Reading them one at a time discards that information."
+          ],
+          "terms": [
+            [
+              "Baseline",
+              "The value that is usual for this particular person."
+            ],
+            [
+              "Trend",
+              "The direction and speed of change across repeated readings."
+            ],
+            [
+              "Compensation",
+              "A change in one variable that holds another one steady."
+            ]
+          ],
+          "first": {
+            "title": "The same heart rate, two different stories",
+            "problem": "Two people both have a heart rate of 110. One has a blood pressure of 125/80; the other has 85/50. What does the pairing add?",
+            "steps": [
+              [
+                "Read the first pair",
+                "HR 110, BP 125/80",
+                "The pressure is being held up. A fast rate with a normal pressure is consistent with fright, exertion, pain or fever — the circulation is not failing to deliver."
+              ],
+              [
+                "Read the second pair",
+                "HR 110, BP 85/50",
+                "Here the fast rate has not succeeded in holding the pressure. The combination suggests the heart is speeding up to compensate for something and not fully succeeding."
+              ],
+              [
+                "Say what the single number was missing",
+                "110 alone cannot distinguish the two",
+                "The information lives in the relationship between the readings, not in either one."
+              ],
+              [
+                "Add the trend",
+                "A rate climbing 80 → 95 → 110 differs from one steady at 110 for a year",
+                "Direction over time carries as much weight as the current value."
+              ]
+            ],
+            "notice": "This is reasoning about measurement. Deciding what to do about any real person is a clinical judgement this course does not make."
+          },
+          "second": {
+            "title": "A reading inside the range that is still a change",
+            "problem": "Someone whose blood pressure is usually around 170/95 is measured at 120/80. The reading is squarely in the normal range. Is it unremarkable?",
+            "steps": [
+              [
+                "Compare with the population range",
+                "120/80 sits in the middle of the usual range",
+                "Judged against the population alone, nothing stands out."
+              ],
+              [
+                "Compare with this person's baseline",
+                "A fall of about 50 mmHg systolic",
+                "Against their own history this is a large change, and large changes are what carry information."
+              ],
+              [
+                "State the general rule",
+                "Interpret against baseline first, population second",
+                "The population range answers 'is this value common?'. The baseline answers 'has something changed in this person?'"
+              ]
+            ],
+            "notice": "A value can be normal for the population and abnormal for the person. Both comparisons are useful; neither replaces the other."
+          },
+          "exercise": [
+            "A person's respiratory rate is 22 breaths per minute, just above a typical adult range of 12–20. What three things would you want before treating that number as meaningful?",
+            "Their usual rate, the direction it has been moving, and what else is happening — temperature, oxygen saturation, whether they are in pain or anxious, and whether they have just moved. A single borderline value with no baseline, no trend and no context is close to uninformative."
+          ],
+          "mistake": {
+            "attempt": "A heart rate of 55 is below the normal range of 60–100, so it is abnormal and concerning.",
+            "diagnosis": "A reference range describes most of a population; it does not describe this person. A trained athlete at 55 with a normal blood pressure and no symptoms is at their own baseline, whereas 55 in someone whose usual rate is 85 and who feels faint is a large change in the wrong direction. The same number carries opposite weight in the two cases.",
+            "repair": "Read the number together with the person's baseline, the trend across readings, and the rest of the picture.",
+            "check": "Ask what would change your mind. If the answer is 'nothing, 55 is simply out of range', the reasoning is using the population range as a verdict rather than as a prior."
+          },
+          "takeaway": "A vital sign becomes information when you add three things: this person's baseline, the trend, and what else is true at the same time. Readings also move together, so pairs carry more than singles.",
+          "recall": {
+            "from": "cells-and-transport",
+            "ask": "Why does giving 0.9 % saline into a vein not make red cells swell or shrink?",
+            "answer": "Its solute concentration is close to that inside the cells, so there is no meaningful water gradient across the membrane and no net osmosis. Pure water would create a large inward gradient and make the cells swell."
+          },
+          "previous": "cells-and-transport",
+          "next": "two-circuits"
+        },
+        {
+          "id": "two-circuits",
+          "title": "Two circuits, one pump",
+          "goal": "Explain why the two sides of the heart move equal volumes against very different pressures.",
+          "opening": [
+            "Blood leaving the left side of the heart travels to the body and returns to the right side. Blood leaving the right side travels to the lungs and returns to the left. The two circuits are joined end to end, and the heart drives both from one housing.",
+            "That arrangement has a consequence worth stating plainly: because the circuits are in series, whatever volume one side moves, the other side must move too."
+          ],
+          "heading": "Thickness reports pressure, not volume",
+          "teaching": [
+            "The left ventricle wall is several times thicker than the right. The reason is the pressure each has to generate: roughly 120 mmHg systolic into the systemic circulation on the left, against roughly 25 mmHg into the pulmonary circulation on the right. The lungs are a low-resistance, low-pressure bed sitting right next to the heart.",
+            "Volume is a different question, and it is settled by the plumbing rather than by the muscle. Two pumps in series must move the same average volume per minute, or blood would accumulate on one side. Over a day, with an output near 5 litres a minute, that is roughly 7,000 litres through each side."
+          ],
+          "terms": [
+            [
+              "Systemic circuit",
+              "Left ventricle → body → right atrium."
+            ],
+            [
+              "Pulmonary circuit",
+              "Right ventricle → lungs → left atrium."
+            ],
+            [
+              "Cardiac output",
+              "Volume of blood leaving a ventricle per minute, about 5 L/min at rest."
+            ]
+          ],
+          "first": {
+            "title": "Follow one red cell all the way round",
+            "problem": "Trace a red cell from a leg vein back to the same leg vein, naming every chamber and vessel it passes.",
+            "steps": [
+              [
+                "Return to the right side",
+                "Leg vein → vena cava → right atrium → right ventricle",
+                "This blood is oxygen-poor and carbon-dioxide-rich. It has already delivered its oxygen."
+              ],
+              [
+                "Cross the lungs",
+                "Right ventricle → pulmonary artery → alveolar capillaries → pulmonary vein → left atrium",
+                "Note the naming: the pulmonary artery carries oxygen-poor blood. Arteries are defined by leaving the heart, not by what they carry."
+              ],
+              [
+                "Leave for the body",
+                "Left atrium → left ventricle → aorta → leg artery",
+                "Now the blood is oxygen-rich. One full circuit has crossed the heart twice."
+              ],
+              [
+                "Count the crossings",
+                "Two passes through the heart per lap",
+                "That is what 'two circuits in series' means in practice."
+              ]
+            ],
+            "notice": "A red cell cannot travel from the body to the body without going through the lungs. The design forces every unit of blood past the gas exchanger."
+          },
+          "second": {
+            "title": "Why the walls differ",
+            "problem": "The left ventricle wall is about 10 mm thick, the right about 3 mm. Does the left side therefore pump more blood?",
+            "steps": [
+              [
+                "State what the two sides must share",
+                "Average output must be equal",
+                "They are in series. Sustained inequality would pile blood up on one side within minutes."
+              ],
+              [
+                "Compare the pressures instead",
+                "Left: ~120/80 mmHg. Right: ~25/10 mmHg.",
+                "The left ventricle generates roughly five times the pressure, and wall thickness tracks that requirement."
+              ],
+              [
+                "Separate the two quantities",
+                "Thickness ↔ pressure; plumbing ↔ volume",
+                "Both sides move about 5 L/min. Only one of them has to push it around the whole body."
+              ]
+            ],
+            "notice": "Pulmonary vessels are short, wide and low-resistance, which is why so much less pressure is needed to drive the same flow through them."
+          },
+          "exercise": [
+            "The pulmonary artery carries oxygen-poor blood and the pulmonary vein carries oxygen-rich blood — the reverse of the usual pattern. Why are they still named artery and vein?",
+            "Because the names describe direction relative to the heart, not oxygen content. An artery carries blood away from the heart and a vein carries it back. In the pulmonary circuit that happens to put the oxygen-poor blood in the artery."
+          ],
+          "mistake": {
+            "attempt": "The left ventricle is much thicker than the right, so it must pump considerably more blood.",
+            "diagnosis": "Thickness and volume are being treated as the same measurement. The two ventricles sit in series, so over any sustained period they must move the same volume — otherwise blood would accumulate in one circuit. The extra muscle reflects the pressure the left side generates, not extra volume.",
+            "repair": "Both ventricles move about 5 L/min. The left does it against roughly 120/80 mmHg; the right against roughly 25/10 mmHg.",
+            "check": "Suppose the left pumped 10 % more than the right for ten minutes. Around half a litre would have to come from somewhere and pile up somewhere. In a closed series loop, sustained outputs have to match."
+          },
+          "takeaway": "The two circuits are in series, so both ventricles move the same volume per minute. Wall thickness reports the pressure each side must generate, not the volume it handles.",
+          "recall": {
+            "from": "vital-signs",
+            "ask": "Two people have a heart rate of 110. One has a blood pressure of 125/80, the other 85/50. What does the second pairing add that the heart rate alone did not?",
+            "answer": "That the fast rate has not succeeded in holding the pressure up. The pairing suggests the circulation is compensating and not fully keeping pace, which a single rate of 110 could never distinguish from fright or exertion."
+          },
+          "previous": "vital-signs",
+          "next": "blood-pressure"
+        },
+        {
+          "id": "blood-pressure",
+          "title": "What a blood pressure number is measuring",
+          "goal": "Relate pressure, flow and resistance, and compute mean arterial pressure from a cuff reading.",
+          "opening": [
+            "A cuff reading of 120/80 gives two numbers: the peak pressure while the left ventricle ejects, and the pressure that remains between beats. Neither is the average, and neither is the flow.",
+            "The relationship that ties them together is the same one that governs any fluid in a pipe: pressure is what you get when you push a flow through a resistance."
+          ],
+          "heading": "One pressure, two possible causes",
+          "teaching": [
+            "Write it as pressure ≈ flow × resistance. In the circulation, mean arterial pressure ≈ cardiac output × systemic vascular resistance. Because two terms multiply to give one result, a single pressure reading cannot tell you which term produced it.",
+            "The mean is not the midpoint of the two cuff numbers, because the heart spends more of each cycle relaxed than ejecting. A good approximation is the diastolic pressure plus one third of the difference between the two: MAP ≈ DBP + (SBP − DBP)/3."
+          ],
+          "terms": [
+            [
+              "Pulse pressure",
+              "Systolic minus diastolic — the size of the swing with each beat."
+            ],
+            [
+              "Mean arterial pressure",
+              "The average pressure over the whole cardiac cycle, weighted toward diastole."
+            ],
+            [
+              "Systemic vascular resistance",
+              "How hard the circulation as a whole resists flow, set mostly by small arteries."
+            ]
+          ],
+          "first": {
+            "title": "From a cuff reading to a mean",
+            "problem": "A blood pressure is 120/80 mmHg. Find the pulse pressure and the mean arterial pressure.",
+            "steps": [
+              [
+                "Find the pulse pressure",
+                "120 − 80 = 40 mmHg",
+                "This is the swing produced by each ejection, not an average of anything."
+              ],
+              [
+                "Weight the cycle correctly",
+                "MAP ≈ DBP + (SBP − DBP)/3",
+                "At rest roughly one third of the cycle is spent ejecting and two thirds relaxed, so the mean sits nearer the diastolic value."
+              ],
+              [
+                "Compute the mean",
+                "80 + 40/3 = 80 + 13.3 = 93.3 mmHg",
+                "Note that the midpoint, 100 mmHg, would have overestimated it."
+              ],
+              [
+                "Say what the mean is for",
+                "Mean pressure drives steady flow to organs",
+                "Organs are perfused across the whole cycle, so the time-weighted average is the number that matters for delivery."
+              ]
+            ],
+            "notice": "At fast heart rates diastole shortens more than systole does, so the one-third approximation becomes less accurate."
+          },
+          "second": {
+            "title": "Same pressure, two different states",
+            "problem": "Two people both have a mean arterial pressure near 93 mmHg. In one, cardiac output is high and vessels are wide; in the other, output is low and vessels are tight. Can the cuff tell them apart?",
+            "steps": [
+              [
+                "Write the product",
+                "MAP ≈ CO × SVR",
+                "One number on the left, two on the right. The equation cannot be solved for both from one measurement."
+              ],
+              [
+                "Compare the two states",
+                "High CO × low SVR ≈ low CO × high SVR",
+                "Both products can land on 93. The cuff reports only the product."
+              ],
+              [
+                "Say what would distinguish them",
+                "Other observations: skin warmth, pulse character, urine output",
+                "Separating the terms requires information beyond the pressure itself."
+              ]
+            ],
+            "notice": "This is the general shape of the problem: one measurement, two unknowns. It recurs whenever a reading is a product."
+          },
+          "exercise": [
+            "A blood pressure is 160/70 mmHg. Find the pulse pressure and the mean arterial pressure, and say which is unusual.",
+            "Pulse pressure = 160 − 70 = 90 mmHg; MAP ≈ 70 + 90/3 = 100 mmHg. The mean is only modestly raised while the pulse pressure is wide, which points at a large swing per beat rather than a uniformly high pressure."
+          ],
+          "mistake": {
+            "attempt": "Blood pressure tells you how much blood is flowing — a higher pressure means more flow.",
+            "diagnosis": "Pressure and flow are different quantities linked by resistance. Since pressure ≈ flow × resistance, a high pressure can arise from a high flow through ordinary vessels, or from an ordinary flow through narrowed ones. The reading is the product, so it cannot report either factor by itself.",
+            "repair": "Read a pressure as the product of two terms, and ask which one you have evidence about.",
+            "check": "Think about a garden hose. Pinching the nozzle raises the pressure upstream while the flow coming out falls. If pressure measured flow, that could not happen."
+          },
+          "takeaway": "Pressure ≈ flow × resistance, so one pressure reading cannot tell you which term produced it. MAP ≈ DBP + (SBP − DBP)/3, not the midpoint.",
+          "recall": {
+            "from": "two-circuits",
+            "ask": "Why can the right ventricle drive the same 5 L/min as the left with only about a fifth of the pressure?",
+            "answer": "Because pressure ≈ flow × resistance, and the pulmonary circuit is a short, wide, low-resistance bed. The same flow through a much lower resistance needs much less pressure to drive it."
+          },
+          "previous": "two-circuits",
+          "next": "gas-exchange"
+        },
+        {
+          "id": "gas-exchange",
+          "title": "Why lungs are built as millions of tiny sacs",
+          "goal": "Use area, gradient and thickness to predict how fast a gas crosses a membrane.",
+          "opening": [
+            "Air reaching the end of the airways arrives in alveoli: small, thin-walled sacs wrapped in capillaries. There are a few hundred million of them, and together their surface is comparable to a badminton court folded into the chest.",
+            "That design is not decoration. The rate at which a gas crosses a membrane depends on how much surface is available, how steep the gradient is, and how far the gas has to travel — and the lung is built to make the first large, the second usable, and the third very small."
+          ],
+          "heading": "Three terms, and only one of them is breathing",
+          "teaching": [
+            "Transfer rate rises with surface area and with the partial-pressure difference, and falls as the barrier thickens. The alveolar wall and capillary wall together are under a micrometre across, which is why a gas can equilibrate in the fraction of a second a red cell spends passing one alveolus.",
+            "Because three separate terms set the rate, it matters which one is limiting. Disease that destroys alveolar walls removes area; fluid between alveolus and capillary increases the distance; a blocked airway removes the gradient by stopping fresh gas arriving. Each has a different consequence, and more breathing does not fix all three equally."
+          ],
+          "terms": [
+            [
+              "Partial pressure",
+              "The share of total gas pressure contributed by one gas; the gradient that drives its diffusion."
+            ],
+            [
+              "Alveolus",
+              "A thin-walled air sac where gas meets blood."
+            ],
+            [
+              "Surface area",
+              "The total membrane available for exchange — roughly 70 m² in an adult lung."
+            ]
+          ],
+          "first": {
+            "title": "Why many small sacs beat one large bag",
+            "problem": "Compare the exchange surface of roughly 300 million alveoli with a single sphere of the same total volume, about 3 litres.",
+            "steps": [
+              [
+                "Take the subdivided case",
+                "Alveolar surface ≈ 70 m²",
+                "Each alveolus is tiny, but there are hundreds of millions of them, and surface adds up faster than volume when you subdivide."
+              ],
+              [
+                "Take the single-bag case",
+                "A 3 L sphere has a radius near 9 cm and a surface near 0.1 m²",
+                "Same volume of air, about seven hundred times less membrane."
+              ],
+              [
+                "Apply the rule",
+                "Rate ∝ area, so area is the dominant design variable",
+                "Subdividing the same volume is the cheapest way to multiply exchange surface."
+              ],
+              [
+                "Check the other two terms are protected",
+                "Thin walls, and fresh gas delivered each breath",
+                "Subdivision would be wasted if the barrier were thick or the gradient were allowed to run down."
+              ]
+            ],
+            "notice": "Breathing restores the gradient; the alveolar architecture supplies the area. They are separate jobs done by separate parts of the design."
+          },
+          "second": {
+            "title": "What happens when the distance grows",
+            "problem": "Fluid collects between the alveolus and the capillary, roughly doubling the distance a gas must cross. The gradient and the area are unchanged. What happens to transfer?",
+            "steps": [
+              [
+                "Identify the term that changed",
+                "Thickness up; area and gradient unchanged",
+                "Only one of the three terms has moved."
+              ],
+              [
+                "Apply the relationship",
+                "Rate falls as thickness rises",
+                "Roughly doubling the path roughly halves the transfer for the same gradient."
+              ],
+              [
+                "Predict which gas suffers more",
+                "Oxygen is affected more than carbon dioxide",
+                "Carbon dioxide is far more soluble and diffuses much more readily, so a thickened barrier impairs oxygen transfer first."
+              ]
+            ],
+            "notice": "That asymmetry is informative: a person can have a low oxygen level while clearing carbon dioxide perfectly well."
+          },
+          "exercise": [
+            "Emphysema destroys alveolar walls, merging many small sacs into fewer large ones. The total lung volume may be unchanged or even larger. Why does exchange still fall?",
+            "Because merging sacs destroys surface area even while preserving volume — the same relationship that made subdivision valuable, running backwards. Rate depends on area, not on how much air the lung can hold."
+          ],
+          "mistake": {
+            "attempt": "If someone's oxygen level is low, breathing harder and faster will always bring it back up.",
+            "diagnosis": "Ventilation is only one of the three terms. If area has been destroyed or the barrier has thickened, moving more air past the same damaged membrane adds little. Extra ventilation also clears carbon dioxide far more effectively than it loads oxygen, because blood leaving healthy alveoli is already almost fully saturated and cannot carry much more.",
+            "repair": "Ask which term is limiting: the gradient, the area, or the distance. Only a gradient problem responds well to more breathing.",
+            "check": "Note that the two gases respond differently to identical extra ventilation. If breathing were the only term that mattered, oxygen and carbon dioxide would move together."
+          },
+          "takeaway": "Transfer rises with area and gradient and falls with thickness. Breathing only restores the gradient, which is why more of it does not fix a problem of lost area or added distance.",
+          "recall": {
+            "from": "blood-pressure",
+            "ask": "A blood pressure is 100/40 mmHg. Find the pulse pressure and the mean arterial pressure.",
+            "answer": "Pulse pressure = 100 − 40 = 60 mmHg. MAP ≈ 40 + 60/3 = 60 mmHg. The midpoint, 70, would again have overestimated the mean."
+          },
+          "previous": "blood-pressure",
+          "next": "kidney-balance"
+        },
+        {
+          "id": "kidney-balance",
+          "title": "Filter everything, then take back what you need",
+          "goal": "Explain why selectivity lives in reabsorption, and use a transport maximum to predict when a substance appears in urine.",
+          "opening": [
+            "The intuitive design for a kidney would be a sieve that picks out the waste and lets everything valuable stay in the blood. That is not how it works.",
+            "The glomerulus filters almost indiscriminately: water, salts, glucose, amino acids and wastes all cross together. The selectivity comes afterwards, in a long tubule that reclaims what the body wants and lets the rest go."
+          ],
+          "heading": "Why a wasteful-looking design is the flexible one",
+          "teaching": [
+            "About 180 litres are filtered each day and about 1.5 litres leave as urine, so more than 99 % of the filtrate is reabsorbed. Filtering far more than you intend to excrete looks wasteful, but it means the amount of anything removed can be adjusted continuously by changing how much is taken back, rather than by rebuilding the filter.",
+            "Reabsorption uses transporters, and transporters can be saturated. Each substance has a transport maximum: a rate above which the carriers are all occupied and the excess continues into the urine. That threshold behaviour is why some substances are absent from urine until a blood level is crossed, then appear rapidly."
+          ],
+          "terms": [
+            [
+              "Filtration",
+              "Non-selective movement of plasma into the tubule at the glomerulus."
+            ],
+            [
+              "Reabsorption",
+              "Selective return of filtered substances from the tubule to the blood."
+            ],
+            [
+              "Transport maximum",
+              "The highest rate at which carriers can reabsorb a substance."
+            ]
+          ],
+          "first": {
+            "title": "How much comes back",
+            "problem": "180 litres are filtered in a day and 1.5 litres are passed as urine. What fraction is reabsorbed, and why filter so much?",
+            "steps": [
+              [
+                "Find the reabsorbed volume",
+                "180 − 1.5 = 178.5 L",
+                "Almost everything that crossed the filter is taken back."
+              ],
+              [
+                "Express it as a fraction",
+                "178.5 / 180 = 0.9917, about 99.2 %",
+                "Less than one per cent of the filtrate leaves the body."
+              ],
+              [
+                "Ask why the design is worth it",
+                "Excretion is tuned by adjusting reabsorption",
+                "Because the filter is non-selective and generous, fine control of any one substance is a matter of changing how much is reclaimed."
+              ],
+              [
+                "Check the control range",
+                "Urine output can vary from well under 1 L to several litres a day",
+                "That range comes from varying reabsorption, not from varying the filter."
+              ]
+            ],
+            "notice": "A selective filter would have to be rebuilt to change its behaviour. A generous filter plus adjustable reabsorption can be retuned minute to minute."
+          },
+          "second": {
+            "title": "Glucose and a saturated transporter",
+            "problem": "Glucose is filtered freely yet healthy urine contains almost none. What has to happen before glucose appears?",
+            "steps": [
+              [
+                "State the normal case",
+                "Filtered, then fully reabsorbed",
+                "At ordinary blood levels the transporters keep up completely, so none is lost."
+              ],
+              [
+                "Introduce the limit",
+                "Carriers have a transport maximum",
+                "Reabsorption rate rises with the filtered load only until every carrier is occupied."
+              ],
+              [
+                "Describe crossing it",
+                "Above the threshold, the excess stays in the tubule and is excreted",
+                "Glucose then appears in urine, and because it holds water osmotically it drags volume with it."
+              ]
+            ],
+            "notice": "The osmotic effect explains a classic pairing: large urine volumes and thirst arriving together once the threshold is crossed."
+          },
+          "exercise": [
+            "Why does the body filter around 180 litres a day only to reabsorb more than 99 % of it? Give the functional reason rather than restating the numbers.",
+            "Because a generous, non-selective filter combined with adjustable reabsorption gives fine, fast control over every solute independently. Excretion of any substance can be changed by altering how much is taken back, without redesigning the filter."
+          ],
+          "mistake": {
+            "attempt": "The kidney picks the waste out of the blood and removes it, leaving the useful substances behind.",
+            "diagnosis": "That reverses the design. Filtration at the glomerulus is close to indiscriminate — glucose, amino acids, salts and water all cross along with urea. Selectivity is applied afterwards, by reclaiming what is wanted. The kidney decides what to *keep*, not what to remove.",
+            "repair": "Describe it in two stages: filter generously, then reabsorb selectively. 180 litres filtered, about 1.5 litres excreted.",
+            "check": "Glucose makes the design visible. It is filtered freely and then fully reabsorbed, which is why healthy urine contains almost none — and why it appears as soon as the blood level exceeds what the transporters can reclaim."
+          },
+          "takeaway": "The glomerulus filters almost everything; the tubule reclaims what is wanted. Selectivity lives in reabsorption, and saturable transporters give threshold behaviour.",
+          "recall": {
+            "from": "gas-exchange",
+            "ask": "Fluid thickens the barrier between alveolus and capillary. Why does oxygen transfer suffer more than carbon dioxide transfer?",
+            "answer": "Carbon dioxide is much more soluble and diffuses far more readily, so it tolerates a longer path. A thickened barrier therefore shows up as a low oxygen level while carbon dioxide clearance may still be adequate."
+          },
+          "previous": "gas-exchange",
+          "next": "glucose-insulin"
+        },
+        {
+          "id": "glucose-insulin",
+          "title": "A control loop that can fail in two ways",
+          "goal": "Read a hormone and its target variable together, and distinguish a weak signal from a weak response.",
+          "opening": [
+            "Blood glucose is held in a narrow band by a loop you already know the shape of: a sensor, a set point, and effectors that push in either direction. Insulin lowers glucose; glucagon raises it.",
+            "What makes this loop worth a unit of its own is that it can fail in two quite different places — the signal can be too small, or the response to a normal signal can be too weak — and the two look different only if you read both numbers."
+          ],
+          "heading": "The output of a controller is not the state of the system",
+          "teaching": [
+            "After a meal, glucose rises, beta cells release insulin, tissues take glucose up and store it, and glucose returns toward the set point. Insulin here is the controller's output: a measure of how hard the system is pushing.",
+            "If tissues respond poorly to insulin, the loop compensates by pushing harder, so insulin rises. Glucose may stay near normal for a long time on the strength of that extra push, and then drift up as the compensation stops being enough. Insulin high with glucose high is therefore a coherent state, not a contradiction — it says the signal is loud and the response is weak."
+          ],
+          "terms": [
+            [
+              "Insulin",
+              "Hormone released when glucose rises; moves glucose into cells and promotes storage."
+            ],
+            [
+              "Insulin resistance",
+              "Reduced tissue response to a given amount of insulin."
+            ],
+            [
+              "Compensation",
+              "A larger controller output that holds the regulated variable steady despite a weaker response."
+            ]
+          ],
+          "first": {
+            "title": "The loop working normally",
+            "problem": "Glucose rises after a meal and is back in range two hours later. Name each element of the loop and the direction it pushes.",
+            "steps": [
+              [
+                "Find the error",
+                "Glucose above set point → positive error",
+                "The same first step as any regulated variable."
+              ],
+              [
+                "Identify the effector",
+                "Beta cells release insulin",
+                "Insulin is the correcting action, released in proportion to the size of the error."
+              ],
+              [
+                "Say what the effector does",
+                "Uptake into muscle and fat; storage as glycogen in liver",
+                "Glucose leaves the blood compartment. The measured variable falls."
+              ],
+              [
+                "Close the loop",
+                "Glucose falls → error shrinks → insulin release eases",
+                "Self-limiting, like every negative feedback loop."
+              ]
+            ],
+            "notice": "Insulin falling after a meal is not the loop weakening. It is the loop succeeding."
+          },
+          "second": {
+            "title": "A weak response, read two ways",
+            "problem": "Two people both have a fasting glucose at the top of the usual range. One has a low-normal insulin level, the other a markedly high one. What differs?",
+            "steps": [
+              [
+                "Read the first pair",
+                "Glucose high-normal, insulin low-normal",
+                "A modest push is producing a modest result. The response to insulin appears intact."
+              ],
+              [
+                "Read the second pair",
+                "Glucose high-normal, insulin high",
+                "A large push is needed to achieve the same glucose, which points at a weakened tissue response."
+              ],
+              [
+                "Say what one number would have missed",
+                "The glucose values are nearly identical",
+                "Reading glucose alone makes the two look the same. The difference is entirely in the controller's effort."
+              ]
+            ],
+            "notice": "This is the same lesson as pressure ≈ flow × resistance: when a result comes from two factors, one measurement cannot separate them."
+          },
+          "exercise": [
+            "Someone's insulin level is well above normal while their glucose sits in the upper part of the usual range. Does the high insulin reassure you that glucose control is working well?",
+            "No. It says the loop is pushing hard. Glucose is being held only by an unusually large signal, which is the picture of a weak tissue response rather than a healthy one. Read the pair: the effort and the result."
+          ],
+          "mistake": {
+            "attempt": "Insulin lowers blood glucose, so if someone's insulin is high their glucose must be low.",
+            "diagnosis": "That assumes a signal always produces its intended effect. The level of a controller's output tells you how hard the system is working, not whether the work is succeeding. In insulin resistance the pancreas raises output precisely because tissues respond poorly, so high insulin and high glucose occur together.",
+            "repair": "Read the controller output and the regulated variable as a pair: insulin says how hard, glucose says whether it worked.",
+            "check": "Picture a thermostat driving a failing heater. A maximum output signal together with a cold room is perfectly consistent — and it tells you the fault is in the heater, not the thermostat."
+          },
+          "takeaway": "A hormone level is a controller output, not a verdict on the system. High signal with an off-target variable means the signal is loud and the response is weak.",
+          "recall": {
+            "from": "kidney-balance",
+            "ask": "Why does glucose appear in urine only once blood glucose passes a threshold, rather than in proportion to it all the way down?",
+            "answer": "Because reabsorption uses saturable transporters. Below the transport maximum every filtered glucose molecule is reclaimed, so none appears. Once the carriers are fully occupied the excess stays in the tubule, so excretion begins abruptly at a threshold."
+          },
+          "previous": "kidney-balance",
+          "next": "immunity"
+        },
+        {
+          "id": "immunity",
+          "title": "Fast and general, then slow and specific",
+          "goal": "Contrast innate and adaptive responses by speed, specificity and memory, and explain why a drug needs a target.",
+          "opening": [
+            "Defence against infection runs on two systems with different trade-offs. One is ready immediately and treats all intruders roughly alike. The other takes days to organise, is precisely matched to one target, and remembers.",
+            "Almost everything that seems puzzling about infection and vaccination follows from that pairing: why a first illness lasts longer than a second, why vaccines work, and why some drugs help with one kind of organism and not another."
+          ],
+          "heading": "Speed and specificity pull in opposite directions",
+          "teaching": [
+            "Innate defences — skin, mucus, stomach acid, and cells that engulf anything recognisably foreign — act within minutes. They are general, which is what allows them to be fast: there is no need to identify the organism first. They also do not improve with exposure.",
+            "Adaptive defences select and multiply the small number of lymphocytes that happen to match the intruder, which takes days on a first encounter. The pay-off is memory: matched cells persist, so a second exposure is met in hours rather than days. A vaccine supplies the first encounter without the illness."
+          ],
+          "terms": [
+            [
+              "Innate immunity",
+              "Immediate, general defence with no memory."
+            ],
+            [
+              "Adaptive immunity",
+              "Slower, specific defence that leaves lasting memory."
+            ],
+            [
+              "Selective target",
+              "A structure a drug can act on that the pathogen has and we do not."
+            ]
+          ],
+          "first": {
+            "title": "First exposure against second exposure",
+            "problem": "The same organism is met twice, years apart. Sketch the time course of each response.",
+            "steps": [
+              [
+                "First few hours, first exposure",
+                "Innate response only",
+                "Barriers and engulfing cells act at once. They slow the infection without clearing it."
+              ],
+              [
+                "Days three to ten, first exposure",
+                "Adaptive response builds",
+                "Matching lymphocytes are selected and multiply. Illness is typically at its worst while this is still being assembled."
+              ],
+              [
+                "Second exposure",
+                "Memory cells respond within hours",
+                "The selection step has already happened, so the slow part of the first response is skipped."
+              ],
+              [
+                "Compare the two curves",
+                "Same organism, very different illness",
+                "The difference is timing, not strength of the final response."
+              ]
+            ],
+            "notice": "Vaccination moves the slow step earlier in time, so that the first real encounter behaves like a second."
+          },
+          "second": {
+            "title": "What a drug has to grab hold of",
+            "problem": "An antibiotic stops bacteria building cell walls. Why does that spare human cells, and what does it predict about viruses?",
+            "steps": [
+              [
+                "Name the target",
+                "Bacterial cell wall synthesis",
+                "Bacteria build a peptidoglycan wall; human cells have no such structure."
+              ],
+              [
+                "Explain the selectivity",
+                "The drug acts on something we do not possess",
+                "Selective toxicity comes from a difference between the pathogen and us, not from the drug being gentle."
+              ],
+              [
+                "Apply it to viruses",
+                "Viruses have no cell wall and no bacterial ribosome",
+                "There is no structure for this class of drug to act on, so it has no effect on a viral illness."
+              ]
+            ],
+            "notice": "Asking 'what does this drug bind to, and do I have one?' predicts both the usefulness and the side effects."
+          },
+          "exercise": [
+            "Why is a second infection with the same organism usually milder and shorter than the first?",
+            "Because the slow part of the first response — selecting and multiplying matching lymphocytes — has already been done. Memory cells persist, so the specific response arrives in hours instead of days and the infection is contained before it causes as much illness."
+          ],
+          "mistake": {
+            "attempt": "This cold has dragged on for a week, so an antibiotic should clear it up.",
+            "diagnosis": "Antibiotics act on bacterial machinery: cell-wall synthesis, bacterial ribosomes, bacterial folate production. Colds are caused by viruses, which have none of those structures, so there is nothing for the drug to act on. Duration does not change what the organism is.",
+            "repair": "Match the agent to a target the organism actually has. Viral illnesses are cleared by the adaptive response, on its own timetable.",
+            "check": "Ask what the drug binds to, and whether the organism has it. If you cannot name the structure, there is no reason to expect an effect. (This unit explains mechanism; decisions about treating any real person belong with a clinician.)"
+          },
+          "takeaway": "Innate defence is fast, general and memoryless; adaptive defence is slow, specific and remembers. A drug works only where the pathogen has a structure we lack.",
+          "recall": {
+            "from": "glucose-insulin",
+            "ask": "Someone has a high insulin level and a glucose level in the upper part of the usual range. What does the pair say that glucose alone could not?",
+            "answer": "That glucose is being held in range only by an unusually large controller output. The signal is loud and the tissue response is weak — a different state from the same glucose achieved with a modest insulin level."
+          },
+          "previous": "glucose-insulin",
+          "next": "drug-halflife"
+        },
+        {
+          "id": "drug-halflife",
+          "title": "Half-life, and how much is still there",
+          "goal": "Compute the amount remaining after n half-lives and explain what changing the dose does and does not change.",
+          "opening": [
+            "Most drugs are cleared in a way that removes a constant *fraction* per unit time rather than a constant amount. Half-life is the time for the amount in the body to fall by half.",
+            "That one property decides a surprising amount: how long an effect lasts, how often a dose has to be repeated, and how long it takes before repeated dosing settles at a steady level."
+          ],
+          "heading": "Counting half-lives instead of hours",
+          "teaching": [
+            "After n half-lives the fraction remaining is (½)ⁿ. After one half-life, 50 % remains; after two, 25 %; after four, 6.25 %. The convenience of this is that the fraction does not depend on the starting amount — only the number of half-lives elapsed.",
+            "Dose size and dose interval do different jobs. The dose sets how high the level goes; the interval sets how far it falls before the next one. With repeated dosing the level climbs toward a plateau and is close to it after about four to five half-lives, which is also roughly how long it takes to wash out after stopping."
+          ],
+          "terms": [
+            [
+              "Half-life",
+              "Time for the amount in the body to fall by half."
+            ],
+            [
+              "First-order elimination",
+              "A constant fraction removed per unit time, which is what makes half-life constant."
+            ],
+            [
+              "Steady state",
+              "The plateau reached with repeated dosing, after roughly four to five half-lives."
+            ]
+          ],
+          "first": {
+            "title": "How much is left after a day",
+            "problem": "A 400 mg dose is given. The half-life is 6 hours. How much remains after 24 hours?",
+            "steps": [
+              [
+                "Count the half-lives",
+                "24 ÷ 6 = 4 half-lives",
+                "Always convert the time into half-lives before doing anything else."
+              ],
+              [
+                "Halve it that many times",
+                "400 → 200 → 100 → 50 → 25 mg",
+                "One halving per half-life, at 6, 12, 18 and 24 hours."
+              ],
+              [
+                "State it as a fraction",
+                "(½)⁴ = 1/16 = 6.25 %, and 400 × 0.0625 = 25 mg",
+                "The fraction route and the step-by-step route must agree."
+              ],
+              [
+                "Note what was not needed",
+                "The 400 mg played no part in finding the fraction",
+                "The fraction remaining depends only on elapsed half-lives."
+              ]
+            ],
+            "notice": "Writing the halvings out is slower but makes the pattern visible, which matters for the next example."
+          },
+          "second": {
+            "title": "Building up to a steady level",
+            "problem": "The same drug is given every 6 hours. Why does the level climb and then stop climbing?",
+            "steps": [
+              [
+                "Follow the first interval",
+                "Dose 400 mg; 6 hours later 200 mg remains",
+                "Half has gone, so half of the dose is still present when the next one arrives."
+              ],
+              [
+                "Add the next dose",
+                "200 + 400 = 600 mg, falling to 300 before the next",
+                "Each dose lands on a residue, so the peaks rise."
+              ],
+              [
+                "Find why it stops rising",
+                "It plateaus when the amount cleared per interval equals the dose given",
+                "As the level rises, a constant fraction of a larger amount is a larger absolute removal. Eventually removal per interval matches the dose."
+              ],
+              [
+                "State the timing",
+                "Close to the plateau after about 4–5 half-lives",
+                "Here, roughly 24–30 hours of regular dosing."
+              ]
+            ],
+            "notice": "Washing out after stopping takes about the same 4–5 half-lives, for exactly the same reason running in reverse."
+          },
+          "exercise": [
+            "A drug with a 3-hour half-life is given as a 600 mg dose. How much remains after 12 hours, and what fraction is that?",
+            "12 ÷ 3 = 4 half-lives. 600 → 300 → 150 → 75 → 37.5 mg. That is (½)⁴ = 1/16 = 6.25 % of the starting amount."
+          ],
+          "mistake": {
+            "attempt": "Doubling the dose will make the drug last twice as long.",
+            "diagnosis": "Half-life does not depend on the starting amount. Doubling the dose does not double the time to reach any given level — it adds exactly one extra halving, which is one half-life, however large the dose.",
+            "repair": "From 400 mg with a 6-hour half-life, 25 mg is reached at 24 hours. From 800 mg it is reached at 30 hours: six hours later, not twenty-four. Controlling the level between doses is a matter of the interval, not the dose size.",
+            "check": "Count halvings. 800 → 400 → 200 → 100 → 50 → 25 is five steps at 6 hours each. Each doubling of the dose buys one more fixed-length half-life, never a doubling of duration."
+          },
+          "takeaway": "After n half-lives, (½)ⁿ remains, independent of the starting dose. Dose sets the height, interval sets the trough, and steady state arrives after about four to five half-lives.",
+          "recall": {
+            "from": "immunity",
+            "ask": "Why does an antibiotic that blocks bacterial cell-wall synthesis have no effect on a cold?",
+            "answer": "Because colds are viral and viruses have no cell wall for the drug to act on. Selective toxicity depends on the pathogen possessing a structure we lack; with no target present, there is no mechanism for an effect."
+          },
+          "previous": "immunity",
+          "next": "test-interpretation"
+        },
+        {
+          "id": "test-interpretation",
+          "title": "Why a positive test is not a diagnosis",
+          "goal": "Compute predictive value from sensitivity, specificity and prevalence, and explain why prevalence changes the answer.",
+          "opening": [
+            "A test described as 99 % sensitive and 95 % specific sounds close to decisive. Applied to a condition that affects one person in a hundred, a positive result from it is wrong more often than it is right.",
+            "Nothing about that is a trick. It follows from the fact that the false positives are drawn from a much larger group than the true positives, and the only reliable way to see it is to count people rather than reason about percentages."
+          ],
+          "heading": "Two conditional probabilities pointing in opposite directions",
+          "teaching": [
+            "Sensitivity is the proportion of people *with* the condition who test positive. Specificity is the proportion *without* it who test negative. Both are conditioned on knowing the true state — which is the thing a patient does not know.",
+            "Predictive value runs the other way: given a positive result, how likely is the condition? That depends on sensitivity, specificity and how common the condition is. Because the people without the condition can vastly outnumber those with it, even a small false-positive rate can generate more false positives than there are true ones."
+          ],
+          "terms": [
+            [
+              "Sensitivity",
+              "Of those who have it, the fraction testing positive."
+            ],
+            [
+              "Specificity",
+              "Of those who do not, the fraction testing negative."
+            ],
+            [
+              "Positive predictive value",
+              "Of those testing positive, the fraction who really have it."
+            ]
+          ],
+          "first": {
+            "title": "Counting a rare condition",
+            "problem": "Sensitivity 99 %, specificity 95 %, prevalence 1 %. Out of 10,000 people, how trustworthy is a positive result?",
+            "steps": [
+              [
+                "Split the population by true state",
+                "1 % of 10,000 = 100 have it; 9,900 do not",
+                "Always start by splitting on the truth, not on the test."
+              ],
+              [
+                "Apply sensitivity to the affected group",
+                "99 % of 100 = 99 true positives",
+                "One person with the condition is missed."
+              ],
+              [
+                "Apply specificity to the unaffected group",
+                "5 % of 9,900 = 495 false positives",
+                "A 95 % specificity sounds high, but 5 % of a large group is a large number."
+              ],
+              [
+                "Compute the predictive value",
+                "99 ÷ (99 + 495) = 99/594 = 16.7 %",
+                "Fewer than one positive result in five is correct, from a test with excellent-sounding properties."
+              ]
+            ],
+            "notice": "The 495 false positives come from a group 99 times larger than the affected one. That size difference is doing all the work."
+          },
+          "second": {
+            "title": "The same test where the condition is common",
+            "problem": "Keep sensitivity at 99 % and specificity at 95 %, but raise prevalence to 30 %. Recompute.",
+            "steps": [
+              [
+                "Split again",
+                "30 % of 10,000 = 3,000 have it; 7,000 do not",
+                "Only the split has changed. The test is identical."
+              ],
+              [
+                "Apply the two rates",
+                "True positives 99 % × 3,000 = 2,970; false positives 5 % × 7,000 = 350",
+                "The unaffected group is now much smaller, so it produces far fewer false positives."
+              ],
+              [
+                "Compute the predictive value",
+                "2,970 ÷ 3,320 = 89.5 %",
+                "Same test, same numbers on the box, utterly different meaning for the person holding the result."
+              ]
+            ],
+            "notice": "This is why the same test means one thing in a screening programme and another in someone already likely to have the condition."
+          },
+          "exercise": [
+            "A test is 90 % sensitive and 90 % specific, and the condition affects 2 % of those tested. Out of 10,000 people, what fraction of positive results are correct?",
+            "200 have it: 90 % gives 180 true positives. 9,800 do not: 10 % gives 980 false positives. Predictive value = 180 ÷ 1,160 = 15.5 %. Most positives are wrong, because the unaffected group is 49 times larger."
+          ],
+          "mistake": {
+            "attempt": "The test is 99 % accurate, so a positive result means I almost certainly have the condition.",
+            "diagnosis": "Sensitivity is a conditional probability in the opposite direction to the one being used. It describes what the test does to people who already have the condition; it says nothing by itself about people who test positive. When the condition is rare, the false positives are drawn from a far larger group and can easily outnumber the true ones.",
+            "repair": "At 1 % prevalence with 99 % sensitivity and 95 % specificity, 10,000 people yield 99 true positives and 495 false ones, so a positive is right about 17 % of the time.",
+            "check": "Work in counts, not percentages. Write out the four cells for 10,000 people and the answer stops depending on intuition entirely."
+          },
+          "takeaway": "Sensitivity and specificity are conditioned on the true state; predictive value is conditioned on the result. Prevalence decides which one dominates, so count people in a 2×2 table rather than reasoning in percentages.",
+          "recall": {
+            "from": "drug-halflife",
+            "ask": "A 200 mg dose has an 8-hour half-life. How much remains after 32 hours?",
+            "answer": "32 ÷ 8 = 4 half-lives, so 200 → 100 → 50 → 25 → 12.5 mg. That is (½)⁴ = 6.25 % of the dose."
+          },
+          "previous": "drug-halflife",
+          "next": null
+        }
+      ],
+      "project": {
+        "id": "oxygen-project",
+        "title": "Follow the oxygen: air, blood, tissue, and what a test adds",
+        "intro": "One quantity tracked across four stages: from the air in the room to the oxygen actually delivered to tissue each minute, and then what a normal-looking reading can hide. Every step is calculated with standard values, and each one uses a different unit from the course.",
+        "needs": "Uses gas exchange, the two circuits, blood pressure and test interpretation. Standard reference values and a resting adult are assumed throughout. This is an explanation of mechanism, not clinical guidance.",
+        "parts": [
+          {
+            "title": "From room air to the alveolus",
+            "goal": "Compute the oxygen pressure actually available at the exchange surface.",
+            "opening": [
+              "Room air is about 21 % oxygen at a total pressure near 760 mmHg. That does not mean the alveolus sees 21 % of 760, because two things happen to the air on the way in: it is fully humidified, and it mixes with gas already there that is loaded with carbon dioxide.",
+              "I will take both into account before anything crosses a membrane, because the gradient computed here is what drives every later step."
+            ],
+            "steps": [
+              {
+                "title": "Remove the water vapour first",
+                "work": "Dry gas pressure = 760 − 47 = 713 mmHg",
+                "explanation": "Air is fully saturated with water by the time it reaches the alveoli, and at body temperature water vapour contributes about 47 mmHg. That share is unavailable to the other gases."
+              },
+              {
+                "title": "Take oxygen's share",
+                "work": "PiO₂ = 0.21 × 713 = 150 mmHg",
+                "explanation": "This is inspired oxygen pressure at the airway, after humidification but before any exchange has occurred."
+              },
+              {
+                "title": "Account for the carbon dioxide present",
+                "work": "PAO₂ = 150 − 40/0.8 = 150 − 50 = 100 mmHg",
+                "explanation": "Alveolar gas continuously receives carbon dioxide from blood, and that occupies pressure. Dividing by the respiratory quotient of about 0.8 accounts for slightly less oxygen being consumed than carbon dioxide produced, per unit volume."
+              },
+              {
+                "title": "Read off the gradient",
+                "work": "Alveolus 100 mmHg vs arriving blood 40 mmHg",
+                "explanation": "A 60 mmHg difference drives diffusion. This is the gradient term from the gas-exchange unit, now with a number attached."
+              }
+            ],
+            "ending": "The alveolus sees about 100 mmHg, not 160. Humidification and resident carbon dioxide account for the difference.",
+            "links": [
+              "gas-exchange",
+              "two-circuits"
+            ]
+          },
+          {
+            "title": "From alveolus into the blood",
+            "goal": "Turn an oxygen pressure into the amount of oxygen a volume of blood actually carries.",
+            "opening": [
+              "Pressure and content are different quantities. The 100 mmHg we just computed is a pressure; what matters for delivery is how many millilitres of oxygen each 100 mL of blood is carrying.",
+              "Almost all of it rides on haemoglobin. Only a small amount is dissolved, and keeping that separate is what makes the next stage come out right."
+            ],
+            "steps": [
+              {
+                "title": "Convert pressure to saturation",
+                "work": "At PaO₂ ≈ 100 mmHg, SaO₂ ≈ 98 %",
+                "explanation": "The relationship is a curve, not a line, and it is nearly flat above about 80 mmHg. That flatness is why extra ventilation adds very little oxygen to blood already leaving healthy alveoli."
+              },
+              {
+                "title": "Compute the bound oxygen",
+                "work": "1.34 × 15 g/dL × 0.98 = 19.7 mL/dL",
+                "explanation": "Each gram of haemoglobin carries about 1.34 mL of oxygen when fully saturated. With a haemoglobin of 15 g/dL this is the overwhelming majority of the total."
+              },
+              {
+                "title": "Add the dissolved fraction",
+                "work": "0.003 × 100 = 0.3 mL/dL",
+                "explanation": "Dissolved oxygen is small enough to ignore in most reasoning, which is itself the point: content tracks haemoglobin far more than it tracks pressure."
+              },
+              {
+                "title": "Total the content",
+                "work": "CaO₂ = 19.7 + 0.3 = 20.0 mL/dL",
+                "explanation": "Twenty millilitres of oxygen per 100 mL of blood, essentially all of it carried rather than dissolved."
+              }
+            ],
+            "ending": "Content is about 20 mL/dL, and roughly 98 % of it is bound to haemoglobin rather than dissolved.",
+            "links": [
+              "gas-exchange",
+              "cells-and-transport"
+            ]
+          },
+          {
+            "title": "From blood to tissue",
+            "goal": "Combine flow and content into oxygen delivered per minute.",
+            "opening": [
+              "Delivery is a rate, so it needs a flow as well as a content. This is where the circulation units join the respiratory ones.",
+              "The structure is the same product we met with pressure: two factors multiplying into one result, which means a single normal-looking factor cannot guarantee a normal result."
+            ],
+            "steps": [
+              {
+                "title": "Write the product",
+                "work": "DO₂ = cardiac output × arterial content",
+                "explanation": "Flow in litres per minute, content in millilitres per decilitre. The units need reconciling before multiplying."
+              },
+              {
+                "title": "Fix the units",
+                "work": "5 L/min × 20 mL/dL × 10 dL/L",
+                "explanation": "There are 10 decilitres in a litre, so the factor of 10 converts content per decilitre into content per litre."
+              },
+              {
+                "title": "Compute delivery",
+                "work": "5 × 20 × 10 = 1,000 mL/min",
+                "explanation": "About a litre of oxygen delivered each minute at rest."
+              },
+              {
+                "title": "Compare with consumption",
+                "work": "Resting use ≈ 250 mL/min, about a quarter of delivery",
+                "explanation": "The reserve is what allows demand to rise several-fold before delivery becomes limiting — and what allows a problem to be invisible at rest."
+              }
+            ],
+            "ending": "Delivery ≈ 1,000 mL/min against a resting demand near 250 mL/min, leaving roughly a four-fold reserve.",
+            "links": [
+              "two-circuits",
+              "blood-pressure"
+            ]
+          },
+          {
+            "title": "A normal reading over a halved delivery",
+            "goal": "Show why one measurement cannot stand in for a product, and what a test result adds.",
+            "opening": [
+              "Now change one input. Suppose haemoglobin is 7.5 g/dL instead of 15, with everything else — lungs, saturation, cardiac output — unchanged.",
+              "I will recompute with the same sequence rather than inventing a new method, then ask what a measurement would and would not reveal."
+            ],
+            "steps": [
+              {
+                "title": "Recompute the content",
+                "work": "1.34 × 7.5 × 0.98 + 0.3 = 9.85 + 0.3 ≈ 10.2 mL/dL",
+                "explanation": "Halving the carrier roughly halves the content. Nothing about the lungs has changed."
+              },
+              {
+                "title": "Recompute delivery",
+                "work": "5 × 10.2 × 10 ≈ 510 mL/min",
+                "explanation": "Delivery has roughly halved, and the resting demand of 250 mL/min is now about half of supply rather than a quarter."
+              },
+              {
+                "title": "Ask what a pulse oximeter would show",
+                "work": "SaO₂ still ≈ 98 %",
+                "explanation": "Saturation is the percentage of available haemoglobin that is loaded, not how much haemoglobin there is. A normal saturation over a halved carrier is entirely consistent."
+              },
+              {
+                "title": "Say what the reading can and cannot settle",
+                "work": "Normal saturation rules out one term, not the product",
+                "explanation": "This is the structure from the blood-pressure unit again: one measurement, more than one unknown. The reassuring number addresses only the factor it measures."
+              }
+            ],
+            "ending": "Delivery can halve while the saturation reading stays at 98 %. A measurement constrains the factor it measures — never the whole product.",
+            "links": [
+              "test-interpretation",
+              "blood-pressure",
+              "gas-exchange"
+            ]
+          }
+        ]
+      },
+      "practicePath": "v15/body-school/index.html",
+      "workshop": {
+        "id": "medicine-workshop",
+        "title": "Watch a teacher read the evidence",
+        "summary": "Four readings: a number with its partner, a measurement that cannot settle a product, finding the limiting term, and counting people instead of percentages.",
+        "intro": "Four short cases where the hard part is deciding what a measurement can and cannot tell you. In each one I state what the number settles, what it leaves open, and what a second number would add.",
+        "needs": "Use after the vital signs, pressure, gas exchange and test units. These are worked readings of measurements, not clinical guidance about any real person.",
+        "parts": [
+          {
+            "title": "A number and its partner",
+            "goal": "See how a second reading changes what the first one means.",
+            "opening": [
+              "Two people both have a heart rate of 110 beats per minute. On its own that number is compatible with fright, exertion, fever, pain and serious blood loss.",
+              "I will add one more measurement to each and watch the interpretations separate — without the heart rate itself changing at all."
+            ],
+            "steps": [
+              {
+                "title": "Start with the unpaired number",
+                "line": "HR 110 in both people.",
+                "why": "A heart rate alone names no cause. Reference ranges describe a population, so being outside one is a prompt to look further rather than a conclusion."
+              },
+              {
+                "title": "Add a blood pressure to the first",
+                "line": "HR 110, BP 125/80",
+                "why": "The pressure is being held up. A fast rate with a maintained pressure is consistent with an ordinary stressor — the circulation is not failing to deliver."
+              },
+              {
+                "title": "Add a blood pressure to the second",
+                "line": "HR 110, BP 85/50",
+                "why": "Here the fast rate has not succeeded in holding the pressure. That pattern suggests the heart is compensating and not fully keeping pace — a different situation entirely."
+              },
+              {
+                "title": "Add the direction of travel",
+                "line": "80 → 95 → 110 is not the same as 110 held steady for a year.",
+                "why": "Baseline and trend are the third and fourth pieces. A reading becomes information only once you know what is usual for this person and which way it is moving."
+              }
+            ],
+            "ending": "The same 110 carried opposite weight in the two cases. The information lived in the pairing and the trend, never in the single number.",
+            "links": [
+              "vital-signs",
+              "two-circuits",
+              "blood-pressure"
+            ]
+          },
+          {
+            "title": "When one reading cannot settle a product",
+            "goal": "Recognise the shape of a measurement that is the product of two unknowns.",
+            "opening": [
+              "Several of the body's most-quoted numbers are products. Mean arterial pressure is roughly cardiac output times resistance; oxygen delivery is cardiac output times content.",
+              "One measurement of a product can never report both factors. I will work that through twice, then show the same shape in a hormone level."
+            ],
+            "steps": [
+              {
+                "title": "Write the first product",
+                "line": "MAP ≈ CO × SVR, and 80 + 40/3 = 93 mmHg from a 120/80 cuff",
+                "why": "A mean of 93 can come from a high output through wide vessels or an ordinary output through tight ones. The cuff reports only the product."
+              },
+              {
+                "title": "Write the second product",
+                "line": "DO₂ = CO × CaO₂ × 10 = 5 × 20 × 10 = 1,000 mL/min",
+                "why": "Halve the haemoglobin and content falls to about 10 mL/dL, so delivery falls to about 510 mL/min — while saturation still reads 98 %, because saturation measures the fraction loaded, not how much carrier there is."
+              },
+              {
+                "title": "Find the same shape in a hormone",
+                "line": "Glucose high-normal with insulin low vs with insulin high",
+                "why": "Insulin is the controller's effort and glucose is the result. Identical glucose values with very different insulin levels describe two different states, and glucose alone cannot separate them."
+              },
+              {
+                "title": "State the general move",
+                "line": "One equation, two unknowns → find a second measurement.",
+                "why": "Whenever a reading is a product, the useful question is which factor you have independent evidence about. A reassuring number constrains only the factor it measures."
+              }
+            ],
+            "ending": "Pressure, delivery and glucose control are all products. A single normal-looking reading rules out one factor, never the whole product.",
+            "links": [
+              "blood-pressure",
+              "glucose-insulin",
+              "two-circuits"
+            ]
+          },
+          {
+            "title": "Which term is limiting?",
+            "goal": "Decide which of three terms a proposed intervention actually changes.",
+            "opening": [
+              "Gas transfer rises with surface area and with the pressure gradient, and falls as the barrier thickens. Three terms, and breathing changes only one of them.",
+              "I will take three different causes of a low oxygen level and ask, for each, whether more ventilation would help."
+            ],
+            "steps": [
+              {
+                "title": "Write the relationship",
+                "line": "Rate ∝ area × gradient ÷ thickness",
+                "why": "Naming the three terms before reasoning is what stops every respiratory problem being treated as the same problem."
+              },
+              {
+                "title": "A gradient problem",
+                "line": "Less fresh gas reaching the alveoli → gradient falls",
+                "why": "This is the one term ventilation directly restores, so more breathing is the matching response."
+              },
+              {
+                "title": "An area problem",
+                "line": "Alveolar walls destroyed; volume unchanged or larger",
+                "why": "Merging many small sacs into fewer large ones destroys surface while preserving volume. Moving more air past a smaller membrane adds little."
+              },
+              {
+                "title": "A thickness problem",
+                "line": "Fluid roughly doubles the path → transfer roughly halves",
+                "why": "Oxygen suffers more than carbon dioxide, which is far more soluble. A low oxygen level with adequate carbon dioxide clearance is a hint that the barrier, not the ventilation, is the limiting term."
+              }
+            ],
+            "ending": "Three causes, one symptom, and only the first responds well to more breathing. The asymmetry between the two gases is the clue that distinguishes them.",
+            "links": [
+              "gas-exchange",
+              "cells-and-transport",
+              "two-circuits"
+            ]
+          },
+          {
+            "title": "Count people, not percentages",
+            "goal": "Work a predictive value twice and watch prevalence decide the answer.",
+            "opening": [
+              "A test is 99 % sensitive and 95 % specific. Those numbers do not change in this chapter. The only thing that changes is how common the condition is.",
+              "I will lay out the four cells for 10,000 people each time, because percentages are exactly where intuition fails here."
+            ],
+            "steps": [
+              {
+                "title": "Split on the truth first",
+                "line": "At 1 % prevalence: 100 have it, 9,900 do not.",
+                "why": "Splitting on the true state rather than on the result is what makes the asymmetry visible. The second group is 99 times larger."
+              },
+              {
+                "title": "Fill the cells",
+                "line": "True positives 99 % × 100 = 99\nFalse positives 5 % × 9,900 = 495",
+                "why": "A 95 % specificity sounds excellent, but five per cent of a very large group is a large number of people."
+              },
+              {
+                "title": "Read off the predictive value",
+                "line": "99 ÷ (99 + 495) = 16.7 %",
+                "why": "Fewer than one positive in five is correct — from a test whose stated properties look close to decisive."
+              },
+              {
+                "title": "Change only the prevalence",
+                "line": "At 30 %: 2,970 true and 350 false → 2,970/3,320 = 89.5 %",
+                "why": "Same test, same two percentages on the box, and a completely different meaning for the person holding the result. This is why screening and confirming are different jobs."
+              }
+            ],
+            "ending": "Sensitivity is conditioned on having the condition; predictive value is conditioned on the result. Prevalence decides which dominates, and counting people settles it.",
+            "links": [
+              "test-interpretation",
+              "drug-halflife",
+              "immunity"
+            ]
+          }
+        ]
+      }
+    },
+    "business": {
+      "subject": "business",
+      "title": "How a business actually makes money",
+      "intro": "Eleven units built on one running example: unit economics, breakeven, the cash cycle, pricing, what a customer is worth, and why a profitable month can still empty the bank account.",
+      "path": "curricula/business.html",
+      "practice": "15 guided business cases",
+      "aliases": {},
+      "stages": [
+        {
+          "title": "What one sale actually leaves you",
+          "start": "revenue-vs-cash",
+          "goal": "Separate profit from cash, and find the part of a price that is really yours."
+        },
+        {
+          "title": "Cash, timing and growth",
+          "start": "cash-cycle",
+          "goal": "Why the calendar decides how much money you need, and why growth consumes it."
+        },
+        {
+          "title": "Decisions and value",
+          "start": "cac-ltv",
+          "goal": "What to pay for a customer, what a discount really costs, and what a future dollar is worth."
+        }
+      ],
+      "units": [
+        {
+          "id": "revenue-vs-cash",
+          "title": "A sale is not the same as money arriving",
+          "goal": "Separate when revenue is earned from when cash moves, and explain how both can diverge in one month.",
+          "opening": [
+            "Sunrise Oats ships 100 boxes of granola to a supermarket in March at $40 a box. The invoice says payment in 60 days. In March the company has earned $4,000 and received nothing.",
+            "Those are two different facts about the same event, and they are both true. Keeping them apart is the first skill in reading any set of accounts."
+          ],
+          "heading": "Two clocks running on the same transaction",
+          "teaching": [
+            "Revenue is recorded when the work is done and the goods are delivered — when the company has earned it. Cash is recorded when money actually moves. For a cash sale the two coincide; for anything on terms they do not.",
+            "Both measures are needed and neither replaces the other. Profit answers whether you are selling things for more than they cost you. Cash answers whether you can pay the people you owe this week. A business can pass the first test and fail the second, and failing the second is what closes the doors."
+          ],
+          "terms": [
+            [
+              "Revenue",
+              "The value of goods or services delivered in a period, whether or not paid for."
+            ],
+            [
+              "Accounts receivable",
+              "Money owed to you by customers for sales already made."
+            ],
+            [
+              "Deferred revenue",
+              "Cash you have taken for something you have not yet delivered."
+            ]
+          ],
+          "first": {
+            "title": "Earned in March, paid in May",
+            "problem": "100 boxes ship in March at $40 each, on 60-day terms. The oats cost $2,600 and were paid for in February. Show March's revenue and March's cash.",
+            "steps": [
+              [
+                "Record the revenue",
+                "100 × $40 = $4,000 of March revenue",
+                "The goods left the building in March, so March is when it was earned."
+              ],
+              [
+                "Record March's cash from this sale",
+                "$0",
+                "The customer pays in May. Nothing has moved yet."
+              ],
+              [
+                "Record the cash already gone",
+                "−$2,600 in February",
+                "The ingredients were bought and paid for before the sale happened."
+              ],
+              [
+                "Compare the two views",
+                "March profit from this sale: $1,400. Cash across Feb–Mar: −$2,600.",
+                "A profitable sale that has, so far, only consumed money."
+              ]
+            ],
+            "notice": "The $2,600 appears as a cost in March, not February, because costs are matched to the revenue they generated."
+          },
+          "second": {
+            "title": "Paid in January, earned in June",
+            "problem": "A corporate customer pays $6,000 in January for boxes to be delivered monthly through the first half of the year. What is January's revenue?",
+            "steps": [
+              [
+                "Record January's cash",
+                "+$6,000",
+                "The money is in the bank and can be spent."
+              ],
+              [
+                "Record January's revenue",
+                "$1,000, if one month of the six has been delivered",
+                "Revenue is recognised as the obligation is fulfilled, not when the cash lands."
+              ],
+              [
+                "Name the remainder",
+                "$5,000 of deferred revenue — a liability",
+                "It is money held against work still owed. If the company stopped trading, it would have to be returned."
+              ]
+            ],
+            "notice": "This is the mirror image of the first case: cash early and revenue late, rather than revenue early and cash late."
+          },
+          "exercise": [
+            "In April, Sunrise Oats delivers $18,000 of boxes on 30-day terms and collects $11,000 from March's deliveries. It pays $9,000 to suppliers. What is April's revenue, and what is April's cash movement?",
+            "Revenue is $18,000 — what was delivered in April. Cash movement is $11,000 collected minus $9,000 paid = +$2,000. The two numbers describe the same month and have almost nothing to do with each other."
+          ],
+          "mistake": {
+            "attempt": "We made $12,000 of profit last month, so there should be roughly $12,000 more in the bank than there was.",
+            "diagnosis": "Profit is measured when a sale is earned; cash moves when money changes hands. A month with $12,000 of profit in which customers pay on 60-day terms and suppliers were paid on delivery can easily end with less cash than it started with.",
+            "repair": "Track the two separately. Profit answers 'did we sell for more than it cost'; cash answers 'can we pay this week'.",
+            "check": "A business can be profitable and unable to pay its bills at the same time — that is the ordinary way good companies fail. If profit and cash were the same measurement, that sentence would be impossible."
+          },
+          "takeaway": "Revenue is recorded when earned, cash when it moves. Both are needed: profit tells you whether the model works, cash tells you whether you survive long enough to find out.",
+          "recall": {
+            "from": null,
+            "ask": "A customer pays a $5,000 deposit in February for a delivery due in August. Where does that money sit in February, and why is it not revenue?",
+            "answer": "It is cash in the bank and a $5,000 liability called deferred revenue. It is not revenue because nothing has been delivered — the company still owes the work, and would have to return the money if it could not do it."
+          },
+          "previous": null,
+          "next": "unit-economics"
+        },
+        {
+          "id": "unit-economics",
+          "title": "What one sale leaves behind",
+          "goal": "Compute contribution per unit and explain what it is available to pay for.",
+          "opening": [
+            "A box of Sunrise Oats sells for $40. The oats, packaging, fulfilment labour and shipping come to $26. The difference, $14, is the part of the price the company still has after making and delivering that box.",
+            "That $14 has a name — contribution — and a job: it is what is left over to pay for everything that does not vary with how many boxes you sell."
+          ],
+          "heading": "The order in which costs get paid",
+          "teaching": [
+            "Variable costs scale with volume: one more box means one more set of ingredients and one more shipping label. Contribution per unit is price minus variable cost, and it is the only part of a sale that can go toward anything else.",
+            "Fixed costs — rent, salaries, software, insurance — arrive whether or not a single box is sold. Contribution is what pays them down. Until total contribution exceeds total fixed costs the month loses money, however healthy the per-unit figure looks."
+          ],
+          "terms": [
+            [
+              "Variable cost",
+              "A cost that rises with each additional unit sold."
+            ],
+            [
+              "Fixed cost",
+              "A cost that does not change with volume over the period in question."
+            ],
+            [
+              "Contribution",
+              "Price minus variable cost — what one sale leaves toward fixed costs and profit."
+            ]
+          ],
+          "first": {
+            "title": "Finding the contribution",
+            "problem": "Price $40. Oats and packaging $14, fulfilment labour $5, shipping $7. Find the contribution per box and the contribution margin.",
+            "steps": [
+              [
+                "Add the variable costs",
+                "$14 + $5 + $7 = $26 per box",
+                "Each of these recurs with every additional box, so all three belong here."
+              ],
+              [
+                "Subtract from price",
+                "$40 − $26 = $14 per box",
+                "This is what the company keeps from one sale before any fixed cost is considered."
+              ],
+              [
+                "Express it as a margin",
+                "$14 ÷ $40 = 35 %",
+                "Contribution margin is the proportion of each sale that survives the variable costs."
+              ],
+              [
+                "Scale to a month",
+                "500 boxes × $14 = $7,000 of contribution",
+                "This is the total available to put against fixed costs — not profit."
+              ]
+            ],
+            "notice": "Contribution margin is measured against price, not against cost. That distinction returns in the margin-and-markup unit."
+          },
+          "second": {
+            "title": "A small cost increase, a large effect",
+            "problem": "A courier raises shipping from $7 to $11. Price and all other costs are unchanged. What happens?",
+            "steps": [
+              [
+                "Recompute variable cost",
+                "$26 + $4 = $30 per box",
+                "A 15 % increase in total variable cost."
+              ],
+              [
+                "Recompute contribution",
+                "$40 − $30 = $10 per box",
+                "A fall from $14 to $10."
+              ],
+              [
+                "Express the damage",
+                "$4 ÷ $14 = 29 % of contribution gone",
+                "A 10 % rise in one cost line has taken nearly a third of what the sale was leaving behind."
+              ],
+              [
+                "Say why the leverage exists",
+                "The change lands wholly on the smaller number",
+                "Contribution is a difference between two larger numbers, so changes to either hit it disproportionately."
+              ]
+            ],
+            "notice": "That leverage runs both ways, which is why small cost reductions on a thin margin are worth real effort."
+          },
+          "exercise": [
+            "Sunrise Oats launches a $25 snack pack with variable costs of $18. Find the contribution and the contribution margin, and compare with the $40 box.",
+            "Contribution is $25 − $18 = $7, a margin of 28 %. The box leaves $14 at a 35 % margin, so the snack pack needs twice the volume to contribute the same amount."
+          ],
+          "mistake": {
+            "attempt": "Each box earns $14, so selling 500 boxes in a month makes $7,000 of profit.",
+            "diagnosis": "That is contribution, not profit. The $7,000 is what the month's sales left *toward* fixed costs — rent, salaries, software — which have to be paid whether or not anything sold.",
+            "repair": "With $9,000 of monthly fixed costs, 500 boxes contribute $7,000 and the month loses $2,000.",
+            "check": "Ask what happens at zero volume. Contribution goes to zero and the fixed costs do not, so the two cannot be the same quantity."
+          },
+          "takeaway": "Contribution = price − variable cost. It is what one sale leaves toward fixed costs, and it is not profit until the fixed costs are covered.",
+          "recall": {
+            "from": "revenue-vs-cash",
+            "ask": "Sunrise Oats delivers $18,000 of boxes on 30-day terms in April and collects $11,000 from March. What is April's revenue?",
+            "answer": "$18,000 — the value delivered in April. The $11,000 collected is cash from a previous month's revenue and does not appear in April's revenue at all."
+          },
+          "previous": "revenue-vs-cash",
+          "next": "breakeven"
+        },
+        {
+          "id": "breakeven",
+          "title": "How many before the month pays for itself",
+          "goal": "Compute breakeven volume from fixed costs and contribution, and say why price is the wrong denominator.",
+          "opening": [
+            "Sunrise Oats pays $9,000 a month in rent, salaries, software and insurance before a single box ships. Each box contributes $14.",
+            "Breakeven is the volume at which those contributions have exactly covered the fixed costs — the point where the month stops losing money and starts making it."
+          ],
+          "heading": "Divide by what is actually available",
+          "teaching": [
+            "Breakeven volume = fixed costs ÷ contribution per unit. The denominator has to be contribution, because that is the only part of each sale left over to pay a fixed cost. Using price instead assumes the whole $40 is available, when $26 of it has already been spent.",
+            "Breakeven is sensitive to contribution in a way that is easy to underestimate. Because contribution sits in the denominator, a change in it moves the required volume more than proportionally in the direction that hurts."
+          ],
+          "terms": [
+            [
+              "Breakeven volume",
+              "Units needed for total contribution to equal fixed costs."
+            ],
+            [
+              "Operating leverage",
+              "How sharply profit responds to volume, set by the fixed-to-variable mix."
+            ],
+            [
+              "Margin of safety",
+              "How far current volume sits above breakeven."
+            ]
+          ],
+          "first": {
+            "title": "The breakeven box count",
+            "problem": "Fixed costs $9,000 a month. Contribution $14 a box. How many boxes to break even?",
+            "steps": [
+              [
+                "Write the relationship",
+                "Units × contribution = fixed costs",
+                "At breakeven, everything the sales left over has been consumed by the fixed costs exactly."
+              ],
+              [
+                "Rearrange and compute",
+                "9,000 ÷ 14 = 642.9",
+                "Divide the fixed costs by what each unit actually contributes."
+              ],
+              [
+                "Round the right way",
+                "643 boxes",
+                "642 boxes contribute $8,988, which is $12 short. Breakeven volumes round up."
+              ],
+              [
+                "Check by multiplying back",
+                "643 × 14 = $9,002 ≥ $9,000",
+                "Multiplying back is the habit that catches a wrong denominator."
+              ]
+            ],
+            "notice": "At 643 boxes the profit is $2. Breakeven is a threshold, not a target."
+          },
+          "second": {
+            "title": "When contribution falls",
+            "problem": "The courier increase from the last unit drops contribution to $10. Fixed costs are unchanged. What is the new breakeven?",
+            "steps": [
+              [
+                "Recompute",
+                "9,000 ÷ 10 = 900 boxes",
+                "Up from 643."
+              ],
+              [
+                "Express the sensitivity",
+                "Contribution fell 29 %; breakeven rose 40 %",
+                "A fall in the denominator raises the result more than proportionally."
+              ],
+              [
+                "Say what that means in practice",
+                "257 extra boxes a month just to stand still",
+                "None of that additional volume produces any profit; it only replaces what the cost increase removed."
+              ]
+            ],
+            "notice": "Because contribution sits in a denominator, protecting it matters more than its size alone suggests."
+          },
+          "exercise": [
+            "Fixed costs rise to $12,000 a month while contribution stays at $14. Find the new breakeven volume and check it.",
+            "12,000 ÷ 14 = 857.1, so 858 boxes. Checking: 858 × 14 = $12,012, which clears $12,000, while 857 × 14 = $11,998 falls just short."
+          ],
+          "mistake": {
+            "attempt": "Fixed costs are $9,000 and we sell boxes at $40, so we break even at 225 boxes.",
+            "diagnosis": "That divides by the price, treating the whole $40 as available to pay rent. Most of it has already been spent on oats, packaging and shipping before the box leaves. Only the $14 of contribution is left over.",
+            "repair": "9,000 ÷ 14 = 643 boxes, not 225.",
+            "check": "Multiply the wrong answer back: 225 boxes contribute 225 × $14 = $3,150, nowhere near the $9,000 of fixed costs. Multiplying back catches a wrong denominator every time."
+          },
+          "takeaway": "Breakeven = fixed costs ÷ contribution per unit. Price is the wrong denominator, and because contribution sits underneath, protecting it moves breakeven more than its size suggests.",
+          "recall": {
+            "from": "unit-economics",
+            "ask": "A box sells for $40 with $26 of variable cost. Give the contribution and the contribution margin, and say what the contribution is for.",
+            "answer": "Contribution is $14 and the margin is 14/40 = 35 %. It is what one sale leaves toward fixed costs; it only becomes profit once the fixed costs for the period are fully covered."
+          },
+          "previous": "unit-economics",
+          "next": "fixed-vs-variable"
+        },
+        {
+          "id": "fixed-vs-variable",
+          "title": "Average cost is an answer, not an input",
+          "goal": "Separate fixed from variable costs and explain why cost per unit falls as volume rises.",
+          "opening": [
+            "Ask what a box of Sunrise Oats costs to make and you can get two defensible answers: $26, or $44. Both come from the same accounts.",
+            "The difference is whether you have folded a share of the fixed costs into the figure — and if you have, at what volume. That makes average cost per unit a result of an assumption, not a fact about the box."
+          ],
+          "heading": "The fixed share moves even when nothing else does",
+          "teaching": [
+            "Variable cost per unit is stable: $26 of oats, packaging, labour and shipping, whether you make 10 boxes or 10,000. Fixed cost per unit is not, because the same $9,000 is divided among however many boxes there are.",
+            "So total cost = fixed + (variable × volume), and average cost = that total divided by volume. The average falls as volume rises purely because the fixed share is spread thinner — nothing about the production has become more efficient."
+          ],
+          "terms": [
+            [
+              "Total cost",
+              "Fixed costs plus variable cost per unit times volume."
+            ],
+            [
+              "Average cost",
+              "Total cost divided by volume — dependent on the volume assumed."
+            ],
+            [
+              "Step cost",
+              "A cost that is fixed within a range and jumps when capacity is exceeded."
+            ]
+          ],
+          "first": {
+            "title": "The same business at two volumes",
+            "problem": "Fixed costs $9,000 a month, variable cost $26 a box. Find total and average cost at 500 boxes and at 1,000.",
+            "steps": [
+              [
+                "Total at 500",
+                "9,000 + 500 × 26 = 9,000 + 13,000 = $22,000",
+                "The fixed block plus the variable block."
+              ],
+              [
+                "Average at 500",
+                "22,000 ÷ 500 = $44 a box",
+                "This is where the $44 figure comes from: it embeds $18 of fixed cost per box."
+              ],
+              [
+                "Total at 1,000",
+                "9,000 + 26,000 = $35,000",
+                "Only the variable block doubled."
+              ],
+              [
+                "Average at 1,000",
+                "35,000 ÷ 1,000 = $35 a box",
+                "The fixed share has halved to $9 a box, so the average fell by $9."
+              ]
+            ],
+            "notice": "Nothing got cheaper to produce. The $26 never moved; only the denominator under the $9,000 did."
+          },
+          "second": {
+            "title": "A fixed cost that is not flat forever",
+            "problem": "The current oven handles 800 boxes a month. Going beyond it means a second oven at $2,000 a month. What does cost look like at 850 boxes?",
+            "steps": [
+              [
+                "Recognise the step",
+                "Fixed costs become 9,000 + 2,000 = $11,000",
+                "Fixed costs are only fixed within a capacity range."
+              ],
+              [
+                "Total at 850",
+                "11,000 + 850 × 26 = 11,000 + 22,100 = $33,100",
+                "The step lands in full even though it was crossed by only 50 boxes."
+              ],
+              [
+                "Average at 850",
+                "33,100 ÷ 850 = $38.94 a box",
+                "Higher than the $35 we would have reached at 1,000 without the step."
+              ]
+            ],
+            "notice": "Just past a step is the most expensive place to operate. Averages hide that; the step structure does not."
+          },
+          "exercise": [
+            "At 2,000 boxes a month with two ovens ($11,000 fixed, $26 variable), find total and average cost. Compare the average with the 850-box case.",
+            "Total = 11,000 + 52,000 = $63,000; average = $31.50 a box. Against $38.94 at 850 boxes, the fall comes entirely from spreading $11,000 over more boxes — $12.94 a box versus $5.50."
+          ],
+          "mistake": {
+            "attempt": "Each box costs $44 to make, so producing 1,000 of them will cost about $44,000.",
+            "diagnosis": "The $44 already contains a share of fixed costs worked out at 500 boxes. Using it at 1,000 charges the $9,000 of fixed costs twice over — once inside the per-unit figure and again implicitly through the doubled volume.",
+            "repair": "Rebuild from the structure: 9,000 + 1,000 × 26 = $35,000, which is $35 a box.",
+            "check": "Average cost per unit is an output of a volume assumption and never an input to a different one. Recompute it from fixed and variable whenever the volume changes."
+          },
+          "takeaway": "Total cost = fixed + variable × volume. Average cost falls with volume only because the fixed share is spread thinner, and fixed costs step once capacity is exceeded.",
+          "recall": {
+            "from": "breakeven",
+            "ask": "Fixed costs are $9,000 and contribution is $14 a box. Why is 225 boxes the wrong breakeven, and what is the right one?",
+            "answer": "225 comes from dividing by the $40 price, as if the whole price were available for rent. Only the $14 contribution is. 9,000 ÷ 14 = 643 boxes."
+          },
+          "previous": "breakeven",
+          "next": "cash-cycle"
+        },
+        {
+          "id": "cash-cycle",
+          "title": "The gap between paying and getting paid",
+          "goal": "Compute the cash conversion cycle and explain what it measures.",
+          "opening": [
+            "Sunrise Oats buys oats, holds them as stock for a while, sells a box, and then waits to be paid. Meanwhile the supplier has to be paid on their own schedule.",
+            "The money is out of the account for the whole stretch between paying the supplier and collecting from the customer. That stretch has a length in days, and it decides how much cash the business has to keep on hand."
+          ],
+          "heading": "Three timings, one number",
+          "teaching": [
+            "Inventory days measure how long stock sits before it sells. Receivable days measure how long customers take to pay after that. Payable days measure how long you take to pay your own suppliers, which works in your favour.",
+            "Cash cycle = inventory days + receivable days − payable days. It is a duration, not an amount, and it is the single best predictor of how much working capital a growing business will need."
+          ],
+          "terms": [
+            [
+              "Inventory days",
+              "Average time stock is held before it is sold."
+            ],
+            [
+              "Receivable days",
+              "Average time customers take to pay after delivery."
+            ],
+            [
+              "Payable days",
+              "Average time you take to pay suppliers."
+            ]
+          ],
+          "first": {
+            "title": "Counting the days",
+            "problem": "Oats sit as stock for 40 days. Customers pay 45 days after delivery. Suppliers are paid 30 days after purchase. Find the cash cycle.",
+            "steps": [
+              [
+                "Add the waiting",
+                "40 + 45 = 85 days",
+                "From buying the oats to collecting the money is 85 days of waiting."
+              ],
+              [
+                "Subtract the supplier's patience",
+                "85 − 30 = 55 days",
+                "For the first 30 days the supplier is effectively funding the stock, not you."
+              ],
+              [
+                "State what it means",
+                "55 days of funding the company must supply itself",
+                "Cash leaves on day 30 and returns on day 85."
+              ],
+              [
+                "Note what it is not",
+                "It is a duration, not a sum of money",
+                "Converting it into an amount needs a sales rate, which comes next."
+              ]
+            ],
+            "notice": "A negative cash cycle — collecting before you pay — is why some retailers can grow without external funding."
+          },
+          "second": {
+            "title": "Changing only the timing",
+            "problem": "The supplier agrees to 60-day terms. Nothing else changes. What happens to the cycle, and to the amount of cash tied up?",
+            "steps": [
+              [
+                "Recompute the cycle",
+                "40 + 45 − 60 = 25 days",
+                "Down from 55 without selling a single extra box."
+              ],
+              [
+                "Convert to money",
+                "Daily sales $667 × 25 = about $16,700 tied up",
+                "At $20,000 a month, daily sales are 20,000 ÷ 30 ≈ $667."
+              ],
+              [
+                "Compare with before",
+                "55 days × $667 ≈ $36,700",
+                "The renegotiation released about $20,000 of cash."
+              ]
+            ],
+            "notice": "No sale, no cost saving and no price change — and roughly $20,000 of cash freed, purely by moving a date."
+          },
+          "exercise": [
+            "A competitor holds stock for 20 days, is paid in 15, and pays suppliers in 45. Find the cash cycle and say what it means.",
+            "20 + 15 − 45 = −10 days. The cycle is negative: they collect from customers ten days before they have to pay suppliers, so growth generates cash rather than consuming it."
+          ],
+          "mistake": {
+            "attempt": "Once we've made the sale, the cash problem is over.",
+            "diagnosis": "The sale starts a 45-day wait, not ends one. The oats were bought 40 days before the sale and paid for 30 days after that, so money has been out of the account for the whole stretch. Delivering the goods changes the revenue line, not the bank balance.",
+            "repair": "Cash cycle = 40 + 45 − 30 = 55 days of funding you must provide yourself, every time.",
+            "check": "Move only a date and watch the cash change. Extending supplier terms to 60 days cuts the cycle to 25 days and frees about $20,000, without a single extra sale."
+          },
+          "takeaway": "Cash cycle = inventory days + receivable days − payable days. It is a duration, and multiplying it by daily sales turns it into the cash the business must find.",
+          "recall": {
+            "from": "fixed-vs-variable",
+            "ask": "Fixed costs are $9,000 and variable cost is $26 a box. Find the average cost at 500 boxes and at 1,000, and say why it changed.",
+            "answer": "At 500: (9,000 + 13,000)/500 = $44. At 1,000: (9,000 + 26,000)/1,000 = $35. Nothing became cheaper to produce — the same $9,000 is spread over twice as many boxes, so the fixed share per box halved from $18 to $9."
+          },
+          "previous": "fixed-vs-variable",
+          "next": "growth-cash-trap"
+        },
+        {
+          "id": "growth-cash-trap",
+          "title": "Why growing fast can empty the bank",
+          "goal": "Show that working capital scales with sales, so growth consumes cash even when every sale is profitable.",
+          "opening": [
+            "Sunrise Oats doubles its monthly sales. Every box is sold at the same healthy $14 contribution, the fixed costs are covered, and the month is clearly profitable.",
+            "The bank balance falls. Not because anything went wrong — because of the 55-day cycle from the last unit, applied to a larger business."
+          ],
+          "heading": "The cycle has to be funded at the new size",
+          "teaching": [
+            "Cash tied up in the cycle is roughly daily sales multiplied by cycle days. Daily sales appear as a factor, so doubling sales roughly doubles the cash locked up — and that extra has to be found before the extra collections arrive.",
+            "The month's profit is rarely large enough to cover it. Profit is a margin on the period's sales; the working-capital increase is a multiple of the period's sales. For a fast-growing business with a long cycle, the second number routinely outruns the first."
+          ],
+          "terms": [
+            [
+              "Working capital",
+              "Cash tied up in stock and unpaid invoices, less what suppliers are funding."
+            ],
+            [
+              "Cash burn",
+              "Net cash leaving the business over a period."
+            ],
+            [
+              "Self-funding growth",
+              "Growth whose working-capital needs are met from its own profits."
+            ]
+          ],
+          "first": {
+            "title": "What the cycle costs at the current size",
+            "problem": "Monthly sales $20,000. Cash cycle 55 days. How much cash is locked in the cycle?",
+            "steps": [
+              [
+                "Find daily sales",
+                "20,000 ÷ 30 = $667 a day",
+                "A rough daily rate is enough; the cycle length is itself an average."
+              ],
+              [
+                "Multiply by the cycle",
+                "667 × 55 ≈ $36,700",
+                "This much is permanently out in stock and unpaid invoices at any moment."
+              ],
+              [
+                "Say what it is",
+                "A standing balance, not a monthly cost",
+                "It is not consumed; it is tied up, and it is only released if the business shrinks or the cycle shortens."
+              ]
+            ],
+            "notice": "A business that never grows funds this once. One that grows funds it again at every new size."
+          },
+          "second": {
+            "title": "The month sales double",
+            "problem": "Sales rise to $40,000 a month. Contribution is 35 % of sales, fixed costs are $9,000. Compare the month's profit with the extra cash the cycle needs.",
+            "steps": [
+              [
+                "New cash tied up",
+                "Daily sales $1,333 × 55 ≈ $73,300",
+                "Twice the sales, twice the standing balance."
+              ],
+              [
+                "Extra cash required",
+                "73,300 − 36,700 = about $36,600",
+                "This has to be found during the month of growth."
+              ],
+              [
+                "The month's profit",
+                "0.35 × 40,000 − 9,000 = 14,000 − 9,000 = $5,000",
+                "A genuinely profitable month."
+              ],
+              [
+                "Compare the two",
+                "$5,000 of profit against $36,600 of new working capital",
+                "The month is profitable and cash goes down by roughly $31,600."
+              ]
+            ],
+            "notice": "Nothing here is a mistake or an inefficiency. It is arithmetic that applies to every growing business with a positive cash cycle."
+          },
+          "exercise": [
+            "Sales grow from $20,000 to $30,000 a month with the 55-day cycle unchanged. How much extra cash does the cycle absorb, and how does that compare with a month's profit at 35 % contribution and $9,000 of fixed costs?",
+            "Daily sales rise from $667 to $1,000, so tied-up cash goes from about $36,700 to $55,000 — roughly $18,300 extra. The month's profit is 0.35 × 30,000 − 9,000 = $1,500. Cash still falls by about $16,800 in a profitable month."
+          ],
+          "mistake": {
+            "attempt": "Sales are growing fast and every box is profitable, so the extra profit will pay for the extra stock.",
+            "diagnosis": "Profit is a margin on the period's sales; the working-capital increase is a multiple of them. Doubling monthly sales roughly doubles the cash locked in a 55-day cycle — about $36,600 more here — while the month's profit is $5,000. The extra stock also has to be bought before the extra sales are collected.",
+            "repair": "Plan funding for the gap, shorten the cycle, or grow no faster than the cycle can carry.",
+            "check": "Watch the sign of the cash movement. A profitable, fast-growing month can still show cash falling. If growth funded itself, that could not happen."
+          },
+          "takeaway": "Working capital scales with sales, so growth consumes cash. Profit is a margin on sales; the cash needed is a multiple of them, and the second usually wins during fast growth.",
+          "recall": {
+            "from": "cash-cycle",
+            "ask": "Stock is held 40 days, customers pay in 45, suppliers are paid in 30. Find the cash cycle, and say what happens if supplier terms go to 60 days.",
+            "answer": "40 + 45 − 30 = 55 days. With 60-day supplier terms it falls to 40 + 45 − 60 = 25 days, releasing cash without any change in sales, costs or prices."
+          },
+          "previous": "cash-cycle",
+          "next": "margin-vs-markup"
+        },
+        {
+          "id": "margin-vs-markup",
+          "title": "Margin and markup are different numbers",
+          "goal": "Convert between margin and markup, and price to a target margin correctly.",
+          "opening": [
+            "A box costs $26 and sells for $40. The $14 of profit can be described as 54 % or as 35 %, depending on what you divide by.",
+            "Both are correct and they answer different questions. Confusing them is one of the most common and most expensive arithmetic errors in a small business."
+          ],
+          "heading": "Which number goes underneath",
+          "teaching": [
+            "Markup is profit as a share of cost: 14 ÷ 26 = 53.8 %. It answers 'how much did I add on top of what it cost me?'. Margin is profit as a share of price: 14 ÷ 40 = 35 %. It answers 'how much of what the customer paid did I keep?'.",
+            "Markup is always the larger number, because the denominator is smaller. To hit a target margin you cannot multiply the cost by one plus the margin — you must divide: price = cost ÷ (1 − margin)."
+          ],
+          "terms": [
+            [
+              "Markup",
+              "Profit divided by cost."
+            ],
+            [
+              "Margin",
+              "Profit divided by price."
+            ],
+            [
+              "Target margin",
+              "The share of the final price you intend to keep."
+            ]
+          ],
+          "first": {
+            "title": "Both numbers from the same box",
+            "problem": "Cost $26, price $40. Find the markup and the margin, and say why they differ.",
+            "steps": [
+              [
+                "Find the profit",
+                "$40 − $26 = $14",
+                "The same $14 in both calculations."
+              ],
+              [
+                "Divide by cost for markup",
+                "14 ÷ 26 = 0.538, about 54 %",
+                "The cost is the smaller denominator, so this is the larger percentage."
+              ],
+              [
+                "Divide by price for margin",
+                "14 ÷ 40 = 0.35, exactly 35 %",
+                "The price is the larger denominator, so this is the smaller percentage."
+              ],
+              [
+                "State the relationship",
+                "Markup > margin, always, for a profitable sale",
+                "They are two views of one gap, measured against two different baselines."
+              ]
+            ],
+            "notice": "Suppliers usually quote markup and retailers usually think in margin, which is exactly where the confusion gets introduced."
+          },
+          "second": {
+            "title": "Pricing to a target margin",
+            "problem": "Sunrise Oats wants a 40 % margin on a product costing $26. What price achieves it?",
+            "steps": [
+              [
+                "Write what margin means",
+                "Margin = (price − cost) ÷ price = 0.40",
+                "Set up the definition before rearranging anything."
+              ],
+              [
+                "Rearrange",
+                "price × (1 − 0.40) = cost, so price = cost ÷ 0.60",
+                "Dividing, not multiplying, is the whole trick."
+              ],
+              [
+                "Compute",
+                "26 ÷ 0.60 = $43.33",
+                "The price needed for a 40 % margin."
+              ],
+              [
+                "Verify against the definition",
+                "(43.33 − 26) ÷ 43.33 = 17.33 ÷ 43.33 = 40 % ✓",
+                "Always check a target-margin price by recomputing the margin."
+              ]
+            ],
+            "notice": "A 40 % margin corresponds to a 66.7 % markup here — 17.33 ÷ 26 — which is why the two must never be swapped."
+          },
+          "exercise": [
+            "A snack pack costs $18. What price gives a 30 % margin, and what markup is that?",
+            "Price = 18 ÷ (1 − 0.30) = 18 ÷ 0.70 = $25.71. Profit is $7.71, so markup = 7.71 ÷ 18 = 42.9 %. Check the margin: 7.71 ÷ 25.71 = 30 % ✓"
+          ],
+          "mistake": {
+            "attempt": "We want a 40 % margin and the box costs $26, so we add 40 %: 26 × 1.4 = $36.40.",
+            "diagnosis": "Multiplying cost by 1.4 produces a 40 % *markup* on cost, not a 40 % margin on price. At $36.40 the profit is $10.40, and 10.40 ÷ 36.40 is a margin of 28.6 % — well short of the target.",
+            "repair": "Divide instead of multiplying: 26 ÷ (1 − 0.40) = 26 ÷ 0.60 = $43.33.",
+            "check": "Test the answer against the definition of margin. 17.33 ÷ 43.33 = 40 % ✓, while 10.40 ÷ 36.40 = 28.6 % ✗. Recomputing the margin catches this every time."
+          },
+          "takeaway": "Markup divides by cost, margin divides by price, and markup is always larger. To hit a target margin, price = cost ÷ (1 − margin).",
+          "recall": {
+            "from": "growth-cash-trap",
+            "ask": "Monthly sales double from $20,000 to $40,000 with a 55-day cash cycle. Roughly how much extra cash does the cycle absorb?",
+            "answer": "Daily sales go from about $667 to $1,333, so tied-up cash goes from about $36,700 to $73,300 — roughly $36,600 extra, against a month's profit of about $5,000."
+          },
+          "previous": "growth-cash-trap",
+          "next": "cac-ltv"
+        },
+        {
+          "id": "cac-ltv",
+          "title": "What a customer is worth, and what you can pay for one",
+          "goal": "Compare acquisition cost against lifetime contribution, and find the payback point in orders.",
+          "opening": [
+            "Sunrise Oats spends $3,500 on advertising in a month and gains 100 new customers. That is $35 to acquire one.",
+            "Whether $35 is cheap depends entirely on what that customer goes on to leave behind — and on whether you measure it in revenue or in contribution."
+          ],
+          "heading": "Compare like with like",
+          "teaching": [
+            "Acquisition cost is real cash spent. The thing to set against it is not what the customer spends, but what is left after the variable costs of serving them — their contribution. Comparing acquisition cost against revenue flatters every channel and will justify spending that loses money on every sale.",
+            "Payback is the more useful framing for a young business: how many orders before the acquisition cost is repaid? Until that point the customer is an investment, and a customer who leaves before it has cost you money."
+          ],
+          "terms": [
+            [
+              "Customer acquisition cost",
+              "Total sales and marketing spend divided by customers gained."
+            ],
+            [
+              "Lifetime contribution",
+              "Contribution from all of a customer's orders, not revenue."
+            ],
+            [
+              "Payback",
+              "The number of orders, or months, needed to repay acquisition cost."
+            ]
+          ],
+          "first": {
+            "title": "Acquisition against contribution",
+            "problem": "CAC is $35. A customer places 4 orders a year, each a $40 box with $14 of contribution. Is acquisition worth it?",
+            "steps": [
+              [
+                "Compute lifetime revenue",
+                "4 × $40 = $160 a year",
+                "This is the number that makes the spend look obviously good, and it is the wrong one."
+              ],
+              [
+                "Compute lifetime contribution",
+                "4 × $14 = $56 a year",
+                "Most of the $160 went on oats, packaging and shipping, and is not available to repay advertising."
+              ],
+              [
+                "Form the ratio",
+                "56 ÷ 35 = 1.6",
+                "Each dollar of acquisition returns $1.60 of contribution over a year."
+              ],
+              [
+                "Find the payback point",
+                "35 ÷ 14 = 2.5 orders",
+                "A customer who orders twice and never returns has lost the company money."
+              ]
+            ],
+            "notice": "Against revenue the ratio looks like 160 ÷ 35 = 4.6. The two framings would support very different decisions."
+          },
+          "second": {
+            "title": "Improving retention instead of acquisition",
+            "problem": "A subscription option lifts the average from 4 orders a year to 6. CAC is unchanged. What happens?",
+            "steps": [
+              [
+                "Recompute lifetime contribution",
+                "6 × $14 = $84",
+                "Up from $56, with no extra acquisition spend."
+              ],
+              [
+                "Recompute the ratio",
+                "84 ÷ 35 = 2.4",
+                "Up from 1.6."
+              ],
+              [
+                "Compare with the alternative",
+                "The same ratio via CAC would need CAC near $23",
+                "Cutting acquisition cost by a third is usually harder than adding two orders a year."
+              ]
+            ],
+            "notice": "Payback is unchanged at 2.5 orders — retention improves the return without changing how long the investment takes to repay."
+          },
+          "exercise": [
+            "A channel delivers customers at $60 each. They order 3 times a year at $14 contribution. Is it worth running, and what would need to change?",
+            "Lifetime contribution is 3 × $14 = $42 against $60 of acquisition — a ratio of 0.7, so it loses money. Payback would need 60 ÷ 14 = 4.3 orders, more than a customer places. It needs either cheaper acquisition, more orders per customer, or higher contribution per order."
+          ],
+          "mistake": {
+            "attempt": "We spend $35 to acquire a customer who spends $160 a year with us, so acquisition is very cheap.",
+            "diagnosis": "The $160 is revenue, and most of it pays for oats, packaging and shipping. What is actually available to repay the $35 is the contribution those orders leave: 4 × $14 = $56.",
+            "repair": "Compare like with like: $56 of contribution against $35 of acquisition is a ratio of 1.6, not 4.6.",
+            "check": "Ask when you are square. At $14 of contribution per order it takes 2.5 orders to repay $35, so a customer who orders twice and leaves has lost money — which a 4.6 ratio would never have suggested."
+          },
+          "takeaway": "Set acquisition cost against lifetime contribution, never revenue. Payback in orders is the sharper question for a young business.",
+          "recall": {
+            "from": "margin-vs-markup",
+            "ask": "A product costs $26 and you want a 40 % margin. What price, and why is 26 × 1.4 wrong?",
+            "answer": "Price = 26 ÷ (1 − 0.40) = $43.33. Multiplying by 1.4 gives a 40 % markup on cost, producing $36.40, whose actual margin is 10.40 ÷ 36.40 = 28.6 %."
+          },
+          "previous": "margin-vs-markup",
+          "next": "pricing"
+        },
+        {
+          "id": "pricing",
+          "title": "A price change is a bet on volume",
+          "goal": "Compute the volume change needed to offset a price change, using contribution rather than price.",
+          "opening": [
+            "A 10 % discount sounds like it needs about 10 % more volume to make up. It does not. It needs about 40 %.",
+            "The reason is that the discount comes entirely out of contribution, and contribution is much smaller than price. Cutting $4 off a $40 box is 10 % of the price and 29 % of the $14 the box was leaving behind."
+          ],
+          "heading": "The discount lands on the small number",
+          "teaching": [
+            "A price change does not change variable costs, so the whole change flows into contribution. To hold total contribution steady, required volume = old total contribution ÷ new contribution per unit.",
+            "This cuts both ways, and the upward direction is the one most businesses underuse. A price rise increases contribution disproportionately too, which means you can afford to lose a surprising amount of volume and still be better off."
+          ],
+          "terms": [
+            [
+              "Price elasticity",
+              "How much volume responds to a change in price."
+            ],
+            [
+              "Contribution break-even on a price change",
+              "The volume at which the new price leaves total contribution unchanged."
+            ],
+            [
+              "Discount depth",
+              "The size of the price cut as a share of contribution, not of price."
+            ]
+          ],
+          "first": {
+            "title": "What a 10 % discount really requires",
+            "problem": "Price falls from $40 to $36. Variable cost stays $26. Current volume is 643 boxes. How much volume is needed to hold total contribution?",
+            "steps": [
+              [
+                "Find the new contribution",
+                "$36 − $26 = $10 a box",
+                "The whole $4 came out of the $14, because variable costs did not move."
+              ],
+              [
+                "Express the damage",
+                "4 ÷ 14 = 29 % of contribution gone",
+                "A 10 % price cut removed 29 % of what the sale was leaving behind."
+              ],
+              [
+                "Find the volume needed",
+                "643 × 14 = $9,002; 9,002 ÷ 10 = 901 boxes",
+                "Hold total contribution by selling more units at a thinner one."
+              ],
+              [
+                "Express it as a percentage",
+                "901 ÷ 643 = 1.40, about 40 % more volume",
+                "Four times the naive estimate of 10 %."
+              ]
+            ],
+            "notice": "The thinner the contribution margin, the more brutal this arithmetic becomes."
+          },
+          "second": {
+            "title": "The same arithmetic going up",
+            "problem": "Price rises from $40 to $44. How much volume can be lost before the rise stops paying?",
+            "steps": [
+              [
+                "Find the new contribution",
+                "$44 − $26 = $18 a box",
+                "The whole $4 increase went into contribution."
+              ],
+              [
+                "Find the volume that holds total contribution",
+                "9,002 ÷ 18 = 500 boxes",
+                "Down from 643."
+              ],
+              [
+                "Express the tolerance",
+                "500 ÷ 643 = 0.78, so up to 22 % of volume can be lost",
+                "Anything better than a 22 % drop leaves the business ahead."
+              ],
+              [
+                "Note the second effect",
+                "Fewer boxes also means less variable cost and less working capital",
+                "The cash position improves further, beyond the contribution arithmetic."
+              ]
+            ],
+            "notice": "Price rises are tested against a volume fall you can tolerate; discounts against a volume rise you must achieve."
+          },
+          "exercise": [
+            "A snack pack sells at $25 with $18 of variable cost. A 12 % discount is proposed. What volume increase would be needed to hold total contribution?",
+            "Contribution falls from $7 to $25 × 0.88 − 18 = $22 − $18 = $4. Holding total contribution needs 7 ÷ 4 = 1.75, so 75 % more volume — from a 12 % discount."
+          ],
+          "mistake": {
+            "attempt": "We'll cut the price by 10 %. We only need about 10 % more volume to make it back.",
+            "diagnosis": "That compares the discount with the price, when the discount comes entirely out of contribution. Four dollars off a $40 box is 10 % of the price but 29 % of the $14 that was left over after variable costs.",
+            "repair": "Contribution falls from $14 to $10, so holding total contribution needs about 901 boxes instead of 643 — roughly 40 % more volume.",
+            "check": "Measure the discount against contribution rather than price. $4 ÷ $14 = 29 %, and recovering a 29 % cut in per-unit contribution always needs far more than a 29 % volume rise."
+          },
+          "takeaway": "A price change flows entirely into contribution. Measure a discount against contribution, not price, and a 10 % cut on a 35 % margin needs roughly 40 % more volume.",
+          "recall": {
+            "from": "cac-ltv",
+            "ask": "CAC is $35 and a customer places 4 orders a year at $14 contribution. Give the ratio and the payback in orders.",
+            "answer": "Lifetime contribution is 4 × $14 = $56, so the ratio is 56 ÷ 35 = 1.6. Payback is 35 ÷ 14 = 2.5 orders, so a customer who orders twice and leaves has lost money."
+          },
+          "previous": "cac-ltv",
+          "next": "opportunity-cost"
+        },
+        {
+          "id": "opportunity-cost",
+          "title": "The cost of the option you did not take",
+          "goal": "Identify opportunity cost and exclude sunk costs from a decision.",
+          "opening": [
+            "The oven can run granola or snack packs, not both. Granola contributes $7,000 a month; snack packs would contribute $6,000.",
+            "Choosing granola costs $6,000 — not in cash, but in the contribution given up. That forgone amount is the real price of the choice, and it never appears on an invoice."
+          ],
+          "heading": "A cost that belongs to a decision has to vary with it",
+          "teaching": [
+            "Opportunity cost is the value of the best alternative not chosen. It only exists where a genuine alternative exists: an idle oven with no other use has an opportunity cost of zero, which is why using spare capacity can be worthwhile at prices that would otherwise look too low.",
+            "Sunk costs are the mirror image. The $40,000 already paid for the oven is identical under every option, so it cannot distinguish between them. A number that does not change with the decision cannot be a reason for making it one way or the other."
+          ],
+          "terms": [
+            [
+              "Opportunity cost",
+              "The value of the best alternative given up."
+            ],
+            [
+              "Sunk cost",
+              "Money already spent that no future choice can recover."
+            ],
+            [
+              "Relevant cost",
+              "A cost that differs between the options being compared."
+            ]
+          ],
+          "first": {
+            "title": "Pricing the alternative",
+            "problem": "One oven, one month. Granola: 500 units at $14 contribution. Snack packs: 300 units at $20. Which, and what does it cost?",
+            "steps": [
+              [
+                "Value each option",
+                "Granola 500 × 14 = $7,000; snack packs 300 × 20 = $6,000",
+                "Compare contribution, not revenue and not unit price."
+              ],
+              [
+                "Choose the larger",
+                "Granola, at $7,000",
+                "Higher total contribution from the same constrained resource."
+              ],
+              [
+                "Name the opportunity cost",
+                "$6,000 — the snack-pack contribution given up",
+                "This is a real cost of the decision even though no money changes hands."
+              ],
+              [
+                "State the net gain",
+                "7,000 − 6,000 = $1,000 better off than the alternative",
+                "The decision is worth $1,000, not $7,000. Most of the gain was available either way."
+              ]
+            ],
+            "notice": "The higher per-unit contribution lost, because the constraint is oven time and granola uses it more productively."
+          },
+          "second": {
+            "title": "A cost that cannot help you decide",
+            "problem": "The oven cost $40,000 last year. Does that argue for continuing with granola?",
+            "steps": [
+              [
+                "Ask whether it varies",
+                "$40,000 under granola; $40,000 under snack packs",
+                "Identical under both options."
+              ],
+              [
+                "Apply the test",
+                "A cost that does not differ cannot distinguish options",
+                "It is sunk — already spent and unrecoverable whatever happens next."
+              ],
+              [
+                "Redo the comparison without it",
+                "$7,000 against $6,000, as before",
+                "The answer is unchanged, which is the point: the $40,000 never had any bearing on it."
+              ]
+            ],
+            "notice": "If the oven could be sold for $15,000, that $15,000 *is* relevant — it is a live alternative use of the asset, not a past payment."
+          },
+          "exercise": [
+            "A café owner is offered $2,000 a month to sublet a storeroom. They currently use it for stock that saves about $700 a month in delivery charges. What is the opportunity cost of continuing to use it as storage?",
+            "$2,000 a month — the rent given up. Since the storage only saves $700, continuing costs $1,300 a month in forgone value. What the storeroom originally cost to fit out does not enter the comparison."
+          ],
+          "mistake": {
+            "attempt": "We already spent $40,000 on the oven, so we need to keep making granola to justify it.",
+            "diagnosis": "The $40,000 is gone whatever happens next, and it is exactly the same number under every option, so it cannot favour one. Treating it as a reason is choosing on the basis of a cost that does not vary with the choice.",
+            "repair": "Compare only what differs from here: $7,000 a month from granola against $6,000 from snack packs. The purchase price appears in neither figure.",
+            "check": "Ask whether the number changes with the decision. If it is identical under every option, it cannot be a reason to prefer one of them."
+          },
+          "takeaway": "The cost of a choice is the best alternative given up. Costs that are identical under every option — sunk costs — carry no information about which to pick.",
+          "recall": {
+            "from": "pricing",
+            "ask": "A box sells at $40 with $26 of variable cost. A 10 % discount is proposed. Roughly how much extra volume is needed to hold total contribution?",
+            "answer": "Contribution falls from $14 to $10, so you need 14/10 = 1.4 times the volume — about 40 % more. The discount is 10 % of price but 29 % of contribution, which is why the required volume is so much larger."
+          },
+          "previous": "pricing",
+          "next": "discounting"
+        },
+        {
+          "id": "discounting",
+          "title": "Why a dollar later is worth less",
+          "goal": "Compute present value by dividing by compound growth, and explain what the rate represents.",
+          "opening": [
+            "A customer offers either $9,000 now or $10,000 in three years. The second is the larger number, and it is not obviously the better deal.",
+            "Money available now can be put to work. Comparing amounts at different dates means bringing them to the same date first, and that is what discounting does."
+          ],
+          "heading": "Growth compounds, so discounting divides",
+          "teaching": [
+            "Present value = future value ÷ (1 + r)ⁿ. The rate r is what the money could earn elsewhere at comparable risk — the opportunity cost of capital, which is the previous unit applied to time.",
+            "Because growth compounds, discounting divides by a compounded factor rather than subtracting simple interest. The gap between those two methods widens quickly with the number of periods, which is why the shortcut of subtracting 'rate times years' goes wrong fast."
+          ],
+          "terms": [
+            [
+              "Present value",
+              "What a future amount is worth today, at a given rate."
+            ],
+            [
+              "Discount rate",
+              "The return available elsewhere on comparable risk."
+            ],
+            [
+              "Compounding",
+              "Growth applied to a base that already includes previous growth."
+            ]
+          ],
+          "first": {
+            "title": "Bringing a future amount to today",
+            "problem": "What is $10,000 in three years worth today, at a discount rate of 8 %?",
+            "steps": [
+              [
+                "Write the relationship",
+                "PV = FV ÷ (1 + r)ⁿ",
+                "The same factor that grows money forward is what brings it back."
+              ],
+              [
+                "Compute the factor",
+                "1.08³ = 1.2597",
+                "Three years of compounding, not three lots of 8 % added on."
+              ],
+              [
+                "Divide",
+                "10,000 ÷ 1.2597 = $7,938",
+                "That is what you would need to invest today at 8 % to have $10,000 in three years."
+              ],
+              [
+                "Answer the original question",
+                "$9,000 now beats $10,000 in three years at this rate",
+                "$9,000 exceeds the $7,938 the later sum is worth today."
+              ]
+            ],
+            "notice": "Grow the answer forward as a check: 7,938 × 1.2597 = $10,000 ✓"
+          },
+          "second": {
+            "title": "What the rate does",
+            "problem": "Recompute the same $10,000 in three years at a 15 % discount rate. Why does the answer move so much?",
+            "steps": [
+              [
+                "Compute the new factor",
+                "1.15³ = 1.5209",
+                "Compounding magnifies the difference between 8 % and 15 % over three years."
+              ],
+              [
+                "Divide",
+                "10,000 ÷ 1.5209 = $6,575",
+                "Down from $7,938."
+              ],
+              [
+                "Interpret the rate",
+                "A higher rate means better alternatives, so future money is worth less now",
+                "The discount rate encodes what else you could do with the money, including the risk you are taking."
+              ]
+            ],
+            "notice": "This is why risky ventures are discounted hard: a high required return makes distant payoffs worth strikingly little today."
+          },
+          "exercise": [
+            "What is $5,000 received in two years worth today at a 10 % discount rate? Check your answer.",
+            "1.10² = 1.21, so PV = 5,000 ÷ 1.21 = $4,132. Check by growing forward: 4,132 × 1.21 = $5,000 ✓"
+          ],
+          "mistake": {
+            "attempt": "At 8 % for three years that's 24 %, so $10,000 in three years is worth 10,000 − 24 % = $7,600 today.",
+            "diagnosis": "That subtracts simple interest rather than dividing by compound growth. Discounting asks what amount today would grow into $10,000, and growth compounds — each year's return is earned on a base that already includes the previous years'.",
+            "repair": "10,000 ÷ 1.08³ = 10,000 ÷ 1.2597 = $7,938.",
+            "check": "Grow each candidate forward. 7,938 × 1.2597 = $10,000 ✓, while 7,600 × 1.2597 = $9,574 ✗ — the subtraction lands over $400 short."
+          },
+          "takeaway": "PV = FV ÷ (1 + r)ⁿ. Divide by compound growth rather than subtracting simple interest, and check by growing your answer forward.",
+          "recall": {
+            "from": "opportunity-cost",
+            "ask": "An oven cost $40,000 last year. Granola would contribute $7,000 a month and snack packs $6,000. What is the opportunity cost of choosing granola, and where does the $40,000 belong?",
+            "answer": "The opportunity cost is $6,000 — the snack-pack contribution forgone. The $40,000 is sunk: identical under both options, so it belongs in neither side of the comparison."
+          },
+          "previous": "opportunity-cost",
+          "next": null
+        }
+      ],
+      "project": {
+        "id": "sunrise-project",
+        "title": "Sunrise Oats: a profitable year that runs out of money",
+        "intro": "One business carried through four stages: build the unit economics, find breakeven, add the cash cycle, then grow and watch profit rise while the bank balance falls. Finally, compare three levers and pick one on the numbers.",
+        "needs": "Uses unit economics, breakeven, the cash cycle, growth, pricing and discounting. Every figure is calculated from the same starting assumptions.",
+        "parts": [
+          {
+            "title": "Build the unit economics and find breakeven",
+            "goal": "Turn a price and a cost list into contribution, then into the volume the month needs.",
+            "opening": [
+              "Sunrise Oats sells a box at $40. Oats and packaging cost $14, fulfilment labour $5, shipping $7. Rent, salaries, software and insurance come to $9,000 a month.",
+              "I will keep the variable and fixed costs strictly separate from the start, because every later stage depends on which is which."
+            ],
+            "steps": [
+              {
+                "title": "Separate the two kinds of cost",
+                "work": "Variable: 14 + 5 + 7 = $26 per box\nFixed: $9,000 per month",
+                "explanation": "The test is whether the cost appears again when one more box is made. Oats do; rent does not."
+              },
+              {
+                "title": "Find the contribution",
+                "work": "40 − 26 = $14 per box (35 % margin)",
+                "explanation": "This is the only part of each sale available to pay the $9,000 and then to become profit."
+              },
+              {
+                "title": "Find breakeven",
+                "work": "9,000 ÷ 14 = 642.9 → 643 boxes",
+                "explanation": "Divide by contribution, not price. Dividing by $40 would have given 225, which contributes only $3,150."
+              },
+              {
+                "title": "Check the month at 900 boxes",
+                "work": "900 × 14 = 12,600; 12,600 − 9,000 = $3,600 profit",
+                "explanation": "Comfortably past breakeven. On a profit-and-loss basis this is a healthy business."
+              }
+            ],
+            "ending": "At 900 boxes a month the business makes $3,600 of profit. Nothing so far says anything about cash.",
+            "links": [
+              "unit-economics",
+              "breakeven",
+              "fixed-vs-variable"
+            ]
+          },
+          {
+            "title": "Add the calendar",
+            "goal": "Convert the cash cycle into the amount of money the business must find.",
+            "opening": [
+              "Oats sit as stock for 40 days. Customers pay 45 days after delivery. Suppliers are paid after 30 days.",
+              "The profit calculation ignored all three of those dates. Now I will put them back in and see what they cost."
+            ],
+            "steps": [
+              {
+                "title": "Compute the cycle",
+                "work": "40 + 45 − 30 = 55 days",
+                "explanation": "Money is out of the account from paying the supplier on day 30 until the customer pays on day 85."
+              },
+              {
+                "title": "Find the monthly sales figure",
+                "work": "900 × $40 = $36,000 a month",
+                "explanation": "Using the 900-box volume from part one."
+              },
+              {
+                "title": "Convert days into money",
+                "work": "36,000 ÷ 30 = $1,200 a day\n1,200 × 55 = $66,000",
+                "explanation": "This much is permanently tied up in stock and unpaid invoices at any moment. It is a standing balance, not a monthly expense."
+              },
+              {
+                "title": "Compare with the month's profit",
+                "work": "$66,000 tied up against $3,600 of monthly profit",
+                "explanation": "It would take over eighteen profitable months to fund the cycle out of earnings alone."
+              }
+            ],
+            "ending": "A business making $3,600 a month needs about $66,000 permanently tied up just to operate at its current size.",
+            "links": [
+              "cash-cycle",
+              "revenue-vs-cash"
+            ]
+          },
+          {
+            "title": "Grow, and watch the cash fall",
+            "goal": "Show profit rising and the bank balance falling in the same month.",
+            "opening": [
+              "A supermarket listing doubles monthly volume from 900 to 1,800 boxes. Price, costs and the 55-day cycle are unchanged.",
+              "I will compute the month's profit and the month's change in tied-up cash side by side, because the two answers point in opposite directions."
+            ],
+            "steps": [
+              {
+                "title": "The month's profit",
+                "work": "1,800 × 14 = 25,200; 25,200 − 9,000 = $16,200",
+                "explanation": "Profit more than quadruples, because fixed costs did not move while contribution doubled. That is operating leverage working in your favour."
+              },
+              {
+                "title": "The new cash requirement",
+                "work": "1,800 × 40 = $72,000/month → $2,400/day\n2,400 × 55 = $132,000",
+                "explanation": "Twice the sales, twice the standing balance in the cycle."
+              },
+              {
+                "title": "The extra cash needed this month",
+                "work": "132,000 − 66,000 = $66,000",
+                "explanation": "That has to be found during the month of growth, before any of the new sales are collected."
+              },
+              {
+                "title": "Net the two together",
+                "work": "16,200 − 66,000 = about −$49,800",
+                "explanation": "The best trading month in the company's history, and cash falls by roughly fifty thousand dollars."
+              }
+            ],
+            "ending": "Profit $16,200, cash down about $49,800, in the same month. Nothing went wrong — this is what a positive cash cycle does during growth.",
+            "links": [
+              "growth-cash-trap",
+              "cash-cycle"
+            ]
+          },
+          {
+            "title": "Choose a lever on the numbers",
+            "goal": "Compare three fixes and say which closes the gap and what each costs.",
+            "opening": [
+              "Three options are on the table: extend supplier terms, raise the price, or take outside money to fund the gap.",
+              "I will cost each one against the same $66,000 requirement rather than arguing about them in the abstract."
+            ],
+            "steps": [
+              {
+                "title": "Lever one: supplier terms",
+                "work": "Cycle 40 + 45 − 60 = 25 days\n2,400 × 25 = $60,000 tied up, against $132,000",
+                "explanation": "Moving supplier terms from 30 to 60 days releases about $72,000 at the new volume. It costs nothing in margin and is often the fastest lever available."
+              },
+              {
+                "title": "Lever two: raise the price",
+                "work": "Price $44: contribution 44 − 26 = $18\nVolume to hold contribution: 25,200 ÷ 18 = 1,400 boxes",
+                "explanation": "A 10 % rise lets you lose up to 22 % of volume and stay level on contribution. Lower volume also shrinks the cash cycle, so it helps twice."
+              },
+              {
+                "title": "Lever three: fund the gap",
+                "work": "$66,000 needed now; at a 15 % required return\nPV of $66,000 repaid in 2 years = 66,000 ÷ 1.15² = $49,900",
+                "explanation": "Borrowing solves the timing without touching the model, but the lender's required return is a real cost. Discounting shows what the future repayment is worth today."
+              },
+              {
+                "title": "Compare on the same basis",
+                "work": "Terms: ~$72,000 released, no margin cost\nPrice: tolerates −22 % volume, improves cash too\nFunding: closes the gap, costs the return",
+                "explanation": "The first two change the business; the third buys time. Most growing companies end up using a combination, and the arithmetic says which to reach for first."
+              }
+            ],
+            "ending": "Extending supplier terms releases the most cash for the least cost here. Growth was never the problem — the 55-day gap between paying and being paid was.",
+            "links": [
+              "cash-cycle",
+              "pricing",
+              "discounting",
+              "opportunity-cost"
+            ]
+          }
+        ]
+      },
+      "practicePath": "business-school-mba/index.html",
+      "workshop": {
+        "id": "business-workshop",
+        "title": "Watch a teacher pick the right number",
+        "summary": "Four choices: profit or cash, margin or markup, contribution or price, and whether a cost belongs in the decision at all.",
+        "intro": "Four decisions where the arithmetic is easy and choosing the right quantity is not. In each chapter I name the two candidates, work both, and show what the wrong one would have cost.",
+        "needs": "Use after the unit economics, cash cycle and pricing units. Every figure comes from the same Sunrise Oats example: $40 price, $26 variable cost, $9,000 of monthly fixed costs.",
+        "parts": [
+          {
+            "title": "Profit or cash?",
+            "goal": "Answer two different questions about the same month without mixing them.",
+            "opening": [
+              "In March, Sunrise Oats ships $4,000 of granola on 60-day terms. The oats cost $2,600 and were paid for in February.",
+              "Someone asks “how did March go?”. There are two honest answers and they point in opposite directions."
+            ],
+            "steps": [
+              {
+                "title": "Answer the profit question",
+                "line": "Revenue $4,000 − cost of those goods $2,600 = $1,400",
+                "why": "Costs are matched to the revenue they generated, so the February purchase appears as a March cost. On this measure March was profitable."
+              },
+              {
+                "title": "Answer the cash question",
+                "line": "February −$2,600, March $0 in. Net across both: −$2,600",
+                "why": "The customer pays in May. The business has spent money and received none, which is the measure that decides whether the rent can be paid."
+              },
+              {
+                "title": "Say which question each one answers",
+                "line": "Profit: is the model working? Cash: can we survive the wait?",
+                "why": "Neither replaces the other. A business can pass the first test and fail the second, and failing the second is the ordinary way good companies close."
+              },
+              {
+                "title": "Run the mirror image",
+                "line": "$6,000 collected in January for six months of delivery → January revenue $1,000, deferred revenue $5,000",
+                "why": "Cash early and revenue late. The $5,000 is a liability, not a win — it would have to be returned if the deliveries stopped."
+              }
+            ],
+            "ending": "March made $1,400 of profit and consumed $2,600 of cash. Both are true, and quoting only one of them is how the question gets dodged.",
+            "links": [
+              "revenue-vs-cash",
+              "cash-cycle",
+              "unit-economics"
+            ]
+          },
+          {
+            "title": "Margin or markup?",
+            "goal": "Price to a target margin and see what the wrong operation costs.",
+            "opening": [
+              "A box costs $26. The team wants a 40 % margin. The obvious move is to add 40 % to the cost.",
+              "That produces a 40 % markup instead, and the gap between the two is worth about seven dollars a box."
+            ],
+            "steps": [
+              {
+                "title": "Name the two denominators",
+                "line": "Markup = profit ÷ cost. Margin = profit ÷ price.",
+                "why": "Same profit, two baselines. Markup is always the larger percentage because its denominator is smaller."
+              },
+              {
+                "title": "Do the tempting thing",
+                "line": "26 × 1.4 = $36.40\nMargin achieved: 10.40 ÷ 36.40 = 28.6 %",
+                "why": "Multiplying by one plus the target sets the markup, not the margin. The result misses the goal by more than eleven percentage points."
+              },
+              {
+                "title": "Do it correctly",
+                "line": "26 ÷ (1 − 0.40) = 26 ÷ 0.60 = $43.33",
+                "why": "Dividing is what makes the profit a share of the price rather than of the cost."
+              },
+              {
+                "title": "Verify against the definition",
+                "line": "(43.33 − 26) ÷ 43.33 = 17.33 ÷ 43.33 = 40 % ✓",
+                "why": "Recomputing the margin from the answer catches the error every time. Note the equivalent markup here is 17.33 ÷ 26 = 66.7 %."
+              }
+            ],
+            "ending": "$43.33 rather than $36.40 — nearly $7 a box, on every box, from choosing the wrong denominator once.",
+            "links": [
+              "margin-vs-markup",
+              "unit-economics",
+              "pricing"
+            ]
+          },
+          {
+            "title": "Contribution or price?",
+            "goal": "Use the right denominator for breakeven and for a discount.",
+            "opening": [
+              "Two questions use the same wrong shortcut: how many boxes to break even, and how much extra volume a discount needs.",
+              "In both cases the tempting denominator is the $40 price, and in both cases only the $14 of contribution is actually available."
+            ],
+            "steps": [
+              {
+                "title": "Breakeven, the tempting way",
+                "line": "9,000 ÷ 40 = 225 boxes",
+                "why": "This treats the whole price as available for rent, when $26 of it has already been spent on oats, packaging and shipping."
+              },
+              {
+                "title": "Breakeven, correctly",
+                "line": "9,000 ÷ 14 = 643 boxes\nCheck: 225 × 14 = $3,150, nowhere near $9,000",
+                "why": "Multiplying the wrong answer back is the fastest way to expose a wrong denominator."
+              },
+              {
+                "title": "A discount, the tempting way",
+                "line": "“A 10 % cut needs about 10 % more volume.”",
+                "why": "Same error in a different costume: comparing the discount with the price rather than with what the sale was leaving behind."
+              },
+              {
+                "title": "A discount, correctly",
+                "line": "$4 off is 4 ÷ 14 = 29 % of contribution\nContribution $14 → $10, so 9,002 ÷ 10 = 901 boxes — about 40 % more",
+                "why": "The price change lands entirely on contribution because variable costs do not move. Four times the naive estimate."
+              }
+            ],
+            "ending": "Breakeven 643 not 225; a 10 % discount needs 40 % more volume, not 10 %. One denominator, two expensive mistakes.",
+            "links": [
+              "breakeven",
+              "pricing",
+              "unit-economics"
+            ]
+          },
+          {
+            "title": "Does this cost belong in the decision?",
+            "goal": "Keep opportunity cost in and sunk cost out.",
+            "opening": [
+              "One oven, one month, two products. Granola would contribute $7,000; snack packs would contribute $6,000. The oven cost $40,000 last year.",
+              "Two of those three numbers belong in the decision and one does not. I will apply a single test to each."
+            ],
+            "steps": [
+              {
+                "title": "State the test",
+                "line": "Does this number differ between the options?",
+                "why": "A cost that is identical under every option carries no information about which to choose. That one question sorts every figure on the page."
+              },
+              {
+                "title": "Apply it to the $40,000",
+                "line": "$40,000 under granola; $40,000 under snack packs → excluded",
+                "why": "Sunk. Already spent, unrecoverable, and the same either way. Treating it as a reason to continue is the sunk-cost error."
+              },
+              {
+                "title": "Apply it to the forgone product",
+                "line": "Choosing granola gives up $6,000 of snack-pack contribution",
+                "why": "Opportunity cost is real even though no money changes hands, because it differs between the options. It is the actual price of the choice."
+              },
+              {
+                "title": "Decide on what is left",
+                "line": "$7,000 vs $6,000 → granola, better by $1,000",
+                "why": "The decision is worth $1,000, not $7,000 — most of the contribution was available either way. If the oven could instead be sold for $15,000, that figure would belong in the comparison too, because it varies with the choice."
+              }
+            ],
+            "ending": "Granola, by $1,000. The $40,000 never entered the comparison, and the $6,000 that never appeared on an invoice did.",
+            "links": [
+              "opportunity-cost",
+              "discounting",
+              "cac-ltv"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -2,6 +2,8 @@
 
 An offline-capable learning app. Current downloads and online access are published separately at https://study-table-downloads.vercel.app. The earlier app project is not modified by this delivery workflow.
 
+V121 merges the actual uploaded Claude V120 into our V119 source: 22 new medicine/business units, their two projects and workshops, calculus/physics workshops, and per-unit reading/self-review controls. All 65 earlier units, demonstrations and accessibility repairs remain. The original upload is archived unchanged, and factual corrections are recorded separately. See [the merge accounting](docs/CLAUDE_V120_MERGE_V121.md).
+
 V119 checks Claude’s critique against the current app and independently repairs keyboard focus in the studio shell, native-dialog Escape handling, invalid course-name lookups and slider values with units. All five readers now have skip links that preserve the current lesson. The supplied HTML was the already-merged older V113; its claimed V119 code was not attached. All V118 teaching data remains unchanged. See [the verified findings](docs/CLAUDE_REVIEW_V119.md).
 
 V118 deepens twelve existing worked cases across six maths and physics lessons. Thirty-nine additional teacher explanations connect each calculation to a selectable diagram. Phone layouts show the entire graph, force diagram or circuit without sideways scrolling. Earlier adjustable explorers remain in an optional section, and all V117 course records, workshops and projects are retained exactly. See [the teaching notes](docs/SLOW_TEACHING_V118.md).
@@ -23,7 +25,7 @@ python3 scripts/build.py
 python3 -m http.server 8769 --directory public
 ```
 
-Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v119.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
+Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v121.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
 
 - `source/teacher-prose-v109.json`: rewritten explanations in existing lessons.
 - `source/draft-foundation-lessons.json` and `source/lessons-v109.json`: the 12 new lessons. The historical `draft-` filename is retained for build compatibility; these records are now published.

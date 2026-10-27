@@ -9,3 +9,6 @@ The upload contains the same 65 units and 213 embedded assets as its base, addin
 
 
 The later pasted critique of V118 is preserved unchanged as `claude-v118-critique.txt` (7,185 bytes), SHA256 `383c9803794e606f904287bdfe8db635090efd2fe6d7e7f28d5f73fc7ca917cd`. The HTML supplied alongside it was exactly the already-archived V113, not the V119 implementation mentioned in the text. See docs/CLAUDE_REVIEW_V119.md for independent verification and repairs. Neither the critique’s instructions nor uploaded scripts are executed.
+
+
+The actual Claude V120 upload is preserved unchanged as `claude-v120-original.html`, 6,739,561 bytes, SHA256 `b197ad688aa40235a6441cc8b6fc6cf6121152e6620908258f525c9611bd7734`. Its additions are extracted into source/claude-additions-v121.json; separate original/replacement records in source/claude-corrections-v121.json account for factual repairs. See docs/CLAUDE_V120_MERGE_V121.md. This import adds 22 units, two projects, four workshops and the per-unit personal-review implementation, retaining our later accessibility repairs.

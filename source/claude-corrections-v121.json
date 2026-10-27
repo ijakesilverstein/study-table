@@ -1,0 +1,1190 @@
+[
+  {
+    "path": [
+      "medicine",
+      "units",
+      0,
+      "teaching"
+    ],
+    "original": [
+      "Call the measured value the output and the target the set point. Negative feedback means the response has the opposite sign to the error: too hot triggers cooling, too cold triggers heating. If the response had the same sign as the error, every small disturbance would grow instead of shrink.",
+      "Control does not mean the value never moves. It means deviations are detected and corrected, so the value oscillates in a narrow band around the set point rather than drifting away. The narrowness of that band is what we are describing when we call something tightly regulated."
+    ],
+    "replacement": [
+      "Call the measured value the output and the target the set point. Negative feedback means the response has the opposite sign to the error: too hot triggers cooling, too cold triggers heating. If the response had the same sign as the error, every small disturbance would grow instead of shrink.",
+      "Control does not mean the value never moves. It means deviations are detected and corrected, so the value oscillates in a narrow band around the set point rather than drifting away. The narrowness of that band is what we are describing when we call something tightly regulated.",
+      "Fever is a different control situation: inflammatory signals raise the regulated temperature set point, so a person can shiver while already warm. The exercise examples here assume an unchanged set point. Feedback responses also depend on hydration and environmental limits."
+    ]
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      0,
+      "first",
+      "notice"
+    ],
+    "original": "Nothing in the loop needs to know why the temperature rose. The same machinery handles exercise, a hot room, and a heavy meal.",
+    "replacement": "This example assumes an unchanged target and effective heat loss. Fever can change the target, while dehydration or a hot, humid environment can limit cooling."
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      1,
+      "teaching",
+      1
+    ],
+    "original": "Osmosis is the special case of water. Water moves down the water gradient, which is toward the side with more dissolved solute, because that is the side where water itself is more dilute. Active transport moves a substance against its gradient and must be paid for with ATP, which is why the sodium–potassium pump is one of the body's largest standing energy costs.",
+    "replacement": "Osmosis is net water movement across a water-permeable membrane driven by osmotic differences; nonpenetrating solutes are central to sustained cell-volume effects. For ions, both concentration and electrical gradients matter. Active transport moves a substance against its electrochemical gradient using energy directly from ATP or indirectly from another gradient."
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      1,
+      "second",
+      "notice"
+    ],
+    "original": "In 0.9 % saline there is no net water movement, because the solute concentrations are close to matched. That is why it is the default fluid for giving into a vein.",
+    "replacement": "0.9 % saline is approximately isotonic to red cells, so it produces little net water shift in this simple comparison. Clinical fluid selection depends on the situation."
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      2,
+      "first",
+      "steps",
+      0,
+      2
+    ],
+    "original": "The pressure is being held up. A fast rate with a normal pressure is consistent with fright, exertion, pain or fever — the circulation is not failing to deliver.",
+    "replacement": "The pressure is being held up. A fast rate with a normal pressure is consistent with fright, exertion, pain or fever — adequate pressure alone does not establish adequate blood flow or oxygen delivery."
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      2,
+      "second",
+      "problem"
+    ],
+    "original": "Someone whose blood pressure is usually around 170/95 is measured at 120/80. The reading is squarely in the normal range. Is it unremarkable?",
+    "replacement": "Someone whose blood pressure is usually around 170/95 is measured at 120/80. The reading is near a commonly used reference value. Is it unremarkable?"
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      2,
+      "second",
+      "steps",
+      0,
+      1
+    ],
+    "original": "120/80 sits in the middle of the usual range",
+    "replacement": "120/80 is a familiar reference reading; classification depends on the guideline"
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      2,
+      "second",
+      "steps",
+      0,
+      2
+    ],
+    "original": "Judged against the population alone, nothing stands out.",
+    "replacement": "Judged against the population alone, this single comparison does not settle whether the change matters."
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      3,
+      "first",
+      "notice"
+    ],
+    "original": "A red cell cannot travel from the body to the body without going through the lungs. The design forces every unit of blood past the gas exchanger.",
+    "replacement": "The main route in this simplified normal circulation passes through lung capillaries before returning to the body. Small normal shunts and abnormal bypass routes are exceptions, rather than changes to the basic two-circuit layout."
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      6,
+      "title"
+    ],
+    "original": "Filter everything, then take back what you need",
+    "replacement": "Filter small solutes, then reclaim and secrete selectively"
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      6,
+      "opening",
+      1
+    ],
+    "original": "The glomerulus filters almost indiscriminately: water, salts, glucose, amino acids and wastes all cross together. The selectivity comes afterwards, in a long tubule that reclaims what the body wants and lets the rest go.",
+    "replacement": "The glomerulus freely filters water and many small solutes while retaining blood cells and most proteins: water, salts, glucose, amino acids and wastes all cross together. The selectivity comes afterwards, in a long tubule that reclaims what the body wants and lets the rest go."
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      6,
+      "teaching",
+      1
+    ],
+    "original": "Reabsorption uses transporters, and transporters can be saturated. Each substance has a transport maximum: a rate above which the carriers are all occupied and the excess continues into the urine. That threshold behaviour is why some substances are absent from urine until a blood level is crossed, then appear rapidly.",
+    "replacement": "Some carrier-mediated reabsorption processes, notably glucose transport, saturate. As filtered glucose load rises, different nephrons reach their limits at different levels, producing a threshold range rather than an abrupt switch. Excretion depends on filtration, reabsorption and secretion."
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      6,
+      "terms",
+      0,
+      1
+    ],
+    "original": "Non-selective movement of plasma into the tubule at the glomerulus.",
+    "replacement": "Filtration of water and small solutes across a barrier that largely retains blood cells and proteins."
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      6,
+      "first",
+      "steps",
+      3,
+      2
+    ],
+    "original": "That range comes from varying reabsorption, not from varying the filter.",
+    "replacement": "Water reabsorption is a major adjustable term; filtration and tubular secretion can also change."
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      6,
+      "first",
+      "notice"
+    ],
+    "original": "A selective filter would have to be rebuilt to change its behaviour. A generous filter plus adjustable reabsorption can be retuned minute to minute.",
+    "replacement": "Kidney excretion reflects filtration minus reabsorption plus secretion. The filtration barrier is selective by size and other properties; tubular handling provides further control."
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      6,
+      "exercise",
+      1
+    ],
+    "original": "Because a generous, non-selective filter combined with adjustable reabsorption gives fine, fast control over every solute independently. Excretion of any substance can be changed by altering how much is taken back, without redesigning the filter.",
+    "replacement": "The kidney filters water and small solutes while retaining cells and most proteins. Adjustable reabsorption and secretion then control excretion; filtration itself also varies. The large filtered volume supports continuous regulation."
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      6,
+      "mistake",
+      "diagnosis"
+    ],
+    "original": "That reverses the design. Filtration at the glomerulus is close to indiscriminate — glucose, amino acids, salts and water all cross along with urea. Selectivity is applied afterwards, by reclaiming what is wanted. The kidney decides what to *keep*, not what to remove.",
+    "replacement": "The glomerulus admits water and many small solutes but normally retains blood cells and most proteins. Tubules then reabsorb selected substances and secrete others. Both filtration and tubular handling contribute to what is excreted."
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      6,
+      "takeaway"
+    ],
+    "original": "The glomerulus filters almost everything; the tubule reclaims what is wanted. Selectivity lives in reabsorption, and saturable transporters give threshold behaviour.",
+    "replacement": "The glomerulus retains cells and most proteins while filtering water and many small solutes; the tubule reclaims what is wanted. Selectivity lives in reabsorption, and saturable transporters give threshold behaviour."
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      7,
+      "second",
+      "steps",
+      0,
+      2
+    ],
+    "original": "A modest push is producing a modest result. The response to insulin appears intact.",
+    "replacement": "A modest push is producing a modest result. This pair alone cannot establish intact insulin sensitivity; timing, secretion and other measurements matter."
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      7,
+      "recall",
+      "answer"
+    ],
+    "original": "Because reabsorption uses saturable transporters. Below the transport maximum every filtered glucose molecule is reclaimed, so none appears. Once the carriers are fully occupied the excess stays in the tubule, so excretion begins abruptly at a threshold.",
+    "replacement": "Because reabsorption uses saturable transporters. Below the transport maximum every filtered glucose molecule is reclaimed, so none appears. Once the carriers are fully occupied the excess stays in the tubule, so excretion rises over a threshold range because different nephrons saturate at different loads."
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      8,
+      "teaching",
+      0
+    ],
+    "original": "Innate defences — skin, mucus, stomach acid, and cells that engulf anything recognisably foreign — act within minutes. They are general, which is what allows them to be fast: there is no need to identify the organism first. They also do not improve with exposure.",
+    "replacement": "Innate defences — skin, mucus, stomach acid, and cells that engulf anything recognisably foreign — act within minutes. They are general, which is what allows them to be fast: there is no need to identify the organism first. They lack the classical antigen-specific memory of adaptive lymphocytes, though trained innate responses can change after exposure."
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      8,
+      "teaching",
+      1
+    ],
+    "original": "Adaptive defences select and multiply the small number of lymphocytes that happen to match the intruder, which takes days on a first encounter. The pay-off is memory: matched cells persist, so a second exposure is met in hours rather than days. A vaccine supplies the first encounter without the illness.",
+    "replacement": "Adaptive defences select and multiply the small number of lymphocytes that happen to match the intruder, which takes days on a first encounter. The pay-off is memory: matched cells persist, so a second exposure is met in hours rather than days. A vaccine presents antigens or instructions for making them to build immune memory; protection and side effects vary."
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      8,
+      "first",
+      "steps",
+      0,
+      1
+    ],
+    "original": "Innate response only",
+    "replacement": "Innate mechanisms dominate the early response"
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      8,
+      "first",
+      "steps",
+      0,
+      2
+    ],
+    "original": "Barriers and engulfing cells act at once. They slow the infection without clearing it.",
+    "replacement": "Barriers and engulfing cells act at once. They may contain or clear an infection; adaptive responses are needed for many others."
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      8,
+      "takeaway"
+    ],
+    "original": "Innate defence is fast, general and memoryless; adaptive defence is slow, specific and remembers. A drug works only where the pathogen has a structure we lack.",
+    "replacement": "Innate responses recognize broad patterns rapidly; adaptive responses develop antigen-specific memory. Cell-wall antibiotics exploit bacterial structures that human cells lack; other medicines work through other mechanisms."
+  },
+  {
+    "path": [
+      "medicine",
+      "project",
+      "parts",
+      0,
+      "steps",
+      2,
+      "explanation"
+    ],
+    "original": "Alveolar gas continuously receives carbon dioxide from blood, and that occupies pressure. Dividing by the respiratory quotient of about 0.8 accounts for slightly less oxygen being consumed than carbon dioxide produced, per unit volume.",
+    "replacement": "Alveolar gas continuously receives carbon dioxide from blood, and that occupies pressure. Dividing by the respiratory quotient of about 0.8 accounts for more oxygen being consumed than carbon dioxide produced, per unit volume."
+  },
+  {
+    "path": [
+      "medicine",
+      "project",
+      "parts",
+      2,
+      "ending"
+    ],
+    "original": "Delivery ≈ 1,000 mL/min against a resting demand near 250 mL/min, leaving roughly a four-fold reserve.",
+    "replacement": "Delivery ≈ 1,000 mL/min against a resting demand near 250 mL/min, with an extraction fraction near 25 %. This ratio is not a guarantee of four-fold spare capacity: extraction and blood flow have limits."
+  },
+  {
+    "path": [
+      "medicine",
+      "project",
+      "parts",
+      3,
+      "steps",
+      3,
+      "work"
+    ],
+    "original": "Normal saturation rules out one term, not the product",
+    "replacement": "Normal saturation constrains one term; it does not establish oxygen content or delivery"
+  },
+  {
+    "path": [
+      "medicine",
+      "workshop",
+      "parts",
+      0,
+      "steps",
+      1,
+      "why"
+    ],
+    "original": "The pressure is being held up. A fast rate with a maintained pressure is consistent with an ordinary stressor — the circulation is not failing to deliver.",
+    "replacement": "Pressure is maintained in this measurement. Fright, exertion, pain or fever are possible explanations, but normal pressure does not exclude serious illness, low flow or impaired oxygen delivery."
+  },
+  {
+    "path": [
+      "medicine",
+      "workshop",
+      "parts",
+      1,
+      "ending"
+    ],
+    "original": "Pressure, delivery and glucose control are all products. A single normal-looking reading rules out one factor, never the whole product.",
+    "replacement": "Pressure and oxygen delivery are products of multiple factors. Glucose regulation has an analogous input-response relationship, not a literal two-factor multiplication. A single reading cannot settle all of these mechanisms."
+  },
+  {
+    "path": [
+      "medicine",
+      "workshop",
+      "parts",
+      2,
+      "steps",
+      1,
+      "why"
+    ],
+    "original": "This is the one term ventilation directly restores, so more breathing is the matching response.",
+    "replacement": "Fresh alveolar ventilation can restore gas composition when insufficient ventilation is the limiting mechanism. This is a simplified mechanism comparison, not a treatment recommendation."
+  },
+  {
+    "path": [
+      "medicine",
+      "workshop",
+      "parts",
+      2,
+      "steps",
+      3,
+      "why"
+    ],
+    "original": "Oxygen suffers more than carbon dioxide, which is far more soluble. A low oxygen level with adequate carbon dioxide clearance is a hint that the barrier, not the ventilation, is the limiting term.",
+    "replacement": "With area and gradient fixed, doubling thickness halves transfer in this simplified diffusion relationship. Real gas exchange also depends on ventilation-perfusion matching and circulation; low oxygen with normal carbon dioxide is not specific to membrane thickening."
+  },
+  {
+    "path": [
+      "medicine",
+      "workshop",
+      "parts",
+      2,
+      "ending"
+    ],
+    "original": "Three causes, one symptom, and only the first responds well to more breathing. The asymmetry between the two gases is the clue that distinguishes them.",
+    "replacement": "These mechanisms can coexist. Increasing ventilation may improve an alveolar gas problem, but its effect is limited by perfusion, shunt, membrane properties and the particular cause. Normal carbon dioxide clearance does not diagnose a diffusion problem by itself."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      4,
+      "teaching",
+      1
+    ],
+    "original": "Cash cycle = inventory days + receivable days − payable days. It is a duration, not an amount, and it is the single best predictor of how much working capital a growing business will need.",
+    "replacement": "Cash cycle = inventory days + receivable days − payable days. This describes timing, not dollars. Estimate operating working capital as receivables + inventory − payables, using daily sales for receivables and daily inventory cost for inventory and payables. Here use 30-day months and a simplified model with all variable costs in the inventory/payables stream."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      4,
+      "first",
+      "steps",
+      3,
+      2
+    ],
+    "original": "Converting it into an amount needs a sales rate, which comes next.",
+    "replacement": "Converting days into dollars also requires the applicable sales and cost rates; multiplying all days by revenue uses the wrong base."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      4,
+      "second",
+      "steps",
+      1,
+      0
+    ],
+    "original": "Convert to money",
+    "replacement": "Compute each balance"
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      4,
+      "second",
+      "steps",
+      1,
+      1
+    ],
+    "original": "Daily sales $667 × 25 = about $16,700 tied up",
+    "replacement": "$20,000/month sales; variable costs 65 % = $13,000/month. AR = 20,000×45/30 = $30,000. Inventory = 13,000×40/30 ≈ $17,333. New AP = 13,000×60/30 = $26,000."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      4,
+      "second",
+      "steps",
+      1,
+      2
+    ],
+    "original": "At $20,000 a month, daily sales are 20,000 ÷ 30 ≈ $667.",
+    "replacement": "Assume all variable costs are carried as inventory and paid on supplier terms. Operating working capital = 30,000 + 17,333 − 26,000 ≈ $21,333."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      4,
+      "second",
+      "steps",
+      2,
+      0
+    ],
+    "original": "Compare with before",
+    "replacement": "Compare with the original terms"
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      4,
+      "second",
+      "steps",
+      2,
+      1
+    ],
+    "original": "55 days × $667 ≈ $36,700",
+    "replacement": "Original AP = 13,000×30/30 = $13,000. Original working capital ≈ $34,333; release = $13,000."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      4,
+      "second",
+      "steps",
+      2,
+      2
+    ],
+    "original": "The renegotiation released about $20,000 of cash.",
+    "replacement": "Only the payable balance changes. The extra thirty days of supplier credit funds thirty days of costs, not thirty days of sales."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      4,
+      "second",
+      "notice"
+    ],
+    "original": "No sale, no cost saving and no price change — and roughly $20,000 of cash freed, purely by moving a date.",
+    "replacement": "This model releases $13,000 by extending supplier terms. Whether terms can be negotiated, and any price or relationship cost, require separate evidence."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      4,
+      "mistake",
+      "check"
+    ],
+    "original": "Move only a date and watch the cash change. Extending supplier terms to 60 days cuts the cycle to 25 days and frees about $20,000, without a single extra sale.",
+    "replacement": "At $20,000 monthly sales and $13,000 monthly inventory costs, another 30 supplier days increases payables by $13,000 and releases that amount, under the stated model."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      4,
+      "takeaway"
+    ],
+    "original": "Cash cycle = inventory days + receivable days − payable days. It is a duration, and multiplying it by daily sales turns it into the cash the business must find.",
+    "replacement": "The cash conversion cycle measures days. To estimate operating working capital, calculate receivables at sales value plus inventory at cost minus payables at cost."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      5,
+      "teaching",
+      0
+    ],
+    "original": "Cash tied up in the cycle is roughly daily sales multiplied by cycle days. Daily sales appear as a factor, so doubling sales roughly doubles the cash locked up — and that extra has to be found before the extra collections arrive.",
+    "replacement": "Under unchanged inventory, collection and supplier-payment assumptions, receivables, inventory and payables each scale with the relevant sales or cost rate. Operating working capital is their net balance. This is a simplified steady-state comparison; the actual month-by-month transition needs a cash-flow schedule."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      5,
+      "first",
+      "problem"
+    ],
+    "original": "Monthly sales $20,000. Cash cycle 55 days. How much cash is locked in the cycle?",
+    "replacement": "Monthly sales are $20,000 and variable costs are 65 % of sales. Inventory days 40, receivable days 45, payable days 30. Estimate operating working capital using 30-day months and treating all variable costs as inventory costs on supplier terms."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      5,
+      "first",
+      "steps",
+      1,
+      0
+    ],
+    "original": "Multiply by the cycle",
+    "replacement": "Calculate the three balances"
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      5,
+      "first",
+      "steps",
+      1,
+      1
+    ],
+    "original": "667 × 55 ≈ $36,700",
+    "replacement": "AR = $30,000; inventory ≈ $17,333; AP = $13,000. NWC ≈ $34,333."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      5,
+      "first",
+      "steps",
+      1,
+      2
+    ],
+    "original": "This much is permanently out in stock and unpaid invoices at any moment.",
+    "replacement": "Use sales for receivables and costs for stock and supplier balances. A daily-sales × cycle shortcut is not the same calculation."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      5,
+      "second",
+      "steps",
+      0,
+      0
+    ],
+    "original": "New cash tied up",
+    "replacement": "New operating working capital"
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      5,
+      "second",
+      "steps",
+      0,
+      1
+    ],
+    "original": "Daily sales $1,333 × 55 ≈ $73,300",
+    "replacement": "AR = $60,000; inventory ≈ $34,667; AP = $26,000; NWC ≈ $68,667."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      5,
+      "second",
+      "steps",
+      0,
+      2
+    ],
+    "original": "Twice the sales, twice the standing balance.",
+    "replacement": "Sales and cost rates double under the same timing assumptions."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      5,
+      "second",
+      "steps",
+      1,
+      0
+    ],
+    "original": "Extra cash required",
+    "replacement": "Compare the standing balances"
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      5,
+      "second",
+      "steps",
+      1,
+      1
+    ],
+    "original": "73,300 − 36,700 = about $36,600",
+    "replacement": "68,667 − 34,333 ≈ $34,333 additional funding."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      5,
+      "second",
+      "steps",
+      1,
+      2
+    ],
+    "original": "This has to be found during the month of growth.",
+    "replacement": "This estimates the higher steady-state requirement. Its exact timing during growth requires a cash-flow schedule."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      5,
+      "second",
+      "steps",
+      3,
+      0
+    ],
+    "original": "Compare the two",
+    "replacement": "Use a simplified cash bridge"
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      5,
+      "second",
+      "steps",
+      3,
+      1
+    ],
+    "original": "$5,000 of profit against $36,600 of new working capital",
+    "replacement": "$5,000 profit − $34,333 increase in NWC ≈ −$29,333."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      5,
+      "second",
+      "steps",
+      3,
+      2
+    ],
+    "original": "The month is profitable and cash goes down by roughly $31,600.",
+    "replacement": "This bridge assumes no depreciation, taxes, investment or other cash adjustments. It is not a forecast of the exact transition month."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      5,
+      "exercise",
+      1
+    ],
+    "original": "Daily sales rise from $667 to $1,000, so tied-up cash goes from about $36,700 to $55,000 — roughly $18,300 extra. The month's profit is 0.35 × 30,000 − 9,000 = $1,500. Cash still falls by about $16,800 in a profitable month.",
+    "replacement": "At $30,000 sales, costs are $19,500. AR = $45,000; stock = $26,000; AP = $19,500; NWC = $51,500. That is about $17,167 above the $34,333 starting level. Profit is $1,500; the simplified cash bridge is about −$15,667, excluding other cash items and timing effects."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      5,
+      "mistake",
+      "diagnosis"
+    ],
+    "original": "Profit is a margin on the period's sales; the working-capital increase is a multiple of them. Doubling monthly sales roughly doubles the cash locked in a 55-day cycle — about $36,600 more here — while the month's profit is $5,000. The extra stock also has to be bought before the extra sales are collected.",
+    "replacement": "Under these assumptions doubling sales raises the steady-state operating working-capital requirement by about $34,333, while profit at the larger size is $5,000 per month. Profitable growth can therefore require outside funding; an explicit cash schedule decides the dates."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      5,
+      "takeaway"
+    ],
+    "original": "Working capital scales with sales, so growth consumes cash. Profit is a margin on sales; the cash needed is a multiple of them, and the second usually wins during fast growth.",
+    "replacement": "At unchanged margins and payment timings, operating working capital scales with sales. Additional funding needs can exceed additional profit; calculate balances and cash dates rather than assuming profit funds growth."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      7,
+      "goal"
+    ],
+    "original": "Compare acquisition cost against lifetime contribution, and find the payback point in orders.",
+    "replacement": "Compare acquisition cost against one-year contribution, and find the payback point in orders."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      7,
+      "teaching"
+    ],
+    "original": [
+      "Acquisition cost is real cash spent. The thing to set against it is not what the customer spends, but what is left after the variable costs of serving them — their contribution. Comparing acquisition cost against revenue flatters every channel and will justify spending that loses money on every sale.",
+      "Payback is the more useful framing for a young business: how many orders before the acquisition cost is repaid? Until that point the customer is an investment, and a customer who leaves before it has cost you money."
+    ],
+    "replacement": [
+      "Acquisition cost is real cash spent. The thing to set against it is not what the customer spends, but what is left after the variable costs of serving them — their contribution. Comparing acquisition cost against revenue flatters every channel and will justify spending that loses money on every sale.",
+      "Payback is the more useful framing for a young business: how many orders before the acquisition cost is repaid? Until that point the customer is an investment, and a customer who leaves before it has cost you money.",
+      "These examples calculate one-year contribution, not full lifetime value. A lifetime estimate needs retention over time, future serving costs and possibly discounting. A positive contribution-to-CAC ratio alone does not establish net profitability after fixed costs."
+    ]
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      7,
+      "terms",
+      1,
+      0
+    ],
+    "original": "Lifetime contribution",
+    "replacement": "One-year contribution"
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      7,
+      "first",
+      "steps",
+      0,
+      0
+    ],
+    "original": "Compute lifetime revenue",
+    "replacement": "Compute one-year revenue"
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      7,
+      "first",
+      "steps",
+      1,
+      0
+    ],
+    "original": "Compute lifetime contribution",
+    "replacement": "Compute one-year contribution"
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      7,
+      "second",
+      "steps",
+      0,
+      0
+    ],
+    "original": "Recompute lifetime contribution",
+    "replacement": "Recompute one-year contribution"
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      7,
+      "second",
+      "notice"
+    ],
+    "original": "Payback is unchanged at 2.5 orders — retention improves the return without changing how long the investment takes to repay.",
+    "replacement": "Payback still requires 2.5 orders, but more frequent orders can shorten the calendar time to payback. Retention and order frequency are separate assumptions."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      7,
+      "exercise",
+      1
+    ],
+    "original": "Lifetime contribution is 3 × $14 = $42 against $60 of acquisition — a ratio of 0.7, so it loses money. Payback would need 60 ÷ 14 = 4.3 orders, more than a customer places. It needs either cheaper acquisition, more orders per customer, or higher contribution per order.",
+    "replacement": "One-year contribution is 3 × $14 = $42 against $60 of acquisition — a ratio of 0.7, so it loses money. Payback would need 60 ÷ 14 = 4.3 orders, more than a customer places. It needs either cheaper acquisition, more orders per customer, or higher contribution per order."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      7,
+      "takeaway"
+    ],
+    "original": "Set acquisition cost against lifetime contribution, never revenue. Payback in orders is the sharper question for a young business.",
+    "replacement": "Set acquisition cost against one-year contribution, never revenue. Payback in orders is the sharper question for a young business."
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      8,
+      "second",
+      "steps",
+      1,
+      1
+    ],
+    "original": "9,002 ÷ 18 = 500 boxes",
+    "replacement": "9,002 ÷ 18 ≈ 500.11 → at least 501 whole boxes"
+  },
+  {
+    "path": [
+      "business",
+      "units",
+      8,
+      "recall",
+      "answer"
+    ],
+    "original": "Lifetime contribution is 4 × $14 = $56, so the ratio is 56 ÷ 35 = 1.6. Payback is 35 ÷ 14 = 2.5 orders, so a customer who orders twice and leaves has lost money.",
+    "replacement": "One-year contribution is 4 × $14 = $56, so the ratio is 56 ÷ 35 = 1.6. Payback is 35 ÷ 14 = 2.5 orders, so a customer who orders twice and leaves has lost money."
+  },
+  {
+    "path": [
+      "business",
+      "project",
+      "needs"
+    ],
+    "original": "Uses unit economics, breakeven, the cash cycle, growth, pricing and discounting. Every figure is calculated from the same starting assumptions.",
+    "replacement": "Uses unit economics, breakeven, the cash cycle, growth, pricing and discounting. Every figure is calculated from the same starting assumptions. For working-capital estimates, use 30-day months and assume all $26 of variable cost is an inventory cost on supplier terms. These are steady-state balances and a simplified cash bridge, not a detailed transition forecast."
+  },
+  {
+    "path": [
+      "business",
+      "project",
+      "parts",
+      1,
+      "steps",
+      2,
+      "work"
+    ],
+    "original": "36,000 ÷ 30 = $1,200 a day\n1,200 × 55 = $66,000",
+    "replacement": "AR = 36,000×45/30 = $54,000\nStock = 23,400×40/30 = $31,200\nAP = 23,400×30/30 = $23,400\nNWC = 54,000 + 31,200 − 23,400 = $61,800"
+  },
+  {
+    "path": [
+      "business",
+      "project",
+      "parts",
+      1,
+      "steps",
+      2,
+      "explanation"
+    ],
+    "original": "This much is permanently tied up in stock and unpaid invoices at any moment. It is a standing balance, not a monthly expense.",
+    "replacement": "Receivables use sales; stock and payables use the stated inventory cost. These are standing balances, not expenses."
+  },
+  {
+    "path": [
+      "business",
+      "project",
+      "parts",
+      1,
+      "steps",
+      3,
+      "work"
+    ],
+    "original": "$66,000 tied up against $3,600 of monthly profit",
+    "replacement": "$61,800 tied up versus $3,600 monthly profit"
+  },
+  {
+    "path": [
+      "business",
+      "project",
+      "parts",
+      1,
+      "steps",
+      3,
+      "explanation"
+    ],
+    "original": "It would take over eighteen profitable months to fund the cycle out of earnings alone.",
+    "replacement": "The balance equals about 17.2 months of this profit, before other cash needs. Funding availability cannot be inferred from the profit figure alone."
+  },
+  {
+    "path": [
+      "business",
+      "project",
+      "parts",
+      1,
+      "ending"
+    ],
+    "original": "A business making $3,600 a month needs about $66,000 permanently tied up just to operate at its current size.",
+    "replacement": "At 900 boxes per month, the simplified steady-state operating working-capital requirement is $61,800."
+  },
+  {
+    "path": [
+      "business",
+      "project",
+      "parts",
+      2,
+      "steps",
+      1,
+      "work"
+    ],
+    "original": "1,800 × 40 = $72,000/month → $2,400/day\n2,400 × 55 = $132,000",
+    "replacement": "Sales $72,000/month; inventory costs $46,800/month\nAR $108,000 + stock $62,400 − AP $46,800 = $123,600"
+  },
+  {
+    "path": [
+      "business",
+      "project",
+      "parts",
+      2,
+      "steps",
+      2,
+      "work"
+    ],
+    "original": "132,000 − 66,000 = $66,000",
+    "replacement": "123,600 − 61,800 = $61,800 additional steady-state funding"
+  },
+  {
+    "path": [
+      "business",
+      "project",
+      "parts",
+      2,
+      "steps",
+      2,
+      "explanation"
+    ],
+    "original": "That has to be found during the month of growth, before any of the new sales are collected.",
+    "replacement": "A transition cash schedule decides when this funding is needed. The balance comparison alone does not locate it all in a particular month."
+  },
+  {
+    "path": [
+      "business",
+      "project",
+      "parts",
+      2,
+      "steps",
+      3,
+      "work"
+    ],
+    "original": "16,200 − 66,000 = about −$49,800",
+    "replacement": "16,200 − 61,800 = approximately −$45,600"
+  },
+  {
+    "path": [
+      "business",
+      "project",
+      "parts",
+      2,
+      "steps",
+      3,
+      "explanation"
+    ],
+    "original": "The best trading month in the company's history, and cash falls by roughly fifty thousand dollars.",
+    "replacement": "This simplified bridge excludes other cash adjustments and compares the new profit with the increase in steady-state working capital."
+  },
+  {
+    "path": [
+      "business",
+      "project",
+      "parts",
+      2,
+      "ending"
+    ],
+    "original": "Profit $16,200, cash down about $49,800, in the same month. Nothing went wrong — this is what a positive cash cycle does during growth.",
+    "replacement": "Profit at the new size is $16,200 per month; the increase in operating working capital is $61,800. A profitable business can still need growth funding."
+  },
+  {
+    "path": [
+      "business",
+      "project",
+      "parts",
+      3,
+      "opening",
+      1
+    ],
+    "original": "I will cost each one against the same $66,000 requirement rather than arguing about them in the abstract.",
+    "replacement": "I will compare each lever with the same $61,800 increase in working capital, then make the financing assumptions explicit."
+  },
+  {
+    "path": [
+      "business",
+      "project",
+      "parts",
+      3,
+      "steps",
+      0,
+      "work"
+    ],
+    "original": "Cycle 40 + 45 − 60 = 25 days\n2,400 × 25 = $60,000 tied up, against $132,000",
+    "replacement": "With 60 supplier days: AP = 46,800×60/30 = $93,600\nNWC = 108,000 + 62,400 − 93,600 = $76,800\nRelease versus $123,600: $46,800"
+  },
+  {
+    "path": [
+      "business",
+      "project",
+      "parts",
+      3,
+      "steps",
+      0,
+      "explanation"
+    ],
+    "original": "Moving supplier terms from 30 to 60 days releases about $72,000 at the new volume. It costs nothing in margin and is often the fastest lever available.",
+    "replacement": "An additional 30 days funds 30 days of inventory costs, not sales. This releases $46,800 if suppliers accept unchanged prices and other terms; neither acceptance nor zero cost is guaranteed."
+  },
+  {
+    "path": [
+      "business",
+      "project",
+      "parts",
+      3,
+      "steps",
+      2,
+      "work"
+    ],
+    "original": "$66,000 needed now; at a 15 % required return\nPV of $66,000 repaid in 2 years = 66,000 ÷ 1.15² = $49,900",
+    "replacement": "Borrow $61,800 now at 15 % annual compounding for 2 years\nRepayment = 61,800×1.15² = $81,730.50\nPV of that repayment = 81,730.50/1.15² = $61,800"
+  },
+  {
+    "path": [
+      "business",
+      "project",
+      "parts",
+      3,
+      "steps",
+      2,
+      "explanation"
+    ],
+    "original": "Borrowing solves the timing without touching the model, but the lender's required return is a real cost. Discounting shows what the future repayment is worth today.",
+    "replacement": "This illustrative loan excludes fees and interim payments. Discounting a $61,800 future repayment would not fund $61,800 today at a positive required return."
+  },
+  {
+    "path": [
+      "business",
+      "project",
+      "parts",
+      3,
+      "steps",
+      3,
+      "work"
+    ],
+    "original": "Terms: ~$72,000 released, no margin cost\nPrice: tolerates −22 % volume, improves cash too\nFunding: closes the gap, costs the return",
+    "replacement": "Terms: $46,800 released if agreed\nPrice: contribution can hold with up to about 22 % fewer boxes\nFunding: $61,800 today with a stated repayment cost"
+  },
+  {
+    "path": [
+      "business",
+      "project",
+      "parts",
+      3,
+      "ending"
+    ],
+    "original": "Extending supplier terms releases the most cash for the least cost here. Growth was never the problem — the 55-day gap between paying and being paid was.",
+    "replacement": "Longer supplier terms reduce the modeled funding need but do not eliminate the entire $61,800 increase here. Pricing and financing are separate options with assumptions and costs to test."
+  },
+  {
+    "path": [
+      "business",
+      "workshop",
+      "parts",
+      0,
+      "steps",
+      0,
+      "why"
+    ],
+    "original": "Costs are matched to the revenue they generated, so the February purchase appears as a March cost. On this measure March was profitable.",
+    "replacement": "Match the February goods purchase to the March sale. This is $1,400 gross contribution from the shipment, not proof that the whole business made a March net profit."
+  },
+  {
+    "path": [
+      "business",
+      "workshop",
+      "parts",
+      0,
+      "steps",
+      3,
+      "why"
+    ],
+    "original": "Cash early and revenue late. The $5,000 is a liability, not a win — it would have to be returned if the deliveries stopped.",
+    "replacement": "The undelivered portion remains an obligation. Refund rights depend on the contract and applicable rules; deferred revenue is not automatically unrestricted profit."
+  },
+  {
+    "path": [
+      "business",
+      "workshop",
+      "parts",
+      0,
+      "ending"
+    ],
+    "original": "March made $1,400 of profit and consumed $2,600 of cash. Both are true, and quoting only one of them is how the question gets dodged.",
+    "replacement": "This shipment contributes $1,400 before fixed costs. Its $2,600 goods payment occurred in February, March collected no cash for it, and collection is due in May. Report each period separately."
+  },
+  {
+    "path": [
+      "calculus",
+      "workshop",
+      "parts",
+      0,
+      "ending"
+    ],
+    "original": "The two questions coincide for quadratics at the midpoint and diverge otherwise. Decide which one was asked before reaching for a method.",
+    "replacement": "For quadratics these two rates agree at the midpoint; for other functions they may or may not agree. Decide which one was asked before reaching for a method."
+  },
+  {
+    "path": [
+      "calculus",
+      "workshop",
+      "parts",
+      1,
+      "ending"
+    ],
+    "original": "Two routes, one answer. Expanding is a shortcut that exists only sometimes; the product rule always works and doubles as the verification.",
+    "replacement": "Two routes, one answer. Expanding is a shortcut that exists only sometimes; the product rule works when both factors are differentiable and doubles as the verification."
+  },
+  {
+    "path": [
+      "calculus",
+      "workshop",
+      "parts",
+      3,
+      "steps",
+      3,
+      "why"
+    ],
+    "original": "The region under a curve has no elementary area formula. The antiderivative route is unaffected, which is what makes it the general method.",
+    "replacement": "This curved region is not a triangle or trapezoid, so those familiar area formulas do not give its exact area. The antiderivative route is unaffected, which is what makes it the general method."
+  },
+  {
+    "path": [
+      "calculus",
+      "workshop",
+      "parts",
+      3,
+      "ending"
+    ],
+    "original": "Geometry and antiderivatives must agree wherever both apply. Geometry runs out as soon as the velocity graph stops being straight; the antiderivative does not.",
+    "replacement": "Geometry and antiderivatives must agree wherever both apply. A curved graph can require a different area method. An available antiderivative gives an exact total; when none is available in familiar functions, numerical integration is useful."
+  }
+]

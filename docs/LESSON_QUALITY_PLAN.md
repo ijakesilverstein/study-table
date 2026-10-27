@@ -144,3 +144,10 @@ The new critique describes V118 and a proposed V119, but its accompanying HTML e
 Repair reproduced keyboard escape from the custom modal shell, prevent native-dialog Escape from also closing its background, reject inherited or invalid course keys, announce slider values with their units, and add local skip links in all five readers. Keep every V118 course record, all archive assets and independent assessment data. Do not treat reading, self-reported understanding or a confidence bar as demonstrated mastery. Record the full-course revisit-list idea separately from these repairs.
 
 Validate keyboard entry/Tab/Escape/return, nested native dialogs, previous inert state, dynamic siblings, invalid and foreign messages, poisoned bookmarks, range keyboard changes and constraints, skip-link navigation stability, phone layouts, both themes and the complete prior regression suite. See docs/CLAUDE_REVIEW_V119.md for each critique claim and its verified status.
+
+
+## V121 — merge the actual Claude V120
+
+Preserve the supplied 6,739,561-byte HTML unchanged and extract its additions reproducibly. Merge all 22 medicine/business units, both projects and workshops, both quantitative workshops and per-unit reading/revisit controls while retaining the previous 65 units and all demonstrations. Keep the V119 accessibility fixes and local skip-link behavior.
+
+Record factual corrections separately from the imported source, including the cost basis for inventory/payables, consistent working-capital and financing arithmetic, respiratory quotient direction and limits on inference from normal pressure or saturation. Reading history and self-reported recall remain separate from assessed mastery. Verify exact content accounting, all 87 units, new written project/workshop chapters, personal-review persistence/reset, mobile/both themes and all prior regression checks.

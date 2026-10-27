@@ -65,8 +65,8 @@ for color,fen,source,clear,blocked in [
     assert {chess.square_name(m.to_square) for m in board.legal_moves if m.from_square==source}==blocked
 board=chess.Board.empty();board.set_piece_at(chess.D4,chess.Piece(chess.QUEEN,chess.WHITE));assert len(board.attacks(chess.D4))==27
 courses=json.loads((root/'source/full-courses-built.json').read_text())
-assert {s:len(c['units']) for s,c in courses.items()}=={'spanish':15,'piano':14,'chess':14,'calculus':11,'physics':11}
-assert sum(len(c['units']) for c in courses.values())==65
+assert {s:len(c['units']) for s,c in courses.items()}=={'spanish':15,'piano':14,'chess':14,'calculus':11,'physics':11,'medicine':11,'business':11}
+assert sum(len(c['units']) for c in courses.values())==87
 for course in courses.values():
     ids=[u['id'] for u in course['units']];assert len(ids)==len(set(ids))
     for i,unit in enumerate(course['units']):
@@ -75,7 +75,7 @@ for course in courses.values():
     starts=[ids.index(stage['start']) for stage in course['stages']]
     assert starts==sorted(set(starts)) and starts[0]==0
     for alias,target in course['aliases'].items():assert alias not in ids and target in ids
-print('FULL_COURSE_DATA_PASS: legal chess lines and stated outcomes, music timing, 65 unique units and their complete sequence.')
+print('FULL_COURSE_DATA_PASS: legal chess lines and stated outcomes, music timing, 87 unique units and their complete sequence.')
 def archive(path):
     text=path.read_text();data=re.search(r'<script id="full-bundle" type="text/plain">(.*?)</script>',text,re.S)[1]
     return json.loads(gzip.decompress(base64.b64decode(data)))

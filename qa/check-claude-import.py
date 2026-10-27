@@ -16,6 +16,7 @@ fixes=json.loads((root/'source/claude-corrections-v114.json').read_text())
 current=json.loads((root/'source/full-courses-built.json').read_text())
 assert len(pack)==65 and sum('mistake' in u for u in pack.values())==34
 for subject,data in current.items():
+    if subject in ['medicine','business']:continue
     path=data['path'];uploaded=course(original[path]);previous=course(prior[path]);baseline=course(base[path])
     assert [u['id'] for u in data['units']]==[u['id'] for u in uploaded['units']]==[u['id'] for u in previous['units']]
     for now,their,old,b in zip(data['units'],uploaded['units'],previous['units'],baseline['units']):
