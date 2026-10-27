@@ -166,3 +166,8 @@ The brief investigation exposed six medicine and six business figures that were 
 ## V124 — carry saved work between editions and devices
 
 Add a portable JSON backup covering all seven courses, project/workshop places, personal revisit marks, notebook notes and recognized practice records. Preview and validate before saving; preserve local conflicts by default; never inflate attempt counters. Protect work saved after preview and after restore. Verify writes, roll back failed saves, expose an honest recovery-file option when rollback also fails, and retain unsaved session notes. Provide session Undo and unify earlier visible import/export controls. Preserve every V123 embedded teaching asset exactly. See docs/PORTABLE_PROGRESS_V124.md.
+
+
+## V125 — make a choice and watch the reasoning change
+
+Deepen five existing lessons with authored variations. Piano gives a three-note opening three different replies, including a half-beat rhythm change, with sound and a complete timing table. Spanish carries eight combinations of quantity, place and clarification through a complete translated café exchange. Chess compares a supported mate, stalemate and a legal king escape from the same three-piece position, with every legal reply independently checked. Calculus follows four one-second intervals on a toy car's track; physics compares three pushes on a sliding cart with signed force accounts and explicit model limits. Show the reasoning and outcome throughout, preserve all 87 units and projects/workshops, and keep practice optional. Test the arithmetic, note schedules, media cancellation, legal moves, mobile layout and both themes. See docs/LESSON_VARIATIONS_V125.md.

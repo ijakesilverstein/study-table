@@ -1,6 +1,6 @@
 const V109_DEMOS=__DEMOS__;
 let v109Audio=null,v109Generation=0,v109Timers=new Set(),v109Oscillators=new Set();
-function v109StopMedia(){v109Generation++;for(const t of v109Timers)clearTimeout(t);v109Timers.clear();for(const o of v109Oscillators){try{o.stop()}catch{}}v109Oscillators.clear();window.speechSynthesis?.cancel?.();document.querySelectorAll('.v109-demo .playing,.v109-demo .speaking').forEach(e=>e.classList.remove('playing','speaking'))}
+function v109StopMedia(){v109Generation++;for(const t of v109Timers)clearTimeout(t);v109Timers.clear();for(const o of v109Oscillators){try{o.stop()}catch{}}v109Oscillators.clear();window.speechSynthesis?.cancel?.();document.querySelectorAll('.v109-demo .playing,.v109-demo .speaking,.variation-speaking').forEach(e=>e.classList.remove('playing','speaking','variation-speaking'))}
 function v109Timer(fn,ms){const timer=setTimeout(()=>{v109Timers.delete(timer);fn()},ms);v109Timers.add(timer);return timer}
 function v109Demo(id,host){const d=V109_DEMOS[id];if(!d)return;host.classList.add('v109-demo');if(d.kind==='spanish')v109Spanish(host,d);else if(d.kind==='piano')v109Piano(host,d);else if(d.kind==='movement')v109Movement(host,d);else v109Chess(host,d)}
 function v109Spanish(host,d){

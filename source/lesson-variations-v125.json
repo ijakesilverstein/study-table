@@ -1,0 +1,397 @@
+{
+  "phrasing": {
+    "subject": "piano",
+    "kind": "piano",
+    "title": "Write a reply to three notes",
+    "intro": "Here is a tiny composing game. C–D–E asks the same musical question each time. Change only the reply and listen to what happens. There is no winning version: you are choosing the sort of ending you want.",
+    "try": "At a real keyboard, play the first version slowly, then invent a reply using only C, D and E. Keep counting four beats in each bar. If you like the ending, you have something worth keeping.",
+    "variants": [
+      {
+        "label": "Come home to C",
+        "lead": "The opening rises; the reply walks back down. In this little C-centred tune, the final C can sound like arriving home.",
+        "notes": [
+          [
+            "C4",
+            0,
+            1
+          ],
+          [
+            "D4",
+            1,
+            1
+          ],
+          [
+            "E4",
+            2,
+            2
+          ],
+          [
+            "E4",
+            4,
+            1
+          ],
+          [
+            "D4",
+            5,
+            1
+          ],
+          [
+            "C4",
+            6,
+            2
+          ]
+        ],
+        "steps": [
+          [
+            "Keep a question to answer",
+            "Play C on beat 1, D on beat 2, then hold E through beats 3 and 4. Do not add another E on beat 4. The held note leaves room to hear where the line might go."
+          ],
+          [
+            "Answer by reversing the walk",
+            "In bar two, play E on 1, D on 2 and C on 3. The step down from D to C is the arrival. We did not need a faster run or a larger hand stretch."
+          ],
+          [
+            "Let the ending finish",
+            "Keep C down through beat 4. Then release. That last beat belongs to the note, even though your finger is no longer starting anything new. This sense of rest depends on the musical context; C is our home here, not in every piece."
+          ]
+        ]
+      },
+      {
+        "label": "Leave the thought open",
+        "lead": "Keep the first bar. Now answer with another climb. Compare the feeling of this final E with the final C you just heard.",
+        "notes": [
+          [
+            "C4",
+            0,
+            1
+          ],
+          [
+            "D4",
+            1,
+            1
+          ],
+          [
+            "E4",
+            2,
+            2
+          ],
+          [
+            "C4",
+            4,
+            1
+          ],
+          [
+            "D4",
+            5,
+            1
+          ],
+          [
+            "E4",
+            6,
+            2
+          ]
+        ],
+        "steps": [
+          [
+            "Keep the comparison fair",
+            "Bar one is exactly the same: C, D, then a two-beat E. The tempo and total length stay the same too. The reply is the thing we are changing."
+          ],
+          [
+            "Hear where the reply ends",
+            "Bar two repeats the climb and stops on E. E belongs to the C-major sound, so it is not a wrong note. Against the C-centred first version, it may feel less settled. Listen for that difference rather than trying to name a correct answer."
+          ],
+          [
+            "Use an open ending on purpose",
+            "This could be the first half of a longer tune. Follow it with the C-ending reply and you can hear one thought continue into another. Musical tension is useful when you choose where it will go."
+          ]
+        ]
+      },
+      {
+        "label": "Give the reply a little bounce",
+        "lead": "Return to the E–D–C reply, but delay D by half a beat. The pitches stay the same while the rhythm changes.",
+        "notes": [
+          [
+            "C4",
+            0,
+            1
+          ],
+          [
+            "D4",
+            1,
+            1
+          ],
+          [
+            "E4",
+            2,
+            2
+          ],
+          [
+            "E4",
+            4,
+            1.5
+          ],
+          [
+            "D4",
+            5.5,
+            0.5
+          ],
+          [
+            "C4",
+            6,
+            2
+          ]
+        ],
+        "steps": [
+          [
+            "Count the small spaces",
+            "For bar two, say “1 and 2 and 3 and 4 and”. E starts on 1. D waits until the “and” after 2. C still arrives on 3. The half-beat count locates D precisely."
+          ],
+          [
+            "Change duration, not the pulse",
+            "Hold E for one and a half beats, give D half a beat, then hold C for two. Those durations add to four. The beat underneath does not stretch to make room for the longer E."
+          ],
+          [
+            "Bring it back to a musical choice",
+            "Compare this reply with the plain E–D–C reply at the same tempo. One is more even; the other has a small lift before C. Choose the character you like, then play it comfortably rather than chasing speed."
+          ]
+        ]
+      }
+    ]
+  },
+  "cafe-project": {
+    "subject": "spanish",
+    "kind": "spanish",
+    "title": "Make the café order yours",
+    "intro": "Imagine the worker reaching for a cup. Your job is to give them enough information to choose the right one. Change the order below and read the whole exchange. I will show how the words change with it.",
+    "try": "Rehearse with the written exchange once. Then look only at the worker’s question and say your reply. If you miss the question, use the repeat request; repairing the conversation is part of speaking.",
+    "orders": [
+      {
+        "label": "One small coffee",
+        "request": "Quiero un café pequeño, por favor.",
+        "translation": "I want a small coffee, please.",
+        "explanation": "Un, café and pequeño form one group: a small coffee. Café is masculine here, so we use un and pequeño. Quiero stays the same because the person ordering is still “I”."
+      },
+      {
+        "label": "Two small coffees",
+        "request": "Quiero dos cafés pequeños, por favor.",
+        "translation": "I want two small coffees, please.",
+        "explanation": "Dos changes the quantity. Café becomes cafés, and pequeño becomes pequeños because it describes both coffees. Notice the written accent in cafés: the stress still falls on the final syllable."
+      }
+    ],
+    "places": [
+      {
+        "label": "Stay here",
+        "reply": "Para aquí, por favor.",
+        "translation": "For here, please.",
+        "explanation": "Para aquí selects “for here”. Sí would not select either option in ¿Para aquí o para llevar? The short phrase supplies exactly what the worker is missing."
+      },
+      {
+        "label": "Take it away",
+        "reply": "Para llevar, por favor.",
+        "translation": "To go, please.",
+        "explanation": "Para llevar selects the takeaway option. You can give this short reply because the worker has already asked where the order is going. You do not need to repeat the whole order."
+      }
+    ],
+    "repair": "¿Puede repetirlo más despacio, por favor?",
+    "repairTranslation": "Can you repeat it more slowly, please?",
+    "repairExplanation": "Puede asks whether the other person can do something; puedo asks whether I can. Here you want the worker to repeat, so use puede. In ¿Puedo pagar con tarjeta?, you are the person who will pay, so use puedo. The person changes, not merely the politeness."
+  },
+  "queen-net": {
+    "subject": "chess",
+    "kind": "chess",
+    "title": "One queen, three very different endings",
+    "intro": "White has a king on c6 and a queen on b5; Black has only a king on a8. White moves. We will move the queen three ways and then look from Black’s side. The board will show why “the king looks trapped” is not enough.",
+    "try": "On a real board, put the three pieces back on their starting squares. Choose a queen move and name the squares Black could try. Check the attack on a8 separately from the escape squares.",
+    "variants": [
+      {
+        "label": "Qb7: a supported check",
+        "move": "b5b7",
+        "lead": "The queen steps to b7. It checks the king on a8, and White’s king protects the queen. Now inspect every possible reply.",
+        "steps": [
+          [
+            "First establish the check",
+            "From b7, the queen attacks a8 along the short diagonal. We can now ask about checkmate. Without that attack, a position with no legal moves would have a different result."
+          ],
+          [
+            "Look through Black’s three exits",
+            "From a8 the king could try a7, b7 or b8. The queen attacks a7 along its rank and b8 along its file. On b7 the queen is protected by White’s king on c6, so Black cannot capture it."
+          ],
+          [
+            "Name what the board shows",
+            "Black is in check and has no legal reply: checkmate. The white king’s support on c6 is essential to ruling out Kxb7. A checking queen does not protect itself."
+          ]
+        ],
+        "startFen": "k7/8/2K5/1Q6/8/8/8/8 w - - 0 1",
+        "startPieces": {
+          "a8": "bK",
+          "c6": "wK",
+          "b5": "wQ"
+        },
+        "fen": "k7/1Q6/2K5/8/8/8/8/8 b - - 1 1",
+        "pieces": {
+          "a8": "bK",
+          "b7": "wQ",
+          "c6": "wK"
+        },
+        "check": true,
+        "mate": true,
+        "stalemate": false,
+        "replies": []
+      },
+      {
+        "label": "Qb6: no move, no check",
+        "move": "b5b6",
+        "lead": "The queen stops one square lower, on b6. Black still cannot move, but the attack on a8 has disappeared.",
+        "steps": [
+          [
+            "Check the actual king square",
+            "A queen on b6 attacks a7 diagonally and the b-file vertically. It does not attack a8. White’s king on c6 does not reach a8 either. Black is not in check."
+          ],
+          [
+            "Inspect the exits again",
+            "a7 is attacked by the queen’s diagonal. b7 and b8 are on its file. Black has no other piece to move. We have removed the exits without checking the king."
+          ],
+          [
+            "Keep the win and draw separate",
+            "This is stalemate: a draw under standard chess rules. It is already the end of the game, so there is no “Black must pass, then White mates” continuation. Compare with Qb7 to see the one missing condition: check."
+          ]
+        ],
+        "startFen": "k7/8/2K5/1Q6/8/8/8/8 w - - 0 1",
+        "startPieces": {
+          "a8": "bK",
+          "c6": "wK",
+          "b5": "wQ"
+        },
+        "fen": "k7/8/1QK5/8/8/8/8/8 b - - 1 1",
+        "pieces": {
+          "a8": "bK",
+          "c6": "wK",
+          "b6": "wQ"
+        },
+        "check": false,
+        "mate": false,
+        "stalemate": true,
+        "replies": []
+      },
+      {
+        "label": "Qa5+: let Black escape",
+        "move": "b5a5",
+        "lead": "The queen gives check up the a-file. This time we will actually play Black’s safe reply instead of stopping at the word “check”.",
+        "steps": [
+          [
+            "Trace the checking line",
+            "After Qa5+, the a-file between the queen and king is clear. The king on a8 is in check. Being in check tells Black to find a reply; it does not tell us that there is none."
+          ],
+          [
+            "Move to b8 and inspect it",
+            "Black can play Kb8. The queen on a5 does not attack b8, and the white king on c6 is too far away to attack it. a7 and b7 are unsafe, so b8 is the escape in this position."
+          ],
+          [
+            "Continue your thinking past your own move",
+            "Play the reply on the board below. Black’s king is now safe and the game continues. White still has a queen, but this check did not finish the game. A forcing-looking move deserves the same reply search as a quiet one."
+          ]
+        ],
+        "startFen": "k7/8/2K5/1Q6/8/8/8/8 w - - 0 1",
+        "startPieces": {
+          "a8": "bK",
+          "c6": "wK",
+          "b5": "wQ"
+        },
+        "fen": "k7/8/2K5/Q7/8/8/8/8 b - - 1 1",
+        "pieces": {
+          "a8": "bK",
+          "c6": "wK",
+          "a5": "wQ"
+        },
+        "check": true,
+        "mate": false,
+        "stalemate": false,
+        "replies": [
+          {
+            "move": "a8b8",
+            "san": "Kb8",
+            "fen": "1k6/8/2K5/Q7/8/8/8/8 w - - 2 2",
+            "pieces": {
+              "b8": "bK",
+              "c6": "wK",
+              "a5": "wQ"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "calculus-1": {
+    "subject": "calculus",
+    "kind": "rate",
+    "title": "The toy car that gains ground each second",
+    "intro": "A toy car follows a simple model: at time t seconds, its position is t² metres. Watch one second at a time. The clock interval stays the same, but the car covers more ground in each later interval.",
+    "try": "Compare the first and last intervals. Both last one second. Explain why their average velocities differ without saying that the later car “had more time”."
+  },
+  "force-diagrams": {
+    "subject": "physics",
+    "kind": "force",
+    "title": "Push, coast, slow down",
+    "intro": "A 2 kg cart is already sliding to the right. In this short snapshot, friction is 4 N to the left. Change the push and I will draw the horizontal forces, add them, and explain what the acceleration does to the motion.",
+    "try": "Take the middle case: a 4 N push balances 4 N of friction. Describe what happens to a cart that is already moving. Zero acceleration keeps its velocity steady; it does not reset its velocity to zero.",
+    "variants": [
+      {
+        "label": "Push with 10 N",
+        "push": 10,
+        "lead": "The rightward push is larger than friction. The cart is moving right and gains rightward velocity.",
+        "steps": [
+          [
+            "Choose right as positive",
+            "The applied push is +10 N and friction is −4 N. The signs come from their directions on this cart, not from whether a force is helpful or unwanted."
+          ],
+          [
+            "Add forces before dividing",
+            "10 − 4 = +6 N. Now use a = Fnet/m: 6 N ÷ 2 kg = +3 m/s². Adding 10 and 4 as positive magnitudes would describe two forces pointing the same way, which these do not."
+          ],
+          [
+            "Read the acceleration",
+            "Over a short interval of Δt seconds while this model holds, the rightward velocity increases by 3Δt m/s. The vertical forces balance and are omitted from this horizontal sketch; they do not add extra horizontal acceleration."
+          ]
+        ]
+      },
+      {
+        "label": "Balance it with 4 N",
+        "push": 4,
+        "lead": "A 4 N push exactly balances friction. The cart continues rightward at its existing constant velocity during this snapshot.",
+        "steps": [
+          [
+            "Keep both arrows",
+            "There are still two horizontal forces: 4 N right and 4 N left. Zero net force means their sum is zero, not that the forces have disappeared."
+          ],
+          [
+            "Calculate the balance",
+            "4 − 4 = 0 N, so a = 0 N ÷ 2 kg = 0 m/s². This tells us how velocity changes: it does not change during this interval."
+          ],
+          [
+            "Do not erase the motion",
+            "We started with a moving cart. It keeps that velocity while the forces balance. The same balance could also describe a cart remaining at rest, but zero acceleration alone does not tell us which starting velocity it had."
+          ]
+        ]
+      },
+      {
+        "label": "Let go: 0 N push",
+        "push": 0,
+        "lead": "Your hand stops pushing, but the cart has not instantly stopped. Friction still points left while it slides right.",
+        "steps": [
+          [
+            "Remove the push arrow",
+            "With the hand no longer pushing, the horizontal forces consist only of 4 N of friction to the left. Motion itself does not create an extra rightward force arrow."
+          ],
+          [
+            "Keep the negative sign",
+            "0 − 4 = −4 N, and a = −4 N ÷ 2 kg = −2 m/s². Negative means leftward acceleration under our choice of axis."
+          ],
+          [
+            "Limit the prediction to the slide",
+            "Because the cart is moving right, leftward acceleration slows it. This fixed-friction snapshot applies only while it still slides right. At rest we must reconsider the friction model; it does not predict friction pushing the cart into a spontaneous leftward slide."
+          ]
+        ]
+      }
+    ]
+  }
+}

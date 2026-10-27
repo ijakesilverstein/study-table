@@ -2,6 +2,8 @@
 
 An offline-capable learning app. Current downloads and online access are published separately at https://study-table-downloads.vercel.app. The earlier app project is not modified by this delivery workflow.
 
+V125 adds five visible teaching variations with 21 choices: compose a tiny piano reply, adapt a café exchange, compare mate/stalemate/a safe king reply, follow a toy car's one-second intervals and draw a sliding cart's force account. Each shows the complete reasoning; none adds a quiz gate or writes assessment successes. All V124 unit, project and workshop records remain exact. See [the lesson changes](docs/LESSON_VARIATIONS_V125.md).
+
 V124 adds one portable progress backup for all seven courses, project/workshop chapters, notebook notes and practice records. Restore previews changes, offers a conflict choice and supports session Undo, with previous-data recovery when browser storage fails. All 215 V123 teaching assets remain unchanged. See [the backup behavior and verification](docs/PORTABLE_PROGRESS_V124.md).
 
 V123 restores twelve interactive medicine/business figures from the original Claude V120. Their corrected models explain separate working-capital balances, price/volume changes, feedback, approximate mean pressure, water balance, first-order decay and predictive values. Responsive diagrams and numerical tables work with keyboard controls; all 87 V122 unit records and the other 213 embedded assets remain unchanged. Incoming figure IDs now have preservation checks alongside course data. See [the restoration accounting](docs/RESTORED_FIGURES_V123.md).
@@ -31,7 +33,7 @@ python3 scripts/build.py
 python3 -m http.server 8769 --directory public
 ```
 
-Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v124.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
+Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v125.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
 
 - `source/teacher-prose-v109.json`: rewritten explanations in existing lessons.
 - `source/draft-foundation-lessons.json` and `source/lessons-v109.json`: the 12 new lessons. The historical `draft-` filename is retained for build compatibility; these records are now published.

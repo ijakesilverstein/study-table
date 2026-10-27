@@ -8,7 +8,7 @@ courses=json.loads((r/'source/full-courses-built.json').read_text());manifest=js
 pattern=r"V114_FIGURES\[['\"]([^'\"]+)['\"]\]\s*="
 assert set(manifest)=={'medicine','business'} and sum(len(x['ids']) for x in manifest.values())==12
 assert set(prior)==set(built) and len(built)==215
-changed={courses[s]['path'] for s in manifest}
+changed={c['path'] for c in courses.values()}
 for path in prior:
     if path not in changed:assert prior[path]==built[path],path
 for subject,c in courses.items():
@@ -26,4 +26,4 @@ for subject,c in courses.items():
     assert set(re.findall(pattern,corrected))==set(record['ids'])
     assert set(record['ids'])<=set(u['id'] for u in c['units'])
     assert set(re.findall(pattern,incoming[path]['t']))-set(re.findall(pattern,prior[path]['t']))==set(record['ids'])
-print('RESTORED_FIGURE_PROVENANCE_PASS: all twelve incoming code features recovered; exact archived originals; all V122 course data and the other 213 assets unchanged.')
+print('RESTORED_FIGURE_PROVENANCE_PASS: all twelve incoming code features recovered; exact archived originals; all V122 course data and all unrelated assets unchanged.')

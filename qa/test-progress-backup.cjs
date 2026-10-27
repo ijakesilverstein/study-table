@@ -1,3 +1,4 @@
+const edition=Number(require('../package.json').version.split('.')[0]);
 const {chromium}=require('playwright'),{spawn}=require('child_process'),assert=require('assert/strict'),fs=require('fs');
 (async()=>{let browser,server;const url=process.env.STUDY_TEST_URL||'http://127.0.0.1:8796/index.html',errors=[];
  try{
@@ -16,7 +17,7 @@ const {chromium}=require('playwright'),{spawn}=require('child_process'),assert=r
    for(const [k,v] of Object.entries(records))localStorage.setItem(k,v);localStorage.setItem('unrelated-private-key','do not export or touch');
    window.studyTableInvalidateShellCache();return records;
   });
-  await p.locator('#v124BackupHome').click();const download=p.waitForEvent('download');await p.locator('#v124Export').click();const file=await download;assert.equal(file.suggestedFilename(),'study-table-progress-v124.json');const payload=JSON.parse(fs.readFileSync(await file.path(),'utf8'));
+  await p.locator('#v124BackupHome').click();const download=p.waitForEvent('download');await p.locator('#v124Export').click();const file=await download;assert.equal(file.suggestedFilename(),'study-table-progress-v'+edition+'.json');const payload=JSON.parse(fs.readFileSync(await file.path(),'utf8'));
   assert.equal(payload.schemaVersion,1);assert.equal(payload.format,'study-table-backup');assert(!('unrelated-private-key' in payload.records));for(const [k,v] of Object.entries(seed))assert.deepEqual(k.endsWith(':reading')?payload.records[k]:JSON.parse(payload.records[k]),k.endsWith(':reading')?v:JSON.parse(v),k);
   const q=await make();await q.evaluate(()=>studyTableBackup.open());await q.locator('#v124File').setInputFiles({name:'progress.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(payload))});await q.locator('#v124BackupPreview').waitFor({state:'visible'});
   assert.match(await q.locator('#v124FileInfo').innerText(),/progress.json/);assert.equal(await q.evaluate(()=>localStorage.getItem('studytable:full-course:spanish:reading')),null,'preview wrote data');await q.locator('#v124Apply').click();assert.match(await q.locator('#v124BackupStatus').innerText(),/Saved the restored work/);assert.equal(await q.locator('#v124BackupPreview').isVisible(),false);
@@ -82,7 +83,7 @@ const {chromium}=require('playwright'),{spawn}=require('child_process'),assert=r
    localStorage.setItem(fk,JSON.stringify({[key]:JSON.stringify({homeostasis:{seen:true,recall:'review'}})}));localStorage.removeItem(key);const file=studyTableBackup.collect();return {key,fk,file};
   });assert(fallback.file.records[fallback.key]);const v=await make();await v.evaluate(file=>studyTableBackup.apply(studyTableBackup.prepare(file)),fallback.file);assert.equal(await v.evaluate(k=>JSON.parse(localStorage.getItem(k)).homeostasis.recall,fallback.key),'review');assert.equal(await v.evaluate(([fk,k])=>JSON.parse(JSON.parse(localStorage.getItem(fk))[k]).homeostasis.recall,[fallback.fk,fallback.key]),'review');
   const legacyUI=await make();await legacyUI.evaluate(()=>openNotebook());
-  const oldExport=legacyUI.waitForEvent('download');await legacyUI.locator('#exportNotes').click();assert.equal((await oldExport).suggestedFilename(),'study-table-progress-v124.json');await legacyUI.locator('#v124BackupClose').click();
+  const oldExport=legacyUI.waitForEvent('download');await legacyUI.locator('#exportNotes').click();assert.equal((await oldExport).suggestedFilename(),'study-table-progress-v'+edition+'.json');await legacyUI.locator('#v124BackupClose').click();
   await legacyUI.locator('#importNotes').setInputFiles({name:'older-notebook.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify({version:1,notes:[{text:'Import waits for my choice',path:'',subject:'Notebook',when:100}],bookmarks:[]}))});
   await legacyUI.locator('#v124BackupPreview').waitFor({state:'visible'});assert.equal(await legacyUI.evaluate(()=>getNoteData().length),0,'Old import UI must also wait for Apply');await legacyUI.locator('#v124Apply').click();assert.equal(await legacyUI.evaluate(()=>getNoteData()[0].text),'Import waits for my choice');
   console.log('BACKUP_OLDER_FORMATS_AND_OFFLINE_STORAGE_FACADE_TRANSFER_PASS');

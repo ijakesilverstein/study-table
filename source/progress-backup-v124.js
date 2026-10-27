@@ -1,7 +1,7 @@
 // Portable learning records. Backups contain data, never executable lessons.
 (function(){
  'use strict';
- const MAX=16*1024*1024,legacy=window.studyTableV94SafeRestore,quick=__QUICK_LESSONS__;
+ const APP_VERSION=__APP_VERSION__,MAX=16*1024*1024,legacy=window.studyTableV94SafeRestore,quick=__QUICK_LESSONS__;
  const QUICK=new Set(quick.map(x=>x.id)),BAD=new Set(['__proto__','prototype','constructor']);
  const own=(o,k)=>Object.prototype.hasOwnProperty.call(o,k),object=o=>o!==null&&typeof o==='object'&&!Array.isArray(o);
  const courseList=()=>window.studyTableFullCourses.courses;
@@ -132,7 +132,7 @@
   const records=Object.create(null);for(const key of keys()){const raw=localStorage.getItem(key);if(raw!==null)records[key]=raw}
   for(const [short,value] of Object.entries(window.studyTableShellMemory?.()||{})){const key='study-table-v19:'+short;if(notebook.includes(key)||short.startsWith('course-store:')||short.startsWith('v21:')||short==='v22:remember:v1'){try{kind(key);records[key]=JSON.stringify(value)}catch{}}}
   // Mirror the seven readers' fallback records so a file can move between storage contexts.
-  return {format:'study-table-backup',schemaVersion:1,appVersion:124,exportedAt:new Date().toISOString(),records:expand(records)};
+  return {format:'study-table-backup',schemaVersion:1,appVersion:APP_VERSION,exportedAt:new Date().toISOString(),records:expand(records)};
  }
  function parse(payload){
   validTree(payload);let records;
@@ -191,7 +191,7 @@
   if(!rollback(attempted,lastUndo.before)){rollback(attempted,after);throw Error('The browser could not complete Undo. Keep this page open and save the previous-data copy.')}
   lastUndo=null;invalidate(attempted);return 'The values from before this restore are back. Reload to refresh open exercises.';
  }
- function download(payload,name='study-table-progress-v124.json'){
+ function download(payload,name='study-table-progress-v'+APP_VERSION+'.json'){
   const text=JSON.stringify(payload,null,2);if(bytes(text)>MAX)throw Error('This backup exceeds 16 MB.');
   const url=URL.createObjectURL(new Blob([text],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download=name;a.hidden=true;dialog().append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
  }
@@ -230,5 +230,5 @@
  document.addEventListener('click',event=>{const b=event.target.closest?.('#v90Backup,#v56Export,#v102Backup,#exportNotes');if(!b)return;event.preventDefault();event.stopImmediatePropagation();open(b);document.getElementById('v124Export').click()},true);
  document.addEventListener('change',event=>{if(!['v90Restore','v56Import','v102Restore','importNotes'].includes(event.target.id))return;event.stopImmediatePropagation();const file=event.target.files?.[0];event.target.value='';open(event.target);readFile(file)},true);
  new MutationObserver(mount).observe(document.body,{childList:true,subtree:true});mount();
- window.studyTableBackup={version:124,collect,prepare,apply,undo,open};
+ window.studyTableBackup={version:APP_VERSION,collect,prepare,apply,undo,open};
 })();
