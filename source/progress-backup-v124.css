@@ -1,0 +1,18 @@
+#v124BackupDialog{width:min(660px,calc(100vw - 28px));max-height:88vh;overflow:auto;padding:24px;background:var(--study-surface);color:var(--study-ink);border:1px solid var(--study-line);border-radius:12px;font:16px/1.7 system-ui}
+#v124BackupDialog::backdrop{background:#14141699}
+#v124BackupDialog header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:0;background:none;border:0;color:inherit}
+#v124BackupDialog h2{font:400 29px/1.3 Georgia,serif;margin:0 0 18px}
+#v124BackupDialog h3{font-size:19px;margin:22px 0 10px}
+#v124BackupDialog :is(button,input,select){font:inherit;max-width:100%;min-height:44px;box-sizing:border-box}
+#v124BackupDialog button{padding:10px 14px;border:1px solid #84848e;border-radius:7px;background:var(--study-panel);color:var(--study-ink);cursor:pointer}
+#v124BackupDialog button:disabled{cursor:default;opacity:.6}
+#v124BackupDialog :is(input,select){display:block;width:100%;margin:8px 0 18px;padding:9px;background:var(--study-surface);color:var(--study-ink);border:1px solid #84848e;border-radius:6px}
+#v124BackupDialog input[type=file]{font-size:15px}
+#v124BackupDialog label{font-weight:600}
+#v124BackupDialog hr{border:0;border-top:1px solid var(--study-line);margin:26px 0}
+#v124BackupDialog .v124-note{font-size:15px;color:var(--study-muted)}
+#v124BackupPreview{background:var(--study-panel);padding:1px 16px 14px;border-radius:8px;margin:20px 0}
+#v124BackupDialog .v124-actions{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}
+#v124BackupDialog :focus-visible{outline:3px solid var(--study-warm);outline-offset:3px}
+#v124BackupStatus{overflow-wrap:anywhere}
+@media(max-width:480px){#v124BackupDialog{padding:18px}#v124BackupDialog h2{font-size:25px}#v124BackupDialog .v124-actions button{flex:1 1 160px}}

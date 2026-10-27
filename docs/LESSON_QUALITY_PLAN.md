@@ -161,3 +161,8 @@ Fourteen existing lessons, two in each of the seven courses, now have visible in
 ## V123 — recover twelve missing interactive figures
 
 The brief investigation exposed six medicine and six business figures that were present in Claude V120 but omitted from the V121 merge. Recover every original figure ID, preserve the exact incoming blocks, and correct the calculations, labels and model assumptions separately. The restored figures provide responsive diagrams, keyboard-operable controls, live calculations and semantic numerical tables. Correct working-capital valuation, price-rise volume loss, zero contribution, MAP approximation, feedback, first-order decay and predictive-value edge cases. Preserve all 87 V122 unit records and the other 213 archive assets. Expand merge checks to enumerate incoming figure code and verify all twelve in the browser. See docs/RESTORED_FIGURES_V123.md.
+
+
+## V124 — carry saved work between editions and devices
+
+Add a portable JSON backup covering all seven courses, project/workshop places, personal revisit marks, notebook notes and recognized practice records. Preview and validate before saving; preserve local conflicts by default; never inflate attempt counters. Protect work saved after preview and after restore. Verify writes, roll back failed saves, expose an honest recovery-file option when rollback also fails, and retain unsaved session notes. Provide session Undo and unify earlier visible import/export controls. Preserve every V123 embedded teaching asset exactly. See docs/PORTABLE_PROGRESS_V124.md.
