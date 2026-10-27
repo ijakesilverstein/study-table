@@ -31,6 +31,7 @@ function figure(id){let svg='';if(id==='functions')svg='<svg viewBox="0 0 460 30
 }
 $('courseSubject').textContent=COURSE.title;$('courseContentsList').innerHTML=COURSE.units.map((u,i)=>{const stage=stageAt(u.id);return (stage?'<li class="contents-stage">'+escape(stage.title)+'</li>':'')+'<li><button data-course-unit="'+u.id+'"><span>'+(i+1)+'.</span> '+escape(u.title)+'</button></li>'}).join('')+'<li class="contents-project">Put the course together</li><li><button data-course-project>'+escape(COURSE.project.title)+'</button></li>';
 if(COURSE.workshop)$('courseContentsList').insertAdjacentHTML('beforeend','<li class="contents-project">Teacher’s workshop</li><li><button data-course-workshop>'+escape(COURSE.workshop.title)+'</button></li>');
+document.querySelector('.skip-to-lesson').onclick=event=>{event.preventDefault();$('courseArticle').focus({preventScroll:true});$('courseArticle').scrollIntoView({block:'start'})};
 if($('courseMath'))$('courseMath').onclick=()=>v116OpenMath('fractions',$('courseMath'));
 $('courseAll').onclick=()=>window.parent.postMessage({type:'study-open-curricula'},'*');$('courseTheme').onclick=()=>window.studyTableTheme.set(window.studyTableTheme.get()==='dark'?'light':'dark');
 document.addEventListener('visibilitychange',()=>{if(document.hidden)v109StopMedia()});window.addEventListener('pagehide',v109StopMedia);

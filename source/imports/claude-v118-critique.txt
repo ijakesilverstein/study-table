@@ -1,0 +1,98 @@
+I'll start by extracting the archive into an isolated directory and seeing what's changed since V113.
+
+Single 6.2 MB HTML file. Let me see what changed between my V113 and this V118.
+
+V118 built on my V113 — same five course files, each roughly 2.5× larger. Let me see what was added.
+
+My V113 additions survived. V118 adds course-level `project` and `workshop`. Let me audit completeness and then run it.
+
+Now let me run it in a real browser and start probing.
+
+One regression already. Let me investigate.
+
+Not a regression — V118 renamed my figures to `v114-figure`. Let me map what V114–V118 actually added.
+
+All V114–V118 work is inside the five course pages; the outer shell is untouched. Let me read the new renderer.
+
+Now let me red-team systematically. First, a deep crawl that exercises every unit, project, workshop and control.
+
+No JS errors, no dead controls, no undefined leaks — functionally solid. The risk is in the new authored content. Let me extract it.
+
+The project maths checks out (I verified the quadratic root ≈3.653, the 19 L max under a 20 L cap, the 9→6+3 J energy account, x=0.5 m). Let me now lint the whole corpus systematically.
+
+Those are false positives (`NaN` matching inside "discrimi**nan**t", "coci**nan**do"). Data integrity is clean. Let me examine the newest content layers.
+
+Workshop chess is correct too (I verified the Nc7 family fork, the pinned rook's legal moves along the pin line, and Qb7# vs Qb6 stalemate). Content quality is high. Let me now attack the areas content review won't catch.
+
+Confirmed the shell focus-trap bug persists. Let me probe robustness and failure modes.
+
+Found one real defect (`open('__proto__')` throws). Let me check the escaping pipeline for unescaped interpolation.
+
+Those are numeric figure-state values. The real question is user input. Let me test the shell's input surfaces.
+
+No XSS; escaping is applied consistently. Now let me look at structure and UX — where the real improvements are.
+
+Found a real navigation gap. Let me look at the project view and check for progress tracking.
+
+Confirmed the two biggest gaps. Let me set up a build pipeline against V118 and check my patch anchors.
+
+Correction: the sidebar *does* include project and workshop — my earlier crawl only counted `[data-course-unit]`. Let me verify.
+
+Sidebar nav is complete — that gap was my error. Let me now find the shell's overlay open/close for the focus-trap fix.
+
+Clean hooks. Let me gather the remaining patch anchors.
+
+I have every anchor. Let me verify uniqueness across all five course pages before patching.
+
+Two anchors need refining (shell quoting mangled one, another isn't unique). Let me check properly from a file.
+
+Got it. Now let me write the V119 improvements.
+
+`inert` is applied. Let me verify it actually removes them from the tab order.
+
+45 escaped tab stops → 0. Now let me verify the progress and self-assessment features end to end.
+
+The sidebar works and persists, but the course-map panel renders empty — `wire()` never repaints it. Let me fix.
+
+The panel works and persists. Let me verify the reset path separately (my test script had the bug).
+
+All fixes verified. Let me run the full regression suite and look at the result.
+
+Let me check dark mode and confirm the edit scope.
+
+Dark mode works. Let me confirm both shell patches landed and deliver.
+
+`/home/user/Study_Table_V119.html`
+
+## Red team
+
+**Where V118 is genuinely strong.** I tried hard to break it and mostly couldn't. Zero JS errors across all 65 units plus projects and workshops. No dead controls. No `undefined`/`NaN`/`[object Object]` leaking into the page. XSS blocked on every input surface I could find (search ×2, coach, archive filter, notebook) and via poisoned `localStorage` — escaping is applied consistently. It survives `localStorage` throwing on every call (private mode), corrupted saved state, and garbage JSON. Data integrity is perfect: every `recall.from` pointer resolves and points *backwards*, every prev/next chain is correct, every stage anchor is real, no copy-paste duplication.
+
+I also spot-verified the new maths rather than trusting it: the calculus project's `t²+t−17=0` → `(−1+√69)/2 ≈ 3.653`, the fills-then-drains peak of 19 L under a 20 L cap, the physics 9 J → 6 J spring + 3 J collision loss, `x = 0.5 m` at `k=48`, and the `h=0.80` rerun giving `8/3 m/s`. The chess workshop too — the `Nc7` family fork, the pinned rook's legal moves *along* the pin line, and `Qb7#` vs `Qb6` stalemate. All correct.
+
+**What I actually found.**
+
+| # | Finding | Severity | Status |
+|---|---|---|---|
+| 1 | No progress tracking anywhere — 65 units, and storage holds only a single "last read" pointer per course | High (UX) | **Fixed** |
+| 2 | Practice is reveal-only; nothing records whether you got it, so nothing can resurface what you missed | High (pedagogy) | **Fixed** |
+| 3 | 45 tab stops escape the `aria-modal` overlay; background is neither `inert` nor `aria-hidden` | High (a11y) | **Fixed** |
+| 4 | `open('__proto__')` throws — plain-object key lookup hits `Object.prototype` | Low | **Fixed** |
+| 5 | Figure sliders announce "22" not "22 N" — no `aria-valuetext` | Low (a11y) | **Fixed** |
+| 6 | Calculus and physics have no workshop; the other three courses do | Medium | Reported |
+| 7 | Three `<h1>`s live in the DOM at once; no skip link | Low (a11y) | Reported |
+| 8 | Course pages `postMessage(..., '*')` instead of a scoped origin | Informational | Reported |
+
+Two things I need to correct from my own first pass: I initially flagged the project and workshop as missing from the sidebar nav — they're both there; my crawler only counted `[data-course-unit]`. And the one "FAIL" my old suite reported was stale, not a regression: V118 renamed my `v113-figure` class to `v114-figure`.
+
+## What I changed
+
+**Progress tracking** — each unit is marked opened, and the sidebar shows `·` opened, `✓` understood, `↻` worth another look. The course map gets a panel: *"5 of 11 units opened · 2 marked understood · 2 to revisit"*, a bar, a clickable **Worth another look** list, and a reset with confirmation.
+
+**Self-assessed recall** — the practice block now ends with *"Once you have tried both, how did it go?"* → **I had it** / **Needs another look**. That closes the loop on the retrieval practice I added in V113: marking a unit sends it to the course-map list.
+
+**The three fixes** — `inert` + focus capture + focus restore + Escape on the overlay (dialogs deliberately excluded so `showModal()` still works); `hasOwnProperty` guard on the course lookup; `aria-valuetext` mirroring each slider's displayed value.
+
+Verified before/after: **45 escaped tab stops → 0**, inert correctly reapplies on reopen, progress survives reload, reset clears it, a corrupted store degrades to the empty state with no errors. Full regression passes, dark mode and 390px both check out, and the diff touches exactly the five course files plus 2.3 KB appended to the shell — all 213 bundle entries intact.
+
+The clearest remaining gap is #6: calculus and physics are the only courses without a teacher's workshop. Say the word and I'll write them.

@@ -20,7 +20,7 @@ function v114Figure(id){
  const update=()=>{
   if(id==='calculus-1'){state.t2=Math.max(Number(state.t2),Number(state.t1)+1);document.getElementById('v114-t2').min=String(Number(state.t1)+1)}
   if(id==='physics-2'){state.f=Math.min(Number(state.f),20*Number(state.h));document.getElementById('v114-f').max=String(Math.min(80,20*Number(state.h)))}
-  spec.controls.forEach(c=>{document.getElementById('v114-'+c.id).value=String(state[c.id]);const out=document.getElementById('v114-out-'+c.id);if(out)out.textContent=(c.show?c.show(state[c.id]):v114N(state[c.id]))+(c.unit?' '+c.unit:'')});
+  spec.controls.forEach(c=>{document.getElementById('v114-'+c.id).value=String(state[c.id]);const out=document.getElementById('v114-out-'+c.id);if(out){const value=(c.show?c.show(state[c.id]):v114N(state[c.id]))+(c.unit?' '+c.unit:'');out.textContent=value;document.getElementById('v114-'+c.id).setAttribute('aria-valuetext',value)}});
   const r=spec.draw(state)||{};
   document.getElementById('v114Canvas').innerHTML=r.html||'';
   document.getElementById('v114Read').textContent=r.read||'';

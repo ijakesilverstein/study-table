@@ -135,3 +135,12 @@ Deepen twelve existing cases in six quantitative units: average velocity, instan
 Separate compact phone drawings preserve the complete graph or circuit and readable labels. Optional comparisons demonstrate origin invariance and nonzero intervals from either side of a derivative. The h=0 view shows a tangent limit and never evaluates a zero-denominator quotient. Earlier explorers remain available in an optional section.
 
 Check the arithmetic independently, reconstruct both desktop and phone circuit connections from their drawn wires, inspect phone screenshots, and verify both themes, keyboard focus, saved reading places and unchanged assessment records. This improves the teaching content; it is not evidence of accelerated expertise or a learner-study result.
+
+
+## V119 — verify the critique and repair access
+
+The new critique describes V118 and a proposed V119, but its accompanying HTML exactly matches the older Claude V113 already merged. Preserve the current teaching and review the claims against V118 instead of replacing the app.
+
+Repair reproduced keyboard escape from the custom modal shell, prevent native-dialog Escape from also closing its background, reject inherited or invalid course keys, announce slider values with their units, and add local skip links in all five readers. Keep every V118 course record, all archive assets and independent assessment data. Do not treat reading, self-reported understanding or a confidence bar as demonstrated mastery. Record the full-course revisit-list idea separately from these repairs.
+
+Validate keyboard entry/Tab/Escape/return, nested native dialogs, previous inert state, dynamic siblings, invalid and foreign messages, poisoned bookmarks, range keyboard changes and constraints, skip-link navigation stability, phone layouts, both themes and the complete prior regression suite. See docs/CLAUDE_REVIEW_V119.md for each critique claim and its verified status.
