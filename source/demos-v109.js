@@ -16,13 +16,15 @@ function v109Spanish(host,d){
  host.querySelectorAll('[data-conversation]').forEach(b=>b.onclick=()=>hear(d.lines.map((_,i)=>i),Number(b.dataset.conversation)));host.querySelectorAll('[data-hear-line]').forEach(b=>b.onclick=()=>hear([Number(b.dataset.hearLine)],.75));host.querySelector('[data-stop]').onclick=()=>{v109StopMedia();$('v109SpeechStatus').textContent='Stopped.'};
 }
 function v109Keyboard(notes){const white=notes.filter(n=>!n.includes('#')),black=notes.filter(n=>n.includes('#'));
- return '<div class="v109-keys" aria-label="Playable piano demonstration">'+white.map(n=>'<button type="button" data-v109-note="'+n+'" aria-label="Play '+n+'">'+n+'</button>').join('')+black.map(n=>{const previous=white.indexOf(n.replace('#',''));return '<button class="v109-black" style="left:'+((previous+.72)/white.length*100)+'%;width:'+(58/white.length)+'%" type="button" data-v109-note="'+n+'" aria-label="Play '+n.replace('#',' sharp ')+'"></button>'}).join('')+'</div>';
+ return '<div class="v109-keyboard-scroll" role="region" aria-label="Scrollable piano keyboard" tabindex="0"><div class="v109-keys" style="--v126-keyboard-width:'+white.length*48+'px" aria-label="Playable piano demonstration">'+white.map(n=>'<button type="button" data-v109-note="'+n+'" aria-label="Play '+n+'">'+n+'</button>').join('')+black.map(n=>{const previous=white.indexOf(n.replace('#',''));return '<button class="v109-black" style="left:'+((previous+.72)/white.length*100)+'%;width:'+(58/white.length)+'%" type="button" data-v109-note="'+n+'" aria-label="Play '+n.replace('#',' sharp ')+'"></button>'}).join('')+'</div></div>';
 }
+function v109RevealNote(host,note){const box=host.querySelector('.v109-keyboard-scroll'),key=host.querySelector('[data-v109-note="'+note+'"]');if(box&&key)box.scrollLeft=Math.max(0,key.offsetLeft-box.clientWidth/3)}
 function v109Piano(host,d){
  const tempos=d.tempos||[60,80,120],defaultTempo=d.defaultTempo||60;
  host.innerHTML='<h3>'+escape(d.title)+'</h3><p>'+escape(d.intro)+'</p>'+v109Keyboard(d.keys)+'<label class="v107-tempo" for="v109Tempo">Tempo <select id="v109Tempo">'+tempos.map(n=>'<option value="'+n+'"'+(n===defaultTempo?' selected':'')+'>'+n+' beats/min</option>').join('')+'</select></label><div class="v109-controls">'+d.patterns.map((p,i)=>'<button type="button" data-pattern="'+i+'">'+escape(p.label)+'</button>').join('')+'<button type="button" data-stop>Stop</button></div><p id="v109PianoStatus" role="status">'+escape(d.count)+'</p>';
+ v109RevealNote(host,d.patterns[0]?.events[0]?.note);
  const play=async pattern=>{
-  v109StopMedia();const generation=v109Generation,status=$('v109PianoStatus'),Context=window.AudioContext||window.webkitAudioContext;
+  v109RevealNote(host,pattern.events[0]?.note);v109StopMedia();const generation=v109Generation,status=$('v109PianoStatus'),Context=window.AudioContext||window.webkitAudioContext;
   if(!Context){status.textContent='Audio is unavailable here. The notes and timing are written in the solution below.';return}
   const beat=60/Number($('v109Tempo').value),countIn=pattern.countIn??d.countIn??0,pulse=pattern.metronome??d.metronome??false;
   try{

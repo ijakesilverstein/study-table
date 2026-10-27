@@ -1,0 +1,439 @@
+{
+  "comfortable-hands": {
+    "subject": "piano",
+    "opening": [
+      "Start with your right hand. Put your thumb on middle C, labelled C4 on the screen. The next two white keys to the right are D4 and E4. Let your index and middle fingers rest over them.",
+      "Sit close enough to reach those keys easily, with your feet supported and room for your elbows to move. Let your shoulders drop. We will play five notes in this small area, slowly enough to notice each movement."
+    ],
+    "heading": "Give each finger a small, clear job",
+    "teaching": [
+      "A finger number names part of your hand. On both hands, thumb is 1, index is 2, middle is 3, ring is 4 and little finger is 5. The number in a note name does a different job: C4 identifies middle C. You will use finger 1 to play C4 in the right-hand example.",
+      "Let the fingers rest in a gentle curve, with a wrist that can adjust. When a key has reached the bottom, extra pushing will not make that already-struck note louder. Notice the release as well as the press. If the shoulder rises or the unused fingers become stiff, pause and set the hand down again.",
+      "The left-hand route feels different because its thumb is on the right as the hand faces the keyboard. Put little finger 5 on C3, ring finger 4 on D3 and middle finger 3 on E3. Those notes rise in pitch as your hand moves right, even though the finger numbers go down. Learn this route separately before combining hands."
+    ],
+    "firstSteps": [
+      [
+        "Put three fingers over three notes",
+        "Thumb on C4; index on D4; middle on E4.",
+        "Find C from a pair of black keys, then use the C4 label to choose the register in the screen model. Set the fingers down lightly before playing. This is a suggested starting position, not a shape you have to freeze in place."
+      ],
+      [
+        "Walk out and back",
+        "C4–D4–E4–D4–C4; fingers 1–2–3–2–1.",
+        "Press with the thumb, then the index, then the middle finger. Return with the index and thumb. You have already placed the fingers near their notes, so each press is a small movement. Say the note names slowly as you go."
+      ],
+      [
+        "Hear one note at a time",
+        "Let each previous key rise as you move to the next.",
+        "For this first pass, allow a little space between sounds. That makes it easier to notice whether the old key has come up. Once the five movements feel easy, try connecting them more smoothly. Keep the waiting fingers close and comfortable."
+      ],
+      [
+        "Find the start again",
+        "Take the hand away; return to C4 using the black-key pair and register label.",
+        "A keyboard landmark gives you a way back when you lose your place. Repeat the return a few times before speeding up the pattern. If playing feels strained or painful, stop and adjust the position instead of rehearsing the strain."
+      ]
+    ],
+    "firstNotice": "Use the right-hand button in the demonstration to hear the five-note route. The sound gives the note order; the finger table shows one practical way to play it.",
+    "tables": {
+      "first": {
+        "caption": "Right-hand route. C4 is middle C; finger numbers name the fingers listed here.",
+        "headers": [
+          "Step",
+          "Key",
+          "Finger"
+        ],
+        "rows": [
+          [
+            "1",
+            "C4",
+            "1 · thumb"
+          ],
+          [
+            "2",
+            "D4",
+            "2 · index"
+          ],
+          [
+            "3",
+            "E4",
+            "3 · middle"
+          ],
+          [
+            "4",
+            "D4",
+            "2 · index"
+          ],
+          [
+            "5",
+            "C4",
+            "1 · thumb"
+          ]
+        ]
+      },
+      "second": {
+        "caption": "Left-hand route, one octave lower. Move right to go from C3 to E3.",
+        "headers": [
+          "Step",
+          "Key",
+          "Finger"
+        ],
+        "rows": [
+          [
+            "1",
+            "C3",
+            "5 · little"
+          ],
+          [
+            "2",
+            "D3",
+            "4 · ring"
+          ],
+          [
+            "3",
+            "E3",
+            "3 · middle"
+          ],
+          [
+            "4",
+            "D3",
+            "4 · ring"
+          ],
+          [
+            "5",
+            "C3",
+            "5 · little"
+          ]
+        ]
+      }
+    }
+  },
+  "piano-0": {
+    "subject": "piano",
+    "opening": [
+      "Put one finger on C4 and use the other hand to tap four even beats on your knee. Say “1, 2, 3, 4”. Keep the gaps between the taps equal. We will use that count for both examples.",
+      "First hear four separate Cs. Then hear two longer Cs over the same four beats. The longer version has fewer beginnings, while your tapping hand keeps exactly the same count."
+    ],
+    "heading": "Count through the note, all the way to its end",
+    "teaching": [
+      "A beat is the steady count underneath the music. A note attack is a new beginning of sound. In the first version you press on 1, 2, 3 and 4: four attacks. In the second you press on 1 and 3: two attacks. Counting a beat does not require another press.",
+      "A beat also has a whole duration. At 60 beats per minute, beat 1 starts at 0 seconds, beat 2 at 1 second, beat 3 at 2 seconds and beat 4 at 3 seconds. The four-beat group finishes at 4 seconds, where the next 1 would begin. Saying “4” starts the last beat; let that beat last too.",
+      "Tempo tells you how quickly those beats pass. At 120 beats per minute, each beat takes half a second. Two beats then take one second. The written rhythm still asks you to start on 1 and 3 and hold through the intervening beats. We are grouping beats in fours here; other music can use other groupings."
+    ],
+    "firstSteps": [
+      [
+        "Give yourself a count",
+        "At 60 beats/min, say 1, 2, 3, 4 at one-second intervals.",
+        "Tap four times before playing so your hand has a pulse to follow. Each spoken number starts a beat. The interval until the next number is part of that beat, even while you are holding a key down."
+      ],
+      [
+        "Make one sound last through 1 and 2",
+        "Press C on 1 and keep the key down while you say 2.",
+        "Your tapping hand still marks beat 2. Your playing finger keeps holding the same C. That gives you one note attack across two beats. If you press C again on 2, you have changed the rhythm into two shorter notes."
+      ],
+      [
+        "Start the second C on 3",
+        "Let the key rise enough to sound again; press C on 3 and hold through 4.",
+        "Prepare the small release just before 3 so the second attack lands on the count. Then keep that second C down while you say 4. The first C occupied beats 1 and 2; the second occupies beats 3 and 4."
+      ],
+      [
+        "Let the last beat finish",
+        "Release at the next 1: four seconds after the first attack.",
+        "Keep counting an imaginary next group: “1, 2, 3, 4, 1”. Release as that last 1 arrives. You made two beginnings of sound and gave each two full beats. Four beats at this tempo occupy four seconds."
+      ]
+    ],
+    "firstNotice": "Hear “Two two-beat notes” in the demonstration at 60 beats/min. Keep your tapping hand going while you listen. The table follows that same count.",
+    "tables": {
+      "first": {
+        "caption": "One group at 60 beats/min. The times are measured from the first C.",
+        "headers": [
+          "Count starts",
+          "Time",
+          "Playing finger"
+        ],
+        "rows": [
+          [
+            "1",
+            "0 s",
+            "Press C"
+          ],
+          [
+            "2",
+            "1 s",
+            "Keep holding"
+          ],
+          [
+            "3",
+            "2 s",
+            "Sound C again"
+          ],
+          [
+            "4",
+            "3 s",
+            "Keep holding"
+          ],
+          [
+            "Next 1",
+            "4 s",
+            "Release or begin the next group"
+          ]
+        ]
+      }
+    }
+  },
+  "spanish-0": {
+    "subject": "spanish",
+    "opening": [
+      "Imagine arriving at a library desk. You want to say three things: you are a student, you are in the library, and you have a question. We will build one short sentence for each thought.",
+      "Read the finished sentences first: Soy estudiante. Estoy en la biblioteca. Tengo una pregunta. The English meanings are “I’m a student”, “I’m in the library” and “I have a question”."
+    ],
+    "heading": "Keep a useful beginning, then add the information",
+    "teaching": [
+      "Soy estudiante identifies you as a student. Spanish uses soy in this ordinary identification. English says “I’m a student”; this Spanish pattern uses estudiante without an extra word for “a”. You can learn the whole short sentence before learning a table of verb forms.",
+      "Estoy en la biblioteca gives your location. Keep estoy en together as the beginning of “I’m in/at…”, then add la biblioteca, the library. To say you are at home, use estoy en casa. En casa is the usual phrase here, without la. The library being a fixed building does not make soy the right choice for locating you.",
+      "Tengo una pregunta says that you have a question. Tengo already includes the “I” meaning, so you can begin with it. Yo, the separate word for “I”, can be added for emphasis or contrast. Reuse tengo when you change una pregunta to una duda, a doubt or uncertainty you want to ask about."
+    ],
+    "firstSteps": [
+      [
+        "Say who you are",
+        "Soy estudiante.",
+        "Begin with soy, “I am” for this identification. Add estudiante, “student”. Put them together without a word-for-word English “a”: soy estudiante. Estudiante can describe a student of any gender. Read it once, then hear the first audio line."
+      ],
+      [
+        "Say where you are",
+        "Estoy en la biblioteca.",
+        "Begin with estoy en, “I am in/at”. Add la biblioteca, “the library”. Say the two chunks together. Both this sentence and soy estudiante use “I am” in English, but their Spanish beginnings do different jobs."
+      ],
+      [
+        "Say what you have",
+        "Tengo una pregunta.",
+        "Begin with tengo, “I have”. Add una pregunta, “a question”. The sentence already tells the listener that you mean yourself. You do not need to add yo before every sentence. Hear this line and repeat the complete phrase."
+      ],
+      [
+        "Put the three thoughts into the visit",
+        "Soy estudiante. Estoy en la biblioteca. Tengo una pregunta.",
+        "Leave a small pause between the sentences. Each gives the listener one useful piece of information. Then change only the place: soy estudiante; estoy en casa; tengo una pregunta. The other two beginnings can stay just as they were."
+      ]
+    ],
+    "firstNotice": "Use the three “Hear this line” buttons above to rehearse one sentence at a time. Keep the English meaning beside the Spanish while these beginnings are new.",
+    "tables": {
+      "first": {
+        "caption": "Three complete thoughts, built from small reusable chunks.",
+        "headers": [
+          "Start",
+          "Finish",
+          "Meaning"
+        ],
+        "rows": [
+          [
+            "Soy",
+            "estudiante",
+            "I’m a student."
+          ],
+          [
+            "Estoy en",
+            "la biblioteca",
+            "I’m in the library."
+          ],
+          [
+            "Tengo",
+            "una pregunta",
+            "I have a question."
+          ]
+        ],
+        "languageColumns": [
+          0,
+          1
+        ]
+      }
+    }
+  },
+  "spanish-sounds": {
+    "subject": "spanish",
+    "opening": [
+      "Say casa as two parts: ca-sa. Give the first part a little more prominence, and keep the a in the second part clear. The capital letters in our cue, CA-sa, show the stronger part.",
+      "We will hear casa, amigo and café separately before putting them into longer sentences. A written accent, as in café, can point you to the stronger syllable. The audio and the written cue work together."
+    ],
+    "heading": "Say one word clearly before joining it to a sentence",
+    "teaching": [
+      "Start with the five vowels in the first audio line: a, e, i, o, u. Rough English reminders are ah, eh, ee, oh, oo. Those spellings are reminders, not exact replacements for the sound. Keep e and o steady rather than adding a little “y” or “w” sound at the end. Hear a vowel, pause, and copy it.",
+      "In amigo, say the three parts a-mi-go. Let MI stand out: a-MI-go. Keep the first a audible and clear. In café, the final part stands out: ca-FÉ. The accent over é tells you to put the stress there. You can slow down the whole word while keeping that pattern.",
+      "The h in hola, hablo and habló is silent. Say hola beginning with the o sound. Then hear HA-blo and ha-BLÓ in the last two audio lines. Hablo means “I speak”; habló means “he or she spoke” in these sentences. We will study the verb forms later. For now, notice that moving the stress changes the message."
+    ],
+    "firstSteps": [
+      [
+        "Hear two clear a sounds",
+        "casa → CA-sa",
+        "Choose the casa audio line. Say ca, then sa, then join them: casa. Let CA stand out while the second a keeps a clear vowel sound. You can make the second syllable lighter without turning it into an English “uh”."
+      ],
+      [
+        "Move the stronger part to the middle",
+        "amigo → a-MI-go",
+        "Choose the amigo line. Say a-mi-go slowly, with MI more prominent. All three vowels remain audible. Then say the whole word at a comfortable speaking pace while keeping that same stressed middle part."
+      ],
+      [
+        "Follow the mark over the final vowel",
+        "café → ca-FÉ",
+        "Choose the café line. The written accent is on é, so the final part is the stronger one. Hear the word, pause the audio, then say it. Compare CA-sa and ca-FÉ once more to hear how the stress lands in different places."
+      ]
+    ],
+    "firstNotice": "The capital letters and hyphens are teaching cues. Ordinary Spanish writes casa and amigo in lowercase without those hyphens, and keeps the written accent in café.",
+    "deeper": {
+      "title": "How word endings help you predict stress",
+      "originalTeaching": [
+        1
+      ]
+    },
+    "tables": {
+      "first": {
+        "caption": "Keep the ordinary spelling separate from the pronunciation cue.",
+        "headers": [
+          "Word",
+          "Say it in parts",
+          "Stronger part"
+        ],
+        "rows": [
+          [
+            "casa",
+            "CA-sa",
+            "First"
+          ],
+          [
+            "amigo",
+            "a-MI-go",
+            "Middle"
+          ],
+          [
+            "café",
+            "ca-FÉ",
+            "Last"
+          ]
+        ],
+        "languageColumns": [
+          0
+        ]
+      }
+    }
+  },
+  "questions": {
+    "subject": "spanish",
+    "opening": [
+      "At the café counter, you need to ask whether you can pay by card and explain that you cannot pay in cash. We will use puedo pagar, “I can pay”, for both sentences.",
+      "First learn the two payment phrases: con tarjeta means “by card”; en efectivo means “in cash”. Read them in the table and then put each after puedo pagar."
+    ],
+    "heading": "Build the sentence around the person who can act",
+    "teaching": [
+      "Puedo means “I can”; pagar means “to pay”. Together, puedo pagar means “I can pay”. Pagar keeps this form after puedo. Add con tarjeta to give the method, and put question marks around the written question: ¿Puedo pagar con tarjeta? Hear it as a request for information at the counter.",
+      "For the negative reply, put no before puedo: no puedo pagar en efectivo. Say the whole beginning no puedo, “I cannot”, then add the action and the payment method. The position of no makes it clear that paying in cash is unavailable to you in this exchange.",
+      "When the other person is going to act, the beginning changes. ¿Puedes ayudarme? asks a friend for help. ¿Puede ayudarme, por favor? addresses one person politely with usted in this example. Ayudarme means “to help me”; it stays the same. Local choices of tú and usted vary, so treat these as useful starting models."
+    ],
+    "firstSteps": [
+      [
+        "Build the action, then ask",
+        "¿Puedo pagar con tarjeta?",
+        "Start with puedo pagar, “I can pay”. Add con tarjeta, “by card”. The question asks whether that payment method is possible here. In writing, use the opening ¿ and closing ?. Say the complete question, keeping the meaning in mind."
+      ],
+      [
+        "Explain the limit",
+        "No puedo pagar en efectivo.",
+        "Begin with no puedo, “I cannot”. Keep pagar after it, then add en efectivo, “in cash”. Compare puedo pagar with no puedo pagar: the short word no goes before the word that tells us who can do the action."
+      ],
+      [
+        "Let the two sentences do different jobs",
+        "¿Puedo pagar con tarjeta? — No puedo pagar en efectivo.",
+        "The first sentence asks about a possible payment method. The second explains a limit. Both keep puedo pagar because you are still the person who would pay. In the demonstration above, the worker uses puede when speaking politely to you; listen for the change of person."
+      ]
+    ],
+    "firstNotice": "A useful exchange gives the other person enough information to respond. The card question and the cash limit do that in two short sentences.",
+    "tables": {
+      "first": {
+        "caption": "Build each payment sentence from left to right.",
+        "headers": [
+          "Start",
+          "Action",
+          "Method"
+        ],
+        "rows": [
+          [
+            "¿Puedo",
+            "pagar",
+            "con tarjeta?"
+          ],
+          [
+            "No puedo",
+            "pagar",
+            "en efectivo."
+          ]
+        ],
+        "languageColumns": [
+          0,
+          1,
+          2
+        ]
+      }
+    }
+  },
+  "chess-4": {
+    "subject": "chess",
+    "opening": [
+      "White’s bishop is on c4 and Black’s knight is on f7. Follow the bishop’s diagonal: c4, d5, e6, f7. The bishop can reach the knight because d5 and e6 are empty.",
+      "Now we will take the knight and leave the resulting position on the board. Only then will we ask what Black can capture. We will repeat the move with Black’s king in a different place."
+    ],
+    "heading": "Finish both turns before counting the exchange",
+    "teaching": [
+      "In the first position, White has king g1 and bishop c4; Black has king a8 and knight f7. Bxf7 removes the knight and puts the bishop on f7. Black’s remaining king is on a8, far from f7, so it cannot capture the bishop on its next move. White has taken a knight without an immediate recapture.",
+      "For the second position, move Black’s king to g8 before the capture. White can still play Bxf7+, now checking that king. Black answers Kxf7: from g8 the king goes one square diagonally to f7 and takes the bishop. White’s king on g1 does not attack f7, and there is no other white piece protecting it. A clear path for the bishop allowed the capture; the king’s new position allowed a recapture.",
+      "Count the pieces actually removed. The first line removes a black knight. The second removes that knight and White’s bishop. Bishops and knights are often valued at about three points each, so the second line is a rough equal-material trade. Those values are a guide to the exchange; the full position decides the game result."
+    ],
+    "firstSteps": [
+      [
+        "Trace the whole route",
+        "c4 → d5 → e6 → f7.",
+        "A bishop keeps to one diagonal. Start on c4, then step one file right and one rank up each time. D5 and e6 are empty in this position, so the bishop can pass through them. F7 contains the black knight."
+      ],
+      [
+        "Make the capture on the board",
+        "Bxf7: remove the knight; put the bishop on f7.",
+        "Move only after tracing the clear path. The x in Bxf7 means a capture; B tells you the bishop moved. Black’s knight has come off the board. White’s bishop is still there, now occupying the destination square."
+      ],
+      [
+        "Give Black a turn in your thinking",
+        "The black king on a8 cannot capture a bishop on f7 in one move.",
+        "A king reaches neighboring squares only. A8 and f7 are too far apart for a king move, and Black has no other piece left in this diagram. There is no immediate recapture of the bishop."
+      ],
+      [
+        "Count the material and check the game result separately",
+        "One black knight has been captured; White still has its bishop.",
+        "That describes the material change. In this deliberately small position, only two kings and one bishop remain after Bxf7. A king and one bishop cannot mate a lone king, so the resulting game is drawn for insufficient mating material. Taking a piece and winning a game are separate conclusions."
+      ]
+    ],
+    "firstNotice": "Use “Show next move” in the board above to see the knight removed and the bishop arrive. This is a capture-accounting example; its sparse final position is drawn.",
+    "secondNotice": "After …Kxf7, only the two kings remain, so this second sparse position is also drawn. The useful comparison here is the extra recapture: White lost a bishop as well as taking a knight.",
+    "tables": {
+      "second": {
+        "caption": "Both lines start with Bxf7. Black’s king position changes the reply.",
+        "headers": [
+          "King starts",
+          "Black can reply",
+          "Pieces removed"
+        ],
+        "rows": [
+          [
+            "a8",
+            "No immediate recapture",
+            "Black knight"
+          ],
+          [
+            "g8",
+            "…Kxf7",
+            "Black knight and White bishop"
+          ]
+        ]
+      }
+    },
+    "takeaway": "Trace the capture, then inspect the reply. Count both sides’ losses before calling a piece free. A material gain by itself does not decide whether the game is won or drawn.",
+    "demoEndings": [
+      "Bxf7 takes the knight without an immediate recapture. Only kings and one bishop remain: the position is drawn for insufficient mating material.",
+      "…Kxf7 takes the bishop in reply. The material trade was bishop for knight. Only two kings remain, so this position is also drawn."
+    ]
+  }
+}

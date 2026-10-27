@@ -1,0 +1,8 @@
+.lesson-reference{margin:25px 0 18px}
+.lesson-reference table{width:100%;border-collapse:collapse;table-layout:auto;font:16px/1.6 system-ui;color:var(--study-ink)}
+.lesson-reference caption{text-align:left;font-size:16px;line-height:1.65;color:var(--study-muted);padding-bottom:12px}
+.lesson-reference th,.lesson-reference td{text-align:left;vertical-align:top;padding:12px 9px;border-bottom:1px solid var(--study-line);overflow-wrap:normal;word-break:normal}
+.lesson-reference thead{background:var(--study-panel)}
+.lesson-reference tbody th{font-weight:600}
+.lesson-deeper{margin:24px 0}
+@media(max-width:480px){.lesson-reference table{font-size:15px}.lesson-reference th,.lesson-reference td{padding:10px 5px}.lesson-reference caption{font-size:15px}}

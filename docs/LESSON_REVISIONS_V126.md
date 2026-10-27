@@ -1,0 +1,22 @@
+# Beginner teaching revised in V126
+
+Six existing lessons have new displayed introductions, reasoning and primary worked steps. This edits the teaching where the learner reads it; it does not add another end-of-lesson exercise. There are still 87 formal units. The underlying V125 records and original authoring/import sources remain intact for provenance, and display revisions are explicit editable data in `source/lesson-revisions-v126.json`.
+
+| Lesson | What changed |
+|---|---|
+| Piano: Set up your hands | Follow thumb/index/middle through five named keys; notice the key release; return using a landmark. Separate right/left tables connect each pitch to the intended finger. |
+| Piano: Keep the beat | Follow press, hold, repeat and release across a real four-second group. The next beat 1 marks the end of the group; saying 4 begins the final beat. A clock/action table makes the difference visible. |
+| Spanish: Three sentences | Build soy estudiante, estoy en la biblioteca and tengo una pregunta from short meaningful chunks before discussing broader grammar. Explain the missing English “a”, the usual en casa phrase and when yo can be omitted. |
+| Spanish: Vowels and stress | Hear and say casa, amigo and café first, with clear cues. The original spelling/stress paragraph moves into an optional section, preserved exactly. Ordinary spelling is distinguished from the capitalized teaching cues. |
+| Spanish: Questions | Teach puedo + pagar + a payment method, then no puedo. Distinguish the person forms puedo, puedes and polite puede using the existing spoken exchange. |
+| Chess: Is the piece free? | Follow the diagonal, remove the knight, inspect the reply and count both losses. Complete the sparse examples: K+B versus K and K versus K are drawn for insufficient mating material. Final board captions and the takeaway now state this too. |
+
+The six revisions contain 22 primary worked steps and seven reference tables. Their existing titles, objectives, order, problems, second worked steps, personal review and optional practice remain. Only the chess second-case notice and takeaway also receive explicit game-result clarification. The two original chess move sequences and every position remain unchanged; their final displayed captions are revised. Spanish table chunks carry appropriate language attributes.
+
+`v126Lesson` returns a displayed copy while `byId` and serialized `full-course-data` retain the base records. Unit numbers are calculated from the stored record, not the displayed copy. The builder embeds only the relevant revisions in each reader, and clones a demo before applying the two chess ending captions. No shared source demo object is mutated. No storage keys, quiz requirements or assessed successes are added. V125's 21 variations and the V124-compatible portable backup format remain.
+
+The fuller WCAG checks exposed tiny mobile piano keys. The shared teaching keyboard now has a named, keyboard-focusable horizontal scroll region. A minimum keyboard width keeps white keys at least 48 px and black keys above 24 px; the surrounding page does not scroll sideways. The first note of the example is brought into view when mounting/playing. Workshop minimum widths are retained. Note order, pitch, timing, media cancellation and playable controls use the existing engine.
+
+`qa/check-lesson-revisions.py` checks the displayed-data shape, exact V125 base records and all unrelated embedded assets. It independently checks both full chess lines and insufficient-material outcomes with python-chess, finger routes against their notes and beat times against the actual scheduled examples. `qa/test-lesson-revisions.cjs` checks all six displayed lessons, 22 steps, seven tables, the original optional spelling paragraph, real unit numbers, source-record immutability, actual board continuations and beat playback. Twenty-four full scoped axe checks cover 320/390 px and both themes, including playable-key target sizes. It checks starting-note visibility, preserved assessment data and operation after networking is disabled. Both checks join `npm test` with all previous suites.
+
+Direct local-file navigation is blocked by managed Chromium in this workspace; offline testing disables networking after the initial HTML load. The Vercel API currently returns proxy 403 here. A new publication is not claimed until a deployment succeeds and its files are verified; the last verified live version is V123.

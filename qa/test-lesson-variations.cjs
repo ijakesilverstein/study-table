@@ -1,8 +1,8 @@
 const {chromium}=require('playwright'),assert=require('assert/strict');
-const data=require('../source/lesson-variations-v125.json');
+const data=require('../source/lesson-variations-v125.json'),edition=Number(require('../package.json').version.split('.')[0]);
 (async()=>{const b=await chromium.launch(require('./browser-options.cjs')),p=await b.newPage({viewport:{width:1280,height:900}}),errors=[];p.on('pageerror',e=>errors.push(e.message));
  const open=async(s,id)=>{await p.evaluate(([s,id])=>studyTableFullCourses.open(s,id),[s,id]);await p.waitForFunction(([s,id])=>{const w=document.getElementById('frame')?.contentWindow;return w?.studyTableFullCourse?.subject===s&&w.document.querySelector('#courseArticle h1')?.textContent===w.studyTableFullCourse.units.find(u=>u.id===id)?.title},[s,id]);return p.frames().find(f=>f.parentFrame()===p.mainFrame())};
- try{await p.goto(process.env.STUDY_TEST_URL||'http://127.0.0.1:8797/index.html');await p.waitForFunction(()=>READY&&studyTableFullCourses.version===125);
+ try{await p.goto(process.env.STUDY_TEST_URL||'http://127.0.0.1:8797/index.html');await p.waitForFunction(n=>READY&&studyTableFullCourses.version===n,edition);
  const evidence={schema:1,records:{'piano-5':{attempts:2,independent:1,last:100}}};await p.evaluate(x=>localStorage.setItem('studytable_v102_learning',JSON.stringify(x)),evidence);
  for(const [id,lesson] of Object.entries(data)){
   const f=await open(lesson.subject,id);assert.equal(await f.locator('#variationTitle').innerText(),lesson.title);assert(await f.locator('#lessonVariation').isVisible());assert.equal(await f.locator('#lessonVariation').evaluate(e=>!!e.closest('details')),false);assert.equal(await f.locator('#courseVariation').evaluate(e=>e.open),false);
