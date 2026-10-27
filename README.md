@@ -2,6 +2,8 @@
 
 An offline-capable learning app. Current downloads and online access are published separately at https://study-table-downloads.vercel.app. The earlier app project is not modified by this delivery workflow.
 
+V123 restores twelve interactive medicine/business figures from the original Claude V120. Their corrected models explain separate working-capital balances, price/volume changes, feedback, approximate mean pressure, water balance, first-order decay and predictive values. Responsive diagrams and numerical tables work with keyboard controls; all 87 V122 unit records and the other 213 embedded assets remain unchanged. Incoming figure IDs now have preservation checks alongside course data. See [the restoration accounting](docs/RESTORED_FIGURES_V123.md).
+
 V122 adds slower teaching to fourteen difficult units across all seven courses: 51 additional step explanations and four tables make rhythm, denominators, cash timing and algebra explicit. All V121 lessons, projects, workshops, review state and accessibility repairs remain. See [the teaching changes](docs/TEACHER_NOTES_V122.md).
 
 V121 merges the actual uploaded Claude V120 into our V119 source: 22 new medicine/business units, their two projects and workshops, calculus/physics workshops, and per-unit reading/self-review controls. All 65 earlier units, demonstrations and accessibility repairs remain. The original upload is archived unchanged, and factual corrections are recorded separately. See [the merge accounting](docs/CLAUDE_V120_MERGE_V121.md).
@@ -27,7 +29,7 @@ python3 scripts/build.py
 python3 -m http.server 8769 --directory public
 ```
 
-Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v122.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
+Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v123.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
 
 - `source/teacher-prose-v109.json`: rewritten explanations in existing lessons.
 - `source/draft-foundation-lessons.json` and `source/lessons-v109.json`: the 12 new lessons. The historical `draft-` filename is retained for build compatibility; these records are now published.

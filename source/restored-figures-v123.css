@@ -1,0 +1,15 @@
+.v123-figure{padding:18px;overflow-wrap:anywhere}
+.v123-figure .quantity-figure{overflow-x:visible;padding:0;margin:20px 0}
+.v123-figure svg{display:block;min-width:0;width:100%;max-width:450px;height:auto;margin:0 auto 24px;color:var(--study-ink)}
+.v123-figure svg text{fill:currentColor;font:16px system-ui}
+.v123-figure .v114-controls,.v123-figure .v114-control{min-width:0}
+.v123-figure select{width:100%;max-width:100%;min-width:0}
+.v123-figure input[type=range]{min-height:44px;min-width:0;max-width:100%;margin:0;box-sizing:border-box}
+.v123-table{width:100%;border-collapse:collapse;font:15px/1.65 system-ui;color:var(--study-ink)}
+.v123-table caption{text-align:left;font-weight:650;padding:0 0 12px}
+.v123-table :is(th,td){padding:10px 6px;text-align:left;vertical-align:top;border-bottom:1px solid var(--study-line)}
+.v123-table thead{background:var(--study-panel)}
+.v123-table tbody th{font-weight:600}
+.v123-assumptions{font-size:15px;line-height:1.7;color:var(--study-muted)}
+.v123-figure .calculation{white-space:normal;overflow-wrap:anywhere}
+@media(max-width:480px){.v123-figure{padding:12px}.v123-table{font-size:14px}.v123-table :is(th,td){padding:9px 3px}}

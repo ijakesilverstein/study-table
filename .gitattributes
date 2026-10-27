@@ -1,0 +1,3 @@
+# Exact historical extracts retain the separator newline from the uploaded HTML.
+source/imports/claude-v120-medicine-figures.js whitespace=-blank-at-eof
+source/imports/claude-v120-business-figures.js whitespace=-blank-at-eof

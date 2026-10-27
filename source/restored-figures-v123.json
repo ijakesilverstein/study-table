@@ -1,0 +1,28 @@
+{
+  "medicine": {
+    "original": "imports/claude-v120-medicine-figures.js",
+    "sha256": "be00eb75cb7002fee5b6084d4dceb8a238e73b2a067f1944bae034e2f88ed39d",
+    "ids": [
+      "homeostasis",
+      "blood-pressure",
+      "kidney-balance",
+      "drug-halflife",
+      "test-interpretation",
+      "gas-exchange"
+    ],
+    "corrected": "restored-medicine-v123.js"
+  },
+  "business": {
+    "original": "imports/claude-v120-business-figures.js",
+    "sha256": "7a494306cd4a3a2627dd314235a5455d070387e329c1ef057df22d38b901dbd9",
+    "ids": [
+      "unit-economics",
+      "breakeven",
+      "cash-cycle",
+      "growth-cash-trap",
+      "pricing",
+      "discounting"
+    ],
+    "corrected": "restored-business-v123.js"
+  }
+}

@@ -156,3 +156,8 @@ Record factual corrections separately from the imported source, including the co
 ## V122 — explain the difficult steps
 
 Fourteen existing lessons, two in each of the seven courses, now have visible introductions and 51 extra step explanations. They slow down two-hand coordination, reading a held ending, noun agreement, past narration, capture accounting, pin legality, derivative and substitution algebra, energy and collision equations, gas exchange, test denominators, cash-cycle timing and customer payback. Four semantic tables make the beats, people, dates and running cash balance inspectable. Earlier-unit links offer specific prerequisite teaching. No quizzes, unit-count inflation or self-reported mastery is added. All V121 course records remain unchanged apart from three explicitly recorded factual qualifications. See docs/TEACHER_NOTES_V122.md.
+
+
+## V123 — recover twelve missing interactive figures
+
+The brief investigation exposed six medicine and six business figures that were present in Claude V120 but omitted from the V121 merge. Recover every original figure ID, preserve the exact incoming blocks, and correct the calculations, labels and model assumptions separately. The restored figures provide responsive diagrams, keyboard-operable controls, live calculations and semantic numerical tables. Correct working-capital valuation, price-rise volume loss, zero contribution, MAP approximation, feedback, first-order decay and predictive-value edge cases. Preserve all 87 V122 unit records and the other 213 archive assets. Expand merge checks to enumerate incoming figure code and verify all twelve in the browser. See docs/RESTORED_FIGURES_V123.md.

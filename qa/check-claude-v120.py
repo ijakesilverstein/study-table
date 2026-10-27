@@ -29,6 +29,13 @@ for change in json.loads((r/'source/teaching-edits-v122.json').read_text()):
  for key in change['path'][:-1]:t=t[key]
  assert t[change['path'][-1]]==change['original'];t[change['path'][-1]]=change['replacement']
 assert expected==courses,'unaccounted imported or prior course change'
+# Inventory incoming executable figure features as well as course JSON.
+figure_pattern=r"V114_FIGURES\[['\"]([^'\"]+)['\"]\]\s*="
+for c in courses.values():
+ incoming_ids=set(re.findall(figure_pattern,uploaded[c['path']]['t']))
+ built_ids=set(re.findall(figure_pattern,built[c['path']]['t']))
+ assert incoming_ids==built_ids,(c['subject'],'incoming figure inventory changed',incoming_ids-built_ids)
+
 assert len(built)==len(uploaded)==215 and set(old)<=set(built)
 paths={c['path'] for c in courses.values()}
 for path in old:
@@ -51,4 +58,4 @@ assert abs(.21*(760-47)-40/.8-99.73)<1e-8
 assert abs(1.34*15*.98+.003*100-19.998)<1e-8
 assert 99/(99+495)==1/6 and abs(2970/3320-.8945783132530121)<1e-12
 assert 10*3/(.5*2)==30 # 10 N over 3 m becomes the kinetic energy of a 2 kg cart
-print('CLAUDE_V120_MERGE_PASS: all incoming content accounted for; 65 original units exact, 22 added units, four added workshops, two added projects, 215 assets and independently checked corrected calculations.')
+print('CLAUDE_V120_MERGE_PASS: incoming course data and figure IDs accounted for; 65 original units exact, 22 added units, four added workshops, two added projects, 215 assets and independently checked corrected calculations.')

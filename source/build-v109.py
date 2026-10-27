@@ -115,18 +115,20 @@ html=once(html,"btn.onclick=()=>{night=!night;try{localStorage.setItem(KEY,night
 html=once(html,"function setTheme(v){\n document.documentElement.dataset.studyTheme=v;", "function setTheme(v){\n if(window.studyTableTheme){window.studyTableTheme.set(v);return}\n document.documentElement.dataset.studyTheme=v;")
 # A local skip link focuses the reader without going through archive navigation.
 html=once(html,"if(!a)return;let target=localURL(a.getAttribute('href'));","if(!a||a.classList.contains('skip-to-lesson'))return;let target=localURL(a.getAttribute('href'));")
-html=html.replace('Study Table V108 — Taught Lessons','Study Table V122 — Full Courses')
-html=html.replace('study-table-v108.html','study-table-v122.html').replace('Study_Table_V108.html','Study_Table_V122.html')
+# Bind hash routing to the loaded iframe, not a fixed timer that can target a replacement.
+html=once(html,"let params=full.slice(p.length);if(params.startsWith('?')||params.startsWith('#'))setTimeout(()=>{try{if($('frame').contentWindow&&params.startsWith('#'))$('frame').contentWindow.location.hash=params}catch{}},250)}", "const params=full.slice(p.length),routedFrame=$('frame');if(params.startsWith('#')){const applyHash=()=>{try{if(routedFrame!==$('frame')){routedFrame.removeEventListener('load',applyHash);return}const child=routedFrame.contentWindow;if(!child||child.document.URL.startsWith('about:blank')||child.document.readyState!=='complete')return;routedFrame.removeEventListener('load',applyHash);child.location.hash=params}catch{routedFrame.removeEventListener('load',applyHash)}};routedFrame.addEventListener('load',applyHash);applyHash()}}")
+html=html.replace('Study Table V108 — Taught Lessons','Study Table V123 — Full Courses')
+html=html.replace('study-table-v108.html','study-table-v123.html').replace('Study_Table_V108.html','Study_Table_V123.html')
 # Append after the historical layers so this palette has a single clear point of ownership.
 end=html.rindex('</body>')
 parent=(root/'full-course-parent.js').read_text().replace('__FULL_COURSES__',json.dumps(full_meta,separators=(',',':')))
 html=html[:end]+'\n<style id="v109-theme">'+(root/'theme-v109.css').read_text()+'\n'+(root/'full-course-parent.css').read_text()+'</style><script>'+parent+'</script><script id="modal-access-v119">'+(root/'modal-access-v119.js').read_text()+'</script>\n'+html[end:]
 # Remove legacy trailing spaces from the emitted shell, keeping archived originals intact.
 html=re.sub(r'[ \t]+(?=\n)', '',html)
-(root/'Study_Table_V122.html').write_text(html)
+(root/'Study_Table_V123.html').write_text(html)
 (root/'teacher-v109.js').write_text(teacher)
 (root/'demos-v109.json').write_text(json.dumps(demos,ensure_ascii=False,indent=2))
 (root/'lessons-built-v109.json').write_text(json.dumps(lessons,ensure_ascii=False,indent=2))
 (root/'full-courses-built.json').write_text(json.dumps(courses,ensure_ascii=False,indent=2))
 (root/'course-map-built.json').write_text(json.dumps(catalogue,ensure_ascii=False,indent=2))
-print('V122 built:',len(html.encode()),'bytes; 38 short lessons plus 87 full-course units in seven courses; original practice studios preserved.')
+print('V123 built:',len(html.encode()),'bytes; 38 short lessons plus 87 full-course units in seven courses; original practice studios preserved.')
