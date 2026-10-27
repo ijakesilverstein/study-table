@@ -23,6 +23,11 @@ for change in json.loads((r/'source/claude-corrections-v121.json').read_text()):
  t=expected
  for key in change['path'][:-1]:t=t[key]
  assert t[change['path'][-1]]==change['original'];t[change['path'][-1]]=change['replacement']
+# Later editorial changes remain explicit; the actual imported V120 pack above is still exact.
+for change in json.loads((r/'source/teaching-edits-v122.json').read_text()):
+ t=expected
+ for key in change['path'][:-1]:t=t[key]
+ assert t[change['path'][-1]]==change['original'];t[change['path'][-1]]=change['replacement']
 assert expected==courses,'unaccounted imported or prior course change'
 assert len(built)==len(uploaded)==215 and set(old)<=set(built)
 paths={c['path'] for c in courses.values()}

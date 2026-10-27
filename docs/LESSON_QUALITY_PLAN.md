@@ -151,3 +151,8 @@ Validate keyboard entry/Tab/Escape/return, nested native dialogs, previous inert
 Preserve the supplied 6,739,561-byte HTML unchanged and extract its additions reproducibly. Merge all 22 medicine/business units, both projects and workshops, both quantitative workshops and per-unit reading/revisit controls while retaining the previous 65 units and all demonstrations. Keep the V119 accessibility fixes and local skip-link behavior.
 
 Record factual corrections separately from the imported source, including the cost basis for inventory/payables, consistent working-capital and financing arithmetic, respiratory quotient direction and limits on inference from normal pressure or saturation. Reading history and self-reported recall remain separate from assessed mastery. Verify exact content accounting, all 87 units, new written project/workshop chapters, personal-review persistence/reset, mobile/both themes and all prior regression checks.
+
+
+## V122 — explain the difficult steps
+
+Fourteen existing lessons, two in each of the seven courses, now have visible introductions and 51 extra step explanations. They slow down two-hand coordination, reading a held ending, noun agreement, past narration, capture accounting, pin legality, derivative and substitution algebra, energy and collision equations, gas exchange, test denominators, cash-cycle timing and customer payback. Four semantic tables make the beats, people, dates and running cash balance inspectable. Earlier-unit links offer specific prerequisite teaching. No quizzes, unit-count inflation or self-reported mastery is added. All V121 course records remain unchanged apart from three explicitly recorded factual qualifications. See docs/TEACHER_NOTES_V122.md.

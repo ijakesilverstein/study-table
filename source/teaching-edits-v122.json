@@ -1,0 +1,41 @@
+[
+  {
+    "path": [
+      "business",
+      "units",
+      7,
+      "second",
+      "steps",
+      2,
+      2
+    ],
+    "original": "Cutting acquisition cost by a third is usually harder than adding two orders a year.",
+    "replacement": "Both changes are possibilities to investigate. The example does not tell us which is easier or what either would cost."
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      5,
+      "first",
+      "steps",
+      2,
+      1
+    ],
+    "original": "Rate ∝ area, so area is the dominant design variable",
+    "replacement": "Rate ∝ usable area, with the other diffusion terms held constant"
+  },
+  {
+    "path": [
+      "medicine",
+      "units",
+      5,
+      "first",
+      "steps",
+      2,
+      2
+    ],
+    "original": "Subdividing the same volume is the cheapest way to multiply exchange surface.",
+    "replacement": "Subdivision greatly increases surface for a given volume. This comparison isolates area; it does not establish which factor limits transfer in an actual lung."
+  }
+]

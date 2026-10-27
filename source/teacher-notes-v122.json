@@ -1,0 +1,355 @@
+{
+  "noun-phrases": {
+    "title": "Build the order one change at a time",
+    "start": [
+      "Let’s start with un café: a coffee. Keep that pair together. When I add pequeño, I get un café pequeño, a small coffee. The adjective describes café, so its form has to fit that noun. Quiero simply goes in front of the group: Quiero un café pequeño.",
+      "Now I order two. I replace un with dos, then make both café and pequeño plural: dos cafés pequeños. Quiero stays exactly as it was. I’m changing the order, not the person doing the wanting."
+    ],
+    "links": [
+      "spanish-1"
+    ],
+    "first": [
+      "El café gives us the noun’s grammatical gender. For an unspecified coffee, el changes to un. You can learn el café and un café as useful pairs before learning every article form.",
+      "Read the phrase in three chunks: Quiero / un café pequeño / por favor. They mean I want / a small coffee / please. Pequeño describes the coffee; por favor makes the request polite.",
+      "Here are the actual edits: un → dos, café → cafés, pequeño → pequeños. The -s on pequeños does not mean several sizes. It matches the plural noun. Compare dos mesas pequeñas: the adjective also keeps the feminine -a from mesa."
+    ]
+  },
+  "spanish-2": {
+    "title": "Build a short account of yesterday",
+    "start": [
+      "Suppose you have just come home from the market. I’ll tell a friend what happened in two pieces: Fui al mercado. Compré pan. I went to the market. I bought bread. Each piece reports an event as completed in this story.",
+      "Then I join them with y, meaning and, and put ayer at the beginning: Ayer fui al mercado y compré pan. You can use that complete sentence now. The longer discussion below compares this way of telling a story with describing a past habit."
+    ],
+    "links": [
+      "habits"
+    ],
+    "first": [
+      "Ayer sets the time, but it does not replace a past-tense verb. English does the same in yesterday I bought: yesterday and bought both carry information about time.",
+      "Build the destination separately: a means to and el mercado means the market. A + el becomes al. Fui al mercado therefore means I went to the market. Learn fui as a whole form; it is not made by adding a regular ending to ir.",
+      "Write comprar, cross out -ar, and add -é: compré. Say com-PRÉ, with the stress at the end. Compro, with stress on COM and no accent, means I buy. That small written mark matters.",
+      "The y links the two events; it does not change either verb. If the purchase was coffee instead, I would change only pan: Ayer fui al mercado y compré café. That is one small change to a sentence whose structure already works."
+    ]
+  },
+  "piano-5": {
+    "title": "Hear what changes on beat two",
+    "start": [
+      "Place the left hand on C3 and the right hand over C4, D4 and E4. C3 and C4 name pitches an octave apart; the numbers do not tell you which fingers to use. For the right hand here, use thumb on C4, index on D4 and middle finger on E4.",
+      "I count four slow beats. On 1, I press left C3 and right E4 together. On 2, only the right hand changes. If the left hand lifts too, I reduce the exercise to just those first two beats and try again. That is the particular movement we need to learn."
+    ],
+    "links": [
+      "comfortable-hands",
+      "piano-0"
+    ],
+    "first": [
+      "The left hand has one beginning, on beat 1. Keep the key down through 2, 3 and 4, then release when the next beat would begin. The sound may fade while the key is held; pressing harder will not restore it.",
+      "Play the right hand alone first: middle finger E, index D, thumb C, index D. Release each right-hand key as the next begins. Leave out the left hand until this little route feels unhurried.",
+      "Prepare both notes before the count starts. After a quiet 1–2–3–4 count-in, press C3 and E4 together on the next 1. Pause and repeat that start if the hands are arriving at different times.",
+      "On beat 2, notice the difference between holding a key and pressing it again. The left C stays down while right E releases and right D begins. Repeating low C four times would make a different bass part. Use the separate-hand playback to hear the difference."
+    ],
+    "table": {
+      "caption": "One bar: a new right-hand note on each beat",
+      "headers": [
+        "Beat",
+        "Left hand",
+        "Right hand"
+      ],
+      "rows": [
+        [
+          "1",
+          "Press C3",
+          "Press E4"
+        ],
+        [
+          "2",
+          "Keep C3 down",
+          "Change to D4"
+        ],
+        [
+          "3",
+          "Keep C3 down",
+          "Change to C4"
+        ],
+        [
+          "4",
+          "Keep C3 down",
+          "Change to D4"
+        ]
+      ],
+      "after": "At the end of beat 4, release both hands. A held key still occupies time even when it makes no new attack."
+    }
+  },
+  "read-melody": {
+    "title": "Read the ending before you play",
+    "start": [
+      "I look at the two bars before starting. The first has four notes: C, D, E, G. The second has three: E, D, C. Three notes can still fill four beats, because the final C lasts two beats. A bar counts time, not the number of times a finger goes down.",
+      "I tap the rhythm first: four taps in the first bar, then E on 1, D on 2, C on 3 and no new tap on 4. Once that count is steady, I add the pitches. Keep the score visible; you do not have to memorize it to read it."
+    ],
+    "links": [
+      "staff",
+      "rests-and-halves"
+    ],
+    "first": [
+      "Find the first C, then follow the direction. C–D–E moves to neighboring staff positions. E–G skips over F. On the way back, G–E is another skip, followed by the steps E–D–C. This preview tells the hand where a larger movement is coming.",
+      "The bar line restarts the count at 1; it does not insert a pause. The last C begins on beat 3 of the second bar. Keep it down through beat 4, and release where the next 1 would fall.",
+      "Try right-hand fingers 1–2–3–5 | 3–2–1 if comfortable. Before starting, let finger 5 find G. If that reach causes hesitation, rehearse E–G–E slowly, then put it back into the phrase.",
+      "Count the final 4 aloud while keeping C down. A common early ending releases C as soon as 4 is spoken. That loses the fourth beat’s duration. Let the whole beat pass before releasing."
+    ]
+  },
+  "count-exchanges": {
+    "title": "Keep the captured pieces in two piles",
+    "start": [
+      "I’ll keep score from White’s point of view. One pile contains Black’s pieces that White takes; the other contains White’s pieces that Black takes. I compare those piles only after the reply. This keeps the first exciting capture from hiding what it costs.",
+      "In the first example, the white bishop takes the black knight on d5. Then Black’s e6 pawn takes that bishop on d5. The pawn has moved; it has not been captured. Only a knight and a bishop belong in our two piles."
+    ],
+    "links": [
+      "read-moves",
+      "chess-2"
+    ],
+    "first": [
+      "Bxd5 says bishop captures on d5. Starting at c4, the bishop moves one diagonal square to d5 and removes the black knight. Put that knight in White’s gains pile: about 3.",
+      "The dots in ...exd5 show Black’s reply. The pawn starts on the e-file, at e6, and captures diagonally onto d5. Remove the white bishop and leave the black pawn on d5. Put the bishop in White’s losses pile: about 3.",
+      "Subtract loss from gain: 3 − 3 = 0. That describes the change caused by these two moves. It does not say the entire position is equal: Black already had an extra pawn, and still has it. Use the board’s back button to compare the before and after positions."
+    ]
+  },
+  "pins": {
+    "title": "Move the blocker in your mind first",
+    "start": [
+      "Look along the white bishop’s diagonal: c3, d4, e5, f6, g7. The black knight on f6 interrupts the line before it reaches the black king on g7. We need the whole line to understand the knight’s situation.",
+      "I imagine lifting that knight off the board. The bishop now attacks the king. Before choosing a destination for the knight, I have found a problem that its move must solve: it may not leave its own king attacked. A knight’s usual movement pattern is only part of the legality check."
+    ],
+    "links": [
+      "chess-4",
+      "read-moves"
+    ],
+    "first": [
+      "Trace the squares in order rather than drawing a vague diagonal through the position. The bishop reaches d4 and e5, then meets the knight on f6. It cannot jump over that knight to capture anything behind it.",
+      "Every knight jump changes both file and rank by unequal amounts: one and two. None of those jumps from f6 keeps the knight on this bishop diagonal. It cannot continue blocking the line, and from f6 it cannot capture the bishop on c3 either.",
+      "In this position, the exposed target is a king, so the move would be illegal. In the second example the exposed target is a queen. Losing a queen can be disastrous, but a move exposing it can still be legal. Keep the rule test and the material calculation separate."
+    ]
+  },
+  "derivative-rules": {
+    "title": "Separate the position from its rate",
+    "start": [
+      "Read s(t) as “the position at time t.” The rule s(t)=3t²+2t+5 tells us a location. At t=2 it gives 21 metres. Velocity asks a different question: how quickly is that position changing at this instant? We need a rate rule before substituting the time.",
+      "I’ll differentiate one term at a time and keep the results on a separate line. The final 5 shifts every position reading by the same amount. Because that shift does not grow as time passes, it contributes zero to velocity."
+    ],
+    "links": [
+      "calculus-2",
+      "algebra-for-rates"
+    ],
+    "first": [
+      "For 3t², keep the multiplier 3, multiply by the exponent 2, and reduce the exponent to 1: 3 × 2 × t = 6t. For 2t, one extra second adds 2 metres to that term, so its rate is 2 m/s. A fixed 5 metres adds no changing part.",
+      "Add the rates of the three terms: 6t + 2 + 0. This is v(t), not another position formula. With t measured in seconds, the original coefficients carry the units needed to make s a length and v a length per second.",
+      "Now put 2 into v(t): 6 × 2 + 2 = 14 m/s. Compare with s(2)=21 m. The numbers answer different questions and have different units. Fourteen m/s is the instantaneous rate at t=2, not the distance traveled during the first two seconds."
+    ]
+  },
+  "integral-substitution": {
+    "title": "Keep the inside expression and its change together",
+    "start": [
+      "The symbol ∫ asks for accumulation; in this indefinite integral, we are looking for a function whose derivative gives the expression beside it. The dx tells us the original variable is x. The final +C allows any constant, since differentiating a constant gives zero.",
+      "In 2x(x²+1)³, I notice an inside expression, x²+1, and its derivative, 2x, next to it. That pairing is the reason this substitution works. Calling x²+1 by a shorter name is useful only if we also account for its rate of change."
+    ],
+    "links": [
+      "calculus-3",
+      "calculus-4"
+    ],
+    "first": [
+      "Let u=x²+1. Its derivative is du/dx=2x. The shorthand du=2x dx lets us replace the entire factor 2x dx with du. The original expression is therefore ∫u³ du. There should be no leftover x in this rewritten integral.",
+      "Why divide by 4? Differentiating u⁴ gives 4u³. Dividing by 4 cancels that extra multiplier, so the derivative of u⁴/4 is exactly u³. This reverse check is safer than remembering “increase the power” alone.",
+      "Replace u with x²+1 and check using the chain rule: (1/4) × 4(x²+1)³ × 2x = 2x(x²+1)³. The outside 4 cancels the quarter; the inside derivative supplies 2x. Both pieces of the original expression return."
+    ]
+  },
+  "physics-2": {
+    "title": "Do the algebra with a particular sled first",
+    "start": [
+      "Use a 2 kg sled to make the energy amounts concrete. Starting from rest, it drops 5 m. With g=10 m/s², the loss of gravitational energy is 2 × 10 × 5 = 100 joules. In the frictionless model, all 100 joules become kinetic energy.",
+      "The speed is hidden inside K=½mv². For this sled, ½ × 2 × v² = 100, so v²=100 and v=10 m/s. Below, the same calculation keeps mass as a letter, showing why the result also holds for other masses under the same assumptions."
+    ],
+    "links": [
+      "units-and-directions",
+      "physics-1"
+    ],
+    "first": [
+      "Choose the starting and ending moments: still at the top, moving at the bottom. We compare energy between those moments. This approach gives the final speed without requiring the time or the hill’s detailed shape.",
+      "Read mgh as mass × gravitational field strength × vertical drop. Read ½mv² as half × mass × speed × speed. Both sides are energies measured in joules. The h is the loss of height, not the length traveled along the slope.",
+      "Divide both sides by the same nonzero mass: gh=½v². Multiply by 2 to remove the half: 2gh=v². Substitution gives 2 × 10 × 5 = 100. We have found speed squared; stopping at 100 would leave the wrong quantity.",
+      "The square root reverses squaring: 10 × 10 = 100. Since the question asks for speed, use the nonnegative root, 10 m/s. Energy alone has not told us the direction of motion or how long the trip took."
+    ]
+  },
+  "gas-exchange": {
+    "title": "Picture one tiny part of the lung",
+    "start": [
+      "An alveolus contains air. Beside it is a tiny blood vessel, a capillary. Oxygen moves from the air, across the thin separating barrier, into the blood when the oxygen partial pressure is higher on the air side. Partial pressure describes one gas’s contribution to the pressure of a mixture.",
+      "The first example isolates surface area. Imagine keeping the same total air volume but dividing it among many little spaces. There is more boundary where air can meet blood. That helps transfer only if air and blood reach the surfaces and the barrier and pressure difference are suitable."
+    ],
+    "links": [
+      "two-circuits"
+    ],
+    "first": [
+      "The 70 m² figure is a representative adult exchange-area estimate, not something we derive by multiplying the stated count by a known alveolus size. Actual lung dimensions vary with inflation and the method of measurement. Use it here as the supplied comparison value.",
+      "Convert 3 litres to 0.003 m³. A sphere satisfies V=4πr³/3, giving r≈0.089 m. Its area is 4πr²≈0.10 m². Comparing 70 with 0.10 gives roughly 700 times as much surface; the arithmetic compares area, not lung capacity.",
+      "The symbol ∝ means “is proportional to.” Holding the other terms constant, twice the usable area permits twice the diffusion rate in this simplified model. It does not mean area is always the limiting factor in a real person’s lungs.",
+      "Ventilation refreshes alveolar air. Perfusion brings blood through capillaries. Diffusion is the crossing between them. Good ventilation alone cannot make an unperfused surface deliver oxygen to circulating blood. The three jobs must connect."
+    ]
+  },
+  "test-interpretation": {
+    "title": "Name the group before taking a percentage",
+    "start": [
+      "Sensitivity starts with people who have the condition and asks how many test positive. A positive predictive value starts with people who tested positive and asks how many have the condition. Those groups are different, so the answers can be very different.",
+      "I’ll make the groups visible by imagining 10,000 people. With prevalence 1%, 100 have the condition and 9,900 do not. We apply the test’s two rates to those separate groups before counting everyone who receives a positive result."
+    ],
+    "links": [],
+    "first": [
+      "Prevalence supplies the starting split: 0.01 × 10,000 = 100. Subtract from the whole population to get 9,900 without the condition. We have not used sensitivity or specificity yet; this is the assumed true-state breakdown.",
+      "Sensitivity is 99%, and its denominator is the 100 people with the condition. Thus 99 test positive and 1 tests negative. This does not mean 99% of all positive results are correct. We have not counted false positives yet.",
+      "Specificity of 95% means 95% of the 9,900 unaffected people test negative. The remaining 5% test positive: 0.05 × 9,900 = 495. These are false positives. The correctly negative group contains 9,405 people.",
+      "Now turn the question around. Someone has a positive result, so consider only the positive row: 99 true positives + 495 false positives = 594 people. Of those, 99 have the condition. The fraction is 99/594 = 1/6, about 16.7%. The table below lets you inspect each denominator."
+    ],
+    "table": {
+      "caption": "Test results among 10,000 people: condition present or absent",
+      "headers": [
+        "Result",
+        "Present",
+        "Absent",
+        "Total"
+      ],
+      "rows": [
+        [
+          "Positive",
+          "99",
+          "495",
+          "594"
+        ],
+        [
+          "Negative",
+          "1",
+          "9,405",
+          "9,406"
+        ],
+        [
+          "Total",
+          "100",
+          "9,900",
+          "10,000"
+        ]
+      ],
+      "after": "Sensitivity reads down the condition-present column: 99/100. Positive predictive value reads across the positive row: 99/594. These are population calculations under the supplied assumptions."
+    }
+  },
+  "cash-cycle": {
+    "title": "Put the three dates on one order",
+    "start": [
+      "Pretend an order of oats arrives on day 0. It stays in stock for 40 days, so it is sold on day 40. The customer then takes another 45 days to pay: day 85. Our supplier requires payment on day 30. Cash leaves us on day 30 and comes back on day 85.",
+      "The gap is 85 − 30 = 55 days. This is a simplified timeline for one batch. In a running company, inventory, receivables and payables represent many overlapping batches; their day counts are averages. Use the timeline to understand the subtraction before estimating dollar balances."
+    ],
+    "links": [
+      "revenue-vs-cash"
+    ],
+    "first": [
+      "The customer’s 45-day clock starts at the sale on day 40. Add the two waits to locate collection on day 85. Counting 45 days from day 0 would accidentally let the customer’s credit period overlap the time before the sale.",
+      "Supplier terms delay our cash payment until day 30. That removes the first 30 days from the gap we must finance ourselves. The subtraction comes from the order of events: collection date minus payment date.",
+      "From day 30 up to day 85, this batch has used cash that the customer has not returned. A sale can already appear in revenue on day 40 even though collection is later. That is how profit and cash timing can diverge.",
+      "Days do not tell us the dollar balance by themselves. Receivables represent sales still owed by customers; inventory and payables use inventory costs. The second example calculates those balances separately. Multiplying 55 days by daily sales would value the cost balances incorrectly."
+    ],
+    "table": {
+      "caption": "One illustrative batch, starting when inventory is received",
+      "headers": [
+        "Day",
+        "What happens",
+        "Cash timing"
+      ],
+      "rows": [
+        [
+          "0",
+          "Receive oats",
+          "Supplier has not been paid"
+        ],
+        [
+          "30",
+          "Pay supplier",
+          "Cash leaves"
+        ],
+        [
+          "40",
+          "Sell to customer",
+          "Customer owes us"
+        ],
+        [
+          "85",
+          "Collect payment",
+          "Cash returns"
+        ]
+      ],
+      "after": "The company funds the 55-day gap from day 30 to day 85. Extending supplier terms to day 60 would shorten that gap to 25 days, if the other timings stayed the same."
+    }
+  },
+  "cac-ltv": {
+    "title": "Repay the advertising bill one order at a time",
+    "start": [
+      "We spent $3,500 to acquire 100 customers. Spread that spend across them: $35 per customer. Each $40 order contributes $14 after the stated variable costs. That $14 is the part available to repay acquisition cost and then help cover the rest of the business.",
+      "For one customer, I start at −$35. After one order I am at −$21; after two, −$7; after three, +$7. This little running balance explains why the calculation gives 2.5 orders but, for whole orders of this size, the customer must place a third order to get past acquisition payback."
+    ],
+    "links": [
+      "unit-economics"
+    ],
+    "first": [
+      "Four orders at $40 bring in $160 of revenue. But the business cannot use all $160 to pay for advertising: it must pay the variable costs of those orders too. Keep revenue and contribution on separate lines.",
+      "Four orders contribute 4 × $14 = $56 before acquisition spend. Subtract the $35 acquisition cost to leave $21 toward fixed costs and other costs not already included. That $21 is not automatically net profit.",
+      "The ratio 56/35 = 1.6 compares a year’s contribution with acquisition cost. It does not predict lifetime value: we have no information here about later years, customer survival or changing order economics. It also assumes the given order count and contribution are realized.",
+      "The quotient 35/14 = 2.5 is the arithmetic break-even number of equivalent orders. With whole $14-contribution orders, payback is crossed on order 3. Calendar payback needs order dates; dividing a year by four orders would assume a schedule the problem has not supplied."
+    ],
+    "table": {
+      "caption": "One customer: contribution after subtracting the initial $35 acquisition cost",
+      "headers": [
+        "Orders completed",
+        "Contribution earned",
+        "Balance after CAC"
+      ],
+      "rows": [
+        [
+          "0",
+          "$0",
+          "−$35"
+        ],
+        [
+          "1",
+          "$14",
+          "−$21"
+        ],
+        [
+          "2",
+          "$28",
+          "−$7"
+        ],
+        [
+          "3",
+          "$42",
+          "+$7"
+        ],
+        [
+          "4",
+          "$56",
+          "+$21"
+        ]
+      ],
+      "after": "These balances exclude fixed costs and any other costs outside the stated $14 contribution. A positive balance here is acquisition payback, not proof of company profitability."
+    }
+  },
+  "physics-5": {
+    "title": "Carry the momentum into the joined pair",
+    "start": [
+      "Choose both carts as one system. One cart is moving; the other is still. When they stick together, the second cart must be carried along. Before the collision only 2 kg is moving. Afterward both carts, 3 kg altogether, share one velocity. The total momentum stays the same if the outside world supplies negligible impulse during the collision.",
+      "I calculate the momentum before contact, then ask what shared velocity lets 3 kg carry that same momentum afterward. This is why I do not simply average the two starting speeds: the carts have different masses."
+    ],
+    "links": [
+      "units-and-directions",
+      "physics-2"
+    ],
+    "first": [
+      "Choose the positive direction before substituting. Rightward velocity is +3 m/s; a leftward velocity would be negative. The stationary cart has velocity 0. Carry those signs into momentum, which is mass times signed velocity.",
+      "The first cart contributes 2 × 3 = +6 kg·m/s. The second contributes 1 × 0 = 0. Adding gives +6 kg·m/s for the pair. Zero momentum from the stationary cart does not mean that cart has zero mass.",
+      "After sticking, the two carts have a single shared velocity v. Their combined momentum is 2v + 1v = 3v. Both masses belong in this expression because both carts are now moving together.",
+      "Set after equal to before: 3v = 6. Divide by 3 kg to get v = +2 m/s. Check by multiplying back: 3 × 2 = 6 kg·m/s. Kinetic energy changes from ½ × 2 × 3² = 9 J to ½ × 3 × 2² = 6 J; momentum conservation did not promise unchanged kinetic energy."
+    ]
+  }
+}

@@ -3,7 +3,7 @@ import sys,subprocess,re,html
 
 repo=Path(__file__).resolve().parents[1]
 subprocess.run([sys.executable,str(repo/'source/build-v109.py')],check=True)
-app=(repo/'source/Study_Table_V121.html').read_bytes()
+app=(repo/'source/Study_Table_V122.html').read_bytes()
 plan=(repo/'docs/LESSON_QUALITY_PLAN.md').read_text()
 blocks=[]
 for block in plan.split('\n\n'):
@@ -11,8 +11,8 @@ for block in plan.split('\n\n'):
     match=re.match(r'^(#{1,3}) (.+)$',block)
     if match:blocks.append(f'<h{len(match[1])}>{html.escape(match[2])}</h{len(match[1])}>')
     else:blocks.append('<p>'+html.escape(block).replace('\n','<br>')+'</p>')
-page='<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Study Table — Lesson quality plan</title><style>body{background:#f5f5f7;color:#242428;font:17px/1.8 system-ui}main{max-width:850px;margin:auto;padding:35px 22px 80px}h1,h2,h3{font-family:Georgia,serif;line-height:1.3}h2{margin-top:40px}a{color:#242428}</style><main><a href="/">← Study Table</a><p>Current release: V121. Merged Claude V120: 87 teaching units across seven courses, seven projects and seven workshops, plus per-unit reading and personal review tracking. All earlier teaching and accessibility fixes remain. All earlier lessons, projects, maths help and Claude additions remain.</p>'+''.join(blocks)+'</main></html>'
-files={'index.html':app,'study-table-v121.html':app,'quality-plan.html':page.encode()}
+page='<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Study Table — Lesson quality plan</title><style>body{background:#f5f5f7;color:#242428;font:17px/1.8 system-ui}main{max-width:850px;margin:auto;padding:35px 22px 80px}h1,h2,h3{font-family:Georgia,serif;line-height:1.3}h2{margin-top:40px}a{color:#242428}</style><main><a href="/">← Study Table</a><p>Current release: V122. Fourteen difficult lessons now have slower introductions and fifty-one additional step explanations, with tables for rhythm, test results and cash timing. All 87 units, seven projects, seven workshops, Claude additions and accessibility fixes remain.</p>'+''.join(blocks)+'</main></html>'
+files={'index.html':app,'study-table-v122.html':app,'quality-plan.html':page.encode()}
 check='--check' in sys.argv
 for name,data in files.items():
     path=repo/'public'/name

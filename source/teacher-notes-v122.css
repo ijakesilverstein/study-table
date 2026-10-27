@@ -1,0 +1,15 @@
+.teacher-start{margin:30px 0;padding:0 0 8px;border-bottom:1px solid var(--study-line)}
+.teacher-start h2{margin-bottom:18px}
+.teacher-prerequisites{margin:20px 0;font-size:15px}
+.teacher-prerequisites p{margin:0 0 4px;color:var(--study-muted)}
+.teacher-prerequisites button{display:block;max-width:100%;white-space:normal;text-align:left;min-height:44px;padding:8px 0}
+.teacher-aside{border-left:3px solid var(--study-warm);padding:1px 0 1px 16px;margin:18px 0;color:var(--study-ink)}
+.teacher-aside p{margin:8px 0!important}
+.teacher-table{margin:26px 0 12px;overflow-wrap:anywhere}
+.teacher-table table{border-collapse:collapse;width:100%;table-layout:auto;font:15px/1.6 system-ui;color:var(--study-ink)}
+.teacher-table caption{text-align:left;font-weight:650;padding-bottom:12px}
+.teacher-table :is(th,td){overflow-wrap:normal;text-align:left;vertical-align:top;padding:12px 9px;border-bottom:1px solid var(--study-line)}
+.teacher-table thead{background:var(--study-panel)}
+.teacher-table tbody th{font-weight:600}
+.teacher-table>p{font-size:15px;line-height:1.7}
+@media(max-width:480px){.teacher-table :is(th,td){padding:10px 5px;font-size:14px}.teacher-aside{padding-left:12px}}
