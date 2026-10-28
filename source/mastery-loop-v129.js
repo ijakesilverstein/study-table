@@ -155,7 +155,9 @@ function v129Action(details,action){
 function v129MountCoach(){
  document.querySelectorAll('.worked-case .worked-coach').forEach(details=>{
   if(details.querySelector('.mastery-loop'))return;
-  const panel=document.createElement('div');
+  const caseHost=details.closest('.worked-case');
+  if(caseHost?.id==='courseFirst'&&V128_COACH_UNITS.includes(COURSE.units.find(u=>u.id===document.getElementById('courseArticle')?.dataset.unitId)?.id)){details.remove();return}
+   const panel=document.createElement('div');
   panel.innerHTML=v129Markup();
   const target=details.querySelector('.coach-choices');
   if(target)target.before(panel.firstElementChild);else details.append(panel.firstElementChild);
