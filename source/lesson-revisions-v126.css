@@ -6,3 +6,8 @@
 .lesson-reference tbody th{font-weight:600}
 .lesson-deeper{margin:24px 0}
 @media(max-width:480px){.lesson-reference table{font-size:15px}.lesson-reference th,.lesson-reference td{padding:10px 5px}.lesson-reference caption{font-size:15px}}
+
+/* Constrain long mathematics reference tables to local scrolling on mobile. */
+.lesson-reference{max-width:100%;min-width:0;overflow-x:auto;overscroll-behavior-inline:contain}
+.lesson-reference table{min-width:0}
+.lesson-reference :is(caption,td,th){white-space:normal}
