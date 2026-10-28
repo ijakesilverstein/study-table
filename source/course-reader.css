@@ -22,3 +22,8 @@
 .guided-panel .guided-status{font-size:15px}
 .guided-actions{display:flex;flex-wrap:wrap;gap:10px}
 @media(max-width:460px){.guided-actions button{flex:1 1 100%}}
+
+.v131-checked-link{display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap;padding:13px 0;margin:16px 0}
+.v131-checked-link button{background:var(--study-accent);color:var(--study-accent-text);border-color:var(--study-accent);font-weight:700}
+.v131-checked-link span{font:14px/1.5 system-ui;color:var(--study-muted)}
+@media(max-width:500px){.v131-checked-link{display:block}.v131-checked-link button{display:block;width:100%}.v131-checked-link span{display:block;margin-top:8px}}
