@@ -4,19 +4,12 @@
 
 .v114-figure .quantity-figure:focus-visible{outline:3px solid var(--study-warm);outline-offset:3px}
 
-/* V132 mobile repair: wide authored reference diagrams remain scrollable inside
-   their own region, not across the entire course article. Do not shrink
-   diagrams or remove the keyboard-addressable inner scroll surface. */
-@media(max-width:600px){
- .v114-alternative{max-width:100%;min-width:0;overflow-x:clip}
- .v114-alternative .v114-figure{max-width:100%;min-width:0}
- .v114-alternative .v114-figure .quantity-figure{box-sizing:border-box;display:block;width:100%;max-width:100%;min-width:0;overflow-x:auto;overscroll-behavior-inline:contain}
-}
-
-/* Explicit border-box sizing is necessary: details padding must be counted
-   inside the reader width, while the diagram's inner region may pan. */
+/* Keep optional worked-reference diagrams inside phone-sized cards. The 440px
+   desktop minimum made the entire 320px page pan sideways; mobile scales
+   the SVG within the card while the full textual explanation remains. */
 @media(max-width:600px){
  details.v114-alternative{box-sizing:border-box;width:100%;max-width:100%;min-width:0;overflow-x:hidden}
  details.v114-alternative .v114-figure{box-sizing:border-box;width:100%;max-width:100%;min-width:0}
  details.v114-alternative .v114-figure .quantity-figure{box-sizing:border-box;width:100%;max-width:100%;min-width:0;overflow-x:auto}
+ details.v114-alternative .v114-figure svg{display:block;width:100%!important;max-width:100%!important;min-width:0!important;height:auto}
 }
