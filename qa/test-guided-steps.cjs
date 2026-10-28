@@ -12,7 +12,7 @@ const courses=require('../source/full-courses-built.json'),edition=Number(requir
   const page=await browser.newPage({viewport:{width:390,height:844}});
   page.on('pageerror',e=>errors.push(e.message));
   await page.goto(url);
-  await page.waitForFunction(n=>window.READY&&studyTableFullCourses.version===n,edition);
+  await page.waitForFunction(n=>typeof READY!=='undefined'&&READY&&window.studyTableFullCourses?.version===n,edition);
   const marker={schema:1,records:{'spanish-0':{attempts:4,independent:2,last:12345}}};
   await page.evaluate(x=>localStorage.setItem('studytable_v102_learning',JSON.stringify(x)),marker);
   for(const [subject,course] of Object.entries(courses)){
