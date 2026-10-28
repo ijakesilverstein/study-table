@@ -1,10 +1,10 @@
 # GitHub source and downloadable files
 
-The Study Table source is already a Git repository with the full release history and tags through V126. The separate GitHub repository has not yet been connected. Git read access to the existing LaunchWell repository works; the proposed Study Table destination returns Repository not found, and API requests for repository creation are blocked by the workspace proxy. This does not establish write access to a new repository.
+The Study Table source is connected to [ijakesilverstein/study-table](https://github.com/ijakesilverstein/study-table). Branch main and all 17 release tags through V126 were pushed successfully, and remote refs were compared with the saved local commits. The initial write-access denial was resolved before the successful push. No files were transferred through LaunchWell and no Vercel Git deployment was enabled.
 
-Create an empty private repository named `study-table` in the intended GitHub account, without an initial README, license or gitignore, then provide its URL. The saved local source can be pushed directly after verifying access. No manual transfer of the HTML between chats is required. Keep Study Table separate from LaunchWell. Do not describe the connection as complete until a push succeeds and its remote commit is verified.
+The existing native Git connection supports reads and pushes to this repository. GitHub API requests are still blocked in the current workspace, so hosted Actions status has not been verified here. Keep that limitation separate from the verified successful Git upload; no new token is needed for the working Git route.
 
-## Downloading after connection
+## Downloading the files
 
 The existing **Check source and lessons** workflow runs on pushes and pull requests and can also be started manually. It retains all existing dependency installation and lesson tests. After those checks succeed, it packages the current release and uploads the actual HTML and ZIP as a **study-table-downloads** artifact.
 
@@ -16,4 +16,4 @@ Artifacts are kept for 30 days. Source files and release tags remain in the repo
 
 ## Verification and limits
 
-The local build check and the workflow's packaging command are executed before committing this configuration. The produced HTML must exactly match the saved V126, and the ZIP must contain that same HTML. YAML structure, triggers, permissions and artifact paths are checked locally. Hosted Actions execution and GitHub push access cannot be claimed until the remote is available and the workflow actually runs there. Existing full V126 lesson-regression results remain recorded in the release checkpoint.
+The local build check and the workflow's packaging command are executed before committing this configuration. The produced HTML must exactly match the saved V126, and the ZIP must contain that same HTML. YAML structure, triggers, permissions and artifact paths are checked locally. Push access and matching remote main/tags have been verified. Hosted Actions execution must still be confirmed on GitHub before claiming its artifact download is ready. Existing full V126 lesson-regression results remain recorded in the release checkpoint.
