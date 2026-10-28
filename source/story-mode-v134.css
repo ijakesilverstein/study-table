@@ -1,0 +1,26 @@
+/* Optional narrative play: a substantial scene, not an assessment or a streak. */
+.v134-story{margin:26px 0 34px;border:1px solid var(--study-line);border-radius:18px;overflow:hidden;background:var(--study-surface);min-width:0;max-width:100%;box-shadow:0 10px 35px rgba(23,31,48,.08)}
+.v134-hero{padding:clamp(20px,3.7vw,38px);display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:22px;background:linear-gradient(125deg,color-mix(in srgb,var(--study-warm) 13%,var(--study-surface)),var(--study-surface) 70%)}
+.v134-eyebrow{font:700 12px/1.5 system-ui;letter-spacing:.09em;text-transform:uppercase;color:var(--study-muted);margin:0 0 9px}
+.v134-story h2{font-family:Georgia,serif;font-size:clamp(27px,3vw,34px);line-height:1.2;margin:0 0 13px;font-weight:650}
+.v134-hero p:not(.v134-eyebrow){max-width:60ch;font-size:16px;line-height:1.65;margin:0}
+.v134-hero .v134-footnote{font-size:13px!important;color:var(--study-muted);margin-top:14px!important}
+.v134-story button{min-height:44px;max-width:100%;white-space:normal;overflow-wrap:anywhere}
+.v134-hero>button,.v134-nextrow>button:first-child{background:var(--study-accent);color:var(--study-accent-text);border-color:var(--study-accent);font-weight:700;padding:12px 22px;border-radius:9px}
+.v134-game,.v134-ending{padding:clamp(19px,3.3vw,32px);min-width:0}
+.v134-scenehead{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--study-line);padding-bottom:15px;font:700 12px/1.5 system-ui;letter-spacing:.04em;text-transform:uppercase;color:var(--study-muted)}
+.v134-scenehead .v134-exit{font-size:13px;font-weight:600;letter-spacing:0;text-transform:none}
+.v134-situation{font-size:17px;line-height:1.65;margin:23px 0;color:var(--study-ink);max-width:65ch}
+.v134-game h3,.v134-ending h3{font-family:Georgia,serif;font-size:clamp(22px,2.7vw,28px);margin:0 0 20px;line-height:1.35}
+.v134-game h3:focus,.v134-ending h3:focus{outline:none}
+.v134-options{display:grid;gap:11px;margin:0 0 19px}
+.v134-options button{text-align:left;padding:14px 17px;border:1px solid var(--study-line);border-radius:11px;background:var(--study-surface);color:var(--study-ink);font:600 16px/1.5 system-ui;transition:background .14s ease,border-color .14s ease;min-width:0}
+.v134-options button:hover{background:var(--study-panel)}
+.v134-options button[aria-pressed=true]{border:2px solid var(--study-warm);background:var(--study-panel);padding:13px 16px}
+.v134-consequence{border-left:4px solid var(--study-warm);padding:14px 19px;background:var(--study-panel);border-radius:0 10px 10px 0;overflow-wrap:anywhere}
+.v134-consequence p{font-size:15px;line-height:1.65;margin:5px 0}
+.v134-consequence .v134-impact{font-weight:700;font-size:17px}
+.v134-nextrow{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.v134-ending p[data-v134-outcome]{font-size:18px;line-height:1.7;max-width:65ch}
+@media(max-width:680px){.v134-hero{grid-template-columns:minmax(0,1fr)}.v134-hero>button{justify-self:start}.v134-nextrow{display:grid;grid-template-columns:minmax(0,1fr)}.v134-nextrow>button{width:100%}}
+@media(prefers-reduced-motion:reduce){.v134-options button{transition:none}}
