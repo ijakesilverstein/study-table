@@ -23,3 +23,8 @@
 .v130-explain .v130-verdict{font-weight:700}
 .v130-explain button{font-size:14px;margin:4px 0}
 @media(max-width:600px){.v130-curiosity-lead{display:block}.v130-curiosity-lead>button{margin-top:12px;width:100%}.v130-options{grid-template-columns:minmax(0,1fr)}.v130-actions{display:grid;grid-template-columns:minmax(0,1fr)}.v130-actions button{width:100%}}
+
+/* The claim is the puzzle; the answer stays hidden until a learner takes a position. */
+.v132-claim{margin:16px 0;border-left:3px solid var(--study-warm);padding:14px 16px;background:var(--study-panel);font:18px/1.6 Georgia,serif;border-radius:6px;overflow-wrap:anywhere}
+.v130-options button{font-weight:650;text-align:center}
+@media(max-width:600px){.v132-claim{font-size:17px}}
