@@ -1,0 +1,398 @@
+{
+  "piano-5": {
+    "subject": "piano",
+    "title": "Keep the bass steady while the melody moves",
+    "context": "Use the four-beat example: left C3 holds while the right plays E4–D4–C4–D4. We will separate the two hand jobs before joining them.",
+    "steps": [
+      {
+        "title": "Find the bass key",
+        "prompt": "Which key does the left hand begin on? Use a note name such as C3.",
+        "answer": "C3",
+        "kind": "note",
+        "reasoning": "C3 is the C one octave below middle C. Its 3 names the register. The right hand begins on E4 at the same moment.",
+        "stuck": [
+          [
+            "I mix up the numbers",
+            "C3 and C4 are two pitches an octave apart. Finger 3 is your middle finger; that is a different use of the number. Here, C3 tells you where the low key is."
+          ],
+          [
+            "I cannot find low C",
+            "Find middle C, C4, then move to the next C on its left: C3. Each C is immediately left of a group of two black keys."
+          ]
+        ],
+        "mistakes": {
+          "C4": "C4 is middle C, where the right thumb is prepared. Move one octave left to C3 for this bass part."
+        }
+      },
+      {
+        "title": "Count the left-hand presses",
+        "prompt": "Over the complete four beats, how many times does the left hand press C3?",
+        "answer": "1",
+        "kind": "number",
+        "reasoning": "Press C3 once on beat 1 and keep the key down through 2, 3 and 4. Release at the next 1. Holding a note is not a new press on each beat.",
+        "stuck": [
+          [
+            "I keep copying the right hand",
+            "Try just two counts on a table. On 1 touch one left fingertip and your right middle finger down together. On 2, keep the left fingertip touching while you swap the right middle finger for the index finger."
+          ],
+          [
+            "I do not know when to release",
+            "Say 1–2–3–4–1 evenly. Press on the first 1 and release on the second 1. The last counted 4 still gets its full beat."
+          ]
+        ],
+        "mistakes": {
+          "4": "Four presses would restart the bass on every beat. This accompaniment has one bass attack underneath four right-hand attacks.",
+          "0": "The left hand does begin the note on beat 1. It then holds without pressing again."
+        },
+        "units": [
+          "press",
+          "presses",
+          "time",
+          "times"
+        ],
+        "unitLabel": "a number of presses"
+      },
+      {
+        "title": "Move only the right hand",
+        "prompt": "On beat 2, the left C3 is still down. Which new note does the right hand play?",
+        "answer": "D4",
+        "kind": "note",
+        "reasoning": "The right begins on E4, then moves one white key left to D4 on beat 2. Its index finger can play D4 while the left hand keeps C3 down.",
+        "stuck": [
+          [
+            "I do not know the right-hand route",
+            "Prepare thumb over C4, index over D4 and middle over E4. Play middle–index–thumb–index: E4–D4–C4–D4."
+          ],
+          [
+            "Both hands lift together",
+            "Practise only the change from beat 1 to beat 2. Keep left C3 down while right E4 releases and right D4 begins. Stop and relax after D4; the whole bar can wait."
+          ]
+        ],
+        "mistakes": {
+          "E4": "E4 is the first right-hand note, on beat 1. On beat 2 it releases and D4 begins.",
+          "C4": "C4 arrives on beat 3. First move from E4 to D4 on beat 2."
+        }
+      }
+    ]
+  },
+  "noun-phrases": {
+    "subject": "spanish",
+    "title": "Build an order the other person can use",
+    "context": "Use pequeño for small and begin with the item group itself. You may add Quiero before it and por favor after it. This coach checks these specific phrase patterns; it does not judge every possible Spanish sentence.",
+    "steps": [
+      {
+        "title": "One small coffee",
+        "prompt": "Write the item group for “a small coffee”.",
+        "answer": "un café pequeño",
+        "kind": "spanish",
+        "reasoning": "Learn el café as a pair. For an unspecified coffee, use un. Add pequeño after café: un café pequeño.",
+        "stuck": [
+          [
+            "I do not know un or una",
+            "Café uses masculine agreement: el café, un café. Mesa uses feminine agreement: la mesa, una mesa. Learn each article with its noun."
+          ],
+          [
+            "I do not know the word order",
+            "In this model, the size follows the thing: un + café + pequeño. Put quiero in front to make the request."
+          ]
+        ],
+        "mistakes": {
+          "una": "Café takes un here, not una: un café pequeño.",
+          "pequeña": "Use pequeño to agree with café in this phrase: un café pequeño."
+        }
+      },
+      {
+        "title": "Two small coffees",
+        "prompt": "Now change only the item group to “two small coffees”.",
+        "answer": "dos cafés pequeños",
+        "kind": "spanish",
+        "reasoning": "Replace un with dos. Make café and pequeño plural: cafés pequeños. The finished group is dos cafés pequeños.",
+        "stuck": [
+          [
+            "What changes for two?",
+            "Make three edits: un → dos; café → cafés; pequeño → pequeños. Quiero can stay exactly as it was."
+          ],
+          [
+            "Why does pequeños need s?",
+            "It describes the plural noun cafés, so it also becomes plural. The s matches the coffees; it does not mean that you ordered several sizes."
+          ]
+        ],
+        "mistakes": {
+          "café": "Dos needs the plural cafés. Add s to café, keeping the written accent.",
+          "pequeño": "The coffees are plural, so the description must be plural too: pequeños.",
+          "una": "Use dos for the quantity. You do not put un or una before dos in this group."
+        }
+      },
+      {
+        "title": "Use a different noun",
+        "prompt": "Write “two small tables”, using mesa for table.",
+        "answer": "dos mesas pequeñas",
+        "kind": "spanish",
+        "reasoning": "Mesa is feminine, so the description uses pequeña. Two makes both words plural: dos mesas pequeñas.",
+        "stuck": [
+          [
+            "Which ending belongs to mesa?",
+            "Begin with una mesa pequeña. The a in pequeña agrees with mesa in this example. For two, keep the a and add s: pequeñas."
+          ],
+          [
+            "Do all adjectives change like this?",
+            "No. Grande stays grande for one coffee or one table, then becomes grandes in the plural. This step deliberately uses pequeño/pequeña so you can follow this particular agreement."
+          ]
+        ],
+        "mistakes": {
+          "mesa": "Use plural mesas after dos.",
+          "pequeños": "Pequeños is masculine here; mesa needs pequeñas.",
+          "pequeño": "Use the feminine plural pequeñas with mesas."
+        }
+      }
+    ]
+  },
+  "count-exchanges": {
+    "subject": "chess",
+    "title": "Count both turns before judging the capture",
+    "context": "Use the second worked position: White Kg1 and Rd1; Black Kg8, Nd5 and Pe6. Follow Rxd5, then …exd5. Values are rough: knight 3, rook 5. All answers are from White’s viewpoint.",
+    "steps": [
+      {
+        "title": "What White gains",
+        "prompt": "After Rxd5, what rough value has White captured?",
+        "answer": "3",
+        "kind": "number",
+        "reasoning": "The rook on d1 captures the knight on d5. The knight is worth roughly 3. That is the gain from the first turn, not the final exchange result.",
+        "stuck": [
+          [
+            "What does Rxd5 mean?",
+            "R means rook, x means captures, and d5 is the destination. The d-file is clear from d1 to d5, so the rook can take the knight."
+          ],
+          [
+            "Which piece should I count?",
+            "Count the piece removed: Black’s knight. The white rook moved but is still on the board after this first turn."
+          ]
+        ],
+        "mistakes": {
+          "5": "Five is the value of the rook doing the capturing. White has captured the knight, worth about 3."
+        },
+        "units": [],
+        "unitLabel": "the rough value change"
+      },
+      {
+        "title": "What White gives up",
+        "prompt": "Black replies …exd5. What rough value does White lose? Enter the positive value of the lost piece.",
+        "answer": "5",
+        "kind": "number",
+        "reasoning": "The pawn on e6 captures diagonally onto d5 and removes the white rook. That rook is worth roughly 5. The black pawn stays on d5.",
+        "stuck": [
+          [
+            "How can the pawn take the rook?",
+            "Black pawns capture diagonally toward lower ranks. From e6 this pawn can capture a white piece on d5. The move is legal in this position."
+          ],
+          [
+            "Do I count the pawn too?",
+            "The pawn is the capturer, not another captured piece. After …exd5 the pawn remains on d5. The white rook is the piece removed."
+          ]
+        ],
+        "mistakes": {
+          "3": "Three is the knight White gained. On Black’s reply, the piece White loses is its rook, worth about 5.",
+          "1": "One is the pawn’s rough value. The pawn remains on the board; it has taken the rook."
+        },
+        "units": [],
+        "unitLabel": "the rough value change"
+      },
+      {
+        "title": "Combine gain and loss",
+        "prompt": "What is White’s change from the complete exchange: gain minus loss? Use a minus sign if White loses value.",
+        "answer": "-2",
+        "kind": "number",
+        "reasoning": "White gains a knight worth 3 and loses a rook worth 5: 3 − 5 = −2. This describes the exchange change, not an evaluation of every feature of the final position.",
+        "stuck": [
+          [
+            "I get the sign backwards",
+            "Choose White’s viewpoint and keep it. Black pieces removed are gains; white pieces removed are losses. Three gained minus five lost leaves White two units worse off."
+          ],
+          [
+            "Does −2 prove the move is always bad?",
+            "Material is one consideration. A forced mate could justify a sacrifice. This worked position supplies no such benefit; its purpose is to show why you must include the legal recapture."
+          ]
+        ],
+        "mistakes": {
+          "2": "The size of the difference is 2, but White gave up more than it gained. From White’s viewpoint the change is −2.",
+          "3": "That counts only White’s capture. Include the rook lost on Black’s reply: 3 − 5.",
+          "0": "The first bishop-for-knight line is roughly level. This line gives up a rook worth 5 for a knight worth 3.",
+          "8": "Adding the two values counts how much was removed in total. The change for White is the gain minus the loss, 3 − 5."
+        },
+        "units": [],
+        "unitLabel": "the rough value change"
+      }
+    ]
+  },
+  "product-rule": {
+    "subject": "calculus",
+    "title": "Account for each strip of new area",
+    "context": "At t=2 s the rectangle is L=3 m by W=4 m. Its length grows at 1 m/s; its width grows at 4 m/s. Find its instantaneous area rate, one strip at a time.",
+    "steps": [
+      {
+        "title": "The growing length",
+        "prompt": "What area rate comes from the length growing at 1 m/s along the current 4 m width? Give the number in m²/s.",
+        "answer": "4",
+        "kind": "number",
+        "reasoning": "Pair the length rate with the current width: 1 m/s × 4 m = 4 m²/s. A narrow lengthwise extension stretches across the entire old width.",
+        "stuck": [
+          [
+            "Why multiply by the width?",
+            "If the length grows by a small amount, the new strip runs along all 4 metres of the current width. A 0.01 m length increase would add a 0.01 by 4 strip."
+          ],
+          [
+            "Am I multiplying the two rates?",
+            "Use one rate and one size. The current width is 4 m; its rate is separately 4 m/s. They happen to share the number 4 here, but the units show which quantity you used."
+          ]
+        ],
+        "mistakes": {
+          "1": "One metre per second is the side’s rate. Multiply by the 4 m width to get a rate of area.",
+          "12": "Twelve is the current area, 3×4, in square metres. This question asks how fast one strip adds area, in square metres per second."
+        },
+        "units": [
+          "m^2/s"
+        ],
+        "unitLabel": "square metres per second (m²/s)"
+      },
+      {
+        "title": "The growing width",
+        "prompt": "What area rate comes from the width growing at 4 m/s along the current 3 m length? Give the number in m²/s.",
+        "answer": "12",
+        "kind": "number",
+        "reasoning": "Pair the width rate with the current length: 4 m/s × 3 m = 12 m²/s. This is the second strip, along the other edge.",
+        "stuck": [
+          [
+            "Which 3 do I use?",
+            "The length is currently 3 m. The growing width adds a strip running along that whole length, so multiply the width rate by 3 m."
+          ],
+          [
+            "Where did the first strip go?",
+            "Keep its 4 m²/s aside. This step calculates the other strip only. We will add the two contributions in the next step."
+          ]
+        ],
+        "mistakes": {
+          "4": "Four is the first strip’s area rate. For the second strip use the width rate, 4 m/s, multiplied by the current length, 3 m."
+        },
+        "units": [
+          "m^2/s"
+        ],
+        "unitLabel": "square metres per second (m²/s)"
+      },
+      {
+        "title": "Both edges together",
+        "prompt": "Add the two contributions. What is the instantaneous area rate at t=2 s, in m²/s?",
+        "answer": "16",
+        "kind": "number",
+        "reasoning": "A′=L′W+LW′=4+12=16 m²/s. The small corner contributes no extra term in the limit. Expanding A=t³+t² gives A′=3t²+2t, also 16 at t=2.",
+        "stuck": [
+          [
+            "Why add rather than multiply?",
+            "Each term already measures an area rate. Both strips are being added to the same rectangle, so add their rates: 4 m²/s + 12 m²/s."
+          ],
+          [
+            "What about the little corner?",
+            "Over a short time h, the corner area is of order h². Dividing the total area change by h leaves a corner contribution of order h, which tends to zero. The two long strips survive that limit."
+          ]
+        ],
+        "mistakes": {
+          "4": "Four accounts for just the first strip here. Include the second contribution, 12. If you multiplied the two side rates, check units: m²/s² is not an area rate.",
+          "12": "Twelve accounts for just the second strip. Add the first contribution of 4 m²/s too.",
+          "16.71": "That is the average over h=0.1 s in the figure. The question asks for the instantaneous rate at the starting moment; smaller intervals approach 16."
+        },
+        "units": [
+          "m^2/s"
+        ],
+        "unitLabel": "square metres per second (m²/s)"
+      }
+    ]
+  },
+  "physics-2": {
+    "subject": "physics",
+    "title": "Turn an energy account into a speed",
+    "context": "Use the second example: a 2 kg sled starts still, drops 5 m, and transfers 36 J to thermal energy. Use g=10 m/s². We will find the energy available, then the energy left for motion, then the speed.",
+    "steps": [
+      {
+        "title": "Available energy",
+        "prompt": "How much gravitational potential energy is lost? Give the number in joules.",
+        "answer": "100",
+        "kind": "number",
+        "reasoning": "mgh = 2 kg × 10 m/s² × 5 m = 100 J. The height is the vertical drop. Starting from rest means no initial kinetic energy needs to be added.",
+        "stuck": [
+          [
+            "What do m, g and h stand for?",
+            "Here m=2 kg, g=10 m/s² and h=5 m. Multiply those three given numbers. The product is an energy in joules."
+          ],
+          [
+            "Why use the drop rather than the slope length?",
+            "Near Earth, gravitational energy depends on the change in height. A longer route between the same two heights changes travel distance, but not this mgh difference."
+          ]
+        ],
+        "mistakes": {
+          "50": "That is g×h, which is energy per unit mass here. Include the 2 kg mass: 2×10×5 = 100 J.",
+          "64": "Sixty-four joules is what remains for motion after the thermal transfer. This first step asks for the full gravitational energy available before that transfer."
+        },
+        "units": [
+          "j",
+          "joule",
+          "joules"
+        ],
+        "unitLabel": "joules (J)"
+      },
+      {
+        "title": "Energy left as motion",
+        "prompt": "After the stated 36 J thermal transfer, how much kinetic energy remains? Give the number in joules.",
+        "answer": "64",
+        "kind": "number",
+        "reasoning": "The account is 100 J = kinetic energy + 36 J thermal energy. Subtract 36 from 100: kinetic energy is 64 J. The total energy is still accounted for.",
+        "stuck": [
+          [
+            "Is energy disappearing?",
+            "No. The final account has 64 J kinetic plus 36 J thermal, which totals the original 100 J. Mechanical energy has decreased because some energy is now thermal."
+          ],
+          [
+            "Why not subtract 36 from the speed?",
+            "Thirty-six is an energy in joules, not a speed. Subtract it from the 100 J energy account first. Then use the kinetic-energy formula to find speed."
+          ]
+        ],
+        "mistakes": {
+          "100": "That would leave all the energy as motion. Include the stated 36 J transfer to thermal energy: 100−36.",
+          "136": "The 36 J is part of the original 100 J account, transferred away from motion. Subtract it to find the kinetic part.",
+          "36": "That is the thermal part. The kinetic part is what remains of the 100 J."
+        },
+        "units": [
+          "j",
+          "joule",
+          "joules"
+        ],
+        "unitLabel": "joules (J)"
+      },
+      {
+        "title": "From squared speed to speed",
+        "prompt": "Use ½×2×v²=64. What is the final speed? Give the number in m/s.",
+        "answer": "8",
+        "kind": "number",
+        "reasoning": "The half and the mass 2 multiply to 1, leaving v²=64. Take the nonnegative square root: v=8 m/s. Check: ½×2×8² = 64 J, and 64+36 = 100 J.",
+        "stuck": [
+          [
+            "I do not know what v² means",
+            "v² means v multiplied by itself. We need the nonnegative number whose square is 64. Since 8×8=64, the speed is 8 m/s."
+          ],
+          [
+            "Why did the mass disappear?",
+            "For this particular 2 kg sled, the coefficient ½×2 equals 1. We have already used the mass to find the available energy; it was not ignored."
+          ]
+        ],
+        "mistakes": {
+          "64": "You have found v². Take the square root to find v: 8×8=64, so the speed is 8 m/s.",
+          "10": "Ten metres per second is the frictionless result. Here 36 J has become thermal energy, leaving only 64 J as motion.",
+          "32": "After ½×2 is simplified, the equation is v²=64. Dividing by 2 again is not needed; take the square root.",
+          "-8": "−8 also squares to 64, but this question asks for speed, a nonnegative magnitude. Use 8 m/s."
+        },
+        "units": [
+          "m/s"
+        ],
+        "unitLabel": "metres per second (m/s)"
+      }
+    ]
+  }
+}

@@ -2,6 +2,8 @@
 
 An offline-capable learning app. Current downloads and online access are published separately at https://study-table-downloads.vercel.app. The public deployment may lag the latest source release until verified. The earlier app project is not modified by this delivery workflow.
 
+V128 adds an optional **Talk it through** coach to five lessons in piano, Spanish, chess, calculus and physics. Fifteen specific decisions have checked answers, targeted mistake feedback and thirty explanations of common sticking points. You can keep working notes, use local dictation where the browser supports it, and see the teacher’s full reasoning at any time. These are authored checks; arbitrary explanations are not graded. All V127 content remains. See [the coaching behavior and limits](docs/STEP_COACH_V128.md).
+
 V127 adds an optional step-by-step walkthrough to both worked cases in every full-course unit across all seven subjects. Learners can try their next move before revealing a step, show the conclusion at the end, or return to the complete solution immediately. Reading still requires no quiz, no scoring or changes to saved progress. See [guided walkthrough behavior](docs/GUIDED_STEPS_V127.md).
 
 V127 also rewrites eight further lessons in piano, Spanish, chess, calculus and physics, with 30 worked steps and nine reference tables. Shared piano demonstrations add slower playback, selectable count-ins and beat clicks, and a written timing guide that follows the music. Earlier teacher notes remain available as an alternative explanation. All 87 base unit records, projects, workshops and unrelated archived content are retained. See [the teaching and piano changes](docs/TEACHING_AND_PIANO_V127.md).
@@ -39,7 +41,7 @@ python3 scripts/build.py
 python3 -m http.server 8769 --directory public
 ```
 
-Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v127.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
+Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v128.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
 
 - `source/teacher-prose-v109.json`: rewritten explanations in existing lessons.
 - `source/draft-foundation-lessons.json` and `source/lessons-v109.json`: the 12 new lessons. The historical `draft-` filename is retained for build compatibility; these records are now published.
