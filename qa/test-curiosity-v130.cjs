@@ -61,8 +61,9 @@ const courses=require('../source/full-courses-built.json'),edition=Number(requir
     assert(await c.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),subject+' width overflow 390');
    }
    // Random discovery stays close to the saved reading place.
-   await frame.locator('[data-course-map]').first().click();
-   const recent=frame.locator('#v130Curiosity');
+   const currentFrame=page.frames().find(f=>f.parentFrame()===page.mainFrame());
+   await currentFrame.locator('[data-course-map]').first().click();
+   const recent=currentFrame.locator('#v130Curiosity');
    for(let trial=0;trial<6;trial++){
     await recent.locator(trial?'[data-v130-again]':'[data-v130-pick]').click();
     const picked=await recent.locator('[data-v130-title]').innerText();
