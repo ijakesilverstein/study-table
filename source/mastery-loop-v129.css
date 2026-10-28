@@ -1,0 +1,24 @@
+
+.mastery-loop{border-top:1px solid var(--study-line);padding-top:16px;margin-top:18px;max-width:100%;min-width:0}
+.mastery-progress{font-size:13px;font-weight:700;letter-spacing:.035em;text-transform:uppercase;opacity:.75;margin:0 0 8px}
+.mastery-loop .mastery-title{font-size:19px;line-height:1.35;margin:0 0 10px}
+.mastery-question{font-size:17px;line-height:1.55;font-weight:550;margin:0 0 8px}
+.mastery-instruction{font-size:14px;line-height:1.5;opacity:.85;margin:0 0 14px}
+.mastery-actions{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 14px}
+.mastery-actions button{min-height:44px;max-width:100%;white-space:normal}
+.mastery-actions button[data-mastery="next"]{font-weight:700}
+.mastery-answer{margin:12px 0;padding:13px 15px;background:var(--study-panel);border-left:3px solid var(--study-warm);border-radius:7px;overflow-wrap:anywhere}
+.mastery-answer p{white-space:pre-wrap;margin:0}
+.mastery-side-by-side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:13px}
+.mastery-side-by-side section{min-width:0;padding:11px;background:var(--study-surface);border-radius:7px}
+.mastery-side-by-side strong{display:block;margin-bottom:7px}
+.mastery-end{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+.mastery-more{border-top:1px solid var(--study-line);margin-top:18px;padding-top:12px}
+.mastery-more summary{font-weight:550;font-size:15px}
+.worked-coach .mastery-instruction{font-size:14px}
+@media(max-width:500px){
+ .mastery-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .mastery-actions button{width:100%;padding:10px 8px;font-size:14px}
+ .mastery-side-by-side{grid-template-columns:minmax(0,1fr)}
+ .mastery-end button{width:100%}
+}
