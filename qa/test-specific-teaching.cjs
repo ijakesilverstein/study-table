@@ -5,7 +5,9 @@ const {chromium}=require('playwright'),assert=require('assert/strict'),data=requ
   await p.goto(process.env.STUDY_TEST_URL||'http://127.0.0.1:8807/index.html');await p.waitForFunction(()=>READY&&studyTableFullCourses);
   for(const [id,d] of Object.entries(data)){
    const f=await open(d.subject,id),before=await p.evaluate(()=>Object.fromEntries(Object.entries(localStorage)));
-   assert(await f.locator('[data-step-coach]').isVisible(),'Specific coach must be directly discoverable');
+   const checked=new Set(['piano-5','noun-phrases','count-exchanges','product-rule','physics-2',...Object.keys(extra)]);
+   if(checked.has(id))assert(await f.locator('[data-step-coach]').isVisible(),'Checked-answer coach should be discoverable');
+   else assert.equal(await f.locator('[data-step-coach]').count(),0,'Freeform coaching must not falsely advertise automatic answer checking');
    for(const which of ['first','second']){
     const coach=f.locator((which==='first'?'#courseFirst':'#courseSecond')+' .worked-coach');await coach.locator('summary').first().click();
     for(let i=0;i<d[which].length;i++){
@@ -33,6 +35,6 @@ const {chromium}=require('playwright'),assert=require('assert/strict'),data=requ
    await p.locator('#st128CoachClose').click();
   }
   await p.context().setOffline(true);const f=await open('chess','castling');assert(await f.locator('[data-step-coach]').isVisible());assert.deepEqual(errors,[]);
-  console.log('SPECIFIC_TEACHING_BROWSER_PASS: 51 actual prompts/hints/help messages in both worked cases of eight units; optional authored comparisons; directly accessible checked coaches; nine timing/dialogue/board references before attempts; 16 phone/both-theme WCAG scans; unchanged saved values; offline after load.');
+  console.log('SPECIFIC_TEACHING_BROWSER_PASS: 80 actual prompts/hints/help messages in both worked cases of twelve units; optional authored comparisons; eight directly accessible checked-answer coaches; nine timing/dialogue/board references before attempts; 24 phone/both-theme WCAG scans; unchanged saved values; offline after load.');
  }finally{await b.close()}
 })().catch(e=>{console.error(e);process.exit(1)});
