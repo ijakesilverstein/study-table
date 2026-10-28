@@ -1,3 +1,5 @@
+**V133 beta:** 42 genuinely new, editor-authored checked problems across 21 lesson skills in all seven subjects, each with worked reasoning and common-mistake explanations. Optional browser-local review scheduling follows your own saved practice decisions. The other 66 full-course units keep their existing teaching and activities; V133 does not claim to grade arbitrary explanations. [Scope, controls and limitations](docs/VERIFIED_TRANSFER_V133.md).
+
 # Study Table
 
 An offline-capable learning app. [Open the V132 HTML on GitHub](https://github.com/ijakesilverstein/study-table/blob/main/public/study-table-v132.html) and choose **Download raw file** to save the complete app. The separately published site at https://study-table-downloads.vercel.app may show an earlier release until a new deployment is verified.
