@@ -146,7 +146,7 @@
         "kind": "number",
         "answer": 4,
         "hint": "A quarter note gets one beat in this example.",
-        "why": "2 + 1 + 1 = 4 beats.",
+        "why": "The half note occupies beats 1 and 2. The two quarter notes take beats 3 and 4, so the whole pattern lasts four beats.",
         "wrong": {
           "2": "Two is the half note alone; count both quarter notes too.",
           "3": "A half note uses two beats, not one."
@@ -211,7 +211,7 @@
         "kind": "square",
         "answer": "a4",
         "hint": "A rook moving up the file keeps its letter and changes rank.",
-        "why": "a1 → a2 → a3 → a4.",
+        "why": "A rook travels straight along a file. From a1 it passes a2 and a3, landing on a4 after exactly three squares.",
         "wrong": {
           "d1": "d1 is three squares across the rank, not up the a-file.",
           "a3": "a3 is only two squares above a1."
@@ -290,7 +290,7 @@
         "kind": "number",
         "answer": 14,
         "hint": "Replace x with 4 before simplifying.",
-        "why": "f(4) = 3 × 4 + 2 = 14.",
+        "why": "Substitute the input into the function before calculating: f(4) = (3 × 4) + 2 = 14.",
         "wrong": {
           "9": "3+4+2 adds x instead of multiplying 3 by x.",
           "20": "Add 2 after 3 × 4, not multiply the entire sum."
@@ -301,7 +301,7 @@
         "kind": "number",
         "answer": 4,
         "hint": "Square the negative input before subtracting 5.",
-        "why": "(−3)² − 5 = 9 − 5 = 4.",
+        "why": "Because you square the whole negative input, (−3)² is +9; then subtract 5 to get 4.",
         "wrong": {
           "14": "Remember the minus 5 after squaring.",
           "-14": "Squaring −3 gives positive 9, not negative 9."
@@ -329,7 +329,7 @@
         "kind": "number",
         "answer": 37,
         "hint": "Derivative of 5x² is 10x; derivative of 7x is 7.",
-        "why": "h′(x)=10x+7, so h′(3)=37.",
+        "why": "The power rule makes 5x² into 10x, while 7x becomes 7. Thus h′(3) = (10 × 3) + 7 = 37.",
         "wrong": {
           "30": "The linear term 7x contributes +7 to the derivative.",
           "52": "Substitute after differentiation, not before."
@@ -358,7 +358,7 @@
         "kind": "number",
         "answer": 20,
         "hint": "Differentiate both x+2 and x², then add the two products.",
-        "why": "g′(2)=1×4+(4)×4=4+16=20.",
+        "why": "Use both terms of the product rule. At x=2, the first gives 1×4=4 and the second gives 4×4=16; total 20.",
         "wrong": {
           "4": "4 is only the first term; add the other factor's derivative.",
           "16": "16 is only the second product-rule term; add 4."
@@ -375,7 +375,7 @@
         "kind": "number",
         "answer": 13,
         "hint": "The westward section subtracts from eastward displacement.",
-        "why": "+18 − 5 = +13 m (east).",
+        "why": "Displacement keeps track of direction. Eighteen metres east minus five west leaves +13 metres toward the east.",
         "wrong": {
           "23": "23 m is total distance, not signed displacement.",
           "-13": "East is defined as positive in the question."
@@ -403,7 +403,7 @@
         "kind": "number",
         "answer": 3,
         "hint": "F = ma, so divide force by mass.",
-        "why": "a=12/4=3 m/s².",
+        "why": "Divide the net force by the mass: a = F/m = 12 N ÷ 4 kg = 3 m/s².",
         "wrong": {
           "16": "Adding force and mass does not give acceleration.",
           "48": "Force equals mass × acceleration. To find acceleration, divide instead."
@@ -414,7 +414,7 @@
         "kind": "number",
         "answer": 15,
         "hint": "Multiply mass by acceleration.",
-        "why": "F=ma=5×3=15 N.",
+        "why": "Multiply mass by acceleration: F = ma = 5 kg × 3 m/s² = 15 N.",
         "wrong": {
           "8": "Adding mass and acceleration does not give newtons.",
           "1.6667": "This divides mass by acceleration; to find force, multiply."
@@ -431,7 +431,7 @@
         "kind": "number",
         "answer": 3,
         "hint": "Ohm's law: current equals voltage divided by resistance.",
-        "why": "I=V/R=6/2=3 A.",
+        "why": "Ohm's law gives I = V/R. A 6-volt potential difference across 2 ohms means 3 amperes of current.",
         "wrong": {
           "4": "Subtracting resistance from voltage is not Ohm's law.",
           "12": "That multiplies voltage by resistance; current requires division."
@@ -442,7 +442,7 @@
         "kind": "number",
         "answer": 12,
         "hint": "Rearrange Ohm's law as V = I × R.",
-        "why": "V=4×3=12 V.",
+        "why": "For a resistor, V = I×R. Four amperes through three ohms requires a 12-volt potential difference.",
         "wrong": {
           "7": "Adding current and resistance does not give volts.",
           "1.3333": "That divides current by resistance. Voltage is their product."
