@@ -2,6 +2,8 @@
 
 An offline-capable learning app. Current downloads and online access are published separately at https://study-table-downloads.vercel.app. The public deployment may lag the latest source release until verified. The earlier app project is not modified by this delivery workflow.
 
+**V131 unified tutor** combines Codex's five fully authored checked-answer lessons (15 checkable decisions, 30 targeted help branches, optional local-only dictation) with 87 full-course lessons and V130's curiosity activities. It avoids redundant open-ended coaching in the five checked lessons and keeps surprise questions near your reading place. See [what's built and what's not](docs/UNIFIED_TUTOR_V131.md). **V131 is on a draft branch; it has not been merged or deployed to production.**
+
 **V130** adds two short, completely offline ways to learn: a *Surprise me* question on each course map drawn from the real authored practice, and a *Spot the almost-right idea* reasoning comparison in every full-course unit. Both reveal the author’s explanation without invented AI scores. See [V130 teaching changes](docs/CURIOSITY_V130.md). The generated V130 HTML comes from the GitHub Actions artifact until merged.
 
 V129 turns each worked example into an optional **attempt → hint → compare → repair → fresh problem → recall** learning loop. It uses authored steps and the existing independent and recall questions, avoids arbitrary-speech grading, and folds older specific-help buttons behind a disclosure. Downloadable V129 builds are generated and checked by GitHub Actions; see [V129 teaching notes](docs/LEARN_BY_DOING_V129.md).
