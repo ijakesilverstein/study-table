@@ -2,6 +2,8 @@
 
 An offline-capable learning app. Current downloads and online access are published separately at https://study-table-downloads.vercel.app. The public deployment may lag the latest source release until verified. The earlier app project is not modified by this delivery workflow.
 
+V128 adds a nudge → compare → explain → next-step coaching sequence in every worked case. Learners can type or speak an idea, compare it with the actual worked reasoning without misleading automatic grading, and move through steps at their own pace. This builds on the V127 voice/typing controls and works offline after the standalone file opens. The updated mode still needs its independent checks and human comprehension validation.
+
 V127 adds an optional step-by-step walkthrough and a lesson-backed speaking/typing coach to both worked cases in every full-course unit across all seven subjects. Speech transcription uses optional browser support; otherwise, learners can type. The help is anchored to actual worked steps, terms and common mistakes, and never pretends to grade arbitrary speech. Learners can try their next move before revealing a step, show the conclusion at the end, or return to the complete solution immediately. Reading still requires no quiz, no scoring or changes to saved progress. This change is source-backed and awaits a verified release build; see [V127 notes](docs/GUIDED_STEPS_V127.md).
 
 V126 rewrites the displayed teaching in six beginner lessons: piano hand routes and held notes, Spanish sentence building, pronunciation and questions, and chess capture accounting. Twenty-two primary worked steps and seven reference tables make each action explicit. The chess boards now explain that both sparse endings are drawn. Teaching keyboards retain playable touch sizes in a contained horizontal scroll area. All 87 base records, earlier demonstrations, V125 variations and progress backups remain. See [the revision notes](docs/LESSON_REVISIONS_V126.md).
@@ -37,7 +39,7 @@ python3 scripts/build.py
 python3 -m http.server 8769 --directory public
 ```
 
-Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v127.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
+Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v128.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
 
 - `source/teacher-prose-v109.json`: rewritten explanations in existing lessons.
 - `source/draft-foundation-lessons.json` and `source/lessons-v109.json`: the 12 new lessons. The historical `draft-` filename is retained for build compatibility; these records are now published.
