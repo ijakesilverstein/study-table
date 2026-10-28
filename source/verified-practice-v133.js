@@ -129,6 +129,18 @@ function v133Remove(host){
   panel.querySelector('[data-v133-remove]').hidden=true;
  }
 }
+// An edited answer is a new attempt. Do not leave old "correct" feedback visible.
+function v133Invalidate(form){
+ const host=form.closest('[data-v133-unit-id]'),panel=host?.querySelector('[data-v133-content]');
+ if(!panel)return;
+ const result=panel.querySelector('[data-v133-result]'),reason=panel.querySelector('[data-v133-reason]'),next=panel.querySelector('[data-v133-next]');
+ if(result){result.hidden=true;result.textContent='';delete result.dataset.outcome}
+ if(reason)reason.hidden=true;
+ if(next)next.hidden=true;
+ if(host)delete host.dataset.lastOutcome;
+}
+document.addEventListener('input',event=>{const form=event.target.closest('[data-v133-form]');if(form)v133Invalidate(form)});
+document.addEventListener('change',event=>{const form=event.target.closest('[data-v133-form]');if(form)v133Invalidate(form)});
 document.addEventListener('submit',event=>{
  const form=event.target.closest('[data-v133-form]');if(!form)return;
  event.preventDefault();
