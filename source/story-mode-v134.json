@@ -202,7 +202,7 @@
           {
             "label": "g1",
             "after": "The king has already taken that square; the pieces would collide.",
-            "why": "King g1 and rook f1 are the final arrangement."
+            "why": "The king finishes on g1, while the rook finishes on f1. They never occupy the same square."
           }
         ]
       },
@@ -268,7 +268,7 @@
           {
             "label": "12 m²/s",
             "after": "A second strip joins the first. The banner is getting big, fast.",
-            "why": "Width rate 4 m/s × current length 3 m = 12 m²/s.",
+            "why": "The width grows at 4 metres per second across 3 metres of current length. That creates a strip of 12 m²/s.",
             "works": true
           },
           {
@@ -373,7 +373,7 @@
           {
             "label": "64 m/s",
             "after": "You read squared speed as ordinary speed again.",
-            "why": "64 is v². The square root gives 8 m/s."
+            "why": "64 is the value of v², not v. Take the square root and you get a speed of 8 metres per second."
           },
           {
             "label": "10 m/s; heat doesn't affect speed.",
@@ -406,12 +406,12 @@
           {
             "label": "9,900",
             "after": "You've inverted the prevalence. Nearly everyone would have the condition.",
-            "why": "9,900 is the 99% who do not have the condition."
+            "why": "9,900 is the 99% who do not have the condition. The affected group is only 1%, or 100 people."
           },
           {
             "label": "990",
             "after": "The detective asks you to calculate one percent, not nearly ten.",
-            "why": "One percent is 0.01 × 10,000 = 100."
+            "why": "One percent means one in every hundred. Of 10,000 people, that makes 100 affected people, not 990."
           }
         ]
       },
@@ -428,7 +428,7 @@
           {
             "label": "5",
             "after": "That would be 5% of only 100 people, the wrong group.",
-            "why": "Specificity refers to people without the condition, so start with 9,900."
+            "why": "Specificity applies to the unaffected group. The false-positive rate is 5% of 9,900, not 5% of 100."
           },
           {
             "label": "99",
