@@ -1,6 +1,47 @@
 const COURSE=JSON.parse(document.getElementById('full-course-data').textContent);
 const PLACE='studytable:full-course:'+COURSE.subject+':reading';
 const byId=new Map(COURSE.units.map(u=>[u.id,u]));
+
+function v127GuideControls(example,id){
+ return '<div class="guided-study"><button type="button" data-guided-start aria-controls="guided-'+id+'" aria-expanded="false">Try the steps one at a time</button><div class="guided-panel" id="guided-'+id+'" hidden><p>Before each reveal, say what you would try and why. You can return to the full solution at any time.</p><p class="guided-status" role="status" aria-live="polite"></p><div class="guided-actions"><button type="button" data-guided-reveal>Reveal step 1 of '+example.steps.length+'</button><button type="button" data-guided-exit>Show full solution</button></div></div></div>';
+}
+function v127GuideStart(b){
+ const host=b.closest('.worked-case'),steps=[...host.querySelectorAll(':scope > .solution > li')],panel=host.querySelector('.guided-panel');
+ if(!steps.length)return;
+ host.dataset.guidedCount='0';steps.forEach(s=>s.hidden=true);
+ const notice=host.querySelector(':scope > .case-notice');if(notice)notice.hidden=true;
+ b.hidden=true;b.setAttribute('aria-expanded','true');panel.hidden=false;
+ const reveal=panel.querySelector('[data-guided-reveal]');reveal.hidden=false;
+ reveal.textContent='Reveal step 1 of '+steps.length;
+ panel.querySelector('.guided-status').textContent='Think through the first move before revealing step 1.';
+ reveal.focus();
+}
+function v127GuideReveal(b){
+ const host=b.closest('.worked-case'),steps=[...host.querySelectorAll(':scope > .solution > li')],index=Number(host.dataset.guidedCount||0),status=host.querySelector('.guided-status');
+ if(index<steps.length){
+  steps[index].hidden=false;host.dataset.guidedCount=String(index+1);
+  if(index+1<steps.length){status.textContent='Step '+(index+1)+' of '+steps.length+' is visible. What would you try next?';b.textContent='Reveal step '+(index+2)+' of '+steps.length;}
+  else{status.textContent='All '+steps.length+' steps are visible. Check the conclusion.';b.textContent='Show the conclusion';}
+ }else{
+  const notice=host.querySelector(':scope > .case-notice');if(notice)notice.hidden=false;
+  status.textContent='All reasoning and the conclusion are visible.';b.hidden=true;host.querySelector('[data-guided-exit]').focus();
+ }
+}
+function v127GuideEnd(b){
+ const host=b.closest('.worked-case'),start=host.querySelector('[data-guided-start]');
+ host.querySelectorAll(':scope > .solution > li').forEach(s=>s.hidden=false);
+ const notice=host.querySelector(':scope > .case-notice');if(notice)notice.hidden=false;
+ host.querySelector('.guided-panel').hidden=true;start.hidden=false;start.setAttribute('aria-expanded','false');
+ delete host.dataset.guidedCount;start.focus();
+}
+document.addEventListener('click',e=>{
+ const b=e.target.closest('button[data-guided-start],button[data-guided-reveal],button[data-guided-exit]');
+ if(!b)return;
+ if(b.hasAttribute('data-guided-start'))v127GuideStart(b);
+ else if(b.hasAttribute('data-guided-reveal'))v127GuideReveal(b);
+ else v127GuideEnd(b);
+});
+
 function resolveUnit(id){if(id==='workshop'&&COURSE.workshop)return COURSE.workshop.id;if(id==='project'&&COURSE.project)return COURSE.project.id;if(id===COURSE.workshop?.id)return id;if(id===COURSE.project?.id)return id;return byId.has(id)?id:byId.has(COURSE.aliases?.[id])?COURSE.aliases[id]:null}
 function bookmark(){try{return resolveUnit(localStorage.getItem(PLACE))}catch{return null}}
 function saveReading(id){v119Current=id;if(byId.has(id))v119Mark(id,{seen:true});try{localStorage.setItem(PLACE,id)}catch{}window.parent.postMessage({type:'study-course-reading',subject:COURSE.subject,unit:id},'*')}
@@ -13,7 +54,7 @@ function showMap(){prepareView();const saved=bookmark();$('courseArticle').inner
 function practiceItem(ask,answer,label,index){const id='practice-answer-'+index;return '<li><p class="practice-label">'+escape(label)+'</p><p class="practice-ask">'+escape(ask)+'</p><button type="button" class="text-button" data-practice-answer="'+id+'" aria-controls="'+id+'" aria-expanded="false">Show the worked answer</button><div class="practice-answer" id="'+id+'" hidden><p>'+escape(answer)+'</p></div></li>'}
 function practiceBlock(unit){const previous=unit.recall.from&&byId.get(unit.recall.from),label=previous?'Looking back · Unit '+(COURSE.units.indexOf(previous)+1)+': '+previous.title:'Revisit this lesson';return '<details class="optional" id="courseVariation"><summary>Practice this unit (optional)</summary><p class="practice-note">Try on paper or in your head, then reveal the worked answer.</p><ol class="practice-list">'+practiceItem(unit.exercise[0],unit.exercise[1],'Use it now',0)+practiceItem(unit.recall.ask,unit.recall.answer,label,1)+'</ol>'+v119SelfCheck(unit)+'</details>'}
 function takeawayBlock(unit){return '<section class="takeaway"><h2>What to remember</h2><p>'+escape(unit.takeaway)+'</p></section>'}
-function worked(example,id,unit){return '<section class="worked-case" id="'+id+'"><h2>'+escape(example.title)+'</h2><p class="case-problem">'+escape(example.problem)+'</p>'+(id==='courseFirst'?'<div id="courseDemo"></div>':'')+'<ol class="solution">'+example.steps.map((step,index)=>'<li><h3>'+escape(step[0])+'</h3><p class="calculation">'+escape(step[1])+'</p><p>'+escape(step[2])+'</p>'+v122Step(unit,id,index)+'</li>').join('')+'</ol>'+v126Reference(unit,id)+v122Table(unit,id)+'<p class="case-notice">'+escape(example.notice)+'</p></section>'}
+function worked(example,id,unit){return '<section class="worked-case" id="'+id+'"><h2>'+escape(example.title)+'</h2><p class="case-problem">'+escape(example.problem)+'</p>'+v127GuideControls(example,id)+(id==='courseFirst'?'<div id="courseDemo"></div>':'')+'<ol class="solution">'+example.steps.map((step,index)=>'<li><h3>'+escape(step[0])+'</h3><p class="calculation">'+escape(step[1])+'</p><p>'+escape(step[2])+'</p>'+v122Step(unit,id,index)+'</li>').join('')+'</ol>'+v126Reference(unit,id)+v122Table(unit,id)+'<p class="case-notice">'+escape(example.notice)+'</p></section>'}
 function showUnit(id){id=resolveUnit(id);if(id===COURSE.workshop?.id){v117ShowWorkshop();return}if(id===COURSE.project.id){showProject();return}const stored=byId.get(id);if(!stored)return;const unit=v126Lesson(stored);prepareView();saveReading(id);const index=COURSE.units.indexOf(stored);
  $('courseArticle').innerHTML='<button class="text-button" data-course-map>← Course map</button><p class="course-eyebrow">UNIT '+(index+1)+' OF '+COURSE.units.length+'</p><h1>'+escape(unit.title)+'</h1><p class="course-goal">'+escape(unit.goal)+'</p>'+v122Opening(unit)+(unit.terms?.length?'<details class="glossary"><summary>Words and symbols in this unit</summary><dl>'+unit.terms.map(([term,meaning])=>'<dt>'+escape(term)+'</dt><dd>'+escape(meaning)+'</dd>').join('')+'</dl></details>':'')+worked(unit.first,'courseFirst',unit)+'<section class="explanation"><h2>'+escape(unit.heading)+'</h2>'+unit.teaching.map(p=>'<p>'+escape(p)+'</p>').join('')+'</section>'+v126Deeper(unit)+worked(unit.second,'courseSecond',unit)+(unit.project?'<section class="course-project"><h2>'+escape(unit.project.title)+'</h2><ol>'+unit.project.steps.map(step=>'<li>'+escape(step)+'</li>').join('')+'</ol></section>':'')+(unit.supplement?'<details class="optional" id="courseSupplement"><summary>'+escape(unit.supplement.title)+'</summary>'+unit.supplement.paragraphs.map(p=>'<p>'+escape(p)+'</p>').join('')+'<div class="course-actions">'+unit.supplement.examples.map(x=>'<button type="button" data-course-demo-line="'+x.line+'">'+escape(x.label)+'</button>').join('')+'</div></details>':'')+(unit.mistake?'<details class="optional"><summary>A mistake to inspect</summary><p><strong>Incorrect attempt:</strong> '+escape(unit.mistake.attempt)+'</p><p>'+escape(unit.mistake.diagnosis)+'</p><p>'+escape(unit.mistake.repair)+'</p><p class="mistake-check"><strong>Check the reasoning:</strong> '+escape(unit.mistake.check)+'</p></details>':'')+v116MathReference(id)+v125Section(unit)+takeawayBlock(unit)+practiceBlock(unit)+'<footer class="course-footer">'+(unit.previous?'<button data-course-unit="'+unit.previous+'">← Previous unit</button>':'')+(unit.next?'<button class="primary" data-course-unit="'+unit.next+'">Next: '+escape(byId.get(unit.next).title)+'</button>':'<button class="primary" data-course-project>Next: '+escape(COURSE.project.title)+'</button><button data-course-map>Back to the course map</button>')+'<button data-course-practice>Practice material</button></footer>';
  document.querySelectorAll('#courseContents [aria-current]').forEach(b=>b.removeAttribute('aria-current'));
