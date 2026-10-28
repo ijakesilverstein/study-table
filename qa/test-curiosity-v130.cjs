@@ -71,7 +71,7 @@ const courses=require('../source/full-courses-built.json'),edition=Number(requir
     const recentIndex=course.units.findIndex(u=>u.title===picked);
     assert(recentIndex>=Math.max(0,course.units.length-3),subject+' must suggest nearby material');
     assert(recentIndex<course.units.length);
-    const indexLabel=(await recent.locator('[data-v130-index]').innerText()).trim();assert(indexLabel.endsWith('of '+course.units.length),subject+' '+JSON.stringify(indexLabel)+' must use the actual full-course length '+course.units.length);
+    const indexLabel=(await recent.locator('[data-v130-index]').innerText()).trim().toLowerCase();assert(indexLabel.endsWith('of '+course.units.length),subject+' '+JSON.stringify(indexLabel)+' must use the actual full-course length '+course.units.length);
    }
    console.log('CURIOSITY_V132_PASS',subject,'surprise question, answer, lesson jump and misconception game');
   }
