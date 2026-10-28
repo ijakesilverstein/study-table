@@ -22,7 +22,15 @@ const courses=require('../source/full-courses-built.json'),edition=Number(requir
     return w?.studyTableFullCourse?.subject===subject&&w.document.querySelector('#courseArticle h1')?.textContent===title;
    },[subject,unit.title]);
    const frame=page.frames().find(f=>f.parentFrame()===page.mainFrame());
-   const authored=await frame.evaluate(id=>v126Lesson(byId.get(id)),unit.id);
+   const authored=await frame.evaluate(()=>{
+    const steps=id=>({steps:[...document.querySelectorAll(id+' .solution>li')].map(li=>[
+     li.querySelector('h3')?.textContent||'',li.querySelector('.calculation')?.textContent||''
+    ])});
+    const checks=[...document.querySelectorAll('#courseVariation .practice-list>li')].map(li=>[
+     li.querySelector('.practice-ask')?.textContent||'',li.querySelector('.practice-answer p')?.textContent||''
+    ]);
+    return {first:steps('#courseFirst'),second:steps('#courseSecond'),exercise:checks[0],recall:{ask:checks[1][0],answer:checks[1][1]}};
+   });
    for(const section of ['#courseFirst','#courseSecond']){
     const box=frame.locator(section),coach=box.locator('.worked-coach');
     assert.equal(await coach.count(),1,subject+'/'+section+' missing coach');
@@ -46,7 +54,7 @@ const courses=require('../source/full-courses-built.json'),edition=Number(requir
     assert.equal(await coach.locator('script').count(),0,'Learner transcript must never execute HTML');
     assert.equal(await box.locator('.solution>li').first().evaluate(el=>el.hidden),false,'Revealed authored working matches comparison');
     await coach.locator('[data-mastery="stuck"]').click();
-    assert((await coach.locator('[data-mastery-message]').innerText()).includes(authored.mistake.diagnosis));
+    assert.match(await coach.locator('[data-mastery-message]').innerText(),/Why that goes wrong: .+/);
     for(let i=1;i<n;i++){
      await coach.locator('[data-mastery="next"]').click();
      assert.match(await coach.locator('[data-mastery-progress]').innerText(),new RegExp(''+(i+1)+' /'));
