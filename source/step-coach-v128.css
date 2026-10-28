@@ -25,3 +25,21 @@
 
 #stepCoach :is(input,textarea,select){background:var(--study-surface)!important;color:var(--study-ink)!important;border-color:var(--study-muted)!important}
 #stepCoach #st128CoachFeedback{color:var(--study-ink);font-weight:400}
+
+/* Keep long maths prompts, controls and input rows within narrow mobile dialogs. */
+#stepCoach,#stepCoach *{min-width:0}
+#stepCoach :is(p,h2,h3,label,summary,button){overflow-wrap:anywhere}
+#stepCoach .step-coach-body{box-sizing:border-box;width:100%;max-width:100%;overflow-wrap:anywhere}
+#stepCoach .step-coach-voice{max-width:100%}
+#stepCoach .step-coach-voice label{flex:1 1 100%;max-width:100%}
+#stepCoach :is(input,textarea,select,button){max-width:100%}
+@media(max-width:430px){#stepCoach header{align-items:flex-start;flex-wrap:wrap}#stepCoach footer{max-width:100%}}
+
+#stepCoach .st132-board{margin:18px 0}
+#stepCoach .st132-board svg{display:block;width:100%;max-width:380px;height:auto}
+#stepCoach .st132-board figcaption{font-size:15px;line-height:1.65;color:var(--study-muted);margin-top:12px}
+#stepCoach .st132-reference-scroll{max-width:100%;overflow-x:auto}
+#stepCoach .st132-coach-reference table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.6;color:var(--study-ink)}
+#stepCoach .st132-coach-reference caption{text-align:left;padding:14px 0;color:var(--study-muted)}
+#stepCoach .st132-coach-reference th,#stepCoach .st132-coach-reference td{text-align:left;vertical-align:top;padding:10px 6px;border-bottom:1px solid var(--study-line);overflow-wrap:normal;word-break:normal}
+#stepCoach .st132-coach-reference thead{background:var(--study-panel)}

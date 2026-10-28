@@ -1,0 +1,528 @@
+{
+  "rests-and-halves": {
+    "subject": "piano",
+    "title": "Give the quiet beat its full time",
+    "context": "First use the C–rest–D–E bar at 60 BPM. Then compare the second bar, where C and D share the first beat. The written timing stays beside each question. You can close this panel to hear either pattern in the lesson.",
+    "steps": [
+      {
+        "title": "Make a real rest",
+        "prompt": "In the first bar, which numbered beat is completely silent?",
+        "answer": "2",
+        "kind": "number",
+        "reasoning": "Beat 2 is silent. Release C as 2 begins, keep counting for that whole beat, and enter on D at 3.",
+        "stuck": [
+          [
+            "I keep holding C",
+            "A held C makes a longer note. Release it on 2 to make an actual silence. Your counting continues even though there is no new sound."
+          ],
+          [
+            "I wait for the next note to count again",
+            "Say every number evenly, including 2. The silent beat gets the same duration as the sounded beats."
+          ]
+        ],
+        "mistakes": {
+          "1": "Beat 1 begins with C. The silent beat comes after that note releases.",
+          "3": "D begins on beat 3. Keep beat 2 silent before entering on D."
+        },
+        "reference": {
+          "table": {
+            "caption": "The first bar at 60 BPM: a numbered beat starts every second.",
+            "headers": [
+              "Count / time",
+              "Action"
+            ],
+            "rows": [
+              [
+                "1 / 0 s",
+                "Press C4"
+              ],
+              [
+                "2 / 1 s",
+                "Release C4; stay silent"
+              ],
+              [
+                "3 / 2 s",
+                "Press D4"
+              ],
+              [
+                "4 / 3 s",
+                "Press E4"
+              ],
+              [
+                "Next 1 / 4 s",
+                "Release E4"
+              ]
+            ],
+            "languageColumns": []
+          }
+        },
+        "units": [
+          "beat"
+        ],
+        "unitLabel": "the numbered beat"
+      },
+      {
+        "title": "Measure the space before D",
+        "prompt": "At 60 BPM, how many seconds after the first C does D begin?",
+        "answer": "2",
+        "kind": "number",
+        "reasoning": "At 60 BPM each beat lasts one second. C starts at time 0; the silent beat starts at time 1; D starts at time 2. A rest still occupies time.",
+        "stuck": [
+          [
+            "I count only the sounded notes",
+            "C and D are two sounded notes, but there is a silent beat between them. Count from the start of beat 1 to the start of beat 3."
+          ],
+          [
+            "Why does the table start at zero?",
+            "Elapsed time is zero at the instant C begins. One second later beat 2 starts; two seconds later beat 3 starts. The first sounded note does not use up a second before it begins."
+          ]
+        ],
+        "mistakes": {
+          "1": "One second after C is the start of the silent beat. D enters one beat later.",
+          "3": "Three is D’s beat number. It begins two elapsed seconds after the start, because beat 1 began at time zero."
+        },
+        "reference": {
+          "table": {
+            "caption": "The first bar at 60 BPM: a numbered beat starts every second.",
+            "headers": [
+              "Count / time",
+              "Action"
+            ],
+            "rows": [
+              [
+                "1 / 0 s",
+                "Press C4"
+              ],
+              [
+                "2 / 1 s",
+                "Release C4; stay silent"
+              ],
+              [
+                "3 / 2 s",
+                "Press D4"
+              ],
+              [
+                "4 / 3 s",
+                "Press E4"
+              ],
+              [
+                "Next 1 / 4 s",
+                "Release E4"
+              ]
+            ],
+            "languageColumns": []
+          }
+        },
+        "units": [
+          "s",
+          "sec",
+          "second",
+          "seconds"
+        ],
+        "unitLabel": "seconds after the first C"
+      },
+      {
+        "title": "Put D halfway inside beat 1",
+        "prompt": "In the second bar at 60 BPM, how many seconds after C does the D on “1 and” begin?",
+        "answer": "0.5",
+        "kind": "number",
+        "reasoning": "D starts half a beat after C. At 60 BPM a full beat lasts one second, so half a beat lasts 0.5 seconds. E then begins on 2, one second after the initial C.",
+        "stuck": [
+          [
+            "Do the numbers get faster?",
+            "Keep 1 and 2 one second apart. Add the word and halfway between them. You have divided the beat into two parts, not changed the tempo."
+          ],
+          [
+            "Does every spoken slot need a press?",
+            "No. A slot may start a note, continue a held note, or stay silent. In this bar, E continues through 2-and without being pressed again."
+          ]
+        ],
+        "mistakes": {
+          "1": "One second after C is beat 2, when E begins. The D falls halfway between the first two numbers.",
+          "2": "Two seconds after the start is the silent beat 3 in this second bar. D begins much earlier, on 1-and."
+        },
+        "reference": {
+          "table": {
+            "caption": "The second bar: the numbers still arrive one second apart.",
+            "headers": [
+              "Say / time",
+              "Action"
+            ],
+            "rows": [
+              [
+                "1 / 0 s",
+                "Press C4"
+              ],
+              [
+                "1 and / 0.5 s",
+                "Release C4; press D4"
+              ],
+              [
+                "2 / 1 s",
+                "Release D4; press E4"
+              ],
+              [
+                "3 / 2 s",
+                "Release E4; stay silent"
+              ],
+              [
+                "4 / 3 s",
+                "Press C4"
+              ],
+              [
+                "Next 1 / 4 s",
+                "Release C4"
+              ]
+            ],
+            "languageColumns": []
+          }
+        },
+        "units": [
+          "s",
+          "sec",
+          "second",
+          "seconds"
+        ],
+        "unitLabel": "seconds after C"
+      }
+    ]
+  },
+  "spanish-5": {
+    "subject": "spanish",
+    "title": "Recover the café question, then make your choice",
+    "context": "You want takeout. The worker asks ¿Para aquí o para llevar? but you missed the question. We will ask for a repeat, choose takeout, and handle the worker’s confirmation. Several natural replies are accepted; other wording gets a comparison instead of a language grade.",
+    "steps": [
+      {
+        "title": "Ask to hear it again",
+        "prompt": "Write a polite request for the worker to repeat the question.",
+        "answer": "¿Puede repetirlo más despacio, por favor?",
+        "kind": "phrase",
+        "reasoning": "¿Puede repetirlo más despacio, por favor? asks for a slower repeat. Learn it as a complete useful request. It gives you another hearing before you choose an option.",
+        "stuck": [
+          [
+            "I cannot build the whole request",
+            "Start with ¿Puede repetir, por favor? That already asks for a repeat. Add más despacio if the speed is the problem."
+          ],
+          [
+            "Should I guess an answer instead?",
+            "You can ask for the question again. Repairing the conversation is a normal way to get the information you need before answering."
+          ]
+        ],
+        "mistakes": {
+          "sí": "Sí gives an answer, but it does not ask for the question again. Here the goal is to request a repeat.",
+          "para llevar": "That states your takeout choice. To ask for another hearing first, use a repeat request such as ¿Puede repetir, por favor? A repeat request lets you hear the question before choosing."
+        },
+        "reference": {
+          "table": {
+            "caption": "An exchange you can use at the counter.",
+            "headers": [
+              "Speaker",
+              "Spanish",
+              "Meaning"
+            ],
+            "rows": [
+              [
+                "Worker",
+                "¿Para aquí o para llevar?",
+                "For here or to go?"
+              ],
+              [
+                "You",
+                "¿Puede repetirlo más despacio, por favor?",
+                "Could you repeat it more slowly, please?"
+              ],
+              [
+                "Worker",
+                "¿Para aquí o para llevar?",
+                "For here or to go?"
+              ],
+              [
+                "You",
+                "Para llevar, por favor.",
+                "To go, please."
+              ],
+              [
+                "Worker",
+                "¿Para llevar?",
+                "To go?"
+              ],
+              [
+                "You",
+                "Sí, para llevar.",
+                "Yes, to go."
+              ]
+            ],
+            "languageColumns": [
+              1
+            ]
+          }
+        },
+        "accepted": [
+          "¿Puede repetirlo más despacio, por favor?",
+          "¿Puede repetir, por favor?",
+          "¿Puede repetirlo, por favor?",
+          "¿Puedes repetir, por favor?",
+          "¿Puede decirlo otra vez?",
+          "¿Puede repetir?",
+          "¿Puede repetir más despacio?",
+          "¿Puedes repetirlo más despacio, por favor?",
+          "¿Puede repetir más despacio, por favor?",
+          "¿Puedes repetirlo, por favor?",
+          "Otra vez, por favor."
+        ]
+      },
+      {
+        "title": "Choose between the two options",
+        "prompt": "The repeated question is ¿Para aquí o para llevar? Reply in Spanish that you want it to go.",
+        "answer": "Para llevar, por favor.",
+        "kind": "phrase",
+        "reasoning": "Para llevar, por favor selects takeout. Para aquí would choose staying here. You can reuse the short option from the question instead of building a longer sentence.",
+        "stuck": [
+          [
+            "What does each choice mean?",
+            "Para aquí means for here. Para llevar means to go in this café exchange. The word o means or and joins the two alternatives."
+          ],
+          [
+            "Why is sí unclear here?",
+            "The worker has offered two options. Name the one you want. Sí becomes useful when the worker later checks a single option."
+          ]
+        ],
+        "mistakes": {
+          "sí": "The first question offers two alternatives. Say para llevar to select takeout; sí alone leaves the choice unclear.",
+          "para aquí": "Para aquí chooses staying here. It is valid Spanish, but it gives the other order. Your goal in this exchange is takeout."
+        },
+        "reference": {
+          "table": {
+            "caption": "An exchange you can use at the counter.",
+            "headers": [
+              "Speaker",
+              "Spanish",
+              "Meaning"
+            ],
+            "rows": [
+              [
+                "Worker",
+                "¿Para aquí o para llevar?",
+                "For here or to go?"
+              ],
+              [
+                "You",
+                "¿Puede repetirlo más despacio, por favor?",
+                "Could you repeat it more slowly, please?"
+              ],
+              [
+                "Worker",
+                "¿Para aquí o para llevar?",
+                "For here or to go?"
+              ],
+              [
+                "You",
+                "Para llevar, por favor.",
+                "To go, please."
+              ],
+              [
+                "Worker",
+                "¿Para llevar?",
+                "To go?"
+              ],
+              [
+                "You",
+                "Sí, para llevar.",
+                "Yes, to go."
+              ]
+            ],
+            "languageColumns": [
+              1
+            ]
+          }
+        },
+        "accepted": [
+          "Para llevar, por favor.",
+          "Para llevar.",
+          "Lo quiero para llevar.",
+          "Es para llevar.",
+          "Para llevar, gracias."
+        ]
+      },
+      {
+        "title": "Confirm the choice",
+        "prompt": "Now the worker asks ¿Para llevar? Confirm that takeout is what you want.",
+        "answer": "Sí, para llevar.",
+        "kind": "phrase",
+        "reasoning": "Sí, para llevar confirms the option the worker just repeated. Sí alone or repeating para llevar can also confirm it in this exchange. Notice how the question has changed from two alternatives to one check.",
+        "stuck": [
+          [
+            "Why does sí work this time?",
+            "The worker is now checking one choice: takeout. A yes response confirms that single choice. The earlier question asked you to choose between two possibilities."
+          ],
+          [
+            "Does si need the written accent?",
+            "Sí with an accent means yes. Si without the accent means if. Keep the accent when writing your confirmation, even though your spoken reply is already clear."
+          ]
+        ],
+        "mistakes": {
+          "no": "No rejects the option the worker just checked. To confirm your stated takeout choice, use sí or repeat para llevar.",
+          "para aquí": "This changes the order to staying here. To confirm takeout, use sí, para llevar."
+        },
+        "reference": {
+          "table": {
+            "caption": "An exchange you can use at the counter.",
+            "headers": [
+              "Speaker",
+              "Spanish",
+              "Meaning"
+            ],
+            "rows": [
+              [
+                "Worker",
+                "¿Para aquí o para llevar?",
+                "For here or to go?"
+              ],
+              [
+                "You",
+                "¿Puede repetirlo más despacio, por favor?",
+                "Could you repeat it more slowly, please?"
+              ],
+              [
+                "Worker",
+                "¿Para aquí o para llevar?",
+                "For here or to go?"
+              ],
+              [
+                "You",
+                "Para llevar, por favor.",
+                "To go, please."
+              ],
+              [
+                "Worker",
+                "¿Para llevar?",
+                "To go?"
+              ],
+              [
+                "You",
+                "Sí, para llevar.",
+                "Yes, to go."
+              ]
+            ],
+            "languageColumns": [
+              1
+            ]
+          }
+        },
+        "accepted": [
+          "Sí, para llevar.",
+          "Sí.",
+          "Sí, gracias.",
+          "Sí, por favor.",
+          "Para llevar.",
+          "Para llevar, por favor.",
+          "Sí, para llevar, por favor.",
+          "Sí, para llevar, gracias."
+        ],
+        "spellingHelp": "Keep the accent in sí when you mean yes: Sí, para llevar."
+      }
+    ]
+  },
+  "castling": {
+    "subject": "chess",
+    "title": "Follow both pieces, then test the king’s route",
+    "context": "White has a king on e1 and rook on h1. Black has a king on e8. The castling right is available and all other squares are empty. First follow a legal castle; then add a black rook and inspect the changed position.",
+    "steps": [
+      {
+        "title": "Move the king",
+        "prompt": "In White’s kingside castle, which square does the king finish on? Give a square such as g1.",
+        "answer": "g1",
+        "kind": "square",
+        "reasoning": "The king moves two squares toward the h1 rook: e1 through f1 to g1. The rook also moves in the same turn; it does not stay on h1.",
+        "stuck": [
+          [
+            "Which way is kingside?",
+            "White’s kingside rook starts on h1. Move the king toward that rook, along rank 1. The king moves two squares, not all the way to the rook."
+          ],
+          [
+            "Is this a normal king move?",
+            "Castling is a special move. It moves the king two squares and repositions a rook in one turn, provided the history, space and attack rules all permit it."
+          ]
+        ],
+        "mistakes": {
+          "f1": "F1 is the square the king crosses. It finishes one square farther along, on g1.",
+          "h1": "H1 is the rook’s starting square. The king stops on g1 rather than replacing the rook."
+        },
+        "reference": {
+          "board": {
+            "fen": "4k3/8/8/8/8/8/8/4K2R w K - 0 1",
+            "description": "Before castling: White king e1 and rook h1; Black king e8. White to move, with kingside castling rights. The king’s route is e1, f1, g1.",
+            "marks": [
+              "e1",
+              "f1",
+              "g1"
+            ]
+          }
+        }
+      },
+      {
+        "title": "Place the rook",
+        "prompt": "After that same castle, which square does the rook finish on?",
+        "answer": "f1",
+        "kind": "square",
+        "reasoning": "The final arrangement is king g1 and rook f1. The rook lands beside the king, on the other side of the king’s route. The two piece movements use one turn.",
+        "stuck": [
+          [
+            "Does the rook go to the king’s old square?",
+            "No. The king’s old square is e1, but the rook finishes on f1. Compare the final king and rook side by side in the diagram."
+          ],
+          [
+            "Can Black move between the two parts?",
+            "No. Castling is one move. Complete the king and rook movements together before it becomes Black’s turn."
+          ]
+        ],
+        "mistakes": {
+          "e1": "E1 is the king’s old square. The rook lands on f1, beside the king now on g1.",
+          "h1": "Leaving the rook on h1 would omit half of castling. It moves to f1 in this same turn.",
+          "g1": "G1 is occupied by White’s king after castling. The rook belongs beside it on f1."
+        },
+        "reference": {
+          "board": {
+            "fen": "4k3/8/8/8/8/8/8/5RK1 b - - 1 1",
+            "description": "After White castles kingside: White king g1 and rook f1; Black king e8. Black to move. Both white pieces moved in one turn.",
+            "marks": [
+              "g1",
+              "f1"
+            ]
+          }
+        }
+      },
+      {
+        "title": "Inspect the changed position",
+        "prompt": "Start again, now with a black rook on f8 and an empty f-file. Which attacked square prevents White’s kingside castle?",
+        "answer": "f1",
+        "kind": "square",
+        "reasoning": "The black rook attacks f1 down the open f-file. The king would have to cross f1, so castling is illegal even though e1 and g1 are safe in this position.",
+        "stuck": [
+          [
+            "Why inspect a square the king does not finish on?",
+            "A castle cannot carry the king through check. Check the start e1, crossing f1 and destination g1. An attacked crossing square is enough to forbid it."
+          ],
+          [
+            "Is the rook on h1 the problem?",
+            "The special attack restrictions concern the king’s route. In this example, the black rook attacks the crossing square f1. The white rook’s own route does not rescue an unsafe king route."
+          ]
+        ],
+        "mistakes": {
+          "e1": "The black rook on f8 does not attack e1 in this position. Follow its open file to f1, the crossing square.",
+          "g1": "G1 is the destination, but it is safe here. The attacked crossing square f1 is what forbids castling."
+        },
+        "reference": {
+          "board": {
+            "fen": "4kr2/8/8/8/8/8/8/4K2R w K - 0 1",
+            "description": "A different position: White king e1 and rook h1; Black king e8 and rook f8. White to move with the right still available, but Black’s rook attacks f1, the king’s crossing square.",
+            "marks": [
+              "f8",
+              "f1"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

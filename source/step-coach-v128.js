@@ -4,7 +4,7 @@
  const own=(object,key)=>typeof key==='string'&&Object.prototype.hasOwnProperty.call(object,key);
  const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const normal=value=>value.normalize('NFC').trim().toLowerCase().replace(/[−–]/g,'-').replace(/\s+/g,' ');
- const words={zero:0,one:1,two:2,three:3,four:4,five:5,six:6,seven:7,eight:8,nine:9,ten:10,twelve:12,sixteen:16,'one hundred':100,'sixty four':64};
+ const words={half:.5,zero:0,one:1,two:2,three:3,four:4,five:5,six:6,seven:7,eight:8,nine:9,ten:10,twelve:12,sixteen:16,'one hundred':100,'sixty four':64};
  function result(kind,message){return {kind,message}}
  function check(unit,index,value){
   if(!own(scenarios,unit)||!Number.isInteger(index)||!scenarios[unit].steps[index]||typeof value!=='string')return null;
@@ -31,6 +31,19 @@
    if(pitch===step.answer)return fits();
    return own(step.mistakes,pitch)?result('revise',step.mistakes[pitch]):result('compare','Use the note name and register, such as C3 or D4. '+step.reasoning);
   }
+  if(step.kind==='square'){
+   const square=input.replace(/\s+/g,'').replace(/[.!]$/,'');
+   if(square===step.answer)return fits();
+   return result(/^[a-h][1-8]$/.test(square)?'revise':'compare',own(step.mistakes,square)?step.mistakes[square]:'Use a board square such as g1. '+step.reasoning);
+  }
+  if(step.kind==='phrase'){
+   const clean=v=>normal(v).replace(/[¿?¡!.,;:]/g,'').replace(/\s+/g,' ').trim(),phrase=clean(input),accepted=[step.answer,...(step.accepted||[])].map(clean);
+   if(accepted.includes(phrase))return fits();
+   const plain=v=>v.normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+   if(accepted.some(v=>plain(v)===plain(phrase)))return result('revise',step.spellingHelp||'Keep the spelling and accents shown here: '+step.answer);
+   for(const [attempt,message] of Object.entries(step.mistakes))if(clean(attempt)===phrase)return result('revise',message);
+   return result('compare','Here is one reply that fits this exchange: '+step.answer+' Other wording can work too. Compare what your reply asks or confirms with the complete exchange.');
+  }
   const phrase=input.replace(/[¿?¡!.,;:]/g,'').replace(/^quiero\s+/,'').replace(/\s+por favor$/,'').trim().replace(/\s+/g,' ');
   if(phrase===step.answer)return fits();
   if(phrase.normalize('NFD').replace(/[\u0300-\u036f]/g,'')===step.answer.normalize('NFD').replace(/[\u0300-\u036f]/g,''))return result('revise','The wording fits this model. Keep the spelling shown here, including accents and ñ: '+step.answer+'.');
@@ -38,6 +51,22 @@
   for(const [token,message] of Object.entries(step.mistakes))if(tokens.includes(token))return result('revise',message);
   return result('compare','I cannot reliably check that wording against this small phrase model. It may express something different. Compare the article, noun and description with: '+step.answer+'. Other ways to make a request can also be valid.');
  }
+ function boardMarkup(board){
+  const ranks=board.fen.split(' ')[0].split('/');if(ranks.length!==8)return '';
+  let cells='',pieces='';const marks=board.marks||[];
+  for(let row=0;row<8;row++){
+   let file=0;for(const char of ranks[row]){if(/[1-8]/.test(char)){file+=Number(char);continue}const x=32+file*42+21,y=8+row*42+21,white=char===char.toUpperCase();pieces+='<circle cx="'+x+'" cy="'+y+'" r="16" fill="'+(white?'#fff':'#242428')+'" stroke="'+(white?'#242428':'#fff')+'" stroke-width="1.5"/><text x="'+x+'" y="'+(y+8)+'" text-anchor="middle" font-size="25" font-family="system-ui" fill="'+(white?'#242428':'#fff')+'">'+esc(char.toUpperCase())+'</text>';file++}
+   for(let col=0;col<8;col++){const x=32+col*42,y=8+row*42,square='abcdefgh'[col]+(8-row);cells+='<rect x="'+x+'" y="'+y+'" width="42" height="42" fill="'+((row+col)%2?'#bcbcc7':'#f0f0f4')+'"/>'+(marks.includes(square)?'<rect x="'+(x+2)+'" y="'+(y+2)+'" width="38" height="38" fill="none" stroke="#7657bf" stroke-width="3"/>':'')}
+  }
+  const labels=[...Array(8)].map((_,i)=>'<text x="'+(53+i*42)+'" y="365" text-anchor="middle">'+'abcdefgh'[i]+'</text><text x="18" y="'+(34+i*42)+'" text-anchor="middle">'+(8-i)+'</text>').join('');
+  return '<figure class="st132-board"><svg viewBox="0 0 380 377" role="img" aria-labelledby="st132BoardTitle"><title id="st132BoardTitle">'+esc(board.description)+'</title>'+cells+pieces+'<g font-family="system-ui" font-size="16" fill="currentColor">'+labels+'</g></svg><figcaption>'+esc(board.description)+'</figcaption></figure>';
+ }
+ function referenceMarkup(reference){
+  if(!reference)return '';let body=reference.board?boardMarkup(reference.board):'';
+  if(reference.table){const t=reference.table;body+='<div class="st132-reference-scroll" role="region" tabindex="0" aria-label="Worked example table"><table><caption>'+esc(t.caption)+'</caption><thead><tr>'+t.headers.map(h=>'<th scope="col">'+esc(h)+'</th>').join('')+'</tr></thead><tbody>'+t.rows.map(row=>'<tr>'+row.map((v,i)=>'<'+(i?'td':'th scope="row"')+((t.languageColumns||[]).includes(i)?' lang="es"':'')+'>'+esc(v)+'</'+(i?'td':'th')+'>').join('')+'</tr>').join('')+'</tbody></table></div>'}
+  return '<details class="st132-coach-reference" open><summary>Follow the example</summary>'+body+'</details>';
+ }
+
  let dialog=null,current=null,part=0,opener=null,recognition=null,voiceGeneration=0;
  const drafts=new Map();
  const el=id=>dialog.querySelector('#'+id);
@@ -49,7 +78,7 @@
  function ensure(){
   if(dialog)return;
   dialog=document.createElement('dialog');dialog.id='stepCoach';dialog.setAttribute('aria-labelledby','st128CoachTitle');
-  dialog.innerHTML='<div class="step-coach-body"><header><p class="step-coach-eyebrow">Talk it through</p><button type="button" id="st128CoachClose">Close</button></header><h2 id="st128CoachTitle"></h2><p id="st128CoachContext"></p><label for="st128CoachPart">Which part do you want to work on?</label><select id="st128CoachPart"></select><h3 id="st128CoachPartTitle" tabindex="-1"></h3><p id="st128CoachPrompt"></p><label for="st128CoachThinking">Your thinking, in your own words</label><textarea id="st128CoachThinking" rows="3" maxlength="2000" aria-describedby="st128CoachNotesHelp"></textarea><p id="st128CoachNotesHelp" class="step-coach-note">These are your working notes. The answer check below does not grade this explanation. Notes stay available while this tab remains open.</p><div class="step-coach-voice"><label for="st128CoachVoiceLanguage">Dictation language<select id="st128CoachVoiceLanguage"><option value="en-US">English</option><option value="es-ES">Spanish</option></select></label><button type="button" id="st128CoachVoice">Speak your thinking</button><button type="button" id="st128CoachStopVoice" hidden>Stop microphone</button></div><p id="st128CoachVoiceStatus" class="step-coach-note" role="status">Typing always works. Dictation is available only when this browser has a ready local speech model.</p><form id="st128CoachCheck" novalidate><label for="st128CoachAnswer">Your answer for this step</label><input id="st128CoachAnswer" type="text" autocomplete="off" maxlength="200" spellcheck="false" aria-describedby="st128CoachPrompt"><button type="submit">Check this answer</button><p id="st128CoachFeedback" role="status"></p></form><label for="st128CoachStuck">Where did this get confusing?</label><select id="st128CoachStuck"></select><p id="st128CoachHelp"></p><details id="st128CoachWorked"><summary>See the teacher work this step</summary><p></p></details><footer><button type="button" id="st128CoachPrevious">Previous part</button><button type="button" id="st128CoachNext">Next part</button><button type="button" id="st128CoachReturn">Back to the lesson</button></footer></div>';
+  dialog.innerHTML='<div class="step-coach-body"><header><p class="step-coach-eyebrow">Talk it through</p><button type="button" id="st128CoachClose">Close</button></header><h2 id="st128CoachTitle"></h2><p id="st128CoachContext"></p><label for="st128CoachPart">Which part do you want to work on?</label><select id="st128CoachPart"></select><h3 id="st128CoachPartTitle" tabindex="-1"></h3><p id="st128CoachPrompt"></p><div id="st132CoachReference" hidden></div><label for="st128CoachThinking">Your thinking, in your own words</label><textarea id="st128CoachThinking" rows="3" maxlength="2000" aria-describedby="st128CoachNotesHelp"></textarea><p id="st128CoachNotesHelp" class="step-coach-note">These are your working notes. The answer check below does not grade this explanation. Notes stay available while this tab remains open.</p><div class="step-coach-voice"><label for="st128CoachVoiceLanguage">Dictation language<select id="st128CoachVoiceLanguage"><option value="en-US">English</option><option value="es-ES">Spanish</option></select></label><button type="button" id="st128CoachVoice">Speak your thinking</button><button type="button" id="st128CoachStopVoice" hidden>Stop microphone</button></div><p id="st128CoachVoiceStatus" class="step-coach-note" role="status">Typing always works. Dictation is available only when this browser has a ready local speech model.</p><form id="st128CoachCheck" novalidate><label for="st128CoachAnswer">Your answer for this step</label><input id="st128CoachAnswer" type="text" autocomplete="off" maxlength="200" spellcheck="false" aria-describedby="st128CoachPrompt"><button type="submit">Check this answer</button><p id="st128CoachFeedback" role="status"></p></form><label for="st128CoachStuck">Where did this get confusing?</label><select id="st128CoachStuck"></select><p id="st128CoachHelp"></p><details id="st128CoachWorked"><summary>See the teacher work this step</summary><p></p></details><footer><button type="button" id="st128CoachPrevious">Previous part</button><button type="button" id="st128CoachNext">Next part</button><button type="button" id="st128CoachReturn">Back to the lesson</button></footer></div>';
   document.body.append(dialog);
   el('st128CoachThinking').oninput=()=>state().thinking=el('st128CoachThinking').value;
   el('st128CoachAnswer').oninput=()=>{state().answer=el('st128CoachAnswer').value;state().feedback=null;el('st128CoachFeedback').textContent='';el('st128CoachFeedback').removeAttribute('data-feedback-kind')};
@@ -70,7 +99,7 @@
  function render(){
   stopVoice('Typing always works. Dictation requires a ready local speech model.');
   const scenario=scenarios[current],step=scenario.steps[part],draft=state();
-  el('st128CoachPart').value=String(part);el('st128CoachPartTitle').textContent=step.title;el('st128CoachPrompt').textContent=step.prompt;
+  el('st128CoachPart').value=String(part);el('st128CoachPartTitle').textContent=step.title;el('st128CoachPrompt').textContent=step.prompt;el('st132CoachReference').innerHTML=referenceMarkup(step.reference);el('st132CoachReference').hidden=!step.reference;el('st128CoachAnswer').lang=['phrase','spanish'].includes(step.kind)?'es':'en';
   el('st128CoachThinking').value=draft.thinking;el('st128CoachAnswer').value=draft.answer;showFeedback(draft.feedback);
   el('st128CoachStuck').innerHTML='<option value="">Choose a sticking point</option>'+step.stuck.map(([label],i)=>'<option value="'+i+'">'+esc(label)+'</option>').join('');
   el('st128CoachStuck').value=draft.help;showHelp();el('st128CoachWorked').open=false;el('st128CoachWorked').querySelector('p').textContent=step.reasoning;

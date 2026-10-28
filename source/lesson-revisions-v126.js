@@ -7,7 +7,7 @@ function v126Lesson(stored){
 function v126Reference(unit,id){
  const name=id==='courseFirst'?'first':'second',table=V126_REVISIONS[unit.id]?.tables?.[name];if(!table)return '';
  const columns=table.languageColumns||[];
- return '<div class="lesson-reference" data-lesson-revision="'+(V126_REVISIONS[unit.id].edition||126)+'"><table><caption>'+escape(table.caption)+'</caption><thead><tr>'+table.headers.map(h=>'<th scope="col">'+escape(h)+'</th>').join('')+'</tr></thead><tbody>'+table.rows.map(row=>'<tr>'+row.map((value,i)=>'<'+(i?'td':'th scope="row"')+(columns.includes(i)?' lang="es"':'')+'>'+escape(value)+'</'+(i?'td':'th')+'>').join('')+'</tr>').join('')+'</tbody></table></div>';
+ return '<div class="lesson-reference" role="region" tabindex="0" aria-label="'+escape(table.caption)+'" data-lesson-revision="'+(V126_REVISIONS[unit.id].edition||126)+'"><table><caption>'+escape(table.caption)+'</caption><thead><tr>'+table.headers.map(h=>'<th scope="col">'+escape(h)+'</th>').join('')+'</tr></thead><tbody>'+table.rows.map(row=>'<tr>'+row.map((value,i)=>'<'+(i?'td':'th scope="row"')+(columns.includes(i)?' lang="es"':'')+'>'+escape(value)+'</'+(i?'td':'th')+'>').join('')+'</tr>').join('')+'</tbody></table></div>';
 }
 function v126Deeper(unit){const revision=V126_REVISIONS[unit.id],data=revision?.deeper,stored=byId.get(unit.id),notes=V122_TEACHER_NOTES[unit.id];
  let extra='';

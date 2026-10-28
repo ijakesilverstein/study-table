@@ -8,7 +8,7 @@ function v127CoachData(host){
 }
 function v127CoachControls(unit,id){
  const example=id==='courseFirst'?unit.first:unit.second;
- return '<details class="worked-coach" data-coach-unit="'+escape(unit.id)+'"><summary>Talk through this example</summary>'+
+ return '<details class="worked-coach" data-coach-unit="'+escape(unit.id)+'"><summary>'+(id==='courseFirst'&&V128_COACH_UNITS.includes(unit.id)?'Compare your own explanation (optional)':'Talk through this example')+'</summary>'+
  '<p class="coach-intro">Explain what you would try. Type your thinking, or use on-device dictation if your browser supports it. The hints use this lesson’s worked solution; they cannot reliably grade a free-form answer.</p>'+
  v128CoachLink(unit,id)+
  '<label class="coach-label" for="coach-input-'+id+'">Your reasoning or question</label>'+

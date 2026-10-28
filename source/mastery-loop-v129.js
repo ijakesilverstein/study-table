@@ -50,7 +50,8 @@ function v129Prompt(details){
  if(s.phase==='step'){
   progress.textContent='Work through the example · '+(s.index+1)+' / '+example.steps.length;
   title.textContent='Your turn: choose the next move';
-  q.textContent=V129_QUESTION[COURSE.subject]||'What comes next, and why?';
+  const authored=v132Guidance(v129Get(details));
+  q.textContent=authored?.prompt||V129_QUESTION[COURSE.subject]||'What comes next, and why?';
  }else if(s.phase==='transfer'){
   progress.textContent='Now use it without copying';
   title.textContent='Try a fresh question';
@@ -111,11 +112,13 @@ function v129Action(details,action){
   return;
  }
  if(action==='hint'){
+  const authored=v132Guidance(ctx);if(authored){v129Result(details,authored.hint);return}
   if(s.phase==='step')v129Result(details,'Think about “'+step[0]+'.” Which part of the problem tells you to do that?');
   else v129Result(details,'Connect this question to the unit’s main idea: '+unit.takeaway+' What does the question ask you to use?');
   return;
  }
  if(action==='stuck'){
+  const authored=v132Guidance(ctx);if(authored){v129Result(details,authored.help);return}
   v129Result(details,'A known wrong turn in this lesson is: '+unit.mistake.attempt+
    '\nWhy that goes wrong: '+unit.mistake.diagnosis+
    '\nA better approach: '+unit.mistake.repair+

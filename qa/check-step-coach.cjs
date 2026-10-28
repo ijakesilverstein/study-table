@@ -1,5 +1,5 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict');
-const data=require('../source/step-coach-v128.json'),source=fs.readFileSync('source/step-coach-v128.js','utf8').replace('__STEP_COACH_DATA__',JSON.stringify(data));
+const data={...require('../source/step-coach-v128.json'),...require('../source/step-coach-v132.json')},source=fs.readFileSync('source/step-coach-v128.js','utf8').replace('__STEP_COACH_DATA__',JSON.stringify(data));
 const context={window:{}};vm.createContext(context);vm.runInContext(source,context);const check=context.window.studyTableStepCoach.check;
 let count=0;for(const [id,scenario] of Object.entries(data)){assert.equal(scenario.steps.length,3);for(let i=0;i<3;i++){
  const step=scenario.steps[i];assert.equal(check(id,i,step.answer).kind,'fits',id+'/'+i);assert.equal(check(id,i,'').kind,'empty');assert.equal(step.stuck.length,2);
@@ -11,6 +11,11 @@ for(const [id,i,input,kind] of [
  ['count-exchanges',2,'−2','fits'],['physics-2',2,'8 m/s','fits'],['physics-2',2,'8 J','compare'],['physics-2',0,'100 J','fits'],['physics-2',0,'100 m/s','compare'],['physics-2',2,'eight','fits'],['physics-2',2,'√64','fits'],['product-rule',2,'16 m²/s','fits'],['product-rule',2,'16 m^2/s','fits'],['piano-5',0,'low C','fits'],['piano-5',2,'d4','fits'],['piano-5',1,'1 time','fits']
 ])assert.equal(check(id,i,input).kind,kind,id+'/'+input);
 for(const [id,i,v] of [['__proto__',0,'1'],['constructor',0,'1'],['physics-2',-1,'1'],['physics-2',1.5,'1'],['physics-2',0,{}]])assert.equal(check(id,i,v),null);
+for(const [id,scenario] of Object.entries(data))for(let i=0;i<3;i++){
+ const step=scenario.steps[i];if(step.kind==='phrase')for(const value of step.accepted)assert.equal(check(id,i,value).kind,'fits',value);
+ if(['phrase','square'].includes(step.kind))for(const value of Object.keys(step.mistakes))assert.equal(check(id,i,value).kind,'revise',id+'/'+value);
+}
+for(const [id,i,v,kind] of [['rests-and-halves',2,'half','fits'],['rests-and-halves',2,'.5 seconds','fits'],['spanish-5',2,'Si','revise'],['spanish-5',1,'Quisiera el pedido para llevar','compare'],['castling',0,'G 1','fits'],['castling',0,'constructor','compare'],['castling',2,'g1','revise'],['castling',1,'go to f1','compare']])assert.equal(check(id,i,v).kind,kind);
 // Independent quantities behind the feedback, not just text agreement.
 assert.equal(2*10*5,100);assert.equal(100-36,64);assert.equal(Math.sqrt(2*64/2),8);
 assert.equal(1*4+3*4,16);assert.equal(3-5,-2);

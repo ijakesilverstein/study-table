@@ -121,20 +121,21 @@ html=once(html,"let params=full.slice(p.length);if(params.startsWith('?')||param
 html=once(html,"function v21Backup(){", "window.studyTableGuidedLength=s=>Object.prototype.hasOwnProperty.call(V21_NARRATIVES,s)?v21Items(s).length:-1;function v21Backup(){")
 html=once(html,"const targets=[['v103skillLauncher'", "const targets=[['v124OpenBackup','Back up or restore'],['v103skillLauncher'")
 html=once(html,"const memoryStore={};const safeStore=", "const memoryStore={};window.studyTableShellMemory=()=>({...memoryStore});window.studyTableInvalidateShellCache=keys=>{for(const key of Object.keys(memoryStore))if(!keys||keys.includes(PREF+key))delete memoryStore[key]};const safeStore=")
-html=html.replace('Study Table V108 — Taught Lessons','Study Table V130 — Full Courses')
-html=html.replace('study-table-v108.html','study-table-v130.html').replace('Study_Table_V108.html','Study_Table_V130.html')
+html=html.replace('Study Table V108 — Taught Lessons','Study Table V132 — Full Courses')
+html=html.replace('study-table-v108.html','study-table-v132.html').replace('Study_Table_V108.html','Study_Table_V132.html')
 # Append after the historical layers so this palette has a single clear point of ownership.
 end=html.rindex('</body>')
-backup=(root/'progress-backup-v124.js').read_text().replace('__APP_VERSION__','130').replace('__QUICK_LESSONS__',json.dumps([{'id':l['id'],'subject':l['subject']} for l in lessons],separators=(',',':')))
-coach=(root/'step-coach-v128.js').read_text().replace('__STEP_COACH_DATA__',(root/'step-coach-v128.json').read_text().replace('</','<\\/'))
+backup=(root/'progress-backup-v124.js').read_text().replace('__APP_VERSION__','132').replace('__QUICK_LESSONS__',json.dumps([{'id':l['id'],'subject':l['subject']} for l in lessons],separators=(',',':')))
+coach_data={**json.loads((root/'step-coach-v128.json').read_text()),**json.loads((root/'step-coach-v132.json').read_text())}
+coach=(root/'step-coach-v128.js').read_text().replace('__STEP_COACH_DATA__',json.dumps(coach_data,ensure_ascii=False,separators=(',',':')).replace('</','<\\/'))
 parent=(root/'full-course-parent.js').read_text().replace('__FULL_COURSES__',json.dumps(full_meta,separators=(',',':')))
 html=html[:end]+'\n<style id="v109-theme">'+(root/'theme-v109.css').read_text()+'\n'+(root/'full-course-parent.css').read_text()+'\n'+(root/'progress-backup-v124.css').read_text()+'\n'+(root/'step-coach-v128.css').read_text()+'</style><script>'+parent+'</script><script id="step-coach-v128">'+coach+'</script><script id="progress-backup-v124">'+backup+'</script><script id="modal-access-v119">'+(root/'modal-access-v119.js').read_text()+'</script>\n'+html[end:]
 # Remove legacy trailing spaces from the emitted shell, keeping archived originals intact.
 html=re.sub(r'[ \t]+(?=\n)', '',html)
-(root/'Study_Table_V130.html').write_text(html)
+(root/'Study_Table_V132.html').write_text(html)
 (root/'teacher-v109.js').write_text(teacher)
 (root/'demos-v109.json').write_text(json.dumps(demos,ensure_ascii=False,indent=2))
 (root/'lessons-built-v109.json').write_text(json.dumps(lessons,ensure_ascii=False,indent=2))
 (root/'full-courses-built.json').write_text(json.dumps(courses,ensure_ascii=False,indent=2))
 (root/'course-map-built.json').write_text(json.dumps(catalogue,ensure_ascii=False,indent=2))
-print('V130 built:',len(html.encode()),'bytes; 38 short lessons plus 87 full-course units in seven courses; original practice studios preserved.')
+print('V132 built:',len(html.encode()),'bytes; 38 short lessons plus 87 full-course units in seven courses; original practice studios preserved.')

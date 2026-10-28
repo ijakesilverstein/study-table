@@ -1,0 +1,404 @@
+{
+  "piano-5": {
+    "subject": "piano",
+    "comparison": {
+      "correct": "Hold the low C while the right hand changes notes.",
+      "tempting": "Press the low C again whenever the right hand changes notes.",
+      "why": "Repeating the bass gives it four attacks. This accompaniment has one bass attack under four melody attacks; the key stays down through the changes."
+    },
+    "first": [
+      {
+        "anchor": "Give the left hand its whole job",
+        "prompt": "What does the left hand do after starting C3 on beat 1?",
+        "hint": "Separate starting the sound from keeping the key down.",
+        "help": "Try the bass alone. Press once on 1, keep contact through 2, 3 and 4, then release at the next 1. A fading sound does not mean you should strike the note again."
+      },
+      {
+        "anchor": "Give the right hand its own route",
+        "prompt": "Which right-hand fingers would you prepare for E4–D4–C4–D4?",
+        "hint": "Keep the thumb over C and use the two fingers beside it.",
+        "help": "Place thumb on C4, index on D4 and middle on E4. The route is middle–index–thumb–index. Practise those four changes before adding the bass."
+      },
+      {
+        "anchor": "Rehearse the first change",
+        "prompt": "What must stay down when the right hand changes from E4 to D4?",
+        "hint": "Give each hand a different instruction on beat 2.",
+        "help": "On 1, both hands press. On 2, only the right hand changes. Keep left C3 down while right E4 releases and right D4 begins. Rehearse only those two beats if the hands keep copying each other."
+      },
+      {
+        "anchor": "Finish the bar without restarting the bass",
+        "prompt": "When do you release the bass and the last melody note?",
+        "hint": "Beat 4 still has a full duration.",
+        "help": "Say 1–2–3–4–1 evenly. The last D starts on 4 and lasts until the next 1. Release both hands there, four beats after the first press."
+      }
+    ],
+    "second": [
+      {
+        "anchor": "Reduce the task",
+        "prompt": "What smaller part could you practise before attempting the whole bar?",
+        "hint": "Find the first moment when the hands must arrive together.",
+        "help": "Play only C3 and E4 together, then stop. Prepare both keys before beginning. This lets you practise the join without also managing the following three right-hand changes."
+      },
+      {
+        "anchor": "Add only the next change",
+        "prompt": "How can you add D4 without giving the left hand another attack?",
+        "hint": "The right hand needs a new press; the left needs continued contact.",
+        "help": "Play C3 and E4 on 1. Keep C3 down while changing E4 to D4 on 2. Stop after this fragment and relax. You have practised the moment that usually breaks the coordination."
+      },
+      {
+        "anchor": "Return to the full count",
+        "prompt": "How will the left and right attack counts differ in the complete bar?",
+        "hint": "Count starts of notes, not the number of spoken beats.",
+        "help": "The left starts once and holds. The right starts four notes. Keep the same slow pulse you used for the fragment, then add the remaining C4 and D4."
+      }
+    ]
+  },
+  "rests-and-halves": {
+    "subject": "piano",
+    "comparison": {
+      "correct": "Release C for the silent beat and keep counting evenly.",
+      "tempting": "Hold C through the silent beat and wait for D to restart counting.",
+      "why": "A rest is an interval of silence. Holding the earlier C fills that interval; waiting for the next sound also risks shortening or stretching it."
+    },
+    "first": [
+      {
+        "anchor": "Count before playing",
+        "prompt": "At 60 beats per minute, how far apart should you say the numbers?",
+        "hint": "Convert beats per minute into a steady pulse before adding notes.",
+        "help": "Sixty beats fit into sixty seconds, so consecutive numbers are one second apart. Say the next 1 too: it marks the bar’s end, not an extra beat inside it."
+      },
+      {
+        "anchor": "Make a real gap",
+        "prompt": "What must happen to C when beat 2 is meant to be silent?",
+        "hint": "Silence requires the earlier note to end.",
+        "help": "Release C as you say 2, then keep counting without playing. Holding C until D would fill that silent beat with sound and change the rhythm."
+      },
+      {
+        "anchor": "Enter after the silence",
+        "prompt": "Why does D begin two seconds after the first C?",
+        "hint": "Include the quiet beat when measuring the elapsed time.",
+        "help": "C starts at time 0. Beat 2 begins one second later and is silent. D starts on beat 3, at time 2 seconds. The rest occupies real time."
+      }
+    ],
+    "second": [
+      {
+        "anchor": "Say eight evenly spaced slots",
+        "prompt": "Where does each “and” sit between the numbered beats?",
+        "hint": "Keep the numbers steady; divide the space between them.",
+        "help": "At 60, say 1 at time 0 and 2 at time 1 second. Put 1-and halfway between, at 0.5 seconds. Saying twice as many counting syllables does not change the tempo."
+      },
+      {
+        "anchor": "Fit two notes into the first beat",
+        "prompt": "How can C and D share the first beat while E starts on 2?",
+        "hint": "Two half-beat notes fit inside one numbered beat.",
+        "help": "C fills the first half of beat 1 and D fills the second half. E begins on beat 2. Those three attacks occur at 0, 0.5 and 1 seconds at 60 BPM."
+      },
+      {
+        "anchor": "Keep counting when there is no new attack",
+        "prompt": "Which counting slots have no new press, and which are completely silent?",
+        "hint": "Holding and resting both lack a new attack, but they sound different.",
+        "help": "Keep E down through 2-and. Release it on 3 and remain silent through 3-and. Play C on 4 and keep it through 4-and, then release at the next 1."
+      }
+    ]
+  },
+  "noun-phrases": {
+    "subject": "spanish",
+    "comparison": {
+      "correct": "Quiero dos cafés pequeños, por favor.",
+      "tempting": "Quiero dos café pequeño, por favor.",
+      "why": "Dos supplies the quantity. Both the noun cafés and the adjective pequeños need their plural forms in this item group."
+    },
+    "first": [
+      {
+        "anchor": "Name the thing before describing it",
+        "prompt": "What two-word group lets you name a coffee before adding its size?",
+        "hint": "Learn the item with the article that goes with it.",
+        "help": "Café is used with el or un here. Start with un café, then put quiero before it. You already have a usable request before adding pequeño."
+      },
+      {
+        "anchor": "Put the size after the thing",
+        "prompt": "Where would you put pequeño in this request?",
+        "hint": "In this example the description follows the thing.",
+        "help": "Build quiero / un café pequeño / por favor. The middle group names the item and its size. Café and pequeño use matching masculine forms here."
+      },
+      {
+        "anchor": "Order for two people",
+        "prompt": "Which words change when one small coffee becomes two?",
+        "hint": "Change the quantity and inspect both words after it.",
+        "help": "Replace un with dos. Add s to café and pequeño: dos cafés pequeños. Keep quiero and por favor as they were."
+      }
+    ],
+    "second": [
+      {
+        "anchor": "Learn the new noun",
+        "prompt": "Which article should you learn with mesa?",
+        "hint": "The article tells you which forms will fit this noun.",
+        "help": "Learn la mesa as a pair. For an unspecified table, use una mesa. The noun’s grammatical gender is about agreement between words, not a table having a sex."
+      },
+      {
+        "anchor": "Ask for any suitable table",
+        "prompt": "How would you ask whether any small table is available?",
+        "hint": "Use hay for availability and an indefinite item group.",
+        "help": "¿Hay una mesa pequeña? asks whether a small table is available. Pequeña agrees with mesa; you are not yet identifying one particular table."
+      },
+      {
+        "anchor": "Identify a particular one",
+        "prompt": "What changes when you point out the particular table by the window?",
+        "hint": "Compare asking for any suitable table with identifying a specific one.",
+        "help": "Use la mesa junto a la ventana. La identifies the particular table, while junto a la ventana tells the listener which one."
+      }
+    ]
+  },
+  "spanish-5": {
+    "subject": "spanish",
+    "comparison": {
+      "correct": "Name an option first; use sí when that option is checked.",
+      "tempting": "Say sí to the first question, before choosing here or takeout.",
+      "why": "The first question offers two options. A later ¿Para llevar? asks for confirmation of one option, so sí becomes an informative answer then."
+    },
+    "first": [
+      {
+        "anchor": "Ask for a slower repeat",
+        "prompt": "What can you say when the worker’s question went by too quickly?",
+        "hint": "Ask for another hearing before trying to answer the choice.",
+        "help": "¿Puede repetirlo más despacio, por favor? asks for a slower repeat. You can use the phrase as a complete request while you are still learning how its words fit together."
+      },
+      {
+        "anchor": "Listen for the alternatives",
+        "prompt": "What are the two choices in ¿Para aquí o para llevar?",
+        "hint": "Listen for o, the word joining the alternatives.",
+        "help": "Para aquí means for here; para llevar means to go in this exchange. The question asks you to name one option. Repeating just sí would leave the choice unclear."
+      },
+      {
+        "anchor": "Choose the option",
+        "prompt": "Which short phrase gives the worker your takeout choice?",
+        "hint": "Reuse the option from the question instead of inventing a new sentence.",
+        "help": "Para llevar, por favor is enough. You are selecting the takeout option. A short, clear answer keeps the exchange moving."
+      },
+      {
+        "anchor": "Check the exchange",
+        "prompt": "Why does sí fit after the worker asks ¿Para llevar?",
+        "hint": "Notice that the worker has changed the question.",
+        "help": "The first question offered two alternatives. This new question checks the single option you chose. Sí, para llevar confirms that option."
+      }
+    ],
+    "second": [
+      {
+        "anchor": "Locate the missing meaning",
+        "prompt": "What should you ask if hearing llevar again does not explain its meaning?",
+        "hint": "Another repetition and an explanation solve different problems.",
+        "help": "¿Qué significa llevar? asks what the word means. If the problem is meaning, another slower repetition alone may leave you just as confused."
+      },
+      {
+        "anchor": "Connect the explanation to the choice",
+        "prompt": "Which meaning of para llevar matters at this counter?",
+        "hint": "Interpret the phrase in the situation, rather than forcing one translation of the verb everywhere.",
+        "help": "Here para llevar means to go. Llevar has other uses, so keep this useful café phrase together while learning it."
+      },
+      {
+        "anchor": "Answer after understanding",
+        "prompt": "After asking for help, are you committed to ordering takeout?",
+        "hint": "A repair request buys understanding; it does not choose the order.",
+        "help": "No choice has been made just by asking for a meaning. If you want to stay, answer para aquí, por favor. Choose after you understand the alternatives."
+      }
+    ]
+  },
+  "count-exchanges": {
+    "subject": "chess",
+    "comparison": {
+      "correct": "Count the captured piece and the legal recapture before judging.",
+      "tempting": "Count the knight taken on the first turn and stop there.",
+      "why": "The reply removes a white piece too. Count both turns; otherwise the first capture hides what the exchange costs."
+    },
+    "first": [
+      {
+        "anchor": "Inspect the defender before capturing",
+        "prompt": "Which black piece can recapture a white piece on d5?",
+        "hint": "Look at pawn captures in the direction Black’s pawns move.",
+        "help": "The pawn on e6 can capture diagonally to d5. It is a legal reply in this position. Find that defender before deciding that the knight is free."
+      },
+      {
+        "anchor": "Follow both turns",
+        "prompt": "Which pieces have disappeared after Bxd5 and …exd5?",
+        "hint": "Follow both turns and keep the capturing pawn on the final board.",
+        "help": "White removes a knight, then Black removes the bishop. The pawn ends on d5. Only the knight and bishop belong in the captured-piece account."
+      },
+      {
+        "anchor": "Add the entries",
+        "prompt": "Does a zero change from this exchange prove the whole position is equal?",
+        "hint": "Separate a change caused by moves from the balance before them.",
+        "help": "The knight and bishop are both roughly 3, so the exchange changes material by about zero. Black’s extra pawn was there before the moves and still remains afterward."
+      }
+    ],
+    "second": [
+      {
+        "anchor": "Check the rook’s path",
+        "prompt": "What must be empty before the rook on d1 can capture on d5?",
+        "hint": "Trace every square along the rook’s path.",
+        "help": "The rook travels through d2, d3 and d4 to reach d5. Those squares are empty in the example. A rook cannot jump a blocker, even if the value calculation looks promising."
+      },
+      {
+        "anchor": "Include the reply",
+        "prompt": "What does …exd5 remove in the rook version of the position?",
+        "hint": "The defender is unchanged; inspect the piece now on d5.",
+        "help": "After Rxd5, the white rook sits on d5. Black’s e6 pawn takes that rook. White has lost roughly 5, not a bishop’s 3."
+      },
+      {
+        "anchor": "Count the exchange",
+        "prompt": "From White’s viewpoint, what is gained minus what is lost?",
+        "hint": "Keep the same side’s viewpoint for both entries.",
+        "help": "White gains a knight worth 3 and loses a rook worth 5: 3−5=−2. The minus sign matters because White gave up more than it gained."
+      }
+    ]
+  },
+  "castling": {
+    "subject": "chess",
+    "comparison": {
+      "correct": "Check the king’s starting, crossing and finishing squares.",
+      "tempting": "Check the king’s final square and ignore the crossing square.",
+      "why": "The king cannot castle out of, through or into check. For White’s kingside castle those checks concern e1, f1 and g1."
+    },
+    "first": [
+      {
+        "anchor": "Confirm the right and the empty path",
+        "prompt": "What do you need to know besides where the king and rook stand now?",
+        "hint": "A piece can return home without recovering its castling right.",
+        "help": "Neither the king nor the rook used may have moved earlier. This example states that the right is available. Also check that f1 and g1 are empty."
+      },
+      {
+        "anchor": "Name all three king squares",
+        "prompt": "Which three squares must be safe for White’s kingside castle?",
+        "hint": "Trace where the king begins, crosses and finishes.",
+        "help": "Inspect e1, f1 and g1. The distant black king on e8 attacks none of them here. A safe destination alone would not settle the crossing square."
+      },
+      {
+        "anchor": "Move both pieces in the same turn",
+        "prompt": "Where do both white pieces finish, and how many turns does it take?",
+        "hint": "The rook lands beside the king on the other side of its route.",
+        "help": "O-O is one move: king e1 to g1, rook h1 to f1. Black gets no turn between the two parts."
+      }
+    ],
+    "second": [
+      {
+        "anchor": "Find the rook’s attack",
+        "prompt": "Which square near White’s king is attacked by the rook on f8?",
+        "hint": "Follow the open f-file all the way down.",
+        "help": "The black rook attacks f1. The white king starts on e1, so it is not currently in that file. This is a crossing-square problem."
+      },
+      {
+        "anchor": "Inspect the crossing square",
+        "prompt": "Why does an attack on f1 matter even though the king finishes on g1?",
+        "hint": "Castling tests the route, not only the final arrangement.",
+        "help": "To castle kingside, the king would cross f1. It cannot pass through an attacked square. The rook’s own safety is not the deciding test here."
+      },
+      {
+        "anchor": "Reject the castle",
+        "prompt": "Can White castle in this second position?",
+        "hint": "A single failed condition is enough to reject the castle.",
+        "help": "No. The attack on f1 makes O-O illegal. A safe g1 and an available castling right cannot compensate for that attacked crossing square."
+      }
+    ]
+  },
+  "product-rule": {
+    "subject": "calculus",
+    "comparison": {
+      "correct": "Multiply each side’s rate by the other side’s size, then add.",
+      "tempting": "Multiply the two side rates together to get the area rate.",
+      "why": "A growing edge adds a strip running along the other side’s current size. The two strips add area; multiplying rates alone gives the wrong units."
+    },
+    "first": [
+      {
+        "anchor": "Separate the sizes from the rates",
+        "prompt": "Which values are side lengths and which are their rates at t=2?",
+        "hint": "Read the units before using the numbers.",
+        "help": "L=3 m and W=4 m describe sizes. L′=1 m/s and W′=4 m/s describe rates. The two appearances of 4 mean different things because their units differ."
+      },
+      {
+        "anchor": "Give each growing side its own strip",
+        "prompt": "How does each changing edge contribute a strip of new area?",
+        "hint": "Pair one rate with the other side’s current size.",
+        "help": "Length growth contributes 1×4=4 m²/s. Width growth contributes 4×3=12 m²/s. Multiplying the two rates would use neither strip’s full current length."
+      },
+      {
+        "anchor": "Add and check a second way",
+        "prompt": "How can you combine the strips and check by another method?",
+        "hint": "Both contributions already have the same area-rate units.",
+        "help": "Add 4 and 12 to get 16 m²/s. Independently expand A=(t+1)t²=t³+t²; differentiating gives 3t²+2t, also 16 at t=2."
+      }
+    ],
+    "second": [
+      {
+        "anchor": "Use the product rule",
+        "prompt": "When differentiating (x+2)(x²+1), what happens to the factor you are not differentiating yet?",
+        "hint": "Give each factor one turn changing while keeping the other factor’s size.",
+        "help": "The two terms are 1×(x²+1) and (x+2)×2x. Each derivative is paired with the other original factor. Keep both terms before simplifying."
+      },
+      {
+        "anchor": "Collect the terms",
+        "prompt": "Which terms appear when you multiply out (x+2)×2x?",
+        "hint": "Distribute the 2x to both terms inside the parentheses.",
+        "help": "The product is 2x²+4x. Add the first contribution x²+1 to obtain 3x²+4x+1. A missing 4x often means the 2 was left out of the distribution."
+      },
+      {
+        "anchor": "Expand the original as a check",
+        "prompt": "What should happen if you expand the original product before differentiating?",
+        "hint": "An independent algebraic route must describe the same function.",
+        "help": "The original expands to x³+2x²+x+2. Its derivative is 3x²+4x+1. Matching results check the calculation without repeating the same product-rule steps."
+      }
+    ]
+  },
+  "physics-2": {
+    "subject": "physics",
+    "comparison": {
+      "correct": "Treat 2gh as speed squared and then take its square root.",
+      "tempting": "Treat 2gh as speed itself, without taking a square root.",
+      "why": "The energy equation leads to v²=2gh. A squared speed has units m²/s²; taking its square root gives a speed in m/s."
+    },
+    "first": [
+      {
+        "anchor": "Give the symbols a sample value",
+        "prompt": "Why can we put a sample 2 kg mass into a question that did not specify mass?",
+        "hint": "Use a concrete energy account before checking whether mass matters.",
+        "help": "A 2 kg sled losing 5 m of height has 2×10×5=100 J available. We will then leave mass as a letter to see why the frictionless speed does not depend on that sample choice."
+      },
+      {
+        "anchor": "Match that energy to motion",
+        "prompt": "After writing 100=½×2×v², what quantity have you found?",
+        "hint": "Simplify the coefficient before undoing the square.",
+        "help": "One half times 2 is 1, so the equation gives v²=100. This is squared speed, not speed. Its units are m²/s²."
+      },
+      {
+        "anchor": "See why another mass gives the same result",
+        "prompt": "Why can mass cancel in the frictionless comparison?",
+        "hint": "The same nonzero mass multiplies both energy expressions.",
+        "help": "Divide mgh=½mv² by m to get gh=½v², then multiply by 2. More mass supplies more gravitational energy and needs more kinetic energy for the same speed."
+      },
+      {
+        "anchor": "Take the square root and check",
+        "prompt": "How can you check that 10 m/s, rather than 100 m/s, fits the energy?",
+        "hint": "Put the candidate speed back into the original kinetic-energy formula.",
+        "help": "For 2 kg at 10 m/s, ½×2×10²=100 J. At 100 m/s it would be 10,000 J. The square root turns the squared speed 100 into the speed 10."
+      }
+    ],
+    "second": [
+      {
+        "anchor": "Calculate the available gravitational energy",
+        "prompt": "What energy is available before the stated thermal transfer?",
+        "hint": "Use the same mass, field strength and vertical drop as the question.",
+        "help": "The original gravitational energy decrease is 2×10×5=100 J. The 36 J transfer divides that original account; it does not change the height or add new energy."
+      },
+      {
+        "anchor": "Account for the loss from mechanical energy",
+        "prompt": "How do the kinetic and thermal amounts fit into that 100 J account?",
+        "hint": "Keep all quantities in joules while dividing up the energy.",
+        "help": "Subtract the stated 36 J from 100 J to get 64 J of kinetic energy. The final sum is 64+36=100 J, so total energy is accounted for."
+      },
+      {
+        "anchor": "Solve for speed",
+        "prompt": "What final speed gives 64 J of kinetic energy for this sled?",
+        "hint": "First simplify ½×2, then find the nonnegative square root.",
+        "help": "The equation is v²=64, so the speed is 8 m/s. Check ½×2×8²=64 J. Together with 36 J thermal energy, that recovers the original 100 J."
+      }
+    ]
+  }
+}

@@ -2,6 +2,8 @@
 
 An offline-capable learning app. Current downloads and online access are published separately at https://study-table-downloads.vercel.app. The public deployment may lag the latest source release until verified. The earlier app project is not modified by this delivery workflow.
 
+V132 merges the concurrent unified-tutor/curiosity branch and adds 51 step-specific teaching turns in eight lessons. Three new checked coaches use piano timing tables, a translated café exchange and castling diagrams; the checked set now covers eight units. Direct entries, optional correction access and phone fixes accompany the teaching. All earlier content remains. See [the V132 teaching changes](docs/SPECIFIC_TEACHING_V132.md).
+
 V130 combines the concurrent V127–V129 coaching branches with the deeper lessons and checked-answer coach already saved here. Both worked cases in all 87 units now offer optional help for a specific step, a comparison with the authored reasoning, a fresh question and a recall prompt. Five lessons also offer targeted answer feedback. The complete teaching stays visible by default; microphone input uses on-device recognition when available. See [the integrated coaching notes](docs/INTEGRATED_COACHING_V130.md).
 
 V128 adds an optional **Talk it through** coach to five lessons in piano, Spanish, chess, calculus and physics. Fifteen specific decisions have checked answers, targeted mistake feedback and thirty explanations of common sticking points. You can keep working notes, use local dictation where the browser supports it, and see the teacher’s full reasoning at any time. These are authored checks; arbitrary explanations are not graded. All V127 content remains. See [the coaching behavior and limits](docs/STEP_COACH_V128.md).
@@ -43,7 +45,7 @@ python3 scripts/build.py
 python3 -m http.server 8769 --directory public
 ```
 
-Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v130.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
+Open http://127.0.0.1:8769. `public/index.html` and `public/study-table-v132.html` contain the same self-contained app. Keep the generated public files in the commit alongside source edits.
 
 - `source/teacher-prose-v109.json`: rewritten explanations in existing lessons.
 - `source/draft-foundation-lessons.json` and `source/lessons-v109.json`: the 12 new lessons. The historical `draft-` filename is retained for build compatibility; these records are now published.
@@ -109,6 +111,6 @@ After the workspace download link failed, the user explicitly authorized Vercel 
 
 This is a separate project from LaunchWell Labs. Source and release history are connected to [ijakesilverstein/study-table](https://github.com/ijakesilverstein/study-table): main and all 17 release tags through V126 were pushed and verified before the V127 work. The V127 release combines the concurrent guided-example branch with the teaching and piano improvements. The existing GitHub Actions checks also package the current HTML and ZIP as downloadable run artifacts. See [GitHub delivery](docs/GITHUB_DELIVERY.md). This artifact workflow does not deploy a website.
 
-The canonical `.vercel` link is historical (`study-table-v102`); that project was unavailable through the current connection. Publish through the separate `study-table-downloads` staging project in the `jakesilverstein` scope. `vercel.json` builds the app and serves `public/`; the previously deployed versioned HTML links download as files. The download project is packaged separately; its online app and latest downloadable HTML are identical. Do not enable automatic Git deployments without a separate request. Credentials and the local `.vercel` project link stay outside Git history.
+The canonical `.vercel` link is historical (`study-table-v102`); that project was unavailable through the current connection. Publish through the separate `study-table-downloads` staging project in the `jakesilverstein` scope. `vercel.json` serves the checked, committed files in `public/` without a deployment-time lesson build; the previously deployed versioned HTML links download as files. The download project is packaged separately; its online app and latest downloadable HTML are identical. Do not enable automatic Git deployments without a separate request. Credentials and the local `.vercel` project link stay outside Git history.
 
 Progress is stored on the learner’s device. GitHub and Vercel deployment do not synchronize that progress between devices. Original course content is preserved in the baseline; its inclusion here does not grant permission to redistribute it publicly.

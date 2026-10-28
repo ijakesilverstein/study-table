@@ -1,0 +1,21 @@
+{
+  "merged_snapshot": "37758ca8dfdc5dbc2de322be81d790c5ca90379a",
+  "branches": {
+    "feature/v129-learn-by-doing": "168a9dfebf91a7080186ba3d9aaff522a1f74e50",
+    "feature/v130-curiosity-and-clarity": "5afe8bad05d1cdad188a6e393381383553af674b",
+    "feature/v131-unified-tutor": "37758ca8dfdc5dbc2de322be81d790c5ca90379a"
+  },
+  "incoming_curiosity_functions": [
+    "v130TrapMarkup",
+    "v130ChallengeMarkup",
+    "v130PickQuestion",
+    "v130ToggleAnswer",
+    "v130TrapChoice"
+  ],
+  "adaptations": [
+    "V130 note retention, step synchronization and media cancellation preserved.",
+    "Direct checked entry retained; general comparison stays optional instead of removing earlier functionality.",
+    "Optional misconception disclosure allows the complete correction before any choice.",
+    "New authored content and references are in additive V132 files."
+  ]
+}

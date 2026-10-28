@@ -121,7 +121,7 @@
     }
   ],
   "framework": null,
-  "buildCommand": "python3 scripts/build.py",
+  "buildCommand": null,
   "installCommand": "",
   "outputDirectory": "public"
 }
