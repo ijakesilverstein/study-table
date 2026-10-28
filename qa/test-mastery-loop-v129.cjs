@@ -1,5 +1,5 @@
 const {chromium}=require('playwright'),{spawn}=require('child_process'),assert=require('assert/strict');
-const courses=require('../source/full-courses-built.json'),edition=Number(require('../package.json').version.split('.')[0]);
+const courses=require('../source/full-courses-built.json'),specific=require('../source/specific-teaching-v132.json'),edition=Number(require('../package.json').version.split('.')[0]);
 (async()=>{
  let browser,server;const errors=[],url=process.env.STUDY_TEST_URL||'http://127.0.0.1:8821/index.html';
  try{
@@ -37,8 +37,10 @@ const courses=require('../source/full-courses-built.json'),edition=Number(requir
     assert(await coach.locator('[data-mastery="hide"]').evaluate(e=>document.activeElement===e),'Hiding the worked steps must keep focus in the coaching flow');
     await coach.locator('[data-mastery="hint"]').click();
     const hint=await coach.locator('[data-mastery-message]').innerText();
-    assert(hint.includes(authored[section==='#courseFirst'?'first':'second'].steps[0][0]),'Hint must use current authored step title');
-    assert(!hint.includes(authored[section==='#courseFirst'?'first':'second'].steps[0][1]),'Hint must not give away working');
+    const which=section==='#courseFirst'?'first':'second',step=authored[which].steps[0],guided=specific[unit.id]?.[which]?.[0];
+    if(guided){assert.equal(hint,guided.hint,'New authored hint must match its exact displayed step');assert.equal(await coach.locator('[data-mastery-question]').innerText(),guided.prompt,'New authored prompt must replace subject-wide generic question')}
+    else assert(hint.includes(step[0]),'Generic hint must use current authored step title');
+    assert(!hint.includes(step[1]),'Hint must not give away complete working');
     await coach.locator('[data-mastery="compare"]').click();
     assert.match(await coach.locator('[data-mastery-message]').innerText(),/Try saying or typing your own answer first/);
     const attempt='<script>alert("xss")</script> An explanation';
@@ -48,7 +50,9 @@ const courses=require('../source/full-courses-built.json'),edition=Number(requir
     assert.equal(await coach.locator('script').count(),0,'Learner transcript must never execute HTML');
     assert.equal(await box.locator('.solution>li').first().evaluate(el=>el.hidden),false,'Revealed authored working matches comparison');
     await coach.locator('[data-mastery="stuck"]').click();
-    assert((await coach.locator('[data-mastery-message]').innerText()).includes(authored.mistake.diagnosis));
+    const stuck=await coach.locator('[data-mastery-message]').innerText();
+    if(guided)assert.equal(stuck,guided.help,'Authored confusion explanation must match the actual worked step');
+    else assert(stuck.includes(authored.mistake.diagnosis),'Generic stuck support must preserve its misconception explanation');
     await coach.locator('[data-mastery="next"]').click();await coach.locator('[data-coach-step]').selectOption('0');assert.equal(await coach.locator('[data-coach-input]').inputValue(),attempt,'Changing steps must retain the earlier attempt');
     for(let i=1;i<n;i++){
      await coach.locator('[data-mastery="next"]').click();
