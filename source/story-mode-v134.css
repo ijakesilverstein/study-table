@@ -24,3 +24,6 @@
 .v134-ending p[data-v134-outcome]{font-size:18px;line-height:1.7;max-width:65ch}
 @media(max-width:680px){.v134-hero{grid-template-columns:minmax(0,1fr)}.v134-hero>button{justify-self:start}.v134-nextrow{display:grid;grid-template-columns:minmax(0,1fr)}.v134-nextrow>button{width:100%}}
 @media(prefers-reduced-motion:reduce){.v134-options button{transition:none}}
+
+/* A styled grid can override the user-agent hidden attribute unless explicitly guarded. */
+.v134-story [hidden]{display:none!important}
