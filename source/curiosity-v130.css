@@ -25,3 +25,4 @@
 @media(max-width:600px){.v130-curiosity-lead{display:block}.v130-curiosity-lead>button{margin-top:12px;width:100%}.v130-options{grid-template-columns:minmax(0,1fr)}.v130-actions{display:grid;grid-template-columns:minmax(0,1fr)}.v130-actions button{width:100%}}
 
 .v132-detective{border:1px solid var(--study-line);border-radius:10px;padding:16px 19px;margin:24px 0}.v132-detective>summary{font-weight:600;cursor:pointer}.v132-detective>.v130-trap{margin:18px 0 0}
+.v132-claim{margin:18px 0;padding:16px 20px;border-left:3px solid var(--study-warm);background:var(--study-panel);color:var(--study-ink);border-radius:0 8px 8px 0;font-size:18px;line-height:1.75;overflow-wrap:anywhere}

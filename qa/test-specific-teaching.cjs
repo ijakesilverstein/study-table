@@ -15,7 +15,7 @@ const {chromium}=require('playwright'),assert=require('assert/strict'),data=requ
     }
    }
    const detective=f.locator('.v132-detective');assert.equal(await detective.evaluate(d=>d.open),false,'Mistake game should remain optional after teaching');await detective.locator('summary').click();
-   assert.equal(await detective.locator('[data-v130-choice="good"]').innerText(),(await detective.locator('[data-v130-choice="good"] .v130-option-letter').innerText())+' '+d.comparison.correct);
+   assert([d.comparison.correct,d.comparison.tempting].includes(await detective.locator('.v132-claim').textContent()));
    await detective.locator('[data-v130-show]').click();assert.equal(await detective.locator('[data-v130-why]').innerText(),d.comparison.why);
    assert.deepEqual(await p.evaluate(()=>Object.fromEntries(Object.entries(localStorage))),before);
    await f.addScriptTag({path:require.resolve('axe-core/axe.min.js')});for(const theme of ['light','dark']){await f.evaluate(t=>studyTableTheme.set(t),theme);await p.setViewportSize({width:320,height:844});assert(await f.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));const a=await f.evaluate(()=>axe.run({include:['.worked-coach','.v132-detective']},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}}));assert.deepEqual(a.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)})),[],id+'/'+theme);}

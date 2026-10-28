@@ -9,25 +9,17 @@ const V130_TRAP_TITLE={
  medicine:'Which reasoning would you trust?',
  business:'Which decision survives a closer look?'
 };
+function v132Claim(unit){
+ const authored=V132_SPECIFIC[unit.id]?.comparison,holds=[...unit.id].reduce((sum,c)=>sum+c.charCodeAt(0),0)%2===0;
+ return {holds,copy:holds?(authored?.correct||unit.mistake.repair):(authored?.tempting||unit.mistake.attempt)};
+}
 function v130TrapMarkup(unit){
  if(!unit.mistake?.attempt||!unit.mistake?.repair||!unit.mistake?.diagnosis)return '';
- const goodFirst=[...unit.id].reduce((sum,c)=>sum+c.charCodeAt(0),0)%2===0;
- const authored=V132_SPECIFIC[unit.id]?.comparison,good=authored?.correct||unit.mistake.repair,trap=authored?.tempting||unit.mistake.attempt;
- const options=goodFirst?[['good',good],['trap',trap]]:[['trap',trap],['good',good]];
- return '<details class="v132-detective"><summary>Spot a tempting mistake (optional)</summary><section class="v130-trap" data-v130-trap aria-label="Find the better explanation">'+
-  '<p class="v130-kicker">A little detective work</p>'+
-  '<h2>Spot the almost-right idea</h2>'+
-  '<p>'+escape(V130_TRAP_TITLE[COURSE.subject]||'Which explanation stands up?')+'</p>'+
-  '<button type="button" data-v130-show>Read the worked correction</button><div class="v130-options">'+options.map(([key,copy],i)=>
-   '<button type="button" data-v130-choice="'+key+'" aria-pressed="false"><span class="v130-option-letter">'+(i===0?'A':'B')+'</span> '+escape(copy)+'</button>').join('')+'</div>'+
-  '<div data-v130-explain class="v130-explain" role="status" aria-live="polite" hidden>'+
-   '<p class="v130-verdict" data-v130-verdict></p>'+
-   '<p data-v130-why></p>'+
-   '<p class="v130-repair" data-v130-repair></p>'+
-   '<p class="mistake-check" data-v130-check></p>'+
-   '<button type="button" data-v130-reset>See the two ideas again</button>'+
-  '</div>'+
- '</section></details>';
+ return '<details class="v132-detective"><summary>Test a possible approach (optional)</summary><section class="v130-trap" data-v130-trap aria-label="Investigate an approach">'+
+  '<p class="v130-kicker">A quick thought experiment</p><h2>Would this approach work?</h2><p>Consider this approach to the worked example. What makes it hold up, or what would need to change?</p>'+
+  '<blockquote class="v132-claim">'+escape(v132Claim(unit).copy)+'</blockquote>'+
+  '<button type="button" data-v130-show>Read the worked explanation</button><div class="v130-options"><button type="button" data-v130-choice="yes" aria-pressed="false">I think it works</button><button type="button" data-v130-choice="no" aria-pressed="false">Something needs a correction</button></div>'+
+  '<div data-v130-explain class="v130-explain" role="status" aria-live="polite" hidden><p class="v130-verdict" data-v130-verdict></p><p data-v130-why></p><p class="v130-repair" data-v130-repair></p><p class="mistake-check" data-v130-check></p><button type="button" data-v130-reset>Consider the approach again</button></div></section></details>';
 }
 function v130ChallengeMarkup(){
  return '<section class="v130-curiosity" id="v130Curiosity" aria-label="One-minute challenge">'+
@@ -46,9 +38,9 @@ function v130PickQuestion(){
  const card=document.getElementById('v130Curiosity');
  if(!card||!COURSE.units.length)return;
  const saved=bookmark(),savedIndex=COURSE.units.findIndex(unit=>unit.id===saved);
- const count=saved===COURSE.project.id||saved===COURSE.workshop?.id?COURSE.units.length:Math.min(COURSE.units.length,Math.max(3,savedIndex+2));
- let index=Math.min(count-1,Math.floor(Math.random()*count));
- if(index===v130LastChallenge&&count>1)index=(index+1)%count;
+ const complete=saved===COURSE.project.id||saved===COURSE.workshop?.id,start=complete?0:Math.max(0,savedIndex<0?0:savedIndex-2),end=complete?COURSE.units.length:Math.min(COURSE.units.length,savedIndex<0?3:savedIndex+2),count=Math.max(1,end-start);
+ let index=start+Math.floor(Math.random()*count);
+ if(index===v130LastChallenge&&count>1)index=start+((index-start+1)%count);
  v130LastChallenge=index;
  const unit=v126Lesson(COURSE.units[index]);
  v130ChosenUnit=unit.id;
@@ -76,17 +68,18 @@ function v130ToggleAnswer(){
  button.textContent=panel.hidden?'Show the explanation':'Hide the explanation';
  button.setAttribute('aria-expanded',String(!panel.hidden));
 }
-function v130TrapChoice(button){
- const card=button.closest('[data-v130-trap]'),unit=v126Lesson(byId.get(card.closest('.reader-article')?.dataset.unitId));
- if(!unit?.mistake)return;
- card.querySelectorAll('[data-v130-choice]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
- const good=button.dataset.v130Choice==='good';
- card.querySelector('[data-v130-verdict]').textContent=good?
-  'Yes. That is the stronger reasoning.':'That is the tempting wrong turn. Here is what it misses.';
- card.querySelector('[data-v130-why]').textContent=V132_SPECIFIC[unit.id]?.comparison?.why||unit.mistake.diagnosis;
- card.querySelector('[data-v130-repair]').textContent='The better approach: '+unit.mistake.repair;
+function v132ExplainClaim(card,choice){
+ const unit=v126Lesson(byId.get(card.closest('.reader-article')?.dataset.unitId));if(!unit?.mistake)return;
+ const claim=v132Claim(unit),authored=V132_SPECIFIC[unit.id]?.comparison;
+ const verdict=!choice?'Follow the worked explanation.':claim.holds?(choice==='yes'?'Yes. That approach holds up in this example.':'This approach does fit the example. Here is the reasoning.'):(choice==='no'?'This approach needs a correction.':'One condition changes the result. Follow the correction below.');
+ card.querySelector('[data-v130-verdict]').textContent=verdict;
+ card.querySelector('[data-v130-why]').textContent=authored?.why||(claim.holds?'Compare with the wrong turn: '+unit.mistake.attempt+' '+unit.mistake.diagnosis:unit.mistake.diagnosis);
+ card.querySelector('[data-v130-repair]').textContent='The worked approach: '+unit.mistake.repair;
  card.querySelector('[data-v130-check]').textContent='One more thought: '+unit.mistake.check;
  card.querySelector('[data-v130-explain]').hidden=false;
+}
+function v130TrapChoice(button){
+ const card=button.closest('[data-v130-trap]');card.querySelectorAll('[data-v130-choice]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));v132ExplainClaim(card,button.dataset.v130Choice);
 }
 document.addEventListener('click',event=>{
  const button=event.target.closest('button[data-v130-pick],button[data-v130-answer],button[data-v130-learn],button[data-v130-again],button[data-v130-choice],button[data-v130-reset],button[data-v130-show]');
@@ -95,7 +88,7 @@ document.addEventListener('click',event=>{
  else if(button.hasAttribute('data-v130-answer'))v130ToggleAnswer();
  else if(button.hasAttribute('data-v130-learn')&&v130ChosenUnit)showUnit(v130ChosenUnit);
  else if(button.hasAttribute('data-v130-choice'))v130TrapChoice(button);
- else if(button.hasAttribute('data-v130-show')){const card=button.closest('[data-v130-trap]');v130TrapChoice(card.querySelector('[data-v130-choice="good"]'));card.querySelectorAll('[data-v130-choice]').forEach(b=>b.setAttribute('aria-pressed','false'));card.querySelector('[data-v130-verdict]').textContent='Follow the worked correction.';}
+ else if(button.hasAttribute('data-v130-show')){const card=button.closest('[data-v130-trap]');card.querySelectorAll('[data-v130-choice]').forEach(b=>b.setAttribute('aria-pressed','false'));v132ExplainClaim(card,null);}
  else if(button.hasAttribute('data-v130-reset')){
   const card=button.closest('[data-v130-trap]');
   card.querySelector('[data-v130-explain]').hidden=true;

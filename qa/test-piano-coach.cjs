@@ -19,8 +19,7 @@ assert.deepEqual(rows({beats:2,events:[{note:'C4',at:0,beats:1},{note:'C4',at:1,
   await f.locator('[data-pattern="2"]').click();await f.waitForFunction(()=>notes.length===5);
   assert.deepEqual(await f.evaluate(()=>notes.map(n=>n.at)),[.04,.04,1.04,2.04,3.04]);
   assert.equal(await f.locator('[data-piano-time="1"] td').textContent(),'Release E4. Press D4. Keep C3 down.');
-  await f.waitForFunction(()=>document.querySelector('[data-piano-time="1"]')?.getAttribute('aria-current')==='step');
-  assert(await f.locator('[data-v109-note="C3"]').evaluate(e=>e.classList.contains('playing')));
+  await f.waitForFunction(()=>document.querySelector('[data-piano-time="1"]')?.getAttribute('aria-current')==='step'&&document.querySelector('[data-v109-note="C3"]')?.classList.contains('playing')&&document.querySelector('[data-v109-note="D4"]')?.classList.contains('playing'));
   await f.locator('[data-stop]').click();assert.equal(await f.locator('[data-piano-time][aria-current]').count(),0);
   assert((await f.evaluate(()=>notes)).every(n=>n.stops.includes('immediate')));
   // Explicit count-in and pulse: eight clicks and five notes. 40 BPM means 1.5 s per beat.
