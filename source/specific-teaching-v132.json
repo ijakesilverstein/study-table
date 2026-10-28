@@ -400,5 +400,227 @@
         "help": "The equation is v²=64, so the speed is 8 m/s. Check ½×2×8²=64 J. Together with 36 J thermal energy, that recovers the original 100 J."
       }
     ]
+  },
+  "homeostasis": {
+    "subject": "medicine",
+    "comparison": {
+      "correct": "When temperature is above its set point, a negative-feedback response increases heat loss and then eases as the error shrinks.",
+      "tempting": "When temperature is above its set point, the controller should increase heat production until the reading is stable.",
+      "why": "The response must oppose the error. At 37.5 °C with a 37.0 °C target, sweating and skin blood-flow changes help lose heat. As temperature approaches the target, that corrective drive weakens."
+    },
+    "first": [
+      {
+        "anchor": "Name the measured value",
+        "prompt": "What exactly is being measured, and which value is the comparison target?",
+        "hint": "Separate today's temperature from the set point.",
+        "help": "The measured output is 37.5 °C; the target in this example is 37.0 °C. A sensor reports the measured state, and the controller compares it with the target. Don't confuse the actual reading with the desired one."
+      },
+      {
+        "anchor": "Find the error",
+        "prompt": "Is the temperature error positive or negative, and by how many degrees?",
+        "hint": "Use measured minus target, in that order.",
+        "help": "37.5 − 37.0 = +0.5 °C. The plus sign tells you the measured temperature is above the target. If you reverse the subtraction, you reverse the sign and may choose the wrong response."
+      },
+      {
+        "anchor": "Choose the direction of response",
+        "prompt": "Should the effectors now increase heat loss or heat generation? Why?",
+        "hint": "An effective correction pushes opposite the error.",
+        "help": "An above-target reading calls for net heat loss. Sweating increases evaporative heat loss, and widening skin blood vessels can transfer more heat outward. Generating more heat would amplify this particular error."
+      },
+      {
+        "anchor": "Check the loop closes",
+        "prompt": "When the temperature starts returning toward 37.0 °C, what should happen to the corrective response?",
+        "hint": "Think about what happens to the error as the reading approaches its target.",
+        "help": "As the measured temperature falls toward 37.0 °C, the positive error shrinks. The drive for extra heat loss then eases. If the response stayed maximally active after the error vanished, the controller could push temperature too far."
+      }
+    ],
+    "second": [
+      {
+        "anchor": "Find the error",
+        "prompt": "How does the signed error change for a reading of 36.5 °C?",
+        "hint": "Use the same measured-minus-target rule as the first case.",
+        "help": "36.5 − 37.0 = −0.5 °C. You have changed the sign of the error, not replaced the sensor or changed the arithmetic rule."
+      },
+      {
+        "anchor": "Choose the direction",
+        "prompt": "What two responses could raise or conserve heat when the reading is below target?",
+        "hint": "Think of making more heat and losing less heat.",
+        "help": "Shivering generates heat through muscle activity. Narrowing skin blood vessels can reduce heat transfer to the surroundings. Sweating here would generally push in the wrong direction."
+      },
+      {
+        "anchor": "Compare the two cases",
+        "prompt": "Why are sweating and shivering examples of one negative-feedback principle rather than unrelated controls?",
+        "hint": "Compare what changes sign and what stays the same.",
+        "help": "In both examples the controller compares current temperature with a target and recruits effectors to oppose the deviation. The sign changes which effectors are useful; it does not change the feedback logic."
+      }
+    ]
+  },
+  "test-interpretation": {
+    "subject": "medicine",
+    "comparison": {
+      "correct": "With 1% prevalence, 99% sensitivity, and 95% specificity, the positive predictive value is about 17% in this illustrative group.",
+      "tempting": "With 99% sensitivity, a positive result means a 99% chance of having the condition, regardless of prevalence.",
+      "why": "Sensitivity asks how often a test is positive among people who already have the condition. The probability of disease after a positive result also depends on false positives among people who do not have it and on how common the condition is."
+    },
+    "first": [
+      {
+        "anchor": "Split the population by true state",
+        "prompt": "Out of 10,000 people at 1% prevalence, how many actually have the condition?",
+        "hint": "Start with real condition status, before considering any test results.",
+        "help": "1% of 10,000 is 100 people with the condition; 9,900 do not have it. This unequal split matters because even a small false-positive rate can produce many positives from the much larger unaffected group."
+      },
+      {
+        "anchor": "Apply sensitivity to the affected group",
+        "prompt": "How many of the 100 affected people test positive at 99% sensitivity?",
+        "hint": "Sensitivity is a fraction of people who already have the condition.",
+        "help": "99% of 100 is 99 true positives; one affected person is missed. Don't take 99% of all 10,000 people—that would use the wrong denominator."
+      },
+      {
+        "anchor": "Apply specificity to the unaffected group",
+        "prompt": "How many of the 9,900 unaffected people test positive despite not having the condition?",
+        "hint": "A 95% specificity means 5% of unaffected people test positive.",
+        "help": "5% × 9,900 = 495 false positives. The false-positive rate is small, but it is applied to a large group; 495 exceeds the 99 true positives."
+      },
+      {
+        "anchor": "Compute the predictive value",
+        "prompt": "Among everyone with a positive result, what fraction really has the condition?",
+        "hint": "Use true positives divided by all positive results, including false positives.",
+        "help": "Positive predictive value = 99/(99+495) = 99/594 ≈ 16.7%. This is a deliberately simplified population example; a person's medical interpretation needs clinical context and appropriate follow-up."
+      }
+    ],
+    "second": [
+      {
+        "anchor": "Split again",
+        "prompt": "If prevalence rises to 30%, how many of 10,000 people fall in each true-state group?",
+        "hint": "Only prevalence changes; keep the test's sensitivity and specificity fixed.",
+        "help": "Now 3,000 have the condition and 7,000 do not. The test is identical, but the pool available to create false positives is much smaller relative to the affected pool."
+      },
+      {
+        "anchor": "Apply the two rates",
+        "prompt": "How many true and false positives follow from the new group sizes?",
+        "hint": "Apply 99% to 3,000 and 5% to 7,000—not to the same denominator.",
+        "help": "True positives = 2,970; false positives = 350. These are the two positive-result groups whose counts go into the predictive-value denominator."
+      },
+      {
+        "anchor": "Compute the predictive value",
+        "prompt": "Why does the same test now produce a much higher fraction of true positives?",
+        "hint": "Divide true positives by their sum with false positives.",
+        "help": "2,970/(2,970+350) = 2,970/3,320 ≈ 89.5%. The larger prior probability changes the mix of positive results; sensitivity itself did not improve."
+      }
+    ]
+  },
+  "unit-economics": {
+    "subject": "business",
+    "comparison": {
+      "correct": "At $40 price and $26 variable cost, a $14 contribution per box is available to cover fixed expenses before profit.",
+      "tempting": "At $40 price and $26 variable cost, every box earns $14 in net profit even before rent and overhead.",
+      "why": "Contribution subtracts variable costs only. Fixed expenses must still be paid. At 500 boxes, $7,000 is contribution; with $9,000 monthly fixed costs, operating profit would be negative $2,000."
+    },
+    "first": [
+      {
+        "anchor": "Add the variable costs",
+        "prompt": "Which costs increase with each box sold, and what do they total?",
+        "hint": "Include oats/packaging, fulfillment labor, and shipping, with the unit 'per box'.",
+        "help": "$14 + $5 + $7 = $26 per box. Each extra box triggers these costs, so leaving out shipping would overstate the money available to cover overhead."
+      },
+      {
+        "anchor": "Subtract from price",
+        "prompt": "What is left from a $40 sale after the $26 variable cost?",
+        "hint": "Contribution is price minus variable cost, not revenue minus all expenses.",
+        "help": "$40 − $26 = $14 contribution per box. That amount is not yet profit: rent, software, salaries, and other fixed expenses remain."
+      },
+      {
+        "anchor": "Express it as a margin",
+        "prompt": "Which number belongs in the denominator of the contribution-margin percentage?",
+        "hint": "A margin is measured as a share of selling price.",
+        "help": "$14/$40 = 35%. Dividing by $26 instead would be a markup-like comparison to costs, not a contribution margin on sales."
+      },
+      {
+        "anchor": "Scale to a month",
+        "prompt": "What does selling 500 boxes create before any fixed expenses?",
+        "hint": "Multiply contribution per box, not price per box, by units sold.",
+        "help": "500 × $14 = $7,000 total contribution. With $9,000 of monthly fixed costs, that would still leave a $2,000 operating loss rather than $7,000 profit."
+      }
+    ],
+    "second": [
+      {
+        "anchor": "Recompute variable cost",
+        "prompt": "Which cost changed, and what is the new total per box?",
+        "hint": "Shipping went from $7 to $11, a $4 increase.",
+        "help": "Old variable costs were $26; adding $4 makes $30 per box. Don't add the full $11 again—the original $7 was already in the $26."
+      },
+      {
+        "anchor": "Recompute contribution",
+        "prompt": "How much is left after the new $30 variable cost?",
+        "hint": "The sales price remains $40.",
+        "help": "$40 − $30 = $10 per box. The $4 shipping increase passes directly into a $4 reduction in contribution."
+      },
+      {
+        "anchor": "Express the damage",
+        "prompt": "Why is a $4 cost increase a roughly 29% hit to contribution rather than a 10% hit?",
+        "hint": "Compare the change with the original $14 contribution, not the $40 price.",
+        "help": "$4/$14 ≈ 28.6%. Four dollars is 10% of the selling price, but it's almost one third of the smaller profit-before-fixed-costs cushion."
+      },
+      {
+        "anchor": "Say why the leverage exists",
+        "prompt": "What makes small changes in revenue or variable cost so powerful when contribution is thin?",
+        "hint": "A change in a large input lands entirely on a smaller difference.",
+        "help": "Contribution is price minus variable cost. If the difference is only $14, a $4 shift removes 29% of it; the fixed expenses haven't changed to compensate."
+      }
+    ]
+  },
+  "cash-cycle": {
+    "subject": "business",
+    "comparison": {
+      "correct": "Forty inventory days plus forty-five collection days minus thirty supplier-credit days creates a fifty-five-day cash cycle.",
+      "tempting": "Because the box is sold after forty days, the cash cycle ends then; the customer's forty-five-day delay is irrelevant.",
+      "why": "The sale may recognize revenue without collecting cash. The company pays the supplier at day 30 but receives the customer's money at day 85, leaving 55 days to finance."
+    },
+    "first": [
+      {
+        "anchor": "Add the waiting",
+        "prompt": "How much time passes between purchasing the oats and receiving the customer's cash?",
+        "hint": "Inventory time comes first; the customer's payment delay comes after the sale.",
+        "help": "40 days held in inventory + 45 days waiting to collect = 85 days from purchase to receipt. A sale is not cash in the bank when the customer pays later."
+      },
+      {
+        "anchor": "Subtract the supplier's patience",
+        "prompt": "Why do 30 days of supplier credit reduce—not increase—the self-funded interval?",
+        "hint": "The company does not pay cash immediately when it purchases inventory.",
+        "help": "The supplier is paid on day 30 while the customer pays on day 85, so 85 − 30 = 55 days when the company has already paid and is still waiting for collection."
+      },
+      {
+        "anchor": "State what it means",
+        "prompt": "What exactly does the fifty-five-day result describe?",
+        "hint": "Identify the cash-out and cash-in dates.",
+        "help": "It measures the gap between cash paid to the supplier and cash received from the customer: day 30 to day 85. That gap must be funded despite the completed sale."
+      },
+      {
+        "anchor": "Note what it is not",
+        "prompt": "Can you multiply 55 days by monthly sales and call the result 'cash tied up'?",
+        "hint": "Days measure time; dollars require appropriate daily cash and cost balances.",
+        "help": "No. Receivables use sales value while inventory and payables normally use cost. To estimate working capital, calculate those balances separately and then combine them."
+      }
+    ],
+    "second": [
+      {
+        "anchor": "Recompute the cycle",
+        "prompt": "What changes if suppliers now allow 60 rather than 30 days to pay?",
+        "hint": "Keep the forty inventory days and forty-five collection days unchanged.",
+        "help": "40 + 45 − 60 = 25 days, down from 55. More supplier credit postpones cash leaving the bank, even if no new sales occur."
+      },
+      {
+        "anchor": "Compute each balance",
+        "prompt": "Which daily rate belongs to receivables, inventory and payables in this simplified example?",
+        "hint": "Receivables use $20,000 monthly sales; stock and payables use $13,000 monthly variable cost, with 30-day months.",
+        "help": "AR = $20,000×45/30 = $30,000. Inventory = $13,000×40/30 ≈ $17,333. AP after 60-day terms = $13,000×60/30 = $26,000. Working capital ≈ $21,333 under the lesson's stated assumptions."
+      },
+      {
+        "anchor": "Compare with the original terms",
+        "prompt": "How much cash does the additional thirty days of supplier credit release?",
+        "hint": "Only payables change; keep receivables and inventory at the same levels.",
+        "help": "Old AP = $13,000×30/30 = $13,000, versus $26,000 now. That $13,000 increase in supplier financing reduces modeled working capital from about $34,333 to about $21,333."
+      }
+    ]
   }
 }

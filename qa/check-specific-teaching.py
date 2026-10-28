@@ -9,7 +9,12 @@ for path in old:
 for c in C.values():
  for archive in [old,new]:assert json.loads(re.search(r'<script id="full-course-data" type="application/json">(.*?)</script>',archive[c['path']]['t'],re.S)[1])==c
  for const in ['V126_REVISIONS','V109_DEMOS']:assert json.loads(re.search(r'const '+const+r'=(.*?);\n',old[c['path']]['t'],re.S)[1])==json.loads(re.search(r'const '+const+r'=(.*?);\n',new[c['path']]['t'],re.S)[1])
-assert len(D)==8 and sum(len(d['first'])+len(d['second']) for d in D.values())==51
+existing={'piano-5','rests-and-halves','noun-phrases','spanish-5','count-exchanges','castling','product-rule','physics-2'}
+new={'homeostasis','test-interpretation','unit-economics','cash-cycle'}
+assert set(D)==existing|new
+assert sum(len(D[id]['first'])+len(D[id]['second']) for id in existing)==51
+assert sum(len(D[id]['first'])+len(D[id]['second']) for id in new)==29
+assert len(D)==12 and sum(len(d['first'])+len(d['second']) for d in D.values())==80
 for id,d in D.items():
  u=next(u for u in C[d['subject']]['units'] if u['id']==id)
  for case in ['first','second']:
@@ -35,4 +40,4 @@ sys.path.insert(0,str(r/'qa/check-tools'));import chess
 boards=[chess.Board(s['reference']['board']['fen']) for s in Q['castling']['steps']];assert all(b.is_valid() for b in boards)
 move=chess.Move.from_uci('e1g1');assert move in boards[0].legal_moves;boards[0].push(move);assert boards[0].board_fen()==boards[1].board_fen()
 assert chess.F1 in boards[2].attacks(chess.F8) and not boards[2].is_check() and move not in boards[2].legal_moves
-print('SPECIFIC_TEACHING_SOURCE_PASS: all V130 base/display/demo records and 208 unrelated assets retained; 51 aligned teaching turns; 24 coaching decisions including original five scenarios unchanged; independent rhythm times and legal/illegal castling positions.')
+print('SPECIFIC_TEACHING_SOURCE_PASS: all V130 base/display/demo records and 208 unrelated assets retained; 80 aligned teaching turns in 12 lessons (29 additional medicine/business turns); 24 checked decisions in original eight eligible lessons; independent rhythm times and legal/illegal castling positions.')

@@ -27,6 +27,8 @@ jobs:
         run: node qa/test-curriculum-edit.cjs
       - name: Inspect narrow-screen lesson references before full regression
         run: node qa/test-lesson-revisions.cjs
+      - name: Check authored coaching and generic fallback early
+        run: node qa/test-mastery-loop-v129.cjs
       - run: npm test
       - name: Prepare downloadable HTML and ZIP
         run: python3 scripts/package-downloads.py --output "$RUNNER_TEMP/study-table-downloads"
