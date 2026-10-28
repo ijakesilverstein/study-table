@@ -15,3 +15,11 @@
 
 .worked-coach select{display:block;margin:6px 0 12px;min-height:44px;padding:8px 12px;color:var(--study-ink);background:var(--study-surface);border:1px solid #84848e;border-radius:7px}
 .worked-coach select:focus-visible{outline:3px solid var(--study-warm);outline-offset:3px}
+
+
+/* Fieldsets and native selects can otherwise grow wider than a phone reader. */
+.worked-coach{min-width:0;max-width:100%;overflow-wrap:anywhere}
+.worked-coach select{width:100%;min-width:0;max-width:100%}
+.worked-coach .coach-choices{min-width:0;max-width:100%;width:100%;box-sizing:border-box}
+.worked-coach .coach-actions button,.worked-coach .coach-choices button{min-width:0;overflow-wrap:anywhere}
+.worked-coach .coach-response{min-width:0;max-width:100%;overflow-wrap:anywhere}
