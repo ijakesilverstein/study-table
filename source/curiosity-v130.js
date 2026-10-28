@@ -31,7 +31,7 @@ function v130TrapMarkup(unit){
 function v130ChallengeMarkup(){
  return '<section class="v130-curiosity" id="v130Curiosity" aria-label="One-minute challenge">'+
   '<div class="v130-curiosity-lead"><div><p class="v130-kicker">Play for a minute</p>'+
-  '<h2>Fancy a question?</h2><p>One real question from this course. No timer, no score. Just the fun of figuring it out.</p></div>'+
+  '<h2>Fancy a question?</h2><p>A real question near where you are in the course. No timer. Just the fun of figuring it out.</p></div>'+
   '<button type="button" data-v130-pick>Surprise me</button></div>'+
   '<div class="v130-curiosity-question" data-v130-question hidden><p class="v130-kicker" data-v130-index></p>'+
   '<h3 tabindex="-1" data-v130-title></h3><p data-v130-prompt></p>'+
@@ -44,7 +44,8 @@ let v130ChosenUnit=null;
 function v130PickQuestion(){
  const card=document.getElementById('v130Curiosity');
  if(!card||!COURSE.units.length)return;
- const count=COURSE.units.length;
+ const savedIndex=COURSE.units.findIndex(unit=>unit.id===bookmark());
+ const count=Math.min(COURSE.units.length,Math.max(3,savedIndex+2));
  let index=Math.min(count-1,Math.floor(Math.random()*count));
  if(index===v130LastChallenge&&count>1)index=(index+1)%count;
  v130LastChallenge=index;
