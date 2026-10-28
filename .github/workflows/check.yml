@@ -21,8 +21,17 @@ jobs:
       - run: npm ci
       - run: python3 -m pip install -r requirements-test.txt
       - run: npx playwright install --with-deps chromium
-      - name: Verify committed standalone HTML matches source
-        run: python3 scripts/build.py --check
+      - name: Build fresh V133 HTML directly from the source
+        run: python3 scripts/build.py
+      - name: Verify 42 independently checked practice problems
+        run: node qa/check-transfer-v133.cjs
+      - name: Upload V133 beta preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: study-table-v133-preview-html
+          path: public/study-table-v133.html
+          retention-days: 30
+          if-no-files-found: error
       - run: npm test
       - name: Prepare downloadable HTML and ZIP
         run: python3 scripts/package-downloads.py --output "$RUNNER_TEMP/study-table-downloads"
