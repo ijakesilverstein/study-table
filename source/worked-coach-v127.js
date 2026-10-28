@@ -3,15 +3,16 @@ let v127ActiveRecognizer=null;
 function v127CoachData(host){
  const stored=byId.get(host.querySelector('.worked-coach')?.dataset.coachUnit),unit=stored&&v126Lesson(stored);
  const example=unit&&(host.id==='courseFirst'?unit.first:unit.second);
- const index=Math.min(Math.max(Number(host.dataset.guidedCount||0),0),(example?.steps.length||1)-1);
+ const selected=host.querySelector('[data-coach-step]')?.value;const index=Math.min(Math.max(Number(selected===''||selected===undefined?(host.dataset.guidedCount||0):selected),0),(example?.steps.length||1)-1);
  return {unit,example,index,step:example?.steps[index]};
 }
 function v127CoachControls(unit,id){
+ const example=id==='courseFirst'?unit.first:unit.second;
  return '<details class="worked-coach" data-coach-unit="'+escape(unit.id)+'"><summary>Talk through this example</summary>'+
  '<p class="coach-intro">Explain what you would try. Type your thinking, or speak if your browser supports it. The hints use this lesson’s worked solution; they cannot reliably grade a free-form answer.</p>'+
  '<label class="coach-label" for="coach-input-'+id+'">Your reasoning or question</label>'+
  '<textarea id="coach-input-'+id+'" data-coach-input rows="3" placeholder="I think the first move is … because …"></textarea>'+
- (COURSE.subject==='spanish'?'<label for="coach-language-'+id+'">Speech language</label><select id="coach-language-'+id+'" data-coach-language><option value="en-US">English</option><option value="es-ES">Español</option></select>':'')+'<div class="coach-actions"><button type="button" data-coach-mic>Use microphone</button><button type="button" data-coach-check>Help me think this through</button></div>'+
+ (COURSE.subject==='spanish'?'<label for="coach-language-'+id+'">Speech language</label><select id="coach-language-'+id+'" data-coach-language><option value="en-US">English</option><option value="es-ES">Español</option></select>':'')+'<label for="coach-step-'+id+'">Which step needs help?</label><select id="coach-step-'+id+'" data-coach-step><option value="">Current step</option>'+example.steps.map((step,i)=>'<option value="'+i+'">Step '+(i+1)+': '+escape(step[0])+'</option>').join('')+'</select>'+'<div class="coach-actions"><button type="button" data-coach-mic>Use microphone</button><button type="button" data-coach-check>Help me think this through</button></div>'+
  '<p class="coach-mic-note">Microphone transcription, when available, may use your browser provider’s speech service. Nothing is recorded or saved by Study Table.</p>'+
  '<fieldset class="coach-choices"><legend>Where did you get stuck?</legend>'+
  '<button type="button" data-coach-topic="start">Where do I start?</button>'+
