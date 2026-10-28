@@ -10,6 +10,7 @@ function v127GuideStart(b){
  if(!steps.length)return;
  host.dataset.guidedCount='0';steps.forEach(s=>s.hidden=true);
  const notice=host.querySelector(':scope > .case-notice');if(notice)notice.hidden=true;
+ host.querySelectorAll(':scope > .lesson-reference,:scope > .teacher-table').forEach(el=>el.hidden=true);
  b.hidden=true;b.setAttribute('aria-expanded','true');panel.hidden=false;
  const reveal=panel.querySelector('[data-guided-reveal]');reveal.hidden=false;
  reveal.textContent='Reveal step 1 of '+steps.length;
@@ -24,6 +25,7 @@ function v127GuideReveal(b){
   else{status.textContent='All '+steps.length+' steps are visible. Check the conclusion.';b.textContent='Show the conclusion';}
  }else{
   const notice=host.querySelector(':scope > .case-notice');if(notice)notice.hidden=false;
+  host.querySelectorAll(':scope > .lesson-reference,:scope > .teacher-table').forEach(el=>el.hidden=false);
   status.textContent='All reasoning and the conclusion are visible.';b.hidden=true;host.querySelector('[data-guided-exit]').focus();
  }
 }
@@ -31,6 +33,7 @@ function v127GuideEnd(b){
  const host=b.closest('.worked-case'),start=host.querySelector('[data-guided-start]');
  host.querySelectorAll(':scope > .solution > li').forEach(s=>s.hidden=false);
  const notice=host.querySelector(':scope > .case-notice');if(notice)notice.hidden=false;
+ host.querySelectorAll(':scope > .lesson-reference,:scope > .teacher-table').forEach(el=>el.hidden=false);
  host.querySelector('.guided-panel').hidden=true;start.hidden=false;start.setAttribute('aria-expanded','false');
  delete host.dataset.guidedCount;start.focus();
 }
