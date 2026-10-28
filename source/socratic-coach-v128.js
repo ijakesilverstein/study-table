@@ -9,6 +9,16 @@ const V128_PROMPTS={
  medicine:"Which mechanism matters here? What assumption are you making?",
  business:"Which cost, customer action, or timing assumption matters in this decision?"
 };
+function v128Say(text){
+ if(!window.speechSynthesis||!window.SpeechSynthesisUtterance)return false;
+ try{
+  speechSynthesis.cancel();
+  const line=new SpeechSynthesisUtterance(String(text).slice(0,1500));
+  line.lang='en-US';line.rate=.92;
+  speechSynthesis.speak(line);
+  return true;
+ }catch{return false}
+}
 function v128MountCoach(){
  document.querySelectorAll('.worked-case .worked-coach').forEach((details)=>{
   if(details.querySelector('.socratic-coach'))return;
@@ -18,6 +28,7 @@ function v128MountCoach(){
   section.innerHTML='<h3>Work it out with a guide</h3>'+
    '<p class="socratic-question" data-socratic-question></p>'+
    '<div class="socratic-buttons">'+
+   '<button type="button" data-socratic="voice" aria-pressed="false">Read guidance aloud: Off</button>'+ 
    '<button type="button" data-socratic="hint">Give me a nudge</button>'+
    '<button type="button" data-socratic="compare">Compare my idea</button>'+
    '<button type="button" data-socratic="work">Show why it works</button>'+
@@ -47,6 +58,7 @@ function v128CoachQuestion(details){
  feedback.querySelector('[data-socratic-comparison]').hidden=true;
  details.querySelector('[data-socratic="previous"]').disabled=index===0;
  details.querySelector('[data-socratic="next"]').textContent=index===example.steps.length-1?'Finish this example':'Next step';
+ const voice=details.querySelector('[data-socratic="voice"]');if(voice?.getAttribute('aria-pressed')==='true')v128Say(details.querySelector('[data-socratic-question]').textContent);
 }
 function v128CoachAction(button){
  const details=button.closest('.worked-coach'),host=details?.closest('.worked-case');
@@ -59,6 +71,17 @@ function v128CoachAction(button){
  const comparison=feedback.querySelector('[data-socratic-comparison]');
  const input=details.querySelector('[data-coach-input]'),learner=input.value.trim();
  comparison.hidden=true;
+ if(action==='voice'){
+  const enable=button.getAttribute('aria-pressed')!=='true';
+  if(enable&&!v128Say(details.querySelector('[data-socratic-question]').textContent)){
+   msg.textContent='Spoken guidance is unavailable here. The written coaching still works.';feedback.hidden=false;return;
+  }
+  if(!enable&&window.speechSynthesis)window.speechSynthesis.cancel();
+  button.setAttribute('aria-pressed',String(enable));
+  button.textContent=enable?'Read guidance aloud: On':'Read guidance aloud: Off';
+  return;
+ }
+
  if(action==='previous'||action==='next'){
   if(action==='previous'){select.value=String(Math.max(0,index-1));v128CoachQuestion(details);}
   else if(index+1<example.steps.length){select.value=String(index+1);v128CoachQuestion(details);}
@@ -86,6 +109,7 @@ function v128CoachAction(button){
    ' Can you now explain why that step comes before the next one?';
  }
  feedback.hidden=false;
+ if(details.querySelector('[data-socratic="voice"]')?.getAttribute('aria-pressed')==='true')v128Say(msg.textContent);
 }
 document.addEventListener('click',event=>{
  const b=event.target.closest('button[data-socratic]');
