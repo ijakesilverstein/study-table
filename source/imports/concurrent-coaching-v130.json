@@ -1,0 +1,75 @@
+{
+  "merged_snapshot": "6c76d528fe8c9c8243ef63df6ea3ef4dd45af0bc",
+  "branches": {
+    "feature/v127-guided-worked-examples": "9114d46527687088295298b989c4adbe03c59c6c",
+    "feature/v128-socratic-coach": "c9b050a8a0d1a78f2b7ef5ced262db59b83f7e98",
+    "feature/v129-learn-by-doing": "6c76d528fe8c9c8243ef63df6ea3ef4dd45af0bc"
+  },
+  "files": [
+    {
+      "path": "source/worked-coach-v127.js",
+      "original_sha256": "116a294cd947848bca12969e1b3bae953bca6cf8ccdf013823df0b56006ab46d",
+      "functions": [
+        "v127CoachData",
+        "v127CoachControls",
+        "v127CoachFeedback",
+        "v127CoachIntent",
+        "v127CoachReply",
+        "v127StopCoaching",
+        "v127CoachMic",
+        "v127CoachShow"
+      ],
+      "runtime_modified": true
+    },
+    {
+      "path": "source/worked-coach-v127.css",
+      "original_sha256": "8aa6117bb0b4b46d549f09f250e2fccb3a340d0a87a09c84f1bcb786644eecbd",
+      "functions": [],
+      "runtime_modified": true
+    },
+    {
+      "path": "source/socratic-coach-v128.js",
+      "original_sha256": "09fafd9f55fcfe26ab2c900b781b261781bcdbad6756cf9896c6fa18e7362b3d",
+      "functions": [
+        "v128Say",
+        "v128MountCoach",
+        "v128CoachQuestion",
+        "v128CoachAction"
+      ],
+      "runtime_modified": true
+    },
+    {
+      "path": "source/socratic-coach-v128.css",
+      "original_sha256": "bde4571294e6247320f3c6d0cab085a75ed6c9e830cf83e49e568854ef5c5258",
+      "functions": [],
+      "runtime_modified": false
+    },
+    {
+      "path": "source/mastery-loop-v129.js",
+      "original_sha256": "c41d295b9bbe304e8ee7c00b6e163d8bd988022e5475405dcc607c5bb3cdd58f",
+      "functions": [
+        "v129Markup",
+        "v129Get",
+        "v129Prompt",
+        "v129Result",
+        "v129Reference",
+        "v129RevealStep",
+        "v129Action",
+        "v129MountCoach"
+      ],
+      "runtime_modified": true
+    },
+    {
+      "path": "source/mastery-loop-v129.css",
+      "original_sha256": "36fc7dcaa0238aa6e07a590b883322b547b03a0877cdcbc3228bd0e6f4099411",
+      "functions": [],
+      "runtime_modified": false
+    }
+  ],
+  "notes": [
+    "All three source lineages are preserved by a real Git merge.",
+    "The V129 loop replaces the redundant V128 inline panel as its author intended; the V128 module remains intact.",
+    "Runtime repairs restrict dictation to available on-device models, cancel late transcripts, retain attempts when switching steps and keep focus in the flow.",
+    "The V128 targeted root coach remains available inside eligible first-case coaching disclosures."
+  ]
+}

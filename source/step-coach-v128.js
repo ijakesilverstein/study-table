@@ -33,7 +33,7 @@
   }
   const phrase=input.replace(/[¿?¡!.,;:]/g,'').replace(/^quiero\s+/,'').replace(/\s+por favor$/,'').trim().replace(/\s+/g,' ');
   if(phrase===step.answer)return fits();
-  if(phrase.normalize('NFD').replace(/[\u0300-\u036f]/g,'')===step.answer.normalize('NFD').replace(/[\u0300-\u036f]/g,''))return result('revise','The word choices fit this model. Keep the written accents too: '+step.answer+'.');
+  if(phrase.normalize('NFD').replace(/[\u0300-\u036f]/g,'')===step.answer.normalize('NFD').replace(/[\u0300-\u036f]/g,''))return result('revise','The wording fits this model. Keep the spelling shown here, including accents and ñ: '+step.answer+'.');
   const tokens=phrase.split(' ');
   for(const [token,message] of Object.entries(step.mistakes))if(tokens.includes(token))return result('revise',message);
   return result('compare','I cannot reliably check that wording against this small phrase model. It may express something different. Compare the article, noun and description with: '+step.answer+'. Other ways to make a request can also be valid.');

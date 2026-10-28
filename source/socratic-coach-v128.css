@@ -1,0 +1,13 @@
+
+.socratic-coach{border-top:1px solid var(--study-line);margin:17px 0 14px;padding-top:14px;min-width:0;max-width:100%}
+.socratic-coach h3{font:650 18px/1.45 system-ui;margin:0 0 8px}
+.socratic-coach .socratic-question{font-size:16px;margin:0 0 14px}
+.socratic-buttons{display:flex;gap:9px;flex-wrap:wrap}
+.socratic-buttons button{font-size:15px;min-width:0;white-space:normal;overflow-wrap:anywhere}
+.socratic-buttons button:disabled{opacity:.55;cursor:default}
+.socratic-feedback{margin-top:14px;padding:12px 14px;background:var(--study-panel);border-left:3px solid var(--study-warm);border-radius:6px;overflow-wrap:anywhere}
+.socratic-feedback[hidden],.socratic-comparison[hidden]{display:none!important}
+.socratic-feedback>p{margin:0 0 8px}
+.socratic-comparison{display:grid;grid-template-columns:minmax(0,1fr);gap:4px}
+.socratic-comparison p{margin:3px 0;white-space:pre-wrap;overflow-wrap:anywhere}
+@media(max-width:540px){.socratic-buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.socratic-buttons button{width:100%;padding:10px 7px}}
