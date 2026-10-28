@@ -1,12 +1,19 @@
-const {chromium}=require('playwright'),assert=require('assert/strict'),data=require('../source/step-coach-v128.json');
-(async()=>{const browser=await chromium.launch(require('./browser-options.cjs')),p=await browser.newPage({viewport:{width:390,height:844}}),errors=[];p.on('pageerror',e=>errors.push(e.message));
+const {chromium}=require('playwright'),{spawn}=require('child_process'),assert=require('assert/strict'),data=require('../source/step-coach-v128.json');
+(async()=>{
+ const url=process.env.STUDY_TEST_URL||'http://127.0.0.1:8807/index.html';
+ let server=null;
+ if(!process.env.STUDY_TEST_URL){
+  server=spawn('python3',['-m','http.server','8807','--bind','127.0.0.1','--directory','public'],{stdio:'ignore'});
+  for(let i=0;i<80;i++){try{if((await fetch(url)).ok)break}catch{}await new Promise(r=>setTimeout(r,100))}
+ }
+ const browser=await chromium.launch(require('./browser-options.cjs')),p=await browser.newPage({viewport:{width:390,height:844}}),errors=[];p.on('pageerror',e=>errors.push(e.message));
  const open=async id=>{
   const subject=data[id].subject;await p.evaluate(([subject,id])=>studyTableFullCourses.open(subject,id),[subject,id]);
   await p.waitForFunction(([subject,id])=>{const w=document.getElementById('frame')?.contentWindow;return w?.studyTableFullCourse?.subject===subject&&w.document.querySelector('#courseArticle h1')?.textContent===w.studyTableFullCourse.units.find(u=>u.id===id)?.title},[subject,id]);
   const f=p.frames().find(f=>f.parentFrame()===p.mainFrame());await f.locator('[data-step-coach]').click();await p.locator('#stepCoach').waitFor({state:'visible'});return f;
  };
  try{
-  await p.goto(process.env.STUDY_TEST_URL||'http://127.0.0.1:8807/index.html');await p.waitForFunction(()=>READY&&studyTableFullCourses.version===131&&studyTableStepCoach);
+  await p.goto(url);await p.waitForFunction(()=>READY&&studyTableFullCourses.version===131&&studyTableStepCoach);
   const evidence={schema:1,records:{'piano-5':{attempts:2,independent:1,last:123}}};await p.evaluate(x=>localStorage.setItem('studytable_v102_learning',JSON.stringify(x)),evidence);
   for(const [id,scenario] of Object.entries(data)){
    const frame=await open(id),before=await p.evaluate(()=>Object.fromEntries(Object.entries(localStorage)));
@@ -63,5 +70,5 @@ const {chromium}=require('playwright'),assert=require('assert/strict'),data=requ
   await p.locator('#st128CoachAnswer').fill('Quiero dos cafés pequeños, por favor.');await p.locator('#st128CoachCheck button').click();assert.equal(await p.locator('#st128CoachFeedback').getAttribute('data-feedback-kind'),'fits');
   assert.deepEqual(await p.evaluate(()=>studyTableV102.getProgress()),evidence);assert.deepEqual(errors,[]);
   console.log('STEP_COACH_BROWSER_PASS: five actual lesson entry points, fifteen decisions with targeted checks/help/complete teacher reasoning; no quiz gate or saved-state writes; session notes; 60 mobile/both-theme/result-state WCAG axe scans; keyboard focus/Escape; local-only speech and pending/late-result cancellation mocked; offline after load. No real microphone or arbitrary reasoning grading claimed.');
- }finally{await browser.close()}
+ }finally{await browser.close();server?.kill('SIGTERM')}
 })().catch(e=>{console.error(e);process.exit(1)});
