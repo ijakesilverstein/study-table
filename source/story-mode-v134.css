@@ -27,3 +27,9 @@
 
 /* A styled grid can override the user-agent hidden attribute unless explicitly guarded. */
 .v134-story [hidden]{display:none!important}
+
+/* On dark backgrounds, use intentionally light answer cards with dark ink.
+   This keeps contrast reliable for browser accessibility checks and human readers. */
+html[data-study-theme=dark] .v134-options button{background:#eeeef2;color:#202024;border-color:#696975}
+html[data-study-theme=dark] .v134-options button:hover{background:#fff;color:#202024}
+html[data-study-theme=dark] .v134-options button[aria-pressed=true]{background:#e4dbf8;color:#202024;border-color:#c4aff5}
