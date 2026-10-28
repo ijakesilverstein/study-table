@@ -23,12 +23,18 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - name: Verify committed standalone HTML matches source
         run: python3 scripts/build.py --check
+      - name: Verify all seven authored scenes and live lesson IDs
+        run: node qa/check-story-mode-v134.cjs
       - name: Exercise legacy reader resume before full regression
         run: node qa/test-curriculum-edit.cjs
       - name: Inspect narrow-screen lesson references before full regression
         run: node qa/test-lesson-revisions.cjs
       - name: Check authored coaching and generic fallback early
         run: node qa/test-mastery-loop-v129.cjs
+      - name: Play all 63 story outcomes in real browser before full suite
+        run: node qa/test-story-mode-v134.cjs
+      - name: Guard rapid backup reimport against stale dialog close events
+        run: node qa/test-backup-reopen-race.cjs
       - run: npm test
       - name: Prepare downloadable HTML and ZIP
         run: python3 scripts/package-downloads.py --output "$RUNNER_TEMP/study-table-downloads"
