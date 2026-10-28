@@ -26,7 +26,7 @@ const courses=require('../source/full-courses-built.json'),edition=Number(requir
    for(const section of ['#courseFirst','#courseSecond']){
     const caseBox=f.locator(section),coach=caseBox.locator('.worked-coach');
     assert.equal(await coach.count(),1,subject+' '+section+' missing coach');
-    await coach.locator('summary').click();
+    await coach.locator('summary').first().click();
     await coach.locator('.mastery-more > summary').click();
     assert.equal(await coach.locator('[data-coach-input]').count(),1);
     const why=caseBox.locator('.solution>li').first().locator(':scope > p:not(.calculation)').first();
