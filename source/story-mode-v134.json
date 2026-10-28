@@ -426,7 +426,7 @@
             "works": true
           },
           {
-            "label": "5",
+            "label": "5 people",
             "after": "That would be 5% of only 100 people, the wrong group.",
             "why": "Specificity applies to the unaffected group. The false-positive rate is 5% of 9,900, not 5% of 100."
           },
