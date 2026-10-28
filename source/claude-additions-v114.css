@@ -3,3 +3,12 @@
 @media(min-width:640px){.v114-controls{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}}
 
 .v114-figure .quantity-figure:focus-visible{outline:3px solid var(--study-warm);outline-offset:3px}
+
+/* V132 mobile repair: wide authored reference diagrams remain scrollable inside
+   their own region, not across the entire course article. Do not shrink
+   diagrams or remove the keyboard-addressable inner scroll surface. */
+@media(max-width:600px){
+ .v114-alternative{max-width:100%;min-width:0;overflow-x:clip}
+ .v114-alternative .v114-figure{max-width:100%;min-width:0}
+ .v114-alternative .v114-figure .quantity-figure{box-sizing:border-box;display:block;width:100%;max-width:100%;min-width:0;overflow-x:auto;overscroll-behavior-inline:contain}
+}
