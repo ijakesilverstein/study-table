@@ -33,7 +33,7 @@ function v133Records(){
  try{
   const stored=JSON.parse(localStorage.getItem(V133_STORE)||'null');
   if(stored?.schema!==1||!stored.records||typeof stored.records!=='object')return {};
-  return Object.fromEntries(Object.entries(stored.records).filter(([unit,r])=>V133_BANK[unit]&&r&&Number.isFinite(r.due)&&Number.isInteger(r.level)&&r.level>=0&&r.level<=5&&Number.isInteger(r.tries)&&r.tries>=0));
+  return Object.fromEntries(Object.entries(stored.records).filter(([unit,r])=>/^[a-z][a-z0-9-]{1,50}$/.test(unit)&&r&&Number.isFinite(r.due)&&Number.isInteger(r.level)&&r.level>=0&&r.level<=5&&Number.isInteger(r.tries)&&r.tries>=0));
  }catch{return {}}
 }
 function v133Write(records){
