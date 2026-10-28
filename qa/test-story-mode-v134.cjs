@@ -58,6 +58,7 @@ const stories=require('../source/story-mode-v134.json');
      await f.evaluate(t=>studyTableTheme.set(t),theme);
      assert(await f.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),story.subject+'/'+width+'/'+theme+' overflows');
      const a=await f.evaluate(async()=>axe.run({include:['#v134Story']},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}}));
+     if(a.violations.length)console.error('STORY_WCAG_DIAGNOSTIC',story.subject,width,theme,JSON.stringify({v:a.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>({target:n.target,summary:n.failureSummary,checks:n.any?.map(a=>a.data)}))})),style:await f.locator('[data-v134-choice]').first().evaluate(e=>({theme:document.documentElement.dataset.studyTheme,color:getComputedStyle(e).color,background:getComputedStyle(e).backgroundColor,parent:getComputedStyle(e.parentElement).backgroundColor}))}));
      assert.deepEqual(a.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)})),[],story.subject+'/'+width+'/'+theme+' WCAG');
     }
    }
