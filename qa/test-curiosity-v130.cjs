@@ -60,6 +60,17 @@ const courses=require('../source/full-courses-built.json'),edition=Number(requir
     assert.equal(await c.locator('#courseArticle .mistake-check').count(),1,'One authored misconception only');
     assert(await c.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),subject+' width overflow 390');
    }
+   // Random discovery stays close to the saved reading place.
+   await frame.locator('[data-course-map]').first().click();
+   const recent=frame.locator('#v130Curiosity');
+   for(let trial=0;trial<6;trial++){
+    await recent.locator(trial?'[data-v130-again]':'[data-v130-pick]').click();
+    const picked=await recent.locator('[data-v130-title]').innerText();
+    const recentIndex=course.units.findIndex(u=>u.title===picked);
+    assert(recentIndex>=Math.max(0,course.units.length-3),subject+' must suggest nearby material');
+    assert(recentIndex<course.units.length);
+    assert((await recent.locator('[data-v130-index]').innerText()).endsWith('of '+course.units.length));
+   }
    console.log('CURIOSITY_V130_PASS',subject,'surprise question, answer, lesson jump and misconception game');
   }
   await page.setViewportSize({width:320,height:844});
