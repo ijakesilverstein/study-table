@@ -36,8 +36,9 @@ const courses=require('../source/full-courses-built.json'),edition=Number(requir
    assert.equal(await challenge.locator('[data-v130-solution]').isVisible(),false);
    await challenge.locator('[data-v130-again]').click();
    assert.notEqual(await challenge.locator('[data-v130-title]').innerText(),title,subject+' repeat must choose new unit');
+   const pickedTitle=await challenge.locator('[data-v130-title]').innerText();
    await challenge.locator('[data-v130-learn]').click();
-   assert.equal(await frame.locator('#courseArticle h1').innerText(),await frame.locator('#courseArticle h1').innerText());
+   assert.equal(await frame.locator('#courseArticle h1').innerText(),pickedTitle,'Lesson jump opens the questioned unit');
    assert.equal(await frame.locator('#courseOutline').count(),0,'Jump from question must open lesson');
    for(const unit of [course.units[0],course.units.at(-1)]){
     await page.evaluate(([subject,id])=>studyTableFullCourses.open(subject,id),[subject,unit.id]);
