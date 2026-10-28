@@ -1,9 +1,10 @@
 {
-  "merged_snapshot": "37758ca8dfdc5dbc2de322be81d790c5ca90379a",
+  "merged_snapshot": "36937ba9b624ecb026af6bbbc2738095e720fc68",
   "branches": {
     "feature/v129-learn-by-doing": "168a9dfebf91a7080186ba3d9aaff522a1f74e50",
     "feature/v130-curiosity-and-clarity": "5afe8bad05d1cdad188a6e393381383553af674b",
-    "feature/v131-unified-tutor": "37758ca8dfdc5dbc2de322be81d790c5ca90379a"
+    "feature/v131-unified-tutor": "36937ba9b624ecb026af6bbbc2738095e720fc68",
+    "feature/v132-curiosity-grounded": "67fc6d803e9636d571d71088fd2badf1dd679ca7"
   },
   "incoming_curiosity_functions": [
     "v130TrapMarkup",
@@ -16,6 +17,7 @@
     "V130 note retention, step synchronization and media cancellation preserved.",
     "Direct checked entry retained; general comparison stays optional instead of removing earlier functionality.",
     "Optional misconception disclosure allows the complete correction before any choice.",
-    "New authored content and references are in additive V132 files."
+    "New authored content and references are in additive V132 files.",
+    "Single-claim investigation uses both valid and mistaken authored claims; explanation remains available before a choice."
   ]
 }

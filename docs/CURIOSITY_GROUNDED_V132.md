@@ -1,5 +1,7 @@
 # V132 — small questions that make you think
 
+Integration note: the concurrent grounded-curiosity branch through 67fc6d803e9636d571d71088fd2badf1dd679ca7 is merged into canonical V132. The final version shows both valid and mistaken claims (39 and 48 units), offers the full explanation before a choice, and expands the checked coach to eight scenarios with 24 decisions. See [the combined V132 changes](SPECIFIC_TEACHING_V132.md). The five-scenario and CI statements below record the source branch's earlier scope, not a verified hosted deployment.
+
 This release starts from the current Codex-integrated V130 main branch, including its 87-unit guided lesson coach, five checkable tutor scenarios, safe local-only dictation, corrected step selection, progress backup, piano support, and cross-course regression coverage.
 
 The new features are deliberately small:

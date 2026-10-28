@@ -1,6 +1,6 @@
 # Study Table
 
-An offline-capable learning app. Current downloads and online access are published separately at https://study-table-downloads.vercel.app. The public deployment may lag the latest source release until verified. The earlier app project is not modified by this delivery workflow.
+An offline-capable learning app. [Open the V132 HTML on GitHub](https://github.com/ijakesilverstein/study-table/blob/main/public/study-table-v132.html) and choose **Download raw file** to save the complete app. The separately published site at https://study-table-downloads.vercel.app may show an earlier release until a new deployment is verified.
 
 V132 merges the concurrent unified-tutor/curiosity branch and adds 51 step-specific teaching turns in eight lessons. Three new checked coaches use piano timing tables, a translated café exchange and castling diagrams; the checked set now covers eight units. Direct entries, optional correction access and phone fixes accompany the teaching. All earlier content remains. See [the V132 teaching changes](docs/SPECIFIC_TEACHING_V132.md).
 
@@ -97,9 +97,9 @@ npm test
 python3 scripts/build.py --check
 ```
 
-The test runner starts its own local server. `CHROME_BINARY` can select an installed Chromium binary. Browser checks cover taught lessons, all 65 full-course units, merged bookmarks, chapter maps, diagram calculations and drawn circuit connections, optional practice, saved work, media scheduling/cancellation and mobile layout. `python-chess` verifies the worked chess lines, pawn blockers and stated outcomes. See docs/CURRICULUM_EDIT_V112.md for the earlier editorial comparison and docs/TEACHING_V113.md for the richer demonstrations. Subject accuracy still needs independent review; automated checks do not prove learning gains.
+The test runner starts its own local server. `CHROME_BINARY` can select an installed Chromium binary. Browser checks cover taught lessons, all 87 full-course units, merged bookmarks, chapter maps, diagram calculations and drawn circuit connections, optional practice, saved work, media scheduling/cancellation and mobile layout. `python-chess` verifies the worked chess lines, pawn blockers and stated outcomes. See docs/CURRICULUM_EDIT_V112.md for the earlier editorial comparison and docs/TEACHING_V113.md for the richer demonstrations. Subject accuracy still needs independent review; automated checks do not prove learning gains.
 
-Local delivery checks also exercise `/app/`, actual browser HTML/ZIP downloads, the app’s download button, source hashes and earlier-edition preservation. Public Vercel requests are blocked by this workspace’s network policy; deployment readiness/settings and uploaded hashes are verified through its API.
+Local delivery checks also exercise `/app/`, actual browser HTML/ZIP downloads, the app’s download button, source hashes and earlier-edition preservation. Public Vercel and API requests are currently blocked from this workspace. Earlier deployment receipts do not establish that V132 is live; GitHub upload, local delivery and hosted publication are verified separately.
 
 The contrast regression seeds conflicting legacy/current theme preferences, clicks both actual theme controls, reloads, and checks visible text contrast with axe-core across the taught lessons and main dialogs.
 
