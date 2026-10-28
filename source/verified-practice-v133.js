@@ -85,14 +85,14 @@ function v133Start(host){
  const open=host.querySelector('[data-v133-start]');if(open)open.textContent='Start over with another version';
  (panel.querySelector('input')||panel.querySelector('button'))?.focus({preventScroll:true});
 }
-function v133Reveal(host){
+function v133Reveal(host,fromCorrect=false){
  const row=V133_BANK[host.dataset.v133UnitId],item=row?.variants[Number(host.dataset.variant)];if(!item)return;
  const panel=host.querySelector('[data-v133-content]');
  const reason=panel.querySelector('[data-v133-reason]');
  reason.textContent='Worked answer: '+item.answer+'. '+item.why;
  reason.hidden=false;
  panel.querySelector('[data-v133-next]').hidden=false;
- host.dataset.lastOutcome='reveal';
+ if(!fromCorrect)host.dataset.lastOutcome='reveal';
 }
 function v133Feedback(host,result){
  const panel=host.querySelector('[data-v133-content]'),output=panel.querySelector('[data-v133-result]');if(!output)return;
@@ -100,7 +100,7 @@ function v133Feedback(host,result){
  if(['correct','misconception','unmatched','unverified'].includes(result.kind)){
   host.dataset.lastOutcome=result.kind;
   panel.querySelector('[data-v133-next]').hidden=false;
-  if(result.kind==='correct')v133Reveal(host);
+  if(result.kind==='correct')v133Reveal(host,true);
  }
 }
 function v133Save(host){
