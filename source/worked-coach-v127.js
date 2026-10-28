@@ -1,7 +1,7 @@
 // A lesson-grounded practice companion. It does not judge arbitrary speech or call an AI service.
 let v127ActiveRecognizer=null;
 function v127CoachData(host){
- const stored=byId.get(host.dataset.coachUnit),unit=stored&&v126Lesson(stored);
+ const stored=byId.get(host.querySelector('.worked-coach')?.dataset.coachUnit),unit=stored&&v126Lesson(stored);
  const example=unit&&(host.id==='courseFirst'?unit.first:unit.second);
  const index=Math.min(Math.max(Number(host.dataset.guidedCount||0),0),(example?.steps.length||1)-1);
  return {unit,example,index,step:example?.steps[index]};
