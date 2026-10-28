@@ -236,6 +236,7 @@ def generate_course_demos():
 def render_course(course,demos):
     data=json.dumps(course,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')
     revisions=json.loads((ROOT/'lesson-revisions-v126.json').read_text())
+    revisions.update(json.loads((ROOT/'lesson-revisions-v127.json').read_text()))
     revisions={u['id']:revisions[u['id']] for u in course['units'] if u['id'] in revisions}
     selected={unit['demo']:demos[unit['demo']] for unit in course['units'] if unit.get('demo')}
     import copy
@@ -244,7 +245,7 @@ def render_course(course,demos):
         selected[id]=copy.deepcopy(selected[id])
         assert len(selected[id]['lines'])==len(revision['demoEndings'])
         for line,caption in zip(selected[id]['lines'],revision['demoEndings']):line['frames'][-1]['caption']=caption
-    demo_source=(ROOT/'demos-v109.js').read_text().replace('__DEMOS__',json.dumps(selected,ensure_ascii=False,separators=(',',':')))
+    demo_source=(ROOT/'piano-coach-v127.js').read_text()+'\n'+(ROOT/'demos-v109.js').read_text().replace('__DEMOS__',json.dumps(selected,ensure_ascii=False,separators=(',',':')))
     project_data=json.loads((ROOT/'project-demos-v115.json').read_text())
     project_source=(ROOT/'course-projects-v115.js').read_text().replace('__PROJECT_DEMOS__',json.dumps(project_data.get(course['subject'],{}),ensure_ascii=False,separators=(',',':')))
     clarity_source=(ROOT/'clarity-v116.js').read_text().replace('__MATH_DESK__',(ROOT/'math-desk-v116.json').read_text()).replace('__WALKTHROUGH_MAP__',(ROOT/'project-walkthrough-v116.json').read_text())

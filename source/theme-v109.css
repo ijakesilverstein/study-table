@@ -1,4 +1,15 @@
 :root{--study-paper:#f5f5f7;--study-surface:#ffffff;--study-ink:#242428;--study-muted:#62626c;--study-line:#dedee4;--study-panel:#f4f4f7;--study-accent:#29292f;--study-accent-text:#ffffff;--study-warm:#7657bf;--study-gold:#7657bf}
+.piano-coach-options{display:flex;flex-wrap:wrap;gap:12px 20px;margin:14px 0}
+.piano-coach-options label{display:grid;gap:5px;min-width:0;max-width:100%;font:15px/1.5 system-ui;color:var(--study-ink)}
+.piano-coach-options select{min-height:44px;max-width:100%;padding:8px;color:var(--study-ink);background:var(--study-surface);border:1px solid var(--study-muted);border-radius:5px;font:inherit}
+.piano-coach-timing{margin-top:22px;color:var(--study-ink);font:16px/1.65 system-ui}
+.piano-coach-timing summary{cursor:pointer;min-height:32px;font-weight:600}
+.piano-coach-timing table{width:100%;border-collapse:collapse;table-layout:auto;color:var(--study-ink);font:inherit}
+.piano-coach-timing caption{text-align:left;padding:12px 0;color:var(--study-muted)}
+.piano-coach-timing th,.piano-coach-timing td{padding:10px 8px;text-align:left;vertical-align:top;border-bottom:1px solid var(--study-line);overflow-wrap:normal;word-break:normal}
+.piano-coach-timing tbody th{width:30%;font-weight:500}
+.piano-coach-timing thead,.piano-coach-timing [aria-current=step]{background:var(--study-panel)}
+.piano-coach-timing [aria-current=step] th{border-left:3px solid var(--study-warm);font-weight:700}
 html[data-study-theme=dark]{--study-paper:#141416;--study-surface:#1d1d21;--study-ink:#eeeeF2;--study-muted:#b3b3bf;--study-line:#41414a;--study-panel:#26262c;--study-accent:#eeeeF2;--study-accent-text:#202024;--study-warm:#c4aff5;--study-gold:#c4aff5}
 html body,html body.v35-active{background:var(--study-paper)!important;color:var(--study-ink)!important}
 html #v35Portal,html #v35Content,html #v35Portal .v36-main,html #v35Portal .v36-home,html #v97Study,html #v97Study .v97-main,html #v97Study .v101-lead,html #v105Lessons,html #v108Curricula,html #v102Session,html #v101ToolsDialog{background:var(--study-paper)!important;color:var(--study-ink)!important;border-color:var(--study-line)!important}
