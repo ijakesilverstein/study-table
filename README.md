@@ -2,6 +2,8 @@
 
 An offline-capable learning app. Current downloads and online access are published separately at https://study-table-downloads.vercel.app. The public deployment may lag the latest source release until verified. The earlier app project is not modified by this delivery workflow.
 
+**V130** adds two short, completely offline ways to learn: a *Surprise me* question on each course map drawn from the real authored practice, and a *Spot the almost-right idea* reasoning comparison in every full-course unit. Both reveal the author’s explanation without invented AI scores. See [V130 teaching changes](docs/CURIOSITY_V130.md). The generated V130 HTML comes from the GitHub Actions artifact until merged.
+
 V129 turns each worked example into an optional **attempt → hint → compare → repair → fresh problem → recall** learning loop. It uses authored steps and the existing independent and recall questions, avoids arbitrary-speech grading, and folds older specific-help buttons behind a disclosure. Downloadable V129 builds are generated and checked by GitHub Actions; see [V129 teaching notes](docs/LEARN_BY_DOING_V129.md).
 
 V128 adds a nudge → compare → explain → next-step coaching sequence in every worked case. Learners can type or speak an idea, compare it with the actual worked reasoning without misleading automatic grading, and move through steps at their own pace. This builds on the V127 voice/typing controls and works offline after the standalone file opens. The updated mode still needs its independent checks and human comprehension validation.
