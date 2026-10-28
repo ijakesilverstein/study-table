@@ -12,3 +12,11 @@
  .v114-alternative .v114-figure{max-width:100%;min-width:0}
  .v114-alternative .v114-figure .quantity-figure{box-sizing:border-box;display:block;width:100%;max-width:100%;min-width:0;overflow-x:auto;overscroll-behavior-inline:contain}
 }
+
+/* Explicit border-box sizing is necessary: details padding must be counted
+   inside the reader width, while the diagram's inner region may pan. */
+@media(max-width:600px){
+ details.v114-alternative{box-sizing:border-box;width:100%;max-width:100%;min-width:0;overflow-x:hidden}
+ details.v114-alternative .v114-figure{box-sizing:border-box;width:100%;max-width:100%;min-width:0}
+ details.v114-alternative .v114-figure .quantity-figure{box-sizing:border-box;width:100%;max-width:100%;min-width:0;overflow-x:auto}
+}
