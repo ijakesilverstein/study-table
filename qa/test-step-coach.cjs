@@ -6,7 +6,7 @@ const {chromium}=require('playwright'),assert=require('assert/strict'),data=requ
   const f=p.frames().find(f=>f.parentFrame()===p.mainFrame());await f.locator('[data-step-coach]').click();await p.locator('#stepCoach').waitFor({state:'visible'});return f;
  };
  try{
-  await p.goto(process.env.STUDY_TEST_URL||'http://127.0.0.1:8807/index.html');await p.waitForFunction(()=>READY&&studyTableFullCourses.version===128&&studyTableStepCoach);
+  await p.goto(process.env.STUDY_TEST_URL||'http://127.0.0.1:8807/index.html');await p.waitForFunction(()=>READY&&studyTableFullCourses.version===131&&studyTableStepCoach);
   const evidence={schema:1,records:{'piano-5':{attempts:2,independent:1,last:123}}};await p.evaluate(x=>localStorage.setItem('studytable_v102_learning',JSON.stringify(x)),evidence);
   for(const [id,scenario] of Object.entries(data)){
    const frame=await open(id),before=await p.evaluate(()=>Object.fromEntries(Object.entries(localStorage)));
