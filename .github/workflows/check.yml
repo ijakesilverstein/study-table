@@ -26,14 +26,15 @@ jobs:
       - name: Upload experimental V127 HTML for download
         uses: actions/upload-artifact@v4
         with:
-          name: study-table-v127-html
-          path: public/study-table-v127.html
+          name: study-table-v128-html
+          path: public/study-table-v128.html
           if-no-files-found: error
           retention-days: 30
       - name: Check guided examples and coached responses first
         run: |
           node qa/test-guided-steps.cjs
           node qa/test-worked-coach-v127.cjs
+          node qa/test-socratic-coach-v128.cjs
       - run: npm test
       - name: Prepare downloadable HTML and ZIP
         run: python3 scripts/package-downloads.py --output "$RUNNER_TEMP/study-table-downloads"
