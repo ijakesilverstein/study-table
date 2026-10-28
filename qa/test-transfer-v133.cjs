@@ -29,6 +29,16 @@ try{
   assert(saved.due>Date.now()+2*86400000&&saved.due<Date.now()+4*86400000);
   await card.locator('[data-v133-another]').click();
   assert.equal(await card.locator('[data-v133-content]').isVisible(),true);
+  const other=row.variants[1],wrong=Object.keys(other.wrong)[0];
+  assert((await card.innerText()).includes(other.prompt.slice(0,15)),id+' did not rotate to a new question');
+  if(other.kind==='choice')await card.locator('input[name=v133-choice]').nth(other.options.indexOf(wrong)).check();
+  else await card.locator('input[name=v133-input]').fill(wrong);
+  await card.locator('[data-v133-form] button[type=submit]').click();
+  assert.equal(await card.locator('[data-v133-result]').getAttribute('data-outcome'),'misconception',id+' known wrong answer needs targeted correction');
+  assert((await card.locator('[data-v133-result]').innerText()).includes(other.wrong[wrong]));
+  if(other.kind==='choice')await card.locator('input[name=v133-choice]').nth(other.options.indexOf(other.answer)).check();
+  else await card.locator('input[name=v133-input]').fill(String(other.answer));
+  assert.equal(await card.locator('[data-v133-result]').isVisible(),false,'Changing an answer must clear stale judgment');
   await page.setViewportSize({width:320,height:844});
   assert(await f.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),row.subject+' page overflows at 320px');
   await page.setViewportSize({width:390,height:844});
