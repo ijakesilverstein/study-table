@@ -25,6 +25,8 @@ jobs:
         run: python3 scripts/build.py --check
       - name: Exercise legacy reader resume before full regression
         run: node qa/test-curriculum-edit.cjs
+      - name: Inspect narrow-screen lesson references before full regression
+        run: node qa/test-lesson-revisions.cjs
       - run: npm test
       - name: Prepare downloadable HTML and ZIP
         run: python3 scripts/package-downloads.py --output "$RUNNER_TEMP/study-table-downloads"
