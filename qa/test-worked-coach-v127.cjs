@@ -31,6 +31,9 @@ const courses=require('../source/full-courses-built.json'),edition=Number(requir
     const why=caseBox.locator('.solution>li').first().locator(':scope > p:not(.calculation)').first();
     const reason=await why.innerText();
     await coach.locator('[data-coach-topic="why"]').click();
+    const options=coach.locator('[data-coach-step] option');
+    assert.equal(await options.count(),(await caseBox.locator('.solution>li').count())+1);
+    await coach.locator('[data-coach-step]').selectOption('0');
     assert((await coach.locator('[data-coach-response]').innerText()).includes(reason),subject+' '+section+' not anchored to authored step');
     await coach.locator('[data-coach-input]').fill('Why is this method used?');
     await coach.locator('[data-coach-check]').click();
