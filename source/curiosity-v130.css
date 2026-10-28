@@ -1,0 +1,25 @@
+
+/* A playful route into the curriculum without fake streaks or scores. */
+.v130-curiosity{border:1px solid var(--study-line);background:var(--study-surface);border-radius:16px;padding:clamp(16px,2vw,24px);margin:18px 0 30px;max-width:100%;min-width:0}
+.v130-curiosity-lead{display:flex;justify-content:space-between;align-items:center;gap:18px}
+.v130-curiosity h2{font-size:26px;margin:0 0 5px}
+.v130-curiosity-lead p:last-child{font-size:15px;line-height:1.55;margin:4px 0}
+.v130-kicker{font:700 12px/1.5 system-ui;letter-spacing:.07em;text-transform:uppercase;color:var(--study-muted);margin:0 0 6px}
+.v130-curiosity-lead>button{background:var(--study-accent);color:var(--study-accent-text);border-color:var(--study-accent);font-weight:700;flex-shrink:0}
+.v130-curiosity-question{border-top:1px solid var(--study-line);margin-top:18px;padding-top:18px}
+.v130-curiosity-question h3{margin:3px 0 12px;font-size:23px}
+.v130-curiosity-question>p[data-v130-prompt]{font-size:19px;line-height:1.6}
+.v130-actions{display:flex;gap:9px;flex-wrap:wrap}
+.v130-curiosity-question>p[data-v130-solution]{border-left:3px solid var(--study-warm);background:var(--study-panel);padding:15px;white-space:pre-wrap;border-radius:6px;overflow-wrap:anywhere}
+.v130-trap{border:1px solid var(--study-line);border-radius:14px;padding:clamp(18px,2.5vw,26px);margin:28px 0;background:var(--study-surface);min-width:0;max-width:100%}
+.v130-trap h2{font-size:25px;margin:0 0 12px}
+.v130-trap>p{margin:7px 0 17px}
+.v130-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.v130-options button{font:16px/1.55 system-ui;display:block;width:100%;min-width:0;text-align:left;white-space:normal;overflow-wrap:anywhere;padding:15px;border-width:2px}
+.v130-options button[aria-pressed=true]{border-color:var(--study-warm);box-shadow:inset 0 0 0 1px var(--study-warm)}
+.v130-option-letter{display:inline-block;font-weight:800;border-radius:5px;background:var(--study-panel);padding:2px 9px;margin-right:5px}
+.v130-explain{border-left:3px solid var(--study-warm);background:var(--study-panel);border-radius:7px;margin:16px 0 0;padding:14px 16px;overflow-wrap:anywhere}
+.v130-explain p{margin:5px 0 13px;font-size:16px;line-height:1.55}
+.v130-explain .v130-verdict{font-weight:700}
+.v130-explain button{font-size:14px;margin:4px 0}
+@media(max-width:600px){.v130-curiosity-lead{display:block}.v130-curiosity-lead>button{margin-top:12px;width:100%}.v130-options{grid-template-columns:minmax(0,1fr)}.v130-actions{display:grid;grid-template-columns:minmax(0,1fr)}.v130-actions button{width:100%}}
