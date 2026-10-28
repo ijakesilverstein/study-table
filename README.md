@@ -1,5 +1,7 @@
 # Study Table
 
+V132 builds on the latest Codex-integrated V130 baseline. Each course now offers an optional one-minute authored question near your reading place and a short misconception thought experiment that reveals the correct reasoning only after you judge the claim. Mobile maths reference tables no longer need to widen the entire lesson. The five genuinely checkable tutor lessons and the 87-unit universal guide remain. [What's built and what's next](docs/CURIOSITY_GROUNDED_V132.md). The V132 work is on a feature branch, not yet deployed.
+
 An offline-capable learning app. Current downloads and online access are published separately at https://study-table-downloads.vercel.app. The public deployment may lag the latest source release until verified. The earlier app project is not modified by this delivery workflow.
 
 V130 combines the concurrent V127–V129 coaching branches with the deeper lessons and checked-answer coach already saved here. Both worked cases in all 87 units now offer optional help for a specific step, a comparison with the authored reasoning, a fresh question and a recall prompt. Five lessons also offer targeted answer feedback. The complete teaching stays visible by default; microphone input uses on-device recognition when available. See [the integrated coaching notes](docs/INTEGRATED_COACHING_V130.md).
