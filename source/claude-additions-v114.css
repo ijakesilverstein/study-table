@@ -3,13 +3,3 @@
 @media(min-width:640px){.v114-controls{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}}
 
 .v114-figure .quantity-figure:focus-visible{outline:3px solid var(--study-warm);outline-offset:3px}
-
-/* Keep optional worked-reference diagrams inside phone-sized cards. The 440px
-   desktop minimum made the entire 320px page pan sideways; mobile scales
-   the SVG within the card while the full textual explanation remains. */
-@media(max-width:600px){
- details.v114-alternative{box-sizing:border-box;width:100%;max-width:100%;min-width:0;overflow-x:hidden}
- details.v114-alternative .v114-figure{box-sizing:border-box;width:100%;max-width:100%;min-width:0}
- details.v114-alternative .v114-figure .quantity-figure{box-sizing:border-box;width:100%;max-width:100%;min-width:0;overflow-x:auto}
- details.v114-alternative .v114-figure svg{display:block;width:100%!important;max-width:100%!important;min-width:0!important;height:auto}
-}
