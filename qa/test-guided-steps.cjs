@@ -26,12 +26,13 @@ const courses=require('../source/full-courses-built.json'),edition=Number(requir
    for(const part of ['#courseFirst','#courseSecond']){
     const example=frame.locator(part),steps=example.locator(':scope > .solution > li'),length=await steps.count();
     assert(length>=3,subject+' needs a complete example');
-    assert.equal(await steps.locator('[hidden]').count(),0);
+    assert.equal(await steps.evaluateAll(rows=>rows.filter(row=>row.hidden).length),0);
     assert.equal(await example.locator('.case-notice').evaluate(e=>e.hidden),false);
     await example.locator('[data-guided-start]').click();
     assert.equal(await example.locator('[data-guided-start]').getAttribute('aria-expanded'),'true');
     assert.equal(await steps.evaluateAll(rows=>rows.filter(row=>row.hidden).length),length);
     assert.equal(await example.locator('.case-notice').evaluate(e=>e.hidden),true);
+    assert(await example.locator(':scope > .lesson-reference,:scope > .teacher-table').evaluateAll(rows=>rows.every(row=>row.hidden)));
     for(let i=0;i<length;i++){
      await example.locator('[data-guided-reveal]').click();
      assert.equal(await steps.evaluateAll(rows=>rows.filter(row=>!row.hidden).length),i+1,subject+'/'+part+' step '+i);
@@ -39,6 +40,7 @@ const courses=require('../source/full-courses-built.json'),edition=Number(requir
     assert.equal(await example.locator('.case-notice').evaluate(e=>e.hidden),true);
     await example.locator('[data-guided-reveal]').click();
     assert.equal(await example.locator('.case-notice').evaluate(e=>e.hidden),false);
+    assert(await example.locator(':scope > .lesson-reference,:scope > .teacher-table').evaluateAll(rows=>rows.every(row=>!row.hidden)));
     assert.equal(await example.locator('[data-guided-reveal]').evaluate(e=>e.hidden),true);
     await example.locator('[data-guided-exit]').click();
     assert.equal(await steps.evaluateAll(rows=>rows.filter(row=>row.hidden).length),0);
