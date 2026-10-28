@@ -3,7 +3,7 @@ const PLACE='studytable:full-course:'+COURSE.subject+':reading';
 const byId=new Map(COURSE.units.map(u=>[u.id,u]));
 
 function v127GuideControls(example,id,unit){
- return '<div class="guided-study"><button type="button" data-guided-start aria-controls="guided-'+id+'" aria-expanded="false">Try the steps one at a time</button><div class="guided-panel" id="guided-'+id+'" hidden><p>Before each reveal, say what you would try and why. You can return to the full solution at any time.</p><p class="guided-status" role="status" aria-live="polite"></p><div class="guided-actions"><button type="button" data-guided-reveal>Reveal step 1 of '+example.steps.length+'</button><button type="button" data-guided-exit>Show full solution</button></div></div></div>'+v127CoachControls(unit);
+ return '<div class="guided-study"><button type="button" data-guided-start aria-controls="guided-'+id+'" aria-expanded="false">Try the steps one at a time</button><div class="guided-panel" id="guided-'+id+'" hidden><p>Before each reveal, say what you would try and why. You can return to the full solution at any time.</p><p class="guided-status" role="status" aria-live="polite"></p><div class="guided-actions"><button type="button" data-guided-reveal>Reveal step 1 of '+example.steps.length+'</button><button type="button" data-guided-exit>Show full solution</button></div></div></div>'+v127CoachControls(unit,id);
 }
 function v127GuideStart(b){
  const host=b.closest('.worked-case'),steps=[...host.querySelectorAll(':scope > .solution > li')],panel=host.querySelector('.guided-panel');
