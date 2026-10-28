@@ -1,0 +1,563 @@
+{
+  "piano-5": {
+    "subject": "piano",
+    "edition": 127,
+    "opening": [
+      "Put your left hand on the C below middle C. Put your right thumb on middle C, index finger on D and middle finger on E. We are going to play just one bar: the left hand holds its C while the right plays E–D–C–D.",
+      "The first moment is together: press low C and high E. The next moment is different: the right hand changes to D while the left stays down. That small change is the part we will practise before playing the whole bar."
+    ],
+    "heading": "Keep one key down while another finger moves",
+    "teaching": [
+      "C3 means the C one octave below middle C; C4 is middle C. The 3 and 4 locate the keys. For the right hand, use fingers 3–2–1–2 for E4–D4–C4–D4. Those are finger numbers: middle, index, thumb, index. The left hand can use a comfortable finger on C3. A real keyboard lets you feel the left key staying down; the on-screen keyboard demonstrates the sound and timing.",
+      "Start by pressing just C3 and E4 together. Say “one”, then “two”. As you say “two”, release the right E and play D. Keep the left key down throughout. Stop after that D and relax. You have now rehearsed the exact place where the hands do different things. If the left C repeats on two, try the movement silently on a table: leave one fingertip touching while you lift and replace a finger of the other hand.",
+      "Return to the four-beat bar. At 60 beats per minute, each beat lasts one second. The left C begins on one and lasts four seconds. The right changes on each number. After saying four, let that last D last its full second; release when the next one would arrive. Keep a light contact with the left key rather than squeezing harder. Try the slower 40-beat tempo if you need more time to organise the change."
+    ],
+    "firstSteps": [
+      [
+        "Give the left hand its whole job",
+        "C3: press on 1; release at the next 1.",
+        "Hear Left hand only. There is one low attack, followed by four beats of sound. Keep the key down through the counts 2, 3 and 4. Holding does not require a new push on each number."
+      ],
+      [
+        "Give the right hand its own route",
+        "E4–D4–C4–D4, using fingers 3–2–1–2.",
+        "Hear Right hand only. Each new number gets a new note. Prepare thumb, index and middle over C, D and E so the hand does not have to search across the keyboard."
+      ],
+      [
+        "Rehearse the first change",
+        "On 1: C3 + E4. On 2: keep C3; replace E4 with D4.",
+        "Play only this fragment at first. Listen for a new high note without a second low attack. Release and rest before trying the same fragment again."
+      ],
+      [
+        "Finish the bar without restarting the bass",
+        "On 3: keep C3, play C4. On 4: keep C3, play D4.",
+        "Hear Both hands together, then follow the timing table. Keep counting through the last note. Release both hands at the next 1, four beats after the start."
+      ]
+    ],
+    "firstNotice": "Listen for one low attack underneath four higher attacks. A repeated low C would be a different accompaniment.",
+    "tables": {
+      "first": {
+        "caption": "Both hands, one count. “Keep” means the key stays down; it is not pressed again.",
+        "headers": [
+          "Count",
+          "Left hand",
+          "Right hand"
+        ],
+        "rows": [
+          [
+            "1",
+            "Press C3",
+            "Press E4"
+          ],
+          [
+            "2",
+            "Keep C3",
+            "Release E4; play D4"
+          ],
+          [
+            "3",
+            "Keep C3",
+            "Release D4; play C4"
+          ],
+          [
+            "4",
+            "Keep C3",
+            "Release C4; play D4"
+          ],
+          [
+            "Next 1",
+            "Release C3",
+            "Release D4"
+          ]
+        ]
+      }
+    }
+  },
+  "rests-and-halves": {
+    "subject": "piano",
+    "edition": 127,
+    "opening": [
+      "A silent beat still takes time. Play C as you say “one”, release it on “two”, play D on “three” and E on “four”. Your counting keeps going while the keyboard is silent.",
+      "After that, we will fit two short notes inside the first beat. Say “one-and, two-and, three-and, four-and”. The numbers stay evenly spaced. The word “and” lands halfway between them."
+    ],
+    "heading": "Give the silence its full share of the bar",
+    "teaching": [
+      "At 60 beats per minute, count one number each second. C begins at the start. Release it one second later, on two. Stay silent for that entire second. D begins on three, two seconds after C began. If you hold C until D, the result is a two-beat note followed by D; you have removed the rest. Listen once with beat clicks on, then turn the clicks off and keep the same count yourself.",
+      "For the second pattern, split the first second in half: C begins on one, D on one-and. E begins on two and lasts until three. Three is silent. The last C begins on four and lasts until the next one. At 60, the attacks are at 0, 0.5, 1 and 3 seconds. There are four attacks, although there are eight spoken counting slots. Saying a slot does not require playing a new note.",
+      "In a quarter-note beat, a half-beat note is an eighth note. Two eighth notes fit inside one beat. Keep tapping the numbers slowly while saying both numbers and ands. Then play the pattern, leaving your counting unchanged. If the D on one-and makes the E arrive early, practise only “one-and two”: C, D, E. Give E the whole of beat two before adding the rest and the final C."
+    ],
+    "firstSteps": [
+      [
+        "Count before playing",
+        "1, 2, 3, 4; then the next 1.",
+        "At 60 beats per minute, leave one second between successive numbers. The next 1 marks the end of this four-beat bar; it is not an extra beat inside it."
+      ],
+      [
+        "Make a real gap",
+        "1: press C. 2: release C and stay silent.",
+        "Keep saying the count through two. A rest requires the earlier sound to end. Holding C until three changes the written rhythm."
+      ],
+      [
+        "Enter after the silence",
+        "3: play D. 4: play E. Next 1: release E.",
+        "D starts two beats after the initial C. The gap does not shorten the bar, and E still receives its whole final beat."
+      ]
+    ],
+    "firstNotice": "Use Beat clicks → On if you want to hear the clock continue while the notes stop.",
+    "tables": {
+      "second": {
+        "caption": "The second pattern at 60 beats per minute. Each row is half a second.",
+        "headers": [
+          "Say",
+          "What the fingers do"
+        ],
+        "rows": [
+          [
+            "1",
+            "Press C4"
+          ],
+          [
+            "1 and",
+            "Release C4; press D4"
+          ],
+          [
+            "2",
+            "Release D4; press E4"
+          ],
+          [
+            "2 and",
+            "Keep E4 down"
+          ],
+          [
+            "3",
+            "Release E4; stay silent"
+          ],
+          [
+            "3 and",
+            "Stay silent"
+          ],
+          [
+            "4",
+            "Press C4"
+          ],
+          [
+            "4 and",
+            "Keep C4 down"
+          ],
+          [
+            "Next 1",
+            "Release C4"
+          ]
+        ]
+      }
+    },
+    "secondSteps": [
+      [
+        "Say eight evenly spaced slots",
+        "1-and 2-and 3-and 4-and.",
+        "The numbers remain one second apart at 60. Each and lies halfway to the next number. Tap the numbers while speaking all eight slots."
+      ],
+      [
+        "Fit two notes into the first beat",
+        "C on 1, D on 1-and; E begins on 2.",
+        "C and D each last half a beat. Together they use the same amount of time as the single beat-long E. You have changed the division inside the beat, not the tempo."
+      ],
+      [
+        "Keep counting when there is no new attack",
+        "Hold E through 2-and; rest for 3-and; play C on 4.",
+        "“Rest for 3-and” means silence on both 3 and its and. Keep the final C through 4-and, then release at the next 1. Follow the table once while listening, then try the same count on a table or keyboard."
+      ]
+    ]
+  },
+  "noun-phrases": {
+    "subject": "spanish",
+    "edition": 127,
+    "opening": [
+      "Imagine ordering for yourself and a friend. One small coffee is un café pequeño. Two small coffees is dos cafés pequeños. The request still begins quiero; the little group after it changes to match what you want.",
+      "We will build that group one word at a time, then do the same with una mesa pequeña, “a small table”. Keep the whole phrase together when you say it. That is more useful at a counter than reciting a list of endings."
+    ],
+    "heading": "Build the item, then change its number",
+    "teaching": [
+      "Begin with un café: a coffee. Add pequeño after café to describe its size: un café pequeño. Put quiero before the group and por favor after it: quiero un café pequeño, por favor. Café is grammatically masculine, so we use un and pequeño here. Learn el café as a pair. The label describes how the words fit together; it says nothing about a drink having a sex.",
+      "For two, replace un with dos. Change café to cafés and pequeño to pequeños: dos cafés pequeños. Then put the same request around it: quiero dos cafés pequeños, por favor. Do not keep un before dos. You can see the quantity in dos, and you can hear the plural s at the end of both following words. The table keeps the one-item and two-item versions beside each other.",
+      "Now learn la mesa, the table. A small table is una mesa pequeña; two small tables is dos mesas pequeñas. The a in pequeña matches mesa in these examples. With grande, meaning large, the one-item form stays the same for either noun: un café grande, una mesa grande. For two, use grandes. Learn these complete phrases first. Neither a final letter nor one adjective is a dependable rule for every Spanish word."
+    ],
+    "firstSteps": [
+      [
+        "Name the thing before describing it",
+        "Un café: a coffee.",
+        "Quiero means “I want”. Start with quiero un café. This already makes a usable request. Hear the phrase once before adding a size."
+      ],
+      [
+        "Put the size after the thing",
+        "Quiero un café pequeño, por favor.",
+        "Pequeño means small. It comes after café here. Por favor adds please. Say un café pequeño as one group; leave a small pause before por favor if that helps."
+      ],
+      [
+        "Order for two people",
+        "Quiero dos cafés pequeños, por favor.",
+        "Replace un with dos. Add s to café and pequeño. Everything outside the item group stays the same, so you can build the longer request from the shorter one."
+      ]
+    ],
+    "firstNotice": "Say the one-coffee request, then the two-coffee request. Listen to what changes inside the item group.",
+    "tables": {
+      "first": {
+        "caption": "One item and two items. Quiero means “I want”; add por favor for “please”.",
+        "headers": [
+          "One",
+          "Two"
+        ],
+        "rows": [
+          [
+            "un café pequeño",
+            "dos cafés pequeños"
+          ],
+          [
+            "una mesa pequeña",
+            "dos mesas pequeñas"
+          ],
+          [
+            "un café grande",
+            "dos cafés grandes"
+          ],
+          [
+            "una mesa grande",
+            "dos mesas grandes"
+          ]
+        ],
+        "languageColumns": [
+          0,
+          1
+        ]
+      }
+    }
+  },
+  "spanish-2": {
+    "subject": "spanish",
+    "edition": 127,
+    "opening": [
+      "A friend asks about yesterday. We will answer with one short trip and one purchase: Ayer fui al mercado y compré pan. That means “Yesterday I went to the market and bought bread.”",
+      "Start with Ayer fui al mercado. Say that sentence before adding the second event. You can tell a useful story with two past forms; you do not need a whole verb table to begin."
+    ],
+    "heading": "Build the trip first, then attach the purchase",
+    "teaching": [
+      "Ayer means yesterday. Fui means “I went” in this trip. Mercado means market; el mercado is the market. To say “to the market”, a and el join into al: al mercado. That gives you three useful chunks: ayer / fui / al mercado. Keep fui with its destination while you are learning it. Fui has another use meaning “I was”, but a trip to a market makes “went” the meaning here.",
+      "For the purchase, use compré, “I bought”. It comes from comprar: take away ar and add é. The written accent matters, and the final part gets the stress: com-PRÉ. Add pan, bread: compré pan. Now join the trip and the purchase with y, “and”: ayer fui al mercado y compré pan. If you bought coffee instead, change only the last word to café. The past forms can stay the same.",
+      "Both forms present events in this particular account as completed. Ayer does not force every verb in every sentence into these forms: you can also describe what was going on yesterday. For now, finish this short account before comparing it with a childhood habit in the second example. There, iba means “I used to go”. The next unit will show how to put the listener inside an event already underway."
+    ],
+    "firstSteps": [
+      [
+        "Tell your listener when",
+        "Ayer: yesterday.",
+        "Say ayer on its own once. It sets the time, but the verb still has to tell the listener the sort of past event you mean."
+      ],
+      [
+        "Give the trip a destination",
+        "Ayer fui al mercado.",
+        "Fui supplies “I went”. Al mercado supplies “to the market”: a + el becomes al. Read the complete sentence as one account of a trip."
+      ],
+      [
+        "Make a second short sentence",
+        "Compré pan: I bought bread.",
+        "Remove ar from comprar and add é: compré. Put the stress on the ending. Bread needs no a or an here, just as in the English “bought bread”."
+      ],
+      [
+        "Join the two events",
+        "Ayer fui al mercado y compré pan.",
+        "Y means and. You have joined two sentences without changing fui or compré. Read the trip, pause briefly at y, then report the purchase."
+      ]
+    ],
+    "firstNotice": "Change the purchase while keeping the frame: Ayer fui al mercado y compré café. You now have a second usable account.",
+    "tables": {
+      "first": {
+        "caption": "Keep each Spanish chunk beside its meaning.",
+        "headers": [
+          "Spanish",
+          "Meaning"
+        ],
+        "rows": [
+          [
+            "Ayer",
+            "Yesterday"
+          ],
+          [
+            "fui",
+            "I went"
+          ],
+          [
+            "al mercado",
+            "to the market"
+          ],
+          [
+            "y",
+            "and"
+          ],
+          [
+            "compré pan",
+            "I bought bread"
+          ]
+        ],
+        "languageColumns": [
+          0
+        ]
+      }
+    }
+  },
+  "count-exchanges": {
+    "subject": "chess",
+    "edition": 127,
+    "opening": [
+      "White can take the knight on d5. Before moving, look at the black pawn on e6: it can capture diagonally onto d5 on the next turn. The knight is defended, so we need to count two turns, not just White’s capture.",
+      "Follow the first line on the board. White takes a knight, then loses a bishop. In the second line, White takes the same knight but loses a rook. The target is unchanged; the price is different."
+    ],
+    "heading": "Keep a ledger from White’s side of the board",
+    "teaching": [
+      "Use rough values of pawn 1, knight 3, bishop 3, rook 5 and queen 9. These values help compare exchanges; the game does not award points for captures. We are going to write a plus when a black piece comes off and a minus when a white piece comes off. This ledger describes the change caused by these moves. It does not say who was ahead before them or who will win the game.",
+      "In the bishop line, select c4 and then d5, or press Show next move. White’s bishop takes the knight: write +3. Black is now to move. The pawn on e6 moves diagonally to d5 and takes that bishop: write −3. Add the entries: +3 − 3 = 0. Black’s pawn has moved; it has not disappeared. Before the sequence, Black had a knight and a pawn against a bishop. After it, Black still has the pawn.",
+      "Switch the board to Rook for knight and repeat the two turns. The rook can travel from d1 to d5 because d2, d3 and d4 are empty. Write +3 for the knight, then −5 when the pawn takes the rook. The change is −2 for White. That does not prove every sacrifice is bad: a forced mate or another concrete benefit can outweigh material. Nothing in this example provides such a benefit. Inspect legal replies before trusting the first attractive capture."
+    ],
+    "firstSteps": [
+      [
+        "Inspect the defender before capturing",
+        "The pawn on e6 can capture onto d5.",
+        "Black pawns capture diagonally toward lower ranks, so e6 to d5 is the relevant reply. In this position the pawn is free to make that capture without exposing its king."
+      ],
+      [
+        "Follow both turns",
+        "Bxd5: +3. …exd5: −3.",
+        "The bishop first replaces the knight on d5. The black pawn then replaces the bishop on the same square. Watch what is removed on each turn; do not count the capturing pawn as another piece won."
+      ],
+      [
+        "Add the entries",
+        "+3 − 3 = 0 change for White.",
+        "The trade itself is roughly level. Black’s extra pawn still remains on d5. A level exchange and a level position are different claims."
+      ]
+    ],
+    "firstNotice": "After White’s move, the ledger is only halfway done. Always give the opponent a turn before judging this exchange.",
+    "tables": {
+      "first": {
+        "caption": "Changes caused by the two turns, from White’s viewpoint. These are rough values.",
+        "headers": [
+          "Turn",
+          "Change",
+          "Running total"
+        ],
+        "rows": [
+          [
+            "Before",
+            "No captures yet",
+            "0"
+          ],
+          [
+            "Bxd5",
+            "Knight taken: +3",
+            "+3"
+          ],
+          [
+            "…exd5",
+            "Bishop lost: −3",
+            "0"
+          ]
+        ]
+      },
+      "second": {
+        "caption": "The same knight costs White a more valuable piece.",
+        "headers": [
+          "Turn",
+          "Change",
+          "Running total"
+        ],
+        "rows": [
+          [
+            "Before",
+            "No captures yet",
+            "0"
+          ],
+          [
+            "Rxd5",
+            "Knight taken: +3",
+            "+3"
+          ],
+          [
+            "…exd5",
+            "Rook lost: −5",
+            "−2"
+          ]
+        ]
+      }
+    }
+  },
+  "castling": {
+    "subject": "chess",
+    "edition": 127,
+    "opening": [
+      "White’s king is on e1 and its rook is on h1. Castling kingside places the king on g1 and the rook on f1 in one turn. The notation is O-O. Follow those two pieces on the first board before learning the restrictions.",
+      "Now follow just the king’s route: e1, f1, g1. It must be safe at all three squares. Checking only where the king ends would miss an attack on the square it crosses."
+    ],
+    "heading": "Check the history, clear the space, then inspect the king’s route",
+    "teaching": [
+      "First check what happened earlier. This king and this rook must never have moved. Returning a piece to its starting square does not restore the right to castle. Our example states that the rights are available, because a still picture alone cannot show that history. Next inspect the space: f1 and g1 must be empty for White’s kingside castle.",
+      "Now inspect attacks on e1, f1 and g1. The king cannot castle out of check, through check or into check. In the first example, Black has only a king on e8, far from those three squares, so the route is safe. White moves Ke1 to g1 and Rh1 to f1 as a single move. You do not give Black a turn between the king and rook movements.",
+      "In the second example, a black rook on f8 attacks down the empty f-file. That includes f1, the king’s crossing square. White is not in check on e1, and g1 is safe, but castling is still illegal. Queenside, inspect a different route: e1, d1, c1. The squares b1, c1 and d1 must be empty for the rook and king to pass; only e1, d1 and c1 are the king’s attack checks. An attack on b1 alone does not forbid that castle."
+    ],
+    "firstSteps": [
+      [
+        "Confirm the right and the empty path",
+        "The right is stated; f1 and g1 are empty.",
+        "The example gives us the history: neither the king nor this rook has moved. If you only saw a diagram with no history, ask about that right before deciding."
+      ],
+      [
+        "Name all three king squares",
+        "e1: start. f1: cross. g1: finish.",
+        "Black’s king on e8 attacks none of them. All three must be safe, including the square where White begins."
+      ],
+      [
+        "Move both pieces in the same turn",
+        "O-O: Ke1→g1 and Rh1→f1.",
+        "On the board, use Show next move. Check the resulting squares: king on g1, rook on f1. The rook lands beside the king, not on the king’s old square."
+      ]
+    ],
+    "firstNotice": "For a kingside castle, say the king’s route aloud: e1, f1, g1. Then check every square in that order.",
+    "tables": {
+      "second": {
+        "caption": "The black rook on f8 attacks the crossing square.",
+        "headers": [
+          "King square",
+          "Safe here?"
+        ],
+        "rows": [
+          [
+            "e1: start",
+            "Yes"
+          ],
+          [
+            "f1: cross",
+            "No: attacked by Rf8"
+          ],
+          [
+            "g1: finish",
+            "Yes"
+          ]
+        ]
+      }
+    }
+  },
+  "product-rule": {
+    "subject": "calculus",
+    "edition": 127,
+    "opening": [
+      "Picture a rectangle that is 3 metres long and 4 metres wide. If only the length grew by 1 metre, you would add a strip 1 metre by 4 metres: 4 square metres. If only the width grew by 1 metre, the strip would be 3 square metres.",
+      "Now let both sides grow with time. We will count the area added along each edge before writing the product rule. The size of the other side matters, because it sets how long each new strip is."
+    ],
+    "heading": "Two changing edges make two contributions",
+    "teaching": [
+      "In this model, L=t+1 and W=t² give the dimensions in metres when t is in seconds. At t=2, L=3 and W=4, so the area is 12 m². The length rate L′ is 1 m/s. The width rate W′=2t is 4 m/s at this moment. A rate is not the side’s present size: here the width happens to be 4 m while its rate is 4 m/s, but those numbers describe different things.",
+      "For a short time h, the growing length adds a strip whose area is approximately W×L′×h. The growing width adds another, approximately L×W′×h. Divide by h to get the two area-rate contributions: 4×1=4 m²/s and 3×4=12 m²/s. Add them: 16 m²/s. A small corner also appears when both edges move; its area divided by h tends to zero as h tends to zero. That is why the limiting rate contains the two strips without a third corner term.",
+      "The rule is A′=L′W+LW′. Try the figure at h=0.1 s: the new sides are 3.1 m and 4.41 m, giving area 13.671 m². Subtract the old 12, then divide by 0.1: 16.71 m²/s. That average is slightly above the starting rate of 16 because the area rate rises during the interval. Choose a smaller h and watch the average approach 16. Multiplying only L′ and W′ would give 4 m²/s², the wrong units for an area rate."
+    ],
+    "firstSteps": [
+      [
+        "Separate the sizes from the rates",
+        "At t=2: L=3 m, W=4 m, L′=1 m/s, W′=4 m/s.",
+        "L=t+1 gives 2+1=3. W=t² gives 2²=4. Differentiate the rules: L′=1 and W′=2t. Then put t=2 into those rates."
+      ],
+      [
+        "Give each growing side its own strip",
+        "Length contribution: 1×4=4. Width contribution: 4×3=12, both in m²/s.",
+        "Pair the length’s rate with the current width. Pair the width’s rate with the current length. Each term is a rate times a size, so its units are square metres per second."
+      ],
+      [
+        "Add and check a second way",
+        "A′=4+12=16 m²/s.",
+        "Expand A=(t+1)t²=t³+t². Its derivative is 3t²+2t, which gives 3×4+4=16 at t=2. This checks the answer by ordinary algebra and term-by-term differentiation."
+      ]
+    ],
+    "firstNotice": "A size times a rate gives one strip’s area rate. Add the two strips; multiplying the two rates would leave both out.",
+    "tables": {
+      "first": {
+        "caption": "All quantities are evaluated at t=2 s.",
+        "headers": [
+          "Changing edge",
+          "Multiply by",
+          "Area rate"
+        ],
+        "rows": [
+          [
+            "Length: 1 m/s",
+            "Width: 4 m",
+            "4 m²/s"
+          ],
+          [
+            "Width: 4 m/s",
+            "Length: 3 m",
+            "12 m²/s"
+          ],
+          [
+            "Both contributions",
+            "4 + 12",
+            "16 m²/s"
+          ]
+        ]
+      }
+    }
+  },
+  "physics-2": {
+    "subject": "physics",
+    "edition": 127,
+    "opening": [
+      "A sled starts from rest and drops 5 metres. How fast is it at the bottom? We will first give the sled a mass of 2 kilograms and count its energy in joules. That makes every part of the calculation visible.",
+      "For the first calculation, ignore friction and use g=10 m/s². The sled starts with no kinetic energy. As it drops, the decrease in gravitational energy supplies the kinetic energy of its motion."
+    ],
+    "heading": "Count the energy first, then find the speed",
+    "teaching": [
+      "For a 2 kg sled dropping 5 m, the decrease in gravitational potential energy is mgh=2×10×5=100 joules. The h is the vertical drop, not the distance along the hill. Choose the bottom as the zero of gravitational potential energy. With the sled starting still and no energy transferred elsewhere, all 100 J is kinetic energy at the bottom.",
+      "Kinetic energy is ½mv². Put in the sample mass: ½×2×v²=100, so v²=100. The speed is √100=10 m/s. Check it by putting 10 back: ½×2×10²=100 J. A speed of 100 m/s would instead require 10,000 J for this mass. The square root is essential because the energy formula contains speed squared.",
+      "Now let friction transfer 36 J to thermal energy. The final account is 64 J kinetic plus 36 J thermal, still 100 J overall. For the same 2 kg sled, ½×2×v²=64, so v=8 m/s. With no friction, increasing the mass would increase both the available gravitational energy and the energy needed for a given speed in the same proportion, leaving the speed 10 m/s. A fixed 36 J transfer is a different comparison: it uses a smaller share of the starting energy of a heavier sled. The figure states that transfer explicitly; it is not a rule for friction on every hill."
+    ],
+    "firstSteps": [
+      [
+        "Give the symbols a sample value",
+        "For a 2 kg sled: mgh=2×10×5=100 J.",
+        "The question does not need a mass because it will cancel. We choose 2 kg first so we can see the energy account. The drop is 5 m vertically and the sled begins still."
+      ],
+      [
+        "Match that energy to motion",
+        "100 J=½×2×v², so v²=100 m²/s².",
+        "There is no friction in this first model. Multiplying one half by the sample mass of 2 leaves 1, so the numerical equation becomes 100=v²."
+      ],
+      [
+        "See why another mass gives the same result",
+        "mgh=½mv² → gh=½v² → v²=2gh=100.",
+        "Divide both sides by the same nonzero mass. Then multiply both sides by 2. This shows why our 2 kg choice was only a way to make the arithmetic concrete."
+      ],
+      [
+        "Take the square root and check",
+        "v=√100=10 m/s.",
+        "Speed is nonnegative, so use the positive root. Substitute into ½mv²: for 2 kg, that is ½×2×10²=100 J, the original energy."
+      ]
+    ],
+    "firstNotice": "The answer 100 is a squared speed. Taking its square root gives 10 m/s; putting that back into the energy formula checks the result.",
+    "tables": {
+      "second": {
+        "caption": "A 2 kg sled, a 5 m drop, and g=10 m/s². Each final account must total 100 J.",
+        "headers": [
+          "Case",
+          "Kinetic + thermal",
+          "Speed"
+        ],
+        "rows": [
+          [
+            "No friction",
+            "100 + 0 = 100 J",
+            "10 m/s"
+          ],
+          [
+            "36 J thermal transfer",
+            "64 + 36 = 100 J",
+            "8 m/s"
+          ]
+        ]
+      }
+    }
+  }
+}
