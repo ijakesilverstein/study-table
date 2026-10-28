@@ -12,3 +12,13 @@
 .v109-board button{min-height:0;border-radius:0;aspect-ratio:1}.v109-board button span{font-family:"Noto Sans Symbols 2","Segoe UI Symbol","Apple Symbols",serif;font-size:clamp(32px,8vw,42px);line-height:1;transform:translateY(-3px)}
 
 .skip-to-lesson{position:absolute;top:8px;left:8px;z-index:10;padding:10px 16px;border:2px solid var(--study-warm);border-radius:7px;background:var(--study-surface);color:var(--study-ink);transform:translateY(-180%)}.skip-to-lesson:focus{transform:translateY(0);outline:3px solid var(--study-warm);outline-offset:2px}
+
+
+/* An optional walkthrough; the complete solution is the default. */
+.worked-case [hidden]{display:none!important}
+.guided-study{margin:18px 0 20px}
+.guided-panel{border:1px solid var(--study-line);border-radius:9px;padding:14px 16px;margin-top:12px;background:var(--study-panel)}
+.guided-panel>p{margin:0 0 12px;font-size:16px}
+.guided-panel .guided-status{font-size:15px}
+.guided-actions{display:flex;flex-wrap:wrap;gap:10px}
+@media(max-width:460px){.guided-actions button{flex:1 1 100%}}
