@@ -68,7 +68,7 @@ function v133LessonMarkup(unit){
 }
 function v133Start(host){
  const id=host?.dataset.v133UnitId,row=V133_BANK[id];if(!row)return;
- const count=V133_SESSION[id]||0,saved=v133Records()[id],index=(count+(saved?.tries||0))%row.variants.length;
+ const count=V133_SESSION[id]||0,saved=v133Records()[id],index=(count>0?count:(saved?.tries||0))%row.variants.length;
  V133_SESSION[id]=count+1;
  host.dataset.variant=String(index);
  const problem=row.variants[index],panel=host.querySelector('[data-v133-content]');if(!panel)return;
