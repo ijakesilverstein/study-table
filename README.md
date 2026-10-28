@@ -99,7 +99,7 @@ V114 also verifies the unchanged original uploads, every extracted Claude additi
 
 After the workspace download link failed, the user explicitly authorized Vercel publication. Use the separate study-table-downloads project for the online app and actual HTML/ZIP downloads. The earlier study-table-v102 project is not changed. Keep previous versioned downloads available. The new project has public access so the downloads do not require a Vercel login.
 
-This is a separate project from LaunchWell Labs. The intended GitHub repository is private `ijakesilverstein/study-table`. Remote creation and Vercel Git integration must be confirmed before describing GitHub as connected.
+This is a separate project from LaunchWell Labs. The intended GitHub repository is private `ijakesilverstein/study-table`. Remote creation and Vercel Git integration must be confirmed before describing GitHub as connected. After the repository is connected, the existing GitHub Actions checks also package the current HTML and ZIP as downloadable run artifacts. See [GitHub delivery](docs/GITHUB_DELIVERY.md). This artifact workflow does not deploy a website.
 
 The canonical `.vercel` link is historical (`study-table-v102`); that project was unavailable through the current connection. Publish through the separate `study-table-downloads` staging project in the `jakesilverstein` scope. `vercel.json` builds the app and serves `public/`; the previously deployed versioned HTML links download as files. The download project is packaged separately; its online app and latest downloadable HTML are identical. Do not enable automatic Git deployments without a separate request. Credentials and the local `.vercel` project link stay outside Git history.
 
