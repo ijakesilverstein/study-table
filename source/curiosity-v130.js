@@ -11,20 +11,21 @@ const V130_TRAP_TITLE={
 };
 function v130TrapMarkup(unit){
  if(!unit.mistake?.attempt||!unit.mistake?.repair||!unit.mistake?.diagnosis)return '';
- const goodFirst=[...unit.id].reduce((sum,c)=>sum+c.charCodeAt(0),0)%2===0;
- const options=goodFirst?[['good',unit.mistake.repair],['trap',unit.mistake.attempt]]:[['trap',unit.mistake.attempt],['good',unit.mistake.repair]];
- return '<section class="v130-trap" data-v130-trap aria-label="Find the better explanation">'+
-  '<p class="v130-kicker">A little detective work</p>'+
-  '<h2>Spot the almost-right idea</h2>'+
-  '<p>'+escape(V130_TRAP_TITLE[COURSE.subject]||'Which explanation stands up?')+'</p>'+
-  '<div class="v130-options">'+options.map(([key,copy],i)=>
-   '<button type="button" data-v130-choice="'+key+'" aria-pressed="false"><span class="v130-option-letter">'+(i===0?'A':'B')+'</span> '+escape(copy)+'</button>').join('')+'</div>'+
+ return '<section class="v130-trap" data-v130-trap aria-label="Investigate a tempting mistake">'+
+  '<p class="v130-kicker">A quick thought experiment</p>'+
+  '<h2>Would this actually work?</h2>'+
+  '<p>Here is a tempting first attempt. Decide what you think before reading the explanation.</p>'+
+  '<blockquote class="v132-claim">'+escape(unit.mistake.attempt)+'</blockquote>'+
+  '<div class="v130-options">'+
+   '<button type="button" data-v130-choice="yes" aria-pressed="false">I think it works</button>'+
+   '<button type="button" data-v130-choice="no" aria-pressed="false">Something is off</button>'+
+  '</div>'+
   '<div data-v130-explain class="v130-explain" role="status" aria-live="polite" hidden>'+
    '<p class="v130-verdict" data-v130-verdict></p>'+
    '<p data-v130-why></p>'+
    '<p class="v130-repair" data-v130-repair></p>'+
    '<p class="mistake-check" data-v130-check></p>'+
-   '<button type="button" data-v130-reset>See the two ideas again</button>'+
+   '<button type="button" data-v130-reset>Try that reasoning again</button>'+
   '</div>'+
  '</section>';
 }
@@ -81,12 +82,13 @@ function v130TrapChoice(button){
  const card=button.closest('[data-v130-trap]'),unit=v126Lesson(byId.get(card.closest('.reader-article')?.dataset.unitId));
  if(!unit?.mistake)return;
  card.querySelectorAll('[data-v130-choice]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
- const good=button.dataset.v130Choice==='good';
- card.querySelector('[data-v130-verdict]').textContent=good?
-  'Yes. That is the stronger reasoning.':'That is the tempting wrong turn. Here is what it misses.';
+ const spotted=button.dataset.v130Choice==='no';
+ card.querySelector('[data-v130-verdict]').textContent=spotted?
+  'Good instinct. There is a problem with that approach.':
+  'It sounds plausible, but there is an important catch.';
  card.querySelector('[data-v130-why]').textContent=unit.mistake.diagnosis;
- card.querySelector('[data-v130-repair]').textContent='The better approach: '+unit.mistake.repair;
- card.querySelector('[data-v130-check]').textContent='One more thought: '+unit.mistake.check;
+ card.querySelector('[data-v130-repair]').textContent='What works instead: '+unit.mistake.repair;
+ card.querySelector('[data-v130-check]').textContent='See if you can explain this: '+unit.mistake.check;
  card.querySelector('[data-v130-explain]').hidden=false;
 }
 document.addEventListener('click',event=>{
