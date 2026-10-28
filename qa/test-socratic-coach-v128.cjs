@@ -26,6 +26,7 @@ const courses=require('../source/full-courses-built.json'),edition=Number(requir
     const box=f.locator(section),coach=box.locator('.worked-coach');
     await coach.locator('summary').click();
     assert.equal(await coach.locator('.socratic-coach').count(),1,subject+' '+section+' no nudge flow');
+    assert.equal(await coach.locator('[data-socratic="voice"]').getAttribute('aria-pressed'),'false');
     const n=await box.locator('.solution>li').count();
     assert(n>=3,'An actual solved case is required');
     assert.match(await coach.locator('[data-socratic-question]').innerText(),/Step 1 of/);
