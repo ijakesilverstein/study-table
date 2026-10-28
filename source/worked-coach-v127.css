@@ -12,3 +12,6 @@
 .coach-response{padding:15px;background:var(--study-panel);border-left:3px solid var(--study-warm);border-radius:6px;margin-top:12px}
 .coach-response p{white-space:pre-wrap;margin:0 0 12px}
 @media(max-width:460px){.coach-actions button{flex:1 1 100%}.coach-choices button{flex:1 1 43%}}
+
+.worked-coach select{display:block;margin:6px 0 12px;min-height:44px;padding:8px 12px;color:var(--study-ink);background:var(--study-surface);border:1px solid #84848e;border-radius:7px}
+.worked-coach select:focus-visible{outline:3px solid var(--study-warm);outline-offset:3px}
