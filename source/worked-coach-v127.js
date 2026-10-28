@@ -6,12 +6,12 @@ function v127CoachData(host){
  const index=Math.min(Math.max(Number(host.dataset.guidedCount||0),0),(example?.steps.length||1)-1);
  return {unit,example,index,step:example?.steps[index]};
 }
-function v127CoachControls(unit){
+function v127CoachControls(unit,id){
  return '<details class="worked-coach" data-coach-unit="'+escape(unit.id)+'"><summary>Talk through this example</summary>'+
  '<p class="coach-intro">Explain what you would try. Type your thinking, or speak if your browser supports it. The hints use this lesson’s worked solution; they cannot reliably grade a free-form answer.</p>'+
- '<label class="coach-label" for="coach-input-'+escape(unit.id)+'-'+(unit.first===undefined?'case':'example')+'">Your reasoning or question</label>'+
- '<textarea data-coach-input rows="3" placeholder="I think the first move is … because …"></textarea>'+
- '<div class="coach-actions"><button type="button" data-coach-mic>Use microphone</button><button type="button" data-coach-check>Help me think this through</button></div>'+
+ '<label class="coach-label" for="coach-input-'+id+'">Your reasoning or question</label>'+
+ '<textarea id="coach-input-'+id+'" data-coach-input rows="3" placeholder="I think the first move is … because …"></textarea>'+
+ (COURSE.subject==='spanish'?'<label for="coach-language-'+id+'">Speech language</label><select id="coach-language-'+id+'" data-coach-language><option value="en-US">English</option><option value="es-ES">Español</option></select>':'')+'<div class="coach-actions"><button type="button" data-coach-mic>Use microphone</button><button type="button" data-coach-check>Help me think this through</button></div>'+
  '<p class="coach-mic-note">Microphone transcription, when available, may use your browser provider’s speech service. Nothing is recorded or saved by Study Table.</p>'+
  '<fieldset class="coach-choices"><legend>Where did you get stuck?</legend>'+
  '<button type="button" data-coach-topic="start">Where do I start?</button>'+
@@ -69,7 +69,7 @@ function v127CoachMic(button){
  if(v127ActiveRecognizer){v127StopCoaching();button.textContent='Use microphone';button.setAttribute('aria-pressed','false');return}
  const Speech=window.SpeechRecognition||window.webkitSpeechRecognition;
  if(!Speech){v127CoachShow(details,'Speech transcription is not available here. Type your thinking instead.');return}
- const rec=new Speech();rec.lang=COURSE.subject==='spanish'?'es-ES':'en-US';rec.interimResults=false;rec.maxAlternatives=1;
+ const rec=new Speech();rec.lang=details.querySelector('[data-coach-language]')?.value||'en-US';rec.interimResults=false;rec.maxAlternatives=1;
  rec.onresult=event=>{const text=Array.from(event.results||[]).map(x=>x[0]?.transcript||'').join(' ').trim();if(text){input.value=[input.value.trim(),text].filter(Boolean).join(' ');input.focus();}};
  rec.onerror=()=>v127CoachShow(details,'I could not transcribe that. You can try again or type your question.');
  rec.onend=()=>{if(v127ActiveRecognizer===rec)v127ActiveRecognizer=null;button.textContent='Use microphone';button.setAttribute('aria-pressed','false')};
