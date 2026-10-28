@@ -46,7 +46,7 @@
         "hint": "Start with quiero and finish with por favor.",
         "why": "Quiero té, por favor is a simple understandable request.",
         "wrong": {
-          "quiero te": "The wording is right; add the written accent in té for the drink."
+          "quieres te": "Quieres means 'you want'. To request something for yourself, use quiero."
         },
         "accept": [
           "Yo quiero té por favor",
