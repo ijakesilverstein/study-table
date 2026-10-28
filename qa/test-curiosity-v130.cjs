@@ -52,7 +52,7 @@ const courses=require('../source/full-courses-built.json'),edition=Number(requir
     await trap.locator('[data-v130-choice="yes"]').click();
     assert.match(await trap.locator('[data-v130-verdict]').innerText(),/sounds plausible/);
     assert.match(await trap.locator('[data-v130-why]').innerText(),/\S.{12,}/);
-    assert.match(await trap.locator('[data-v130-check]').innerText(),/One more thought/);
+    assert.match(await trap.locator('[data-v130-check]').innerText(),/See if you can explain this/);
     await trap.locator('[data-v130-choice="no"]').click();
     assert.match(await trap.locator('[data-v130-verdict]').innerText(),/Good instinct/);
     assert.equal(await trap.locator('[data-v130-choice="no"]').getAttribute('aria-pressed'),'true');
