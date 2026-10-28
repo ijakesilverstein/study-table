@@ -22,6 +22,7 @@ const courses=require('../source/full-courses-built.json'),edition=Number(requir
     return w?.studyTableFullCourse?.subject===subject&&w.document.querySelector('#courseArticle h1')?.textContent===title;
    },[subject,unit.title]);
    const frame=page.frames().find(f=>f.parentFrame()===page.mainFrame());
+   const authored=await frame.evaluate(id=>v126Lesson(byId.get(id)),unit.id);
    for(const section of ['#courseFirst','#courseSecond']){
     const box=frame.locator(section),coach=box.locator('.worked-coach');
     assert.equal(await coach.count(),1,subject+'/'+section+' missing coach');
@@ -34,8 +35,8 @@ const courses=require('../source/full-courses-built.json'),edition=Number(requir
     assert.equal(await box.locator('.solution>li').first().evaluate(el=>el.hidden),true,'Answer is concealed on request');
     await coach.locator('[data-mastery="hint"]').click();
     const hint=await coach.locator('[data-mastery-message]').innerText();
-    assert(hint.includes(unit[section==='#courseFirst'?'first':'second'].steps[0][0]),'Hint must use current authored step title');
-    assert(!hint.includes(unit[section==='#courseFirst'?'first':'second'].steps[0][1]),'Hint must not give away working');
+    assert(hint.includes(authored[section==='#courseFirst'?'first':'second'].steps[0][0]),'Hint must use current authored step title');
+    assert(!hint.includes(authored[section==='#courseFirst'?'first':'second'].steps[0][1]),'Hint must not give away working');
     await coach.locator('[data-mastery="compare"]').click();
     assert.match(await coach.locator('[data-mastery-message]').innerText(),/Try saying or typing your own answer first/);
     const attempt='<script>alert("xss")</script> An explanation';
@@ -45,19 +46,19 @@ const courses=require('../source/full-courses-built.json'),edition=Number(requir
     assert.equal(await coach.locator('script').count(),0,'Learner transcript must never execute HTML');
     assert.equal(await box.locator('.solution>li').first().evaluate(el=>el.hidden),false,'Revealed authored working matches comparison');
     await coach.locator('[data-mastery="stuck"]').click();
-    assert((await coach.locator('[data-mastery-message]').innerText()).includes(unit.mistake.diagnosis));
+    assert((await coach.locator('[data-mastery-message]').innerText()).includes(authored.mistake.diagnosis));
     for(let i=1;i<n;i++){
      await coach.locator('[data-mastery="next"]').click();
      assert.match(await coach.locator('[data-mastery-progress]').innerText(),new RegExp(''+(i+1)+' /'));
     }
     await coach.locator('[data-mastery="next"]').click();
-    assert.equal(await coach.locator('[data-mastery-question]').innerText(),unit.exercise[0]);
+    assert.equal(await coach.locator('[data-mastery-question]').innerText(),authored.exercise[0]);
     await coach.locator('[data-mastery="answer"]').click();
-    assert((await coach.locator('[data-mastery-message]').innerText()).includes(unit.exercise[1]));
+    assert((await coach.locator('[data-mastery-message]').innerText()).includes(authored.exercise[1]));
     await coach.locator('[data-mastery="next"]').click();
-    assert.equal(await coach.locator('[data-mastery-question]').innerText(),unit.recall.ask);
+    assert.equal(await coach.locator('[data-mastery-question]').innerText(),authored.recall.ask);
     await coach.locator('[data-mastery="answer"]').click();
-    assert((await coach.locator('[data-mastery-message]').innerText()).includes(unit.recall.answer));
+    assert((await coach.locator('[data-mastery-message]').innerText()).includes(authored.recall.answer));
     await coach.locator('[data-mastery="next"]').click();
     assert.equal(await coach.locator('[data-mastery-end]').isVisible(),true);
     await coach.locator('[data-mastery="repeat"]').click();
