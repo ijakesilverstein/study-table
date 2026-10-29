@@ -169,7 +169,7 @@
     "teaching": [
       "Count letter names from C: C is 1, D is 2, E is 3, F is 4 and G is 5. That is why C–E–G uses the root, third and fifth. These numbers count letter positions; they do not say to move three or five keys. On the keyboard, C to E is four semitone steps, including black keys, and E to G is three.",
       "For the first shape, try right-hand thumb on C, middle finger on E and little finger on G. Play them separately once. If any key is wrong, correct that key before combining the notes. Then prepare all three fingers and press together. Release together too. The goal is a comfortable shared start, not a loud sound or a hard squeeze.",
-      "For the second shape, move only the low C up to the next C. You now have E4–G4–C5. The note names still make C major, but E is the lowest sounding note. We call this first inversion. Root names the chord’s underlying note; bass names the lowest note you hear in this particular arrangement. Here those answers are C and E.",
+      "Release the first chord before setting up E4–G4–C5. Try thumb on E4, index on G4 and little finger on C5, if comfortable. Compared with C4–E4–G4, the lower C is now an octave higher, while E and G are the same pitches. You have reset the hand rather than kept those keys held. E is now the lowest sound; we call this first inversion. Root names the chord’s underlying note; bass names the lowest note in this arrangement. Here those answers are C and E.",
       "Try the claim “alternate white keys always make major chords” on D. D–F–A has three semitones from D to F and four from F to A: minor rather than major. The familiar C shape works, but its appearance is not a general test. For this major triad, the four-then-three semitone spacing is the useful check."
     ],
     "firstSteps": [
@@ -198,7 +198,7 @@
       [
         "Move C up an octave",
         "C4–E4–G4 becomes E4–G4–C5.",
-        "Keep E and G where they were. Use the C above them in place of the C below. We have moved one chord tone, rather than replaced C with a different note name."
+        "Release the first shape, then set up E4–G4–C5. Try thumb–index–little finger if comfortable. E and G are the same pitches as before, although you can use different fingers. The lower C has become a higher C; the chord still has the same three note names."
       ],
       [
         "Name what is actually lowest",
@@ -217,7 +217,7 @@
       ]
     ],
     "firstNotice": "First compare separate and shared beginnings. The pitch names stay C, E and G.",
-    "secondNotice": "Listen for the new bass while keeping track of the same three note names.",
+    "secondNotice": "Release the first chord and set up the new hand position. Then listen for E as the new bass, with the same three note names.",
     "tables": {
       "first": {
         "caption": "Count semitone steps, including black keys, to inspect this major shape.",

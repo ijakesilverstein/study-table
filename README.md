@@ -1,6 +1,6 @@
 # Study Table
 
-An offline-capable learning app. [Open the V135 HTML on GitHub](https://github.com/ijakesilverstein/study-table/blob/main/public/study-table-v135.html) and choose **Download raw file** to save the complete app. The separately published site at https://study-table-downloads.vercel.app may show an earlier release until a new deployment is verified.
+An offline-capable learning app. [Open the V135 HTML on GitHub](https://github.com/ijakesilverstein/study-table/blob/v135/public/study-table-v135.html) and choose **Download raw file** to save the complete app. The separately published site at https://study-table-downloads.vercel.app may show an earlier release until a new deployment is verified.
 
 V135 rewrites six more piano, Spanish and chess lessons with 48 worked steps, 12 reference tables and 48 step-specific help turns. Complete solutions stay visible; earlier explanations, all 87 units and the shared medicine/business improvements remain. See [the teaching changes and checks](docs/TEACHER_DEMONSTRATIONS_V135.md). This pass does not publish to Vercel.
 

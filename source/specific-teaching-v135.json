@@ -97,7 +97,7 @@
         "anchor": "Move C up an octave",
         "prompt": "Which single note moved from the original shape?",
         "hint": "Compare C4–E4–G4 with E4–G4–C5.",
-        "help": "The lower C became the higher C. E4 and G4 stayed where they were. The note name C remains in the chord."
+        "help": "The lower C became the higher C. Release the first chord and reset the hand for E4–G4–C5. E and G are unchanged pitches; you can use different fingers to play the new arrangement."
       },
       {
         "anchor": "Name what is actually lowest",
