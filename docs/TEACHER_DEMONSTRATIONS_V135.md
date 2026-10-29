@@ -1,0 +1,22 @@
+# V135: watch the teacher finish the example
+
+Six further lessons now show the decisions between the starting problem and the answer. Each has two complete four-step worked cases, two reference tables and eight aligned prompt/hint/help turns. These are teaching additions, not six new lessons or new assessment scores.
+
+- **Piano — first tune (`piano-2`):** the exact fingers and counts for E–D–C–D | E–E–E; seven attacks across eight beats; releasing repeated Es versus holding the last one; and the C–D | E–E repair fragment. The time table matches the existing audio schedule at 60 BPM.
+- **Piano — C-major chord (`piano-4`):** finding and checking C–E–G, preparing a shared start, separating arpeggio timing from inversion, and distinguishing the bass E from the root C in E–G–C. D–F–A supplies a concrete counterexample to the alternate-white-keys shortcut.
+- **Spanish — routine (`habits`):** stem and person changes built into usable sentences, the complete morning/night phrases, a familiar-you question, and the distinction between answering that question and offering nearby-location information.
+- **Spanish — descriptions (`descriptions`):** bored versus boring with the adjective held constant, adjective agreement as a separate choice, and person location versus an event’s venue. Complete translated examples replace the permanent/temporary shortcut.
+- **Chess — check (`chess-1`):** trace the current attack, compare Bd2 with Be3, verify Kf1 as another legal reply, and separate an attacked rook from an attacked king. The lesson makes no claim that the sample legal reply is the best move.
+- **Chess — mate (`chess-2`):** enumerate the trapped king’s three destinations, verify Bxa8 as a legal defence by another piece, and distinguish checkmate from stalemate with both questions: current check and existence of any legal move.
+
+The full explanation remains visible before an attempt. All 48 additional help turns refer to the selected worked step; they do not pretend to assess arbitrary reasoning. The six lessons use the existing optional general coach, without adding unverified checked-answer scenarios. Earlier lesson paragraphs remain available through **Earlier explanation of this lesson**. Original units, exercises, recall questions, bookmarks and interactive demonstrations remain unchanged.
+
+The additive source files are `source/lesson-revisions-v135.json` and `source/specific-teaching-v135.json`. The existing renderer loads them alongside the prior display revisions and 80 teaching turns. Total precise guidance is now 128 turns in 18 units; the eight checked-answer scenarios still contain 24 decisions.
+
+`qa/check-teacher-demonstrations-v135.py` requires the exact union of the earlier compiled records and the explicit six additions. It preserves all 87 base units/projects/workshops, prior display revisions, 80 earlier guidance turns, every demonstration model and 208 unrelated archived assets. Existing preservation checks allow additional display keys while continuing to require every earlier record unchanged. Musical timing and interval claims are checked independently; python-chess verifies the candidate moves, all king escapes in the stated position, the saving capture and actual stalemate.
+
+`qa/test-teacher-demonstrations-v135.cjs` exercises the six actual rendered lessons, all 48 help turns, 12 tables, Spanish language markup, original explanations, no assessment writes and offline operation after initial load. It checks the complete lesson at 320 and 390 pixels in both themes: 24 scoped WCAG scans. Browser file-URL navigation remains restricted in this workspace; direct opening of a downloaded file is not claimed as a verified test. These automated checks do not establish human comprehension or independent subject-expert review.
+
+V135 starts from shared main `0332b94662f66ad60d3c0af0794c742401360ce0`, including the medicine/business additions and phone repairs. The separate authored-review and story-mode branches remain separate development; their unpublished or unmerged work is not claimed in this release. See the concurrent checkpoint for observed snapshots.
+
+The user requested no Vercel publication. No Vercel deployment is performed, and `vercel.json` explicitly disables Git-triggered deployments. GitHub source and standalone-file delivery are separate from website publication.

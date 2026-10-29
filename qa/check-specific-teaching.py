@@ -8,7 +8,9 @@ for path in old:
  if path not in paths:assert old[path]==new[path],path
 for c in C.values():
  for archive in [old,new]:assert json.loads(re.search(r'<script id="full-course-data" type="application/json">(.*?)</script>',archive[c['path']]['t'],re.S)[1])==c
- for const in ['V126_REVISIONS','V109_DEMOS']:assert json.loads(re.search(r'const '+const+r'=(.*?);\n',old[c['path']]['t'],re.S)[1])==json.loads(re.search(r'const '+const+r'=(.*?);\n',new[c['path']]['t'],re.S)[1])
+ for const in ['V126_REVISIONS','V109_DEMOS']:
+  before=json.loads(re.search(r'const '+const+r'=(.*?);\n',old[c['path']]['t'],re.S)[1]);after=json.loads(re.search(r'const '+const+r'=(.*?);\n',new[c['path']]['t'],re.S)[1])
+  assert before==({key:after[key] for key in before} if const=='V126_REVISIONS' else after)
 existing={'piano-5','rests-and-halves','noun-phrases','spanish-5','count-exchanges','castling','product-rule','physics-2'}
 new={'homeostasis','test-interpretation','unit-economics','cash-cycle'}
 assert set(D)==existing|new

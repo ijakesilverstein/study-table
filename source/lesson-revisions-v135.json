@@ -1,0 +1,779 @@
+{
+  "piano-2": {
+    "subject": "piano",
+    "edition": 135,
+    "opening": [
+      "Put your right thumb on C, index finger on D and middle finger on E. I’ll start with just four sounds: E–D–C–D. The fingers go 3–2–1–2. Say the letters once, then play them slowly without moving your whole hand.",
+      "Now add E–E–E. Those three Es need three separate presses, but the last one stays down for two beats. Listen to The whole phrase once while tapping eight steady beats. You will hear seven beginnings, not eight."
+    ],
+    "heading": "Let the count carry you through the turn and the ending",
+    "teaching": [
+      "Set the tempo to 60 if you want each beat to last one second, or use 40 for more thinking time. Begin the first E on 1, D on 2, C on 3 and D on 4. The low point of the tune is C. Keep your thumb ready there so you can turn back to D without a pause. If the turn catches, slow the whole four-note group; rushing the last note will not repay a late one.",
+      "In the next bar, press E on 1, release and press it again on 2, then release and press again on 3. Keep that last press down through 4. Release when the next 1 would arrive. The two earlier Es repeat; the final E holds. A repeated note needs a fresh attack, while a held note needs continued contact. You can hear that difference even though every note in this bar has the same letter.",
+      "I would fix a rushed join by taking a small piece from each side: C–D | E–E. Count 3, 4 | 1, 2 at one speed. The bar line organises the music; it does not add a rest. Once that fragment is comfortable, start two notes earlier and finish the phrase. Keep the slower speed on the first complete try.",
+      "Use two separate listens. First follow the note order. Then tap the pulse and listen only for the held ending. If the notes are right but the ending is too short, keep the hand position and repair the duration. You do not need to relearn the whole tune to fix one detail."
+    ],
+    "firstSteps": [
+      [
+        "Put three fingers over the route",
+        "C4: thumb. D4: index. E4: middle.",
+        "Rest the fingers over the keys before starting. Finger numbers 1, 2 and 3 mean thumb, index and middle; the 4 in C4 names a register, not a fourth finger. Use light contact and let the hand stay in this small area."
+      ],
+      [
+        "Follow the first four counts",
+        "1: E4. 2: D4. 3: C4. 4: D4.",
+        "Play the first E with your middle finger. The next two notes descend to your thumb, then your index returns to D. Say each number at the same interval, including the turn from C back to D."
+      ],
+      [
+        "Repeat twice, then hold",
+        "Next bar: E on 1, E on 2, E on 3—4.",
+        "Lift enough to sound the second E separately, then do the same for the third. On 4, keep the third E down. Playing another E on 4 would add an eighth attack and change the rhythm."
+      ],
+      [
+        "Join without adding a gap",
+        "E–D–C–D | E–E–E, then release at the next 1.",
+        "Continue the count across the bar line. At 60 BPM the last E begins six seconds after the first note and releases at eight seconds. The table shows the ending as time to hold, rather than another note to strike."
+      ]
+    ],
+    "secondSteps": [
+      [
+        "Find the exact handover",
+        "The last D of bar 1 leads to the first E of bar 2.",
+        "Hear The whole phrase and follow only that D-to-E change. The difficulty is the transition between the groups, so starting from the beginning every time gives you less practice at the part that needs it."
+      ],
+      [
+        "Keep a note on either side of the join",
+        "C–D | E–E, counted 3, 4 | 1, 2.",
+        "Use thumb–index | middle–middle. Leave time for the repeated E to release and sound again. These are four equal beats. The printed bar line separates the groups but adds no waiting time."
+      ],
+      [
+        "Bring back the beginning",
+        "E–D–C–D | E–E…",
+        "Start the complete phrase at the same slow tempo as the fragment. Prepare the middle finger for E while the index plays the preceding D. If you hesitate there, return to the fragment instead of increasing the speed."
+      ],
+      [
+        "Restore the two-beat ending",
+        "…E on 1, E on 2, E held through 3—4.",
+        "A smooth join is only one repair. Check that the last note still lasts two beats. Count the final 4 aloud while keeping the key down, then release at the next 1."
+      ]
+    ],
+    "firstNotice": "Hear the full phrase, then follow the count table. You can read the complete solution before playing.",
+    "secondNotice": "Try one small join, then put it back into the music. There is no score for speed.",
+    "tables": {
+      "first": {
+        "caption": "The whole phrase at 60 BPM. Time is measured from the first E.",
+        "headers": [
+          "Bar / count",
+          "Elapsed time",
+          "Right hand"
+        ],
+        "rows": [
+          [
+            "1 / 1",
+            "0 s",
+            "Press E4, finger 3"
+          ],
+          [
+            "1 / 2",
+            "1 s",
+            "Release E4; press D4, finger 2"
+          ],
+          [
+            "1 / 3",
+            "2 s",
+            "Release D4; press C4, thumb"
+          ],
+          [
+            "1 / 4",
+            "3 s",
+            "Release C4; press D4, finger 2"
+          ],
+          [
+            "2 / 1",
+            "4 s",
+            "Release D4; press E4"
+          ],
+          [
+            "2 / 2",
+            "5 s",
+            "Release and press E4 again"
+          ],
+          [
+            "2 / 3",
+            "6 s",
+            "Release and press E4 again"
+          ],
+          [
+            "2 / 4",
+            "7 s",
+            "Keep E4 down; no new press"
+          ],
+          [
+            "Next 1",
+            "8 s",
+            "Release E4"
+          ]
+        ],
+        "languageColumns": []
+      },
+      "second": {
+        "caption": "The repair fragment keeps the original beat numbers.",
+        "headers": [
+          "Say",
+          "Play",
+          "Finger"
+        ],
+        "rows": [
+          [
+            "3",
+            "C4",
+            "1 — thumb"
+          ],
+          [
+            "4",
+            "D4",
+            "2 — index"
+          ],
+          [
+            "1",
+            "E4",
+            "3 — middle"
+          ],
+          [
+            "2",
+            "E4 again",
+            "3 — release, then press"
+          ]
+        ],
+        "languageColumns": []
+      }
+    },
+    "takeaway": "Seven attacks fill eight beats. Keep the pulse through D | E, and let the last E last through both 3 and 4.",
+    "deeper": {
+      "title": "Earlier explanation of this lesson",
+      "originalTeaching": [
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "piano-4": {
+    "subject": "piano",
+    "edition": 135,
+    "opening": [
+      "Find C4, then E4, then G4. Play each once so you can hear the three pitches. Now hear C major together: the same three notes begin at the same moment. That combined sound is the chord.",
+      "We will change one thing at a time. First keep the notes fixed and change when they begin. Then keep the note names C, E and G but move C above the other two. The buttons below let you hear both comparisons."
+    ],
+    "heading": "Separate the chord’s notes, their order and their starting times",
+    "teaching": [
+      "Count letter names from C: C is 1, D is 2, E is 3, F is 4 and G is 5. That is why C–E–G uses the root, third and fifth. These numbers count letter positions; they do not say to move three or five keys. On the keyboard, C to E is four semitone steps, including black keys, and E to G is three.",
+      "For the first shape, try right-hand thumb on C, middle finger on E and little finger on G. Play them separately once. If any key is wrong, correct that key before combining the notes. Then prepare all three fingers and press together. Release together too. The goal is a comfortable shared start, not a loud sound or a hard squeeze.",
+      "For the second shape, move only the low C up to the next C. You now have E4–G4–C5. The note names still make C major, but E is the lowest sounding note. We call this first inversion. Root names the chord’s underlying note; bass names the lowest note you hear in this particular arrangement. Here those answers are C and E.",
+      "Try the claim “alternate white keys always make major chords” on D. D–F–A has three semitones from D to F and four from F to A: minor rather than major. The familiar C shape works, but its appearance is not a general test. For this major triad, the four-then-three semitone spacing is the useful check."
+    ],
+    "firstSteps": [
+      [
+        "Locate C before placing the other fingers",
+        "C4 is the root and the lowest note of this shape.",
+        "Find the two-black-key group and its C on the left. In the labelled demonstration, choose C4. Use your thumb for this right-hand shape. The chord’s name comes from C, not from whichever finger happens to play it."
+      ],
+      [
+        "Build the three-note set",
+        "C4–E4–G4: fingers 1–3–5 if comfortable.",
+        "Count C–D–E to reach the third, then E–F–G to reach the fifth. D and F are passed over; they are not additional chord tones. Rest your fingers over C, E and G before sounding the shape."
+      ],
+      [
+        "Listen to the notes separately",
+        "C4, then E4, then G4.",
+        "Hear C, E, G separately. Each beginning is one beat after the previous one at the selected tempo. This makes each pitch easy to inspect. The three notes are an arpeggio: the chord is spread out in time."
+      ],
+      [
+        "Give all three notes one beginning",
+        "C4 + E4 + G4 together.",
+        "Hear C major together. Nothing has changed about the pitches, but all three start at once and hold for three beats. On a real piano, prepare the fingers first, then let the hand make one easy coordinated press."
+      ]
+    ],
+    "secondSteps": [
+      [
+        "Move C up an octave",
+        "C4–E4–G4 becomes E4–G4–C5.",
+        "Keep E and G where they were. Use the C above them in place of the C below. We have moved one chord tone, rather than replaced C with a different note name."
+      ],
+      [
+        "Name what is actually lowest",
+        "E4 is the bass.",
+        "The leftmost of these three keys is E4. Hear E–G–C: same chord, new bass. This arrangement has a different bottom sound, although all three note names still belong to C major."
+      ],
+      [
+        "Name the chord and its arrangement",
+        "C major, first inversion.",
+        "C remains the root. E, the third of C major, is now in the bass; that makes it first inversion. Calling it E major would require different chord tones, including G-sharp and B."
+      ],
+      [
+        "Keep arrangement separate from timing",
+        "E–G–C can start together or one after another.",
+        "The example plays the inversion as a block chord. You could also arpeggiate that same arrangement. Inversion tells you which chord tone is lowest; arpeggio tells you that the starts are spread through time."
+      ]
+    ],
+    "firstNotice": "First compare separate and shared beginnings. The pitch names stay C, E and G.",
+    "secondNotice": "Listen for the new bass while keeping track of the same three note names.",
+    "tables": {
+      "first": {
+        "caption": "Count semitone steps, including black keys, to inspect this major shape.",
+        "headers": [
+          "Part of the shape",
+          "Semitone steps",
+          "Meaning"
+        ],
+        "rows": [
+          [
+            "C4 → E4",
+            "4",
+            "Root to major third"
+          ],
+          [
+            "E4 → G4",
+            "3",
+            "Major third to fifth"
+          ],
+          [
+            "C4 → G4",
+            "7",
+            "Root to fifth"
+          ]
+        ],
+        "languageColumns": []
+      },
+      "second": {
+        "caption": "Two arrangements of C major, both played together.",
+        "headers": [
+          "Low to high",
+          "Bass",
+          "Chord root",
+          "Arrangement"
+        ],
+        "rows": [
+          [
+            "C4–E4–G4",
+            "C4",
+            "C",
+            "Root position"
+          ],
+          [
+            "E4–G4–C5",
+            "E4",
+            "C",
+            "First inversion"
+          ]
+        ],
+        "languageColumns": []
+      }
+    },
+    "takeaway": "C major uses C, E and G. Moving C above E changes the bass and inversion; spreading the starts changes a block chord into an arpeggio.",
+    "deeper": {
+      "title": "Earlier explanation of this lesson",
+      "originalTeaching": [
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "habits": {
+    "subject": "spanish",
+    "edition": 135,
+    "opening": [
+      "Here is a small conversation you can use: Trabajo por la mañana. Estudio por la noche. “I work in the morning. I study at night.” Say the two sentences separately first. There is no need to build a long sentence before you can tell someone about your day.",
+      "Listen to trabajo and estudio at the ends of the actions: both finish in o. For these regular verbs, that ending says who is doing the action. We will build those two forms, then change to asking a friend a question."
+    ],
+    "heading": "Choose who is doing it, then build one useful sentence",
+    "teaching": [
+      "Start with trabajar, “to work”. Remove the final ar and you have trabaj-. Add o for I: trabajo. Do the same with estudiar: estudi- plus o gives estudio. These are complete verb forms. Trabajo can mean “I work”; you do not have to put yo before it. Yo trabajo is also possible, especially when you want to contrast yourself with someone else.",
+      "Now give each action a time: trabajo por la mañana; estudio por la noche. Por la mañana means “in the morning” in this routine, while por la noche means “at night”. Put y between the two parts only after each one is comfortable: Trabajo por la mañana y estudio por la noche. The extra word joins two sentences you already know.",
+      "To ask one friend about studying, keep estudi- and use as: ¿Estudias en casa? That is the familiar tú form, “Do you study at home?” You can omit tú here. Spanish does not need an extra word corresponding to English “do” in this question. The question marks and your rising or questioning intonation help show that you are asking.",
+      "For comer and vivir, the I forms also finish in o: como, vivo. Their familiar you forms are comes and vives. Keep those forms beside their meanings rather than copying as onto every verb. And watch the whole time expression: Trabajo por la mañana places work in the morning; Mañana trabajo says that I work tomorrow. The surrounding words make the difference."
+    ],
+    "firstSteps": [
+      [
+        "Build the first action",
+        "Trabajar → trabaj- + o → trabajo.",
+        "Begin with the person: you are speaking about yourself. For this regular verb, remove ar and add o. The result already means I work; yo is optional rather than missing."
+      ],
+      [
+        "Build the second action",
+        "Estudiar → estudi- + o → estudio.",
+        "Use the same I pattern for this second regular ar verb. Estudio means I study. Keeping the two actions separate first makes it easier to hear which words you are changing."
+      ],
+      [
+        "Place each action in the day",
+        "Trabajo por la mañana. Estudio por la noche.",
+        "Attach one complete time phrase to each action. Do not drop por la from the first phrase if you mean in the morning in this example. Say the short sentences with a comfortable pause."
+      ],
+      [
+        "Join the finished parts",
+        "Trabajo por la mañana y estudio por la noche.",
+        "Y means and. It connects the two statements without changing either verb. You can still use the two short sentences; joining them is a choice, not a requirement for a correct reply."
+      ]
+    ],
+    "secondSteps": [
+      [
+        "Ask about the friend",
+        "¿Comes en casa?",
+        "Comer is to eat. For the familiar you, use com- plus es: comes. En casa means at home. You are asking about the friend, so como would be the wrong person for this intended question."
+      ],
+      [
+        "Say where you live",
+        "Vivo cerca.",
+        "Vivir is to live. Viv- plus o makes vivo, I live. Cerca means nearby. This is a new statement about you, so do not carry the friend’s es ending into it."
+      ],
+      [
+        "Hear the change of person",
+        "¿Comes en casa? — Vivo cerca.",
+        "The two lines have different subjects. Comes asks about the friend; vivo supplies your information. An ending belongs to the person and verb in that sentence, not to the whole conversation."
+      ],
+      [
+        "Keep the answer suited to the question",
+        "A direct yes answer would be Sí, como en casa.",
+        "Vivo cerca gives extra information; it does not by itself say whether you eat at home. If you want to answer the question directly, add Sí, como en casa, then say Vivo cerca. Choose the information the listener needs."
+      ]
+    ],
+    "firstNotice": "Say the short versions first, then hear the joined sentence in the demonstration.",
+    "secondNotice": "The worked problem asks for a question and a statement. The final step shows how to make a direct answer too.",
+    "tables": {
+      "first": {
+        "caption": "Two regular ar verbs: keep the stem, choose the person’s ending.",
+        "headers": [
+          "Verb",
+          "I",
+          "One friend — tú"
+        ],
+        "rows": [
+          [
+            "trabajar",
+            "trabajo",
+            "trabajas"
+          ],
+          [
+            "estudiar",
+            "estudio",
+            "estudias"
+          ]
+        ],
+        "languageColumns": [
+          0,
+          1,
+          2
+        ]
+      },
+      "second": {
+        "caption": "Who each line is about changes the form.",
+        "headers": [
+          "Intended message",
+          "Spanish"
+        ],
+        "rows": [
+          [
+            "Do you eat at home?",
+            "¿Comes en casa?"
+          ],
+          [
+            "Yes, I eat at home.",
+            "Sí, como en casa."
+          ],
+          [
+            "I live nearby.",
+            "Vivo cerca."
+          ]
+        ],
+        "languageColumns": [
+          1
+        ]
+      }
+    },
+    "takeaway": "Build a short action and time first. Trabajo and estudio describe me; comes asks about one friend. Keep por la mañana distinct from mañana in Mañana trabajo.",
+    "deeper": {
+      "title": "Earlier explanation of this lesson",
+      "originalTeaching": [
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "descriptions": {
+    "subject": "spanish",
+    "edition": 135,
+    "opening": [
+      "You have been waiting with nothing to do and want to tell a friend you are bored. Use Estoy aburrido, or Estoy aburrida if that is the adjective form you use for yourself. The complete sentence means “I’m bored”.",
+      "Now listen to Soy aburrido. That normally means “I’m boring”. The change from estoy to soy changed the message. We will keep the adjective fixed first, so you can hear what the verb contributes."
+    ],
+    "heading": "Start with the message you mean, rather than a permanence rule",
+    "teaching": [
+      "For the feeling, say estoy aburrido or estoy aburrida. For describing yourself as a boring person, soy aburrido or soy aburrida is the usual reading. Both English translations begin “I am”, so translating those two English words first will not choose the Spanish expression for you. Decide what you want the listener to understand, then use the matching whole phrase.",
+      "The final o or a is a separate choice from soy or estoy. Estoy aburrido and estoy aburrida express the same kind of feeling; the adjective form matches how the speaker refers to themself. Changing aburrido to aburrida does not turn bored into boring. Changing estoy to soy is the change that creates that contrast in these examples.",
+      "For identity, you already have Soy estudiante, “I’m a student”. A person can stop being a student, so temporary versus permanent is an unreliable way to explain that soy. For a person’s location, use Estoy en casa or Estoy en la oficina. Learn these as useful patterns with a clear meaning before trying to generalise to every adjective and noun.",
+      "An event’s venue uses a different pattern. La reunión es en la oficina means “The meeting is at the office”: it tells you where the event takes place. Estoy en la oficina places me there. Even when the office is the same and both things happen today, the sentences use different verbs. The kind of message matters; the length of time alone does not decide it."
+    ],
+    "firstSteps": [
+      [
+        "Say what you want the friend to understand",
+        "I feel bored: there is nothing interesting to do.",
+        "The intended message is about your current experience. It is not a claim that other people find you uninteresting. Keep that meaning in mind before choosing the Spanish phrase."
+      ],
+      [
+        "Use the feeling expression",
+        "Estoy aburrido. / Estoy aburrida.",
+        "Choose the adjective form you use for yourself and say one complete sentence. Both versions here mean I am bored. You can hear Estoy aburrido in the demonstration."
+      ],
+      [
+        "Change only the verb and listen again",
+        "Soy aburrido. / Soy aburrida.",
+        "Now the usual meaning is I am boring. Compare the demonstration’s two versions. The adjective has stayed the same in each pair; the verb choice changes how the description is understood."
+      ],
+      [
+        "Return to the intended reply",
+        "Estoy aburrido, or Estoy aburrida.",
+        "For the original situation, return to estoy. Do not decide from how long the wait lasts. You are expressing the feeling, whether it has lasted a minute or much longer."
+      ]
+    ],
+    "secondSteps": [
+      [
+        "Locate yourself",
+        "Estoy en la oficina.",
+        "This places a person at the office. Estoy is the I form of estar, and en la oficina supplies the location. The sentence does not say that you are the office or that a meeting is taking place."
+      ],
+      [
+        "Locate the meeting",
+        "La reunión es en la oficina.",
+        "Now the subject is the meeting. Es is a form of ser. The sentence gives the event’s venue: it takes place at the office. In this pattern, an event is not treated like a person standing somewhere."
+      ],
+      [
+        "Compare the two subjects",
+        "I am there. The meeting takes place there.",
+        "The same English at and the same Spanish en la oficina appear in both. That shared place does not make the verb choice identical. Look at what is being located and the meaning of the sentence."
+      ],
+      [
+        "Say each complete message",
+        "Estoy en la oficina. La reunión es en la oficina.",
+        "Read the two sentences together. Keeping a complete example for each meaning is more dependable than a rule that all temporary things use estar or all locations use estar."
+      ]
+    ],
+    "firstNotice": "Hear bored and boring with the same adjective form before adding more descriptions.",
+    "secondNotice": "The person and event can share the same venue while using different sentence patterns.",
+    "tables": {
+      "first": {
+        "caption": "Keep the intended meaning beside the complete expression.",
+        "headers": [
+          "Meaning",
+          "Spanish"
+        ],
+        "rows": [
+          [
+            "I am bored — masculine adjective.",
+            "Estoy aburrido."
+          ],
+          [
+            "I am bored — feminine adjective.",
+            "Estoy aburrida."
+          ],
+          [
+            "I am boring — masculine adjective.",
+            "Soy aburrido."
+          ],
+          [
+            "I am boring — feminine adjective.",
+            "Soy aburrida."
+          ]
+        ],
+        "languageColumns": [
+          1
+        ]
+      },
+      "second": {
+        "caption": "Three messages; time alone does not choose the verb.",
+        "headers": [
+          "Message",
+          "Spanish",
+          "What it does"
+        ],
+        "rows": [
+          [
+            "I am a student.",
+            "Soy estudiante.",
+            "Identifies the speaker"
+          ],
+          [
+            "I am at the office.",
+            "Estoy en la oficina.",
+            "Locates a person"
+          ],
+          [
+            "The meeting is at the office.",
+            "La reunión es en la oficina.",
+            "Gives an event’s venue"
+          ]
+        ],
+        "languageColumns": [
+          1
+        ]
+      }
+    },
+    "takeaway": "Estoy aburrido/a expresses feeling bored; soy aburrido/a usually describes being boring. Learn the message in each complete phrase, including the event pattern La reunión es en la oficina.",
+    "deeper": {
+      "title": "Earlier explanation of this lesson",
+      "originalTeaching": [
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "chess-1": {
+    "subject": "chess",
+    "edition": 135,
+    "opening": [
+      "Look down the e-file from Black’s rook on e8 to White’s king on e1. The squares in between are empty. The rook is giving check, so White’s next move must remove that attack.",
+      "I’ll try two bishop destinations. The diagonal from c1 reaches d2, then e3. Both fit the bishop’s movement pattern, but only e3 interrupts the rook’s line. We will inspect the board after the move before calling it legal."
+    ],
+    "heading": "Judge the position after the move, not just the moving piece",
+    "teaching": [
+      "First trace the attack that already exists: e8, e7, e6, e5, e4, e3, e2, e1. Check is an attack on the king now. A legal move cannot finish with your king still attacked. A bishop moving along a diagonal is therefore only the start of the legality check; you also have to ask what the move leaves behind.",
+      "Try c1 to d2 in your mind. The bishop has moved off c1, but d2 is not on the e-file. Trace the same rook line again: nothing has interrupted it. Bd2 would leave the king in check, so it is illegal here. Now continue the bishop’s diagonal to e3. The bishop lands on the checking file, between the rook and king. That removes this check, making Be3 a legal reply.",
+      "A king move can solve the check too. In this four-piece position, Kf1 leaves the e-file, and neither Black’s rook on e8 nor king on a8 attacks f1. The demonstration offers that alternative. Be3 and Kf1 are examples of legal responses; naming one does not prove it gives the best long-term position. You must inspect the opponent’s next move when play continues.",
+      "In the second example, the bishop on d4 attacks White’s rook on a1 through c3 and b2. White’s king is on h1 and is safe. There is a threat to material, but no check to answer. I can show Ra2 as one way to save the rook. The habit stays the same in both examples: identify the attack, make a candidate move, and inspect what remains attacked afterwards."
+    ],
+    "firstSteps": [
+      [
+        "Trace the check before moving",
+        "Black rook: e8–e7–e6–e5–e4–e3–e2–e1.",
+        "The rook reaches the king because every intervening square is empty. The white bishop on c1 is off this line. Any candidate response must leave White’s king safe at the end of the turn."
+      ],
+      [
+        "Test the near bishop square",
+        "c1 to d2 follows the diagonal, but leaves check.",
+        "Move the bishop mentally and trace the e-file again. D2 sits beside that file. The rook can still reach e1, so this is not a legal reply even though the bishop itself moved in the right pattern."
+      ],
+      [
+        "Place the bishop on the attack line",
+        "c1 to e3: Be3.",
+        "The bishop passes through empty d2 and lands on e3. Now the rook encounters the bishop before the king. In the displayed board, follow Block the checking line to see that change."
+      ],
+      [
+        "Inspect all Black’s remaining attacks",
+        "The king is safe after Be3. Kf1 is another legal reply.",
+        "The black king on a8 supplies no second attack on e1. The rook’s line has been blocked. In the alternative Kf1 line, f1 is attacked by neither black piece. Check the actual four-piece board rather than assuming every king step is safe."
+      ]
+    ],
+    "secondSteps": [
+      [
+        "Find the target of the diagonal",
+        "Bd4 attacks Ra1 through c3 and b2.",
+        "Follow the bishop down and left. C3 and b2 are empty, so the rook is attacked. Do not call this check until you have located the king and checked whether it is attacked."
+      ],
+      [
+        "Locate the king separately",
+        "White’s king on h1 is not in check.",
+        "The bishop’s other downward diagonal runs through e3, f2 and g1. It does not reach h1. Black’s king on h8 is also too far away to attack h1."
+      ],
+      [
+        "Move the threatened rook",
+        "Ra1 to a2: Ra2.",
+        "The rook moves one square up an empty file. A2 is not on either bishop diagonal from d4, and the black king does not attack it. This saves the rook in the stated position."
+      ],
+      [
+        "Check what your move leaves behind",
+        "After Ra2, White’s king and rook are both safe from these black pieces.",
+        "The king has not moved, so inspect it again: no attack was opened by vacating a1. Then inspect the rook’s destination. This gives one legal answer; it is not a claim that a threatened rook must always move."
+      ]
+    ],
+    "firstNotice": "On the board, compare Block the checking line with Move the king instead.",
+    "secondNotice": "An ordinary material threat permits a choice; check imposes the immediate king-safety requirement.",
+    "tables": {
+      "first": {
+        "caption": "The same initial rook check, three candidate replies.",
+        "headers": [
+          "White move",
+          "What changes",
+          "Legal here?"
+        ],
+        "rows": [
+          [
+            "Bd2",
+            "The e-file stays open.",
+            "No — king remains in check"
+          ],
+          [
+            "Be3",
+            "Bishop interrupts the e-file.",
+            "Yes"
+          ],
+          [
+            "Kf1",
+            "King leaves the e-file for a safe square.",
+            "Yes"
+          ]
+        ],
+        "languageColumns": []
+      },
+      "second": {
+        "caption": "Keep the target and the king separate.",
+        "headers": [
+          "Before / after",
+          "White king h1",
+          "White rook"
+        ],
+        "rows": [
+          [
+            "Before Ra2",
+            "Not attacked",
+            "a1: attacked by Bd4"
+          ],
+          [
+            "After Ra2",
+            "Still not attacked",
+            "a2: not attacked by Bd4 or Kh8"
+          ]
+        ],
+        "languageColumns": []
+      }
+    },
+    "takeaway": "A legal reply to check must leave the king safe. Bd2 fails here; Be3 and Kf1 work. A bishop attacking your rook creates a different kind of decision.",
+    "deeper": {
+      "title": "Earlier explanation of this lesson",
+      "originalTeaching": [
+        0,
+        1
+      ]
+    }
+  },
+  "chess-2": {
+    "subject": "chess",
+    "edition": 135,
+    "opening": [
+      "White’s king on a1 has no safe neighboring square. That looks like the end, but do not stop the search at the king. White also has a bishop on b7, one diagonal step from Black’s checking rook on a8.",
+      "I’ll capture that rook with the bishop and inspect the position again. If even one move legally removes the check, the starting position is not checkmate. Then we’ll compare a position with no check at all, where a trapped king means a draw."
+    ],
+    "heading": "Search for a reply by the whole side",
+    "teaching": [
+      "Start with the rook on a8. Its file runs straight down to the king on a1, so White is in check. A1 has three neighboring squares on the board: a2, b1 and b2. The rook attacks a2. Black’s king on c2 attacks b1 and b2. That rules out White’s king moves; it does not rule out bishop moves.",
+      "Move the bishop from b7 to a8 and remove the rook: Bxa8. The bishop travels one diagonal step. The black king on c2 is not next to a1, so it does not attack White’s king after the capture. The move is legal and removes the check. Finding this one reply is enough: the starting position is not mate. You do not have to prove that every possible defensive move works.",
+      "For the second position, reset the board in your mind: Black king a8, White king c6 and queen b6, Black to move. The queen does not attack a8: the squares are neither on one line nor on a diagonal. The white king is also too far away. Black is not in check. Now inspect a7, b7 and b8; each is attacked, and Black has no other piece to move.",
+      "That second position is stalemate, a draw under standard rules. The two questions must stay separate: is the king attacked, and does the side have any legal move? Check with no legal reply is mate. No check with no legal move is stalemate. If a legal move exists, play can continue. The table keeps all four combinations together so that a trapped-looking king does not choose the answer for you."
+    ],
+    "firstSteps": [
+      [
+        "Establish the current attack",
+        "Ra8 attacks Ka1 down the open a-file.",
+        "Trace a8 through a7, a6, a5, a4, a3 and a2 to a1. The white bishop on b7 is beside that file, not blocking it. White must remove the check on this turn."
+      ],
+      [
+        "Rule out the king’s three destinations",
+        "a2: rook attack. b1 and b2: black king attack.",
+        "A king on a corner has only three neighboring board squares. Inspect each after imagining the king move. All three are unsafe here, so the king itself cannot escape. Other white pieces have not yet been tested."
+      ],
+      [
+        "Let another piece remove the attacker",
+        "Bb7 to a8, capturing the rook: Bxa8.",
+        "The bishop reaches a8 in one diagonal step. Remove the rook rather than leaving both pieces on the square. The black king on c2 does not attack a1, so this capture leaves White’s king safe."
+      ],
+      [
+        "Use the one legal reply to decide",
+        "Not checkmate: White can play Bxa8.",
+        "Checkmate requires no legal response by any piece. We found one, so the claim of mate fails. The king having no safe move was true; the mistake was treating that as the entire search."
+      ]
+    ],
+    "secondSteps": [
+      [
+        "Ask whether the king’s current square is attacked",
+        "Black’s king on a8 is not in check.",
+        "From b6, the queen attacks along its rank, file and diagonals. A8 is none of those: it is one file away and two ranks up. White’s king on c6 is also not adjacent to a8."
+      ],
+      [
+        "Inspect a7",
+        "Qb6 attacks a7 diagonally.",
+        "A7 is one file left and one rank up from the queen. Black cannot escape to that attacked square, even though the current square a8 is not attacked."
+      ],
+      [
+        "Inspect b7 and b8, then look for another piece",
+        "Both squares lie on the queen’s b-file; Black has no other pieces.",
+        "The queen’s path up from b6 is clear. Neither king move is legal. Because the black king is Black’s only piece, there is no different piece that could supply a legal turn."
+      ],
+      [
+        "Combine no check with no legal move",
+        "Stalemate — a draw.",
+        "The no-check finding from the first step still matters. Three unsafe destinations alone do not establish mate. Here no check plus no legal move gives stalemate under standard rules."
+      ]
+    ],
+    "firstNotice": "Use The bishop can save the king to follow Bxa8 on the board.",
+    "secondNotice": "This second position is stated in the problem. The first example’s board shows the different rook-and-bishop position.",
+    "tables": {
+      "first": {
+        "caption": "Why the king cannot move does not settle the position.",
+        "headers": [
+          "Candidate",
+          "What happens",
+          "Result"
+        ],
+        "rows": [
+          [
+            "Ka2",
+            "Rook on a8 still attacks down the a-file.",
+            "Illegal"
+          ],
+          [
+            "Kb1 or Kb2",
+            "Black king on c2 attacks the destination.",
+            "Illegal"
+          ],
+          [
+            "Bxa8",
+            "Bishop removes the checking rook; Ka1 is safe.",
+            "Legal reply — not mate"
+          ]
+        ],
+        "languageColumns": []
+      },
+      "second": {
+        "caption": "Two questions determine whether the game ends here.",
+        "headers": [
+          "King attacked?",
+          "Any legal move?",
+          "Result"
+        ],
+        "rows": [
+          [
+            "Yes",
+            "Yes",
+            "Check, but play continues"
+          ],
+          [
+            "Yes",
+            "No",
+            "Checkmate"
+          ],
+          [
+            "No",
+            "Yes",
+            "Play continues"
+          ],
+          [
+            "No",
+            "No",
+            "Stalemate — draw"
+          ]
+        ],
+        "languageColumns": []
+      }
+    },
+    "takeaway": "No king move does not prove mate: another piece may answer check. No check plus no legal move is stalemate, not checkmate.",
+    "deeper": {
+      "title": "Earlier explanation of this lesson",
+      "originalTeaching": [
+        0,
+        1,
+        2
+      ]
+    }
+  }
+}

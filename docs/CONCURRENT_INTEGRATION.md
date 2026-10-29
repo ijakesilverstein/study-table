@@ -16,3 +16,11 @@ The main contribution in this pass is content that complements the concurrent tu
 Generated app files accompany source commits. GitHub delivery, hosted Actions and Vercel publication have separate verification records. Credentials, learner browser data and local deployment links are excluded from Git history.
 
 Before continuing in another chat, fetch `origin/main` and create the next development branch from that shared commit. Read this checkpoint and `SPECIFIC_TEACHING_V132.md` first: the combined implementation deliberately keeps the optional explanation comparison, adds three checked scenarios, and uses both valid and mistaken claims. Preserve those behaviors when reconciling an older feature branch. Use a new release number for a later delivered artifact; retain the earlier HTML files and tags.
+
+## V135 teaching pass
+
+The next teaching pass starts from shared main `0332b94662f66ad60d3c0af0794c742401360ce0`, fast-forwarding the already merged phone/navigation repairs and medicine/business guidance through `4609cefd002ab65b981ab18dcefed3a6b1658178`. Its 80 prior authored turns remain exact. Six further revisions and 48 additional help turns live in separate V135 data files; they do not replace the earlier files. Details and verification scope are in `TEACHER_DEMONSTRATIONS_V135.md`.
+
+Concurrent branches observed at the start were `feature/v133-authored-transfer-and-review` through `c42f497ce3bb92d91f074610d21768bfc3d48619` and `feature/v134-playful-story-mode` through `2531d5ed0218a1c2d6c325901860f810b62e7fb6`. They were inspected for scope, not merged into this teaching pass. Their review/game work remains on those branches. Do not describe V135 as containing every unmerged feature or unseen chat edit. Reconcile later work from the updated canonical source and keep all lesson records and delivered artifacts.
+
+The current user instruction is **do not push to Vercel**. No Vercel publication is part of this pass. Git-triggered Vercel deployment is explicitly disabled in the repository configuration.

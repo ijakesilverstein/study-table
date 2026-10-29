@@ -237,6 +237,7 @@ def render_course(course,demos):
     data=json.dumps(course,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')
     revisions=json.loads((ROOT/'lesson-revisions-v126.json').read_text())
     revisions.update(json.loads((ROOT/'lesson-revisions-v127.json').read_text()))
+    revisions.update(json.loads((ROOT/'lesson-revisions-v135.json').read_text()))
     revisions={u['id']:revisions[u['id']] for u in course['units'] if u['id'] in revisions}
     selected={unit['demo']:demos[unit['demo']] for unit in course['units'] if unit.get('demo')}
     import copy
@@ -259,6 +260,7 @@ def render_course(course,demos):
     variation_source=(ROOT/'lesson-variations-v125.js').read_text().replace('__LESSON_VARIATIONS__',json.dumps(variations,ensure_ascii=False,separators=(',',':')).replace('</','<\\/'))
     revision_source=(ROOT/'lesson-revisions-v126.js').read_text().replace('__LESSON_REVISIONS__',json.dumps(revisions,ensure_ascii=False,separators=(',',':')).replace('</','<\\/'))
     specific=json.loads((ROOT/'specific-teaching-v132.json').read_text())
+    specific.update(json.loads((ROOT/'specific-teaching-v135.json').read_text()))
     specific={u['id']:specific[u['id']] for u in course['units'] if u['id'] in specific}
     specific_source=(ROOT/'specific-teaching-v132.js').read_text().replace('__SPECIFIC_TEACHING__',json.dumps(specific,ensure_ascii=False,separators=(',',':')).replace('</','<\\/'))
     restored_source='';restored_css=''

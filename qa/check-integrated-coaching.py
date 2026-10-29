@@ -17,7 +17,7 @@ for course in courses.values():
  # Protect actual authored display revisions and demonstrations as well as base records.
  for constant in ['V126_REVISIONS','V109_DEMOS']:
   old=json.loads(re.search(r'const '+constant+r'=(.*?);\n',a[path]['t'],re.S)[1])
-  new=json.loads(re.search(r'const '+constant+r'=(.*?);\n',b[path]['t'],re.S)[1]);assert old==new,(path,constant)
+  new=json.loads(re.search(r'const '+constant+r'=(.*?);\n',b[path]['t'],re.S)[1]);assert old==({key:new[key] for key in old} if constant=='V126_REVISIONS' else new),(path,constant)
  for rec in manifest['files']:
   if rec['path'].endswith('.js'):
    for name in rec['functions']:assert 'function '+name+'(' in b[path]['t']

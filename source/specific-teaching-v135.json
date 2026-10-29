@@ -1,0 +1,362 @@
+{
+  "piano-2": {
+    "subject": "piano",
+    "comparison": {
+      "correct": "Press the last E on 3 and hold it through 4.",
+      "tempting": "Press E on both 3 and 4 to finish the phrase.",
+      "why": "The written ending is one two-beat note. Pressing again on 4 adds an attack; keeping the key down preserves the intended rhythm."
+    },
+    "first": [
+      {
+        "anchor": "Put three fingers over the route",
+        "prompt": "Which finger starts the first E?",
+        "hint": "Your thumb is waiting over C.",
+        "help": "Middle finger starts E; index takes D; thumb takes C. Keep those three keys under the hand rather than reaching for each note."
+      },
+      {
+        "anchor": "Follow the first four counts",
+        "prompt": "What happens after the thumb plays C?",
+        "hint": "The first group turns back upward.",
+        "help": "Return to D with the index. Practise only D–C–D if the thumb makes you pause; keep all three starts equally spaced."
+      },
+      {
+        "anchor": "Repeat twice, then hold",
+        "prompt": "What does the finger do on the final 4?",
+        "hint": "A count does not always need a new press.",
+        "help": "Keep the last E down on 4. You already started it on 3. Release at the following 1, after both counted beats have passed."
+      },
+      {
+        "anchor": "Join without adding a gap",
+        "prompt": "How can seven presses fill eight beats?",
+        "hint": "Compare the last note with the six earlier notes.",
+        "help": "Six notes use one beat each; the last uses two: 6 + 2 = 8. The extra beat belongs to the held sound, not a pause after it."
+      }
+    ],
+    "second": [
+      {
+        "anchor": "Find the exact handover",
+        "prompt": "Which two notes sit immediately across the join?",
+        "hint": "Use the last note before the bar line and the first after it.",
+        "help": "D ends the first four-note group; E starts the next. E–D–C alone never reaches that handover, so it cannot practise the join."
+      },
+      {
+        "anchor": "Keep a note on either side of the join",
+        "prompt": "Does the bar line add a pause?",
+        "hint": "Say 3, 4, 1, 2 evenly.",
+        "help": "No. The count returns to 1 without inserting time. C–D | E–E occupies four equal beats, even though it crosses into a new bar."
+      },
+      {
+        "anchor": "Bring back the beginning",
+        "prompt": "What speed should you use when restoring the full phrase?",
+        "hint": "Keep the speed that worked for the small fragment.",
+        "help": "Use the same slow tempo. Making the surrounding notes faster brings back the rushed join you just repaired."
+      },
+      {
+        "anchor": "Restore the two-beat ending",
+        "prompt": "When should the last E release?",
+        "hint": "Beat 4 still belongs to the last E.",
+        "help": "Release at the next 1. Releasing as you say 4 cuts off half of the two-beat note, even if the earlier join is even."
+      }
+    ]
+  },
+  "piano-4": {
+    "subject": "piano",
+    "comparison": {
+      "correct": "E4–G4–C5 together is C major with E in the bass.",
+      "tempting": "E4–G4–C5 must be E major because E is lowest.",
+      "why": "The three note names are C, E and G, so the chord is still C major. E is its bass here; it does not become the root just by sounding lowest."
+    },
+    "first": [
+      {
+        "anchor": "Locate C before placing the other fingers",
+        "prompt": "Which note gives this chord its name?",
+        "hint": "Start with the root specified in the problem.",
+        "help": "C names this C-major chord. The 4 in C4 identifies the register. It is not a chord number or a finger instruction."
+      },
+      {
+        "anchor": "Build the three-note set",
+        "prompt": "Does “third” mean three semitone steps?",
+        "hint": "Count letters once, then inspect keyboard distances separately.",
+        "help": "No. C–D–E makes E the third letter counted from C. The distance C to E is four semitones; those are two different kinds of counting."
+      },
+      {
+        "anchor": "Listen to the notes separately",
+        "prompt": "What stays fixed when you hear the arpeggio?",
+        "hint": "Compare the note names with the block chord.",
+        "help": "C4, E4 and G4 stay fixed. Only their starting times are separated. Do not add D or F just because the fingers pass over them."
+      },
+      {
+        "anchor": "Give all three notes one beginning",
+        "prompt": "What must be prepared before a shared start?",
+        "hint": "Put the three fingers over their keys first.",
+        "help": "Locate C, E and G before pressing. Otherwise the hand may search while playing, producing an accidental arpeggio instead of a block chord."
+      }
+    ],
+    "second": [
+      {
+        "anchor": "Move C up an octave",
+        "prompt": "Which single note moved from the original shape?",
+        "hint": "Compare C4–E4–G4 with E4–G4–C5.",
+        "help": "The lower C became the higher C. E4 and G4 stayed where they were. The note name C remains in the chord."
+      },
+      {
+        "anchor": "Name what is actually lowest",
+        "prompt": "What is the difference between bass and root here?",
+        "hint": "One names a sounding position; the other identifies the chord.",
+        "help": "E4 is the lowest sound, so it is the bass. C is the root of the C-major chord even though the C is now on top."
+      },
+      {
+        "anchor": "Name the chord and its arrangement",
+        "prompt": "Why is the chord not E major?",
+        "hint": "List the actual note names before using the lowest note as a label.",
+        "help": "The notes are E, G and C. E major would contain E, G-sharp and B. Moving C above the other tones did not supply those notes."
+      },
+      {
+        "anchor": "Keep arrangement separate from timing",
+        "prompt": "Can an inversion also be an arpeggio?",
+        "hint": "Arrangement and starting times answer different questions.",
+        "help": "Yes. E–G–C is first inversion because E is lowest. Play those tones in succession and you have an arpeggio of that inversion."
+      }
+    ]
+  },
+  "habits": {
+    "subject": "spanish",
+    "comparison": {
+      "correct": "Trabajo por la mañana y estudio por la noche.",
+      "tempting": "Trabajas por la mañana y estudias por la noche means I work and study.",
+      "why": "For these regular verbs, the as forms address a familiar you. The o forms trabajo and estudio express I in the intended routine."
+    },
+    "first": [
+      {
+        "anchor": "Build the first action",
+        "prompt": "What do you change in trabajar to say I work?",
+        "hint": "Keep trabaj- and choose the I ending.",
+        "help": "Remove ar, not the whole last syllable of the stem. Trabaj- plus o gives trabajo. Adding o to trabajar would leave the infinitive ending in place."
+      },
+      {
+        "anchor": "Build the second action",
+        "prompt": "Why is estudio enough without yo?",
+        "hint": "The verb ending already helps identify the speaker.",
+        "help": "Here estudio expresses I study. Yo estudio is also grammatical; the explicit pronoun can add contrast, but you do not need it in every sentence."
+      },
+      {
+        "anchor": "Place each action in the day",
+        "prompt": "Which words keep the meaning in the morning?",
+        "hint": "Read the whole phrase, not just mañana.",
+        "help": "Por la mañana gives the time of day here. Mañana trabajo instead means I work tomorrow. Use the complete phrase when practising the routine."
+      },
+      {
+        "anchor": "Join the finished parts",
+        "prompt": "Do the verbs change when you add y?",
+        "hint": "You are joining two complete statements.",
+        "help": "No. Trabajo stays trabajo and estudio stays estudio. Y simply connects the information; it does not introduce a new person."
+      }
+    ],
+    "second": [
+      {
+        "anchor": "Ask about the friend",
+        "prompt": "Who is comes about in this question?",
+        "hint": "You are asking one friend.",
+        "help": "Comes is the familiar you form of comer. Como is the I form, so swapping in como would change who the eating is about."
+      },
+      {
+        "anchor": "Say where you live",
+        "prompt": "What part of vivir stays in vivo?",
+        "hint": "Remove the infinitive ending ir.",
+        "help": "Viv- remains; add o for I. Vivo cerca says where you live without saying that you live in the friend’s house."
+      },
+      {
+        "anchor": "Hear the change of person",
+        "prompt": "Why do comes and vivo have different endings?",
+        "hint": "The subject changes between the two lines.",
+        "help": "The question is about you, the friend; the statement is about me, the speaker. Do not choose endings merely by copying the previous line."
+      },
+      {
+        "anchor": "Keep the answer suited to the question",
+        "prompt": "Does Vivo cerca directly answer whether you eat at home?",
+        "hint": "Nearby describes a location, not an eating habit.",
+        "help": "No. You can add Sí, como en casa as the direct answer. Vivo cerca supplies different information and may follow it as an extra detail."
+      }
+    ]
+  },
+  "descriptions": {
+    "subject": "spanish",
+    "comparison": {
+      "correct": "La reunión es en la oficina gives the meeting’s venue.",
+      "tempting": "La reunión must use está because its location is temporary.",
+      "why": "A meeting’s venue is commonly expressed with ser: La reunión es en la oficina. Whether that meeting lasts an hour or a day does not turn this into the person-location pattern."
+    },
+    "first": [
+      {
+        "anchor": "Say what you want the friend to understand",
+        "prompt": "Which meaning are you trying to express?",
+        "hint": "Separate feeling bored from being boring to someone else.",
+        "help": "You want the feeling: I have nothing interesting to do. That directs you to estoy aburrido or estoy aburrida in this model."
+      },
+      {
+        "anchor": "Use the feeling expression",
+        "prompt": "Does aburrida change the feeling into a different meaning?",
+        "hint": "Compare only the adjective’s o and a endings.",
+        "help": "No. Estoy aburrido and estoy aburrida both mean I am bored. The ending matches the speaker; the verb remains estoy in both."
+      },
+      {
+        "anchor": "Change only the verb and listen again",
+        "prompt": "What changes when estoy becomes soy?",
+        "hint": "Keep the adjective fixed for this comparison.",
+        "help": "The usual reading changes from I am bored to I am boring. This is a change of meaning, not a stopwatch marking how long boredom lasts."
+      },
+      {
+        "anchor": "Return to the intended reply",
+        "prompt": "Would a long wait make soy the right choice for bored?",
+        "hint": "The intended message has not changed.",
+        "help": "No. The phrase for feeling bored still uses estoy here. Duration is not a reliable way to choose between these two expressions."
+      }
+    ],
+    "second": [
+      {
+        "anchor": "Locate yourself",
+        "prompt": "What is being located in Estoy en la oficina?",
+        "hint": "Read the subject carried by estoy.",
+        "help": "The speaker is at the office. Estoy is I am in this estar pattern; en la oficina tells you where."
+      },
+      {
+        "anchor": "Locate the meeting",
+        "prompt": "What does La reunión es en la oficina tell you?",
+        "hint": "A meeting is an event, and this sentence supplies its venue.",
+        "help": "It says where the meeting takes place. Learn es en la oficina with that event meaning rather than forcing the person-location pattern onto it."
+      },
+      {
+        "anchor": "Compare the two subjects",
+        "prompt": "Why does the same office not require the same verb?",
+        "hint": "Compare the subjects and messages, not only the place phrase.",
+        "help": "One sentence locates me; the other states where an event takes place. Sharing en la oficina does not erase that distinction."
+      },
+      {
+        "anchor": "Say each complete message",
+        "prompt": "Does temporary versus permanent explain both sentences?",
+        "hint": "Both could be true for only one afternoon.",
+        "help": "No. I can be at the office briefly and the meeting can also be brief. The two constructions still use estoy and es respectively."
+      }
+    ]
+  },
+  "chess-1": {
+    "subject": "chess",
+    "comparison": {
+      "correct": "Be3 blocks the rook’s checking line to e1.",
+      "tempting": "Bd2 answers the check because it is a valid bishop diagonal.",
+      "why": "D2 is not on the checking e-file. E3 is. The resulting attack on the king, not just the bishop’s move shape, determines whether the reply is legal."
+    },
+    "first": [
+      {
+        "anchor": "Trace the check before moving",
+        "prompt": "Which attack must the next move remove?",
+        "hint": "Trace the rook’s file all the way to the king.",
+        "help": "The rook on e8 attacks e1 through six empty squares. White cannot ignore that present attack by making an unrelated developing move."
+      },
+      {
+        "anchor": "Test the near bishop square",
+        "prompt": "Why does Bd2 fail despite being a diagonal move?",
+        "hint": "Look at the rook’s line after placing the bishop on d2.",
+        "help": "D2 is off the e-file. The move obeys the bishop’s movement pattern but still leaves White’s king attacked, making it illegal."
+      },
+      {
+        "anchor": "Place the bishop on the attack line",
+        "prompt": "What changes when the bishop lands on e3?",
+        "hint": "E3 lies between the checking rook and the king.",
+        "help": "The rook no longer has a clear path to e1. Blocking works against this sliding attack because the bishop physically interrupts its line."
+      },
+      {
+        "anchor": "Inspect all Black’s remaining attacks",
+        "prompt": "Why must you inspect more than the checking rook?",
+        "hint": "Removing one attack would not remove a second attacker.",
+        "help": "Check every black piece after the candidate move. Here the king on a8 does not attack White’s king, so blocking the rook removes the only check."
+      }
+    ],
+    "second": [
+      {
+        "anchor": "Find the target of the diagonal",
+        "prompt": "Which white piece is actually attacked by Bd4?",
+        "hint": "Follow d4–c3–b2–a1.",
+        "help": "That diagonal ends at the rook on a1. The king is on h1, a different square. A threat to a rook is not automatically check."
+      },
+      {
+        "anchor": "Locate the king separately",
+        "prompt": "Does Bd4 attack the white king on h1?",
+        "hint": "Trace the bishop’s other downward diagonal too.",
+        "help": "It reaches e3, f2 and g1, not h1. With Black’s king far away on h8, White is not in check in this stated position."
+      },
+      {
+        "anchor": "Move the threatened rook",
+        "prompt": "Why is a2 a useful rook destination here?",
+        "hint": "Inspect both enemy pieces from the new square.",
+        "help": "A2 is off the bishop’s diagonals from d4 and outside the black king’s reach. Ra2 moves the rook out of attack without exposing the king."
+      },
+      {
+        "anchor": "Check what your move leaves behind",
+        "prompt": "Does an attacked rook always have to move?",
+        "hint": "The legal requirement concerns your king; saving material is a choice.",
+        "help": "No. You may have another useful capture or forcing move in another position. Here Ra2 is simply one verified way to save this rook."
+      }
+    ]
+  },
+  "chess-2": {
+    "subject": "chess",
+    "comparison": {
+      "correct": "Bxa8 is a legal reply, so the original rook-check position is not mate.",
+      "tempting": "No safe king move means the rook-check position is checkmate.",
+      "why": "White’s bishop can capture the checking rook on a8. The search must include replies by every white piece, not only destinations of the king."
+    },
+    "first": [
+      {
+        "anchor": "Establish the current attack",
+        "prompt": "What makes this a check before White moves?",
+        "hint": "Use the rook’s file, not the king’s lack of space.",
+        "help": "The rook on a8 has an open path to a1. A king can have few squares without being in check; here a specific rook attack establishes it."
+      },
+      {
+        "anchor": "Rule out the king’s three destinations",
+        "prompt": "Have you disproved every reply after testing the king?",
+        "hint": "White still has a bishop.",
+        "help": "No. You have ruled out king moves only. Look at whether the bishop can capture the attacker or block the attack before calling mate."
+      },
+      {
+        "anchor": "Let another piece remove the attacker",
+        "prompt": "Why is Bxa8 a legal response?",
+        "hint": "Remove the rook, then inspect what can still attack a1.",
+        "help": "The bishop reaches a8 diagonally and captures the rook. The remaining black king on c2 is not adjacent to a1, so the checking attack is gone."
+      },
+      {
+        "anchor": "Use the one legal reply to decide",
+        "prompt": "How many legal replies must you find to disprove mate?",
+        "hint": "Mate means there are none.",
+        "help": "One is enough. Bxa8 gives a counterexample to the claim that no legal reply exists; you do not need every other defence to work."
+      }
+    ],
+    "second": [
+      {
+        "anchor": "Ask whether the king’s current square is attacked",
+        "prompt": "Does Qb6 attack a8?",
+        "hint": "Compare the file and rank differences.",
+        "help": "No. A8 is one file left and two ranks above b6. A queen needs the same file, same rank or equal file-and-rank change for a diagonal."
+      },
+      {
+        "anchor": "Inspect a7",
+        "prompt": "Why is a7 unsafe even though a8 is safe?",
+        "hint": "A7 and a8 have different relationships to Qb6.",
+        "help": "A7 is diagonally adjacent to b6, so the queen attacks it. A8 is not on that diagonal. Check a destination independently of the starting square."
+      },
+      {
+        "anchor": "Inspect b7 and b8, then look for another piece",
+        "prompt": "Could another black piece move instead?",
+        "hint": "Read the full stated position.",
+        "help": "No: Black has only its king. B7 and b8 are queen-attacked, a7 is queen-attacked, and there is no other black piece that could move."
+      },
+      {
+        "anchor": "Combine no check with no legal move",
+        "prompt": "Why is the result a draw rather than a win by mate?",
+        "hint": "Bring back the first finding: no check.",
+        "help": "Black has no legal move, but its king is not attacked. Under standard rules that combination is stalemate, which draws the game."
+      }
+    ]
+  }
+}
