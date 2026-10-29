@@ -14,7 +14,7 @@ function v127GuideStart(b){
  if(!steps.length)return;
  host.dataset.guidedCount='0';steps.forEach(s=>s.hidden=true);
  const notice=host.querySelector(':scope > .case-notice');if(notice)notice.hidden=true;
- host.querySelectorAll(':scope > .lesson-reference,:scope > .teacher-table').forEach(el=>el.hidden=true);
+ host.querySelectorAll(':scope > .lesson-reference,:scope > .teacher-table,:scope > .v136-companion').forEach(el=>el.hidden=true);
  b.hidden=true;b.setAttribute('aria-expanded','true');panel.hidden=false;
  const reveal=panel.querySelector('[data-guided-reveal]');reveal.hidden=false;
  reveal.textContent='Reveal step 1 of '+steps.length;
@@ -29,7 +29,7 @@ function v127GuideReveal(b){
   else{status.textContent='All '+steps.length+' steps are visible. Check the conclusion.';b.textContent='Show the conclusion';}
  }else{
   const notice=host.querySelector(':scope > .case-notice');if(notice)notice.hidden=false;
-  host.querySelectorAll(':scope > .lesson-reference,:scope > .teacher-table').forEach(el=>el.hidden=false);
+  host.querySelectorAll(':scope > .lesson-reference,:scope > .teacher-table,:scope > .v136-companion').forEach(el=>el.hidden=false);
   status.textContent='All reasoning and the conclusion are visible.';b.hidden=true;host.querySelector('[data-guided-exit]').focus();
  }
 }
@@ -37,7 +37,7 @@ function v127GuideEnd(b){
  const host=b.closest('.worked-case'),start=host.querySelector('[data-guided-start]');
  host.querySelectorAll(':scope > .solution > li').forEach(s=>s.hidden=false);
  const notice=host.querySelector(':scope > .case-notice');if(notice)notice.hidden=false;
- host.querySelectorAll(':scope > .lesson-reference,:scope > .teacher-table').forEach(el=>el.hidden=false);
+ host.querySelectorAll(':scope > .lesson-reference,:scope > .teacher-table,:scope > .v136-companion').forEach(el=>el.hidden=false);
  host.querySelector('.guided-panel').hidden=true;start.hidden=false;start.setAttribute('aria-expanded','false');
  delete host.dataset.guidedCount;start.focus();
 }
@@ -61,7 +61,7 @@ function showMap(){prepareView();delete $('courseArticle').dataset.unitId;const 
 function practiceItem(ask,answer,label,index){const id='practice-answer-'+index;return '<li><p class="practice-label">'+escape(label)+'</p><p class="practice-ask">'+escape(ask)+'</p><button type="button" class="text-button" data-practice-answer="'+id+'" aria-controls="'+id+'" aria-expanded="false">Show the worked answer</button><div class="practice-answer" id="'+id+'" hidden><p>'+escape(answer)+'</p></div></li>'}
 function practiceBlock(unit){const previous=unit.recall.from&&byId.get(unit.recall.from),label=previous?'Looking back · Unit '+(COURSE.units.indexOf(previous)+1)+': '+previous.title:'Revisit this lesson';return '<details class="optional" id="courseVariation"><summary>Practice this unit (optional)</summary><p class="practice-note">Try on paper or in your head, then reveal the worked answer.</p><ol class="practice-list">'+practiceItem(unit.exercise[0],unit.exercise[1],'Use it now',0)+practiceItem(unit.recall.ask,unit.recall.answer,label,1)+'</ol>'+v119SelfCheck(unit)+'</details>'}
 function takeawayBlock(unit){return '<section class="takeaway"><h2>What to remember</h2><p>'+escape(unit.takeaway)+'</p></section>'}
-function worked(example,id,unit){return '<section class="worked-case" id="'+id+'"><h2>'+escape(example.title)+'</h2><p class="case-problem">'+escape(example.problem)+'</p>'+v132CoachLink(unit,id)+v127GuideControls(example,id,unit)+(id==='courseFirst'?'<div id="courseDemo"></div>':'')+'<ol class="solution">'+example.steps.map((step,index)=>'<li><h3>'+escape(step[0])+'</h3><p class="calculation">'+escape(step[1])+'</p><p>'+escape(step[2])+'</p>'+v122Step(unit,id,index)+'</li>').join('')+'</ol>'+v126Reference(unit,id)+v122Table(unit,id)+'<p class="case-notice">'+escape(example.notice)+'</p></section>'}
+function worked(example,id,unit){return '<section class="worked-case" id="'+id+'"><h2>'+escape(example.title)+'</h2><p class="case-problem">'+escape(example.problem)+'</p>'+v132CoachLink(unit,id)+v127GuideControls(example,id,unit)+(id==='courseFirst'?'<div id="courseDemo"></div>':'')+v136Companion(unit,id)+'<ol class="solution">'+example.steps.map((step,index)=>'<li><h3>'+escape(step[0])+'</h3><p class="calculation">'+escape(step[1])+'</p><p>'+escape(step[2])+'</p>'+v122Step(unit,id,index)+'</li>').join('')+'</ol>'+v126Reference(unit,id)+v122Table(unit,id)+'<p class="case-notice">'+escape(example.notice)+'</p></section>'}
 function showUnit(id){id=resolveUnit(id);if(id===COURSE.workshop?.id){v117ShowWorkshop();return}if(id===COURSE.project.id){showProject();return}const stored=byId.get(id);if(!stored)return;const unit=v126Lesson(stored);prepareView();saveReading(id);const index=COURSE.units.indexOf(stored);
  $('courseArticle').innerHTML='<button class="text-button" data-course-map>← Course map</button><p class="course-eyebrow">UNIT '+(index+1)+' OF '+COURSE.units.length+'</p><h1>'+escape(unit.title)+'</h1><p class="course-goal">'+escape(unit.goal)+'</p>'+v122Opening(unit)+(unit.terms?.length?'<details class="glossary"><summary>Words and symbols in this unit</summary><dl>'+unit.terms.map(([term,meaning])=>'<dt>'+escape(term)+'</dt><dd>'+escape(meaning)+'</dd>').join('')+'</dl></details>':'')+worked(unit.first,'courseFirst',unit)+'<section class="explanation"><h2>'+escape(unit.heading)+'</h2>'+unit.teaching.map(p=>'<p>'+escape(p)+'</p>').join('')+'</section>'+v126Deeper(unit)+worked(unit.second,'courseSecond',unit)+(unit.project?'<section class="course-project"><h2>'+escape(unit.project.title)+'</h2><ol>'+unit.project.steps.map(step=>'<li>'+escape(step)+'</li>').join('')+'</ol></section>':'')+(unit.supplement?'<details class="optional" id="courseSupplement"><summary>'+escape(unit.supplement.title)+'</summary>'+unit.supplement.paragraphs.map(p=>'<p>'+escape(p)+'</p>').join('')+'<div class="course-actions">'+unit.supplement.examples.map(x=>'<button type="button" data-course-demo-line="'+x.line+'">'+escape(x.label)+'</button>').join('')+'</div></details>':'')+v130TrapMarkup(unit)+v116MathReference(id)+v125Section(unit)+takeawayBlock(unit)+practiceBlock(unit)+'<footer class="course-footer">'+(unit.previous?'<button data-course-unit="'+unit.previous+'">← Previous unit</button>':'')+(unit.next?'<button class="primary" data-course-unit="'+unit.next+'">Next: '+escape(byId.get(unit.next).title)+'</button>':'<button class="primary" data-course-project>Next: '+escape(COURSE.project.title)+'</button><button data-course-map>Back to the course map</button>')+'<button data-course-practice>Practice material</button></footer>';
  $('courseArticle').dataset.unitId=id;

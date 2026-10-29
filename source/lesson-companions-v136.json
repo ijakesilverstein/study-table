@@ -1,0 +1,392 @@
+{
+  "piano-2": {
+    "subject": "piano",
+    "case": "courseSecond",
+    "kind": "piano",
+    "title": "Follow the join on the keyboard",
+    "intro": "Choose a count and watch what the fingers do. The written clock is for 60 BPM; you advance it yourself. Use the main playback controls above when you want to hear the tune.",
+    "sceneLabel": "Which part shall we inspect?",
+    "resetLabel": "Back to the first count",
+    "scenes": [
+      {
+        "label": "The repair: C–D | E–E",
+        "intro": "Begin on count 3 of the first bar. The bar line adds no pause. Elapsed time here starts with this fragment’s C.",
+        "initial": 0,
+        "frames": [
+          {
+            "label": "3",
+            "at": 0,
+            "note": "C4",
+            "action": "strike",
+            "heading": "Count 3: press C with the thumb.",
+            "explanation": "Start one note before the troublesome D-to-E handover. The thumb plays C while the index and middle fingers are ready over D and E.",
+            "finger": "1 — thumb"
+          },
+          {
+            "label": "4",
+            "at": 1,
+            "note": "D4",
+            "action": "strike",
+            "heading": "Count 4: release C and press D.",
+            "explanation": "The index takes D. Keep the same gap between counts as before. Prepare the middle finger for E while D is sounding.",
+            "finger": "2 — index"
+          },
+          {
+            "label": "Next 1",
+            "at": 2,
+            "note": "E4",
+            "action": "strike",
+            "heading": "Next 1: release D and press E.",
+            "explanation": "The handover has happened: D | E. The count has returned to 1, but there was no extra beat or pause at the bar line.",
+            "finger": "3 — middle"
+          },
+          {
+            "label": "2",
+            "at": 3,
+            "note": "E4",
+            "action": "strike",
+            "heading": "Count 2: release E, then press E again.",
+            "explanation": "The next E is a separate note. The key must rise enough to make a fresh attack, even though the pitch has not changed.",
+            "finger": "3 — middle"
+          },
+          {
+            "label": "Release",
+            "at": 4,
+            "note": "",
+            "action": "release",
+            "heading": "At the following 3, release the fragment’s last E.",
+            "explanation": "That completes four equally spaced notes: C, D | E, E. Put this small repair back into the full phrase at the same slow tempo.",
+            "finger": ""
+          }
+        ]
+      },
+      {
+        "label": "The whole eight-beat phrase",
+        "intro": "The labels show bar / beat: 2 / 3 means bar 2, beat 3. The first E is time zero. There are seven attacks over eight beats; hold the last E through the final 4.",
+        "initial": 0,
+        "frames": [
+          {
+            "label": "1 / 1",
+            "at": 0,
+            "note": "E4",
+            "action": "strike",
+            "heading": "Bar 1, beat 1: press E.",
+            "explanation": "Begin with the middle finger. Thumb, index and middle are already placed over C, D and E.",
+            "finger": "3 — middle"
+          },
+          {
+            "label": "1 / 2",
+            "at": 1,
+            "note": "D4",
+            "action": "strike",
+            "heading": "Bar 1, beat 2: release E and press D.",
+            "explanation": "The index plays the next lower white key. Keep the pulse steady as the melody moves down.",
+            "finger": "2 — index"
+          },
+          {
+            "label": "1 / 3",
+            "at": 2,
+            "note": "C4",
+            "action": "strike",
+            "heading": "Bar 1, beat 3: release D and press C.",
+            "explanation": "This is the bottom of the turn. Keep the thumb ready so you can return to D without hesitating.",
+            "finger": "1 — thumb"
+          },
+          {
+            "label": "1 / 4",
+            "at": 3,
+            "note": "D4",
+            "action": "strike",
+            "heading": "Bar 1, beat 4: release C and press D.",
+            "explanation": "The index returns to D. The middle finger is ready for the E across the bar line.",
+            "finger": "2 — index"
+          },
+          {
+            "label": "2 / 1",
+            "at": 4,
+            "note": "E4",
+            "action": "strike",
+            "heading": "Bar 2, beat 1: release D and press E.",
+            "explanation": "The join is complete. Keep the same pulse; the bar line does not create an extra gap.",
+            "finger": "3 — middle"
+          },
+          {
+            "label": "2 / 2",
+            "at": 5,
+            "note": "E4",
+            "action": "strike",
+            "heading": "Bar 2, beat 2: release E and press it again.",
+            "explanation": "This E needs a separate beginning. Reusing a note name does not automatically mean holding the earlier note.",
+            "finger": "3 — middle"
+          },
+          {
+            "label": "2 / 3",
+            "at": 6,
+            "note": "E4",
+            "action": "strike",
+            "heading": "Bar 2, beat 3: start the final E.",
+            "explanation": "This is the seventh and last attack. The note will last for two beats, so prepare to keep the key down on the next count.",
+            "finger": "3 — middle"
+          },
+          {
+            "label": "2 / 4",
+            "at": 7,
+            "note": "E4",
+            "action": "hold",
+            "heading": "Bar 2, beat 4: keep that same E down.",
+            "explanation": "There is no fresh attack here. You are counting a second beat inside the note that began on 3.",
+            "finger": "3 — keep contact"
+          },
+          {
+            "label": "Next 1",
+            "at": 8,
+            "note": "",
+            "action": "release",
+            "heading": "At the next 1, release E.",
+            "explanation": "Six one-beat notes plus the final two-beat note make eight beats. The count continued while the last sound was held.",
+            "finger": ""
+          }
+        ]
+      }
+    ]
+  },
+  "descriptions": {
+    "subject": "spanish",
+    "case": "courseFirst",
+    "kind": "sentence",
+    "title": "Build the phrase for the message you mean",
+    "intro": "Choose a message to see its complete model. You can then inspect the verb and adjective separately. The lesson’s audio above lets you hear the masculine bored/boring pair.",
+    "sceneLabel": "What do you want to say?",
+    "resetLabel": "Start with the verb",
+    "scenes": [
+      {
+        "label": "I am bored — masculine adjective",
+        "intro": "You want to describe feeling bored.",
+        "initial": 2,
+        "parts": [
+          {
+            "word": "Estoy",
+            "job": "The verb for this feeling expression"
+          },
+          {
+            "word": "aburrido",
+            "job": "The masculine adjective form in this expression"
+          }
+        ],
+        "translation": "I am bored.",
+        "frames": [
+          {
+            "label": "1. Verb",
+            "shown": 1,
+            "focus": 0,
+            "heading": "Start with estoy.",
+            "explanation": "Estoy begins the feeling expression here. Decide that you mean I feel bored before adding the adjective."
+          },
+          {
+            "label": "2. Adjective",
+            "shown": 2,
+            "focus": 1,
+            "heading": "Add aburrido.",
+            "explanation": "Use aburrido as the masculine adjective form for this speaker. Changing the adjective’s o or a ending matches the speaker; it does not change bored into boring."
+          },
+          {
+            "label": "Whole sentence",
+            "shown": 2,
+            "focus": null,
+            "heading": "Estoy aburrido.",
+            "explanation": "I am bored. With estoy, this phrase expresses the feeling. Compare a soy version to hear how the intended message changes."
+          }
+        ]
+      },
+      {
+        "label": "I am bored — feminine adjective",
+        "intro": "You want to describe feeling bored.",
+        "initial": 2,
+        "parts": [
+          {
+            "word": "Estoy",
+            "job": "The verb for this feeling expression"
+          },
+          {
+            "word": "aburrida",
+            "job": "The feminine adjective form in this expression"
+          }
+        ],
+        "translation": "I am bored.",
+        "frames": [
+          {
+            "label": "1. Verb",
+            "shown": 1,
+            "focus": 0,
+            "heading": "Start with estoy.",
+            "explanation": "Estoy begins the feeling expression here. Decide that you mean I feel bored before adding the adjective."
+          },
+          {
+            "label": "2. Adjective",
+            "shown": 2,
+            "focus": 1,
+            "heading": "Add aburrida.",
+            "explanation": "Use aburrida as the feminine adjective form for this speaker. Changing the adjective’s o or a ending matches the speaker; it does not change bored into boring."
+          },
+          {
+            "label": "Whole sentence",
+            "shown": 2,
+            "focus": null,
+            "heading": "Estoy aburrida.",
+            "explanation": "I am bored. With estoy, this phrase expresses the feeling. Compare a soy version to hear how the intended message changes."
+          }
+        ]
+      },
+      {
+        "label": "I am boring — masculine adjective",
+        "intro": "You are describing yourself as boring to other people.",
+        "initial": 2,
+        "parts": [
+          {
+            "word": "Soy",
+            "job": "The verb for this description of a person"
+          },
+          {
+            "word": "aburrido",
+            "job": "The masculine adjective form in this expression"
+          }
+        ],
+        "translation": "I am boring.",
+        "frames": [
+          {
+            "label": "1. Verb",
+            "shown": 1,
+            "focus": 0,
+            "heading": "Start with soy.",
+            "explanation": "Soy begins this description of the person. In this model, the whole expression will mean I am boring, rather than I feel bored."
+          },
+          {
+            "label": "2. Adjective",
+            "shown": 2,
+            "focus": 1,
+            "heading": "Add aburrido.",
+            "explanation": "Use aburrido as the masculine adjective form for this speaker. Changing the adjective’s o or a ending matches the speaker; it does not change bored into boring."
+          },
+          {
+            "label": "Whole sentence",
+            "shown": 2,
+            "focus": null,
+            "heading": "Soy aburrido.",
+            "explanation": "I am boring. With soy, the usual meaning describes being boring. Compare an estoy version for the feeling of being bored."
+          }
+        ]
+      },
+      {
+        "label": "I am boring — feminine adjective",
+        "intro": "You are describing yourself as boring to other people.",
+        "initial": 2,
+        "parts": [
+          {
+            "word": "Soy",
+            "job": "The verb for this description of a person"
+          },
+          {
+            "word": "aburrida",
+            "job": "The feminine adjective form in this expression"
+          }
+        ],
+        "translation": "I am boring.",
+        "frames": [
+          {
+            "label": "1. Verb",
+            "shown": 1,
+            "focus": 0,
+            "heading": "Start with soy.",
+            "explanation": "Soy begins this description of the person. In this model, the whole expression will mean I am boring, rather than I feel bored."
+          },
+          {
+            "label": "2. Adjective",
+            "shown": 2,
+            "focus": 1,
+            "heading": "Add aburrida.",
+            "explanation": "Use aburrida as the feminine adjective form for this speaker. Changing the adjective’s o or a ending matches the speaker; it does not change bored into boring."
+          },
+          {
+            "label": "Whole sentence",
+            "shown": 2,
+            "focus": null,
+            "heading": "Soy aburrida.",
+            "explanation": "I am boring. With soy, the usual meaning describes being boring. Compare an estoy version for the feeling of being bored."
+          }
+        ]
+      }
+    ]
+  },
+  "chess-2": {
+    "subject": "chess",
+    "case": "courseSecond",
+    "kind": "board",
+    "title": "Inspect the trapped king’s three destinations",
+    "intro": "Black is to move. Tap a8, a7, b7 or b8 to inspect the attacks, or use the explanation buttons. The pieces stay in place while we work through the position.",
+    "resetLabel": "Show the starting position",
+    "position": "White: king c6 and queen b6. Black: king a8. Black to move.",
+    "fen": "k7/8/1QK5/8/8/8/8/8 b - - 0 1",
+    "targets": {
+      "a8": 0,
+      "a7": 1,
+      "b7": 2,
+      "b8": 3
+    },
+    "scenes": [
+      {
+        "label": "The stalemate position",
+        "intro": "First inspect the square the king occupies; then inspect each possible destination.",
+        "initial": 0,
+        "frames": [
+          {
+            "label": "Start: a8",
+            "target": "a8",
+            "attackers": [],
+            "heading": "The king on a8 is not in check.",
+            "explanation": "The queen on b6 does not share a rank, file or diagonal with a8. The white king on c6 is too far away to attack it. Keep this no-check finding for the conclusion."
+          },
+          {
+            "label": "Inspect a7",
+            "target": "a7",
+            "attackers": [
+              "b6"
+            ],
+            "heading": "A7 is attacked by the queen.",
+            "explanation": "From b6 to a7 is one file left and one rank up: a queen diagonal. Moving the king there would put it into check, so a7 is unavailable."
+          },
+          {
+            "label": "Inspect b7",
+            "target": "b7",
+            "attackers": [
+              "b6",
+              "c6"
+            ],
+            "heading": "B7 is attacked by both white pieces.",
+            "explanation": "The queen on b6 attacks b7 up the b-file. The white king on c6 also reaches b7 diagonally. Either attack is enough to make this destination unsafe."
+          },
+          {
+            "label": "Inspect b8",
+            "target": "b8",
+            "attackers": [
+              "b6"
+            ],
+            "heading": "B8 is attacked along the queen’s file.",
+            "explanation": "Follow b6–b7–b8. Those intervening squares are empty in the actual position, so the queen reaches b8. The black king cannot move there."
+          },
+          {
+            "label": "Conclusion",
+            "target": null,
+            "attackers": [],
+            "marks": [
+              "a7",
+              "b7",
+              "b8"
+            ],
+            "heading": "No check and no legal move: stalemate.",
+            "explanation": "All three destinations are attacked. Black has no other piece that could move, but the king’s current square is not attacked. Under standard rules that is stalemate, a draw rather than checkmate."
+          }
+        ]
+      }
+    ]
+  }
+}

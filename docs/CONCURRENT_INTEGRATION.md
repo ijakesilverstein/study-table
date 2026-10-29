@@ -24,3 +24,9 @@ The next teaching pass starts from shared main `0332b94662f66ad60d3c0af0794c7424
 Concurrent branches observed at the start were `feature/v133-authored-transfer-and-review` through `c42f497ce3bb92d91f074610d21768bfc3d48619` and `feature/v134-playful-story-mode` through `2531d5ed0218a1c2d6c325901860f810b62e7fb6`. They were inspected for scope, not merged into this teaching pass. Their review/game work remains on those branches. Do not describe V135 as containing every unmerged feature or unseen chat edit. Reconcile later work from the updated canonical source and keep all lesson records and delivered artifacts.
 
 The current user instruction is **do not push to Vercel**. No Vercel publication is part of this pass. Git-triggered Vercel deployment is explicitly disabled in the repository configuration.
+
+## V136 visual worked examples
+
+V136 starts from main `dfd5ffe36610ff72ce2dc12f9346e9351d908f37`. It adds a manual piano count/keyboard companion, Spanish meaning/phrase builder and touch/keyboard stalemate diagram to three existing worked cases. New data, script and styles live in `lesson-companions-v136.*`; all older display, guidance and demonstration records remain exact. Guided retrieval hides the companions with the answers. Manual inspection stops old playback and dictation while retaining typed working. See `VISUAL_COMPANIONS_V136.md` for scope and validation.
+
+The initial fetch still showed the authored-review and story branches at the same snapshots recorded above; neither was merged into this pass. Future work should fetch canonical main, preserve these teaching companions and never force-push over a concurrent update. Keep delivered HTML files and tags. The explicit **do not publish to Vercel** instruction remains active.
