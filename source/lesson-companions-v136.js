@@ -40,7 +40,9 @@ function v136Select(host,index,sceneIndex=Number(host.dataset.v136SceneIndex)){
  const record=v136Record(host.dataset.v136Unit),scene=record?.scenes[sceneIndex];
  if(!host.isConnected||!record||record.case!==host.dataset.v136Case||!Number.isInteger(sceneIndex)||sceneIndex<0||!scene||!Number.isInteger(index)||index<0||index>=scene.frames.length)return false;
  const frame=scene.frames[index],prefix=v136Prefix(host.dataset.v136Unit,host.dataset.v136Case),changedScene=sceneIndex!==Number(host.dataset.v136SceneIndex);
+ const microphone=document.querySelector('[data-coach-mic][aria-pressed="true"]')?.closest('.worked-coach');
  v127StopCoaching();v109StopMedia();
+ if(microphone)v127CoachShow(microphone,'Microphone stopped. Your working is kept while you inspect the visual example.');
  if($('v109PianoStatus'))$('v109PianoStatus').textContent='Written model selected. Use the playback controls above to hear the tune again.';
  if($('v109SpeechStatus'))$('v109SpeechStatus').textContent='Written model selected. Use the lesson’s audio controls when you want to listen.';
  host.dataset.v136Index=String(index);host.dataset.v136SceneIndex=String(sceneIndex);

@@ -1,6 +1,6 @@
 # Study Table
 
-An offline-capable learning app. [Open the V135 HTML on GitHub](https://github.com/ijakesilverstein/study-table/blob/v135/public/study-table-v135.html) and choose **Download raw file** to save the complete app. The separately published site at https://study-table-downloads.vercel.app may show an earlier release until a new deployment is verified.
+An offline-capable learning app. [Open the V136 HTML on GitHub](https://github.com/ijakesilverstein/study-table/blob/v136/public/study-table-v136.html) and choose **Download raw file** to save the complete app. The separately published site at https://study-table-downloads.vercel.app may show an earlier release until a new deployment is verified.
 
 V136 adds hands-on visual teaching in three worked cases: follow piano counts on a keyboard, build a Spanish phrase for the intended meaning, and inspect a stalemate position square by square. Complete explanations stay visible, and earlier lessons remain intact. See [the visual companions and checks](docs/VISUAL_COMPANIONS_V136.md). No Vercel publication is part of this pass.
 
