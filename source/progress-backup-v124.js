@@ -222,7 +222,7 @@
   d.querySelector('#v124Recovery').onclick=()=>{try{if(recovery)download(recovery,'study-table-before-restore.json')}catch(e){status(e.message)}};
   d.querySelector('#v124Reload').onclick=()=>location.reload();return d;
  }
- function open(trigger){const d=dialog();returnFocus=trigger instanceof HTMLElement?trigger:document.activeElement;if(!d.open)d.showModal();status(lastUndo?'You can undo the last restore in this page session.':'Choose Save a backup file, or preview a file to restore it.');d.querySelector('#v124BackupClose').focus()}
+ function open(trigger){const d=dialog();returnFocus=trigger instanceof HTMLElement?trigger:document.activeElement;if(!d.open){/* Closing emits an asynchronous event: invalidate the old preview before reopening, not after. */readingFile++;pending=null;d.querySelector('#v124Apply').disabled=true;d.querySelector('#v124BackupPreview').hidden=true;d.querySelector('#v124FileInfo').hidden=true;d.querySelector('#v124Conflict').value='local';d.showModal()}status(lastUndo?'You can undo the last restore in this page session.':'Choose Save a backup file, or preview a file to restore it.');d.querySelector('#v124BackupClose').focus()}
  function mount(){
   if(!document.getElementById('v124OpenBackup')){const b=document.createElement('button');b.id='v124OpenBackup';b.hidden=true;b.onclick=()=>open(document.getElementById('v101ToolsButton'));document.body.append(b)}
   const home=document.querySelector('#v90Hero .v90-actions');if(home&&!document.getElementById('v124BackupHome')){const b=document.createElement('button');b.id='v124BackupHome';b.type='button';b.textContent='Back up or restore';b.onclick=()=>open(b);home.append(b)}
