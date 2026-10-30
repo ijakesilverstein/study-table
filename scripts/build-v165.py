@@ -66,11 +66,11 @@ for subject, path in paths.items():
     assert f'"subject":"{subject}"' in page
     page = replace_one(page, '</style>', '\n' + css + '\n</style>')
     page = replace_one(page,
-        "+v130ChallengeMarkup()+'<ol id=\"courseOutline\"'",
-        "+v130ChallengeMarkup()+v133MapMarkup()+'<details class=\"v165-story-discovery\"><summary>Play a three-decision story</summary>'+v134StoryMarkup()+'</details><ol id=\"courseOutline\"'")
+        "+v130ChallengeMarkup()+'<ol id=\"courseOutline\">'",
+        "+v130ChallengeMarkup()+v133MapMarkup()+'<details class=\"v165-story-discovery\"><summary>Play a three-decision story</summary>'+v134StoryMarkup()+'</details><ol id=\"courseOutline\">'")
     page = replace_one(page,
-        "+practiceBlock(unit)+'<footer class=\"course-footer\"'",
-        "+practiceBlock(unit)+v133LessonMarkup(unit)+'<footer class=\"course-footer\"'")
+        "+practiceBlock(unit)+'<footer class=\"course-footer\">'",
+        "+practiceBlock(unit)+v133LessonMarkup(unit)+'<footer class=\"course-footer\">'")
     page = replace_one(page,
         'window.studyTableFullCourse={subject:COURSE.subject',
         '\n// V165: exact authored Codex activities, mounted inside canonical seven-course reader.\n'+practice_js+'\n'+story_js+'\nwindow.studyTableFullCourse={subject:COURSE.subject')
