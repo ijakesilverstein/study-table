@@ -1,0 +1,43 @@
+name: V164 reliable learning preview
+on:
+  push:
+    branches:
+      - feature/v164-reliable-dialogs
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Verify canonical V136 remains untouched
+        run: python3 scripts/build.py --check
+      - name: Build source-backed V163 and optional V164
+        run: |
+          python3 scripts/build-v163.py
+          python3 scripts/build-v164.py
+          python3 scripts/build-v164.py --check
+      - name: Check V163 preservation and course handoffs
+        run: |
+          python3 qa/check-reconciled-v163.py
+          node qa/test-reconciled-v163.cjs
+      - name: Check V164 delayed-close safety
+        run: node qa/test-dialog-race-v164.cjs
+      - name: Upload optional V164 standalone HTML (no deployment)
+        uses: actions/upload-artifact@v4
+        with:
+          name: study-table-v164-reliable
+          path: public/study-table-v164.html
+          if-no-files-found: error
+          retention-days: 30
