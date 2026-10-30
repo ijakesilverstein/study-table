@@ -1,0 +1,17 @@
+/* A single, optional next step. No new top-level navigation or progress badges. */
+.v166-lesson-next{box-sizing:border-box;margin:24px 0;padding:clamp(18px,3vw,28px);border:1px solid var(--study-line);border-radius:14px;background:var(--study-panel);color:var(--study-ink)}
+.v166-lesson-next h2{font:600 clamp(22px,3vw,29px)/1.35 Georgia,serif;margin:5px 0 10px}
+.v166-lesson-next p{line-height:1.65;margin:8px 0 16px}
+.v166-label{font:700 12px/1.5 system-ui!important;text-transform:uppercase;letter-spacing:.075em;color:var(--study-muted)}
+.v166-lesson-next button,.v166-real button{min-height:44px;padding:10px 16px;border:1px solid var(--study-accent);border-radius:8px;background:var(--study-accent);color:var(--study-accent-text);font-weight:700;cursor:pointer}
+.v166-lesson-next :focus-visible,.v166-real :focus-visible{outline:3px solid var(--study-warm);outline-offset:3px}
+.v166-real{box-sizing:border-box;max-width:100%;margin:15px 0 5px;padding:16px;border:1px solid var(--study-line);border-radius:10px;background:var(--study-surface);color:var(--study-ink)}
+.v166-real[hidden]{display:none!important}
+.v166-real h3{font:600 23px/1.35 Georgia,serif;margin:0 0 10px}
+.v166-real p{line-height:1.65}
+.v166-real label{font-weight:600;display:block;margin:13px 0 6px}
+.v166-real select,.v166-real textarea{box-sizing:border-box;width:100%;max-width:100%;padding:10px;border:1px solid var(--study-muted);border-radius:8px;color:var(--study-ink);background:var(--study-surface);font:16px/1.5 system-ui}
+.v166-real button{margin:13px 0}
+.v166-muted{font-size:13px;color:var(--study-muted)}
+.v166-story-link{font-weight:650}
+@media(max-width:480px){.v166-lesson-next button,.v166-real button{width:100%}}
