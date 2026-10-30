@@ -36,7 +36,19 @@ const file=path.join(__dirname,'..','public','study-table-v163.html');
    const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
    if(overflow>2)throw Error('Home overflow '+width+'px: '+overflow);
   }
+  // Follow all seven live course routes and three V136 authored visual companions.
+  const courses=[['spanish','cafe-project'],['piano','piano-2'],['chess','chess-3'],['calculus','calculus-1'],['physics','physics-4'],['medicine','test-interpretation'],['business','unit-economics']];
+  for(const [subject,unit] of courses){
+   await page.evaluate(([s,id])=>window.studyTableFullCourses.open(s,id),[subject,unit]);
+   await page.waitForFunction(()=>document.body.classList.contains('full-course-reading'));
+   await page.evaluate(()=>window.v35Home?.());
+  }
+  for(const [subject,unit] of [['piano','piano-2'],['spanish','descriptions'],['chess','chess-2']]){
+   await page.evaluate(([s,id])=>window.studyTableFullCourses.open(s,id),[subject,unit]);
+   await page.waitForFunction(id=>Array.from(document.querySelectorAll('iframe')).some(f=>f.contentDocument?.querySelector('.v136-companion[data-v136-unit="'+id+'"]')),unit,{timeout:15000});
+   await page.evaluate(()=>window.v35Home?.());
+  }
   if(errors.length)throw Error('Page errors: '+errors.join('; '));
-  console.log('PASS V163: 11 authored flows, transfer retries, five widths, no page exceptions');
+  console.log('PASS V163: 11 authored flows, transfer retries, five widths, 7 course routes, 3 V136 companions, no page exceptions');
  }finally{await browser.close()}
 })().catch(e=>{console.error(e);process.exitCode=1});
