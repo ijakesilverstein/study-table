@@ -1,0 +1,45 @@
+name: V168 reconciled authored learning preview
+on:
+  push:
+    branches:
+      - feature/v168-story-matched-teachback
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  optional-preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Verify canonical production V136 is unchanged
+        run: python3 scripts/build.py --check
+      - name: Build the optional V163–V168 learning previews from source
+        run: |
+          python3 scripts/build-v163.py
+          python3 scripts/build-v164.py
+          python3 scripts/build-v165.py
+          python3 scripts/build-v166.py
+          python3 scripts/build-v167.py
+          python3 scripts/build-v168.py
+          python3 scripts/build-v168.py --check
+      - name: Verify story matches and preservation of 208 archive pages
+        run: python3 qa/check-v168.py
+      - name: Test all 87 lesson prompts and 52 checked variants in Chromium
+        run: node qa/test-v168-browser.cjs
+      - name: Upload standalone preview only (not production)
+        uses: actions/upload-artifact@v4
+        with:
+          name: study-table-v168-story-matched-teachback
+          path: public/study-table-v168.html
+          if-no-files-found: error
+          retention-days: 30
