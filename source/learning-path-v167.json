@@ -1,0 +1,95 @@
+{
+  "spanish": {
+    "hook": "The café worker talks too fast. What would you say next?",
+    "caption": "Recover a conversation instead of guessing your way through it.",
+    "storyUnit": "spanish-5",
+    "practiceUnit": "spanish-1",
+    "practiceContext": "A fresh café request — a separate skill from repairing a conversation.",
+    "reflection": "What would you say to slow the conversation down without ending it?",
+    "example": "A short request to repeat more slowly keeps the conversation open. I don't need to understand every word before asking for help.",
+    "nextText": "Try one real conversation when you get the chance. Rehearsal is only preparation."
+  },
+  "piano": {
+    "hook": "The drummer keeps counting while your note lasts longer. Are you still on the beat?",
+    "caption": "Hear the difference between a held sound and a steady pulse.",
+    "storyUnit": "rests-and-halves",
+    "practiceUnit": "piano-0",
+    "practiceContext": "Count beats across bars, including held notes and rests.",
+    "reflection": "What keeps time when there isn't a new note to play?",
+    "example": "The beat continues underneath the sound or silence. A held note does not stop or restart the count.",
+    "nextText": "Tap a slow pulse and count through one bar without starting over on a rest."
+  },
+  "chess": {
+    "hook": "Your king wants to castle. What if the square it crosses is attacked?",
+    "caption": "Treat the position like a real decision, not a memorized move.",
+    "storyUnit": "castling",
+    "practiceUnit": "read-moves",
+    "practiceContext": "A separate checked skill: reading algebraic moves accurately.",
+    "reflection": "Why isn't it enough to know where the king wants to finish?",
+    "example": "Castling also depends on the path and whether the king is in, crosses, or ends in check. I must inspect the intervening square.",
+    "nextText": "Before every castle, inspect the king's start, crossing, and destination squares."
+  },
+  "calculus": {
+    "hook": "A banner grows taller and wider. How quickly is its area changing?",
+    "caption": "Follow two moving quantities instead of memorizing one formula.",
+    "storyUnit": "product-rule",
+    "practiceUnit": "product-rule",
+    "practiceContext": "A new product-rule problem with independently checked arithmetic.",
+    "reflection": "When two factors change, why does a derivative need two terms?",
+    "example": "One term counts how the first factor changes while the second is held at that instant; the other counts the second factor's change. Leaving one out loses part of the rate.",
+    "nextText": "Before differentiating, identify which two quantities are changing."
+  },
+  "physics": {
+    "hook": "A skier starts from a higher hill. Does twice the height mean twice the speed?",
+    "caption": "Use the model of energy before making an intuitive guess.",
+    "storyUnit": "physics-2",
+    "practiceUnit": "physics-1",
+    "practiceContext": "A different checked skill: relating net force, mass, and acceleration.",
+    "reflection": "What quantity is proportional to height, and what quantity depends on a square root?",
+    "example": "Gravitational potential energy is proportional to height, but speed comes from kinetic energy's v-squared term, so doubling the height doesn't double the speed.",
+    "nextText": "Sketch where energy goes before choosing the next equation."
+  },
+  "medicine": {
+    "hook": "A screening test comes back positive. How much should that change your belief?",
+    "caption": "Separate a useful test from what its result proves for one person.",
+    "storyUnit": "test-interpretation",
+    "practiceUnit": "homeostasis",
+    "practiceContext": "A different medical reasoning skill: feedback loops, not interpreting test accuracy.",
+    "reflection": "Why does the number of people who had the condition before testing matter?",
+    "example": "The starting prevalence changes how many true and false positives we expect. Test accuracy alone doesn't tell us the probability that one positive result is a true case.",
+    "nextText": "When assessing a test, consider the population before interpreting the result."
+  },
+  "business": {
+    "hook": "Your product starts selling faster—but shipping costs rise. Are those sales still worth it?",
+    "caption": "Follow the dollars that remain after each additional sale.",
+    "storyUnit": "unit-economics",
+    "practiceUnit": "unit-economics",
+    "practiceContext": "A fresh contribution-per-sale problem, with a worked answer.",
+    "reflection": "Why can sales rise while profit gets worse?",
+    "example": "Revenue isn't the cash left per sale. If the cost of fulfilling each order rises enough, contribution can shrink even while the top line grows.",
+    "nextText": "Check revenue, variable costs, and fixed costs separately before celebrating sales growth."
+  },
+  "practiceReflections": {
+    "spanish-0": ["What tells you to use soy instead of estoy?", "Soy identifies who someone is; estoy is useful for a location or temporary state in these examples."],
+    "spanish-1": ["What made the café request understandable and polite?", "The request includes the thing wanted and por favor. It doesn't require a complicated sentence to work."],
+    "noun-phrases": ["What must agree when the noun is plural?", "The adjective changes with the noun's number; two cafés pequeños both use the plural."],
+    "piano-1": ["How do you know the next white key without guessing?", "Move one white key to the right from C4 and follow the note-letter sequence to D4."],
+    "piano-0": ["Why doesn't a long note reduce the number of beats?", "A note's length determines how long it is held, but the meter keeps the beat count continuous."],
+    "piano-4": ["Why is E in a C-major triad?", "The C-major triad stacks C, E and G; E is the third between root C and fifth G."],
+    "chess-0": ["How can you verify the destination square?", "Track the pawn's file and rank separately. A two-square white pawn advance from e2 ends on e4."],
+    "read-moves": ["In a move like Nf3, which part names the piece and which names the destination?", "N means knight. The file and rank f3 tell you where the knight goes."],
+    "count-exchanges": ["Why is winning a piece not automatically a good trade?", "Count what you give up as well as what you gain. Winning five points after losing nine is a net loss of four."],
+    "functions": ["What does f(4) ask you to do?", "Replace x with 4 in the rule before evaluating the arithmetic. The parentheses aren't optional."],
+    "derivative-rules": ["Why do you differentiate before substituting x=2?", "f′(2) is the derivative's value at 2, not the original function's value. Find the derivative rule first."],
+    "product-rule": ["What disappears if you differentiate only one factor?", "You lose the change contributed by the other factor. Both factors vary, so the derivative needs both contributions."],
+    "units-and-directions": ["Why isn't distance walked the same as displacement?", "Displacement is the signed change in position. Walking west cancels some eastward displacement without erasing the distance travelled."],
+    "physics-1": ["Why divide net force by mass rather than multiply?", "From F=ma, acceleration is net force divided by mass. A bigger mass accelerates less for the same net force."],
+    "physics-3": ["What stays constant when you double resistance at the same voltage?", "Voltage is held fixed. Ohm's law gives I=V/R, so current is reduced when resistance increases."],
+    "homeostasis": ["What actually removes heat when you sweat?", "Evaporation takes energy from the skin. Sweat sitting on the skin without evaporating doesn't cool in the same way."],
+    "two-circuits": ["Why does the right ventricle send blood to the lungs?", "It drives the pulmonary circuit to exchange gases before blood returns to the left side to be pumped around the body."],
+    "drug-halflife": ["How does a half-life differ from subtracting a fixed number?", "Each half-life removes half of what remains, not half of the original amount every time."],
+    "revenue-vs-cash": ["Why can a sale happen before cash arrives?", "An invoice may record a claim against a customer, but unpaid invoices aren't collected cash."],
+    "unit-economics": ["What does contribution per sale leave out?", "Selling price minus variable expenses leaves contribution; fixed costs still need to be covered."],
+    "margin-vs-markup": ["How do margin and markup use different bases?", "Gross margin divides gross profit by selling price; markup divides it by cost. The same product has different percentages."]
+  }
+}
