@@ -1,0 +1,90 @@
+{
+  "castling": {
+    "subject": "chess",
+    "skill": "Know when castling is legal",
+    "variants": [
+      {
+        "prompt": "White's king and h1 rook have never moved, and the squares between them are empty. An enemy bishop attacks f1. Can White castle kingside now?",
+        "kind": "choice",
+        "options": ["No — the king would cross an attacked square", "Yes — because the rook is still on h1", "Yes — if g1 itself is safe"],
+        "answer": "No — the king would cross an attacked square",
+        "hint": "Look at all three king squares: where it starts, crosses, and finishes.",
+        "why": "Kingside castling moves the king from e1 through f1 to g1. The king may not be in check, pass through an attacked square, or finish on one.",
+        "wrong": {
+          "Yes — because the rook is still on h1": "An unmoved rook is necessary but not enough. The king must also travel safely.",
+          "Yes — if g1 itself is safe": "The destination is not the only square that matters. f1 cannot be under attack."
+        }
+      },
+      {
+        "prompt": "The white king moved from e1 to e2 earlier in the game and has since returned to e1. The h1 rook has never moved, the path is empty, and no square is attacked. May White castle kingside?",
+        "kind": "choice",
+        "options": ["No — the king already moved", "Yes — because the king is back on e1", "Yes — because the path is clear"],
+        "answer": "No — the king already moved",
+        "hint": "Castling depends on the king's history, not merely its current square.",
+        "why": "Once a king moves, castling rights are lost for the rest of the game, even if it later returns to e1.",
+        "wrong": {
+          "Yes — because the king is back on e1": "Returning to e1 does not restore lost castling rights.",
+          "Yes — because the path is clear": "An empty, safe path is not enough: the king must never have moved."
+        }
+      }
+    ]
+  },
+  "physics-2": {
+    "subject": "physics",
+    "skill": "Use kinetic energy to understand motion",
+    "variants": [
+      {
+        "prompt": "Ignoring friction, a 10 kg sled moves at 4 m/s. How much kinetic energy does it have, in joules? Enter a number.",
+        "kind": "number",
+        "answer": 80,
+        "hint": "Kinetic energy = 1/2 × mass × speed squared. Square 4 before multiplying by 10.",
+        "why": "1/2 × 10 kg × (4 m/s)^2 = 5 × 16 = 80 joules.",
+        "wrong": {
+          "160": "160 J leaves out the one-half in the kinetic-energy formula.",
+          "40": "40 J is what you get if you treat 4 as unsquared speed. You need 4² = 16."
+        }
+      },
+      {
+        "prompt": "Ignoring friction, a 25 kg sled has 200 joules of kinetic energy. How fast is it moving, in m/s? Enter a number.",
+        "kind": "number",
+        "answer": 4,
+        "hint": "First solve v² = 2E/m. Then take the positive square root for speed.",
+        "why": "v² = 2 × 200 / 25 = 16, so speed is 4 m/s.",
+        "wrong": {
+          "16": "16 is speed squared, not speed. Take its square root to get 4 m/s.",
+          "8": "8 m/s comes from an incorrect rearrangement. Solve v² = 2E/m first."
+        }
+      }
+    ]
+  },
+  "test-interpretation": {
+    "subject": "medicine",
+    "skill": "Interpret positive screening results with base rates",
+    "variants": [
+      {
+        "prompt": "In 10,000 people, 1% have a condition. A screening test catches 90% of cases and correctly clears 95% of people without it. Among everyone who tests positive, about what fraction truly has the condition?",
+        "kind": "choice",
+        "options": ["About 15%", "About 50%", "About 90%"],
+        "answer": "About 15%",
+        "hint": "First count 90 true positives among 100 cases, then 5% of 9,900 unaffected people who test positive. Compare 90 with that total.",
+        "why": "There are 90 true positives and 495 false positives; 90 ÷ 585 ≈ 15.4%. A positive screening result is not a diagnosis.",
+        "wrong": {
+          "About 50%": "A fifty-fifty guess misses the 495 false positives from the much larger unaffected group.",
+          "About 90%": "90% is sensitivity among people who have the condition, not the probability of having it after a positive result."
+        }
+      },
+      {
+        "prompt": "In 1,000 people, 10% have a condition. A test detects 90% of cases and correctly clears 90% of people without it. Among positive results, approximately what fraction truly has the condition?",
+        "kind": "choice",
+        "options": ["About 10%", "About 50%", "About 90%"],
+        "answer": "About 50%",
+        "hint": "Count true positives: 90% of 100. Count false positives: 10% of 900. Compare them.",
+        "why": "90 true positives plus 90 false positives makes 180 positive results. Half are true positives. This illustrates why prevalence changes how a positive test should be interpreted.",
+        "wrong": {
+          "About 10%": "10% is the starting prevalence, not the fraction among people who tested positive.",
+          "About 90%": "90% describes sensitivity here, not the positive predictive value."
+        }
+      }
+    ]
+  }
+}
