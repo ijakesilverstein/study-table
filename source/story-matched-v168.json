@@ -1,0 +1,116 @@
+{
+  "spanish-5": {
+    "subject": "spanish",
+    "skill": "Repair a conversation you didn't understand",
+    "variants": [
+      {
+        "prompt": "The café worker speaks too fast. Politely ask, 'Can you repeat that more slowly, please?' in Spanish.",
+        "kind": "text",
+        "answer": "¿Puede repetirlo más despacio, por favor?",
+        "accept": ["¿Puedes repetirlo más despacio, por favor?", "¿Me lo puede repetir más despacio, por favor?", "¿Podría repetirlo más despacio, por favor?", "¿Lo puede repetir más despacio, por favor?"],
+        "hint": "Ask for a repeat (repetir) more slowly (más despacio) and add por favor. A short polite sentence is enough.",
+        "why": "Puede repetirlo más despacio, por favor asks the listener to repeat the message more slowly. Asking for clarification keeps the conversation going without pretending to understand.",
+        "wrong": {"sí gracias": "Yes doesn't tell the worker which question you understood. Ask for a slower repeat before agreeing.", "un cafe por favor": "That orders a coffee but doesn't solve the question you missed. Request clarification first."}
+      },
+      {
+        "prompt": "You understand the words but don't know what 'para llevar' means. Ask 'What does para llevar mean?' in Spanish.",
+        "kind": "text",
+        "answer": "¿Qué significa para llevar?",
+        "accept": ["¿Qué quiere decir para llevar?", "¿Qué significa 'para llevar'?", "¿Me puede explicar qué significa para llevar?"],
+        "hint": "Start with qué significa, then name the phrase you're asking about.",
+        "why": "¿Qué significa para llevar? asks the meaning of the specific phrase. In this café context, para llevar means to go. Asking for a meaning differs from asking someone to repeat.",
+        "wrong": {"si gracias": "A yes/no response doesn't explain the unfamiliar phrase. Ask what it means.", "para aqui": "Para aquí means for here, but it doesn't ask what para llevar means."}
+      }
+    ]
+  },
+  "rests-and-halves": {
+    "subject": "piano",
+    "skill": "Keep time during notes and rests",
+    "variants": [
+      {
+        "prompt": "At 60 beats per minute, how many seconds does a one-beat rest last? Answer with a number of seconds.",
+        "kind": "number",
+        "answer": 1,
+        "hint": "At 60 BPM, each beat takes 60 ÷ 60 seconds. Silence still occupies its full beat.",
+        "why": "60 ÷ 60 = 1 second per beat. A one-beat rest lasts one second, even though no note sounds; the pulse keeps moving.",
+        "wrong": {"0": "Silence is not zero time. The rest occupies one counted beat even though you play nothing.", "2": "Two seconds would be two beats at 60 BPM. This rest is one beat."}
+      },
+      {
+        "prompt": "At 120 beats per minute, how many seconds does a half-beat note last? Answer with a number of seconds.",
+        "kind": "number",
+        "answer": 0.25,
+        "hint": "At 120 BPM, one full beat lasts 0.5 seconds. A half-beat note lasts half of that.",
+        "why": "One beat at 120 BPM takes 60 ÷ 120 = 0.5 seconds. Half a beat takes 0.25 seconds; the quarter-note pulse continues at 120 BPM.",
+        "wrong": {"0.5": "0.5 seconds is one whole beat at 120 BPM, not half a beat.", "1": "A full second would be two beats at this tempo, not a half-beat note."}
+      }
+    ]
+  },
+  "castling": {
+    "subject": "chess",
+    "skill": "Check whether a castle is legal",
+    "variants": [
+      {
+        "prompt": "White's king on e1 and rook on h1 have not moved. The intervening squares are empty. A black rook attacks f1 down an otherwise open f-file, but e1 and g1 are safe. Can White castle kingside?",
+        "kind": "choice",
+        "options": ["Yes", "No"],
+        "answer": "No",
+        "hint": "The king travels through f1 before reaching g1. Inspect the crossing square, not just the destination.",
+        "why": "Castling is illegal because the king would cross attacked f1. The king may not start in check, cross check, or end in check, even when the destination looks safe.",
+        "wrong": {"yes": "A safe final g1 square isn't sufficient: f1 is attacked and the king would cross it."}
+      },
+      {
+        "prompt": "White's king on e1 previously moved to f1 and back to e1. The h1 rook has never moved, all squares between them are empty, and e1, f1, and g1 are not attacked. Can White castle kingside now?",
+        "kind": "choice",
+        "options": ["Yes", "No"],
+        "answer": "No",
+        "hint": "Check castling rights from earlier moves, not only today's board diagram.",
+        "why": "The king has moved before, so castling rights were permanently lost. Returning to e1 does not restore them, even with an empty and safe route.",
+        "wrong": {"yes": "The king's earlier move permanently removed castling rights; a clear route cannot restore them."}
+      }
+    ]
+  },
+  "physics-2": {
+    "subject": "physics",
+    "skill": "Turn gravitational energy into speed",
+    "variants": [
+      {
+        "prompt": "A sled starts from rest and drops vertically by 5 m with negligible friction. Use g = 10 m/s². What is its final speed in m/s? Enter the number only.",
+        "kind": "number",
+        "answer": 10,
+        "hint": "Set mgh = ½mv². The mass cancels; solve for v² before taking the square root.",
+        "why": "v² = 2gh = 2 × 10 × 5 = 100 m²/s², so v = √100 = 10 m/s. This assumes no frictional loss and a start from rest.",
+        "wrong": {"100": "100 is v² in m²/s², not speed. Take the square root to get 10 m/s.", "5": "5 is the vertical drop in metres, not the speed in metres per second."}
+      },
+      {
+        "prompt": "The same sled starts from rest and drops vertically by 20 m with negligible friction. Use g = 10 m/s². What is its final speed in m/s? Enter the number only.",
+        "kind": "number",
+        "answer": 20,
+        "hint": "v = √(2gh), not 2gh. Try g = 10 and h = 20.",
+        "why": "v² = 2 × 10 × 20 = 400, so v = 20 m/s. Quadrupling the drop from 5 to 20 m doubles the speed, not quadruples it.",
+        "wrong": {"40": "Doubling the 10 m/s result twice is not the energy relationship. Speed scales with √height.", "400": "400 is v²; the requested speed is the square root, 20 m/s."}
+      }
+    ]
+  },
+  "test-interpretation": {
+    "subject": "medicine",
+    "skill": "Interpret a positive screening test using prevalence",
+    "variants": [
+      {
+        "prompt": "Of 1,000 people, 1% have a condition. A test has 90% sensitivity and 90% specificity. What percentage of positive results are true positives? Round to two decimal places; enter the number only.",
+        "kind": "number",
+        "answer": 8.33,
+        "hint": "Split 1,000 into 10 with the condition and 990 without. Count true positives and false positives before dividing.",
+        "why": "10 have the condition and 9 test positive. Of 990 without it, 10% (=99) test falsely positive. So 9 out of 108 positive results are true: 9/108 ≈ 8.33%. This describes the specified population, not an individual diagnosis.",
+        "wrong": {"90": "90% is the sensitivity and specificity; neither equals the chance a positive result is a true case.", "1": "1% is the starting prevalence, not the fraction among those who tested positive.", "9": "9 is the count of true positives, not the percentage among all positive results."}
+      },
+      {
+        "prompt": "Of 1,000 people, 10% have a condition. The same test has 90% sensitivity and 90% specificity. What percentage of positive results are true positives? Enter the number only.",
+        "kind": "number",
+        "answer": 50,
+        "hint": "Count true positives from 100 people with the condition, and false positives from the 900 without it.",
+        "why": "100 have the condition, yielding 90 true positives. Of 900 without it, 90 (10%) give false positives. So 90 out of 180 positives are true: 50%. Same test, different starting prevalence.",
+        "wrong": {"90": "90% describes test sensitivity/specificity, not predictive value. Divide 90 true positives by all 180 positives.", "10": "10% is prevalence before testing; calculate the proportion of true cases among positive results."}
+      }
+    ]
+  }
+}

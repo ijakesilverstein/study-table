@@ -1,0 +1,37 @@
+name: V163 reconciled teaching preview
+on:
+  push:
+    branches:
+      - feature/v163-reconciled-curiosity-coaching
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reconciled:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Verify canonical V136 build and public HTML
+        run: python3 scripts/build.py --check
+      - name: Build optional V163 without changing the public entry point
+        run: python3 scripts/build-v163.py
+      - run: python3 scripts/build-v163.py --check
+      - run: python3 qa/check-reconciled-v163.py
+      - run: node qa/test-reconciled-v163.cjs
+      - name: Upload standalone V163 preview only
+        uses: actions/upload-artifact@v4
+        with:
+          name: study-table-v163-reconciled
+          path: public/study-table-v163.html
+          if-no-files-found: error
+          retention-days: 30
