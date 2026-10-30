@@ -1,0 +1,410 @@
+[
+  {
+    "id": "cafe",
+    "title": "Order at a café",
+    "person": "A café worker",
+    "unit": "spanish-5",
+    "goal": "Ask clearly, then repair a misunderstanding.",
+    "turns": [
+      {
+        "heard": "¿Qué le pongo?",
+        "meaning": "What can I get you?",
+        "options": [
+          "Un café con leche, por favor.",
+          "Sí, gracias."
+        ],
+        "best": 0,
+        "why": [
+          "A direct, polite order tells the worker what to make.",
+          "Yes, thank you sounds polite, but it does not answer what you want."
+        ],
+        "repair": "Quisiera un café con leche, por favor."
+      },
+      {
+        "heard": "¿Grande o pequeño?",
+        "meaning": "Large or small?",
+        "options": [
+          "Con tarjeta.",
+          "Pequeño, por favor."
+        ],
+        "best": 1,
+        "why": [
+          "By card is useful later, but the worker is asking about size now.",
+          "You answered the size question with the size."
+        ],
+        "repair": "El pequeño, gracias."
+      },
+      {
+        "heard": "¿Algo más?",
+        "meaning": "Anything else?",
+        "options": [
+          "No, eso es todo. Gracias.",
+          "Sí, por favor."
+        ],
+        "best": 0,
+        "why": [
+          "You have finished the order naturally.",
+          "Yes, please can suggest you want something else, when you are trying to finish the order."
+        ],
+        "repair": "Nada más, gracias."
+      }
+    ]
+  },
+  {
+    "id": "greeting",
+    "title": "Meet someone new",
+    "person": "A new acquaintance",
+    "unit": "spanish-0",
+    "goal": "Introduce yourself and keep a conversation moving.",
+    "turns": [
+      {
+        "heard": "Hola, ¿cómo te llamas?",
+        "meaning": "Hi, what's your name?",
+        "options": [
+          "Soy de Nueva York. ¿Y tú?",
+          "Me llamo Alex. ¿Y tú?"
+        ],
+        "best": 1,
+        "why": [
+          "This would fit a question about where you are from, not what your name is.",
+          "You give a name and invite theirs; replace Alex with your own name when practicing."
+        ],
+        "repair": "Soy Alex. Mucho gusto."
+      },
+      {
+        "heard": "Mucho gusto. ¿De dónde eres?",
+        "meaning": "Nice to meet you. Where are you from?",
+        "options": [
+          "Soy de Nueva York.",
+          "Vivo en Nueva York desde hace dos años."
+        ],
+        "best": 0,
+        "why": [
+          "Soy de introduces where you're from.",
+          "That describes where you live and for how long. It might be useful later but does not directly answer where you are from."
+        ],
+        "repair": "Vivo en Nueva York."
+      },
+      {
+        "heard": "¿Y qué te gusta hacer?",
+        "meaning": "And what do you like to do?",
+        "options": [
+          "Estoy bien, gracias.",
+          "Me gusta cocinar y caminar."
+        ],
+        "best": 1,
+        "why": [
+          "That would answer how you are, not what you like doing.",
+          "You give two activities; swap in your own interests in real life."
+        ],
+        "repair": "Me gusta aprender español."
+      }
+    ]
+  },
+  {
+    "id": "market",
+    "title": "Shop at a market",
+    "person": "A market vendor",
+    "unit": "noun-phrases",
+    "goal": "Ask a price and confirm the amount.",
+    "turns": [
+      {
+        "heard": "Buenos días. ¿Qué busca?",
+        "meaning": "Good morning. What are you looking for?",
+        "options": [
+          "Busco tres plátanos, por favor.",
+          "Quisiera dos plátanos, por favor."
+        ],
+        "best": 0,
+        "why": [
+          "You name the item and quantity.",
+          "You named the fruit, but asked for two rather than the three you planned to buy."
+        ],
+        "repair": "¿Tiene plátanos?"
+      },
+      {
+        "heard": "Sí. ¿Cuántos quiere?",
+        "meaning": "Yes. How many would you like?",
+        "options": [
+          "Cuestan cuatro dólares.",
+          "Tres, por favor."
+        ],
+        "best": 1,
+        "why": [
+          "That gives a price instead of answering how many you want.",
+          "A short answer is completely natural after the question."
+        ],
+        "repair": "Quiero tres."
+      },
+      {
+        "heard": "Son cuatro dólares. ¿Está bien?",
+        "meaning": "That's four dollars. Is that okay?",
+        "options": [
+          "Sí, está bien. Gracias.",
+          "¿Cuánto es cada uno?"
+        ],
+        "best": 0,
+        "why": [
+          "You confirm the price and close the purchase.",
+          "Asking the unit price can help, but the vendor is confirming the total of four dollars right now."
+        ],
+        "repair": "¿Cuatro dólares en total?"
+      }
+    ]
+  },
+  {
+    "id": "directions",
+    "title": "Ask for directions",
+    "person": "A passerby",
+    "unit": "questions",
+    "goal": "Get one usable direction, even if they speak quickly.",
+    "turns": [
+      {
+        "heard": "Hola, ¿necesitas ayuda?",
+        "meaning": "Hi, do you need help?",
+        "options": [
+          "Sí, voy a casa.",
+          "Sí, ¿dónde está el metro?"
+        ],
+        "best": 1,
+        "why": [
+          "You answer with where you are going, but not which help you need.",
+          "You answer yes and ask for the subway."
+        ],
+        "repair": "Perdón, ¿el metro está cerca?"
+      },
+      {
+        "heard": "Sigue derecho y gira a la izquierda.",
+        "meaning": "Go straight and turn left.",
+        "options": [
+          "¿A la izquierda, verdad?",
+          "Está bien, gracias."
+        ],
+        "best": 0,
+        "why": [
+          "Checking 'left, right?' verifies the crucial direction.",
+          "This is polite, but does not verify the left turn you need to remember."
+        ],
+        "repair": "¿Puede repetirlo más despacio?"
+      },
+      {
+        "heard": "Sí. Está a dos cuadras.",
+        "meaning": "Yes. It's two blocks away.",
+        "options": [
+          "Sí, conozco el barrio.",
+          "Perfecto, muchas gracias."
+        ],
+        "best": 1,
+        "why": [
+          "This says you know the neighborhood; it does not acknowledge the directions.",
+          "You've understood and thanked them naturally."
+        ],
+        "repair": "Gracias por ayudarme."
+      }
+    ]
+  },
+  {
+    "id": "appointment",
+    "title": "Confirm an appointment",
+    "person": "A receptionist",
+    "unit": "habits",
+    "goal": "Verify the day, time and your name.",
+    "turns": [
+      {
+        "heard": "Buenos días. ¿Tiene cita?",
+        "meaning": "Good morning. Do you have an appointment?",
+        "options": [
+          "Sí, tengo una cita a las tres.",
+          "Sí, estoy aquí para una visita."
+        ],
+        "best": 0,
+        "why": [
+          "You confirm you have an appointment at three.",
+          "You identify the purpose but do not confirm the appointment time."
+        ],
+        "repair": "Sí, tengo una cita hoy."
+      },
+      {
+        "heard": "¿A nombre de quién?",
+        "meaning": "Under what name?",
+        "options": [
+          "Tengo una cita esta tarde.",
+          "A nombre de Alex."
+        ],
+        "best": 1,
+        "why": [
+          "That confirms an appointment but still does not supply the booking name requested.",
+          "A nombre de gives the booking name. Say your actual name instead."
+        ],
+        "repair": "La cita está a mi nombre."
+      },
+      {
+        "heard": "Un momento, por favor.",
+        "meaning": "One moment, please.",
+        "options": [
+          "Claro, gracias.",
+          "Sí, necesito una cita hoy."
+        ],
+        "best": 0,
+        "why": [
+          "You politely acknowledge the wait.",
+          "This asks for an appointment when you already have one and are being asked to wait."
+        ],
+        "repair": "Está bien, espero aquí."
+      }
+    ]
+  },
+  {
+    "id": "neighbor",
+    "title": "Chat with a neighbor",
+    "person": "A neighbor",
+    "unit": "descriptions",
+    "goal": "Describe your day and ask a follow-up.",
+    "turns": [
+      {
+        "heard": "¡Hola! ¿Qué tal tu día?",
+        "meaning": "Hi! How's your day?",
+        "options": [
+          "Bien, gracias.",
+          "Bien, un poco ocupado. ¿Y el tuyo?"
+        ],
+        "best": 1,
+        "why": [
+          "That is an acceptable answer, but the stronger choice also invites the neighbor into the conversation.",
+          "You describe your day and return the question."
+        ],
+        "repair": "Todo bien, gracias. ¿Y tú?"
+      },
+      {
+        "heard": "Bien también. ¿Tienes planes esta tarde?",
+        "meaning": "Good too. Do you have plans this afternoon?",
+        "options": [
+          "Sí, voy a cocinar en casa.",
+          "Todavía no sé. ¿Y tú?"
+        ],
+        "best": 0,
+        "why": [
+          "You explain a plausible plan; use your own activity in real life.",
+          "This is a valid answer if you have not planned anything, but it is less useful for practicing a specific activity."
+        ],
+        "repair": "Creo que voy a descansar."
+      },
+      {
+        "heard": "¡Qué bien! Nos vemos luego.",
+        "meaning": "How nice! See you later.",
+        "options": [
+          "Sí, nos vemos mañana.",
+          "¡Hasta luego!"
+        ],
+        "best": 1,
+        "why": [
+          "That changes the goodbye to a promise about tomorrow rather than simply responding to see you later.",
+          "A natural and friendly goodbye."
+        ],
+        "repair": "¡Que tengas buen día!"
+      }
+    ]
+  },
+  {
+    "id": "restaurant",
+    "title": "Handle a restaurant mix-up",
+    "person": "A server",
+    "unit": "spanish-6",
+    "goal": "Correct an order politely without losing the conversation.",
+    "turns": [
+      {
+        "heard": "Aquí está su ensalada.",
+        "meaning": "Here's your salad.",
+        "options": [
+          "Disculpe, pedí una sopa.",
+          "Está bien, gracias."
+        ],
+        "best": 0,
+        "why": [
+          "You politely flag the mismatch and name the item you ordered.",
+          "Accepting the salad without mentioning the mismatch will not get the soup you ordered."
+        ],
+        "repair": "Perdón, creo que hubo un error."
+      },
+      {
+        "heard": "Ah, perdón. ¿Una sopa de verduras?",
+        "meaning": "Oh, sorry. A vegetable soup?",
+        "options": [
+          "No, quiero una ensalada.",
+          "Sí, exactamente. Gracias."
+        ],
+        "best": 1,
+        "why": [
+          "That switches to salad instead of confirming the vegetable soup you originally wanted.",
+          "You confirm the corrected order clearly."
+        ],
+        "repair": "Sí, la sopa de verduras."
+      },
+      {
+        "heard": "Enseguida se la traigo.",
+        "meaning": "I'll bring it right away.",
+        "options": [
+          "Perfecto, muchas gracias.",
+          "Sí, ¿cuánto cuesta?"
+        ],
+        "best": 0,
+        "why": [
+          "You acknowledge the help and finish politely.",
+          "The price question is possible, but it interrupts the server who has already agreed to bring the corrected dish."
+        ],
+        "repair": "Gracias por su ayuda."
+      }
+    ]
+  },
+  {
+    "id": "plans",
+    "title": "Make plans with a friend",
+    "person": "A friend",
+    "unit": "spanish-3",
+    "goal": "Ask, negotiate a time and confirm the plan.",
+    "turns": [
+      {
+        "heard": "¿Quieres tomar un café mañana?",
+        "meaning": "Do you want to get coffee tomorrow?",
+        "options": [
+          "Sí, hasta mañana.",
+          "¡Sí! ¿A qué hora?"
+        ],
+        "best": 1,
+        "why": [
+          "You accept and say goodbye, but have not pinned down a time yet.",
+          "You agree and ask the next useful question."
+        ],
+        "repair": "Sí, me gustaría. ¿Cuándo?"
+      },
+      {
+        "heard": "¿A las nueve de la mañana?",
+        "meaning": "At nine in the morning?",
+        "options": [
+          "¿Podemos ir a las diez?",
+          "Sí, a las nueve está bien."
+        ],
+        "best": 0,
+        "why": [
+          "You propose a different hour politely.",
+          "That accepts nine instead of negotiating the later time you prefer."
+        ],
+        "repair": "¿Te parece bien a las diez?"
+      },
+      {
+        "heard": "Sí, a las diez está perfecto.",
+        "meaning": "Yes, ten is perfect.",
+        "options": [
+          "Perfecto, hablamos luego.",
+          "Genial. Nos vemos mañana."
+        ],
+        "best": 1,
+        "why": [
+          "You sound friendly, but confirming tomorrow is clearer than an unspecified later chat.",
+          "You confirm the plan and say goodbye."
+        ],
+        "repair": "Hasta mañana a las diez."
+      }
+    ]
+  }
+]

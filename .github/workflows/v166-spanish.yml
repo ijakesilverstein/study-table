@@ -1,0 +1,46 @@
+name: V166 real-world Spanish preview
+on:
+  push:
+    branches:
+      - feature/v166-real-world-spanish
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Verify canonical baseline remains unchanged
+        run: python3 scripts/build.py --check
+      - name: Generate V163-V166 optional source-backed HTML
+        run: |
+          python3 scripts/build-v163.py
+          python3 scripts/build-v164.py
+          python3 scripts/build-v165.py
+          python3 scripts/build-v166.py
+          python3 scripts/build-v166.py --check
+      - name: Verify content preserved; only Spanish reader changed
+        run: |
+          python3 qa/check-reconciled-v163.py
+          python3 qa/check-v165-archive.py
+          python3 qa/check-spanish-v166.py
+      - name: Exercise all 24 real-life turns, journals and handoffs in Chromium
+        run: node qa/test-spanish-v166.cjs
+      - name: Upload optional offline V166 (never deploy)
+        uses: actions/upload-artifact@v4
+        with:
+          name: study-table-v166-real-world-spanish
+          path: public/study-table-v166.html
+          if-no-files-found: error
+          retention-days: 30
