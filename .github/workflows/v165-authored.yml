@@ -1,0 +1,46 @@
+name: V165 authored stories and transfer preview
+on:
+  push:
+    branches:
+      - feature/v165-authored-stories-and-transfer
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Verify canonical V136 unchanged
+        run: python3 scripts/build.py --check
+      - name: Build optional canonical-derived V163 / V164 / V165
+        run: |
+          python3 scripts/build-v163.py
+          python3 scripts/build-v164.py
+          python3 scripts/build-v165.py
+          python3 scripts/build-v165.py --check
+      - name: Verify 208 untouched archived pages and all authored assets
+        run: |
+          python3 qa/check-reconciled-v163.py
+          python3 qa/check-v165-archive.py
+      - name: Verify V164 dialog race protection
+        run: node qa/test-dialog-race-v164.cjs
+      - name: Verify seven stories and 42 transfer problems in a real browser
+        run: node qa/test-v165-interactions.cjs
+      - name: Package standalone offline V165 (not production)
+        uses: actions/upload-artifact@v4
+        with:
+          name: study-table-v165-authored-learning
+          path: public/study-table-v165.html
+          if-no-files-found: error
+          retention-days: 30

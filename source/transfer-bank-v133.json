@@ -1,0 +1,641 @@
+{
+  "spanish-0": {
+    "subject": "spanish",
+    "skill": "Choose the right kind of ‘am’",
+    "variants": [
+      {
+        "prompt": "Say ‘I am a teacher’ in Spanish. Either masculine or feminine is fine.",
+        "kind": "text",
+        "answer": "Soy profesor",
+        "hint": "Is being a teacher an identity, or a location right now?",
+        "why": "Use soy to identify who someone is: soy profesor / soy profesora.",
+        "wrong": {
+          "estoy profesor": "Estar usually does not introduce someone's occupation. Use soy to say who you are.",
+          "estoy profesora": "Estar usually does not introduce someone's occupation. Use soy to say who you are."
+        },
+        "accept": [
+          "Soy profesora",
+          "Yo soy profesor",
+          "Yo soy profesora"
+        ]
+      },
+      {
+        "prompt": "You're at the park. Say ‘I am in the park’ in Spanish.",
+        "kind": "text",
+        "answer": "Estoy en el parque",
+        "hint": "For where you are right now, use the form of estar.",
+        "why": "Estoy en el parque uses estar for a person's location.",
+        "wrong": {
+          "soy en el parque": "Soy is for identity in this contrast; use estoy for where you are.",
+          "estoy el parque": "The location needs en: estoy en el parque."
+        },
+        "accept": [
+          "Yo estoy en el parque"
+        ]
+      }
+    ]
+  },
+  "spanish-1": {
+    "subject": "spanish",
+    "skill": "Make a clear café request",
+    "variants": [
+      {
+        "prompt": "Ask for tea politely: ‘I would like tea, please.’ Use quiero.",
+        "kind": "text",
+        "answer": "Quiero té, por favor",
+        "hint": "Start with quiero and finish with por favor.",
+        "why": "Quiero té, por favor is a simple understandable request.",
+        "wrong": {
+          "quieres te": "Quieres means 'you want'. To request something for yourself, use quiero."
+        },
+        "accept": [
+          "Yo quiero té por favor",
+          "Quiero un té por favor",
+          "Yo quiero un té por favor"
+        ]
+      },
+      {
+        "prompt": "Tell the server: ‘I cannot eat cheese.’ Use no puedo.",
+        "kind": "text",
+        "answer": "No puedo comer queso",
+        "hint": "Put no before puedo, then the verb in its basic form.",
+        "why": "No puedo comer queso means I cannot eat cheese.",
+        "wrong": {
+          "puedo no comer queso": "That changes the meaning toward ‘I can choose not to.’ No puedo signals inability.",
+          "no puedo como queso": "After puedo, use the infinitive comer, not como."
+        }
+      }
+    ]
+  },
+  "noun-phrases": {
+    "subject": "spanish",
+    "skill": "Make noun and adjective agree",
+    "variants": [
+      {
+        "prompt": "Order ‘two small coffees’ in Spanish. Just the noun phrase.",
+        "kind": "text",
+        "answer": "dos cafés pequeños",
+        "hint": "Two coffees are plural and masculine: both noun and adjective agree.",
+        "why": "Dos cafés pequeños: cafés and pequeños are both plural.",
+        "wrong": {
+          "dos café pequeño": "Both café and pequeño need plural forms after dos.",
+          "dos cafés pequeño": "The adjective also needs plural -s."
+        },
+        "accept": [
+          "dos cafes pequenos"
+        ]
+      },
+      {
+        "prompt": "Say ‘three red apples’ in Spanish. Just the noun phrase.",
+        "kind": "text",
+        "answer": "tres manzanas rojas",
+        "hint": "Manzana is feminine. With tres, everything is plural.",
+        "why": "Tres manzanas rojas keeps the noun and adjective feminine plural.",
+        "wrong": {
+          "tres manzana roja": "The number tres requires plural manzanas and rojas.",
+          "tres manzanas rojos": "Rojos is masculine plural; manzanas needs feminine rojas."
+        }
+      }
+    ]
+  },
+  "piano-1": {
+    "subject": "piano",
+    "skill": "Find nearby white keys",
+    "variants": [
+      {
+        "prompt": "Start on middle C (C4). Move one white key to the right. Name the note with its octave.",
+        "kind": "note",
+        "answer": "D4",
+        "hint": "White keys rise one letter at a time: C, D, E.",
+        "why": "The next white key to the right of C4 is D4.",
+        "wrong": {
+          "E4": "E4 is two white keys above C4, not one.",
+          "D3": "D3 is in the lower octave. Stay beside middle C."
+        }
+      },
+      {
+        "prompt": "Start on G4. Move one white key left. Name that note with its octave.",
+        "kind": "note",
+        "answer": "F4",
+        "hint": "To move down, go backward through the letters.",
+        "why": "The white key immediately to the left of G4 is F4.",
+        "wrong": {
+          "A4": "A4 is to the right of G4, so the pitch rises.",
+          "F3": "F3 is an octave lower than the adjacent F4."
+        }
+      }
+    ]
+  },
+  "piano-0": {
+    "subject": "piano",
+    "skill": "Count beats even when notes sustain",
+    "variants": [
+      {
+        "prompt": "In 3/4 time, how many numbered beats are in two complete bars? Enter a number.",
+        "kind": "number",
+        "answer": 6,
+        "hint": "Each bar has three beats, so count two groups of three.",
+        "why": "3 beats per bar × 2 bars = 6 beats.",
+        "wrong": {
+          "2": "Two is the number of bars, not the total beats.",
+          "3": "That counts one bar; the question has two."
+        }
+      },
+      {
+        "prompt": "A half note lasts two beats. Add two quarter notes. How many beats altogether? Enter a number.",
+        "kind": "number",
+        "answer": 4,
+        "hint": "A quarter note gets one beat in this example.",
+        "why": "The half note occupies beats 1 and 2. The two quarter notes take beats 3 and 4, so the whole pattern lasts four beats.",
+        "wrong": {
+          "2": "Two is the half note alone; count both quarter notes too.",
+          "3": "A half note uses two beats, not one."
+        }
+      }
+    ]
+  },
+  "piano-4": {
+    "subject": "piano",
+    "skill": "Understand the C-major chord",
+    "variants": [
+      {
+        "prompt": "The C-major triad has C as root and G as fifth. Which note is its middle chord tone? Use a note letter.",
+        "kind": "text",
+        "answer": "E",
+        "hint": "A triad stacks every other note: C, skip D, E, skip F, G.",
+        "why": "C–E–G contains E as its third.",
+        "wrong": {
+          "D": "D is the next scale step, but a triad skips one scale step.",
+          "F": "F is above E; the third of C major is E."
+        },
+        "accept": [
+          "E4",
+          "E5"
+        ]
+      },
+      {
+        "prompt": "If the notes are C, E, G, what is the root of this C-major chord? Answer with a note letter.",
+        "kind": "text",
+        "answer": "C",
+        "hint": "The chord is named after its root, not its highest note.",
+        "why": "C is the root that gives C-major its name.",
+        "wrong": {
+          "E": "E is the chord's third, not its root.",
+          "G": "G is the fifth, not its root."
+        },
+        "accept": [
+          "C4",
+          "C3",
+          "C5"
+        ]
+      }
+    ]
+  },
+  "chess-0": {
+    "subject": "chess",
+    "skill": "Trace movement on a chessboard",
+    "variants": [
+      {
+        "prompt": "A white pawn on e2 advances two squares straight ahead on its first move. What square does it land on?",
+        "kind": "square",
+        "answer": "e4",
+        "hint": "The file stays e; White moves toward higher rank numbers.",
+        "why": "From e2, two squares forward is e4.",
+        "wrong": {
+          "e3": "e3 is only one square from e2.",
+          "f4": "A pawn cannot move diagonally to an empty square as a normal forward move."
+        }
+      },
+      {
+        "prompt": "A rook on a1 moves three squares straight up its file. What is the destination square?",
+        "kind": "square",
+        "answer": "a4",
+        "hint": "A rook moving up the file keeps its letter and changes rank.",
+        "why": "A rook travels straight along a file. From a1 it passes a2 and a3, landing on a4 after exactly three squares.",
+        "wrong": {
+          "d1": "d1 is three squares across the rank, not up the a-file.",
+          "a3": "a3 is only two squares above a1."
+        }
+      }
+    ]
+  },
+  "read-moves": {
+    "subject": "chess",
+    "skill": "Decode algebraic chess notation",
+    "variants": [
+      {
+        "prompt": "In Nf3, which kind of piece moves to f3? Type the piece name.",
+        "kind": "text",
+        "answer": "knight",
+        "hint": "N is used because K already stands for king.",
+        "why": "N means knight, and f3 gives the destination square.",
+        "wrong": {
+          "king": "The king is K, not N.",
+          "bishop": "The bishop is B, not N."
+        },
+        "accept": [
+          "N"
+        ]
+      },
+      {
+        "prompt": "In Bxe5, which piece captures on e5? Type the piece name.",
+        "kind": "text",
+        "answer": "bishop",
+        "hint": "The first letter names the piece. The x indicates a capture.",
+        "why": "B = bishop, x = captures, e5 = destination.",
+        "wrong": {
+          "queen": "The queen is Q; here B identifies the bishop.",
+          "pawn": "A pawn capture is named by a file, not B."
+        },
+        "accept": [
+          "B"
+        ]
+      }
+    ]
+  },
+  "count-exchanges": {
+    "subject": "chess",
+    "skill": "Compare what was actually traded",
+    "variants": [
+      {
+        "prompt": "White gives up a queen worth 9 points to win a rook worth 5. What is White's net material change in points? Enter a signed number.",
+        "kind": "number",
+        "answer": -4,
+        "hint": "Material change = gained value minus lost value.",
+        "why": "5 − 9 = −4. White lost four points of material.",
+        "wrong": {
+          "4": "The magnitude is four, but White gave away more than they won, so the sign is negative.",
+          "14": "This adds the values; a trade requires subtracting the piece lost."
+        }
+      },
+      {
+        "prompt": "White's knight worth 3 takes a bishop worth 3, then the knight is recaptured. What is White's net material change? Enter a number.",
+        "kind": "number",
+        "answer": 0,
+        "hint": "Compare the value gained with the value the opponent recovered.",
+        "why": "White gained 3 for the bishop and lost 3 for the knight: net 0.",
+        "wrong": {
+          "3": "The knight was recaptured, so include its loss.",
+          "6": "The exchange involves two pieces but White's net is not their sum."
+        }
+      }
+    ]
+  },
+  "functions": {
+    "subject": "calculus",
+    "skill": "Evaluate functions without guessing",
+    "variants": [
+      {
+        "prompt": "If f(x) = 3x + 2, find f(4). Enter a number.",
+        "kind": "number",
+        "answer": 14,
+        "hint": "Replace x with 4 before simplifying.",
+        "why": "Substitute the input into the function before calculating: f(4) = (3 × 4) + 2 = 14.",
+        "wrong": {
+          "9": "3+4+2 adds x instead of multiplying 3 by x.",
+          "20": "Add 2 after 3 × 4, not multiply the entire sum."
+        }
+      },
+      {
+        "prompt": "If g(x) = x² − 5, find g(−3). Enter a number.",
+        "kind": "number",
+        "answer": 4,
+        "hint": "Square the negative input before subtracting 5.",
+        "why": "Because you square the whole negative input, (−3)² is +9; then subtract 5 to get 4.",
+        "wrong": {
+          "14": "Remember the minus 5 after squaring.",
+          "-14": "Squaring −3 gives positive 9, not negative 9."
+        }
+      }
+    ]
+  },
+  "derivative-rules": {
+    "subject": "calculus",
+    "skill": "Differentiate and evaluate",
+    "variants": [
+      {
+        "prompt": "f(x) = 4x³ − 2x. What is f′(2)? Enter a number.",
+        "kind": "number",
+        "answer": 46,
+        "hint": "Differentiate each term, then substitute x=2.",
+        "why": "f′(x)=12x²−2, so f′(2)=48−2=46.",
+        "wrong": {
+          "24": "You may have used the old exponent rather than differentiating 4x³ to 12x².",
+          "48": "The derivative of −2x is −2; remember to subtract it."
+        }
+      },
+      {
+        "prompt": "h(x) = 5x² + 7x. What is h′(3)? Enter a number.",
+        "kind": "number",
+        "answer": 37,
+        "hint": "Derivative of 5x² is 10x; derivative of 7x is 7.",
+        "why": "The power rule makes 5x² into 10x, while 7x becomes 7. Thus h′(3) = (10 × 3) + 7 = 37.",
+        "wrong": {
+          "30": "The linear term 7x contributes +7 to the derivative.",
+          "52": "Substitute after differentiation, not before."
+        }
+      }
+    ]
+  },
+  "product-rule": {
+    "subject": "calculus",
+    "skill": "Differentiate both moving factors",
+    "variants": [
+      {
+        "prompt": "f(x)=(x²+1)(3x). What is f′(2)? Enter a number.",
+        "kind": "number",
+        "answer": 39,
+        "hint": "Product rule: first factor's derivative × second, plus first × second factor's derivative.",
+        "why": "f′(2)=(4)(6)+(5)(3)=24+15=39.",
+        "wrong": {
+          "15": "15 is only the second term; include the derivative of x²+1.",
+          "24": "24 counts only one product-rule term; include the derivative of 3x.",
+          "30": "Differentiate the factors before evaluating them."
+        }
+      },
+      {
+        "prompt": "g(x)=(x+2)x². What is g′(2)? Enter a number.",
+        "kind": "number",
+        "answer": 20,
+        "hint": "Differentiate both x+2 and x², then add the two products.",
+        "why": "Use both terms of the product rule. At x=2, the first gives 1×4=4 and the second gives 4×4=16; total 20.",
+        "wrong": {
+          "4": "4 is only the first term; add the other factor's derivative.",
+          "16": "16 is only the second product-rule term; add 4."
+        }
+      }
+    ]
+  },
+  "units-and-directions": {
+    "subject": "physics",
+    "skill": "Keep direction in the answer",
+    "variants": [
+      {
+        "prompt": "Walk 18 m east, then 5 m west. What is your displacement in metres, taking east as positive? Enter a signed number.",
+        "kind": "number",
+        "answer": 13,
+        "hint": "The westward section subtracts from eastward displacement.",
+        "why": "Displacement keeps track of direction. Eighteen metres east minus five west leaves +13 metres toward the east.",
+        "wrong": {
+          "23": "23 m is total distance, not signed displacement.",
+          "-13": "East is defined as positive in the question."
+        }
+      },
+      {
+        "prompt": "Two horizontal forces act: 12 N right and 20 N left. Take right as positive. What is net force in newtons? Enter a signed number.",
+        "kind": "number",
+        "answer": -8,
+        "hint": "Left has the negative sign; add signed forces.",
+        "why": "+12 − 20 = −8 N. The net force points left.",
+        "wrong": {
+          "8": "The magnitude is 8, but it points left, so the signed value is −8.",
+          "32": "Opposing forces subtract rather than add magnitudes."
+        }
+      }
+    ]
+  },
+  "physics-1": {
+    "subject": "physics",
+    "skill": "Use net force and mass",
+    "variants": [
+      {
+        "prompt": "A 4 kg cart has a net horizontal force of 12 N. What is its acceleration in m/s²? Enter a number.",
+        "kind": "number",
+        "answer": 3,
+        "hint": "F = ma, so divide force by mass.",
+        "why": "Divide the net force by the mass: a = F/m = 12 N ÷ 4 kg = 3 m/s².",
+        "wrong": {
+          "16": "Adding force and mass does not give acceleration.",
+          "48": "Force equals mass × acceleration. To find acceleration, divide instead."
+        }
+      },
+      {
+        "prompt": "A 5 kg cart accelerates at 3 m/s². What is the net force in newtons? Enter a number.",
+        "kind": "number",
+        "answer": 15,
+        "hint": "Multiply mass by acceleration.",
+        "why": "Multiply mass by acceleration: F = ma = 5 kg × 3 m/s² = 15 N.",
+        "wrong": {
+          "8": "Adding mass and acceleration does not give newtons.",
+          "1.6667": "This divides mass by acceleration; to find force, multiply."
+        }
+      }
+    ]
+  },
+  "physics-3": {
+    "subject": "physics",
+    "skill": "Apply Ohm's law correctly",
+    "variants": [
+      {
+        "prompt": "A 6 V battery drives current through a 2 Ω resistor. What is the current in amperes? Enter a number.",
+        "kind": "number",
+        "answer": 3,
+        "hint": "Ohm's law: current equals voltage divided by resistance.",
+        "why": "Ohm's law gives I = V/R. A 6-volt potential difference across 2 ohms means 3 amperes of current.",
+        "wrong": {
+          "4": "Subtracting resistance from voltage is not Ohm's law.",
+          "12": "That multiplies voltage by resistance; current requires division."
+        }
+      },
+      {
+        "prompt": "A 4 A current flows through a 3 Ω resistor. What is the voltage across it in volts? Enter a number.",
+        "kind": "number",
+        "answer": 12,
+        "hint": "Rearrange Ohm's law as V = I × R.",
+        "why": "For a resistor, V = I×R. Four amperes through three ohms requires a 12-volt potential difference.",
+        "wrong": {
+          "7": "Adding current and resistance does not give volts.",
+          "1.3333": "That divides current by resistance. Voltage is their product."
+        }
+      }
+    ]
+  },
+  "homeostasis": {
+    "subject": "medicine",
+    "skill": "Reason through a feedback loop",
+    "variants": [
+      {
+        "prompt": "During a hot walk, why can sweating help cool your body? Choose the closest explanation.",
+        "kind": "choice",
+        "answer": "Evaporating sweat carries heat away",
+        "hint": "What happens to energy when liquid water evaporates from the skin?",
+        "why": "Evaporation uses thermal energy from the skin; the sweat must evaporate to provide cooling.",
+        "wrong": {
+          "Sweat adds heat to the skin": "Sweat does not warm the skin by adding heat. Evaporation removes thermal energy.",
+          "Sweat switches off circulation": "Sweating does not cool by shutting off blood circulation."
+        },
+        "options": [
+          "Evaporating sweat carries heat away",
+          "Sweat adds heat to the skin",
+          "Sweat switches off circulation"
+        ]
+      },
+      {
+        "prompt": "After a meal raises blood glucose, what is one normal effect of insulin? Choose the closest explanation.",
+        "kind": "choice",
+        "answer": "Helps cells take up and store glucose",
+        "hint": "Think of a signal that helps lower elevated blood glucose.",
+        "why": "Insulin supports uptake of glucose into muscle and fat cells and promotes glucose storage.",
+        "wrong": {
+          "Stops all glucose use": "Insulin does not stop glucose use; it helps several tissues process glucose.",
+          "Directly raises blood glucose": "Glucagon is a key hormone that raises glucose. Insulin generally helps lower it."
+        },
+        "options": [
+          "Directly raises blood glucose",
+          "Helps cells take up and store glucose",
+          "Stops all glucose use"
+        ]
+      }
+    ]
+  },
+  "two-circuits": {
+    "subject": "medicine",
+    "skill": "Trace blood through the heart",
+    "variants": [
+      {
+        "prompt": "Blood leaves the right ventricle. What is its next major destination?",
+        "kind": "choice",
+        "answer": "Lungs",
+        "hint": "The right side pumps toward the smaller, pulmonary circuit.",
+        "why": "The right ventricle sends blood through the pulmonary arteries toward the lungs.",
+        "wrong": {
+          "Aorta and body": "The left ventricle pumps blood to the aorta and systemic circulation.",
+          "Left ventricle directly": "Blood must pass through pulmonary vessels and the lungs before reaching the left heart."
+        },
+        "options": [
+          "Lungs",
+          "Aorta and body",
+          "Left ventricle directly"
+        ]
+      },
+      {
+        "prompt": "Oxygenated blood returns from the lungs into which heart chamber?",
+        "kind": "choice",
+        "answer": "Left atrium",
+        "hint": "Follow the pulmonary veins back to the receiving chamber.",
+        "why": "The pulmonary veins return oxygenated blood to the left atrium.",
+        "wrong": {
+          "Right atrium": "The right atrium receives systemic venous return, not pulmonary venous blood.",
+          "Left ventricle directly": "Blood enters the left atrium before flowing to the left ventricle."
+        },
+        "options": [
+          "Right atrium",
+          "Left atrium",
+          "Left ventricle directly"
+        ]
+      }
+    ]
+  },
+  "drug-halflife": {
+    "subject": "medicine",
+    "skill": "Track how much remains after a half-life",
+    "variants": [
+      {
+        "prompt": "A simplified model begins with 200 mg of a drug. After exactly one half-life, how many milligrams remain? Enter a number.",
+        "kind": "number",
+        "answer": 100,
+        "hint": "One half-life halves the remaining amount.",
+        "why": "200÷2=100 mg remains. This is a simplified single-compartment decay example.",
+        "wrong": {
+          "50": "50 mg would remain after two half-lives, not one.",
+          "200": "One half-life means approximately half is eliminated in this model."
+        }
+      },
+      {
+        "prompt": "A simplified model starts with 80 mg. How many milligrams remain after two half-lives? Enter a number.",
+        "kind": "number",
+        "answer": 20,
+        "hint": "Halve the amount twice, not just once.",
+        "why": "80→40 after the first half-life, then 40→20 after the second.",
+        "wrong": {
+          "0": "Two half-lives remove 75%, not 100%, in the simple model.",
+          "40": "40 mg is after only one half-life."
+        }
+      }
+    ]
+  },
+  "revenue-vs-cash": {
+    "subject": "business",
+    "skill": "Separate invoicing from money in the bank",
+    "variants": [
+      {
+        "prompt": "You send an invoice for $900 today. The customer hasn't paid yet. How many dollars of cash have you collected from that invoice today? Enter a number.",
+        "kind": "number",
+        "answer": 0,
+        "hint": "An invoice records an amount owed, not a payment received.",
+        "why": "You collected $0 in cash today. The $900 is still receivable.",
+        "wrong": {
+          "900": "$900 is invoiced, not collected.",
+          "-900": "You did not pay $900; no cash moved from this invoice today."
+        }
+      },
+      {
+        "prompt": "A customer pays you a $300 deposit today for a service next month. How many dollars of cash arrived today? Enter a number.",
+        "kind": "number",
+        "answer": 300,
+        "hint": "Cash received and revenue recognized can occur at different times.",
+        "why": "$300 arrived in cash today, even though the service is next month.",
+        "wrong": {
+          "0": "Zero might be the revenue recognized today, but not the cash received.",
+          "600": "The only cash paid in the question is $300."
+        }
+      }
+    ]
+  },
+  "unit-economics": {
+    "subject": "business",
+    "skill": "Find contribution per sale",
+    "variants": [
+      {
+        "prompt": "A product sells for $45 and costs $18 in variable expenses. What is contribution per sale in dollars? Enter a number.",
+        "kind": "number",
+        "answer": 27,
+        "hint": "Contribution = selling price − variable cost.",
+        "why": "$45−$18=$27 per sale, before fixed costs.",
+        "wrong": {
+          "18": "$18 is the variable cost, not the contribution.",
+          "63": "That adds cost and price; subtract the variable cost instead."
+        }
+      },
+      {
+        "prompt": "You charge $60 per order and pay $24 in variable fulfillment and product cost. What is contribution per order in dollars? Enter a number.",
+        "kind": "number",
+        "answer": 36,
+        "hint": "Subtract variable cost from the price customers pay.",
+        "why": "$60−$24=$36 of contribution per order.",
+        "wrong": {
+          "24": "$24 is what you spend, not what remains.",
+          "84": "The price and variable cost should be subtracted, not added."
+        }
+      }
+    ]
+  },
+  "margin-vs-markup": {
+    "subject": "business",
+    "skill": "Distinguish percentage bases",
+    "variants": [
+      {
+        "prompt": "A product sells for $100 and costs $70. What is its gross margin percentage? Enter the percent number, not the % sign.",
+        "kind": "number",
+        "answer": 30,
+        "hint": "Margin uses selling price in the denominator.",
+        "why": "($100−$70)/$100 ×100 =30% margin.",
+        "wrong": {
+          "70": "70% is the cost portion of sales, not the remaining gross margin.",
+          "42.857": "That is the approximate markup on cost, not margin on selling price."
+        }
+      },
+      {
+        "prompt": "A product costs $40 and sells for $60. What is markup percentage on cost? Enter the percent number, not the % sign.",
+        "kind": "number",
+        "answer": 50,
+        "hint": "Markup divides the $20 difference by cost, not by selling price.",
+        "why": "($60−$40)/$40×100=50% markup.",
+        "wrong": {
+          "20": "$20 is the dollar markup; the question asks for a percentage.",
+          "33.333": "33.3% is gross margin on selling price, not markup on cost."
+        }
+      }
+    ]
+  }
+}

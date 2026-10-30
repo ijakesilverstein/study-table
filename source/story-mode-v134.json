@@ -1,0 +1,541 @@
+[
+  {
+    "subject": "spanish",
+    "title": "The café with the impossible queue",
+    "kicker": "A real-world Spanish scene",
+    "setup": "You have two minutes before your train. The café worker is kind, fast, and speaking entirely in Spanish. Can you leave with the right coffee?",
+    "unit": "spanish-5",
+    "win": "You leave with a coffee and a new trick: when you're lost, repair the conversation instead of guessing.",
+    "detour": "You made it through the café. Next time, asking one clear question will save more time than an elaborate guess.",
+    "beats": [
+      {
+        "scene": "The worker says something too quickly. You catch exactly zero words. The queue is moving.",
+        "question": "What do you say?",
+        "options": [
+          {
+            "label": "¿Puede repetirlo más despacio, por favor?",
+            "after": "She slows down immediately. No one in the queue even blinks.",
+            "why": "You asked her to repeat more slowly, politely and specifically. That's better than pretending you understood.",
+            "works": true
+          },
+          {
+            "label": "Sí, gracias.",
+            "after": "She smiles, but she still doesn't know what you want.",
+            "why": "Sí means yes. It can't repair a question you never understood, and you may be agreeing to something unexpected."
+          },
+          {
+            "label": "Un café, por favor.",
+            "after": "A coffee is now on the order, but her original question is still unanswered.",
+            "why": "A new order doesn't tell the worker which detail you missed. A repeat request keeps the conversation on track."
+          }
+        ]
+      },
+      {
+        "scene": "She repeats: «¿Para aquí o para llevar?» The train is close enough to hear.",
+        "question": "You want the coffee to go. Your reply?",
+        "options": [
+          {
+            "label": "Para llevar, por favor.",
+            "after": "She reaches for a takeaway cup. Exactly right.",
+            "why": "Para llevar means to go. Para aquí means to have it here.",
+            "works": true
+          },
+          {
+            "label": "Para aquí, por favor.",
+            "after": "She puts a ceramic cup on the counter. The train is not waiting.",
+            "why": "Para aquí means for here. It's a perfectly natural phrase—just not the choice you wanted."
+          },
+          {
+            "label": "Sí.",
+            "after": "She asks the question again. There were two options to choose between.",
+            "why": "You can't resolve an either/or question with a bare yes."
+          }
+        ]
+      },
+      {
+        "scene": "Holding the cup, she checks: «¿Para llevar?» This time it's a yes-or-no confirmation.",
+        "question": "What finishes the exchange?",
+        "options": [
+          {
+            "label": "Sí, para llevar.",
+            "after": "Cup, lid, train. You made it.",
+            "why": "Now sí is useful: you're confirming a specific suggestion. The accent distinguishes yes from si ('if').",
+            "works": true
+          },
+          {
+            "label": "¿Para aquí o para llevar?",
+            "after": "You repeat her question back. She gives you a puzzled look.",
+            "why": "Repeating the two options isn't an answer. Now she needs confirmation."
+          },
+          {
+            "label": "Si para llevar.",
+            "after": "She understands your meaning, but your written note is missing something.",
+            "why": "For an affirmative yes, Spanish spells it sí with an accent. The unaccented si means if."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subject": "piano",
+    "title": "You're in the band now",
+    "kicker": "Rhythm without the recital nerves",
+    "setup": "The drummer counts you in at 60 beats per minute. You have eight beats to sound like you've rehearsed—even though you just sat down.",
+    "unit": "rests-and-halves",
+    "win": "The groove held together. The trick wasn't playing more notes; it was giving every sound and silence its time.",
+    "detour": "The band kept playing, and you heard where the timing drifted. A rest is part of the music—not a blank to rush past.",
+    "beats": [
+      {
+        "scene": "Bar one: play C on beat 1, rest on beat 2, then play D on beat 3. The drummer starts.",
+        "question": "On beat 2, you should…",
+        "options": [
+          {
+            "label": "Stay silent for the full beat.",
+            "after": "The drummer nods. The gap gives the D room to land.",
+            "why": "A rest occupies time even when no key sounds. Count beat 2 silently.",
+            "works": true
+          },
+          {
+            "label": "Keep C sounding because you played it on beat 1.",
+            "after": "The gap disappears, and the phrase feels crowded.",
+            "why": "If the score calls for a rest, the earlier key must be released. A rest isn't a held note."
+          },
+          {
+            "label": "Skip straight to D.",
+            "after": "D arrives early. The drummer's pulse is still on beat 2.",
+            "why": "Skipping a silent beat shortens the bar; silence has a measured duration."
+          }
+        ]
+      },
+      {
+        "scene": "The tempo is 60 BPM. C starts at 0 seconds. D belongs on beat 3.",
+        "question": "When should D begin?",
+        "options": [
+          {
+            "label": "At 2.0 seconds.",
+            "after": "D lands with the click. You and the drummer sound like a unit.",
+            "why": "At 60 BPM each beat takes one second: beat 1 at 0, beat 2 at 1, beat 3 at 2.",
+            "works": true
+          },
+          {
+            "label": "At 3.0 seconds.",
+            "after": "D lands after the intended beat. The drummer has moved on.",
+            "why": "We count beat 1 at time zero, not at the end of the first second."
+          },
+          {
+            "label": "At 1.0 second.",
+            "after": "D turns the rest into a blink.",
+            "why": "One second after C is the start of beat 2, which must be silent."
+          }
+        ]
+      },
+      {
+        "scene": "Bar two puts D on the spoken 'and' between beats 1 and 2. The drummer says 'one-and-two-and'.",
+        "question": "At 60 BPM, how long after C does D arrive?",
+        "options": [
+          {
+            "label": "Half a second.",
+            "after": "You land on the offbeat. The rhythm suddenly swings into place.",
+            "why": "An 'and' subdivision splits a one-second beat into halves. D comes at 0.5 seconds.",
+            "works": true
+          },
+          {
+            "label": "One second.",
+            "after": "D lands on beat 2, not on the 'and'.",
+            "why": "A full second is one whole beat at this tempo. The 'and' falls halfway through."
+          },
+          {
+            "label": "Two seconds.",
+            "after": "The melody is already at the next phrase when D arrives.",
+            "why": "Two seconds is two complete beats, too late for the first 'and'."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subject": "chess",
+    "title": "The king's dramatic exit",
+    "kicker": "A tiny chess thriller",
+    "setup": "Your king is tired of the center. A rook is waiting in the corner. You have one chance to castle safely, but Black has plans.",
+    "unit": "castling",
+    "win": "The king reaches safety because you checked the whole route, not just the destination.",
+    "detour": "Your king survives the lesson. The memorable rule: castling is about where the king travels, not only where it lands.",
+    "beats": [
+      {
+        "scene": "White is ready to castle kingside. The rook is on h1 and the king is on e1.",
+        "question": "Where does the king land after O-O?",
+        "options": [
+          {
+            "label": "g1",
+            "after": "The king slides two squares to g1. A proper royal escape.",
+            "why": "Kingside castling moves the white king e1 → g1. It is a special two-square king move.",
+            "works": true
+          },
+          {
+            "label": "f1",
+            "after": "The king stops one square short and wonders where the rook went.",
+            "why": "f1 is the rook's destination in kingside castling, not the king's."
+          },
+          {
+            "label": "h1",
+            "after": "The king has wandered into the rook's starting square.",
+            "why": "h1 is where the rook starts. The king must end on g1."
+          }
+        ]
+      },
+      {
+        "scene": "The king has reached g1. The rook still needs its part of the move.",
+        "question": "Where does the rook finish?",
+        "options": [
+          {
+            "label": "f1",
+            "after": "Rook to f1. The two pieces form a compact shelter.",
+            "why": "On white kingside castling, the rook goes h1 → f1, passing across the king's old route.",
+            "works": true
+          },
+          {
+            "label": "e1",
+            "after": "The rook parks in the king's old square. That's not how castling works.",
+            "why": "The rook stops on f1, immediately on the other side of the king."
+          },
+          {
+            "label": "g1",
+            "after": "The king has already taken that square; the pieces would collide.",
+            "why": "The king finishes on g1, while the rook finishes on f1. They never occupy the same square."
+          }
+        ]
+      },
+      {
+        "scene": "Rewind. Black puts a rook on f8, with the entire f-file open. White's king is not in check on e1.",
+        "question": "Can White castle through f1?",
+        "options": [
+          {
+            "label": "No. f1 is attacked.",
+            "after": "You stop the castle. The king avoids walking through the rook's line of fire.",
+            "why": "The king may not castle out of, through, or into check. An attacked crossing square f1 makes this illegal.",
+            "works": true
+          },
+          {
+            "label": "Yes. g1 itself is safe.",
+            "after": "The arbiter stops your hand mid-castle.",
+            "why": "Checking only the destination misses the king's path. The attacked crossing square f1 matters."
+          },
+          {
+            "label": "Yes, if the rook moves first.",
+            "after": "The arbiter says that's two separate moves, not a castle.",
+            "why": "Castling is one special king-and-rook move. You can't rearrange the order to escape the attacked-square rule."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subject": "calculus",
+    "title": "The festival banner is growing",
+    "kicker": "Calculus you can picture",
+    "setup": "You're designing an enormous festival banner. Two edges are stretching at once, and the printer wants to know how quickly the area is growing.",
+    "unit": "product-rule",
+    "win": "You saved the print order. Both expanding edges contribute strips of new area—and they add.",
+    "detour": "You caught the surprise: when two sizes change together, the new area comes from two strips, not a product of two speeds.",
+    "beats": [
+      {
+        "scene": "Right now the banner is 3 metres long and 4 metres wide. Its length grows at 1 m/s; its width grows at 4 m/s.",
+        "question": "How much new area per second comes from the changing length alone?",
+        "options": [
+          {
+            "label": "4 m²/s",
+            "after": "A long, skinny strip appears at the right edge of the banner.",
+            "why": "Length grows by 1 metre per second across the current width of 4 metres: 1 × 4 = 4 m²/s.",
+            "works": true
+          },
+          {
+            "label": "1 m²/s",
+            "after": "The printer points out that a strip has a width as well as a growth rate.",
+            "why": "A length rate by itself is m/s. Multiply it by the other edge's current size to obtain area per second."
+          },
+          {
+            "label": "12 m²/s",
+            "after": "You've counted the other strip—the one due to changing width.",
+            "why": "12 m²/s is the width-growth contribution, not the length-growth contribution."
+          }
+        ]
+      },
+      {
+        "scene": "The other edge is also racing outward at 4 metres per second.",
+        "question": "What is the width-growth contribution?",
+        "options": [
+          {
+            "label": "12 m²/s",
+            "after": "A second strip joins the first. The banner is getting big, fast.",
+            "why": "The width grows at 4 metres per second across 3 metres of current length. That creates a strip of 12 m²/s.",
+            "works": true
+          },
+          {
+            "label": "16 m²/s",
+            "after": "That's the final total, but the first strip hasn't been added yet.",
+            "why": "The width strip is 4 × 3 = 12. The total becomes 16 only after adding the other strip."
+          },
+          {
+            "label": "4 m²/s",
+            "after": "You've counted the narrow strip twice.",
+            "why": "4 m²/s came from length growth. Width growth uses the 3-metre current length."
+          }
+        ]
+      },
+      {
+        "scene": "The printer is hovering over the 'rush order' button.",
+        "question": "What's the banner's total area-growth rate right now?",
+        "options": [
+          {
+            "label": "16 m²/s",
+            "after": "The printer gets an honest number. The banner does not overflow the stage.",
+            "why": "The two strip contributions add: 1 × 4 + 4 × 3 = 4 + 12 = 16 m²/s.",
+            "works": true
+          },
+          {
+            "label": "4 m²/s, because 1 × 4.",
+            "after": "The printer gets the product of two rates, not an area rate.",
+            "why": "Two rates multiply to m²/s². You need each rate paired with the other edge's current length."
+          },
+          {
+            "label": "48 m²/s, because 3 × 4 × 4.",
+            "after": "The banner budget explodes for no physical reason.",
+            "why": "This triple product counts dimensions incorrectly. Differentiate length × width by adding the two strip contributions."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subject": "physics",
+    "title": "The world's smallest ski stunt",
+    "kicker": "A physics stunt coordinator",
+    "setup": "A 2 kg sled drops 5 metres. You need to predict the speed before anyone tries the stunt. Use g = 10 m/s² to keep the arithmetic friendly.",
+    "unit": "physics-2",
+    "win": "The sled finishes safely, and your energy budget balances. You even accounted for the energy that became heat.",
+    "detour": "You found out why a squared speed isn't a speed. The stunt crew makes another calculation before the next run.",
+    "beats": [
+      {
+        "scene": "At the top, the 2 kg sled has gravitational energy available from the 5 m drop.",
+        "question": "How much energy is available?",
+        "options": [
+          {
+            "label": "100 joules",
+            "after": "The clipboard reads 100 J. That's your entire starting budget.",
+            "why": "mgh = 2 × 10 × 5 = 100 J. This is the energy that can become kinetic or be transferred elsewhere.",
+            "works": true
+          },
+          {
+            "label": "10 joules",
+            "after": "The stunt coordinator asks where the height went.",
+            "why": "10 is g in m/s²; the complete energy needs mass and height as well."
+          },
+          {
+            "label": "50 joules",
+            "after": "Half the budget has mysteriously disappeared.",
+            "why": "g × h is 50, but multiplying by the 2 kg mass gives 100 J."
+          }
+        ]
+      },
+      {
+        "scene": "In a frictionless run, all 100 J becomes kinetic energy. The formula is ½mv².",
+        "question": "What's the sled's final speed?",
+        "options": [
+          {
+            "label": "10 m/s",
+            "after": "The stunt lands exactly on the predicted mark.",
+            "why": "100 = ½ × 2 × v², so v² = 100. Speed is the square root: 10 m/s.",
+            "works": true
+          },
+          {
+            "label": "100 m/s",
+            "after": "That's a spectacularly unsafe forecast.",
+            "why": "100 is v², which has units m²/s². The speed is its square root, 10 m/s."
+          },
+          {
+            "label": "50 m/s",
+            "after": "The sled doesn't come close to your forecast.",
+            "why": "Dividing 100 by mass isn't the end. You still need to solve for v² and take a square root."
+          }
+        ]
+      },
+      {
+        "scene": "The snow is rougher on the next run. Exactly 36 J transfers to heat.",
+        "question": "How fast does the sled finish this time?",
+        "options": [
+          {
+            "label": "8 m/s",
+            "after": "The slower arrival matches your new plan. The crew cheers the spreadsheet.",
+            "why": "100 − 36 = 64 J kinetic. With 2 kg, 64 = ½ × 2 × v², so v = 8 m/s.",
+            "works": true
+          },
+          {
+            "label": "64 m/s",
+            "after": "You read squared speed as ordinary speed again.",
+            "why": "64 is the value of v², not v. Take the square root and you get a speed of 8 metres per second."
+          },
+          {
+            "label": "10 m/s; heat doesn't affect speed.",
+            "after": "The rough snow slows the sled. The finish marker is in the wrong place.",
+            "why": "The 36 J thermal transfer leaves only 64 J for movement. Conservation of total energy still holds."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subject": "medicine",
+    "title": "The detective and the suspicious test",
+    "kicker": "A medical reasoning mystery",
+    "setup": "A fictional screening program runs 10,000 tests. The test is 99% sensitive and 95% specific. You're the one who has to explain a positive result without frightening anyone.",
+    "unit": "test-interpretation",
+    "win": "You avoid the classic screening trap: a very sensitive test isn't the same as a 99% chance that any positive patient has the condition.",
+    "detour": "The case shows why a test result needs its base rate. The next question is about real groups of people, not a percentage taken out of context.",
+    "beats": [
+      {
+        "scene": "The condition affects 1% of this illustrative population.",
+        "question": "Of 10,000 people, how many actually have it?",
+        "options": [
+          {
+            "label": "100",
+            "after": "The affected group has 100 people. The other 9,900 matter too.",
+            "why": "One percent of 10,000 is 100. The test's false positives will come from the 9,900 unaffected people.",
+            "works": true
+          },
+          {
+            "label": "9,900",
+            "after": "You've inverted the prevalence. Nearly everyone would have the condition.",
+            "why": "9,900 is the 99% who do not have the condition. The affected group is only 1%, or 100 people."
+          },
+          {
+            "label": "990",
+            "after": "The detective asks you to calculate one percent, not nearly ten.",
+            "why": "One percent means one in every hundred. Of 10,000 people, that makes 100 affected people, not 990."
+          }
+        ]
+      },
+      {
+        "scene": "Among the 100 affected people, sensitivity catches 99. Among 9,900 unaffected people, specificity is 95%.",
+        "question": "How many unaffected people test positive anyway?",
+        "options": [
+          {
+            "label": "495",
+            "after": "The false-positive pile is almost five times the true-positive pile.",
+            "why": "False-positive rate = 5%. Five percent of 9,900 = 495.",
+            "works": true
+          },
+          {
+            "label": "5 people",
+            "after": "That would be 5% of only 100 people, the wrong group.",
+            "why": "Specificity applies to the unaffected group. The false-positive rate is 5% of 9,900, not 5% of 100."
+          },
+          {
+            "label": "99",
+            "after": "Those are the true positives in the affected group, not the false positives.",
+            "why": "Sensitivity catches 99 affected people. False positives come from the unaffected group."
+          }
+        ]
+      },
+      {
+        "scene": "You have 99 true positives and 495 false positives. The report needs a plain-language interpretation.",
+        "question": "Approximately what share of positive tests actually comes from affected people?",
+        "options": [
+          {
+            "label": "About 17%",
+            "after": "You explain the result without equating a positive screen with a diagnosis.",
+            "why": "99/(99+495) = 99/594 ≈ 16.7%. This is an educational calculation, not personal medical advice.",
+            "works": true
+          },
+          {
+            "label": "99%",
+            "after": "The detective points to 495 other people holding positive results.",
+            "why": "99% is sensitivity among affected people. The share of positive results that are true is a different probability."
+          },
+          {
+            "label": "95%",
+            "after": "You've quoted the test's specificity, which answers another question.",
+            "why": "Specificity measures negative results among unaffected people, not the likelihood of having the condition given a positive result."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subject": "business",
+    "title": "The pop-up shop's shipping surprise",
+    "kicker": "Run the shop for ninety seconds",
+    "setup": "Your new snack box sells for $40. Ingredients and packaging cost $14; fulfillment labor costs $5; shipping starts at $7. A viral video just made orders jump.",
+    "unit": "unit-economics",
+    "win": "The shop survives the viral moment. You know what each order really contributes before fixed expenses.",
+    "detour": "The shop stays open, but the margin lesson sticks: shipping changes can wipe out a surprisingly large part of contribution.",
+    "beats": [
+      {
+        "scene": "A new order appears. Rent, software and monthly overhead are still waiting in the background.",
+        "question": "How much contribution does one $40 box generate before fixed expenses?",
+        "options": [
+          {
+            "label": "$14",
+            "after": "Fourteen dollars hits the contribution bucket—not the profit account.",
+            "why": "Variable cost is 14 + 5 + 7 = $26. Price 40 − variable cost 26 = $14 contribution.",
+            "works": true
+          },
+          {
+            "label": "$26",
+            "after": "You've picked the amount spent, not the amount left.",
+            "why": "$26 is total variable cost per box; only $14 remains to cover fixed costs."
+          },
+          {
+            "label": "$40",
+            "after": "Revenue looks great until the shipping invoices arrive.",
+            "why": "A $40 sale is not $40 of contribution. Every additional box incurs variable costs."
+          }
+        ]
+      },
+      {
+        "scene": "Your marketing partner says: 'Amazing! We're making $14 profit on every box.'",
+        "question": "What do you tell them?",
+        "options": [
+          {
+            "label": "That's contribution. We still owe fixed expenses.",
+            "after": "They cross out 'profit' and write 'before overhead.' The spreadsheet survives.",
+            "why": "Contribution covers fixed expenses first. Profit comes after those fixed costs are also paid.",
+            "works": true
+          },
+          {
+            "label": "Exactly. We can spend the full $14.",
+            "after": "The rent payment sends a polite but forceful reminder.",
+            "why": "Spending all contribution leaves nothing for fixed expenses."
+          },
+          {
+            "label": "No. Every box loses $26.",
+            "after": "The team panics unnecessarily.",
+            "why": "$26 is variable cost; each $40 sale still contributes a positive $14 before fixed expenses."
+          }
+        ]
+      },
+      {
+        "scene": "Shipping jumps from $7 to $11 just as orders go viral.",
+        "question": "What's the new contribution per box?",
+        "options": [
+          {
+            "label": "$10",
+            "after": "You adjust the forecast before the celebration gets expensive.",
+            "why": "New variable cost = 14 + 5 + 11 = $30, so contribution is $40 − $30 = $10.",
+            "works": true
+          },
+          {
+            "label": "$14; the selling price didn't move.",
+            "after": "The carrier invoice disagrees.",
+            "why": "Variable costs changed even though price stayed $40. Contribution falls dollar for dollar."
+          },
+          {
+            "label": "$3; subtract the new shipping bill twice.",
+            "after": "The spreadsheet makes the viral hit look much worse than it is.",
+            "why": "The old $7 was already included in the original variable cost. Add only the $4 increase to the cost baseline."
+          }
+        ]
+      }
+    ]
+  }
+]
