@@ -32,6 +32,8 @@ jobs:
           python3 scripts/build-v167.py
           python3 scripts/build-v168.py
           python3 scripts/build-v168.py --check
+      - name: Run inherited Study Table regression suite
+        run: npm test
       - name: Verify story matches and preservation of 208 archive pages
         run: python3 qa/check-v168.py
       - name: Test all 87 lesson prompts and 52 checked variants in Chromium
