@@ -31,6 +31,25 @@ const path=require('path');
   assert.equal(await page.evaluate(()=>JSON.parse(localStorage.getItem('study-table-v19:notes'))[0].text),'Thought worth saving');
   await page.locator('#v124BackupClose').click();
   await page.waitForFunction(()=>!document.getElementById('v124BackupDialog').open);
+  // A read of a file from the previous dialog session must never populate the new one.
+  const oldText=JSON.stringify({version:1,notes:[{text:'OLD, SHOULD NOT APPEAR',path:'',subject:'Notebook',when:100}],bookmarks:[]});
+  await page.evaluate(text=>{
+   const native=File.prototype.text;
+   File.prototype.text=function(){
+    if(this.name==='slow.json')return new Promise(resolve=>{window.__finishOldRead=()=>resolve(text)});
+    return native.call(this);
+   };
+  },oldText);
+  await page.evaluate(()=>studyTableBackup.open());
+  await page.locator('#v124File').setInputFiles({name:'slow.json',mimeType:'application/json',buffer:Buffer.from(oldText)});
+  await page.waitForFunction(()=>typeof window.__finishOldRead==='function');
+  await page.evaluate(()=>{document.getElementById('v124BackupDialog').close();studyTableBackup.open()});
+  await page.evaluate(()=>window.__finishOldRead());
+  await page.waitForTimeout(20);
+  assert.equal(await page.locator('#v124BackupPreview').isVisible(),false,'Old file read entered a new backup session');
+  assert.equal(await page.locator('#v124Apply').isEnabled(),false,'Old file became applicable in a new session');
+  await page.locator('#v124BackupClose').click();
+  await page.waitForFunction(()=>!document.getElementById('v124BackupDialog').open);
   await page.locator('#st160-open').click();
   await page.locator('#st160-body h2').waitFor();
   await page.evaluate(()=>document.getElementById('st160-quest').dispatchEvent(new Event('close')));
