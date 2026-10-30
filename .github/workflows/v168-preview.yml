@@ -1,4 +1,4 @@
-name: V168 reconciled authored learning preview
+name: V168 source-backed release candidate
 on:
   push:
     branches:
@@ -38,6 +38,17 @@ jobs:
         run: python3 qa/check-v168.py
       - name: Test all 87 lesson prompts and 52 checked variants in Chromium
         run: node qa/test-v168-browser.cjs
+      - name: Verify release packaging uses the tested V168 HTML
+        run: |
+          python3 scripts/build-v168-release.py
+          python3 - <<'PY'
+          from pathlib import Path
+          root=Path('public')
+          assert (root/'index.html').read_bytes() == (root/'study-table-v168.html').read_bytes()
+          assert (root/'study-table-latest.html').read_bytes() == (root/'study-table-v168.html').read_bytes()
+          assert (root/'study-table-v136.html').is_file()
+          print('Release smoke PASS: V168 homepage and backup V136 intact')
+          PY
       - name: Upload standalone preview only (not production)
         uses: actions/upload-artifact@v4
         with:
