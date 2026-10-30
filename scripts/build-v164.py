@@ -18,6 +18,9 @@ def once(old,new):
 # It must not clear the new backup preview or steal focus from a new tutor session.
 once("d.addEventListener('close',()=>{readingFile++;", "d.addEventListener('close',()=>{if(d.open)return;readingFile++;")
 once("d.addEventListener('close',()=>{if(returnFocus?.isConnected)returnFocus.focus({preventScroll:true})})", "d.addEventListener('close',()=>{if(d.open)return;if(returnFocus?.isConnected)returnFocus.focus({preventScroll:true})})")
+# Invalidate a previous File.text() on the NEW open, not from the old queued close event.
+# Otherwise a stale file can leak its preview into the re-opened backup session.
+once("if(!d.open)d.showModal();status(lastUndo?", "if(!d.open){readingFile++;pending=null;d.querySelector('#v124Apply').disabled=true;d.querySelector('#v124BackupPreview').hidden=true;d.querySelector('#v124FileInfo').hidden=true;d.querySelector('#v124Conflict').value='local';d.showModal()}status(lastUndo?")
 once('document.title="Study Table V163 — Reconciled Teaching"', 'document.title="Study Table V164 — Reliable Learning"')
 once('<title>Study Table V163 — Reconciled Teaching</title>', '<title>Study Table V164 — Reliable Learning</title>')
 assert html.count('V136_COMPANIONS')==base.read_text().count('V136_COMPANIONS')
