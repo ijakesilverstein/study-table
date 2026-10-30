@@ -1,0 +1,49 @@
+name: V167 unified learning path preview
+on:
+  push:
+    branches:
+      - feature/v167-unified-learning-path
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Preserve canonical public release
+        run: python3 scripts/build.py --check
+      - name: Assemble all canonical-derived optional releases
+        run: |
+          python3 scripts/build-v163.py
+          python3 scripts/build-v164.py
+          python3 scripts/build-v165.py
+          python3 scripts/build-v166.py
+          python3 scripts/build-v167.py
+          python3 scripts/build-v167.py --check
+      - name: Verify 215 archive pages and seven true course paths
+        run: |
+          python3 qa/check-v165-archive.py
+          python3 qa/check-spanish-v166.py
+          python3 qa/check-v167.py
+      - name: Test all seven learning paths and Spanish truthfulness in browser
+        run: |
+          node qa/test-v167.cjs
+          node qa/test-spanish-v166.cjs
+      - name: Deliver standalone offline V167 (no production deployment)
+        uses: actions/upload-artifact@v4
+        with:
+          name: study-table-v167-learning-path
+          path: public/study-table-v167.html
+          if-no-files-found: error
+          retention-days: 30
