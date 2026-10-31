@@ -1,6 +1,10 @@
 # Study Table
 
-An offline-capable learning app. [Open the V136 HTML on GitHub](https://github.com/ijakesilverstein/study-table/blob/v136/public/study-table-v136.html) and choose **Download raw file** to save the complete app. The separately published site at https://study-table-downloads.vercel.app may show an earlier release until a new deployment is verified.
+An offline-capable learning app. [Download the combined V169 HTML on GitHub](https://github.com/ijakesilverstein/study-table/blob/v169/public/study-table-v169.html): choose **Download raw file**, save it and open it in your browser. The separately published website has not been updated in this pass.
+
+V169 combines the published V163–V168 work and the parallel journey branch: seven connected story/practice/lesson paths, eight Spanish conversation scenes, 52 checked problems and optional explanation prompts in all 87 units. **See the worked lesson first** opens the teaching directly. Six additional solved examples show the reasoning before optional practice, and progress backups now include the Spanish journal and optional review plans. [Read the source provenance, changes and validation](docs/RECONCILIATION_V169.md). No Vercel publication is part of this pass.
+
+The reproducible foundation and `public/index.html` remain V136. Use `npm run build:latest` or `npm run test:latest` for the combined V169 edition; `npm test` continues to verify the foundation. This keeps the numbered download and the website release separate.
 
 V136 adds hands-on visual teaching in three worked cases: follow piano counts on a keyboard, build a Spanish phrase for the intended meaning, and inspect a stalemate position square by square. Complete explanations stay visible, and earlier lessons remain intact. See [the visual companions and checks](docs/VISUAL_COMPANIONS_V136.md). No Vercel publication is part of this pass.
 

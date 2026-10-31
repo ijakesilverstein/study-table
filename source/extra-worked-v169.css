@@ -1,0 +1,9 @@
+.v169-examples{margin:24px 0;padding:16px;border:1px solid var(--study-line);border-radius:10px;background:var(--study-surface);color:var(--study-ink);min-width:0}
+.v169-examples summary{font:650 18px/1.5 system-ui;min-height:44px;cursor:pointer}
+.v169-examples label{display:block;margin:18px 0 8px;font-weight:650}
+.v169-examples select{display:block;box-sizing:border-box;width:100%;min-width:0;min-height:44px;padding:9px;border:1px solid #84848e;border-radius:6px;background:var(--study-surface);color:var(--study-ink);font:16px/1.5 system-ui}
+.v169-working{padding-left:23px}.v169-working>li{padding:6px 0 12px;border-bottom:1px solid var(--study-line)}
+.v169-working h4{font:650 18px/1.5 system-ui;margin:14px 0 8px}.v169-examples p,.v169-wrong{font:16px/1.7 system-ui}
+.v169-examples .calculation{white-space:normal;overflow-wrap:anywhere}.v169-result{font-weight:650}.v169-wrong dt{font-weight:650;margin-top:14px}.v169-wrong dd{margin:5px 0 12px}
+.v169-examples :is(select,summary):focus-visible{outline:3px solid var(--study-warm);outline-offset:3px}
+@media(max-width:480px){.v169-examples{padding:12px}}

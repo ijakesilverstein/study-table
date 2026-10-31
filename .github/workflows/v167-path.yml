@@ -19,6 +19,7 @@ jobs:
         with:
           node-version: '24'
           cache: npm
+      - run: python3 -m pip install -r requirements-test.txt
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - name: Preserve canonical public release

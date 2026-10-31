@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "build": "python3 scripts/build.py",
-    "test": "node scripts/test.cjs"
+    "test": "node scripts/test.cjs",
+    "build:latest": "python3 scripts/build-v169.py --all",
+    "test:latest": "node scripts/test-latest.cjs"
   },
   "devDependencies": {
     "axe-core": "4.14.0",

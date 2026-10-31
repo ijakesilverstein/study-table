@@ -1,4 +1,4 @@
-const edition=Number(require('../package.json').version.split('.')[0]);
+const edition=Number(process.env.STUDY_RELEASE_EDITION||require('../package.json').version.split('.')[0]);
 const {chromium}=require('playwright'),{spawn}=require('child_process'),assert=require('assert/strict'),fs=require('fs');
 (async()=>{let browser,server;const url=process.env.STUDY_TEST_URL||'http://127.0.0.1:8796/index.html',errors=[];
  try{

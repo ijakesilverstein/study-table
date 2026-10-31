@@ -1,0 +1,5 @@
+.st169-teach-first{flex:1 1 240px;min-height:44px;padding:11px 14px;border:1px solid #84848e;border-radius:9px;font:600 15px/1.5 system-ui;background:var(--study-surface);color:var(--study-ink);cursor:pointer}
+.st169-teach-first[hidden]{display:none!important}
+.st169-teach-first:focus-visible{outline:3px solid var(--study-warm);outline-offset:3px}
+/* The existing tool launcher stays available below the learning home without covering its teaching controls. */
+#v35Portal #v101ToolsButton{position:static;margin:0 auto 28px;display:block}

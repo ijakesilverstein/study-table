@@ -2,8 +2,8 @@
 from pathlib import Path
 import argparse,json,zipfile,shutil,hashlib,re,html
 repo=Path(__file__).resolve().parents[1]
-parser=argparse.ArgumentParser();parser.add_argument('--output',required=True);args=parser.parse_args()
-release=int(json.loads((repo/'package.json').read_text())['version'].split('.')[0])
+parser=argparse.ArgumentParser();parser.add_argument('--output',required=True);parser.add_argument('--edition',type=int);args=parser.parse_args()
+release=args.edition or int(json.loads((repo/'package.json').read_text())['version'].split('.')[0])
 root=Path(args.output).resolve();public=root/'public';public.mkdir(parents=True,exist_ok=True)
 source=repo/'public'/f'study-table-v{release}.html';target=public/f'Study_Table_V{release}.html'
 shutil.copyfile(source,target)

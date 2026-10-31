@@ -145,10 +145,10 @@
     }
   ],
   "framework": null,
-  "buildCommand": "python3 scripts/build-v168-release.py",
+  "buildCommand": null,
   "installCommand": "",
   "outputDirectory": "public",
   "git": {
-    "deploymentEnabled": true
+    "deploymentEnabled": false
   }
 }

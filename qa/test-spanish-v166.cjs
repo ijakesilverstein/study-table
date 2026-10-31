@@ -2,7 +2,7 @@
 const fs=require('fs'),zlib=require('zlib'),assert=require('node:assert/strict'),path=require('path');
 const {chromium}=require('playwright');
 const ROOT=path.resolve(__dirname,'..');
-const shell=fs.readFileSync(path.join(ROOT,'public','study-table-v166.html'),'utf8');
+const shell=fs.readFileSync((process.env.STUDY_CANDIDATE_HTML||path.join(ROOT,'public','study-table-v166.html')),'utf8');
 const b64=shell.match(/<script id="full-bundle" type="text\/plain">([\s\S]*?)<\/script>/)?.[1];
 assert(b64,'Embedded archive missing');
 const archive=JSON.parse(zlib.gunzipSync(Buffer.from(b64,'base64')).toString('utf8'));
@@ -68,6 +68,7 @@ const scenes=JSON.parse(fs.readFileSync(path.join(ROOT,'source','spanish-real-v1
   await page.evaluate(()=>studyTableFullCourse.open('spanish-5'));
   assert.equal(await page.locator('[data-v166-lesson]').count(),1);
   await page.locator('[data-v166-lesson]').click();
+  if(await page.locator('#v167More').count()&&!await page.locator('#v167More').evaluate(d=>d.open))await page.locator('#v167More>summary').click();
   await page.locator('.v165-story-discovery summary').click();
   await page.locator('#v134Story [data-v134-start]').click();
   for(let i=0;i<3;i++){await page.locator('#v134Story [data-v134-choice]').first().click();await page.locator('#v134Story [data-v134-next]').click()}

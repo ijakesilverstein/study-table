@@ -30,3 +30,8 @@ The current user instruction is **do not push to Vercel**. No Vercel publication
 V136 starts from main `dfd5ffe36610ff72ce2dc12f9346e9351d908f37`. It adds a manual piano count/keyboard companion, Spanish meaning/phrase builder and touch/keyboard stalemate diagram to three existing worked cases. New data, script and styles live in `lesson-companions-v136.*`; all older display, guidance and demonstration records remain exact. Guided retrieval hides the companions with the answers. Manual inspection stops old playback and dictation while retaining typed working. See `VISUAL_COMPANIONS_V136.md` for scope and validation.
 
 The initial fetch still showed the authored-review and story branches at the same snapshots recorded above; neither was merged into this pass. Future work should fetch canonical main, preserve these teaching companions and never force-push over a concurrent update. Keep delivered HTML files and tags. The explicit **do not publish to Vercel** instruction remains active.
+
+
+## V169 published snapshots reconciled (2026-10-31)
+
+The V168 chain at `93b3e701e2fe170cb6c124405c295a69780e1b6d` and the parallel journey at `696ee4c5195c80acf2c752e9336d67de3214a6a6` are both retained in the V169 merge history. The canonical seven-course path, story-matched practice and all 87 explanation prompts remain; six parallel practice variants become fully solved examples, without adding competing course menus. The original parallel builder is archived exactly and its separate preview remains reproducible. See [the full branch table, preservation and test scope](RECONCILIATION_V169.md). Unpublished chat work was not accessible. Root V136 homepage and disabled Vercel Git deployments remain unchanged.

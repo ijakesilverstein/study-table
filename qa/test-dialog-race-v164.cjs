@@ -17,7 +17,7 @@ const path=require('path');
     removeItem(k){values.delete(String(k))},clear(){values.clear()}
    }});
   });
-  const html=fs.readFileSync(path.join(__dirname,'../public/study-table-v164.html'),'utf8');
+  const html=fs.readFileSync((process.env.STUDY_CANDIDATE_HTML||path.join(__dirname,'../public/study-table-v164.html')),'utf8');
   await page.setContent(html,{waitUntil:'domcontentloaded',timeout:60000});
   await page.waitForFunction(()=>window.studyTableBackup&&window.studyTableFocusV163&&document.getElementById('v124BackupHome')&&typeof READY!=='undefined'&&READY);
   const example={version:1,notes:[{text:'Thought worth saving',path:'',subject:'Notebook',when:100}],bookmarks:[]};

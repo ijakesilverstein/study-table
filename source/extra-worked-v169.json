@@ -1,0 +1,161 @@
+{
+  "castling": [
+    {
+      "title": "An attacked crossing square",
+      "steps": [
+        [
+          "Keep the history and space checks",
+          "The king and h1 rook have never moved; the path is empty.",
+          "Those conditions pass, but they are only part of the castling test."
+        ],
+        [
+          "Trace the king’s route",
+          "e1 → f1 → g1.",
+          "The king must be safe on its starting square, crossing square and destination."
+        ],
+        [
+          "Inspect the supplied attack",
+          "The enemy bishop attacks f1.",
+          "F1 is a crossing square. Its being attacked is enough to forbid castling, even if g1 is safe."
+        ],
+        [
+          "Decide",
+          "White cannot castle kingside here.",
+          "An unmoved rook and an empty path do not repair an attacked king route."
+        ]
+      ]
+    },
+    {
+      "title": "Returning home does not restore the right",
+      "steps": [
+        [
+          "Read the history",
+          "The king went from e1 to e2 earlier.",
+          "Castling rights depend on the moves already played, not only the pieces’ current squares."
+        ],
+        [
+          "Check what returning changes",
+          "The king is back on e1; the path is empty and safe.",
+          "Those are useful present-position checks, but they do not undo the earlier king move."
+        ],
+        [
+          "Apply the history rule",
+          "The right to castle was lost when the king moved.",
+          "A rook staying unmoved does not restore the king’s lost right."
+        ],
+        [
+          "Decide",
+          "White cannot castle kingside.",
+          "Keep this history check alongside the route and attack checks."
+        ]
+      ]
+    }
+  ],
+  "physics-2": [
+    {
+      "title": "Find kinetic energy from mass and speed",
+      "steps": [
+        [
+          "Write the energy expression",
+          "E = ½mv².",
+          "Mass is 10 kg and speed is 4 m/s. The square belongs to the speed."
+        ],
+        [
+          "Square the speed",
+          "v² = 4² = 16 m²/s².",
+          "Multiplying mass by unsquared speed would be a different calculation."
+        ],
+        [
+          "Multiply with the one-half",
+          "E = ½ × 10 × 16 = 80 J.",
+          "Half of 10 is 5; 5 times 16 is 80."
+        ],
+        [
+          "State the result with its unit",
+          "The sled has 80 joules of kinetic energy.",
+          "Kilograms times metres squared per second squared gives joules."
+        ]
+      ],
+      "corrections": {
+        "40": "A numerical result of 40 comes from 10 × 4, mass times unsquared speed. For kinetic energy, use ½ × 10 × 4² = 80 J."
+      }
+    },
+    {
+      "title": "Recover speed from kinetic energy",
+      "steps": [
+        [
+          "Start with the known energy",
+          "200 J = ½ × 25 kg × v².",
+          "The unknown is speed; write the square explicitly before rearranging."
+        ],
+        [
+          "Isolate the square",
+          "v² = (2 × 200) / 25 = 16 m²/s².",
+          "Multiplying by 2 removes the one-half, then dividing by mass isolates v²."
+        ],
+        [
+          "Take the positive square root",
+          "v = √16 = 4 m/s.",
+          "Sixteen is the value of v². Speed is its positive square root."
+        ],
+        [
+          "Check by substitution",
+          "½ × 25 × 4² = 200 J.",
+          "Putting 4 m/s back into the energy expression recovers the supplied 200 joules."
+        ]
+      ]
+    }
+  ],
+  "test-interpretation": [
+    {
+      "title": "A positive result when the condition is uncommon",
+      "steps": [
+        [
+          "Count the two starting groups",
+          "1% of 10,000 = 100 with the condition; 9,900 without.",
+          "Keep the much larger unaffected group in view."
+        ],
+        [
+          "Count true positives",
+          "90% of 100 = 90.",
+          "Sensitivity acts on the group who actually have the condition."
+        ],
+        [
+          "Count false positives",
+          "5% of 9,900 = 495.",
+          "Specificity of 95% leaves a 5% false-positive rate among people without the condition."
+        ],
+        [
+          "Use all positive results as the denominator",
+          "90 / (90 + 495) = 90 / 585 ≈ 15.4%.",
+          "About 15% of positive results in this example are true positives. A positive screening result is not itself a diagnosis."
+        ]
+      ]
+    },
+    {
+      "title": "The same true-positive count, a different base rate",
+      "steps": [
+        [
+          "Count the starting groups",
+          "10% of 1,000 = 100 with the condition; 900 without.",
+          "Prevalence tells you the two groups before testing."
+        ],
+        [
+          "Count true positives",
+          "90% of 100 = 90.",
+          "These are people with the condition whose tests are positive."
+        ],
+        [
+          "Count false positives",
+          "10% of 900 = 90.",
+          "A specificity of 90% means 10% of the unaffected group tests positive."
+        ],
+        [
+          "Compare true positives with all positives",
+          "90 / (90 + 90) = 50%.",
+          "Half of the positive results are true positives here. Sensitivity alone is not the probability of having the condition after a positive test."
+        ]
+      ]
+    }
+  ]
+}

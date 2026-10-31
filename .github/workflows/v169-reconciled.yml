@@ -1,0 +1,43 @@
+name: Check reconciled V169 download
+on:
+  push:
+    branches:
+      - main
+      - feature/v169-reconciled-study-app
+  pull_request:
+    paths:
+      - 'source/**'
+      - 'scripts/**'
+      - 'qa/**'
+      - 'public/study-table-v169.html'
+      - '.github/workflows/v169-reconciled.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reconciled-download:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: python3 -m pip install -r requirements-test.txt
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:latest
+      - name: Package the tested download without publishing a site
+        run: python3 scripts/package-downloads.py --edition 169 --output "$RUNNER_TEMP/study-table-v169"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: study-table-v169-downloads
+          path: |
+            ${{ runner.temp }}/study-table-v169/public/Study_Table_V169.html
+            ${{ runner.temp }}/study-table-v169/public/Study_Table_V169.zip
+          if-no-files-found: error
+          retention-days: 30

@@ -1,0 +1,42 @@
+name: V166 cohesive learning journeys
+on:
+  push:
+    branches: [feature/v166-cohesive-journey-spanish-bridge]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  journey:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - uses: actions/setup-node@v4
+        with: {node-version: '24', cache: npm}
+      - run: python3 -m pip install -r requirements-test.txt
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Verify canonical V136 unchanged
+        run: python3 scripts/build.py --check
+      - name: Generate optional V163 to V166 builds
+        run: |
+          python3 scripts/build-v163.py
+          python3 scripts/build-v164.py
+          python3 scripts/build-v165.py
+          python3 scripts/build-v166-journey-preview.py
+          python3 scripts/build-v166-journey-preview.py --check
+      - name: Validate archive and original transfer data
+        run: |
+          python3 qa/check-v165-archive.py
+          python3 qa/check-v166-preservation.py
+      - name: Exercise 7 journeys plus repair paths
+        run: node qa/test-v166-journey.cjs
+      - name: Package offline V166 without deployment
+        uses: actions/upload-artifact@v4
+        with:
+          name: study-table-v166-cohesive
+          path: source/Study_Table_V166_Journey.html
+          if-no-files-found: error
+          retention-days: 30
