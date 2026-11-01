@@ -1,3 +1,8 @@
 # Exact historical extracts retain the separator newline from the uploaded HTML.
 source/imports/claude-v120-medicine-figures.js whitespace=-blank-at-eof
 source/imports/claude-v120-business-figures.js whitespace=-blank-at-eof
+
+# V209 standalone HTML is archived as exact UTF-8 chunks; preserve LF across operating systems.
+source/v209-html-parts/*.txt text eol=lf
+source/st209-*.js text eol=lf
+source/st209-*.css text eol=lf

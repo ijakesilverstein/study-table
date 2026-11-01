@@ -1,0 +1,8 @@
+/* V209 pedagogy and review enhancements */
+.st209-stage{font-size:.81rem;letter-spacing:.06em;text-transform:uppercase;color:#527a67;font-weight:800;margin:.4rem 0}
+.st209-teach{border:1px solid #c6ded2;border-radius:12px;padding:11px 14px;margin:10px 0 18px;background:#f3faf5;color:#204d3a;line-height:1.55}
+.st209-teach summary{cursor:pointer;font-weight:750;outline-offset:4px}
+.st209-teach p{margin:9px 0 2px}.st209-misses{margin:18px 0;padding:12px;border:1px solid #cbdcd1;border-radius:14px;background:#f7fbf8}
+.st209-misses h3{margin:3px 0 12px}.st209-miss{margin:8px 0;padding:12px;background:white;border-radius:10px;border:1px solid #d9e6dc}
+.st209-miss p{margin:6px 0}.st208-tools{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.st208-tools button{border:1px solid #8b91a1;border-radius:9px;padding:9px 12px;background:transparent;color:inherit;cursor:pointer}
+@media (prefers-color-scheme:dark){.st209-teach{background:#1b2f28;color:#e4f5eb;border-color:#426957}.st209-misses{background:#1b2f28}.st209-miss{background:#22392f;border-color:#426957;color:#e4f5eb}}

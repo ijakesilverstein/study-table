@@ -1,0 +1,32 @@
+name: V209 offline build integrity
+on:
+  push:
+    branches:
+      - feature/v209-complete-offline-html
+  pull_request:
+    paths:
+      - 'source/v209-html-parts/**'
+      - 'source/st209-*'
+      - 'scripts/build-v209.py'
+      - '.gitattributes'
+      - '.github/workflows/v209-integrity.yml'
+jobs:
+  verify-v209:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify byte-exact archived V209 HTML
+        run: python3 scripts/build-v209.py --check
+      - name: Build standalone app to temporary output
+        run: python3 scripts/build-v209.py --output /tmp/study-table-v209.html
+      - name: Check editable JavaScript syntax
+        run: |
+          node --check source/st209-chapter-checks.js
+          node --check source/st209-review-backup.js
