@@ -1,0 +1,8 @@
+/* V215: worked-with-you walkthroughs are a first-class part of every teaching lesson. */
+.st215-coach{margin:18px 0 12px;padding:20px;border-radius:16px;border:1px solid var(--v35-border,rgba(125,125,125,.22));background:color-mix(in srgb,var(--v35-card,#fff) 91%,#e8f1ff)}
+.st215-kicker{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;opacity:.7}
+.st215-coach h4{font-size:20px;margin:6px 0 12px}.st215-scene{font-size:15px;line-height:1.6;margin:0 0 14px}.st215-prompt{font-weight:700;font-size:16px;line-height:1.5}
+.st215-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}.st215-hint{border-left:3px solid #3b82f6;padding:11px 13px;background:color-mix(in srgb,#3b82f6 8%,transparent);border-radius:4px;font-size:15px;line-height:1.55}
+.st215-work{margin:12px 0;padding:13px 14px;border-radius:10px;border:1px solid color-mix(in srgb,currentColor 11%,transparent);line-height:1.6}.st215-work strong{display:block;font-size:12px;letter-spacing:.025em;margin-bottom:5px}.st215-work p{margin:0}
+.st215-takeaway{font-weight:650;margin:15px 0 5px;line-height:1.55}.st215-transfer{line-height:1.55;margin:6px 0 14px}.st215-caption{opacity:.8;font-size:13px;line-height:1.5}
+@media(max-width:480px){.st215-coach{padding:13px}.st215-row{flex-direction:column}.st215-row button{width:100%}}
