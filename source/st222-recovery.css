@@ -1,0 +1,10 @@
+/* Study Table V222: safe, read-only archive conversion UI. */
+.st222-entry{margin:20px 0 5px;padding:18px;border-radius:14px;border:1px solid color-mix(in srgb,currentColor 18%,transparent);background:color-mix(in srgb,#d4f3e9 12%,var(--v35-card,#fff))}
+.st222-entry h3{font-size:17px;margin:0 0 7px}.st222-entry p{font-size:14px;line-height:1.6;margin:7px 0 12px}
+.st222-entry button,.st222-dialog button{font:inherit;cursor:pointer;border-radius:10px;border:1px solid color-mix(in srgb,currentColor 25%,transparent);padding:10px 14px;background:var(--v35-card,#fff);color:inherit;font-weight:650}
+.st222-entry button:focus-visible,.st222-dialog button:focus-visible,.st222-dialog input:focus-visible{outline:3px solid #2563eb;outline-offset:3px}
+.st222-dialog{width:min(680px,calc(100vw - 20px));max-height:calc(100dvh - 22px);overflow:auto;padding:0;border-radius:17px;border:1px solid color-mix(in srgb,currentColor 25%,transparent);color:var(--v35-ink,#17202c);background:var(--v35-bg,#fff)}
+.st222-dialog::backdrop{background:rgba(0,0,0,.65)}.st222-shell{padding:22px;line-height:1.55}.st222-top{display:flex;justify-content:space-between;align-items:center;gap:10px}.st222-top h2{font-size:22px;margin:0}
+.st222-picker{font-weight:650;display:block;margin:17px 0 6px}.st222-dialog input[type=file]{display:block;max-width:100%;font:inherit}.st222-status{padding:10px 12px;border-radius:8px;background:color-mix(in srgb,#3478dd 8%,transparent)}.st222-status[data-type=bad]{background:color-mix(in srgb,#dc3545 10%,transparent)}
+.st222-summary{font-weight:600}.st222-omitted{font-size:13px;max-height:200px;overflow:auto}.st222-omitted summary{cursor:pointer;font-weight:650}.st222-omitted li{margin:6px 0;overflow-wrap:anywhere}.st222-actions{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}.st222-actions .st222-primary{background:#225cbd;color:#fff;border-color:#225cbd}.st222-actions button:disabled{opacity:.45;cursor:not-allowed}.st222-caution{font-size:13px;opacity:.82}
+@media(max-width:480px){.st222-shell{padding:15px}.st222-actions{flex-direction:column}.st222-actions button{width:100%}.st222-top h2{font-size:19px}}
