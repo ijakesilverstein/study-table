@@ -1,0 +1,57 @@
+/* V229 reasoning coach: teaching-first, accessible contrast, responsive and consistent with V228 */
+.st229-dialog{width:min(900px,calc(100vw - 24px));max-height:94dvh;padding:0;border:0;border-radius:18px;background:#fffdfa;color:#19374a;box-shadow:0 25px 90px #071e347b;overscroll-behavior:contain}
+.st229-dialog::backdrop{background:#081b30ae}
+.st229-dialog button,.st229-dialog textarea{font:inherit;cursor:pointer}
+.st229-dialog button:focus-visible,.st229-dialog textarea:focus-visible,.st229-launch:focus-visible,.st229-in-lesson:focus-visible{outline:3px solid #e9a44b;outline-offset:2px}
+.st229-dialog button:disabled{opacity:.56;cursor:not-allowed}
+.st229-dialog .st229-head{display:flex;position:sticky;top:0;z-index:9;align-items:center;justify-content:space-between;gap:12px;background:#18364a;color:#fff;padding:17px 20px;border-radius:18px 18px 0 0}
+.st229-dialog .st229-head h2{margin:4px 0 0;font-size:clamp(20px,2.4vw,28px);line-height:1.2;color:#fff;font-weight:800}
+.st229-dialog .st229-kicker{color:#c7e7e8;font-size:10px;letter-spacing:.12em;font-weight:800}
+.st229-dialog .st229-close{padding:10px 14px;border:1px solid #b9dbe0;background:#f1f9f9;color:#163c53;border-radius:9px;font-size:13px;font-weight:750;white-space:nowrap}
+.st229-dialog .st229-body{padding:21px;overflow:auto;max-height:calc(94dvh - 78px);line-height:1.6}
+.st229-dialog .st229-tracks{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:11px}
+.st229-dialog .st229-track{border:1px solid #b9d6dc;background:#f0f7f6;color:#21485c;border-radius:10px;padding:10px 5px;font-size:12px;font-weight:750}
+.st229-dialog .st229-track[aria-pressed=true]{background:#136b70;color:white;border-color:#136b70}
+.st229-dialog .st229-lessons{display:flex;flex-wrap:wrap;gap:8px;margin:7px 0 15px}
+.st229-dialog .st229-lesson{border:1px solid #cadbdf;background:white;color:#1d4256;border-radius:10px;padding:9px 10px;font-size:12px;text-align:left}
+.st229-dialog .st229-lesson[aria-current=step]{background:#fff1d9;border-color:#bc863d;font-weight:750}
+.st229-dialog .st229-stages{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin-bottom:16px}
+.st229-dialog .st229-stage{border:1px solid #d1dee2;border-radius:9px;background:#f1f4f4;color:#2f5262;padding:9px 4px;font-weight:750;font-size:12px}
+.st229-dialog .st229-stage[aria-current=step]{background:#e2f3ec;border-color:#13756c;color:#135b53}
+.st229-dialog .st229-content{background:white;border:1px solid #d5e3e7;border-radius:15px;padding:24px;box-shadow:0 3px 12px #163c5008}
+.st229-dialog .st229-overline{font-size:10px;letter-spacing:.08em;font-weight:850;color:#186e71}
+.st229-dialog .st229-content h3{font-size:clamp(20px,2.8vw,27px);line-height:1.25;color:#163a50;margin:9px 0 14px;font-weight:800}
+.st229-dialog .st229-content p{margin:10px 0}
+.st229-dialog .st229-lead{font-size:17px;line-height:1.65;color:#24475b}
+.st229-dialog .st229-muted{font-size:13px;color:#55717e}
+.st229-dialog .st229-teacher-card,.st229-dialog .st229-situation,.st229-dialog .st229-worked{padding:16px 18px;margin:16px 0;border-left:4px solid #18847b;background:#ecf8f5;border-radius:8px;color:#1a4552}
+.st229-dialog .st229-situation{border-color:#de9639;background:#fff7e9}
+.st229-dialog .st229-prompt{font-size:17px;font-weight:750;color:#24404f}
+.st229-dialog .st229-options{display:grid;gap:9px;margin:16px 0}
+.st229-dialog .st229-option{text-align:left;border:1px solid #b8d1d7;background:#f7fcfb;color:#1b3e53;border-radius:10px;padding:12px 15px;min-height:44px;line-height:1.4;font-weight:650}
+.st229-dialog .st229-option:hover{border-color:#1a777a;background:#ecf7f2}
+.st229-dialog .st229-option[aria-pressed=true]{border:2px solid #ba7c2b;background:#fff2db;color:#3f331a}
+.st229-dialog .st229-hint,.st229-dialog .st229-feedback{background:#e8f3fa;border-radius:10px;padding:13px 15px;color:#1b4862}
+.st229-dialog .st229-feedback{margin:15px 0}
+.st229-dialog .st229-feedback[data-result=reteach]{background:#fff1e3;color:#674323;border-left:4px solid #cb8539}
+.st229-dialog .st229-feedback[data-result=guided]{background:#e4f5e9;color:#265740;border-left:4px solid #278a5a}
+.st229-dialog .st229-help,.st229-dialog .st229-walk,.st229-dialog .st229-back{padding:9px 12px;border:1px solid #99bbc6;border-radius:10px;background:#f1f8fa;color:#214d60;font-size:13px;font-weight:750;margin:5px 10px 5px 0}
+.st229-dialog .st229-steps{padding-left:22px;margin-bottom:0;display:grid;gap:12px}
+.st229-dialog .st229-self{display:grid;gap:9px;margin:18px 0;padding:16px;background:#f4f8fa;border:1px solid #cbdde2;border-radius:12px}
+.st229-dialog .st229-self-option{text-align:left;border:1px solid #b8ced9;border-radius:8px;padding:11px 12px;background:white;color:#214458;font-weight:650;min-height:42px}
+.st229-dialog .st229-self-option[aria-pressed=true]{background:#e0f4eb;color:#165c43;border:2px solid #1e8c70}
+.st229-dialog .st229-label{display:grid;gap:8px;margin:15px 0;color:#2d4b5b}
+.st229-dialog .st229-label span{font-size:13px;font-weight:750}
+.st229-dialog textarea{width:100%;box-sizing:border-box;min-height:90px;border:1px solid #a6c0cf;border-radius:9px;background:white;color:#1c4051;padding:12px;font-size:15px;resize:vertical}
+.st229-dialog .st229-actions{display:flex;gap:11px;justify-content:flex-end;align-items:center;flex-wrap:wrap;margin-top:15px}
+.st229-dialog .st229-next,.st229-dialog .st229-save{padding:11px 17px;background:#14696b;border:0;border-radius:10px;color:white;font-size:14px;font-weight:800}
+.st229-dialog .st229-status{min-height:23px;font-size:13px;font-weight:750;color:#1e7250}
+.st229-dialog .st229-status[data-kind=error]{color:#a83732}
+.st229-dialog .st229-status[data-kind=warn]{color:#936127}
+.st229-launch,.st229-in-lesson{border:1px solid #8fbbc4;background:#eaf8f3;color:#16555a;border-radius:9px;padding:9px 12px;font:inherit;font-weight:750;cursor:pointer;margin:6px 0}
+.st229-in-lesson{display:block;width:fit-content;background:#185f64;color:white;border-color:#185f64;margin-top:16px}
+@media(max-width:620px){.st229-dialog{width:calc(100vw - 12px);max-height:96dvh;border-radius:13px}.st229-dialog .st229-head{border-radius:13px 13px 0 0;padding:13px 12px}.st229-dialog .st229-head h2{font-size:18px}.st229-dialog .st229-body{padding:12px;max-height:calc(96dvh - 70px)}.st229-dialog .st229-content{padding:16px 13px}.st229-dialog .st229-tracks{grid-template-columns:repeat(2,minmax(0,1fr))}.st229-dialog .st229-stages{gap:4px}.st229-dialog .st229-stage{font-size:10px;padding:8px 2px}.st229-dialog .st229-options .st229-option{padding:12px}.st229-dialog .st229-actions{justify-content:stretch}.st229-dialog .st229-next{flex:1}}
+
+.st229-dialog .st229-review-strip{display:flex;gap:11px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:11px 14px;margin:4px 0 12px;border:1px solid #d2b77b;border-radius:11px;background:#fff7e5}
+.st229-dialog .st229-review-label{font-size:13px;color:#634b25;font-weight:650;margin:0}
+.st229-dialog .st229-review-action{padding:8px 11px;border:1px solid #bb8f43;border-radius:9px;background:white;color:#6a4523;font-weight:750;font-size:12px}
