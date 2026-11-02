@@ -1,0 +1,61 @@
+/* V228 scoped teaching studio, legible in both app themes and on mobile */
+.st228-dialog{width:min(1000px,calc(100vw - 24px));max-height:min(93vh,920px);border:0;border-radius:20px;padding:0;background:#fffdf8;color:#193145;box-shadow:0 24px 90px #0f243f70;overscroll-behavior:contain}
+.st228-dialog::backdrop{background:#081b30a6}
+.st228-dialog button,.st228-dialog textarea,.st228-dialog input{font:inherit}
+.st228-dialog button{cursor:pointer}
+.st228-dialog button:focus-visible,.st228-dialog textarea:focus-visible,.st228-dialog input:focus-visible,.st228-launch:focus-visible{outline:3px solid #f4aa4d;outline-offset:2px}
+.st228-dialog button:disabled{opacity:.55;cursor:default}
+.st228-dialog .st228-head{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px 22px;background:#19384f;color:#fff;border-radius:20px 20px 0 0;box-shadow:0 2px 10px #142b3b3d}
+.st228-dialog .st228-head h2{font-size:clamp(19px,2vw,25px);line-height:1.2;font-weight:800;margin:2px 0 0;color:#fff}
+.st228-dialog .st228-kicker{font-size:10px;letter-spacing:.12em;color:#c8e9ee;font-weight:800}
+.st228-dialog .st228-close{padding:9px 12px;border:1px solid #d5ebf9a8;border-radius:9px;background:#edf8ff;color:#1b405c;font-size:13px;font-weight:700;white-space:nowrap}
+.st228-dialog .st228-main{padding:22px;max-height:calc(93vh - 81px);overflow:auto;line-height:1.55}
+.st228-dialog .st228-bar{display:grid;gap:11px;margin-bottom:18px}
+.st228-dialog .st228-subject-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}
+.st228-dialog .st228-subject{padding:11px 8px;border:1px solid #cadce6;background:#f0f7fb;color:#244357;border-radius:10px;font-size:12px;font-weight:750}
+.st228-dialog .st228-subject[aria-pressed=true]{background:#166a70;color:white;border-color:#166a70}
+.st228-dialog .st228-lesson-buttons{display:flex;gap:7px;flex-wrap:wrap}
+.st228-dialog .st228-lesson{padding:8px 11px;border:1px solid #cedde5;border-radius:9px;background:#fff;color:#19384f;font-size:12px;text-align:left}
+.st228-dialog .st228-lesson[aria-current=step]{border-color:#d47b29;background:#fff3df;font-weight:750}
+.st228-dialog .st228-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:12px 0 18px}
+.st228-dialog .st228-step{border:1px solid #d4e0e5;background:#f0f3f3;color:#2c4f60;padding:9px 5px;border-radius:9px;font-size:12px;font-weight:700}
+.st228-dialog .st228-step[aria-current=step]{border-color:#166a70;background:#e3f5f1;color:#125a58}
+.st228-dialog .st228-content{background:white;border:1px solid #d7e4e9;border-radius:16px;padding:22px;box-shadow:0 2px 8px #1230470c}
+.st228-dialog .st228-overline{font-size:11px;font-weight:850;letter-spacing:.08em;color:#117078}
+.st228-dialog .st228-content h3{font-size:clamp(19px,3vw,25px);font-weight:800;margin:8px 0 12px;color:#18384c}
+.st228-dialog .st228-content p{margin:9px 0}
+.st228-dialog .st228-lead{font-size:17px;line-height:1.62;color:#213b4a}
+.st228-dialog .st228-scenario,.st228-dialog .st228-misconception,.st228-dialog .st228-teacher-answer{margin:18px 0;padding:16px 18px;border-left:4px solid #16827e;border-radius:8px;background:#eef8f6;color:#244250}
+.st228-dialog .st228-misconception{border-left-color:#d89047;background:#fff7e9}
+.st228-dialog .st228-worked{padding-left:24px;margin:14px 0;display:grid;gap:14px;font-size:16px;color:#18384c}
+.st228-dialog .st228-worked li{padding-left:7px}
+.st228-dialog .st228-muted{font-size:13px;color:#537080}
+.st228-dialog .st228-navigation{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:flex-end;margin:17px 0 2px}
+.st228-dialog .st228-next,.st228-dialog .st228-save{padding:11px 17px;border:0;border-radius:10px;background:#12656c;color:white;font-weight:750}
+.st228-dialog .st228-back,.st228-dialog .st228-hint,.st228-dialog .st228-example{padding:9px 13px;border-radius:10px;border:1px solid #aacdd2;background:#eff9f9;color:#184d5f;font-weight:650;margin:8px 9px 8px 0}
+.st228-dialog .st228-model{margin:14px 0 18px;padding:16px;background:#f6fafb;border:1px solid #dfebee;border-radius:12px}
+.st228-dialog .st228-choices{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:10px 0}
+.st228-dialog .st228-choice{padding:12px;border-radius:9px;border:1px solid #aecfda;background:#fff;color:#153b50;font-weight:800}
+.st228-dialog .st228-field,.st228-dialog .st228-control{display:grid;gap:7px;margin:14px 0;color:#2d4b5b}
+.st228-dialog .st228-field span,.st228-dialog .st228-control span{font-size:13px;font-weight:700}
+.st228-dialog textarea{width:100%;resize:vertical;min-height:70px;box-sizing:border-box;border:1px solid #b4ccd6;border-radius:8px;padding:10px;color:#19384f;background:white}
+.st228-dialog .st228-feedback{background:#f0f5f7;color:#294b5b;border-radius:9px;padding:12px;margin:12px 0!important;min-height:20px}
+.st228-dialog .st228-feedback[data-kind=good]{background:#e3f5ea;color:#205f40}
+.st228-dialog .st228-feedback[data-kind=coach]{background:#fff1df;color:#75431f}
+.st228-dialog .st228-keys{position:relative;width:min(100%,550px);height:152px;margin:15px auto;box-sizing:border-box;user-select:none}
+.st228-dialog .st228-whites{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));height:100%;width:100%}
+.st228-dialog .st228-key{font-size:13px;font-weight:800;border:1px solid #8195a0;box-sizing:border-box;padding:0}
+.st228-dialog .st228-white{height:100%;width:100%;padding-top:96px;border-radius:0 0 8px 8px;background:white;color:#17394e}
+.st228-dialog .st228-black{position:absolute;top:0;transform:translateX(-50%);width:8%;height:60%;border-radius:0 0 6px 6px;background:#283c4e;color:white;z-index:1;font-size:11px}
+.st228-dialog .st228-key[aria-pressed=true]{background:#f6bc5b;color:#192c35;border:2px solid #ba751f}
+.st228-dialog .st228-chart{width:100%;margin:5px 0}
+.st228-dialog .st228-graph{width:100%;height:auto;max-height:250px;overflow:visible}
+.st228-dialog .st228-controls,.st228-dialog .st228-physics-controls{display:grid;gap:8px}
+.st228-dialog input[type=range]{width:100%;accent-color:#137d80}
+.st228-dialog .st228-output,.st228-dialog .st228-formula{font-size:16px;font-weight:750;color:#19575c}
+.st228-dialog .st228-save-status{min-height:24px;color:#1a6652;font-size:14px;font-weight:700}
+.st228-dialog .st228-save-status[data-kind=error]{color:#9b302b}
+.st228-dialog .st228-save-status[data-kind=warn]{color:#895822}
+.st228-dialog .st228-saved{color:#20674e;font-weight:700}
+.st228-launch{font:inherit;cursor:pointer;border-radius:9px;padding:8px 12px;border:1px solid #85b5bd;background:#ebf9f7;color:#174e56;font-weight:700}
+@media(max-width:620px){.st228-dialog{width:calc(100vw - 12px);max-height:96dvh;border-radius:13px}.st228-dialog .st228-head{border-radius:13px 13px 0 0;padding:13px 12px}.st228-dialog .st228-head h2{font-size:18px}.st228-dialog .st228-main{padding:12px;max-height:calc(96dvh - 72px)}.st228-dialog .st228-content{padding:16px 13px}.st228-dialog .st228-subject-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.st228-dialog .st228-subject{font-size:11px;padding:9px 3px}.st228-dialog .st228-steps{grid-template-columns:repeat(4,minmax(0,1fr))}.st228-dialog .st228-step{font-size:10px;padding:7px 1px}.st228-dialog .st228-keys{height:135px}.st228-dialog .st228-white{font-size:12px;padding-top:88px}.st228-dialog .st228-black{font-size:10px;height:57%}.st228-dialog .st228-navigation{justify-content:stretch}.st228-dialog .st228-next,.st228-dialog .st228-save{flex:1}}
