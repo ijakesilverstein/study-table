@@ -1,0 +1,24 @@
+.st207-pane{padding:22px;max-height:min(75vh,790px);overflow:auto;background:#fcfcf8;color:#213e32}
+.st207-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;border-bottom:1px solid #d9e3db;padding-bottom:12px;margin-bottom:18px}
+.st207-heading h2,.st207-pane h2{font:700 clamp(22px,3vw,30px)/1.2 Georgia,serif;margin:10px 0 14px}
+.st207-eyebrow{display:block;font:700 12px/1.4 system-ui;letter-spacing:.07em;text-transform:uppercase;color:#587469}
+.st207-prompt{font-size:19px;font-weight:580;line-height:1.5;max-width:740px;margin:15px 0}
+.st207-input-label{display:block;font-weight:700;font-size:14px;margin:16px 0 7px}
+.st207-input{width:min(100%,690px);font-size:17px;padding:13px 14px;border:1px solid #9caea3;border-radius:9px;background:white;color:#183a31}
+.st207-feedback{min-height:48px;margin:14px 0;border-left:4px solid #b8c9bf;padding:9px 12px;line-height:1.55;background:#f1f6f1;border-radius:3px}
+.st207-feedback[data-status=try]{border-color:#b77b33;background:#fff7ed}.st207-feedback[data-status=ok]{border-color:#327e58;background:#eaf5ec}
+.st207-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:16px 0}
+.st207-pane button,.st207-review-launch,.st207-chapter-check{border:1px solid #28704d;background:#235a46;color:#fff;border-radius:9px;padding:10px 15px;line-height:1.35;font-weight:650;cursor:pointer}
+.st207-pane button.st207-secondary{color:#245a43;background:#fffefa}
+.st207-pane button:disabled{opacity:.5;cursor:default}
+.st207-note{font-size:13px;line-height:1.5;color:#577368;margin:12px 0}
+.st207-review-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:9px;margin:15px 0}
+.st207-review-list .st207-review-row{text-align:left;font-weight:550;background:white;color:#20503c;border-color:#bdcec1}
+.st207-chapter-check{margin:10px 0 4px!important;font-size:13px!important;width:auto!important}
+.st207-review-launch{font-size:13px;white-space:normal}
+.st207-keys-wrap{margin:14px 0;padding:12px;background:#edf3ed;border-radius:9px;max-width:750px}
+.st207-keys{display:flex;gap:4px;overflow-x:auto;padding:10px 2px;align-items:flex-start}
+.st207-keys .st207-white{flex:1 0 38px;min-height:80px;background:white;color:#20362c;border:1px solid #89988e;border-radius:0 0 6px 6px;padding:5px 0;font-size:11px}
+.st207-keys .st207-black{flex:1 0 27px;min-height:55px;background:#27392f;color:white;border:1px solid #26342d;border-radius:0 0 5px 5px;padding:5px 0;font-size:10px}
+#st205Top{flex-wrap:wrap}#v35Portal .st207-portal-link{background:#235a46;color:#fff;border:1px solid #2c624b;padding:9px 13px;border-radius:9px;font-weight:750;cursor:pointer}.st207-pane [hidden]{display:none!important}
+@media(max-width:550px){.st207-pane{padding:15px}.st207-prompt{font-size:17px}.st207-actions button{width:100%}.st207-review-launch{order:3;width:100%}}

@@ -1,0 +1,21 @@
+/* V224 — compatible with the existing light/dark portal and mobile layout. */
+.st224-dialog{border:0;border-radius:18px;padding:0;max-height:min(90dvh,880px);width:min(760px,calc(100vw - 24px));color:#172b40;background:#fff;box-shadow:0 20px 70px #1118;overscroll-behavior:contain}
+.st224-dialog::backdrop{background:rgba(7,17,32,.67)}
+.st224-shell{display:flex;flex-direction:column;max-height:min(90dvh,880px);min-width:0}
+.st224-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 22px;background:#183654;color:#fff;font-weight:750;font-size:18px}
+.st224-head button{background:#fff;color:#172b40;border:1px solid #b7c7da;border-radius:9px;padding:7px 14px;cursor:pointer;font:inherit;font-size:13px}
+.st224-main{overflow-y:auto;min-height:0;padding:16px;display:grid;gap:13px}
+.st224-card{border:1px solid #d1dce7;background:#f8fafc;border-radius:12px;padding:14px;display:grid;gap:10px;min-width:0}
+.st224-card h3{margin:0;font-size:17px;color:#142c45}
+.st224-card p{margin:0;line-height:1.48;font-size:14px;color:#2e475f}
+.st224-card .st224-muted{font-size:13px;color:#466178}
+.st224-card .st224-warning{background:#fff4db;border-left:3px solid #d58a1c;color:#5f441f;padding:9px;border-radius:5px}
+.st224-actions{display:flex;gap:8px;flex-wrap:wrap}
+.st224-actions button,.st224-launch{font:inherit;cursor:pointer;border:1px solid #c4d0de;border-radius:9px;background:#fff;color:#194568;padding:10px 13px;font-size:13px;line-height:1.2;font-weight:650}
+.st224-actions .st224-primary{background:#1767a9;color:#fff;border-color:#1767a9}
+.st224-actions button:disabled{opacity:.45;cursor:not-allowed}
+.st224-actions button:focus-visible,.st224-head button:focus-visible,.st224-launch:focus-visible{outline:3px solid #58aaff;outline-offset:2px}
+.st224-status{border-top:1px solid #dce5f0;padding:11px 18px;background:#edf4fc;color:#213b53;font-size:13px;margin:0}
+#st224ProgressLink{margin:0 0 8px;width:max-content;max-width:100%;align-self:start}
+#st224Portal{white-space:normal}
+@media(max-width:500px){.st224-main{padding:10px}.st224-head{padding:13px;font-size:15px}.st224-card{padding:11px}.st224-actions button{width:100%;min-height:40px}.st224-dialog{width:calc(100vw - 12px);max-height:94dvh}.st224-shell{max-height:94dvh}}

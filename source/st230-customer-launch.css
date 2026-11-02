@@ -1,0 +1,48 @@
+/* V230 customer navigation: keep existing controls wired but reduce visible decisions. */
+#v35Content .v36-head-actions{display:flex!important;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:9px!important}
+#v35Content .v36-head-actions > button:not(#st228Portal):not(#v108CoursesTop):not(#st214Portal):not(#st223Portal):not(#st230Start){display:none!important}
+#v35Content .v36-head-actions > button:is(#st228Portal,#v108CoursesTop,#st214Portal,#st223Portal,#st230Start){font:inherit!important;max-width:none!important;width:auto!important;min-height:42px!important;border-radius:10px!important;white-space:normal!important;line-height:1.2!important;padding:9px 13px!important;font-size:13px!important}
+#v35Content .v36-head-actions #st230Start{background:#176844!important;color:#fff!important;border:1px solid #176844!important;font-weight:800!important}
+#v35Content .v36-head-actions .st230-more{position:relative;z-index:50}
+#v35Content .v36-head-actions .st230-more>summary{cursor:pointer;list-style:none;border:1px solid #bdcec9;border-radius:10px;background:white;color:#20483e;padding:10px 13px;min-height:42px;box-sizing:border-box;font:750 13px/1.4 system-ui,sans-serif}
+#v35Content .v36-head-actions .st230-more>summary:after{content:' ▾'}
+#v35Content .v36-head-actions .st230-more[open]>summary{background:#e7f2ed}
+#v35Content .v36-head-actions .st230-menu{position:absolute;right:0;top:calc(100% + 8px);min-width:230px;max-height:65vh;overflow:auto;background:#fff;box-shadow:0 14px 40px #0a241e38;border:1px solid #b8d0c3;padding:8px;border-radius:13px;display:grid;gap:5px}
+#v35Content .v36-head-actions .st230-menu-item{display:block;width:100%;font:650 13px/1.3 system-ui,sans-serif;text-align:left;padding:10px 11px;background:#fff;color:#193c33;border:0;border-radius:7px;cursor:pointer}
+#v35Content .v36-head-actions .st230-menu-item:hover,#v35Content .v36-head-actions .st230-menu-item:focus-visible{background:#eef6f0}
+.st230-dialog{width:min(880px,calc(100vw - 20px));max-height:94dvh;border:0;padding:0;border-radius:18px;background:#fffdfa;color:#183c39;box-shadow:0 22px 65px #0a1d2777;overscroll-behavior:contain}
+.st230-dialog::backdrop{background:#0b1924b3}
+.st230-dialog *{box-sizing:border-box}
+.st230-dialog button{font:inherit;cursor:pointer}
+.st230-dialog button:focus-visible,#v35Content .v36-head-actions :focus-visible{outline:3px solid #edb451;outline-offset:3px}
+.st230-dialog .st230-head{background:#173d37;color:white;display:flex;justify-content:space-between;align-items:center;gap:12px;position:sticky;top:0;z-index:5;padding:19px 22px}
+.st230-dialog .st230-head h2{font-size:clamp(20px,3vw,28px);color:#fff;margin:4px 0 0;line-height:1.18}
+.st230-dialog .st230-kicker{font-size:11px;color:#c5e3d3;letter-spacing:.11em;font-weight:800}
+.st230-dialog .st230-close{background:#f4fbf6;color:#163d33;border:1px solid #b3d5c3;border-radius:9px;padding:10px 15px;white-space:nowrap;font-weight:800}
+.st230-dialog .st230-body{padding:22px;max-height:calc(94dvh - 82px);overflow:auto}
+.st230-dialog .st230-lead{font-size:17px;line-height:1.55;margin:0 0 15px}
+.st230-dialog .st230-flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:10px 0 24px}
+.st230-dialog .st230-flow>span{background:#eaf5ec;padding:12px 9px;border-radius:9px;font-size:12px;font-weight:750;text-align:center}
+.st230-dialog h3{font-size:18px;color:#173e35;margin:20px 0 12px}
+.st230-dialog .st230-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.st230-dialog .st230-subject{border:1px solid #cbded5;background:#fbfefd;border-radius:10px;padding:14px;text-align:left;display:flex;flex-direction:column;gap:3px;min-height:75px}
+.st230-dialog .st230-subject:hover{border-color:#428d6d;background:#eaf5ec}
+.st230-dialog .st230-subject strong{font-weight:800;color:#1e4b3d}
+.st230-dialog .st230-subject span{color:#4f7162;font-size:12px}
+.st230-dialog .st230-protection{border-top:1px solid #dbe5dd;margin-top:24px;padding-top:4px}
+.st230-dialog .st230-protection>p{font-size:13px;line-height:1.5}
+.st230-dialog .st230-actions{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.st230-dialog .st230-actions button{border-radius:9px;padding:10px 13px;font-size:12px;font-weight:800;border:1px solid #bad5c6}
+.st230-dialog .st230-primary{background:#12654b;color:#fff;border-color:#12654b!important}
+.st230-dialog .st230-secondary{background:white;color:#18523f}
+.st230-dialog .st230-status{min-height:22px;font-size:13px;font-weight:700}
+.st230-dialog .st230-status[data-kind=bad]{color:#a12b2b}
+.st230-dialog .st230-status[data-kind=good]{color:#20674a}
+.st230-dialog .st230-check-list{padding-left:20px;display:grid;gap:6px;font-size:12px}
+.st230-dialog .st230-pass{color:#25624a}.st230-dialog .st230-fail{color:#923c31}
+.st230-dialog .st230-origin{font-size:12px;color:#735326;background:#fff4dd;border-radius:8px;padding:10px}
+.st230-dialog .st230-disclaimer{color:#587165;font-size:12px;line-height:1.5;margin-top:25px}
+@media(max-width:620px){#v35Content .v36-head-actions{justify-content:center!important}#v35Content .v36-head-actions > button:is(#st228Portal,#v108CoursesTop,#st214Portal,#st223Portal,#st230Start){font-size:12px!important;padding:10px!important}#v35Content .v36-head-actions .st230-menu{right:0;min-width:min(240px,80vw)}.st230-dialog{width:calc(100vw - 10px);max-height:96dvh;border-radius:12px}.st230-dialog .st230-head{padding:13px}.st230-dialog .st230-head h2{font-size:20px}.st230-dialog .st230-body{padding:14px;max-height:calc(96dvh - 66px)}.st230-dialog .st230-flow{grid-template-columns:repeat(2,minmax(0,1fr))}.st230-dialog .st230-grid{grid-template-columns:1fr}.st230-dialog .st230-subject{min-height:58px}.st230-dialog .st230-actions button{flex:1 1 100%}}
+
+.st230-offline-notice{font-size:12px;color:#7a4b15;background:#fff1d8;padding:9px;border-radius:8px}
+@media(max-width:620px){.st230-dialog .st230-head{flex-wrap:nowrap}.st230-dialog .st230-head>div{min-width:0;flex:1}.st230-dialog .st230-head h2{font-size:17px}.st230-dialog .st230-close{flex:0 0 auto;padding:9px 10px;font-size:12px}}

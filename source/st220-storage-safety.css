@@ -1,0 +1,24 @@
+/* V220: isolated, responsive storage check — no global element or button overrides. */
+.st220-dialog{width:min(650px,calc(100vw - 24px));max-height:min(91dvh,900px);overflow:auto;padding:0;color:var(--ink,#183a31);background:var(--card,#fffefa);border:1px solid var(--line,#d6e2d9);border-radius:18px;box-shadow:0 24px 70px #0003}
+.st220-dialog::backdrop{background:#0a191b9c}
+.st220-panel{padding:clamp(16px,3.4vw,28px);display:grid;gap:14px}
+.st220-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.st220-header h2{font-size:clamp(22px,3vw,30px);margin:4px 0 0;line-height:1.2}
+.st220-eyebrow{letter-spacing:.11em;text-transform:uppercase;font-size:10px;font-weight:800;color:var(--muted,#60766b)}
+.st220-intro,.st220-lead,.st220-note,.st220-status{margin:0;line-height:1.5;font-size:14px}
+.st220-lead{font-weight:650}
+.st220-note{font-size:13px;padding:12px;background:#f2f3e9;border-left:3px solid #977044;border-radius:5px;color:#463926}
+.st220-checks{list-style:none;padding:0;margin:12px 0;display:grid;gap:9px}
+.st220-checks li{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:10px;line-height:1.45;font-size:13px;color:var(--ink,#183a31);background:var(--bg,#f4f6f1)}
+.st220-checks li.st220-warning{background:#fff0dd;color:#633c13}
+.st220-indicator{display:inline-flex;align-items:center;justify-content:center;flex:none;width:20px;height:20px;border:1px solid #618d6e;border-radius:50%;font-weight:800}
+.st220-warning .st220-indicator{border-color:#ad6c27}
+.st220-actions{display:flex;flex-wrap:wrap;gap:9px}
+.st220-dialog button{font:inherit;cursor:pointer;padding:10px 13px;border-radius:9px;border:1px solid var(--line,#d6e2d9);color:var(--ink,#183a31);background:var(--card,#fffefa);font-weight:650;font-size:13px;min-height:40px}
+.st220-dialog button.st220-primary{background:#1a5943;color:#fff;border-color:#1a5943}
+.st220-dialog button:disabled{opacity:.5;cursor:not-allowed}
+.st220-dialog button:focus-visible,.st220-launch:focus-visible{outline:3px solid #bd8840;outline-offset:2px}
+.st220-launch{padding:9px 12px;border:1px solid var(--line,#d6e2d9);border-radius:8px;background:var(--card,#fffefa);color:var(--ink,#183a31);font:inherit;font-size:12px;font-weight:700;cursor:pointer}
+.st220-status{min-height:20px}
+@media(max-width:460px){.st220-panel{padding:15px}.st220-actions{display:grid}.st220-actions button{width:100%}.st220-dialog{width:calc(100vw - 16px)}}
+@media(prefers-color-scheme:dark){.st220-note{background:#352d21;color:#f3dfbc}.st220-checks li.st220-warning{background:#45311e;color:#ffe4bf}}

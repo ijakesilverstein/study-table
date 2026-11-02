@@ -1,0 +1,17 @@
+# V226 Seven-System Live Progress — Codex handoff
+
+Canonical user deliverable: Study_Table_V226_Seven_System_Progress.html, 8,913,256 bytes, SHA-256 ac74469191de81f8e003ce574cedbce179c6f833b0bf7efd7a13354fd16ff37f.
+Companion developer package: Study_Table_V226_Codex_Developer_Pack.zip, delivered to user. The ZIP includes complete V225 baseline, complete V226 HTML, a SHA-pinned deterministic builder, tests, historical 151-module V220 source, readable embedded Spanish studio and README. Clean extraction rebuilt V226 byte-identically.
+
+Staged overlays: source/st226-live-store.js (schema-v4 seven-record adapter), source/st226-live-ui.js (opt-in upgrade and conflict UI), source/st226-guided-missions.js (guided save rollback). The branch is source staging only and is NOT an independently runnable or deployed V226. Older main must not overwrite the new standalone.
+
+Seven live writers: studytable:v207:chapter-checks, studytable:v214:learning-calendar, studytable:v214:teaching-room, studytable:v216:deep-lessons, studytable:v219:coaching, spanish-verb-studio-v1, studytable:v212:guided-missions.
+Spanish Verb Studio lives in an embedded base64 srcdoc iframe; its own real save/read calls now bridge into same-origin parent StudyTableLiveStore with visible errors if writes fail. The original 48 lessons and practicing remain untouched. Guided missions now use the same adapter; an unsaved completion reverts its visible progress and warns.
+
+Versioned safety: V226 v4 uses a NEW dual-slot prefix studytable:v226:live:; old V225 v3 snapshots remain untouched. Activation captures current validated browser records; a disagreed/damaged V225 predecessor requires explicit user acceptance of current browser state. Older Restore or Undo changes legacy mirrored keys, blocks stale writes, and prompts explicit reconciliation. Previous active slot survives stage/mirror write errors; damaged active head can be repaired from surviving valid slot without rewriting lessons. V225+V226 internal keys are excluded from raw archives to avoid recursive backup growth.
+
+Tests passed: test_st226.py for seven-key activation, actual embedded Spanish save/conflict/reconcile, actual guided save, strict validation, storage-write rollback, mobile, V225-to-V226 migration and controlled new-page reopen; test_st226_faults.py for predecessor disagreements, old-checkpoint retention, pointer repair, and guided failed-save warning; test_st226_restore.py for real supported Spanish/guided Restore+Undo with active v4 store. All 30 diagnostic cases, all 28 original guided teacher lessons, combined Restore/Undo, and V223 progress bundle regressions passed on V226. Syntax audit: 83 executable scripts plus decoded embedded Spanish parse in Node, 182 unique IDs, no remote startup assets. Zero uncaught page JS errors in tested flows.
+
+NOT VERIFIED: actual file:// persistence across browser restart/rename, Safari/Firefox, consumer audio, full historical curriculum, or learning outcomes. Chromium file navigation is ERR_BLOCKED_BY_ADMINISTRATOR here. Simulated controlled-storage reopen is not real file-origin verification. Do not advertise cross-browser persistence as tested.
+
+Next Codex gates: import the complete newest ZIP into canonical source, run local-file and stable HTTPS-origin browser tests in real Chrome/Safari/Firefox; check quota from v224/v225/v226 snapshots; migrate older course and notebook writers incrementally with schema validation and rollback; only then merge/deploy without password protection. No V226 production deployment has been performed.

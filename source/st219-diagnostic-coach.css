@@ -1,0 +1,19 @@
+/* Study Table V219: guided diagnosis, designed to support the existing V217 teaching dialog. */
+#st216Dialog .st219-coach{--st219-accent:#007d83; margin:21px 0;padding:19px;border-radius:18px;border:1px solid #66909e80;background:color-mix(in srgb,#a5d6d9 8%,transparent);color:inherit;scroll-margin-top:90px}
+#st216Dialog .st219-head{display:block}#st216Dialog .st219-tag{font-size:.7rem;letter-spacing:.11em;text-transform:uppercase;font-weight:800;color:var(--st219-accent)}
+#st216Dialog .st219-head h4{margin:5px 0 8px;font-size:1.28rem}#st216Dialog .st219-head p{line-height:1.6;margin:0 0 12px}
+#st216Dialog .st219-progress{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 15px;font-size:.82rem;padding:10px 0;border-top:1px solid #71899150;border-bottom:1px solid #71899150;margin:14px 0}#st216Dialog .st219-progress span:first-child{font-weight:750}
+#st216Dialog .st219-coach h5{font-size:1rem;margin:14px 0 8px}#st216Dialog .st219-question{font-weight:650;line-height:1.6;font-size:1.06rem}
+#st216Dialog .st219-answer-label{display:grid;gap:8px;max-width:450px;font-weight:650;font-size:.92rem}#st216Dialog .st219-answer{padding:12px 14px;width:100%;max-width:100%;font:inherit;border:1.5px solid #7e9aa8;border-radius:10px;color:inherit;background:transparent}
+#st216Dialog .st219-choices{display:grid;gap:9px;max-width:680px}#st216Dialog .st219-choice{font:inherit;text-align:left;background:transparent;color:inherit;border:1px solid #829ba4;padding:12px 14px;border-radius:10px;cursor:pointer;white-space:normal}
+#st216Dialog .st219-choice[aria-pressed=true]{background:#007c82;color:white;border-color:#007c82}#st216Dialog .st219-actions{display:flex;flex-wrap:wrap;gap:9px;margin:16px 0}
+#st216Dialog .st219-actions button,#st216Dialog .st219-secondary{font:inherit;font-weight:650;cursor:pointer;padding:11px 14px;border-radius:10px;color:inherit;background:transparent;border:1.5px solid #829ba4}
+#st216Dialog .st219-actions .st219-check,#st216Dialog .st219-actions .st219-next{background:#08777d;color:white;border-color:#08777d}
+#st216Dialog .st219-feedback:not([hidden]),#st216Dialog .st219-foundation:not([hidden]),#st216Dialog .st219-worked:not([hidden]){margin:12px 0;padding:14px;border-radius:12px;background:rgba(60,135,145,.09);border-left:3px solid #08777d;line-height:1.65}
+#st216Dialog .st219-feedback[data-kind=repair]{border-left-color:#b8781f}#st216Dialog .st219-feedback p,#st216Dialog .st219-foundation p,#st216Dialog .st219-worked p{margin:6px 0 0}#st216Dialog .st219-save-warning{font-size:.78rem;opacity:.8;margin-top:14px;line-height:1.5}
+#st216Dialog .st219-success{padding:14px;border-left:4px solid #08777d;line-height:1.6}#st216Dialog .st219-coach button:focus-visible,#st216Dialog .st219-answer:focus-visible{outline:3px solid #da9b25;outline-offset:2px}
+@media(max-width:520px){#st216Dialog .st219-coach{padding:13px;margin:14px 0}#st216Dialog .st219-actions{display:grid}#st216Dialog .st219-actions button{width:100%;text-align:center}#st216Dialog .st219-head h4{font-size:1.13rem}}
+@media(prefers-color-scheme:dark){#st216Dialog .st219-tag{color:#3bcbd0}#st216Dialog .st219-choices [aria-pressed=true]{background:#066f75;color:white}}
+
+#st216Dialog .st219-shortcut,.st219-shortcut{font:inherit!important;font-size:.81rem!important;font-weight:650!important;padding:9px 12px!important;border-radius:10px!important;border:1px solid #3e8890!important;background:rgba(9,128,137,.07)!important;color:inherit!important;cursor:pointer!important;max-width:100%}
+#st216Dialog .st219-shortcut:focus-visible,.st219-shortcut:focus-visible{outline:3px solid #da9b25;outline-offset:2px}

@@ -1,0 +1,26 @@
+/* V219: optional reteach and retry with clear pedagogic priority. */
+.st216-dialog .st219-coach{margin:22px 0 12px;padding:16px;border:1px solid #92a5ad;border-radius:16px;background:rgba(21,135,140,.045);color:inherit}
+.st216-dialog .st219-coach h4{margin:0 0 5px;font-size:1.1rem;letter-spacing:-.015em}
+.st216-dialog .st219-muted{line-height:1.6;opacity:.86;margin:0 0 12px}
+.st216-dialog .st219-eyebrow{font-size:.75rem;font-weight:750;letter-spacing:.08em;text-transform:uppercase;color:inherit;opacity:.78}
+.st216-dialog .st219-question{font-weight:700;line-height:1.6;font-size:1.03rem;margin:8px 0 16px}
+.st216-dialog .st219-main,.st216-dialog .st219-quiet,.st216-dialog .st219-choice{font:inherit;border-radius:10px;padding:11px 15px;cursor:pointer;margin:4px 5px 4px 0;min-height:42px;max-width:100%;white-space:normal}
+.st216-dialog .st219-main{background:#096b70;border:1px solid #096b70;color:white;font-weight:700}
+.st216-dialog .st219-quiet,.st216-dialog .st219-choice{background:transparent;border:1px solid #668d99;color:inherit;text-align:left}
+.st216-dialog .st219-choice{width:100%;display:block;margin-bottom:8px}
+.st216-dialog .st219-choice-group{display:grid;grid-template-columns:1fr;gap:4px}
+.st216-dialog .st219-form{display:flex;gap:10px;align-items:end;flex-wrap:wrap;margin:8px 0}
+.st216-dialog .st219-label{flex:1;min-width:175px;display:flex;flex-direction:column;gap:6px;font-size:.92rem;font-weight:700}
+.st216-dialog .st219-field{font:inherit;color:inherit;background:var(--v35-card,#fff);border:1px solid #8495a2;border-radius:9px;padding:10px;width:100%;max-width:100%;box-sizing:border-box}
+.st216-dialog .st219-guidance,.st216-dialog .st219-result{padding:12px 13px;margin:12px 0;border-radius:10px;border-left:4px solid #ba8227;background:rgba(186,130,39,.09);line-height:1.6}
+.st216-dialog .st219-yes{border-left-color:#087a6c;background:rgba(8,122,108,.08)}
+.st216-dialog .st219-result p{margin:7px 0 0}
+.st216-dialog .st219-method{font-weight:650}
+.st216-dialog .st219-model{padding:10px 12px;border-radius:9px;background:rgba(130,130,130,.12);font-size:.96rem}
+.st216-dialog .st219-success{padding:8px 0;font-size:.94rem;opacity:.9}
+.st216-dialog .st219-warning{padding:10px;background:rgba(186,130,39,.12)}
+.st216-dialog .st219-main:focus-visible,.st216-dialog .st219-quiet:focus-visible,.st216-dialog .st219-field:focus-visible,.st216-dialog .st219-choice:focus-visible{outline:3px solid #c07b15;outline-offset:2px}
+@media(max-width:560px){.st216-dialog .st219-coach{padding:12px}.st216-dialog .st219-form{display:block}.st216-dialog .st219-main{margin-top:8px}}
+
+.st213-dialog .st219-path-reminder{border-left:3px solid #147c81;padding:9px 12px;margin-top:12px;border-radius:6px;background:rgba(20,124,129,.07)}
+.st213-dialog .st219-path-reminder p{margin:0 0 7px}.st213-dialog .st219-path-reminder button{padding:8px 11px;border:1px solid #147c81;border-radius:8px;background:transparent;color:inherit;cursor:pointer;font:inherit}

@@ -1,0 +1,29 @@
+/* V217 extension to the V216 teaching room: thoughtful mobile-first learning tools */
+.st216-dialog .st217-tool{margin:14px 0;padding:16px;background:color-mix(in srgb,var(--st216-surface,#eef5f6) 77%,transparent);border:1px solid rgba(94,122,147,.27);border-radius:16px;color:inherit}
+.st216-dialog .st217-note{font-size:.91rem;line-height:1.5;opacity:.85;margin:8px 0 14px}
+.st216-dialog .st217-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:13px}
+.st216-dialog .st217-slider{display:flex;flex-direction:column;min-width:0;gap:7px;padding:10px 11px;border-radius:12px;border:1px solid rgba(100,120,140,.23);font-size:.9rem}
+.st216-dialog .st217-slider strong{font-size:1.08rem;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.st216-dialog .st217-slider input{width:100%;accent-color:#0c8b90;cursor:pointer}
+.st216-dialog .st217-result{border-left:3px solid #0c8b90;padding:9px 12px;margin:10px 0;border-radius:0 10px 10px 0;background:rgba(13,135,143,.055);line-height:1.58}
+.st216-dialog .st217-result strong{font-size:1.05rem;display:block}
+.st216-dialog .st217-result p{margin:5px 0 0;max-width:72ch}
+.st216-dialog .st217-fill{height:14px;border-radius:30px;background:#0c8b90;max-width:100%;transition:width .12s linear;box-shadow:0 0 0 2px rgba(12,139,144,.15)}
+.st216-dialog .st217-choices{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 14px}
+.st216-dialog .st217-option{padding:9px 12px;border:1px solid #668d99;border-radius:10px;background:transparent;color:inherit;font:inherit;cursor:pointer}
+.st216-dialog .st217-option[aria-pressed=true]{background:#0b747b;color:white;border-color:#0b747b}
+.st216-dialog .st217-option:focus-visible,.st216-dialog .st217-square:focus-visible{outline:3px solid #e9a62a;outline-offset:2px}
+.st216-dialog .st217-chess{width:min(100%,360px);aspect-ratio:1;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));margin:12px auto;box-shadow:0 0 0 2px #466a79;border-radius:4px;overflow:hidden}
+.st216-dialog .st217-square{min-width:0;min-height:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:clamp(16px,3vw,30px);padding:0;border:0;border-radius:0;background:#f3eadc;color:#172936;cursor:pointer;position:relative}
+.st216-dialog .st217-square.st217-dark{background:#8fa7a0}
+.st216-dialog .st217-square.st217-legal::after{content:'';position:absolute;bottom:9%;right:10%;width:20%;aspect-ratio:1;border-radius:50%;background:rgba(6,96,100,.75)}
+.st216-dialog .st217-square.st217-origin{background:#d8bd6e}
+.st216-dialog .st217-square.st217-target{color:#782e5f;font-weight:800}
+.st216-dialog .st217-passage{font-size:1.05rem;line-height:1.8;border-left:3px solid #0c8b90;padding:14px;margin:0 0 14px;font-family:Georgia,serif;white-space:pre-line}
+@media(max-width:600px){.st216-dialog .st217-grid{grid-template-columns:minmax(0,1fr)}.st216-dialog .st217-tool{padding:11px}.st216-dialog .st217-square{font-size:clamp(14px,5vw,24px)}}
+@media(prefers-reduced-motion:reduce){.st216-dialog .st217-fill{transition:none}}
+/* Contrast repair: some legacy themes make the sticky dialog title white on off-white. */
+.st216-dialog .st216-header{color:#173047;background:#f6f9fa}
+.st216-dialog .st216-header .st216-kicker{color:#3c6076;opacity:1}
+.st216-dialog .st216-header h2{color:#173047}
+.st216-dialog .st216-header button{color:#173047;background:#fff;border-color:#9aabb7}
