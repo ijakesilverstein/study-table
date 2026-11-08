@@ -1,6 +1,14 @@
 # Study Table
 
 
+## Try Study Table for free
+
+**[Download 9 free mini-lessons: Spanish, Math & Piano](https://9264089928293.gumroad.com/l/studytable-free?utm_source=github&utm_medium=readme&utm_campaign=free_preview)**
+
+Sample the real teaching style before you buy: regular Spanish verbs and simple sentences, fractions and negative numbers, and beginner piano notes and rhythm. The free sampler is a single HTML file you download and open in your browser. It contains nine introductory lesson previews and does **not** save progress. No subscription.
+
+Prefer the complete curriculum? **[Get Study Table — 284 guided lessons across 14 subjects, $14.99 once](https://9264089928293.gumroad.com/l/studytable?utm_source=github&utm_medium=readme&utm_campaign=full_app)**. The full edition is intended for desktop/laptop browsers on Mac and Windows and saves progress locally.
+
 ## Get the current Study Table learning app
 
 **[Study Table — $14.99 one-time purchase](https://9264089928293.gumroad.com/l/studytable?utm_source=github&utm_medium=readme&utm_campaign=studytable_organic)**
