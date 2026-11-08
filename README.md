@@ -1,5 +1,18 @@
 # Study Table
 
+
+## Get the current Study Table learning app
+
+**[Study Table — $14.99 one-time purchase](https://9264089928293.gumroad.com/l/studytable?utm_source=github&utm_medium=readme&utm_campaign=studytable_organic)**
+
+Learn at your own pace with **284 guided lessons across 14 subjects** and **168 optional practice questions**, including Spanish, math, piano, science, history, and more. The current consumer edition is a downloadable **HTML app for desktop browsers** (Mac and Windows), with offline access, local progress saving, and no subscription.
+
+**Before you buy:** This is a desktop/laptop browser download, not a mobile app or an online tutoring service. [See product details and real preview images on Gumroad](https://9264089928293.gumroad.com/l/studytable?utm_source=github&utm_medium=readme&utm_campaign=studytable_organic).
+
+### Development history and older public builds
+
+The version-specific information below describes historical development builds in this repository; **do not assume those builds are identical to the current commercial download**. 
+
 An offline-capable learning app. [Download the combined V169 HTML on GitHub](https://github.com/ijakesilverstein/study-table/blob/v169/public/study-table-v169.html): choose **Download raw file**, save it and open it in your browser. The separately published website has not been updated in this pass.
 
 V169 combines the published V163–V168 work and the parallel journey branch: seven connected story/practice/lesson paths, eight Spanish conversation scenes, 52 checked problems and optional explanation prompts in all 87 units. **See the worked lesson first** opens the teaching directly. Six additional solved examples show the reasoning before optional practice, and progress backups now include the Spanish journal and optional review plans. [Read the source provenance, changes and validation](docs/RECONCILIATION_V169.md). No Vercel publication is part of this pass.
